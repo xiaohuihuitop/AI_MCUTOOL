@@ -1,0 +1,228 @@
+{
+  "availability": {
+    "components.json": "available",
+    "drc.json": "available",
+    "nets.json": "available",
+    "pours.json": "available",
+    "snapshot.png": "unknown",
+    "tracks.json": "available",
+    "vias.json": "available"
+  },
+  "blank": false,
+  "capture": {
+    "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "startedAt": "2026-10-24T14:49:42.3856896Z",
+    "completedAt": "2026-10-24T14:49:47.1484704Z",
+    "consistency": "sequential-response-boundaries",
+    "identityVerified": false,
+    "missing": [
+      "pcb.snapshot: context missing"
+    ],
+    "requests": [
+      {
+        "action": "pcb.snapshot",
+        "requestId": "req_497",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.3856896Z",
+        "completedAt": "2026-10-24T14:49:42.3945083Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.3939978Z",
+        "resultSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "sequence": {
+          "Known": true,
+          "Seq": 302,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "unknown",
+        "error": "pcb.snapshot failed: The EasyEDA tab is hidden, so the canvas is not repainted and a capture would be stale (nothing was captured). Bring the EasyEDA window to the front and retry, or render from fresh readback (no tracks/pours): `easyeda pcb dump --include-copper --out board.json \u0026\u0026 easyeda pcb layout render --actual --board board.json --out board.svg`. Schematic pages export in the background with `easyeda sch export-image`."
+      },
+      {
+        "action": "pcb.components.list",
+        "requestId": "req_498",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.3945083Z",
+        "completedAt": "2026-10-24T14:49:42.6000661Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.561467Z",
+        "resultSha256": "6ee9edf9f1eccdb8c1901cad17b87cdce521ea0df791ee3fa9f6210dc507acc0",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 303,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.line.list",
+        "requestId": "req_499",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.6101764Z",
+        "completedAt": "2026-10-24T14:49:42.6184417Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.6179312Z",
+        "resultSha256": "3e1cbb7e2283b7c0baef63908866616c731413c4f78e606b35342f216a671364",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 304,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.via.list",
+        "requestId": "req_500",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.6189638Z",
+        "completedAt": "2026-10-24T14:49:42.6270086Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.6264987Z",
+        "resultSha256": "3ebdd5ba8869fde231f904ec153c60513572e2fa13fe0b2f9349ca0b8ae8aece",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 305,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.pour.list",
+        "requestId": "req_501",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.6306214Z",
+        "completedAt": "2026-10-24T14:49:42.6379529Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.6374612Z",
+        "resultSha256": "450c1cb71382370ba8aaffcab65e3f244b157175ee7fdae5ee286b048694be4d",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 306,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.nets.list",
+        "requestId": "req_502",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.6384494Z",
+        "completedAt": "2026-10-24T14:49:42.6481717Z",
+        "responseCreatedAt": "2026-10-24T14:49:42.6466361Z",
+        "resultSha256": "dba6e683b6f7ef39bf67fb9c642e357107200f97c0d17a1ae68e25500254b9a0",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 307,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.drc.check",
+        "requestId": "req_503",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-24T14:49:42.6492345Z",
+        "completedAt": "2026-10-24T14:49:47.1484704Z",
+        "responseCreatedAt": "2026-10-24T14:49:47.1099187Z",
+        "resultSha256": "bd66f851fee901389aa3d6769ee905eb279c8cb6360151df5d500d516b29982d",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 308,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      }
+    ]
+  },
+  "captureKind": null,
+  "dataFiles": [
+    "components.json",
+    "tracks.json",
+    "vias.json",
+    "pours.json",
+    "nets.json",
+    "drc.json"
+  ],
+  "dir": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round2",
+  "drcPassKnown": true,
+  "drcPassed": false,
+  "fileHashes": {
+    "components.json": "4797aff925cea847e90a21551ba418794da3b2d2b1ad0468e26a28bd0d68c84d",
+    "drc.json": "0cb9264eb1290ad41e1e6dc0b0606fc5e2d5f404dcef8c1ce2b78328bb76a5ad",
+    "nets.json": "3ae7f9a50cb332025cc805858ba67ce9810991c3af60fc7df1133e2acc720e43",
+    "pours.json": "a83d614fa38eae9421abdddb355a6e01d76b7f98a16578d245b8283e476200dc",
+    "tracks.json": "e91ffe188d8665a6318c3cdf3608813e8b35d17ce2ea438b908f972fb39e5adb",
+    "vias.json": "5980bdf09bfbb007516b642d70d5a500013989248b3a5a1c8131182d45e54846"
+  },
+  "fitApi": null,
+  "fitMode": null,
+  "frameColors": 0,
+  "frameContent": 0,
+  "imageError": "pcb.snapshot failed: The EasyEDA tab is hidden, so the canvas is not repainted and a capture would be stale (nothing was captured). Bring the EasyEDA window to the front and retry, or render from fresh readback (no tracks/pours): `easyeda pcb dump --include-copper --out board.json \u0026\u0026 easyeda pcb layout render --actual --board board.json --out board.svg`. Schematic pages export in the background with `easyeda sch export-image`.",
+  "imageValid": false,
+  "objectLevelExport": null,
+  "partial": [
+    "pcb.snapshot failed: The EasyEDA tab is hidden, so the canvas is not repainted and a capture would be stale (nothing was captured). Bring the EasyEDA window to the front and retry, or render from fresh readback (no tracks/pours): `easyeda pcb dump --include-copper --out board.json \u0026\u0026 easyeda pcb layout render --actual --board board.json --out board.svg`. Schematic pages export in the background with `easyeda sch export-image`.",
+    "capture provenance: pcb.snapshot: context missing"
+  ],
+  "sameImageAsPrevious": false,
+  "sha256": "",
+  "sha256Source": "unavailable",
+  "snapshot": "",
+  "stage": "review-round2",
+  "stale": false
+}

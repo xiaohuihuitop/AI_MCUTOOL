@@ -1,0 +1,577 @@
+{
+  "rawWarningsPreserved": true,
+  "rawSummary": {
+    "danglingEnds": 34,
+    "acuteAngles": 6,
+    "nonOrthogonal": 49,
+    "trackOverPad": 0,
+    "clearance": 0,
+    "silkscreenFlipped": 0,
+    "overlappingVias": 0,
+    "singleLayerVias": 33,
+    "widthMismatches": 13,
+    "duplicateSegments": 0,
+    "parallelCoupling": 80,
+    "antennaKeepout": 1,
+    "netlessPours": 0,
+    "viaCrossesPlane": 0,
+    "floatingIslands": 0,
+    "powerNotPoured": 0,
+    "netlessViaInPad": 0,
+    "widthUnderSpec": 1,
+    "silkOverPad": 0,
+    "silkOffBoard": 0,
+    "decapTooFar": 0,
+    "viaInPad": 2,
+    "copperNearEdge": 0,
+    "fiducialMissing": 1,
+    "zoneViolation": 0,
+    "internalOnEdge": 0,
+    "connectorPlugClearance": 7,
+    "connectorMatingBlocked": 0,
+    "connectorOpeningInward": 0,
+    "errors": 0,
+    "warnings": 213,
+    "total": 227
+  },
+  "incomplete": true,
+  "coverage": {
+    "complete": false,
+    "componentsInventoryKnown": true,
+    "padsInventoryKnown": true,
+    "componentCount": 140,
+    "totalPads": 423,
+    "knownGeometryPads": 412,
+    "unsupportedGeometryPads": 11,
+    "unknownGeometryPads": 0,
+    "legacyGeometryPads": 0,
+    "unverifiedPads": [
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e35",
+        "padNumber": "A1B12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e36",
+        "padNumber": "B1A12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e37",
+        "padNumber": "B4A9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e38",
+        "padNumber": "A4B9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "d6e179afec249953",
+        "designator": "Q8",
+        "primitiveId": "d6e179afec249953e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "ddf28febe0fdc031",
+        "designator": "Q9",
+        "primitiveId": "ddf28febe0fdc031e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "4b69be312be3fc1d",
+        "designator": "Q10",
+        "primitiveId": "4b69be312be3fc1de19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "45fb6d7cacec087c",
+        "designator": "Q11",
+        "primitiveId": "45fb6d7cacec087ce19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "8d8fe5fa89ce9fe0",
+        "designator": "Q12",
+        "primitiveId": "8d8fe5fa89ce9fe0e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "0ad7b42265a067ee",
+        "designator": "Q13",
+        "primitiveId": "0ad7b42265a067eee19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "210617e96d3837d4",
+        "designator": "U3",
+        "primitiveId": "210617e96d3837d4e9",
+        "padNumber": "2",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      }
+    ],
+    "limitations": [
+      "11 pad(s) have captured source shapes unsupported by exact pad-contact inspection"
+    ]
+  },
+  "danglingEndpointActualPadContact": [
+    {
+      "lineId": "c372a726dc2b70b0",
+      "net": "KEY1_B",
+      "matchedActualPads": [
+        {
+          "id": "6945e92d345d5a6c",
+          "padNumber": "TP_J4_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "38effe87b91046ce",
+      "net": "KEY1_A",
+      "matchedActualPads": [
+        {
+          "id": "b56e8294d009d824",
+          "padNumber": "TP_J4_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "7e36acd6d199c78c",
+      "net": "KEY2_B",
+      "matchedActualPads": [
+        {
+          "id": "45ea968384e7c6fc",
+          "padNumber": "TP_J5_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "763ddbe25e72e08a",
+      "net": "KEY2_A",
+      "matchedActualPads": [
+        {
+          "id": "9e9601e4f532e8c6",
+          "padNumber": "TP_J5_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "2934864febef29fa",
+      "net": "KEY3_B",
+      "matchedActualPads": [
+        {
+          "id": "4627843d8a71a1ec",
+          "padNumber": "TP_J6_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "5600ff34f635bc66",
+      "net": "KEY3_A",
+      "matchedActualPads": [
+        {
+          "id": "35fdf041345186e0",
+          "padNumber": "TP_J6_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "9c51deb214a1de3a",
+      "net": "KEY4_B",
+      "matchedActualPads": [
+        {
+          "id": "5627697b39e6dd44",
+          "padNumber": "TP_J7_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "852622f48701da78",
+      "net": "KEY4_A",
+      "matchedActualPads": [
+        {
+          "id": "a19e3f39bdf9806e",
+          "padNumber": "TP_J7_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "c6902e7e469462b9",
+      "net": "KEY5_B",
+      "matchedActualPads": [
+        {
+          "id": "cf60f211361fad00",
+          "padNumber": "TP_J8_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "a6c0f060a537bae6",
+      "net": "KEY5_A",
+      "matchedActualPads": [
+        {
+          "id": "0065593df847afb1",
+          "padNumber": "TP_J8_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "681734bbcabc2360",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "323519e65acbc3e0",
+          "padNumber": "TP_J9_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "85b6b90eaf711304",
+      "net": "BAT_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "02a5ad6555a96df9",
+          "padNumber": "TP_J9_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "24044558c10bb35a",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "e8fc2e4c5c9d92cc",
+          "padNumber": "TP_J10_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "454e3429cb7b6ed4",
+      "net": "EXT_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "2fab02560a1a4ffe",
+          "padNumber": "TP_J10_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "fae63e9da137875f",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "2849b3afb762f836",
+          "padNumber": "TP_J11_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "416201751aadc416",
+      "net": "DUT_PWR_P",
+      "matchedActualPads": [
+        {
+          "id": "f6c99fc2c04a0d74",
+          "padNumber": "TP_J11_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "2219921b2a7c719c",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "bca868e223ee6dca",
+          "padNumber": "TP_J12_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "a45be55e8121f8b0",
+      "net": "CHG_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "1b5cdc97b98fa6dc",
+          "padNumber": "TP_J12_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "08c352df7efc199f",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "03c80acc76a58a80",
+          "padNumber": "TP_J13_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "559c444d3889f0f0",
+      "net": "DUT_CHG_P",
+      "matchedActualPads": [
+        {
+          "id": "49dc86093d0a4bc5",
+          "padNumber": "TP_J13_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "367c0da0d9f1c31b",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "a866529d30d9dd35",
+          "padNumber": "TP_J14_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "4b861bf238d5f0e1",
+      "net": "AIN1",
+      "matchedActualPads": [
+        {
+          "id": "e62f2af4be9d4702",
+          "padNumber": "TP_J14_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "6542094f02fd3b67",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "39cd321a3da162ae",
+          "padNumber": "TP_J15_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "8da59385ee716b7f",
+      "net": "AIN2",
+      "matchedActualPads": [
+        {
+          "id": "897729cf33c4b831",
+          "padNumber": "TP_J15_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "2a956a9afde00ae4",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "890ebdd204a5478a",
+          "padNumber": "TP_J16_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "97a1184326eebb61",
+      "net": "AIN3",
+      "matchedActualPads": [
+        {
+          "id": "c2a25abdc5a53f76",
+          "padNumber": "TP_J16_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "01d78c85626b464b",
+      "net": "COMMON_GND",
+      "matchedActualPads": [
+        {
+          "id": "3bd25e339305a33d",
+          "padNumber": "TP_J17_2",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "c201d1f2d1f3f5b8",
+      "net": "AIN4",
+      "matchedActualPads": [
+        {
+          "id": "d36ca43fd9d5bdd1",
+          "padNumber": "TP_J17_1",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "86d889e271010f6a",
+      "net": "BAT_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "d6e179afec249953e19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.07007098000000057
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "931056c7b163c00a",
+      "net": "EXT_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "4b69be312be3fc1de19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.0716203800000006
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "1c96d46f9424e2b5",
+      "net": "VSEL_P",
+      "matchedActualPads": [
+        {
+          "id": "ddf28febe0fdc031e19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "7ad4484ad1b4a9af",
+      "net": "VSEL_P",
+      "matchedActualPads": [
+        {
+          "id": "45fb6d7cacec087ce19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "d95e09103a1af53a",
+      "net": "CHG_IN_P",
+      "matchedActualPads": [
+        {
+          "id": "8d8fe5fa89ce9fe0e19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    },
+    {
+      "lineId": "22e9f62f3aaaea6d",
+      "net": "DUT_CHG_P",
+      "matchedActualPads": [
+        {
+          "id": "0ad7b42265a067eee19",
+          "padNumber": "5",
+          "pointToPadMillimeters": 0.0
+        }
+      ],
+      "contactProven": true
+    }
+  ],
+  "danglingReported": 34,
+  "danglingWithActualPadContact": 34,
+  "singleLayerViaByNet": {
+    "LDO_VIN": 3,
+    "TOOL_3V3": 30
+  },
+  "viaInPadActualGeometry": [
+    {
+      "id": "1768b21130b131a5",
+      "net": "COMMON_GND",
+      "padId": "f1577471a25befc4e5",
+      "copperOverlapSquareMillimeters": 0.0,
+      "viaCopperToPadMillimeters": 0.36088065999999946,
+      "drillToPadMillimeters": 0.5107406599999998
+    },
+    {
+      "id": "48e537613b3217d1",
+      "net": "I2C_SCL",
+      "padId": "f1577471a25befc4e10",
+      "copperOverlapSquareMillimeters": 0.0,
+      "viaCopperToPadMillimeters": 0.008049259999996396,
+      "drillToPadMillimeters": 0.15790925999999672
+    }
+  ],
+  "layoutScoreIsNotAcceptance": true
+}

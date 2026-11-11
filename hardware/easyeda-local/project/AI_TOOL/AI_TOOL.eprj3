@@ -1,0 +1,164 @@
+{
+  "name": "AI_TOOL",
+  "owner_uuid": "233db0a81984472c8a0a345e0922e20e",
+  "creator_uuid": "233db0a81984472c8a0a345e0922e20e",
+  "created_at": "2026-10-26 11:37:33",
+  "updated_at": "2026-10-26 11:37:33",
+  "modifier_uuid": "233db0a81984472c8a0a345e0922e20e",
+  "content": "",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "213861d1fef71993",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "c7843fa2fc5bcd79": {
+        "uuid": "c7843fa2fc5bcd79",
+        "title": "Board1_1",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "2b7d86483e2da7c8": {
+        "uuid": "2b7d86483e2da7c8",
+        "name": "Schematic1_1",
+        "board": "c7843fa2fc5bcd79",
+        "source": "",
+        "version": "1794303156262",
+        "updateTime": 1794303156262
+      }
+    },
+    "sheets": {
+      "58316ac9a100868e": {
+        "uuid": "58316ac9a100868e",
+        "title": "01-工具电源",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 1,
+        "source": "",
+        "version": "1793774864017",
+        "updateTime": 1793774864017
+      },
+      "6ac5c47b59291a93": {
+        "uuid": "6ac5c47b59291a93",
+        "title": "02-主控与总线",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 2,
+        "source": "",
+        "version": "1793781261716",
+        "updateTime": 1793781261716
+      },
+      "8acf11b5cb7fef5d": {
+        "uuid": "8acf11b5cb7fef5d",
+        "title": "03-五路按键",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 3,
+        "source": "",
+        "version": "1793437593947",
+        "updateTime": 1793437593947
+      },
+      "fc93d0ec90c4481b": {
+        "uuid": "fc93d0ec90c4481b",
+        "title": "04-主供电选择",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 4,
+        "source": "",
+        "version": "1793784570078",
+        "updateTime": 1793784570078
+      },
+      "984a9bed1747817a": {
+        "uuid": "984a9bed1747817a",
+        "title": "05-独立充电",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 5,
+        "source": "",
+        "version": "1794303156262",
+        "updateTime": 1794303156262
+      },
+      "4459834174268cdf": {
+        "uuid": "4459834174268cdf",
+        "title": "06-电池端测量",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 6,
+        "source": "",
+        "version": "1793784574056",
+        "updateTime": 1793784574056
+      },
+      "b64f32ff6a10f61f": {
+        "uuid": "b64f32ff6a10f61f",
+        "title": "07-四路电压",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 7,
+        "source": "",
+        "version": "1793700878553",
+        "updateTime": 1793700878553
+      },
+      "44c68f3606fe991d": {
+        "uuid": "44c68f3606fe991d",
+        "title": "08-目标串口",
+        "schematic_uuid": "2b7d86483e2da7c8",
+        "zIndex": 8,
+        "source": "",
+        "version": "1793775002702",
+        "updateTime": 1793775002702
+      }
+    },
+    "pcbs": {
+      "9443dd1f7dacbd7f": {
+        "uuid": "9443dd1f7dacbd7f",
+        "title": "",
+        "board": "",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1794413814360",
+        "updateTime": 1794413814360
+      }
+    },
+    "panels": {
+      "100ace6103398d99": {
+        "uuid": "100ace6103398d99",
+        "title": "Panel1",
+        "zIndex": null
+      },
+      "d566738f5fc835a6": {
+        "uuid": "d566738f5fc835a6",
+        "title": "Panel1_1",
+        "zIndex": null
+      }
+    },
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "233db0a81984472c8a0a345e0922e20e"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "213861d1fef71993",
+    "settings": {
+      "UNIVERSAL": {
+        "dataType": "UNIVERSAL",
+        "data": {
+          "allowLibRename": true,
+          "defaultNetName": true,
+          "wireMultipleNet": true,
+          "netFlagCrossLayerConnection": true,
+          "netLabelCrossPageConnection": true,
+          "busGenerateNetClass": true,
+          "relevanceDisplayRow": "SINGLE",
+          "relevanceBelongSchPage": "NAME",
+          "relevanceLocation": "ZONE",
+          "multipartCrossLayer": true,
+          "nonElectronicAddIntoBom": false,
+          "nonElectronicUpdatePcb": false
+        }
+      }
+    }
+  }
+}

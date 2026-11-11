@@ -1,0 +1,8 @@
+{
+  "componentCount": 164,
+  "physicalPads": 516,
+  "logicalPins": 508,
+  "uniqueIdBasis": "原生逐页快照，不从位号推断关联ID",
+  "missingComponents": [],
+  "differences": []
+}

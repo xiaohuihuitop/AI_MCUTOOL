@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-24",
+  "hostVersion": "10.0.6",
+  "transport": "本机华秋gRPC，使用运行时反射描述",
+  "endpointAtVerification": "127.0.0.1:2643",
+  "readMethod": "hq.ir.schematic.v1.NetListService/GetProjectNetList",
+  "entityComponents": 164,
+  "physicalPins": 508,
+  "connectedNets": 124,
+  "ncPins": 24,
+  "componentsMatch": true,
+  "physicalPinsMatch": true,
+  "netEndpointSetsMatch": true,
+  "ncMatch": true,
+  "eachPinInOneNet": true,
+  "schematicFilesUnchanged": true,
+  "declaredCapabilities": [
+    "SCHEMATIC",
+    "NETLIST",
+    "NETLIST_SELECTION",
+    "BOM",
+    "PLACEMENT"
+  ],
+  "writeOperationsTested": false,
+  "legacyMCPServerVerified": false,
+  "legacySDKEndpointResult": "ConnectionRefused",
+  "guiEvidence": "已读取客户端完整9页层次树；截图及交互保存未验证",
+  "passed": true
+}

@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-03",
+  "parts": [
+    {
+      "Designator": "Q12",
+      "Manufacturer Part": "AP60P20Q",
+      "Supplier Part": "C2828591",
+      "FootprintName": "DFN-8_L3.3-W3.3-P0.65-BL",
+      "Unique ID": "AI_MCUTOOL_Q12"
+    },
+    {
+      "Designator": "Q13",
+      "Manufacturer Part": "AP60P20Q",
+      "Supplier Part": "C2828591",
+      "FootprintName": "DFN-8_L3.3-W3.3-P0.65-BL",
+      "Unique ID": "AI_MCUTOOL_Q13"
+    }
+  ],
+  "pinFunctionMap": {
+    "old": {
+      "D": [
+        "1",
+        "2",
+        "3"
+      ],
+      "G": [
+        "4"
+      ],
+      "S": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    "new": {
+      "D": [
+        "5"
+      ],
+      "G": [
+        "4"
+      ],
+      "S": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "functionalConnectionsUnchanged": true,
+  "namedNetsUnchanged": true,
+  "allOtherAuthoredComponentPropertiesUnchanged": true,
+  "regeneratedAutomaticChannelIds": {
+    "R35": [
+      "$5I6",
+      "$5I4"
+    ],
+    "J12": [
+      "$5I8",
+      "$5I6"
+    ],
+    "J13": [
+      "$5I9",
+      "$5I7"
+    ],
+    "R33": [
+      "$5I5",
+      "$5I3"
+    ],
+    "Q14": [
+      "$5I4",
+      "$5I2"
+    ],
+    "R36": [
+      "$5I7",
+      "$5I5"
+    ]
+  },
+  "otherSchematicFilesUnchanged": true,
+  "componentCount": 166,
+  "pinCount": 476,
+  "drc": [],
+  "geometry": {
+    "wireThroughSymbol": [],
+    "differentGroupCrossings": [],
+    "wireSegments": 44
+  },
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "chargingLimit": {
+    "V": 5,
+    "A": 2
+  },
+  "driverAndResistorsRetained": true,
+  "hardwareValidationPending": [
+    "带载开通及关断时间",
+    "5V输入热插拔与VGS瞬态",
+    "2A压降与温升",
+    "充电互锁及上电默认关闭"
+  ]
+}

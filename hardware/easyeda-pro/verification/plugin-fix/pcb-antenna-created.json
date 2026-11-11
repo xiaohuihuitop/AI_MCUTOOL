@@ -1,0 +1,56 @@
+{
+  "created": 1,
+  "dryRun": false,
+  "layer": 12,
+  "ok": true,
+  "planned": 1,
+  "regions": [
+    {
+      "designator": "U4",
+      "device": "ESP32-S3-WROOM-1-N16R8",
+      "rect": [
+        2598.0946,
+        3524.9,
+        3386.1295999999998,
+        3805.1971
+      ],
+      "created": true,
+      "attempted": true,
+      "primitiveId": "64d51fd1fdc797d8",
+      "actual": {
+        "layer": 12,
+        "lineWidth": 0.2,
+        "locked": false,
+        "primitiveId": "64d51fd1fdc797d8",
+        "regionName": null,
+        "ruleType": [
+          6,
+          5,
+          7,
+          8
+        ],
+        "ruleTypeNames": [
+          "no-fills",
+          "no-wires",
+          "no-pours",
+          "no-inner-electrical"
+        ],
+        "source": [
+          2598.0946,
+          3524.9,
+          "L",
+          2598.0946,
+          3805.1971,
+          3386.1296,
+          3805.1971,
+          3386.1296,
+          3524.9,
+          2598.0946,
+          3524.9
+        ],
+        "verified": true
+      }
+    }
+  ],
+  "skipped": null
+}

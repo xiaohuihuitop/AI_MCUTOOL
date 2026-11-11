@@ -1,0 +1,109 @@
+playbook "Single-sheet Lib composition" — 107 step(s), project=57a0364c842149baada4fb3ca7ccf03f
+  [1/107] verify-project-unique-designators action  schematic.components.list
+  [2/107] verify-source-before-reset action  schematic.components.list [gate]
+  [3/107] verify-preserved-parts-after-clear action  schematic.components.list
+  [4/107] move-preserved-000 action  schematic.component.modify [gate]
+  [5/107] move-preserved-001 action  schematic.component.modify [gate]
+  [6/107] move-preserved-002 action  schematic.component.modify [gate]
+  [7/107] move-preserved-003 action  schematic.component.modify [gate]
+  [8/107] move-preserved-004 action  schematic.component.modify [gate]
+  [9/107] move-preserved-005 action  schematic.component.modify [gate]
+  [10/107] move-preserved-006 action  schematic.component.modify [gate]
+  [11/107] move-preserved-007 action  schematic.component.modify [gate]
+  [12/107] move-preserved-008 action  schematic.component.modify [gate]
+  [13/107] move-preserved-009 action  schematic.component.modify [gate]
+  [14/107] move-preserved-010 action  schematic.component.modify [gate]
+  [15/107] move-preserved-011 action  schematic.component.modify [gate]
+  [16/107] move-preserved-012 action  schematic.component.modify [gate]
+  [17/107] verify-physical-pins-before-wiring action  schematic.components.list
+  [18/107] save-placed-parts action  schematic.save [gate]
+  [19/107] nc-004           action  schematic.pin.set_no_connect [gate]
+  [20/107] nc-005           action  schematic.pin.set_no_connect [gate]
+  [21/107] verify-edited-nc-before-wiring action  schematic.components.list
+  [22/107] wire-000         action  schematic.wire.create
+  [23/107] wire-001         action  schematic.wire.create
+  [24/107] wire-002         action  schematic.wire.create
+  [25/107] wire-003         action  schematic.wire.create
+  [26/107] wire-004         action  schematic.wire.create
+  [27/107] wire-005         action  schematic.wire.create
+  [28/107] wire-006         action  schematic.wire.create
+  [29/107] wire-007         action  schematic.wire.create
+  [30/107] wire-008         action  schematic.wire.create
+  [31/107] wire-009         action  schematic.wire.create
+  [32/107] wire-010         action  schematic.wire.create
+  [33/107] wire-011         action  schematic.wire.create
+  [34/107] wire-012         action  schematic.wire.create
+  [35/107] wire-013         action  schematic.wire.create
+  [36/107] wire-014         action  schematic.wire.create
+  [37/107] wire-015         action  schematic.wire.create
+  [38/107] wire-016         action  schematic.wire.create
+  [39/107] wire-017         action  schematic.wire.create
+  [40/107] wire-018         action  schematic.wire.create
+  [41/107] wire-019         action  schematic.wire.create
+  [42/107] wire-020         action  schematic.wire.create
+  [43/107] wire-021         action  schematic.wire.create
+  [44/107] wire-022         action  schematic.wire.create
+  [45/107] wire-023         action  schematic.wire.create
+  [46/107] wire-024         action  schematic.wire.create
+  [47/107] wire-025         action  schematic.wire.create
+  [48/107] wire-026         action  schematic.wire.create
+  [49/107] wire-027         action  schematic.wire.create
+  [50/107] wire-028         action  schematic.wire.create
+  [51/107] wire-029         action  schematic.wire.create
+  [52/107] wire-030         action  schematic.wire.create
+  [53/107] wire-031         action  schematic.wire.create
+  [54/107] wire-032         action  schematic.wire.create
+  [55/107] wire-033         action  schematic.wire.create
+  [56/107] wire-034         action  schematic.wire.create
+  [57/107] wire-035         action  schematic.wire.create
+  [58/107] wire-036         action  schematic.wire.create
+  [59/107] wire-037         action  schematic.wire.create
+  [60/107] wire-038         action  schematic.wire.create
+  [61/107] wire-039         action  schematic.wire.create
+  [62/107] wire-040         action  schematic.wire.create
+  [63/107] wire-041         action  schematic.wire.create
+  [64/107] wire-042         action  schematic.wire.create
+  [65/107] wire-043         action  schematic.wire.create
+  [66/107] wire-044         action  schematic.wire.create
+  [67/107] wire-045         action  schematic.wire.create
+  [68/107] wire-046         action  schematic.wire.create
+  [69/107] wire-047         action  schematic.wire.create
+  [70/107] wire-048         action  schematic.wire.create
+  [71/107] wire-049         action  schematic.wire.create
+  [72/107] wire-050         action  schematic.wire.create
+  [73/107] wire-051         action  schematic.wire.create
+  [74/107] wire-052         action  schematic.wire.create
+  [75/107] wire-053         action  schematic.wire.create
+  [76/107] wire-054         action  schematic.wire.create
+  [77/107] wire-055         action  schematic.wire.create
+  [78/107] wire-056         action  schematic.wire.create
+  [79/107] wire-057         action  schematic.wire.create
+  [80/107] wire-058         action  schematic.wire.create
+  [81/107] wire-059         action  schematic.wire.create
+  [82/107] wire-060         action  schematic.wire.create
+  [83/107] wire-061         action  schematic.wire.create
+  [84/107] wire-062         action  schematic.wire.create
+  [85/107] marker-000       action  schematic.power.connect_pin
+  [86/107] marker-001       action  schematic.power.connect_pin
+  [87/107] marker-002       action  schematic.power.connect_pin
+  [88/107] marker-003       action  schematic.power.connect_pin
+  [89/107] marker-004       action  schematic.power.connect_pin
+  [90/107] marker-005       action  schematic.power.connect_pin
+  [91/107] marker-006       action  schematic.power.connect_pin
+  [92/107] marker-007       action  schematic.power.connect_pin
+  [93/107] marker-008       action  schematic.power.connect_pin
+  [94/107] marker-009       action  schematic.power.connect_pin
+  [95/107] marker-010       action  schematic.power.connect_pin
+  [96/107] marker-011       action  schematic.power.connect_pin
+  [97/107] register-lib-000 run     sch group create
+  [98/107] register-lib-001 run     sch group create
+  [99/107] register-lib-002 run     sch group create
+  [100/107] apply-module-frames run     sch frame apply [gate]
+  [101/107] verify-module-frames run     sch frame check [gate]
+  [102/107] verify-all-pins-nets-nc action  schematic.components.list
+  [103/107] electrical-check action  schematic.check [gate]
+  [104/107] wire-tree-check  action  schematic.bridgeCheck [gate]
+  [105/107] strict-schematic-gate run     sch gate
+  [106/107] save-composition action  schematic.save [gate]
+  [107/107] verify-saved-instance-preservation action  schematic.components.list
+dry-run: preflight passed, nothing executed

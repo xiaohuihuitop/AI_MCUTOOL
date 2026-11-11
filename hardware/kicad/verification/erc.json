@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-24T15:54:06",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7",
+            "violations": []
+        },
+        {
+            "path": "/01 工具电源/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/c979b1a3-ac71-53a4-9ed3-0a403d2fef72",
+            "violations": []
+        },
+        {
+            "path": "/02 主控与总线/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/1b1b619b-14a7-5444-93ae-7a83695e413d",
+            "violations": []
+        },
+        {
+            "path": "/03 五路按键模拟/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95",
+            "violations": []
+        },
+        {
+            "path": "/04 主供电选择/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/f8db24b2-1b0b-58f6-96c5-04c8364b40af",
+            "violations": []
+        },
+        {
+            "path": "/05 独立充电输入/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/978755fc-a43c-5618-b9d2-aa72bbfea714",
+            "violations": []
+        },
+        {
+            "path": "/06 电池端电流与电压/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/3534114f-2f64-527b-a926-eec63c4381c2",
+            "violations": []
+        },
+        {
+            "path": "/07 四路高阻电压检测/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/23e08aee-9634-504f-bf25-a659f5266717",
+            "violations": []
+        },
+        {
+            "path": "/08 目标UART接口/",
+            "uuid_path": "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/01a2aade-35ec-59cd-a980-432b813584e7",
+            "violations": []
+        }
+    ],
+    "source": "AI_MCUTOOL.kicad_sch"
+}

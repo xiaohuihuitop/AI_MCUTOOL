@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-12",
+  "manufacturingPrimitiveIdsGeometryNetAssignmentsAndRulesPreserved": true,
+  "all140ComponentIdsPositionsRotationsAndMaterialPropertiesPreserved": true,
+  "all25LibraryFootprintGeometriesPreserved": true,
+  "allSchematicAndPanelSourceHashesPreserved": true,
+  "assemblyBomAndCplFilesPreserved": true,
+  "annotationOnlyChanges": [
+    {
+      "designator": "R22",
+      "field": "AI Design Note",
+      "before": "AI:已回���统一物料，原0603焊盘及坐标保持；240Ω。",
+      "after": "AI:已回板统一物料，原0603焊盘及坐标保持；240Ω。"
+    }
+  ],
+  "nativeDocumentCounts": {
+    "SYMBOL": 37,
+    "FOOTPRINT": 25,
+    "DEVICE": 38,
+    "FONT": 1,
+    "PCB": 1
+  },
+  "drcRerun": false,
+  "hardwareTested": false
+}

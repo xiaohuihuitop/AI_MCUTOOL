@@ -1,0 +1,15 @@
+{
+  "id": "req_10",
+  "type": "response",
+  "version": "v1",
+  "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+  "createdAt": "2026-10-24T14:42:43.5752152Z",
+  "ok": false,
+  "error": {
+    "code": "EDA_CALL_FAILED",
+    "message": "Schematic replacement failed during phase \"replacement-restore\". Read the original document and reconcile the reported instances before retrying.",
+    "detail": "replace transaction facts: {\"phase\":\"replacement-restore\",\"cause\":\"Replacement or rollback-original property otherProperty was not restored.\",\"oldPrimitive\":{\"primitiveId\":\"fd9886abb629a3fa\",\"present\":false},\"replacement\":{\"primitiveId\":\"91b7309095e7ec28\",\"present\":false},\"rollback\":{\"attempted\":true,\"verified\":true,\"errors\":[],\"restoredOriginal\":{\"primitiveId\":\"2386d1eb6fee0607\",\"verified\":true}}}"
+  },
+  "seq": 9,
+  "seqAbandoned": 0
+}

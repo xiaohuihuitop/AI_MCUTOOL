@@ -1,0 +1,120 @@
+{
+  "id": "req_3",
+  "type": "response",
+  "version": "v1",
+  "windowId": "7d86c9d0-1b16-48d2-9679-c209ba186dc8",
+  "createdAt": "2026-10-24T10:38:52.8580529Z",
+  "ok": true,
+  "result": {
+    "pages": [
+      {
+        "name": "01-工具电源",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "1723f236624877be"
+      },
+      {
+        "name": "02-主控与总线",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "ac31dbf8e924f563"
+      },
+      {
+        "name": "03-五路按键",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "11bf161323c12964"
+      },
+      {
+        "name": "04-主供电选择",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "4a2d6d8ff4e4f8cc"
+      },
+      {
+        "name": "05-独立充电",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "cd726d91de8833ec"
+      },
+      {
+        "name": "06-电池端测量",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "adb82841fcb5f3ba"
+      },
+      {
+        "name": "07-四路电压",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "1a6c8a76b3b64b3b"
+      },
+      {
+        "name": "08-目标串口",
+        "parentSchematicUuid": "e4cefb87f29ba303",
+        "uuid": "6d2f0a95f4a336fa"
+      }
+    ],
+    "schematics": [
+      {
+        "name": "Schematic1",
+        "page": [
+          {
+            "name": "01-工具电源",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "1723f236624877be"
+          },
+          {
+            "name": "02-主控与总线",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "ac31dbf8e924f563"
+          },
+          {
+            "name": "03-五路按键",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "11bf161323c12964"
+          },
+          {
+            "name": "04-主供电选择",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "4a2d6d8ff4e4f8cc"
+          },
+          {
+            "name": "05-独立充电",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "cd726d91de8833ec"
+          },
+          {
+            "name": "06-电池端测量",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "adb82841fcb5f3ba"
+          },
+          {
+            "name": "07-四路电压",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "1a6c8a76b3b64b3b"
+          },
+          {
+            "name": "08-目标串口",
+            "parentSchematicUuid": "e4cefb87f29ba303",
+            "uuid": "6d2f0a95f4a336fa"
+          }
+        ],
+        "parentProjectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "uuid": "e4cefb87f29ba303"
+      }
+    ]
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 3,
+  "seqAbandoned": 0
+}

@@ -1,0 +1,367 @@
+{
+  "schema": "ai-mcutool-footprint-source/1",
+  "units": "mm",
+  "coordinateFrame": "source-y-up",
+  "provenance": "2026-10-24从独立审查前的迁移封装恢复已保存的原库焊盘中心、尺寸、轴角度；未恢复缺失的钢网和阻焊工艺。只读此固定输入，不从修复后的输出反推。",
+  "footprints": [
+    {
+      "name": "N_FET",
+      "sourceName": "CSD17577Q3A",
+      "unfixedFootprintSha256": "b12103dd0fbc3e1cfbc8a47b09dd553e4e78ce34e4f50cedd051702d73b9217a",
+      "pads": [
+        {
+          "number": "1",
+          "x": -0.987552,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "2",
+          "x": -0.337566,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "3",
+          "x": 0.312674,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "4",
+          "x": 0.962406,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "8",
+          "x": -0.962406,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "7",
+          "x": -0.31242,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "6",
+          "x": 0.337566,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "5",
+          "x": 0.987552,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "9",
+          "x": 0.0127,
+          "y": 0.406527,
+          "angle": 0.0,
+          "width": 2.650007,
+          "height": 1.999996,
+          "shape": "rect"
+        }
+      ]
+    },
+    {
+      "name": "P_FET",
+      "sourceName": "CSD25402Q3A",
+      "unfixedFootprintSha256": "410be79bba2b174a140f321c45fa25d663a2c622f305788a114c0c4cbb97ec37",
+      "pads": [
+        {
+          "number": "1",
+          "x": -0.987552,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "2",
+          "x": -0.337566,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "3",
+          "x": 0.312674,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "4",
+          "x": 0.962406,
+          "y": -1.498473,
+          "angle": 90.0,
+          "width": 0.680009,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "8",
+          "x": -0.962406,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "7",
+          "x": -0.31242,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "6",
+          "x": 0.337566,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "5",
+          "x": 0.987552,
+          "y": 1.498473,
+          "angle": 90.0,
+          "width": 0.599999,
+          "height": 0.299999,
+          "shape": "rect"
+        },
+        {
+          "number": "9",
+          "x": 0.0127,
+          "y": 0.406527,
+          "angle": 0.0,
+          "width": 2.650007,
+          "height": 1.999996,
+          "shape": "rect"
+        }
+      ]
+    },
+    {
+      "name": "SHUNT4",
+      "sourceName": "WSK2512R0100DEA",
+      "unfixedFootprintSha256": "5c47191299686f6fe432e4b2d89f284b3a947e0606fb3c75edab279a1c3d3d8d",
+      "pads": [
+        {
+          "number": "3",
+          "x": 3.28,
+          "y": 1.27,
+          "angle": 0,
+          "width": 1.7,
+          "height": 0.76,
+          "shape": "rect"
+        },
+        {
+          "number": "4",
+          "x": 2.985,
+          "y": -0.635,
+          "angle": 0,
+          "width": 2.29,
+          "height": 2.03,
+          "shape": "rect"
+        },
+        {
+          "number": "2",
+          "x": -3.28,
+          "y": -1.27,
+          "angle": 0,
+          "width": 1.7,
+          "height": 0.76,
+          "shape": "rect"
+        },
+        {
+          "number": "1",
+          "x": -2.985,
+          "y": 0.635,
+          "angle": 0,
+          "width": 2.29,
+          "height": 2.03,
+          "shape": "rect"
+        }
+      ],
+      "manufacturerReview": {
+        "date": "2026-10-24",
+        "source": "https://www.vishay.com/docs/30108/wsk2512.pdf",
+        "page": 2,
+        "resistanceRangeOhm": [
+          0.005,
+          0.2
+        ],
+        "report": "../../docs/四端分流器封装尺寸核定.md",
+        "change": "按厂家毫米表重建四盘；感测小盘改为外侧边齐平，1.70×0.76mm。输入仍为Y向上坐标。"
+      }
+    },
+    {
+      "name": "PHOTO_MOS",
+      "sourceName": "TLP176AM_C6285455",
+      "unfixedFootprintSha256": "59498987837ab80027148304c6903bf93810e39cacba73604e7aa0ebc454da3d",
+      "pads": [
+        {
+          "number": "1",
+          "x": -3.499993,
+          "y": 1.27,
+          "angle": 0.0,
+          "width": 1.499997,
+          "height": 0.799998,
+          "shape": "rect"
+        },
+        {
+          "number": "3",
+          "x": -3.499993,
+          "y": -1.27,
+          "angle": 0.0,
+          "width": 1.499997,
+          "height": 0.799998,
+          "shape": "rect"
+        },
+        {
+          "number": "4",
+          "x": 3.499993,
+          "y": -1.27,
+          "angle": 0.0,
+          "width": 1.499997,
+          "height": 0.799998,
+          "shape": "rect"
+        },
+        {
+          "number": "6",
+          "x": 3.499993,
+          "y": 1.27,
+          "angle": 0.0,
+          "width": 1.499997,
+          "height": 0.799998,
+          "shape": "rect"
+        }
+      ]
+    },
+    {
+      "name": "PHOTO_PV",
+      "sourceName": "VOM1271T",
+      "unfixedFootprintSha256": "10a67f64c1d145d747cf18386ab14a2155531ea5c46f10e664c1c07f0d819840",
+      "pads": [
+        {
+          "number": "4",
+          "x": -1.27,
+          "y": 3.124962,
+          "angle": 270.0,
+          "width": 1.15001,
+          "height": 0.899998,
+          "shape": "rect"
+        },
+        {
+          "number": "3",
+          "x": 1.27,
+          "y": 3.124962,
+          "angle": 270.0,
+          "width": 1.15001,
+          "height": 0.899998,
+          "shape": "rect"
+        },
+        {
+          "number": "2",
+          "x": 1.27,
+          "y": -3.124962,
+          "angle": 270.0,
+          "width": 1.15001,
+          "height": 0.899998,
+          "shape": "rect"
+        },
+        {
+          "number": "1",
+          "x": -1.27,
+          "y": -3.124962,
+          "angle": 270.0,
+          "width": 1.15001,
+          "height": 0.899998,
+          "shape": "rect"
+        }
+      ]
+    },
+    {
+      "name": "SW4",
+      "sourceName": "TS-1187A-B-A-B",
+      "unfixedFootprintSha256": "cd7f080db45e2bdf693b9b8550cda56366d6807320d140d229c965e156eb50fa",
+      "pads": [
+        {
+          "number": "1",
+          "x": -2.999994,
+          "y": 1.849882,
+          "angle": 0.0,
+          "width": 0.999998,
+          "height": 0.750011,
+          "shape": "rect"
+        },
+        {
+          "number": "2",
+          "x": 2.999994,
+          "y": 1.849882,
+          "angle": 0.0,
+          "width": 0.999998,
+          "height": 0.750011,
+          "shape": "rect"
+        },
+        {
+          "number": "3",
+          "x": -2.999994,
+          "y": -1.849882,
+          "angle": 0.0,
+          "width": 0.999998,
+          "height": 0.750011,
+          "shape": "rect"
+        },
+        {
+          "number": "4",
+          "x": 2.999994,
+          "y": -1.849882,
+          "angle": 0.0,
+          "width": 0.999998,
+          "height": 0.750011,
+          "shape": "rect"
+        }
+      ]
+    }
+  ]
+}

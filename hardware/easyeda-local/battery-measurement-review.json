@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-04",
+  "reviewedPage": "06-电池端测量",
+  "componentsOnPage": 8,
+  "nativeConnectivityVerified": true,
+  "sampleInputPolarityCorrect": true,
+  "shuntFourTerminalSeparationCorrect": true,
+  "filterAndSupplyConnectionsCorrect": true,
+  "voltageTapAfterShuntVerified": true,
+  "i2cAndAlertConnectionsCorrect": true,
+  "projectSourceFilesUnchanged": true,
+  "shuntOhms": 0.02,
+  "shuntDropAt3A_mV": 60,
+  "shuntPowerAt3A_W": 0.18,
+  "plannedAdcRange": 0,
+  "rawCurrentStep_uA": 15.625,
+  "offsetEquivalent_uA_fromDatasheet1uV": 50,
+  "vbusInputLoadAt3p7V_uA": [
+    3.0833333333,
+    4.625
+  ],
+  "vbusInputLoadAt15V_uA": [
+    12.5,
+    18.75
+  ],
+  "externalOpAmpRequired": false,
+  "hardwareAccuracyValidated": false,
+  "drcNote": "当前客户端存在其他页的旧模板缓存告警；本轮独立后台图页未成功加载，未报告新的全工程DRC通过结论。原生磁盘连接独立核对通过。"
+}

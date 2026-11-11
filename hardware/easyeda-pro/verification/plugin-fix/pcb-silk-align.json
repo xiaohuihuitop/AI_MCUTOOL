@@ -1,0 +1,1052 @@
+{
+  "id": "req_1239",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T14:23:44.9749292Z",
+  "ok": true,
+  "result": {
+    "aligned": 0,
+    "appliedIds": [],
+    "details": [],
+    "geometryScope": "rendered component envelopes, measured pads and text; outline bounding-box containment",
+    "normalization": [
+      {
+        "designator": "C3",
+        "ok": true,
+        "primitiveId": "cd5eada78dea4781e20",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C9",
+        "ok": true,
+        "primitiveId": "188441358e4d92b7e18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C11",
+        "ok": true,
+        "primitiveId": "7f68a63e3545dadfe18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C13",
+        "ok": true,
+        "primitiveId": "7b68bf97e1d1d92ce18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C15",
+        "ok": true,
+        "primitiveId": "67c75a6ef14b3299e18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C17",
+        "ok": true,
+        "primitiveId": "f48798e34a2ce2e4e18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C20",
+        "ok": true,
+        "primitiveId": "b178d6a896db4799e18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C22",
+        "ok": true,
+        "primitiveId": "6a97aff78328c689e20",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C23",
+        "ok": true,
+        "primitiveId": "d112add24279cb48e20",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "C25",
+        "ok": true,
+        "primitiveId": "d71a5153f7e373a2e18",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J2",
+        "ok": true,
+        "primitiveId": "a77429c96c0e1c51e2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J3",
+        "ok": true,
+        "primitiveId": "d40c0f1b4cb1e5c5e19",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J4",
+        "ok": true,
+        "primitiveId": "37e0174b42d77a70e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J5",
+        "ok": true,
+        "primitiveId": "2f34f10777a64b8ce9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J6",
+        "ok": true,
+        "primitiveId": "673bfd008e0bc56de9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J7",
+        "ok": true,
+        "primitiveId": "5caba9dff3f6db59e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J8",
+        "ok": true,
+        "primitiveId": "0a857c34ba8f900fe9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J14",
+        "ok": true,
+        "primitiveId": "00f32e97e5e553e6e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J15",
+        "ok": true,
+        "primitiveId": "7ccb77fc1e2ecfb9e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J16",
+        "ok": true,
+        "primitiveId": "2397c817b28b7563e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J17",
+        "ok": true,
+        "primitiveId": "2ecee5a68634bd29e9",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "J18",
+        "ok": true,
+        "primitiveId": "1dba3f94bb121bd2e15",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q1",
+        "ok": true,
+        "primitiveId": "60e2357a4153a5d6e2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q2",
+        "ok": true,
+        "primitiveId": "92e35f53efd7fcf6e2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q3",
+        "ok": true,
+        "primitiveId": "854d8e70e1bbfafce2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q4",
+        "ok": true,
+        "primitiveId": "df4d78a77223414be2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q5",
+        "ok": true,
+        "primitiveId": "a0beffe0625f0b5de2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q6",
+        "ok": true,
+        "primitiveId": "faad089a381c16dae2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q7",
+        "ok": true,
+        "primitiveId": "a0fb1b8c2521e53ae2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q8",
+        "ok": true,
+        "primitiveId": "06c43c7779c941c7e35",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q10",
+        "ok": true,
+        "primitiveId": "2644215dd8d202a7e35",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q12",
+        "ok": true,
+        "primitiveId": "de94a20d7beab045e35",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q13",
+        "ok": true,
+        "primitiveId": "0077f399ce5c3afae35",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "Q14",
+        "ok": true,
+        "primitiveId": "8fc2a0390d71bdc4e2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R3",
+        "ok": true,
+        "primitiveId": "2e11a34fa95eeb76e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R4",
+        "ok": true,
+        "primitiveId": "0b5054aac805d958e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R7",
+        "ok": true,
+        "primitiveId": "6d59d7bdc8f35320e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R8",
+        "ok": true,
+        "primitiveId": "eb9e299d098e327ee16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R12",
+        "ok": true,
+        "primitiveId": "1543909e494c6f3be16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R13",
+        "ok": true,
+        "primitiveId": "364c90fed3c64b57e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R15",
+        "ok": true,
+        "primitiveId": "26a6035ff7fcccf5e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R16",
+        "ok": true,
+        "primitiveId": "b29da227924ba086e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R18",
+        "ok": true,
+        "primitiveId": "701873ec79a63f4de16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R19",
+        "ok": true,
+        "primitiveId": "33096f522b3f533ce16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R21",
+        "ok": true,
+        "primitiveId": "5939702ad9423a65e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R22",
+        "ok": true,
+        "primitiveId": "06d85b24cfefb044e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R24",
+        "ok": true,
+        "primitiveId": "b0bf441cd904b817e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R25",
+        "ok": true,
+        "primitiveId": "1540e2555c50b961e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R27",
+        "ok": true,
+        "primitiveId": "e4c2542e5e4d0aa8e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R30",
+        "ok": true,
+        "primitiveId": "ed9f6bb699b39f7be16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R37",
+        "ok": true,
+        "primitiveId": "6747b591b1fabbbbe16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R38",
+        "ok": true,
+        "primitiveId": "6d0a7b85493c3d66e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R64",
+        "ok": true,
+        "primitiveId": "c3649310d2245b58e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R65",
+        "ok": true,
+        "primitiveId": "268259c8ee513d1fe16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R73",
+        "ok": true,
+        "primitiveId": "21e86c1b221d527ce16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R74",
+        "ok": true,
+        "primitiveId": "dc241dcd308d8258e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R76",
+        "ok": true,
+        "primitiveId": "d820bfa30be72b05e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R77",
+        "ok": true,
+        "primitiveId": "10c464421eb810b0e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R78",
+        "ok": true,
+        "primitiveId": "237fc460e6200c1de16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R81",
+        "ok": true,
+        "primitiveId": "8e5357031be818aee16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "R82",
+        "ok": true,
+        "primitiveId": "c8483cdfb6a1d7a1e16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "RSH1",
+        "ok": true,
+        "primitiveId": "86fc51eff4b2368be16",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U1",
+        "ok": true,
+        "primitiveId": "51fa4a8038f29f42e30",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U2",
+        "ok": true,
+        "primitiveId": "15de6807148ca216e30",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U3",
+        "ok": true,
+        "primitiveId": "49c881071a884a96e21",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U5",
+        "ok": true,
+        "primitiveId": "003993f5664d469ce22",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U6",
+        "ok": true,
+        "primitiveId": "ce92ed1d543ad931e22",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U7",
+        "ok": true,
+        "primitiveId": "a7519e2862afd815e22",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U8",
+        "ok": true,
+        "primitiveId": "e173c50b24b5ad7de22",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U9",
+        "ok": true,
+        "primitiveId": "507200838b13582de22",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U10",
+        "ok": true,
+        "primitiveId": "05a199839a79772fe2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U11",
+        "ok": true,
+        "primitiveId": "d7305df0d311caf9e2",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U12",
+        "ok": true,
+        "primitiveId": "5c585e83a984938ce42",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U13",
+        "ok": true,
+        "primitiveId": "f1577471a25befc4e41",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U14",
+        "ok": true,
+        "primitiveId": "bd3c3f8101d378b1e54",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U15",
+        "ok": true,
+        "primitiveId": "ceb7b1d9f47d64c1e39",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U16",
+        "ok": true,
+        "primitiveId": "f29bb84430901c81e30",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      },
+      {
+        "designator": "U17",
+        "ok": true,
+        "primitiveId": "f20de6ae9f20b621e30",
+        "requested": {
+          "layer": 3,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        }
+      }
+    ],
+    "partial": true,
+    "skipped": 0,
+    "skippedDetails": [],
+    "unresolved": 30,
+    "unresolvedDetails": [
+      {
+        "designator": "R64",
+        "primitiveId": "c3649310d2245b58e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R74",
+        "primitiveId": "dc241dcd308d8258e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R46",
+        "primitiveId": "53e6ac3c4f50a411e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R29",
+        "primitiveId": "c035b35e98f34d56e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R3",
+        "primitiveId": "2e11a34fa95eeb76e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R15",
+        "primitiveId": "26a6035ff7fcccf5e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R18",
+        "primitiveId": "701873ec79a63f4de16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R70",
+        "primitiveId": "7fe8c6cf9eca19b1e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R21",
+        "primitiveId": "5939702ad9423a65e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R24",
+        "primitiveId": "b0bf441cd904b817e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C14",
+        "primitiveId": "65bdd8ad5d20e30de18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R56",
+        "primitiveId": "8988131670161c68e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R61",
+        "primitiveId": "44cb588aef59b023e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R52",
+        "primitiveId": "d9b33057e3000d82e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R62",
+        "primitiveId": "5f3bb90647d2636ce16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "U14",
+        "primitiveId": "bd3c3f8101d378b1e54",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R53",
+        "primitiveId": "787ea8747b07f5ece16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C12",
+        "primitiveId": "dd9240e911aec7ece18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R57",
+        "primitiveId": "d694528054d25a39e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R28",
+        "primitiveId": "d0046a9992a463aee16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C8",
+        "primitiveId": "6267441eac24d6afe18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R71",
+        "primitiveId": "4c8fef5b5c29dc88e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C9",
+        "primitiveId": "188441358e4d92b7e18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R65",
+        "primitiveId": "268259c8ee513d1fe16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C10",
+        "primitiveId": "b1e8011e60296430e18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R73",
+        "primitiveId": "21e86c1b221d527ce16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R34",
+        "primitiveId": "3c1ff88a68668a66e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R8",
+        "primitiveId": "eb9e299d098e327ee16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C25",
+        "primitiveId": "d71a5153f7e373a2e18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C18",
+        "primitiveId": "1d0b4d57b1b531aae18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      }
+    ],
+    "verification": [],
+    "verified": false,
+    "warned": 0
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 1126,
+  "seqAbandoned": 0
+}

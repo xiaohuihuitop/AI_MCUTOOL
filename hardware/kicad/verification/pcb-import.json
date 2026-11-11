@@ -1,0 +1,4063 @@
+{
+  "kicadVersion": "10.0.6-87-gae6d8f40c4",
+  "readyForCompleteImport": true,
+  "boundFootprintsPassed": true,
+  "checkedComponents": 164,
+  "pendingFootprints": [],
+  "errors": [],
+  "components": [
+    {
+      "ref": "C1",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "253f1b92-3393-5048-900f-4161c38a7af2"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J1-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "1b7ddf20-d087-5e03-a868-3809ea003b75"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U2-VIN)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "deb8ee46-a727-5f9a-a837-3c03a2fc0d22"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U1-VOUT)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "821384f4-c164-589e-8b4f-ea6972b21d9f"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J1",
+      "footprint": "AI_MCUTOOL:DC_XKB_DC005_5A_2_0",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "fb065ace-d66c-5bf4-90f0-e9e1d09fc6bc"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J1-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "unconnected-(J1-SW-Pad3)"
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "footprint": "AI_MCUTOOL:USB_C_HRO_TYPE_C_31_M_12",
+      "numberedCopperPads": 16,
+      "uniquePadNumbers": 16,
+      "symbolUuids": [
+        "6f2a79ca-f2ce-594e-9b31-a8100eaf0495"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "A1B12",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "A4B9",
+          "net": "Net-(U2-VIN)"
+        },
+        {
+          "number": "B8",
+          "net": "unconnected-(J2-PadB8)"
+        },
+        {
+          "number": "A5",
+          "net": "Net-(J2-CC1)"
+        },
+        {
+          "number": "B7",
+          "net": "unconnected-(J2-PadB7)"
+        },
+        {
+          "number": "A6",
+          "net": "unconnected-(J2-PadA6)"
+        },
+        {
+          "number": "A7",
+          "net": "unconnected-(J2-PadA7)"
+        },
+        {
+          "number": "B6",
+          "net": "unconnected-(J2-PadB6)"
+        },
+        {
+          "number": "A8",
+          "net": "unconnected-(J2-PadA8)"
+        },
+        {
+          "number": "B5",
+          "net": "Net-(J2-CC2)"
+        },
+        {
+          "number": "B4A9",
+          "net": "Net-(U2-VIN)"
+        },
+        {
+          "number": "B1A12",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "98926a74-0a16-5ed7-9409-578ae5996f25"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J1-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "2c45eb5c-7253-587c-8079-0dced1930bf0"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U2-VIN)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3a97912c-79a8-5198-b1c9-798d83019938"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J2-CC1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "d04c26e5-8853-53f3-9fb9-49b147a0cba7"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J2-CC2)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "numberedCopperPads": 6,
+      "uniquePadNumbers": 6,
+      "symbolUuids": [
+        "a8bc8ec5-e2a4-5c9f-afcc-db3559f205b0"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J1-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U1-VOUT)"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "5",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U1-VOUT)"
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "numberedCopperPads": 6,
+      "uniquePadNumbers": 6,
+      "symbolUuids": [
+        "d0aa2fb9-fb32-5815-adeb-a7071f8ec0c5"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U2-VIN)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U1-VOUT)"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "5",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U1-VOUT)"
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "footprint": "AI_MCUTOOL:LDL1117",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "6cadda2c-5918-5b58-9206-c4fc0b825e89"
+      ],
+      "sheetPath": "/c979b1a3-ac71-53a4-9ed3-0a403d2fef72/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "4",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U1-VOUT)"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "7cae16fc-03c6-54c1-adc4-2ed27fbcd160"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "462bf021-9ca7-5127-95f3-72f9f168d9e1"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C7",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "1d956dcb-a441-5ed4-b6ad-439456084638"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/02 主控与总线/ESP_EN"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J3",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+      "numberedCopperPads": 5,
+      "uniquePadNumbers": 5,
+      "symbolUuids": [
+        "e86d474c-4685-5f9c-a5ac-dd6e3760e4fe"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/02 主控与总线/UART0_TX"
+        },
+        {
+          "number": "2",
+          "net": "/02 主控与总线/UART0_RX"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "/02 主控与总线/ESP_BOOT"
+        },
+        {
+          "number": "5",
+          "net": "/02 主控与总线/ESP_EN"
+        }
+      ]
+    },
+    {
+      "ref": "LED1",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "c047265a-81c3-53a2-8419-c02d2c8c45e8"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "Net-(LED1-A)"
+        }
+      ]
+    },
+    {
+      "ref": "LED2",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "05996728-f779-5f59-af24-e2f576029980"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "Net-(LED2-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8bf32c96-7989-53c5-b7a7-c8eec629973d"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "/02 主控与总线/ESP_EN"
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "47ec971a-38fe-5887-a56c-98eff218e2e3"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "/02 主控与总线/ESP_BOOT"
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "14a2209e-1d9d-5b25-85f2-2fc8a8a67e1e"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U4-IO46)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R8",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "49d15379-d4d4-57ec-b128-b4ce8e9c2f23"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U4-IO3)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3a5a1084-41e6-55cf-b71b-529778a36947"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U4-IO17)"
+        }
+      ]
+    },
+    {
+      "ref": "R10",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "469767c9-3396-5dfc-acea-e3cceee09593"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(LED1-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R11",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "9df2b2f1-d46d-5d22-97eb-d358d9d27aa8"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/02 主控与总线/STATUS_LED"
+        },
+        {
+          "number": "2",
+          "net": "Net-(LED2-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R81",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "313baa30-592f-588f-9a60-a5850934ba17"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "I2C_SDA"
+        }
+      ]
+    },
+    {
+      "ref": "R82",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "dc8958a5-cabb-50ab-b595-2d1c5c2f782f"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "I2C_SCL"
+        }
+      ]
+    },
+    {
+      "ref": "SW1",
+      "footprint": "AI_MCUTOOL:SW4",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "9099d702-da60-5afe-9368-a76249563826"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/02 主控与总线/ESP_EN"
+        },
+        {
+          "number": "2",
+          "net": "/02 主控与总线/ESP_EN"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "SW2",
+      "footprint": "AI_MCUTOOL:SW4",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "20236647-b00d-51ce-9393-8e98588bf068"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/02 主控与总线/ESP_BOOT"
+        },
+        {
+          "number": "2",
+          "net": "/02 主控与总线/ESP_BOOT"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "SW3",
+      "footprint": "AI_MCUTOOL:SW4",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "e9ada675-4d56-5a46-a303-09ecffa2623a"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U4-IO17)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U4-IO17)"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "footprint": "AI_MCUTOOL:ESP32_S3_WROOM_1_Edge",
+      "numberedCopperPads": 53,
+      "uniquePadNumbers": 41,
+      "symbolUuids": [
+        "98d2613a-1f5f-5ed5-a007-5f109f9e5f98"
+      ],
+      "sheetPath": "/1b1b619b-14a7-5444-93ae-7a83695e413d/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "3",
+          "net": "/02 主控与总线/ESP_EN"
+        },
+        {
+          "number": "4",
+          "net": "KEY1_CTRL"
+        },
+        {
+          "number": "5",
+          "net": "KEY2_CTRL"
+        },
+        {
+          "number": "6",
+          "net": "KEY3_CTRL"
+        },
+        {
+          "number": "7",
+          "net": "KEY4_CTRL"
+        },
+        {
+          "number": "8",
+          "net": "DUT_UART_RX"
+        },
+        {
+          "number": "9",
+          "net": "/02 主控与总线/STATUS_LED"
+        },
+        {
+          "number": "10",
+          "net": "Net-(U4-IO17)"
+        },
+        {
+          "number": "11",
+          "net": "CURRENT_ALERT"
+        },
+        {
+          "number": "12",
+          "net": "KEY5_CTRL"
+        },
+        {
+          "number": "13",
+          "net": "unconnected-(U4-USB_D--Pad13)"
+        },
+        {
+          "number": "14",
+          "net": "unconnected-(U4-USB_D+-Pad14)"
+        },
+        {
+          "number": "15",
+          "net": "Net-(U4-IO3)"
+        },
+        {
+          "number": "16",
+          "net": "Net-(U4-IO46)"
+        },
+        {
+          "number": "17",
+          "net": "I2C_SDA"
+        },
+        {
+          "number": "18",
+          "net": "I2C_SCL"
+        },
+        {
+          "number": "19",
+          "net": "BAT_PATH_EN"
+        },
+        {
+          "number": "20",
+          "net": "EXT_PATH_EN"
+        },
+        {
+          "number": "21",
+          "net": "CHARGE_PATH_EN"
+        },
+        {
+          "number": "22",
+          "net": "DUT_UART_TX"
+        },
+        {
+          "number": "23",
+          "net": "unconnected-(U4-IO21-Pad23)"
+        },
+        {
+          "number": "24",
+          "net": "unconnected-(U4-IO47-Pad24)"
+        },
+        {
+          "number": "25",
+          "net": "unconnected-(U4-IO48-Pad25)"
+        },
+        {
+          "number": "26",
+          "net": "unconnected-(U4-IO45-Pad26)"
+        },
+        {
+          "number": "27",
+          "net": "/02 主控与总线/ESP_BOOT"
+        },
+        {
+          "number": "28",
+          "net": "unconnected-(U4-IO35-Pad28)"
+        },
+        {
+          "number": "29",
+          "net": "unconnected-(U4-IO36-Pad29)"
+        },
+        {
+          "number": "30",
+          "net": "unconnected-(U4-IO37-Pad30)"
+        },
+        {
+          "number": "31",
+          "net": "UART_TX_NOE"
+        },
+        {
+          "number": "32",
+          "net": "unconnected-(U4-IO39-Pad32)"
+        },
+        {
+          "number": "33",
+          "net": "unconnected-(U4-IO40-Pad33)"
+        },
+        {
+          "number": "34",
+          "net": "unconnected-(U4-IO41-Pad34)"
+        },
+        {
+          "number": "35",
+          "net": "unconnected-(U4-IO42-Pad35)"
+        },
+        {
+          "number": "36",
+          "net": "/02 主控与总线/UART0_RX"
+        },
+        {
+          "number": "37",
+          "net": "/02 主控与总线/UART0_TX"
+        },
+        {
+          "number": "38",
+          "net": "unconnected-(U4-IO2-Pad38)"
+        },
+        {
+          "number": "39",
+          "net": "unconnected-(U4-IO1-Pad39)"
+        },
+        {
+          "number": "40",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "41",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J4",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "cbec8e1f-635b-5088-820d-4b47cf55cd8f"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U5-CONTACT_A)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U5-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "J5",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "874d1c74-fc77-5f70-a225-6149c031e289"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U6-CONTACT_A)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U6-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "J6",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8687d99f-fefb-57f6-8d7e-addfd7640fd9"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U7-CONTACT_A)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U7-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "J7",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "c7621e70-fa10-5c49-b0d3-9b129bfa7791"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U8-CONTACT_A)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U8-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "J8",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "5422c703-897e-5f5c-b5e7-76b978fa1cea"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U9-CONTACT_A)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U9-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "1a17d102-ccd1-599d-8f38-e28aaf8c3ed4"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q1-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q1-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q2",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "8afbd5b4-7ca0-57d6-b6f4-569bb6b51303"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q2-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q2-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q3",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "43334cc9-7013-5da9-a5fc-ccc8c7c109dd"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q3-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q3-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q4",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "f520866f-ab38-53ca-ac6b-1290d7e4eec3"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q4-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q4-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q5",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "fa54e539-7b4a-5f93-8afa-c62c3ebc3091"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q5-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q5-C)"
+        }
+      ]
+    },
+    {
+      "ref": "R12",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "83a2846f-776c-55e0-90f3-86937228d361"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U5-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R13",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "c6a56b34-8c08-52be-9792-70cbcb7c3570"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "KEY1_CTRL"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q1-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R14",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "61b5a0ad-6a0e-5902-b71c-56e503f33fd3"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q1-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R15",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "16ef9a48-3128-5021-b51e-da7867d6b216"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U6-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R16",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3c9545e0-c686-5112-a202-d10577152f83"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "KEY2_CTRL"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q2-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R17",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "0bcce1d7-12df-51a8-80ff-3d77e60f16b6"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q2-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R18",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8d2a778a-3bf2-52e5-8251-2f6f3373eb1d"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U7-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R19",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "951982a6-d18c-5232-9143-af3a1a5031e0"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "KEY3_CTRL"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q3-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R20",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3012d7f0-ba6a-56c3-879b-21d421f144f8"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q3-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R21",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "ca0386ed-e30b-581e-8f1c-3f3511012880"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U8-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R22",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "70dea128-5a9b-5f24-a4f0-ce921a3d3ef0"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "KEY4_CTRL"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q4-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R23",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3932f368-e1b4-53d7-bc63-8a432e10b858"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q4-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R24",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "b23b7014-d399-5cc7-87d0-edd83463b1f8"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U9-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R25",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "782051f9-74e2-512e-9c13-1972bdeabfe2"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "KEY5_CTRL"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q5-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R26",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "0299a641-6822-5f90-af55-720b8ac7a6bd"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q5-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "U5",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "8727f35c-adfd-5323-b858-0f4cac5c308b"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U5-A)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q1-C)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(U5-CONTACT_A)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U5-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "U6",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "78bf5e01-563d-5af3-9e95-c5109cbd2709"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U6-A)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q2-C)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(U6-CONTACT_A)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U6-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "bfcd67dc-73d4-543f-a840-bf3ab9d865dd"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U7-A)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q3-C)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(U7-CONTACT_A)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U7-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "U8",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "874fc925-cf4d-58a3-b736-ba40746afd0a"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U8-A)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q4-C)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(U8-CONTACT_A)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U8-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "U9",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "0a59957c-614b-51f3-9123-8b9f281078c9"
+      ],
+      "sheetPath": "/28266022-32b9-522f-ad77-12a35322da95/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U9-A)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q5-C)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(U9-CONTACT_A)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U9-CONTACT_B)"
+        }
+      ]
+    },
+    {
+      "ref": "J9",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "a8057f7b-74e4-5c4b-8e6e-5f0324031bb4"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J9-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J10",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "5b9f57e2-c884-5e02-8e80-c767df5b4b46"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J10-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "Q6",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "a146da71-237d-5c11-9ddb-3a30628d3742"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q6-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q6-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q7",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "caa015fb-e4a3-56ac-83ca-90f79bb224f2"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q7-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q7-C)"
+        }
+      ]
+    },
+    {
+      "ref": "Q8",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "4b091537-b993-5163-81b4-296e99c5b820"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q8-G)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(J9-Pad1)"
+        },
+        {
+          "number": "7",
+          "net": "Net-(J9-Pad1)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(J9-Pad1)"
+        },
+        {
+          "number": "5",
+          "net": "Net-(J9-Pad1)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(J9-Pad1)"
+        }
+      ]
+    },
+    {
+      "ref": "Q9",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "b1a4486a-b1a1-5db7-9cf4-208dff06d261"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q8-G)"
+        },
+        {
+          "number": "8",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "7",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "6",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "5",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "9",
+          "net": "VSEL_P"
+        }
+      ]
+    },
+    {
+      "ref": "Q10",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "714ba3c8-d4e4-5f6d-917f-3dc30f99d6b4"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q10-G)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(J10-Pad1)"
+        },
+        {
+          "number": "7",
+          "net": "Net-(J10-Pad1)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(J10-Pad1)"
+        },
+        {
+          "number": "5",
+          "net": "Net-(J10-Pad1)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(J10-Pad1)"
+        }
+      ]
+    },
+    {
+      "ref": "Q11",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "eef4e12a-71c5-5c4e-ab04-305c39984e8d"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q10-G)"
+        },
+        {
+          "number": "8",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "7",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "6",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "5",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "9",
+          "net": "VSEL_P"
+        }
+      ]
+    },
+    {
+      "ref": "R27",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "50602bda-cec5-57c6-bdee-33f67933d637"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U10-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R28",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "47451fd7-c27d-5926-9eca-008ebbed50c6"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "BAT_PATH_EN"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q6-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R29",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "716f2cb5-d517-5d74-a122-9aa2382f0651"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q6-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R30",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "f6882142-015e-5faf-8245-ef72948a9446"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U11-A)"
+        }
+      ]
+    },
+    {
+      "ref": "R31",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "52f83042-0af6-5e91-acad-0268646467e8"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "EXT_PATH_EN"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q7-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R32",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8154118c-8a02-5b48-ab5c-0a26c79379b0"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q7-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "U10",
+      "footprint": "AI_MCUTOOL:PHOTO_PV",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "bbc8489c-f59e-5e17-aaf6-d98593acb78f"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "4",
+          "net": "Net-(Q8-G)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U10-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q6-C)"
+        },
+        {
+          "number": "1",
+          "net": "Net-(U10-A)"
+        }
+      ]
+    },
+    {
+      "ref": "U11",
+      "footprint": "AI_MCUTOOL:PHOTO_PV",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "457f302c-356b-57ad-bf74-8ae2cf92571d"
+      ],
+      "sheetPath": "/f8db24b2-1b0b-58f6-96c5-04c8364b40af/",
+      "pads": [
+        {
+          "number": "4",
+          "net": "Net-(Q10-G)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U11-PV-)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q7-C)"
+        },
+        {
+          "number": "1",
+          "net": "Net-(U11-A)"
+        }
+      ]
+    },
+    {
+      "ref": "J12",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "13f105b2-da2a-5322-8469-6c2b0b9342bf"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J12-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J13",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "608a2f46-0916-5bcc-8573-ec04fa8f0458"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J13-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "Q12",
+      "footprint": "AI_MCUTOOL:P_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "7bbb7ade-c5c7-54ae-8f8d-e8ee51d912bf"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J12-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(J12-Pad1)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(J12-Pad1)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q12-G)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "7",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "5",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(Q12-S-Pad5)"
+        }
+      ]
+    },
+    {
+      "ref": "Q13",
+      "footprint": "AI_MCUTOOL:P_FET",
+      "numberedCopperPads": 9,
+      "uniquePadNumbers": 9,
+      "symbolUuids": [
+        "66d40bd0-6f84-5900-a398-b7c0143f2f5e"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J13-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(J13-Pad1)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(J13-Pad1)"
+        },
+        {
+          "number": "4",
+          "net": "Net-(Q12-G)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "7",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "5",
+          "net": "Net-(Q12-S-Pad5)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(Q12-S-Pad5)"
+        }
+      ]
+    },
+    {
+      "ref": "Q14",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "6a54bbfb-68ef-5dcf-a117-887046cc0369"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q14-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "Net-(Q14-C)"
+        }
+      ]
+    },
+    {
+      "ref": "R33",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "538bc8e7-dc6b-55af-8ea1-36c0909ad965"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q12-G)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q12-S-Pad5)"
+        }
+      ]
+    },
+    {
+      "ref": "R34",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "d9bf75fc-28bf-586c-8fdd-5a8f8d04f83b"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q12-G)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q14-C)"
+        }
+      ]
+    },
+    {
+      "ref": "R35",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "24ebe86a-ef7c-5c71-80aa-5a2331e3ce6b"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "CHARGE_PATH_EN"
+        },
+        {
+          "number": "2",
+          "net": "Net-(Q14-B)"
+        }
+      ]
+    },
+    {
+      "ref": "R36",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "48002c02-939e-5029-9008-a3ae0c13fdcc"
+      ],
+      "sheetPath": "/978755fc-a43c-5618-b9d2-aa72bbfea714/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(Q14-B)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C8",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "91b46b9f-1171-595e-81dd-d0d2a6afcca4"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U12-Vin+)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U12-Vin-)"
+        }
+      ]
+    },
+    {
+      "ref": "C9",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "ad5ab1e5-b605-5448-a11a-346b26617646"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J11",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "26352f65-9fa8-52b3-b0e3-4207868c8fe7"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(RSH1-I2)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R37",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "eb709ae7-2744-5169-8ce1-a711addd5a53"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(RSH1-E1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U12-Vin+)"
+        }
+      ]
+    },
+    {
+      "ref": "R38",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "6f03015d-ca96-508b-8c88-1615e0cbf6b6"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(RSH1-E2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U12-Vin-)"
+        }
+      ]
+    },
+    {
+      "ref": "R39",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "4920711c-914a-51b8-9311-dd9f17edd0bc"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "CURRENT_ALERT"
+        }
+      ]
+    },
+    {
+      "ref": "RSH1",
+      "footprint": "AI_MCUTOOL:SHUNT4",
+      "numberedCopperPads": 4,
+      "uniquePadNumbers": 4,
+      "symbolUuids": [
+        "df605828-59a8-5a19-a010-ce7757584b2a"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "3",
+          "net": "Net-(RSH1-E1)"
+        },
+        {
+          "number": "4",
+          "net": "VSEL_P"
+        },
+        {
+          "number": "2",
+          "net": "Net-(RSH1-E2)"
+        },
+        {
+          "number": "1",
+          "net": "Net-(RSH1-I2)"
+        }
+      ]
+    },
+    {
+      "ref": "U12",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "numberedCopperPads": 10,
+      "uniquePadNumbers": 10,
+      "symbolUuids": [
+        "7bf12c07-c753-5895-9163-98c398bfb32e"
+      ],
+      "sheetPath": "/3534114f-2f64-527b-a926-eec63c4381c2/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "CURRENT_ALERT"
+        },
+        {
+          "number": "4",
+          "net": "I2C_SDA"
+        },
+        {
+          "number": "5",
+          "net": "I2C_SCL"
+        },
+        {
+          "number": "6",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "7",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "8",
+          "net": "Net-(RSH1-I2)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(U12-Vin-)"
+        },
+        {
+          "number": "10",
+          "net": "Net-(U12-Vin+)"
+        }
+      ]
+    },
+    {
+      "ref": "C10",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "b389ccfc-b937-5c42-a2a3-fc51e8f71ad2"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14A-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C11",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3ed28818-6db9-537d-bcbe-275e4a0a32b9"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/07 四路高阻电压检测/ADC_CH1"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C12",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "6aef6004-b30f-5cd8-862a-2e0da67390b7"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14B-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C13",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "ff057531-545b-5bf6-abf1-fd931fe215ed"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/07 四路高阻电压检测/ADC_CH2"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C14",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "f2f4ddf2-3b48-51aa-b478-5b6d34504485"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14C-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "541b4558-1b95-5df2-9489-67b10018c1b5"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/07 四路高阻电压检测/ADC_CH3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C16",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "6bf2465c-a2a4-517d-a896-73c5b9aa4862"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14D-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C17",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "54ceec62-c223-557c-b6bd-a4ab95b0529a"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "/07 四路高阻电压检测/ADC_CH4"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C18",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "0085fde2-0805-5c79-8c5f-20c857f1f021"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C19",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "775ab076-b81c-5335-b6a2-a34786d3d9f7"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "VNEG"
+        }
+      ]
+    },
+    {
+      "ref": "C20",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "a317bf27-639b-5561-96cc-0358a008a782"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C21",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8f537180-5c1e-519f-899c-8a58376fa961"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U15-CF+)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U15-CF-)"
+        }
+      ]
+    },
+    {
+      "ref": "C22",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "5aedbd07-2037-5efb-874c-49765352ec2a"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U15-CRES)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C23",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "e8d8ec52-fd7b-5212-9417-fc1f8d74a13d"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "VNEG"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C24",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "03364004-1828-5378-8a01-d26b51182bca"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "VNEG"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C25",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "4e443d92-ab6a-5bf6-9339-37f1d45fe3cf"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J14",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "61d197e0-69c5-52cb-b7e8-be8729e08d6f"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J14-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J15",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "4b480822-c6af-5a97-9fcb-adb239ef71ef"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J15-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J16",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "1af1851a-4b16-5dd4-89a7-9a3b6f3839a8"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J16-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J17",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "da430637-c80a-51a9-9b4d-060789840063"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J17-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R40",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "6d896875-e65e-5e4c-80d5-257332ba8c9a"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J14-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R40-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R41",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8764d667-dc61-50e5-8b9d-b00a84069168"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R40-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R41-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R42",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3a77484a-bc97-598e-be19-537726e4c452"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R41-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R42-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R43",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "cccf180d-4eea-585a-8532-7dc52cd2f026"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R42-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R43-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R44",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "65466210-2332-55ed-973f-ea2614a648ed"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R43-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14A-+)"
+        }
+      ]
+    },
+    {
+      "ref": "R45",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "21177471-31e4-553f-b5db-454785e834fd"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14A-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R46",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "7e2d489a-92e7-5c9c-9836-e3e9136adf37"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R46-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14A--)"
+        }
+      ]
+    },
+    {
+      "ref": "R47",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "aa504ffc-70f8-5c3e-af2a-739b534b9546"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14A--)"
+        },
+        {
+          "number": "2",
+          "net": "VNEG"
+        }
+      ]
+    },
+    {
+      "ref": "R48",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "9499a413-ecb1-5a9c-918f-bb230bb4cde5"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R46-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "/07 四路高阻电压检测/ADC_CH1"
+        }
+      ]
+    },
+    {
+      "ref": "R49",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "22589581-1eba-5fea-a0fc-3a25b5cb26fc"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J15-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R49-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R50",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "c0407257-f658-5baf-b618-350dab0931a8"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R49-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R50-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R51",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "fd89ea29-83a6-562a-9fb6-4308ca33dadb"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R50-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R51-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R52",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "76b8e91c-8ee9-558b-947e-d72ef7a84256"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R51-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R52-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R53",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8e5f8fde-ee48-544f-a99a-cebb0b92382f"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R52-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14B-+)"
+        }
+      ]
+    },
+    {
+      "ref": "R54",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "052bc80e-5efa-57e7-81f1-de349912e761"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14B-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R55",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "ac7fcbb1-26a9-5ffc-b00a-14fe5e4dd332"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R55-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14B--)"
+        }
+      ]
+    },
+    {
+      "ref": "R56",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "f2ecf262-7886-5450-8e7e-339dd62f3240"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14B--)"
+        },
+        {
+          "number": "2",
+          "net": "VNEG"
+        }
+      ]
+    },
+    {
+      "ref": "R57",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "0cead0a3-55a5-5c22-89e4-e69f8238ed57"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R55-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "/07 四路高阻电压检测/ADC_CH2"
+        }
+      ]
+    },
+    {
+      "ref": "R58",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "193918cb-c93b-5654-ac69-f794ac51c82c"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J16-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R58-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R59",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "714c8caf-a4c1-5afc-ac97-4d6406898906"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R58-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R59-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R60",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "f48beb18-0e76-579a-aff2-723ccbad44e2"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R59-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R60-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R61",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "7cb2b3b0-57c4-5717-88ca-1a6ae78a6d84"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R60-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R61-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R62",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "b4554033-6776-54dd-b2a7-fbea7fa2b32d"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R61-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14C-+)"
+        }
+      ]
+    },
+    {
+      "ref": "R63",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "769f74d9-b8de-5cf0-be1a-45c532fadf04"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14C-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R64",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "8e2b47df-a01b-5100-a79b-5d1ea011094d"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R64-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14C--)"
+        }
+      ]
+    },
+    {
+      "ref": "R65",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "63ed3873-a00e-5b68-b054-3a203b37d5e5"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14C--)"
+        },
+        {
+          "number": "2",
+          "net": "VNEG"
+        }
+      ]
+    },
+    {
+      "ref": "R66",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "1a9b4453-a920-58e9-878a-ab1dcba47405"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R64-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "/07 四路高阻电压检测/ADC_CH3"
+        }
+      ]
+    },
+    {
+      "ref": "R67",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "5cd77ef3-4dde-5ac0-a7b2-bc2202a8317d"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J17-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R67-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R68",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "59e197b2-8ea2-56f3-b1be-bd6f8a5dd7ca"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R67-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R68-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R69",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "3206a0d0-85a5-571e-8adc-f76e0e554ec2"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R68-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R69-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R70",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "6b61b759-a181-5645-96d2-b815992443ab"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R69-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R70-Pad2)"
+        }
+      ]
+    },
+    {
+      "ref": "R71",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "9250ffed-e6a7-5a62-bfa7-6067b2e320a6"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R70-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14D-+)"
+        }
+      ]
+    },
+    {
+      "ref": "R72",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "fa17a148-e882-5eaa-8630-130eb5454772"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14D-+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R73",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "b4bb6528-9f77-54ab-835e-fc3a2ddd1e9f"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R73-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14D--)"
+        }
+      ]
+    },
+    {
+      "ref": "R74",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "0784c347-d388-5eaf-ac67-743ff6c8e47b"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U14D--)"
+        },
+        {
+          "number": "2",
+          "net": "VNEG"
+        }
+      ]
+    },
+    {
+      "ref": "R75",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "d07de965-acbf-5e05-ba0b-8709e83bd53f"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R73-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "/07 四路高阻电压检测/ADC_CH4"
+        }
+      ]
+    },
+    {
+      "ref": "U13",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "numberedCopperPads": 10,
+      "uniquePadNumbers": 10,
+      "symbolUuids": [
+        "842006bd-6981-535c-b4fd-5a4766105f7b"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "2",
+          "net": "unconnected-(U13-ALERT/RDY-Pad2)"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "/07 四路高阻电压检测/ADC_CH1"
+        },
+        {
+          "number": "5",
+          "net": "/07 四路高阻电压检测/ADC_CH2"
+        },
+        {
+          "number": "6",
+          "net": "/07 四路高阻电压检测/ADC_CH3"
+        },
+        {
+          "number": "7",
+          "net": "/07 四路高阻电压检测/ADC_CH4"
+        },
+        {
+          "number": "8",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "9",
+          "net": "I2C_SDA"
+        },
+        {
+          "number": "10",
+          "net": "I2C_SCL"
+        }
+      ]
+    },
+    {
+      "ref": "U14",
+      "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "numberedCopperPads": 14,
+      "uniquePadNumbers": 14,
+      "symbolUuids": [
+        "595caf73-6daf-5489-bf8e-bc158c989c28",
+        "acf7bc82-006c-5d50-9bb5-22ce666c8579",
+        "97cb32a6-853d-52d7-bea3-8b5c48094aed",
+        "0bdf6fac-ef6c-5513-8236-56580f019603",
+        "0738a258-626e-509b-9ad1-55e728db4274"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R46-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(U14A--)"
+        },
+        {
+          "number": "3",
+          "net": "Net-(U14A-+)"
+        },
+        {
+          "number": "4",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "5",
+          "net": "Net-(U14B-+)"
+        },
+        {
+          "number": "6",
+          "net": "Net-(U14B--)"
+        },
+        {
+          "number": "7",
+          "net": "Net-(R55-Pad1)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(R64-Pad1)"
+        },
+        {
+          "number": "9",
+          "net": "Net-(U14C--)"
+        },
+        {
+          "number": "10",
+          "net": "Net-(U14C-+)"
+        },
+        {
+          "number": "11",
+          "net": "VNEG"
+        },
+        {
+          "number": "12",
+          "net": "Net-(U14D-+)"
+        },
+        {
+          "number": "13",
+          "net": "Net-(U14D--)"
+        },
+        {
+          "number": "14",
+          "net": "Net-(R73-Pad1)"
+        }
+      ]
+    },
+    {
+      "ref": "U15",
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "numberedCopperPads": 8,
+      "uniquePadNumbers": 8,
+      "symbolUuids": [
+        "0a0d5f88-622f-58ee-9a4e-c7ae0b664f8f"
+      ],
+      "sheetPath": "/23e08aee-9634-504f-bf25-a659f5266717/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(U15-CF+)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "5",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "6",
+          "net": "VNEG"
+        },
+        {
+          "number": "7",
+          "net": "Net-(U15-CRES)"
+        },
+        {
+          "number": "8",
+          "net": "Net-(U15-CF-)"
+        }
+      ]
+    },
+    {
+      "ref": "C26",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "61bd9a81-c464-5565-b379-8dfb8fd4bc43"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "C27",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "d0e06af2-d3b8-5042-8728-cdcca990e2d8"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "J18",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "numberedCopperPads": 3,
+      "uniquePadNumbers": 3,
+      "symbolUuids": [
+        "aa009f4f-1a26-5020-b163-39bc61420eab"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J18-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(J18-Pad2)"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R76",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "70bf0669-695c-501d-82f4-34c82683ebd6"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "UART_TX_NOE"
+        }
+      ]
+    },
+    {
+      "ref": "R77",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "bb5f8d94-c6ae-5c64-a6f0-5ce738946fee"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "TOOL_3V3"
+        },
+        {
+          "number": "2",
+          "net": "DUT_UART_TX"
+        }
+      ]
+    },
+    {
+      "ref": "R78",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "f374b11c-df86-5ef0-93e3-da7226080f98"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R78-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "COMMON_GND"
+        }
+      ]
+    },
+    {
+      "ref": "R79",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "5cd2d27f-6eb8-57b4-a80b-109b3e1fd0c8"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(R79-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(J18-Pad1)"
+        }
+      ]
+    },
+    {
+      "ref": "R80",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "numberedCopperPads": 2,
+      "uniquePadNumbers": 2,
+      "symbolUuids": [
+        "bc54d4f0-0f40-5bed-8972-fb88a57f6e06"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "Net-(J18-Pad2)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R78-Pad1)"
+        }
+      ]
+    },
+    {
+      "ref": "U16",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "numberedCopperPads": 5,
+      "uniquePadNumbers": 5,
+      "symbolUuids": [
+        "6c52aed8-d4e9-5daf-a42f-cf80896f69e5"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "UART_TX_NOE"
+        },
+        {
+          "number": "2",
+          "net": "DUT_UART_TX"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "Net-(R79-Pad1)"
+        },
+        {
+          "number": "5",
+          "net": "TOOL_3V3"
+        }
+      ]
+    },
+    {
+      "ref": "U17",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "numberedCopperPads": 5,
+      "uniquePadNumbers": 5,
+      "symbolUuids": [
+        "9f114ddc-e991-5bd5-bd78-617bfa571f89"
+      ],
+      "sheetPath": "/01a2aade-35ec-59cd-a980-432b813584e7/",
+      "pads": [
+        {
+          "number": "1",
+          "net": "unconnected-(U17-NC-Pad1)"
+        },
+        {
+          "number": "2",
+          "net": "Net-(R78-Pad1)"
+        },
+        {
+          "number": "3",
+          "net": "COMMON_GND"
+        },
+        {
+          "number": "4",
+          "net": "DUT_UART_RX"
+        },
+        {
+          "number": "5",
+          "net": "TOOL_3V3"
+        }
+      ]
+    }
+  ],
+  "scope": "本机原生封装加载及网表到焊盘映射；不是PCB布局、布线或制造验收"
+}

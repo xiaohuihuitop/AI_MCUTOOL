@@ -1,0 +1,54 @@
+{
+  "id": "req_663",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T13:46:12.935342Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "",
+        "lcsc": "C358687",
+        "libraryUuid": "14e053dd7713483c9824729bb852ac86",
+        "name": "HDR-M_2.54_1x5P",
+        "symbolName": "",
+        "uuid": "743fca6ce4f841baacb8f607aab3cfee"
+      },
+      {
+        "description": "插针结构:1x3P;间距:2.54mm;行距:-;圆针/方针:方针;安装方式:直插;排数:单排;总PIN位数:3P;额定电流:3A;额定电压:250V;配合针长度:6mm;塑高:2.5mm;端接针长度:3mm;工作温度:-40℃~+105℃;颜色:黑色;",
+        "lcsc": "C2937625",
+        "libraryUuid": "bf74a816c06243e393e2dc57c2700b3d",
+        "manufacturer": "XFCN(兴飞)",
+        "manufacturerId": "PZ254V-11-03P",
+        "name": "PZ254V-11-03P",
+        "symbolName": "",
+        "uuid": "c99ea4da874a4b3597fe11e2f3f07c8b"
+      }
+    ],
+    "count": 2,
+    "requested": [
+      "C358687",
+      "C2937625"
+    ]
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContextAvailable": true,
+  "seq": 752,
+  "seqAbandoned": 0
+}

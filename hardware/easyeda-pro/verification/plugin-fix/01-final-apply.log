@@ -1,0 +1,5 @@
+
+✗ step [105/107] strict-schematic-gate failed: run "sch gate" exited 1: sch gate: FAIL — drc: native DRC verdict failed (strict=true; inspect EasyEDA DRC 面板); 1 warn-level DRC violation (--strict;平台只回聚合数,逐条明细请在 EasyEDA 的 DRC 面板查看)
+  journal: hardware/easyeda-pro/verification/plugin-fix/01-final-apply.journal.jsonl
+  先回读实际状态,重新生成计划并完整执行 sch apply;此队列禁止 --resume/--from/--to 跳过校验。
+playbook stopped at step strict-schematic-gate (104 ok, 0 skipped)

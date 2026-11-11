@@ -1,0 +1,56 @@
+{
+  "status": "布局比较稿；电气与丝印持久化核验完成，非制造版",
+  "rounds": [
+    {
+      "round": 1,
+      "components": 164,
+      "logicalPins": 508,
+      "physicalPads": 516,
+      "connectivityOrIdentityDifferences": [],
+      "silkPoseDifferences": [],
+      "silkOverComponentBounds": [],
+      "silkPairClearanceBelowPoint179mm": [],
+      "componentBBoxOverlap": [],
+      "padEdgeBelowPoint2mm": [],
+      "differentNetPadBoundsBelowPoint15mm": [],
+      "silkCount": 164,
+      "fixesApplied": false,
+      "dump": "hardware\\easyeda-pro\\verification\\plugin-fix\\pcb-review-round1.json",
+      "dumpSHA256": "c561edd47542f2ed6e35c78d7f1f32691938f0741988bc1dd8f4d96d4e4856fb",
+      "render": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round1\\snapshot.png",
+      "renderAvailable": true,
+      "renderSHA256": "a5365d50fcc53c48cbeb09428729c47b1b7f43178526fabfea18cda03c54b29b",
+      "nativeDRCAvailable": true,
+      "nativeDRCPassed": false
+    },
+    {
+      "round": 2,
+      "components": 164,
+      "logicalPins": 508,
+      "physicalPads": 516,
+      "connectivityOrIdentityDifferences": [],
+      "silkPoseDifferences": [],
+      "silkOverComponentBounds": [],
+      "silkPairClearanceBelowPoint179mm": [],
+      "componentBBoxOverlap": [],
+      "padEdgeBelowPoint2mm": [],
+      "differentNetPadBoundsBelowPoint15mm": [],
+      "silkCount": 164,
+      "fixesApplied": false,
+      "dump": "hardware\\easyeda-pro\\verification\\plugin-fix\\pcb-review-round2.json",
+      "dumpSHA256": "5e62f5524a764d781fd1dc48286145dda81307f60134d8f7fa06be9b0b668bbf",
+      "render": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round2-final\\snapshot.png",
+      "renderAvailable": false,
+      "renderSHA256": null,
+      "nativeDRCAvailable": false,
+      "nativeDRCPassed": null
+    }
+  ],
+  "persistenceDifferences": [],
+  "limits": [
+    "U4天线外伸约6.144mm，15mm外壳净空与100mm整机边界仍待闭合",
+    "7项插头空间告警来自插件估算护套尺寸，未取得实际配套插头机械包络",
+    "尚未布线、铺铜及生产定位点设计",
+    "原生检查4个多边形焊盘不支持精确接触算法；本报告使用已捕获直线多边形AABB保守核验，不等于精确曲线求距"
+  ]
+}

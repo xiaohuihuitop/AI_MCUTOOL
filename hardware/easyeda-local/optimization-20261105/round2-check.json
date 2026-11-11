@@ -1,0 +1,3314 @@
+{
+  "passed": false,
+  "summary": {
+    "danglingEnds": 34,
+    "acuteAngles": 6,
+    "nonOrthogonal": 49,
+    "trackOverPad": 0,
+    "clearance": 0,
+    "silkscreenFlipped": 0,
+    "overlappingVias": 0,
+    "singleLayerVias": 33,
+    "widthMismatches": 13,
+    "duplicateSegments": 0,
+    "parallelCoupling": 80,
+    "antennaKeepout": 1,
+    "netlessPours": 0,
+    "viaCrossesPlane": 0,
+    "floatingIslands": 0,
+    "powerNotPoured": 0,
+    "netlessViaInPad": 0,
+    "widthUnderSpec": 1,
+    "silkOverPad": 0,
+    "silkOffBoard": 0,
+    "decapTooFar": 0,
+    "viaInPad": 2,
+    "copperNearEdge": 0,
+    "fiducialMissing": 1,
+    "zoneViolation": 0,
+    "internalOnEdge": 0,
+    "connectorPlugClearance": 7,
+    "connectorMatingBlocked": 0,
+    "connectorOpeningInward": 0,
+    "errors": 0,
+    "warnings": 213,
+    "total": 227
+  },
+  "trackCount": 958,
+  "viaCount": 157,
+  "padCount": 423,
+  "findings": [
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY1_B",
+      "layer": 1,
+      "primitives": [
+        "c372a726dc2b70b0"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2718.1
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY1_A",
+      "layer": 1,
+      "primitives": [
+        "38effe87b91046ce"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2618.1
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY2_B",
+      "layer": 1,
+      "primitives": [
+        "7e36acd6d199c78c"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2501.6
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY2_A",
+      "layer": 1,
+      "primitives": [
+        "763ddbe25e72e08a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2401.6
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY3_B",
+      "layer": 1,
+      "primitives": [
+        "2934864febef29fa"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2285
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY3_A",
+      "layer": 1,
+      "primitives": [
+        "5600ff34f635bc66"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2185
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY4_B",
+      "layer": 1,
+      "primitives": [
+        "9c51deb214a1de3a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 2068.5
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY4_A",
+      "layer": 1,
+      "primitives": [
+        "852622f48701da78"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1968.5
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY5_B",
+      "layer": 1,
+      "primitives": [
+        "c6902e7e469462b9"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1851.9
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "KEY5_A",
+      "layer": 1,
+      "primitives": [
+        "a6c0f060a537bae6"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1751.9
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "681734bbcabc2360"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 1073.6,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "BAT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "85b6b90eaf711304"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 973.6,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "24044558c10bb35a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 443.7,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "EXT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "454e3429cb7b6ed4"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 343.7,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "fae63e9da137875f"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 1703.5,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "DUT_PWR_P",
+      "layer": 1,
+      "primitives": [
+        "416201751aadc416"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 1603.5,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "2219921b2a7c719c"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2963.4,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "CHG_IN_P",
+      "layer": 1,
+      "primitives": [
+        "a45be55e8121f8b0"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2863.4,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "08c352df7efc199f"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2333.5,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "DUT_CHG_P",
+      "layer": 1,
+      "primitives": [
+        "559c444d3889f0f0"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2233.5,
+        "y": 59.06
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "367c0da0d9f1c31b"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1435.4
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "AIN1",
+      "layer": 1,
+      "primitives": [
+        "4b861bf238d5f0e1"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1535.4
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "6542094f02fd3b67"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1159.8
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "AIN2",
+      "layer": 1,
+      "primitives": [
+        "8da59385ee716b7f"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 1259.8
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "2a956a9afde00ae4"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 884.2
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "AIN3",
+      "layer": 1,
+      "primitives": [
+        "97a1184326eebb61"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 984.2
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "01d78c85626b464b"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 608.6
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "AIN4",
+      "layer": 1,
+      "primitives": [
+        "c201d1f2d1f3f5b8"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 3248.03,
+        "y": 708.6
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "BAT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "86d889e271010f6a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 1023.5,
+        "y": 334.65
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "EXT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "931056c7b163c00a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 393.6,
+        "y": 334.65
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "VSEL_P",
+      "layer": 1,
+      "primitives": [
+        "1c96d46f9424e2b5"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 1023.7,
+        "y": 700.79
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "VSEL_P",
+      "layer": 1,
+      "primitives": [
+        "7ad4484ad1b4a9af"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 393.8,
+        "y": 700.79
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "CHG_IN_P",
+      "layer": 1,
+      "primitives": [
+        "d95e09103a1af53a"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2929.13,
+        "y": 393.7
+      }
+    },
+    {
+      "type": "dangling-end",
+      "level": "WARN",
+      "net": "DUT_CHG_P",
+      "layer": 1,
+      "primitives": [
+        "22e9f62f3aaaea6d"
+      ],
+      "message": "track end connects to nothing (no pad/via/track) — unfinished or floating copper",
+      "at": {
+        "x": 2543.31,
+        "y": 393.7
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "3031d6c3967d5191",
+        "e295b179a4443ed7"
+      ],
+      "angleDeg": 86.33,
+      "message": "trace bends 86° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 1608.23,
+        "y": 826.81
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "138f0e8f8dfe6c62",
+        "165efc25e626d9be"
+      ],
+      "angleDeg": 73.11,
+      "message": "trace bends 73° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 196.89,
+        "y": 2881.85
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "955b0adf6a7c7ae0",
+        "6245344c8eb602a0"
+      ],
+      "angleDeg": 65.44,
+      "message": "trace bends 65° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 333.35,
+        "y": 1689.25
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "e522031386d6d7b2",
+        "128134c948183988"
+      ],
+      "angleDeg": 65.51,
+      "message": "trace bends 66° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 724.49,
+        "y": 1791.38
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "CONFIG_KEY",
+      "layer": 1,
+      "primitives": [
+        "2a77e3361549ee78",
+        "7528786388d2bb62"
+      ],
+      "angleDeg": 45,
+      "message": "trace bends 45° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 848.69,
+        "y": 1870.11
+      }
+    },
+    {
+      "type": "acute-angle",
+      "level": "WARN",
+      "net": "LDO_VIN",
+      "layer": 1,
+      "primitives": [
+        "8d4ba807a9dc9b51",
+        "6598584e3a7c9023"
+      ],
+      "angleDeg": 45,
+      "message": "trace bends 45° (\u003c90°) — acid-trap acute angle [规范 §4.1 转角禁直角/锐角 — pcb-design-rules.md]",
+      "at": {
+        "x": 1220.48,
+        "y": 1692.92
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "BAT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "86d889e271010f6a"
+      ],
+      "angleDeg": 63.12,
+      "message": "trace runs at 63.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 998.55,
+        "y": 285.43
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "EXT_IN_P",
+      "layer": 1,
+      "primitives": [
+        "931056c7b163c00a"
+      ],
+      "angleDeg": 63.12,
+      "message": "trace runs at 63.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 368.65,
+        "y": 285.43
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "VSEL_P",
+      "layer": 1,
+      "primitives": [
+        "7ac207a8d7b443b6"
+      ],
+      "angleDeg": 168.62,
+      "message": "trace runs at 168.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1500.28,
+        "y": 543.99
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "DUT_PWR_P",
+      "layer": 1,
+      "primitives": [
+        "be5159186454574f"
+      ],
+      "angleDeg": 120.73,
+      "message": "trace runs at 120.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1781.22,
+        "y": 469.78
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "CHG_IN_P",
+      "layer": 1,
+      "primitives": [
+        "5f1c8604fd889d2b"
+      ],
+      "angleDeg": 50.14,
+      "message": "trace runs at 50.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2896.26,
+        "y": 275.59
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$6N39",
+      "layer": 1,
+      "primitives": [
+        "a528c674247a0a12"
+      ],
+      "angleDeg": 115.14,
+      "message": "trace runs at 115.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1567.9,
+        "y": 753
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$6N39",
+      "layer": 1,
+      "primitives": [
+        "b289269d0beb8544"
+      ],
+      "angleDeg": 156.94,
+      "message": "trace runs at 156.9° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1600.4,
+        "y": 727.4
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$6N43",
+      "layer": 1,
+      "primitives": [
+        "543d8f6489f02d86"
+      ],
+      "angleDeg": 172.33,
+      "message": "trace runs at 172.3° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1746.05,
+        "y": 707.75
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N189",
+      "layer": 1,
+      "primitives": [
+        "17688e2324c87570"
+      ],
+      "angleDeg": 20.55,
+      "message": "trace runs at 20.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2582.66,
+        "y": 1411.4
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N189",
+      "layer": 1,
+      "primitives": [
+        "78eb21b6362df4e1"
+      ],
+      "angleDeg": 40.57,
+      "message": "trace runs at 40.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2539.36,
+        "y": 1381.9
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N189",
+      "layer": 1,
+      "primitives": [
+        "7afd3f1a980dbae4"
+      ],
+      "angleDeg": 125.37,
+      "message": "trace runs at 125.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2495.05,
+        "y": 1381.9
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N192",
+      "layer": 1,
+      "primitives": [
+        "d5ac66c66a6e96f6"
+      ],
+      "angleDeg": 20.55,
+      "message": "trace runs at 20.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2582.66,
+        "y": 1135.8
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N192",
+      "layer": 1,
+      "primitives": [
+        "531d946ecd39f901"
+      ],
+      "angleDeg": 40.57,
+      "message": "trace runs at 40.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2539.36,
+        "y": 1106.3
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N192",
+      "layer": 1,
+      "primitives": [
+        "f0cc25c85cca560e"
+      ],
+      "angleDeg": 125.37,
+      "message": "trace runs at 125.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2495.05,
+        "y": 1106.3
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N195",
+      "layer": 1,
+      "primitives": [
+        "ee3002a77e9c7a75"
+      ],
+      "angleDeg": 20.55,
+      "message": "trace runs at 20.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2582.66,
+        "y": 860.2
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N195",
+      "layer": 1,
+      "primitives": [
+        "31709da988f8d0e2"
+      ],
+      "angleDeg": 40.57,
+      "message": "trace runs at 40.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2539.36,
+        "y": 830.7
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N195",
+      "layer": 1,
+      "primitives": [
+        "585751db5e1aff34"
+      ],
+      "angleDeg": 125.37,
+      "message": "trace runs at 125.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2495.05,
+        "y": 830.7
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N198",
+      "layer": 1,
+      "primitives": [
+        "05ea962fc7680264"
+      ],
+      "angleDeg": 20.71,
+      "message": "trace runs at 20.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2582.66,
+        "y": 584.65
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N198",
+      "layer": 1,
+      "primitives": [
+        "34b3196747d076e1"
+      ],
+      "angleDeg": 40.57,
+      "message": "trace runs at 40.6° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2539.36,
+        "y": 555.1
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$7N198",
+      "layer": 1,
+      "primitives": [
+        "a548685dbd850b3f"
+      ],
+      "angleDeg": 125.37,
+      "message": "trace runs at 125.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2495.05,
+        "y": 555.1
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "LDO_VIN",
+      "layer": 1,
+      "primitives": [
+        "652116e8bc11efff"
+      ],
+      "angleDeg": 125.97,
+      "message": "trace runs at 126.0° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1223.53,
+        "y": 1574.62
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "layer": 1,
+      "primitives": [
+        "156b6187152ac41d"
+      ],
+      "angleDeg": 33.74,
+      "message": "trace runs at 33.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1013.8,
+        "y": 1535.41
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "955b0adf6a7c7ae0"
+      ],
+      "angleDeg": 174.27,
+      "message": "trace runs at 174.3° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 363.52,
+        "y": 1686.23
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "a5af844894a25b1d"
+      ],
+      "angleDeg": 39.75,
+      "message": "trace runs at 39.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2641.73,
+        "y": 1387.8
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "879001159819ef7f"
+      ],
+      "angleDeg": 39.74,
+      "message": "trace runs at 39.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2641.73,
+        "y": 1112.21
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "eee85575fecb4f8f"
+      ],
+      "angleDeg": 39.76,
+      "message": "trace runs at 39.8° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2641.73,
+        "y": 836.59
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "af1e64da23c13314"
+      ],
+      "angleDeg": 39.8,
+      "message": "trace runs at 39.8° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2641.73,
+        "y": 561.05
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "165efc25e626d9be"
+      ],
+      "angleDeg": 163.12,
+      "message": "trace runs at 163.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 241.14,
+        "y": 2868.43
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "b04480cfcbe5b3a2"
+      ],
+      "angleDeg": 129.79,
+      "message": "trace runs at 129.8° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 959.73,
+        "y": 1624
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "6245344c8eb602a0"
+      ],
+      "angleDeg": 59.71,
+      "message": "trace runs at 59.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 351.67,
+        "y": 1720.63
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "e30b4bd6188f96db"
+      ],
+      "angleDeg": 151.89,
+      "message": "trace runs at 151.9° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 484.26,
+        "y": 1737.28
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "128134c948183988"
+      ],
+      "angleDeg": 155.53,
+      "message": "trace runs at 155.5° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 767.74,
+        "y": 1771.69
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "layer": 1,
+      "primitives": [
+        "e295b179a4443ed7"
+      ],
+      "angleDeg": 93.69,
+      "message": "trace runs at 93.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1605.31,
+        "y": 872.06
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "layer": 1,
+      "primitives": [
+        "141ea97c97604a45"
+      ],
+      "angleDeg": 109.32,
+      "message": "trace runs at 109.3° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 1554.09,
+        "y": 897.65
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$4N5",
+      "layer": 1,
+      "primitives": [
+        "a472c887a63142be"
+      ],
+      "angleDeg": 146.66,
+      "message": "trace runs at 146.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 960.49,
+        "y": 498.85
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$4N5",
+      "layer": 1,
+      "primitives": [
+        "0a71c168cc8c3388"
+      ],
+      "angleDeg": 72.42,
+      "message": "trace runs at 72.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 964.43,
+        "y": 618.29
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$4N14",
+      "layer": 1,
+      "primitives": [
+        "2c91a866841e5102"
+      ],
+      "angleDeg": 143.09,
+      "message": "trace runs at 143.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 461.56,
+        "y": 559.35
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$4N14",
+      "layer": 1,
+      "primitives": [
+        "5f2888d8f28b77e1"
+      ],
+      "angleDeg": 76.72,
+      "message": "trace runs at 76.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 453.69,
+        "y": 443.98
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$5N48",
+      "layer": 1,
+      "primitives": [
+        "ca0d2cedb2104c7c"
+      ],
+      "angleDeg": 56.77,
+      "message": "trace runs at 56.8° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2768.85,
+        "y": 330.58
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "$5N48",
+      "layer": 1,
+      "primitives": [
+        "8bdffb222142bae2"
+      ],
+      "angleDeg": 142.13,
+      "message": "trace runs at 142.1° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2643.59,
+        "y": 330.58
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "TYPEC_IN_5V",
+      "layer": 1,
+      "primitives": [
+        "eb7d54cb91b6bfc3"
+      ],
+      "angleDeg": 8.68,
+      "message": "trace runs at 8.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 491.12,
+        "y": 1478.36
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "ESP_EN",
+      "layer": 1,
+      "primitives": [
+        "c191e754c7cad892"
+      ],
+      "angleDeg": 111.67,
+      "message": "trace runs at 111.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 98.39,
+        "y": 1879.93
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "ESP_EN",
+      "layer": 1,
+      "primitives": [
+        "31896d725807a72f"
+      ],
+      "angleDeg": 48.4,
+      "message": "trace runs at 48.4° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 140.83,
+        "y": 2433.05
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY1_CTRL",
+      "layer": 1,
+      "primitives": [
+        "3a5be261cf94cc29"
+      ],
+      "angleDeg": 150.87,
+      "message": "trace runs at 150.9° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 296.24,
+        "y": 2698.96
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY1_CTRL",
+      "layer": 1,
+      "primitives": [
+        "64e72f1e6b03015b"
+      ],
+      "angleDeg": 157.54,
+      "message": "trace runs at 157.5° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2232.29,
+        "y": 2672.28
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY2_CTRL",
+      "layer": 1,
+      "primitives": [
+        "f9ae73a0c495c226"
+      ],
+      "angleDeg": 16.48,
+      "message": "trace runs at 16.5° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 296.24,
+        "y": 2658.21
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY2_CTRL",
+      "layer": 1,
+      "primitives": [
+        "a75dec958aad0752"
+      ],
+      "angleDeg": 149.95,
+      "message": "trace runs at 150.0° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2232.29,
+        "y": 2457.73
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY3_CTRL",
+      "layer": 1,
+      "primitives": [
+        "3fee3686b4e63b6d"
+      ],
+      "angleDeg": 22.93,
+      "message": "trace runs at 22.9° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 296.24,
+        "y": 2609.59
+      }
+    },
+    {
+      "type": "non-orthogonal",
+      "level": "WARN",
+      "net": "KEY3_CTRL",
+      "layer": 1,
+      "primitives": [
+        "e66f70c7f691424b"
+      ],
+      "angleDeg": 157.69,
+      "message": "trace runs at 157.7° — not on the 0/45/90° grid (free-angle routing) [规范 §4.1 推荐45°折线或圆弧 — pcb-design-rules.md]",
+      "at": {
+        "x": 2232.29,
+        "y": 2239.25
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "LDO_VIN",
+      "primitives": [
+        "19898c96af3c23af"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1200.79,
+        "y": 1692.91
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "LDO_VIN",
+      "primitives": [
+        "edbf68192a1b31e2"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1200.79,
+        "y": 1732.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "LDO_VIN",
+      "primitives": [
+        "20cd0de6da44d21a"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1279.53,
+        "y": 1732.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "cd77356d96951a05"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 118.11,
+        "y": 2881.85
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "ddb6a9eb34465853"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 90.59,
+        "y": 2716.57
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "80e1e839299e359e"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1980.32,
+        "y": 1299.17
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "9fe83627304b3bae"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2334.61,
+        "y": 1622.09
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "51f95cde6c2d39f3"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2047.28,
+        "y": 1114.21
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "5460f116c033a747"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1427.91,
+        "y": 1594.37
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "837d407963c8bd09"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 88.5,
+        "y": 2480.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "3080fcde39087a51"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 88.39,
+        "y": 2106.26
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "2fe04006c76ab328"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 88.5,
+        "y": 2362.17
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "7ca54f4c030390ec"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 600.32,
+        "y": 2086.57
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "3ae97c30408073d9"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2559.06,
+        "y": 2608.39
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "a8c4ac61b79514a5"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2559.06,
+        "y": 2391.81
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "dfa8c2ec0d28a28d"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2559.06,
+        "y": 2175.32
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "df50fdee765aa90c"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2559.06,
+        "y": 1958.82
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "c07708666ddf9fc8"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2559.06,
+        "y": 1742.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "4e701841a90bf922"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1623.9,
+        "y": 1003.98
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "4110884ca7f975eb"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1141.77,
+        "y": 2135.71
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "4db8ee60f213fb64"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1141.77,
+        "y": 2017.6
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "00650fcbffc16021"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 332.64,
+        "y": 2805
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "6d564cdf499fc72f"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1560.98,
+        "y": 877.99
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "c6ff053a597e1ea2"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1507.91,
+        "y": 1486.18
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "c1cb6ca20a81fc14"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1031.54,
+        "y": 1515.71
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "cabec9002ca04783"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2334.61,
+        "y": 1346.46
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "3d914d601b0a2617"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2334.61,
+        "y": 1070.87
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "04deb4a265012598"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2334.61,
+        "y": 795.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "3231a2cd4ab544dd"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2435,
+        "y": 1507.91
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "e9dbf155ad80beef"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2435,
+        "y": 1232.28
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "21ebc7dc70cba790"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2435,
+        "y": 956.69
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "9a1cd49296878d94"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 2435,
+        "y": 681.1
+      }
+    },
+    {
+      "type": "single-layer-via",
+      "level": "WARN",
+      "net": "TOOL_3V3",
+      "primitives": [
+        "cc83843b5ed5e19f"
+      ],
+      "message": "signal via touches tracks on 1 layer(s) — no layer transition (pointless or dangling) [规范 §2 过孔设计 — pcb-design-rules.md]",
+      "at": {
+        "x": 1874.45,
+        "y": 1181.1
+      }
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "C1",
+      "widths": [
+        9.84,
+        23.62
+      ],
+      "message": "2-pin part C1: entering track widths differ (9.8 vs 23.6 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "C2",
+      "widths": [
+        9.84,
+        18.82
+      ],
+      "message": "2-pin part C2: entering track widths differ (9.8 vs 18.8 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "C3",
+      "widths": [
+        9.84,
+        31.5
+      ],
+      "message": "2-pin part C3: entering track widths differ (9.8 vs 31.5 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "C4",
+      "widths": [
+        9.84,
+        23.62
+      ],
+      "message": "2-pin part C4: entering track widths differ (9.8 vs 23.6 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "J10",
+      "widths": [
+        47.24,
+        98.43
+      ],
+      "message": "2-pin part J10: entering track widths differ (47.2 vs 98.4 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "J11",
+      "widths": [
+        47.24,
+        98.43
+      ],
+      "message": "2-pin part J11: entering track widths differ (47.2 vs 98.4 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "J12",
+      "widths": [
+        47.24,
+        78.74
+      ],
+      "message": "2-pin part J12: entering track widths differ (47.2 vs 78.7 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "J13",
+      "widths": [
+        47.24,
+        78.74
+      ],
+      "message": "2-pin part J13: entering track widths differ (47.2 vs 78.7 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "J9",
+      "widths": [
+        47.24,
+        98.43
+      ],
+      "message": "2-pin part J9: entering track widths differ (47.2 vs 98.4 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "R1",
+      "widths": [
+        9.84,
+        23.62
+      ],
+      "message": "2-pin part R1: entering track widths differ (9.8 vs 23.6 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "COMMON_GND",
+      "designator": "R2",
+      "widths": [
+        9.84,
+        18.82
+      ],
+      "message": "2-pin part R2: entering track widths differ (9.8 vs 18.8 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "$2N148",
+      "designator": "R85",
+      "widths": [
+        7.87,
+        11.81
+      ],
+      "message": "2-pin part R85: entering track widths differ (7.9 vs 11.8 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-mismatch",
+      "level": "INFO",
+      "net": "$2N150",
+      "designator": "R86",
+      "widths": [
+        7.87,
+        11.81
+      ],
+      "message": "2-pin part R86: entering track widths differ (7.9 vs 11.8 mil) [规范 §1.2 推荐线宽 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f92c727373e89b81",
+        "f654dcd7171c1ae8"
+      ],
+      "message": "parallel traces 216.5 mil apart over 26 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "$4N5"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f92c727373e89b81",
+        "dd1e06c617b9bf2a"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "$4N5"
+      ],
+      "layer": 1,
+      "primitives": [
+        "2ec906b1d037c62e",
+        "dd1e06c617b9bf2a"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "95501ee5ab3fe435",
+        "de4b68abb896c8c8"
+      ],
+      "message": "parallel traces 216.5 mil apart over 26 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "$4N5"
+      ],
+      "layer": 1,
+      "primitives": [
+        "95501ee5ab3fe435",
+        "dd1e06c617b9bf2a"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N4",
+        "$4N5"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3bd268876014e999",
+        "fb41346b4e8d0950"
+      ],
+      "message": "parallel traces 25.6 mil apart over 25 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "$4N14"
+      ],
+      "layer": 1,
+      "primitives": [
+        "eafb5effb22abf20",
+        "03f47dbdeb643c56"
+      ],
+      "message": "parallel traces 104.4 mil apart over 23 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "$4N14"
+      ],
+      "layer": 1,
+      "primitives": [
+        "58d58532903beacf",
+        "03f47dbdeb643c56"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "c30e91f86951a73a",
+        "f654dcd7171c1ae8"
+      ],
+      "message": "parallel traces 216.5 mil apart over 26 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "$4N14"
+      ],
+      "layer": 1,
+      "primitives": [
+        "c30e91f86951a73a",
+        "03f47dbdeb643c56"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "$4N14"
+      ],
+      "layer": 1,
+      "primitives": [
+        "0dcc298b8c2d4b09",
+        "25067fad0c4f6156"
+      ],
+      "message": "parallel traces 25.6 mil apart over 25 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "CHG_IN_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3009a34a14dca091",
+        "d95e09103a1af53a"
+      ],
+      "message": "parallel traces 192.9 mil apart over 26 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "DUT_CHG_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3009a34a14dca091",
+        "22e9f62f3aaaea6d"
+      ],
+      "message": "parallel traces 192.9 mil apart over 26 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3009a34a14dca091",
+        "f4d0568551400009"
+      ],
+      "message": "parallel traces 104.4 mil apart over 23 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3009a34a14dca091",
+        "cf2d1cc04c0f5a63"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "37ddfbff56ca41d8",
+        "f4d0568551400009"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "37ddfbff56ca41d8",
+        "cf2d1cc04c0f5a63"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "851e3918b2a2aef1",
+        "f4d0568551400009"
+      ],
+      "message": "parallel traces 104.4 mil apart over 26 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "851e3918b2a2aef1",
+        "cf2d1cc04c0f5a63"
+      ],
+      "message": "parallel traces 104.4 mil apart over 23 mil (\u003c 141.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N47",
+        "$5N48"
+      ],
+      "layer": 1,
+      "primitives": [
+        "e6221b64a36b0f49",
+        "c171c71b1ab52c0c"
+      ],
+      "message": "parallel traces 25.6 mil apart over 25 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "7ad4484ad1b4a9af",
+        "b22fe386af215e8d"
+      ],
+      "message": "parallel traces 60.6 mil apart over 47 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N15",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "a714c0e2c1d7cf7e"
+      ],
+      "message": "parallel traces 226.5 mil apart over 88 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N17",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "ee06281dbdc842b1"
+      ],
+      "message": "parallel traces 234.2 mil apart over 27 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "dd1e06c617b9bf2a"
+      ],
+      "message": "parallel traces 112.1 mil apart over 50 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "29ebfa4b65a33f5f"
+      ],
+      "message": "parallel traces 76.7 mil apart over 630 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N14",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "c63982ee6516f8db"
+      ],
+      "message": "parallel traces 167.2 mil apart over 43 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N14",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f654dcd7171c1ae8",
+        "a4006037b85a3a28"
+      ],
+      "message": "parallel traces 112.7 mil apart over 418 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N6",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "ea88b88e57228411"
+      ],
+      "message": "parallel traces 187.1 mil apart over 39 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N6",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "3b1a04e30886c51b"
+      ],
+      "message": "parallel traces 196.8 mil apart over 30 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N8",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "b44dd2d8fd983ae5"
+      ],
+      "message": "parallel traces 234.2 mil apart over 76 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "dd1e06c617b9bf2a"
+      ],
+      "message": "parallel traces 112.1 mil apart over 38 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "29ebfa4b65a33f5f"
+      ],
+      "message": "parallel traces 76.7 mil apart over 40 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "8b5e2129033bb18d"
+      ],
+      "message": "parallel traces 109.9 mil apart over 40 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "d2c1af020b72d19a"
+      ],
+      "message": "parallel traces 127.8 mil apart over 184 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "de4b68abb896c8c8",
+        "cd275e318fa7a755"
+      ],
+      "message": "parallel traces 68.6 mil apart over 21 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$6N40",
+        "VSEL_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "a51425c54185b1de",
+        "d93797f40734fbdc"
+      ],
+      "message": "parallel traces 149.6 mil apart over 71 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$6N47",
+        "DUT_PWR_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "6fae7a27f4f5590e",
+        "1cb5517f4a077866"
+      ],
+      "message": "parallel traces 283.5 mil apart over 52 mil (\u003c 295.3 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N48",
+        "CHG_IN_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "5f1c8604fd889d2b",
+        "6ff256dd616329a8"
+      ],
+      "message": "parallel traces 132.0 mil apart over 24 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N48",
+        "CHG_IN_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "d95e09103a1af53a",
+        "f4d0568551400009"
+      ],
+      "message": "parallel traces 88.5 mil apart over 36 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "CHG_IN_P",
+        "TOOL_RX"
+      ],
+      "layer": 1,
+      "primitives": [
+        "d95e09103a1af53a",
+        "ccc359b3839b1748"
+      ],
+      "message": "parallel traces 49.3 mil apart over 26 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N39",
+        "DUT_CHG_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "c1e8d46f3244b097",
+        "5978d2f4566a2cfb"
+      ],
+      "message": "parallel traces 100.4 mil apart over 135 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N49",
+        "DUT_CHG_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "c1e8d46f3244b097",
+        "306e7499927c04ec"
+      ],
+      "message": "parallel traces 137.8 mil apart over 127 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N48",
+        "DUT_CHG_P"
+      ],
+      "layer": 1,
+      "primitives": [
+        "22e9f62f3aaaea6d",
+        "cf2d1cc04c0f5a63"
+      ],
+      "message": "parallel traces 88.5 mil apart over 54 mil (\u003c 236.2 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_IN_5V",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "0ec1d0d5584413de",
+        "b2ab8cdc1a0b44f3"
+      ],
+      "message": "parallel traces 37.4 mil apart over 26 mil (\u003c 56.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_IN_5V",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "0ec1d0d5584413de",
+        "eb7d54cb91b6bfc3"
+      ],
+      "message": "parallel traces 33.5 mil apart over 26 mil (\u003c 70.9 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_IN_5V",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "cae510c8ed75c207",
+        "b2ab8cdc1a0b44f3"
+      ],
+      "message": "parallel traces 37.4 mil apart over 26 mil (\u003c 56.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_IN_5V",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "cae510c8ed75c207",
+        "eb7d54cb91b6bfc3"
+      ],
+      "message": "parallel traces 37.4 mil apart over 26 mil (\u003c 70.9 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "I2C_SDA",
+        "TOOL_3V3"
+      ],
+      "layer": 1,
+      "primitives": [
+        "41a47aab9d562df8",
+        "2d047eb9026dc3e9"
+      ],
+      "message": "parallel traces 25.8 mil apart over 24 mil (\u003c 29.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ADC_CH2",
+        "TOOL_3V3"
+      ],
+      "layer": 1,
+      "primitives": [
+        "2bd0aa064b83f3aa",
+        "cf5777baa59a4399"
+      ],
+      "message": "parallel traces 27.2 mil apart over 39 mil (\u003c 29.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TOOL_3V3",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "247a7a7ddb8743eb",
+        "a2a2a9057c97bccd"
+      ],
+      "message": "parallel traces 34.1 mil apart over 39 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ADC_CH4",
+        "TOOL_3V3"
+      ],
+      "layer": 1,
+      "primitives": [
+        "69bb127b16ddc071",
+        "5a86bfb30558d113"
+      ],
+      "message": "parallel traces 19.7 mil apart over 39 mil (\u003c 29.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_CC1",
+        "TYPEC_IN_5V"
+      ],
+      "layer": 1,
+      "primitives": [
+        "d10249f2c7edd200",
+        "9e2e6a6afa57504b"
+      ],
+      "message": "parallel traces 45.3 mil apart over 46 mil (\u003c 63.7 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "TYPEC_CC1",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "d10249f2c7edd200",
+        "97102c2c8dc04f02"
+      ],
+      "message": "parallel traces 19.7 mil apart over 33 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ADC_CH1",
+        "ADC_CH2"
+      ],
+      "layer": 1,
+      "primitives": [
+        "7d23293a8a0d71ca",
+        "733cc16a3b08cc1e"
+      ],
+      "message": "parallel traces 19.7 mil apart over 42 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N5",
+        "$4N8"
+      ],
+      "layer": 1,
+      "primitives": [
+        "8fda814651b92560",
+        "c4e0250d3bf267b9"
+      ],
+      "message": "parallel traces 22.6 mil apart over 119 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$5N49",
+        "TOOL_RX"
+      ],
+      "layer": 1,
+      "primitives": [
+        "95a14bab4750d3c4",
+        "8c9042a7dbc0b100"
+      ],
+      "message": "parallel traces 18.7 mil apart over 57 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "EXT_PATH_EN",
+        "LDO_VIN"
+      ],
+      "layer": 1,
+      "primitives": [
+        "bb364d4d6f6b17ce",
+        "02dc530594eca2e7"
+      ],
+      "message": "parallel traces 51.4 mil apart over 53 mil (\u003c 70.9 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "EXT_PATH_EN",
+        "LDO_VIN"
+      ],
+      "layer": 1,
+      "primitives": [
+        "bb364d4d6f6b17ce",
+        "b5936b67c3b89bb1"
+      ],
+      "message": "parallel traces 51.7 mil apart over 25 mil (\u003c 70.9 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "EXT_PATH_EN",
+        "LDO_VIN"
+      ],
+      "layer": 1,
+      "primitives": [
+        "b7feee84f252d981",
+        "1d07a7766d06cf5c"
+      ],
+      "message": "parallel traces 54.3 mil apart over 28 mil (\u003c 70.9 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "EXT_PATH_EN",
+        "TYPEC_IN_5V"
+      ],
+      "layer": 1,
+      "primitives": [
+        "5b315adbce202119",
+        "caeeeabb24fe405e"
+      ],
+      "message": "parallel traces 31.4 mil apart over 109 mil (\u003c 56.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "EXT_PATH_EN",
+        "TYPEC_IN_5V"
+      ],
+      "layer": 1,
+      "primitives": [
+        "ed821ffa8a4f1324",
+        "7c04c6e5fee98a79"
+      ],
+      "message": "parallel traces 37.3 mil apart over 53 mil (\u003c 56.5 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ESP_BOOT",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "048e4de02b57c48b",
+        "132dc3d647696686"
+      ],
+      "message": "parallel traces 32.1 mil apart over 106 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ESP_EN",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "7bb9d7ec8bbc9c4d",
+        "132dc3d647696686"
+      ],
+      "message": "parallel traces 33.7 mil apart over 35 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "$4N13",
+        "$4N5"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f3a0335de4fd222d",
+        "63986ca832feeaa4"
+      ],
+      "message": "parallel traces 20.3 mil apart over 82 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "BAT_PATH_EN",
+        "CHARGE_PATH_EN"
+      ],
+      "layer": 2,
+      "primitives": [
+        "49b0b28a1f6c3df0",
+        "ca9296eef3dd18fd"
+      ],
+      "message": "parallel traces 23.5 mil apart over 115 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "BAT_PATH_EN",
+        "DUT_UART_TX"
+      ],
+      "layer": 2,
+      "primitives": [
+        "2493133f21aaeead",
+        "215ffd14d1cc7a09"
+      ],
+      "message": "parallel traces 21.8 mil apart over 86 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "BAT_PATH_EN",
+        "CHARGE_PATH_EN"
+      ],
+      "layer": 2,
+      "primitives": [
+        "d1ef0f699e8bf744",
+        "dfd61c14d4e67ba0"
+      ],
+      "message": "parallel traces 14.7 mil apart over 527 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "CURRENT_ALERT",
+        "DUT_UART_TX"
+      ],
+      "layer": 2,
+      "primitives": [
+        "215ffd14d1cc7a09",
+        "a479ee5032e92058"
+      ],
+      "message": "parallel traces 13.9 mil apart over 145 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "I2C_SDA",
+        "KEY5_CTRL"
+      ],
+      "layer": 1,
+      "primitives": [
+        "70cba723415d1280",
+        "c8227461c20899dc"
+      ],
+      "message": "parallel traces 21.8 mil apart over 342 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "CURRENT_ALERT",
+        "TOOL_RX"
+      ],
+      "layer": 1,
+      "primitives": [
+        "4f1247330ee8630e",
+        "a8e4418b662b78bc"
+      ],
+      "message": "parallel traces 13.9 mil apart over 164 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "I2C_SCL",
+        "KEY5_CTRL"
+      ],
+      "layer": 2,
+      "primitives": [
+        "2635165075516f6e",
+        "15bb28e006952b7e"
+      ],
+      "message": "parallel traces 23.4 mil apart over 153 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "I2C_SCL",
+        "I2C_SDA"
+      ],
+      "layer": 1,
+      "primitives": [
+        "f63b7129db90072e",
+        "dd3c2b0737f91e6c"
+      ],
+      "message": "parallel traces 19.7 mil apart over 36 mil (\u003c 23.6 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ESP_EN",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "dc38b41e3d89450e",
+        "bba91e49f1392490"
+      ],
+      "message": "parallel traces 22.8 mil apart over 73 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "ESP_EN",
+        "USB_DM"
+      ],
+      "layer": 1,
+      "primitives": [
+        "121d65a5e9870592",
+        "3abe5c2d03e70297"
+      ],
+      "message": "parallel traces 17.7 mil apart over 229 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "57bf21e640129496",
+        "2c96109952d58013"
+      ],
+      "message": "parallel traces 18.9 mil apart over 26 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "a0a466825dc2f517",
+        "82d311a8117804ef"
+      ],
+      "message": "parallel traces 18.9 mil apart over 264 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "d36f7a5a3581ee17",
+        "d03b4213bcaa704d"
+      ],
+      "message": "parallel traces 18.9 mil apart over 110 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "132dc3d647696686",
+        "68ac17be54fa9b6a"
+      ],
+      "message": "parallel traces 18.9 mil apart over 342 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "bba91e49f1392490",
+        "083be88376e72db5"
+      ],
+      "message": "parallel traces 18.9 mil apart over 101 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "parallel-coupling",
+      "level": "WARN",
+      "nets": [
+        "USB_DM",
+        "USB_DP"
+      ],
+      "layer": 1,
+      "primitives": [
+        "3abe5c2d03e70297",
+        "a2a2a9057c97bccd"
+      ],
+      "message": "parallel traces 18.9 mil apart over 171 mil (\u003c 35.4 mil = 3×W) — crosstalk/3W risk [规范 §4.2 减少串扰 — pcb-design-rules.md]"
+    },
+    {
+      "type": "via-in-pad",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "designator": "U13",
+      "primitives": [
+        "1768b21130b131a5"
+      ],
+      "message": "via sits ON pad U13.1 (net COMMON_GND) — solder wicks down the barrel; offset the via and enter with a short stub (dog-bone) [规范 §2.3 禁止过孔打在焊盘上 — pcb-design-rules.md]",
+      "at": {
+        "x": 1767.28,
+        "y": 1252.01
+      }
+    },
+    {
+      "type": "via-in-pad",
+      "level": "WARN",
+      "net": "I2C_SCL",
+      "designator": "U13",
+      "primitives": [
+        "48e537613b3217d1"
+      ],
+      "message": "via sits ON pad U13.10 (net I2C_SCL) — solder wicks down the barrel; offset the via and enter with a short stub (dog-bone) [规范 §2.3 禁止过孔打在焊盘上 — pcb-design-rules.md]",
+      "at": {
+        "x": 1918.07,
+        "y": 1238.12
+      }
+    },
+    {
+      "type": "fiducial-missing",
+      "level": "INFO",
+      "message": "board has 385 top-layer pads (SMT-scale) but only 0 fiducial(s) (FID*/MARK*) — SMT wants ≥3 non-collinear 1mm marks (JLC panel rails add their own; local marks needed for fine-pitch) [规范 §9 Mark点设计 — pcb-design-rules.md]"
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J14",
+      "primitives": [
+        "00f32e97e5e553e6",
+        "7ccb77fc1e2ecfb9"
+      ],
+      "message": "J14 ↔ J15 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J14 7.33mm[fallback], J15 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.58,
+        "y": 1347.62
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J15",
+      "primitives": [
+        "7ccb77fc1e2ecfb9",
+        "2397c817b28b7563"
+      ],
+      "message": "J15 ↔ J16 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J15 7.33mm[fallback], J16 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.61,
+        "y": 1072.03
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J16",
+      "primitives": [
+        "2397c817b28b7563",
+        "2ecee5a68634bd29"
+      ],
+      "message": "J16 ↔ J17 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J16 7.33mm[fallback], J17 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.62,
+        "y": 796.44
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J4",
+      "primitives": [
+        "37e0174b42d77a70",
+        "2f34f10777a64b8c"
+      ],
+      "message": "J4 ↔ J5 center distance 5.50mm (217mil) \u003c 7.33mm required by their plug envelopes (J4 7.33mm[fallback], J5 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.58,
+        "y": 2559.87
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J5",
+      "primitives": [
+        "2f34f10777a64b8c",
+        "673bfd008e0bc56d"
+      ],
+      "message": "J5 ↔ J6 center distance 5.50mm (217mil) \u003c 7.33mm required by their plug envelopes (J5 7.33mm[fallback], J6 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.58,
+        "y": 2343.31
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J6",
+      "primitives": [
+        "673bfd008e0bc56d",
+        "5caba9dff3f6db59"
+      ],
+      "message": "J6 ↔ J7 center distance 5.50mm (217mil) \u003c 7.33mm required by their plug envelopes (J6 7.33mm[fallback], J7 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.57,
+        "y": 2126.76
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J7",
+      "primitives": [
+        "5caba9dff3f6db59",
+        "0a857c34ba8f900f"
+      ],
+      "message": "J7 ↔ J8 center distance 5.50mm (217mil) \u003c 7.33mm required by their plug envelopes (J7 7.33mm[fallback], J8 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3149.6,
+        "y": 1910.2
+      }
+    },
+    {
+      "type": "antenna-keepout",
+      "level": "WARN",
+      "designator": "U4",
+      "message": "antenna component U4 (ESP32-S3-WROOM-1-N16R8) lacks complete polygon/rule coverage on: all copper layers (MULTI with complete rules and no-inner-electrical) — copper there detunes the antenna (每层都要禁铺铜) [规范 §5.3 天线下禁止铺铜 — pcb-design-rules.md]"
+    },
+    {
+      "type": "width-under-spec",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "primitives": [
+        "955b0adf6a7c7ae0"
+      ],
+      "widths": [
+        9.84,
+        19.69
+      ],
+      "message": "power net COMMON_GND: 14 track(s) below the gnd spec width 19.7 mil (thinnest 9.84 mil) — widen for current capacity (route-short sizes by role; pour it instead, or --width-power to override) [规范 §1.2 推荐线宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 363.52,
+        "y": 1686.23
+      }
+    }
+  ],
+  "limitations": [
+    "pad J2.A1B12: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.B1A12: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.B4A9: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.A4B9: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q8.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q9.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q10.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q11.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q12.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad Q13.5: POLYGON pad geometry is not supported by pcb net-path",
+    "pad U3.2: POLYGON pad geometry is not supported by pcb net-path",
+    "11 pad(s) have captured source shapes unsupported by exact pad-contact inspection"
+  ],
+  "incomplete": true,
+  "coverage": {
+    "complete": false,
+    "componentsInventoryKnown": true,
+    "padsInventoryKnown": true,
+    "componentCount": 140,
+    "totalPads": 423,
+    "knownGeometryPads": 412,
+    "unsupportedGeometryPads": 11,
+    "unknownGeometryPads": 0,
+    "legacyGeometryPads": 0,
+    "unverifiedPads": [
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e35",
+        "padNumber": "A1B12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e36",
+        "padNumber": "B1A12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e37",
+        "padNumber": "B4A9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e38",
+        "padNumber": "A4B9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "d6e179afec249953",
+        "designator": "Q8",
+        "primitiveId": "d6e179afec249953e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "ddf28febe0fdc031",
+        "designator": "Q9",
+        "primitiveId": "ddf28febe0fdc031e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "4b69be312be3fc1d",
+        "designator": "Q10",
+        "primitiveId": "4b69be312be3fc1de19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "45fb6d7cacec087c",
+        "designator": "Q11",
+        "primitiveId": "45fb6d7cacec087ce19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "8d8fe5fa89ce9fe0",
+        "designator": "Q12",
+        "primitiveId": "8d8fe5fa89ce9fe0e19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "0ad7b42265a067ee",
+        "designator": "Q13",
+        "primitiveId": "0ad7b42265a067eee19",
+        "padNumber": "5",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "210617e96d3837d4",
+        "designator": "U3",
+        "primitiveId": "210617e96d3837d4e9",
+        "padNumber": "2",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      }
+    ],
+    "limitations": [
+      "11 pad(s) have captured source shapes unsupported by exact pad-contact inspection"
+    ]
+  }
+}

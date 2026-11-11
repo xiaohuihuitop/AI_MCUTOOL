@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-28",
+  "chipCount": 15,
+  "chipSymbolUnits": 18,
+  "labelPlacements": 78,
+  "additionalCaptionPlacements": 13,
+  "pages": [
+    {
+      "page": 1,
+      "uuid": "58316ac9a100868e",
+      "labelCount": 4
+    },
+    {
+      "page": 2,
+      "uuid": "6ac5c47b59291a93",
+      "labelCount": 11
+    },
+    {
+      "page": 3,
+      "uuid": "8acf11b5cb7fef5d",
+      "labelCount": 10
+    },
+    {
+      "page": 4,
+      "uuid": "fc93d0ec90c4481b",
+      "labelCount": 6
+    },
+    {
+      "page": 5,
+      "uuid": "984a9bed1747817a",
+      "labelCount": 4
+    },
+    {
+      "page": 6,
+      "uuid": "4459834174268cdf",
+      "labelCount": 9
+    },
+    {
+      "page": 7,
+      "uuid": "b64f32ff6a10f61f",
+      "labelCount": 24
+    },
+    {
+      "page": 8,
+      "uuid": "44c68f3606fe991d",
+      "labelCount": 10
+    }
+  ],
+  "connectionGroupsUnchanged": true,
+  "retainedNamesUnchanged": true,
+  "componentCount": 164,
+  "pinCount": 500,
+  "drc": [],
+  "freshSessionVerified": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1",
+  "visualReview": "八页原生导出已检查，芯片和接口网名对应实际引线；MOS及OPA4391型号/位号避让引脚和电源标注。"
+}

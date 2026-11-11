@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-31",
+  "parts": [
+    {
+      "Designator": "U5",
+      "Manufacturer Part": "GAQY221S",
+      "Supplier Part": "C7435105",
+      "FootprintName": "SOP-4_L4.3-W4.4-P2.54-LS7.0-BL",
+      "Unique ID": "AI_MCUTOOL_U5"
+    },
+    {
+      "Designator": "U6",
+      "Manufacturer Part": "GAQY221S",
+      "Supplier Part": "C7435105",
+      "FootprintName": "SOP-4_L4.3-W4.4-P2.54-LS7.0-BL",
+      "Unique ID": "AI_MCUTOOL_U6"
+    },
+    {
+      "Designator": "U7",
+      "Manufacturer Part": "GAQY221S",
+      "Supplier Part": "C7435105",
+      "FootprintName": "SOP-4_L4.3-W4.4-P2.54-LS7.0-BL",
+      "Unique ID": "AI_MCUTOOL_U7"
+    },
+    {
+      "Designator": "U8",
+      "Manufacturer Part": "GAQY221S",
+      "Supplier Part": "C7435105",
+      "FootprintName": "SOP-4_L4.3-W4.4-P2.54-LS7.0-BL",
+      "Unique ID": "AI_MCUTOOL_U8"
+    },
+    {
+      "Designator": "U9",
+      "Manufacturer Part": "GAQY221S",
+      "Supplier Part": "C7435105",
+      "FootprintName": "SOP-4_L4.3-W4.4-P2.54-LS7.0-BL",
+      "Unique ID": "AI_MCUTOOL_U9"
+    }
+  ],
+  "pinMappingOldToNew": {
+    "1": "1",
+    "3": "2",
+    "4": "3",
+    "6": "4"
+  },
+  "functionalConnectionsUnchanged": true,
+  "instanceIdsPreserved": true,
+  "componentCount": 164,
+  "pinCount": 500,
+  "drc": [],
+  "freshSessionVerified": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "visualReview": "第3页五路器件、实际脚号与中文解析已按原生导出核验，型号和网名无重叠。"
+}

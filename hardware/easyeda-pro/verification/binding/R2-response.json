@@ -1,0 +1,111 @@
+{
+  "id": "req_259",
+  "type": "response",
+  "version": "v1",
+  "windowId": "7d86c9d0-1b16-48d2-9679-c209ba186dc8",
+  "createdAt": "2026-10-24T10:50:24.4880708Z",
+  "ok": true,
+  "result": {
+    "component": {
+      "addIntoBom": true,
+      "addIntoPcb": true,
+      "component": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "RC0603FR-074K7L",
+        "uuid": "f0318c461f693806"
+      },
+      "componentType": "part",
+      "designator": "R2",
+      "device": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "={Value}",
+        "uuid": "f0318c461f693806"
+      },
+      "footprint": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "R0603",
+        "uuid": "fb3d59e5287e807c"
+      },
+      "manufacturer": "YAGEO(国巨)",
+      "manufacturerId": "RC0603FR-074K7L",
+      "mirror": false,
+      "name": "={Value}",
+      "net": "",
+      "otherProperty": {
+        "AI Design Note": "1%，额定≥0.1W初值",
+        "AI Library Binding": "RC0603FR-074K7L",
+        "Datasheet": "https://item.szlcsc.com/datasheet/RC0603FR-074K7L/100996.html",
+        "Description": "电阻类型:厚膜电阻;阻值:4.7kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;",
+        "EasyEDA Agent Component ID": "cmp-R2",
+        "JLCPCB Part Class": "Extended Part",
+        "LCSC Part Name": "厚膜电阻 4.7kΩ ±1% 100mW",
+        "Operating Temperature": "-55℃~+155℃",
+        "PCB Layer": "Default",
+        "Power(Watts)": "100mW",
+        "Supplier Footprint": "0603",
+        "Temperature Coefficient": "±100ppm/℃",
+        "Tolerance": "±1%",
+        "Type": "厚膜电阻",
+        "Value": "4.7kΩ",
+        "Voltage-Supply(Max)": "75V"
+      },
+      "primitiveId": "e56600b3164f65d0",
+      "rotation": 0,
+      "subPartName": "RC0603FR-074K7L.1",
+      "supplier": "LCSC",
+      "supplierId": "C99782",
+      "symbol": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "RC0603FR-074K7L",
+        "uuid": "af0b68bb70ec5909"
+      },
+      "uniqueId": "AI_MCUTOOL_R2",
+      "x": 610,
+      "y": 460
+    },
+    "geometryGuard": {
+      "baselineFindings": null,
+      "passed": true,
+      "phase": "readback",
+      "preexistingFindings": 0,
+      "readbackAttempts": 1,
+      "scope": "pin-exit-direction/wire-through-body"
+    },
+    "propertiesBefore": {
+      "AI Design Note": "1%，额定≥0.1W初值",
+      "AI Library Binding": "RC0603FR-074K7L",
+      "Datasheet": "https://item.szlcsc.com/datasheet/RC0603FR-074K7L/100996.html",
+      "Description": "电阻类型:厚膜电阻;阻值:4.7kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;",
+      "JLCPCB Part Class": "Extended Part",
+      "LCSC Part Name": "厚膜电阻 4.7kΩ ±1% 100mW",
+      "Operating Temperature": "-55℃~+155℃",
+      "PCB Layer": "Default",
+      "Power(Watts)": "100mW",
+      "Supplier Footprint": "0603",
+      "Temperature Coefficient": "±100ppm/℃",
+      "Tolerance": "±1%",
+      "Type": "厚膜电阻",
+      "Value": "4.7kΩ",
+      "Voltage-Supply(Max)": "75V"
+    }
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 196,
+  "seqAbandoned": 0
+}

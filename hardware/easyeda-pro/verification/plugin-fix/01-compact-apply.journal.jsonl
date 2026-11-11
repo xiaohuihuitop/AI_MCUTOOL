@@ -1,0 +1,2 @@
+{"playbookSha256":"ad039a57606d01298f681349fd1e048944eb05a75e6ae7b35c837c483efc5f9a","name":"Single-sheet Lib composition","project":"57a0364c842149baada4fb3ca7ccf03f","startedAt":"2026-10-24T21:25:33+08:00"}
+{"idx":1,"id":"verify-project-unique-designators","status":"fail","ms":9614,"error":"expectSchematic: duplicate part designator U14; cannot attribute pins unambiguously"}

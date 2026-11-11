@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "replacedRefs": [
+    "U3",
+    "C3",
+    "C4"
+  ],
+  "supplierIds": {
+    "U3": "C347222",
+    "C3": "C408142",
+    "C4": "C140412"
+  },
+  "components": 138,
+  "logicalPins": 411,
+  "drc": [],
+  "fullProjectConnectivityUnchanged": true,
+  "instanceAndUniqueIdsPreserved": true,
+  "otherComponentPropertiesAndGeometryUnchanged": true,
+  "u3PinMapping": {
+    "1": "COMMON_GND",
+    "2": "TOOL_3V3",
+    "3": "LDO_VIN",
+    "4": "TOOL_3V3"
+  },
+  "c4PositivePin": "1",
+  "otherSevenPageFilesUnchanged": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "newDifferentNetCrossings": [],
+  "existingInputAreaCrossingsUnchanged": 6,
+  "hardwareStabilityAndTransientValidated": false,
+  "currentBudgetNote": "0.75A是原预留验证值，不是实测持续负载；实际平均值、峰值及温升待样机。"
+}

@@ -1,0 +1,92 @@
+{
+  "deletedIds": [
+    "7eef775d6ad226cc",
+    "c283651aa10dd2fd",
+    "9619fefca7d3aee7",
+    "8c66b5ef38b665c6",
+    "e21065f52280a704",
+    "9aa5e37813080de4"
+  ],
+  "lines": [
+    {
+      "net": "$7N201",
+      "layer": 1,
+      "a": [
+        59.84889986,
+        36.07375056
+      ],
+      "b": [
+        59.84889986,
+        39.30066054
+      ],
+      "width": 0.19999959999999997,
+      "role": "cycle-free-feedback"
+    },
+    {
+      "net": "$7N202",
+      "layer": 1,
+      "a": [
+        59.84889986,
+        29.11518434
+      ],
+      "b": [
+        59.84889986,
+        32.30042054
+      ],
+      "width": 0.19999959999999997,
+      "role": "cycle-free-feedback"
+    },
+    {
+      "net": "$7N203",
+      "layer": 1,
+      "a": [
+        59.84889986,
+        22.11496212
+      ],
+      "b": [
+        59.84889986,
+        25.30018054
+      ],
+      "width": 0.19999959999999997,
+      "role": "cycle-free-feedback"
+    }
+  ],
+  "proof": [
+    {
+      "ref": "U14",
+      "net": "$7N201",
+      "removedHorizontalId": "7eef775d6ad226cc",
+      "trimmedVerticalId": "c283651aa10dd2fd",
+      "unchangedBranchId": "f883d880cefef47b",
+      "junctionMillimeters": [
+        59.84889986,
+        36.07375056
+      ],
+      "removedCopperLengthMillimeters": 1.5740506999999937
+    },
+    {
+      "ref": "U18",
+      "net": "$7N202",
+      "removedHorizontalId": "9619fefca7d3aee7",
+      "trimmedVerticalId": "8c66b5ef38b665c6",
+      "unchangedBranchId": "a82720996d24ea76",
+      "junctionMillimeters": [
+        59.84889986,
+        29.11518434
+      ],
+      "removedCopperLengthMillimeters": 1.6157244799999901
+    },
+    {
+      "ref": "U19",
+      "net": "$7N203",
+      "removedHorizontalId": "e21065f52280a704",
+      "trimmedVerticalId": "9aa5e37813080de4",
+      "unchangedBranchId": "4c859b9c48a722de",
+      "junctionMillimeters": [
+        59.84889986,
+        22.11496212
+      ],
+      "removedCopperLengthMillimeters": 1.6157422599999975
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "description": "本轮规划与核验的项目约束；不是宣称已写入EDA网络类的配置导出",
+  "boardMillimeters": [
+    84,
+    74
+  ],
+  "copperLayers": [
+    1,
+    15,
+    16,
+    2
+  ],
+  "preserve": [
+    "器件身份与415脚网表",
+    "用户确认的接口布局",
+    "28个镀铜焊线孔",
+    "中文功能丝印",
+    "天线禁布区"
+  ],
+  "mainSupply": {
+    "maximumAmperes": 3,
+    "mainTrackMillimeters": 2.5,
+    "shuntEntryMillimeters": 1.2,
+    "parallelMosLegMillimeters": 0.3
+  },
+  "chargePath": {
+    "maximumAmperes": 2,
+    "trackMillimeters": 2
+  },
+  "usb": {
+    "mode": "ESP32-S3 USB full-speed",
+    "mainLayer": 1,
+    "mainWidthMillimeters": 0.3,
+    "nominalGapMillimeters": 0.18,
+    "referenceLayer": 15,
+    "referenceNet": "COMMON_GND",
+    "manufacturingImpedanceVerified": false
+  },
+  "kelvin": "分流器电流端与采样端分别引出，保留输入滤波和采样铜几何",
+  "analog": "高阻输入保留；仅优化三路输出/反馈同网冗余铜，反馈和ADC路径均须顶层实铜连通",
+  "powerGround": "按四层平面和实际支路电流判断，不按通用0.5mm表格强制加宽所有地扇出",
+  "minimumRuleChanges": "本轮不修改既有制造规则与叠层"
+}

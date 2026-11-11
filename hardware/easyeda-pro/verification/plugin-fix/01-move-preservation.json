@@ -1,0 +1,298 @@
+{
+  "status": "verified",
+  "physicalParts": 13,
+  "physicalPins": 51,
+  "preservedOwnedAttributes": 627,
+  "derivedPinAlignmentChanges": [
+    {
+      "id": "02f0fa2fa3fd2725",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "099a848172e66baa",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 0
+    },
+    {
+      "id": "1a0f1aaa083c5122",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 0
+    },
+    {
+      "id": "1bed8128b54ce6c8",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "250a7f4c92a95868",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 0
+    },
+    {
+      "id": "329d794bc5cc1cb4",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 180
+    },
+    {
+      "id": "35ea1f71b7113c2b",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 180
+    },
+    {
+      "id": "373e9af497aecbf7",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "379efc9b47e8b1fd",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "44ea7063b6158b1d",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "49315b63c8a26cd5",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "558663b00a9d5a79",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "59ef0e5992ecba16",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 180
+    },
+    {
+      "id": "5dfa5d8317e135e0",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 180
+    },
+    {
+      "id": "5fda83ba019ff295",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 180
+    },
+    {
+      "id": "62d75482f9efdcd9",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "677b811a8f735d34",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "739e1ce7f11783da",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "7677e6fc2356988f",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "788e3ae4f8413dd2",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 0
+    },
+    {
+      "id": "7d08074b94e83d40",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "81fa2545d629a48d",
+      "before": 3,
+      "after": 1,
+      "pinRotation": 270
+    },
+    {
+      "id": "85460ef179e050a1",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 0
+    },
+    {
+      "id": "87bddec382a9f326",
+      "before": 3,
+      "after": 1,
+      "pinRotation": 90
+    },
+    {
+      "id": "8d44d006110db9e1",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "91fecae5ebeb9c61",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "92209bf4ca2ab739",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "92cf86397b2aa2ad",
+      "before": 3,
+      "after": 1,
+      "pinRotation": 270
+    },
+    {
+      "id": "a1416f34b3e089a7",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "a15b6f02cded0d6a",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "a5b94e8adfebfa03",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "a5d208d7ae05685d",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "afb4c58579ae5b04",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 180
+    },
+    {
+      "id": "b362e00833d0d914",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "b823ce140cdfea6f",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "bbaf40d414bdd7e8",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "bc46164cb762f334",
+      "before": 3,
+      "after": 1,
+      "pinRotation": 90
+    },
+    {
+      "id": "c59af596aa381d54",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "c6bf74ae5251a06f",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    },
+    {
+      "id": "caa8613d4e34a4b1",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "e27bddbeed18034a",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "e293f7fb6be070c8",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "e509e37a219e99b2",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "e680183b90256309",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 0
+    },
+    {
+      "id": "e6f70ba5cd16bfc3",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 270
+    },
+    {
+      "id": "f2b571c7e686fb91",
+      "before": 9,
+      "after": 3,
+      "pinRotation": 90
+    },
+    {
+      "id": "fa50bbd6118fb41b",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 270
+    },
+    {
+      "id": "ff662d935b167c4c",
+      "before": 3,
+      "after": 9,
+      "pinRotation": 90
+    }
+  ],
+  "connectionsToRestore": 44,
+  "note": "仅引脚原生标注对齐随已确认旋转改变；其他属性语义、身份、NC及目标几何一致。"
+}

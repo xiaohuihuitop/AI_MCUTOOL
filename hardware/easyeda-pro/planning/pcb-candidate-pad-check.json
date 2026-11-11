@@ -1,0 +1,7 @@
+{
+  "coverage": 516,
+  "unsupported": [],
+  "padsBelowPoint2mmEdgeClearance": [],
+  "differentNetPadBoundsBelowPoint15mm": [],
+  "limitation": "正交焊盘及直线多边形的保守AABB，椭圆弧轮廓未作精确最短距离；最终由原生DRC核验"
+}

@@ -1,0 +1,1358 @@
+{
+  "date": "2026-10-24",
+  "cli": "D:/Application/kicad/install/bin/kicad-cli.exe",
+  "version": "10.0.6",
+  "independentConnectivityChecks": [
+    {
+      "check": "公共地",
+      "passed": true,
+      "points": [
+        "U4.1",
+        "U4.40",
+        "U4.41",
+        "U3.1",
+        "U12.7",
+        "U13.3",
+        "U15.2",
+        "U15.5",
+        "U16.3",
+        "U17.3"
+      ]
+    },
+    {
+      "check": "工具3.3V及LDO散热片",
+      "passed": true,
+      "points": [
+        "U3.2",
+        "U3.4",
+        "U4.2",
+        "U12.6",
+        "U13.8",
+        "U14.4",
+        "U15.4",
+        "U16.5",
+        "U17.5"
+      ]
+    },
+    {
+      "check": "双入口汇合与CE",
+      "passed": true,
+      "points": [
+        "U1.6",
+        "U1.3",
+        "U2.6",
+        "U2.3",
+        "U3.3",
+        "C3.1"
+      ]
+    },
+    {
+      "check": "U1固定接地脚",
+      "passed": true,
+      "points": [
+        "U1.2",
+        "U1.4",
+        "U1.5",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "U2固定接地脚",
+      "passed": true,
+      "points": [
+        "U2.2",
+        "U2.4",
+        "U2.5",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "DC输入",
+      "passed": true,
+      "points": [
+        "J1.1",
+        "U1.1",
+        "C1.1",
+        "R1.1"
+      ]
+    },
+    {
+      "check": "TypeC输入",
+      "passed": true,
+      "points": [
+        "J2.A4B9",
+        "J2.B4A9",
+        "U2.1",
+        "C2.1",
+        "R2.1"
+      ]
+    },
+    {
+      "check": "CC1下拉",
+      "passed": true,
+      "points": [
+        "J2.A5",
+        "R3.1"
+      ]
+    },
+    {
+      "check": "CC2下拉",
+      "passed": true,
+      "points": [
+        "J2.B5",
+        "R4.1"
+      ]
+    },
+    {
+      "check": "工具输入与充电输入分开",
+      "passed": true
+    },
+    {
+      "check": "J9地针",
+      "passed": true,
+      "points": [
+        "J9.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J10地针",
+      "passed": true,
+      "points": [
+        "J10.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J11地针",
+      "passed": true,
+      "points": [
+        "J11.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J12地针",
+      "passed": true,
+      "points": [
+        "J12.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J13地针",
+      "passed": true,
+      "points": [
+        "J13.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J14地针",
+      "passed": true,
+      "points": [
+        "J14.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J15地针",
+      "passed": true,
+      "points": [
+        "J15.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J16地针",
+      "passed": true,
+      "points": [
+        "J16.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "J17地针",
+      "passed": true,
+      "points": [
+        "J17.2",
+        "U4.1"
+      ]
+    },
+    {
+      "check": "KEY1浮动触点A",
+      "passed": true
+    },
+    {
+      "check": "KEY1浮动触点B",
+      "passed": true
+    },
+    {
+      "check": "KEY1LED正端",
+      "passed": true,
+      "points": [
+        "R12.2",
+        "U5.1"
+      ]
+    },
+    {
+      "check": "KEY1LED负端",
+      "passed": true,
+      "points": [
+        "U5.3",
+        "Q1.3"
+      ]
+    },
+    {
+      "check": "KEY1控制GPIO",
+      "passed": true,
+      "points": [
+        "U4.4",
+        "R13.1"
+      ]
+    },
+    {
+      "check": "KEY1基极偏置",
+      "passed": true,
+      "points": [
+        "R13.2",
+        "R14.1",
+        "Q1.1"
+      ]
+    },
+    {
+      "check": "KEY2浮动触点A",
+      "passed": true
+    },
+    {
+      "check": "KEY2浮动触点B",
+      "passed": true
+    },
+    {
+      "check": "KEY2LED正端",
+      "passed": true,
+      "points": [
+        "R15.2",
+        "U6.1"
+      ]
+    },
+    {
+      "check": "KEY2LED负端",
+      "passed": true,
+      "points": [
+        "U6.3",
+        "Q2.3"
+      ]
+    },
+    {
+      "check": "KEY2控制GPIO",
+      "passed": true,
+      "points": [
+        "U4.5",
+        "R16.1"
+      ]
+    },
+    {
+      "check": "KEY2基极偏置",
+      "passed": true,
+      "points": [
+        "R16.2",
+        "R17.1",
+        "Q2.1"
+      ]
+    },
+    {
+      "check": "KEY3浮动触点A",
+      "passed": true
+    },
+    {
+      "check": "KEY3浮动触点B",
+      "passed": true
+    },
+    {
+      "check": "KEY3LED正端",
+      "passed": true,
+      "points": [
+        "R18.2",
+        "U7.1"
+      ]
+    },
+    {
+      "check": "KEY3LED负端",
+      "passed": true,
+      "points": [
+        "U7.3",
+        "Q3.3"
+      ]
+    },
+    {
+      "check": "KEY3控制GPIO",
+      "passed": true,
+      "points": [
+        "U4.6",
+        "R19.1"
+      ]
+    },
+    {
+      "check": "KEY3基极偏置",
+      "passed": true,
+      "points": [
+        "R19.2",
+        "R20.1",
+        "Q3.1"
+      ]
+    },
+    {
+      "check": "KEY4浮动触点A",
+      "passed": true
+    },
+    {
+      "check": "KEY4浮动触点B",
+      "passed": true
+    },
+    {
+      "check": "KEY4LED正端",
+      "passed": true,
+      "points": [
+        "R21.2",
+        "U8.1"
+      ]
+    },
+    {
+      "check": "KEY4LED负端",
+      "passed": true,
+      "points": [
+        "U8.3",
+        "Q4.3"
+      ]
+    },
+    {
+      "check": "KEY4控制GPIO",
+      "passed": true,
+      "points": [
+        "U4.7",
+        "R22.1"
+      ]
+    },
+    {
+      "check": "KEY4基极偏置",
+      "passed": true,
+      "points": [
+        "R22.2",
+        "R23.1",
+        "Q4.1"
+      ]
+    },
+    {
+      "check": "KEY5浮动触点A",
+      "passed": true
+    },
+    {
+      "check": "KEY5浮动触点B",
+      "passed": true
+    },
+    {
+      "check": "KEY5LED正端",
+      "passed": true,
+      "points": [
+        "R24.2",
+        "U9.1"
+      ]
+    },
+    {
+      "check": "KEY5LED负端",
+      "passed": true,
+      "points": [
+        "U9.3",
+        "Q5.3"
+      ]
+    },
+    {
+      "check": "KEY5控制GPIO",
+      "passed": true,
+      "points": [
+        "U4.12",
+        "R25.1"
+      ]
+    },
+    {
+      "check": "KEY5基极偏置",
+      "passed": true,
+      "points": [
+        "R25.2",
+        "R26.1",
+        "Q5.1"
+      ]
+    },
+    {
+      "check": "Q8共源",
+      "passed": true,
+      "points": [
+        "Q8.1",
+        "Q8.2",
+        "Q8.3",
+        "Q9.1",
+        "Q9.2",
+        "Q9.3",
+        "U10.3"
+      ]
+    },
+    {
+      "check": "Q8共栅",
+      "passed": true,
+      "points": [
+        "Q8.4",
+        "Q9.4",
+        "U10.4"
+      ]
+    },
+    {
+      "check": "Q8输入漏极",
+      "passed": true,
+      "points": [
+        "Q8.5",
+        "Q8.6",
+        "Q8.7",
+        "Q8.8",
+        "Q8.9",
+        "J9.1"
+      ]
+    },
+    {
+      "check": "Q9输出漏极",
+      "passed": true,
+      "points": [
+        "Q9.5",
+        "Q9.6",
+        "Q9.7",
+        "Q9.8",
+        "Q9.9",
+        "RSH1.4"
+      ]
+    },
+    {
+      "check": "Q10共源",
+      "passed": true,
+      "points": [
+        "Q10.1",
+        "Q10.2",
+        "Q10.3",
+        "Q11.1",
+        "Q11.2",
+        "Q11.3",
+        "U11.3"
+      ]
+    },
+    {
+      "check": "Q10共栅",
+      "passed": true,
+      "points": [
+        "Q10.4",
+        "Q11.4",
+        "U11.4"
+      ]
+    },
+    {
+      "check": "Q10输入漏极",
+      "passed": true,
+      "points": [
+        "Q10.5",
+        "Q10.6",
+        "Q10.7",
+        "Q10.8",
+        "Q10.9",
+        "J10.1"
+      ]
+    },
+    {
+      "check": "Q11输出漏极",
+      "passed": true,
+      "points": [
+        "Q11.5",
+        "Q11.6",
+        "Q11.7",
+        "Q11.8",
+        "Q11.9",
+        "RSH1.4"
+      ]
+    },
+    {
+      "check": "充电共源",
+      "passed": true,
+      "points": [
+        "Q12.5",
+        "Q12.6",
+        "Q12.7",
+        "Q12.8",
+        "Q12.9",
+        "Q13.5",
+        "Q13.6",
+        "Q13.7",
+        "Q13.8",
+        "Q13.9",
+        "R33.2"
+      ]
+    },
+    {
+      "check": "充电共栅",
+      "passed": true,
+      "points": [
+        "Q12.4",
+        "Q13.4",
+        "R33.1",
+        "R34.1"
+      ]
+    },
+    {
+      "check": "充电输入漏极",
+      "passed": true,
+      "points": [
+        "Q12.1",
+        "Q12.2",
+        "Q12.3",
+        "J12.1"
+      ]
+    },
+    {
+      "check": "充电输出漏极",
+      "passed": true,
+      "points": [
+        "Q13.1",
+        "Q13.2",
+        "Q13.3",
+        "J13.1"
+      ]
+    },
+    {
+      "check": "电池输出测压点",
+      "passed": true,
+      "points": [
+        "RSH1.1",
+        "J11.1",
+        "U12.8"
+      ]
+    },
+    {
+      "check": "E1开尔文输入",
+      "passed": true,
+      "points": [
+        "RSH1.3",
+        "R37.1"
+      ]
+    },
+    {
+      "check": "E2开尔文输入",
+      "passed": true,
+      "points": [
+        "RSH1.2",
+        "R38.1"
+      ]
+    },
+    {
+      "check": "INA正输入滤波",
+      "passed": true,
+      "points": [
+        "R37.2",
+        "U12.10",
+        "C8.1"
+      ]
+    },
+    {
+      "check": "INA负输入滤波",
+      "passed": true,
+      "points": [
+        "R38.2",
+        "U12.9",
+        "C8.2"
+      ]
+    },
+    {
+      "check": "Kelvin端子未外部短接",
+      "passed": true
+    },
+    {
+      "check": "I2C SDA",
+      "passed": true,
+      "points": [
+        "U4.17",
+        "U12.4",
+        "U13.9",
+        "R81.2"
+      ]
+    },
+    {
+      "check": "I2C SCL",
+      "passed": true,
+      "points": [
+        "U4.18",
+        "U12.5",
+        "U13.10",
+        "R82.2"
+      ]
+    },
+    {
+      "check": "ADC地址地",
+      "passed": true,
+      "points": [
+        "U13.1",
+        "U13.3"
+      ]
+    },
+    {
+      "check": "INA地址地",
+      "passed": true,
+      "points": [
+        "U12.1",
+        "U12.2",
+        "U12.7"
+      ]
+    },
+    {
+      "check": "AIN1输入",
+      "passed": true,
+      "points": [
+        "J14.1",
+        "R40.1"
+      ]
+    },
+    {
+      "check": "AIN1上臂串联1",
+      "passed": true,
+      "points": [
+        "R40.2",
+        "R41.1"
+      ]
+    },
+    {
+      "check": "AIN1上臂串联2",
+      "passed": true,
+      "points": [
+        "R41.2",
+        "R42.1"
+      ]
+    },
+    {
+      "check": "AIN1上臂串联3",
+      "passed": true,
+      "points": [
+        "R42.2",
+        "R43.1"
+      ]
+    },
+    {
+      "check": "AIN1上臂串联4",
+      "passed": true,
+      "points": [
+        "R43.2",
+        "R44.1"
+      ]
+    },
+    {
+      "check": "AIN1分压节点",
+      "passed": true,
+      "points": [
+        "R44.2",
+        "R45.1",
+        "U14.3",
+        "C10.1"
+      ]
+    },
+    {
+      "check": "AIN1反馈",
+      "passed": true,
+      "points": [
+        "R46.2",
+        "R47.1",
+        "U14.2"
+      ]
+    },
+    {
+      "check": "AIN1反馈在串阻前",
+      "passed": true,
+      "points": [
+        "R46.1",
+        "R48.1",
+        "U14.1"
+      ]
+    },
+    {
+      "check": "AIN1ADC输入",
+      "passed": true,
+      "points": [
+        "R48.2",
+        "U13.4",
+        "C11.1"
+      ]
+    },
+    {
+      "check": "AIN1反馈负轨",
+      "passed": true,
+      "points": [
+        "R47.2",
+        "U15.6"
+      ]
+    },
+    {
+      "check": "AIN2输入",
+      "passed": true,
+      "points": [
+        "J15.1",
+        "R49.1"
+      ]
+    },
+    {
+      "check": "AIN2上臂串联1",
+      "passed": true,
+      "points": [
+        "R49.2",
+        "R50.1"
+      ]
+    },
+    {
+      "check": "AIN2上臂串联2",
+      "passed": true,
+      "points": [
+        "R50.2",
+        "R51.1"
+      ]
+    },
+    {
+      "check": "AIN2上臂串联3",
+      "passed": true,
+      "points": [
+        "R51.2",
+        "R52.1"
+      ]
+    },
+    {
+      "check": "AIN2上臂串联4",
+      "passed": true,
+      "points": [
+        "R52.2",
+        "R53.1"
+      ]
+    },
+    {
+      "check": "AIN2分压节点",
+      "passed": true,
+      "points": [
+        "R53.2",
+        "R54.1",
+        "U14.5",
+        "C12.1"
+      ]
+    },
+    {
+      "check": "AIN2反馈",
+      "passed": true,
+      "points": [
+        "R55.2",
+        "R56.1",
+        "U14.6"
+      ]
+    },
+    {
+      "check": "AIN2反馈在串阻前",
+      "passed": true,
+      "points": [
+        "R55.1",
+        "R57.1",
+        "U14.7"
+      ]
+    },
+    {
+      "check": "AIN2ADC输入",
+      "passed": true,
+      "points": [
+        "R57.2",
+        "U13.5",
+        "C13.1"
+      ]
+    },
+    {
+      "check": "AIN2反馈负轨",
+      "passed": true,
+      "points": [
+        "R56.2",
+        "U15.6"
+      ]
+    },
+    {
+      "check": "AIN3输入",
+      "passed": true,
+      "points": [
+        "J16.1",
+        "R58.1"
+      ]
+    },
+    {
+      "check": "AIN3上臂串联1",
+      "passed": true,
+      "points": [
+        "R58.2",
+        "R59.1"
+      ]
+    },
+    {
+      "check": "AIN3上臂串联2",
+      "passed": true,
+      "points": [
+        "R59.2",
+        "R60.1"
+      ]
+    },
+    {
+      "check": "AIN3上臂串联3",
+      "passed": true,
+      "points": [
+        "R60.2",
+        "R61.1"
+      ]
+    },
+    {
+      "check": "AIN3上臂串联4",
+      "passed": true,
+      "points": [
+        "R61.2",
+        "R62.1"
+      ]
+    },
+    {
+      "check": "AIN3分压节点",
+      "passed": true,
+      "points": [
+        "R62.2",
+        "R63.1",
+        "U14.10",
+        "C14.1"
+      ]
+    },
+    {
+      "check": "AIN3反馈",
+      "passed": true,
+      "points": [
+        "R64.2",
+        "R65.1",
+        "U14.9"
+      ]
+    },
+    {
+      "check": "AIN3反馈在串阻前",
+      "passed": true,
+      "points": [
+        "R64.1",
+        "R66.1",
+        "U14.8"
+      ]
+    },
+    {
+      "check": "AIN3ADC输入",
+      "passed": true,
+      "points": [
+        "R66.2",
+        "U13.6",
+        "C15.1"
+      ]
+    },
+    {
+      "check": "AIN3反馈负轨",
+      "passed": true,
+      "points": [
+        "R65.2",
+        "U15.6"
+      ]
+    },
+    {
+      "check": "AIN4输入",
+      "passed": true,
+      "points": [
+        "J17.1",
+        "R67.1"
+      ]
+    },
+    {
+      "check": "AIN4上臂串联1",
+      "passed": true,
+      "points": [
+        "R67.2",
+        "R68.1"
+      ]
+    },
+    {
+      "check": "AIN4上臂串联2",
+      "passed": true,
+      "points": [
+        "R68.2",
+        "R69.1"
+      ]
+    },
+    {
+      "check": "AIN4上臂串联3",
+      "passed": true,
+      "points": [
+        "R69.2",
+        "R70.1"
+      ]
+    },
+    {
+      "check": "AIN4上臂串联4",
+      "passed": true,
+      "points": [
+        "R70.2",
+        "R71.1"
+      ]
+    },
+    {
+      "check": "AIN4分压节点",
+      "passed": true,
+      "points": [
+        "R71.2",
+        "R72.1",
+        "U14.12",
+        "C16.1"
+      ]
+    },
+    {
+      "check": "AIN4反馈",
+      "passed": true,
+      "points": [
+        "R73.2",
+        "R74.1",
+        "U14.13"
+      ]
+    },
+    {
+      "check": "AIN4反馈在串阻前",
+      "passed": true,
+      "points": [
+        "R73.1",
+        "R75.1",
+        "U14.14"
+      ]
+    },
+    {
+      "check": "AIN4ADC输入",
+      "passed": true,
+      "points": [
+        "R75.2",
+        "U13.7",
+        "C17.1"
+      ]
+    },
+    {
+      "check": "AIN4反馈负轨",
+      "passed": true,
+      "points": [
+        "R74.2",
+        "U15.6"
+      ]
+    },
+    {
+      "check": "运放负轨与LM7705输出",
+      "passed": true,
+      "points": [
+        "U14.11",
+        "U15.6",
+        "C23.1",
+        "C24.1"
+      ]
+    },
+    {
+      "check": "LM7705储能与输出分开",
+      "passed": true
+    },
+    {
+      "check": "LM7705独立储能",
+      "passed": true,
+      "points": [
+        "U15.7",
+        "C22.1"
+      ]
+    },
+    {
+      "check": "飞跨正端",
+      "passed": true,
+      "points": [
+        "U15.1",
+        "C21.1"
+      ]
+    },
+    {
+      "check": "飞跨负端",
+      "passed": true,
+      "points": [
+        "U15.8",
+        "C21.2"
+      ]
+    },
+    {
+      "check": "UART发送使能",
+      "passed": true,
+      "points": [
+        "U4.31",
+        "U16.1",
+        "R76.2"
+      ]
+    },
+    {
+      "check": "UART工具TX输入",
+      "passed": true,
+      "points": [
+        "U4.22",
+        "U16.2",
+        "R77.2"
+      ]
+    },
+    {
+      "check": "UART TX串阻内端",
+      "passed": true,
+      "points": [
+        "U16.4",
+        "R79.1"
+      ]
+    },
+    {
+      "check": "UART TX插针",
+      "passed": true,
+      "points": [
+        "J18.1",
+        "R79.2"
+      ]
+    },
+    {
+      "check": "UART RX插针",
+      "passed": true,
+      "points": [
+        "J18.2",
+        "R80.1"
+      ]
+    },
+    {
+      "check": "UART RX输入缓冲",
+      "passed": true,
+      "points": [
+        "R80.2",
+        "R78.1",
+        "U17.2"
+      ]
+    },
+    {
+      "check": "UART RX进MCU",
+      "passed": true,
+      "points": [
+        "U17.4",
+        "U4.8"
+      ]
+    },
+    {
+      "check": "MCU保留脚23",
+      "passed": true
+    },
+    {
+      "check": "MCU保留脚28",
+      "passed": true
+    },
+    {
+      "check": "MCU保留脚29",
+      "passed": true
+    },
+    {
+      "check": "MCU保留脚30",
+      "passed": true
+    },
+    {
+      "check": "ADC就绪脚NC",
+      "passed": true
+    },
+    {
+      "check": "RX未用脚NC",
+      "passed": true
+    }
+  ],
+  "passedConnectivityChecks": 129,
+  "failedConnectivityChecks": [],
+  "footprintGeometry": [
+    {
+      "name": "N_FET",
+      "pads": {
+        "1": [
+          -0.987552,
+          -1.498473
+        ],
+        "2": [
+          -0.337566,
+          -1.498473
+        ],
+        "3": [
+          0.312674,
+          -1.498473
+        ],
+        "4": [
+          0.962406,
+          -1.498473
+        ],
+        "8": [
+          -0.962406,
+          1.498473
+        ],
+        "7": [
+          -0.31242,
+          1.498473
+        ],
+        "6": [
+          0.337566,
+          1.498473
+        ],
+        "5": [
+          0.987552,
+          1.498473
+        ],
+        "9": [
+          0.0127,
+          0.406527
+        ]
+      },
+      "alignedWithThermalPadOnRight": {
+        "1": [
+          -1.498473,
+          0.987552
+        ],
+        "2": [
+          -1.498473,
+          0.337566
+        ],
+        "3": [
+          -1.498473,
+          -0.312674
+        ],
+        "4": [
+          -1.498473,
+          -0.962406
+        ],
+        "8": [
+          1.498473,
+          0.962406
+        ],
+        "7": [
+          1.498473,
+          0.31242
+        ],
+        "6": [
+          1.498473,
+          -0.337566
+        ],
+        "5": [
+          1.498473,
+          -0.987552
+        ],
+        "9": [
+          0.406527,
+          -0.0127
+        ]
+      },
+      "courtyardWidth": 3.1653,
+      "courtyardHeight": 4.1370000000000005
+    },
+    {
+      "name": "P_FET",
+      "pads": {
+        "1": [
+          -0.987552,
+          -1.498473
+        ],
+        "2": [
+          -0.337566,
+          -1.498473
+        ],
+        "3": [
+          0.312674,
+          -1.498473
+        ],
+        "4": [
+          0.962406,
+          -1.498473
+        ],
+        "8": [
+          -0.962406,
+          1.498473
+        ],
+        "7": [
+          -0.31242,
+          1.498473
+        ],
+        "6": [
+          0.337566,
+          1.498473
+        ],
+        "5": [
+          0.987552,
+          1.498473
+        ],
+        "9": [
+          0.0127,
+          0.406527
+        ]
+      },
+      "alignedWithThermalPadOnRight": {
+        "1": [
+          -1.498473,
+          0.987552
+        ],
+        "2": [
+          -1.498473,
+          0.337566
+        ],
+        "3": [
+          -1.498473,
+          -0.312674
+        ],
+        "4": [
+          -1.498473,
+          -0.962406
+        ],
+        "8": [
+          1.498473,
+          0.962406
+        ],
+        "7": [
+          1.498473,
+          0.31242
+        ],
+        "6": [
+          1.498473,
+          -0.337566
+        ],
+        "5": [
+          1.498473,
+          -0.987552
+        ],
+        "9": [
+          0.406527,
+          -0.0127
+        ]
+      },
+      "courtyardWidth": 3.1653,
+      "courtyardHeight": 4.1370000000000005
+    }
+  ],
+  "sha256": {
+    "hardware\\kicad\\01_power.kicad_sch": "77b5de6e8fe5dfa8034151f80e2a65eb7680eda364b78fca9214823222d6db5c",
+    "hardware\\kicad\\02_controller.kicad_sch": "a63842ebe0c6a3a1888ef7847d0356769ff8ef8e30c271b675ef45369ce4281e",
+    "hardware\\kicad\\03_keys.kicad_sch": "e9cd7b4bd084b8ff5238328f0db3f29950db6cc7d9e2a8aa337de27beb6ba5e5",
+    "hardware\\kicad\\04_source_switch.kicad_sch": "b703c3878110cb85ec736f1344b76e47fb1300a296b0a3194aa74594c27806b5",
+    "hardware\\kicad\\05_charger.kicad_sch": "f5d1143925daa506aebfdde952b2c08bfa049efa2599cd13c3b4b4d8f4210390",
+    "hardware\\kicad\\06_current_sense.kicad_sch": "84d69fb8e6bdb09ed6e5d5ab8da63ee6a2212fb70d71fb10d5827b882ef82b5a",
+    "hardware\\kicad\\07_voltage_sense.kicad_sch": "5c5430e565af36cb097b4c8fa7588ea86444a71df3dd6fe78b41c6097784ebd9",
+    "hardware\\kicad\\08_uart.kicad_sch": "90aa6d7d3be0a04a43b444c572a59b30eefcb9bc369785b80f7600147521c15f",
+    "hardware\\kicad\\AI_MCUTOOL.kicad_sch": "9e2726cf531f61293e3505ba901d87dc7406c27d94fa61b355488fa92343945d",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\LDL1117.kicad_mod": "f47e2620734d3fbc173ba5cff14fb65943256107e0d5e3333da5118ab8f79df0",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\N_FET.kicad_mod": "b12103dd0fbc3e1cfbc8a47b09dd553e4e78ce34e4f50cedd051702d73b9217a",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\P_FET.kicad_mod": "410be79bba2b174a140f321c45fa25d663a2c622f305788a114c0c4cbb97ec37",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\PHOTO_MOS.kicad_mod": "59498987837ab80027148304c6903bf93810e39cacba73604e7aa0ebc454da3d",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\PHOTO_PV.kicad_mod": "10a67f64c1d145d747cf18386ab14a2155531ea5c46f10e664c1c07f0d819840",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\SHUNT4.kicad_mod": "5c47191299686f6fe432e4b2d89f284b3a947e0606fb3c75edab279a1c3d3d8d",
+    "hardware\\kicad\\AI_MCUTOOL.pretty\\SW4.kicad_mod": "cd7f080db45e2bdf693b9b8550cda56366d6807320d140d229c965e156eb50fa"
+  },
+  "erc": {
+    "kicadVersion": "10.0.6",
+    "date": "2026-10-24T12:48:12",
+    "violations": [],
+    "ignoredChecks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ]
+  },
+  "primarySources": [
+    {
+      "name": "tlp176am",
+      "url": "https://toshiba.semicon-storage.com/info/docget.jsp?did=60600",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "vom1271",
+      "url": "https://www.vishay.com/docs/83469/vom1271.pdf",
+      "status": 200,
+      "bytes": 166091,
+      "pages": 7,
+      "sha256": "224bc07fd9de81b1f48ef9f64e907572a9f17f25455e2a99535216aadcdf7009"
+    },
+    {
+      "name": "wsk2512",
+      "url": "https://www.vishay.com/docs/30108/wsk2512.pdf",
+      "status": 200,
+      "bytes": 113461,
+      "pages": 5,
+      "sha256": "2ee8a9067539bd2cabb08845219bac55d506b1ca892a2dbaeed343dd1ed10cff"
+    },
+    {
+      "name": "csd17577q3a",
+      "url": "https://www.ti.com/lit/ds/symlink/csd17577q3a.pdf",
+      "status": 200,
+      "bytes": 489387,
+      "pages": 12,
+      "sha256": "0326bd9ba1c034477fec0fddf0c26b27224d4976883b455388ff9bda22b5a765"
+    },
+    {
+      "name": "csd25402q3a",
+      "url": "https://www.ti.com/lit/ds/symlink/csd25402q3a.pdf",
+      "status": 200,
+      "bytes": 748811,
+      "pages": 17,
+      "sha256": "c012fd83328e7fae2186d13a13d9fe184ba7f00ec98f1061dca7118c39abdcd2"
+    }
+  ],
+  "schematicPagesVisuallyReviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "priority": 1,
+      "title": "迁移封装镜像",
+      "confirmedAffectedReferences": [
+        "Q8",
+        "Q9",
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "U10",
+        "U11"
+      ]
+    },
+    {
+      "id": "F2",
+      "priority": 2,
+      "title": "MOS装配边界未包住最大本体"
+    }
+  ],
+  "overallEngineeringApproved": false,
+  "designFilesChanged": false,
+  "inputSnapshotStillMatches": true,
+  "unassignedFootprints": [
+    "J1",
+    "J2"
+  ]
+}

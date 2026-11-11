@@ -1,0 +1,3216 @@
+{
+  "schemaVersion": 1,
+  "units": "mil",
+  "coordinateSystem": "y-up",
+  "boardSizeMM": [
+    90,
+    90
+  ],
+  "source": "pcb-import-list.json",
+  "reference": "kicad-placement-reference.json",
+  "components": [
+    {
+      "ref": "C1",
+      "primitiveId": "44494a2c5d43db3c",
+      "uniqueId": "AI_MCUTOOL_C1",
+      "fromPose": {
+        "x": 4634.3458,
+        "y": -1716.2592999999997,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 708.6572,
+        "y": 2047.2848,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000001263,
+      "padMaxDifferenceMM": 0.07523000000001263
+    },
+    {
+      "ref": "C2",
+      "primitiveId": "a90a6a4ad996b98f",
+      "uniqueId": "AI_MCUTOOL_C2",
+      "fromPose": {
+        "x": 5557.7518,
+        "y": -1971.5208000000002,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 472.4427,
+        "y": 1515.7272,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07522999999999387,
+      "padMaxDifferenceMM": 0.07522999999999387
+    },
+    {
+      "ref": "C3",
+      "primitiveId": "cd5eada78dea4781",
+      "uniqueId": "AI_MCUTOOL_C3",
+      "fromPose": {
+        "x": 5959.307799999999,
+        "y": -1803.5273000000002,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1023.6493,
+        "y": 1515.7558,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.050759999999998855,
+      "padMaxDifferenceMM": 0.050759999999998855
+    },
+    {
+      "ref": "C4",
+      "primitiveId": "4f30649f592ba58e",
+      "uniqueId": "AI_MCUTOOL_C4",
+      "fromPose": {
+        "x": 6479.755800000001,
+        "y": -1803.5273000000002,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1377.9586,
+        "y": 1515.7207,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.04949000000000578,
+      "padMaxDifferenceMM": 0.04949000000000578
+    },
+    {
+      "ref": "C5",
+      "primitiveId": "21ad79d7699b9ada",
+      "uniqueId": "AI_MCUTOOL_C5",
+      "fromPose": {
+        "x": 3652.3144,
+        "y": -2489.7253,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.3294,
+        "y": 3425.1716,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.050759999999993075,
+      "padMaxDifferenceMM": 0.050759999999998855
+    },
+    {
+      "ref": "C6",
+      "primitiveId": "093564dca33aa513",
+      "uniqueId": "AI_MCUTOOL_C6",
+      "fromPose": {
+        "x": 2198.0509,
+        "y": -2571.3753,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.3159,
+        "y": 3307.1113,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000975,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C7",
+      "primitiveId": "5a5074ea1e81098a",
+      "uniqueId": "AI_MCUTOOL_C7",
+      "fromPose": {
+        "x": 2846.7534,
+        "y": -2571.3753,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.3184,
+        "y": 3169.316,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000397,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C8",
+      "primitiveId": "6267441eac24d6af",
+      "uniqueId": "AI_MCUTOOL_C8",
+      "fromPose": {
+        "x": 2479.4078,
+        "y": -437.6029,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1574.8109,
+        "y": 649.6034,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000802,
+      "padMaxDifferenceMM": 0.0739600000000109
+    },
+    {
+      "ref": "C9",
+      "primitiveId": "188441358e4d92b7",
+      "uniqueId": "AI_MCUTOOL_C9",
+      "fromPose": {
+        "x": 2729.5648,
+        "y": -485.7134,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1732.2969,
+        "y": 807.1014,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000686
+    },
+    {
+      "ref": "C10",
+      "primitiveId": "b1e8011e60296430",
+      "uniqueId": "AI_MCUTOOL_C10",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -1552.3218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2381.8818,
+        "y": 1417.301,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000397,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C11",
+      "primitiveId": "7f68a63e3545dadf",
+      "uniqueId": "AI_MCUTOOL_C11",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -1552.3218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1653.5651,
+        "y": 1259.8475,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000513,
+      "padMaxDifferenceMM": 0.07396000000000513
+    },
+    {
+      "ref": "C12",
+      "primitiveId": "dd9240e911aec7ec",
+      "uniqueId": "AI_MCUTOOL_C12",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2381.8838,
+        "y": 1141.7575,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000513,
+      "padMaxDifferenceMM": 0.07396000000000513
+    },
+    {
+      "ref": "C13",
+      "primitiveId": "7b68bf97e1d1d92c",
+      "uniqueId": "AI_MCUTOOL_C13",
+      "fromPose": {
+        "x": 93.989,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1574.7709,
+        "y": 1141.7713,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C14",
+      "primitiveId": "65bdd8ad5d20e30d",
+      "uniqueId": "AI_MCUTOOL_C14",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2381.8818,
+        "y": 866.1349,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000397,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C15",
+      "primitiveId": "67c75a6ef14b3299",
+      "uniqueId": "AI_MCUTOOL_C15",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1929.1407,
+        "y": 748.0365,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000658,
+      "padMaxDifferenceMM": 0.07396000000000802
+    },
+    {
+      "ref": "C16",
+      "primitiveId": "f3fefd85fc8d0680",
+      "uniqueId": "AI_MCUTOOL_C16",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2381.8838,
+        "y": 590.5674,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000513,
+      "padMaxDifferenceMM": 0.07396000000000513
+    },
+    {
+      "ref": "C17",
+      "primitiveId": "f48798e34a2ce2e4",
+      "uniqueId": "AI_MCUTOOL_C17",
+      "fromPose": {
+        "x": 93.989,
+        "y": -2197.1813,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2165.3356,
+        "y": 1535.4721,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C18",
+      "primitiveId": "1d0b4d57b1b531aa",
+      "uniqueId": "AI_MCUTOOL_C18",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -2197.1813,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2086.5952,
+        "y": 1259.8612,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000975,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C19",
+      "primitiveId": "f03c0aca0b5d65ef",
+      "uniqueId": "AI_MCUTOOL_C19",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -2197.1813,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2086.6082,
+        "y": 885.8455,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000513,
+      "padMaxDifferenceMM": 0.07396000000000513
+    },
+    {
+      "ref": "C20",
+      "primitiveId": "b178d6a896db4799",
+      "uniqueId": "AI_MCUTOOL_C20",
+      "fromPose": {
+        "x": 93.989,
+        "y": -2411.4168,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1653.5601,
+        "y": 1850.4327,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C21",
+      "primitiveId": "b50891e17e39851b",
+      "uniqueId": "AI_MCUTOOL_C21",
+      "fromPose": {
+        "x": 301.652,
+        "y": -2411.4168,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0256,
+        "y": 1948.8021,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.04948999999999712,
+      "padMaxDifferenceMM": 0.049490000000000006
+    },
+    {
+      "ref": "C22",
+      "primitiveId": "6a97aff78328c689",
+      "uniqueId": "AI_MCUTOOL_C22",
+      "fromPose": {
+        "x": 494.879,
+        "y": -2288.3953,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2027.5543787401573,
+        "y": 1870.1077,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.049490000000000006,
+      "padMaxDifferenceMM": 0.049490000000000006
+    },
+    {
+      "ref": "C23",
+      "primitiveId": "d112add24279cb48",
+      "uniqueId": "AI_MCUTOOL_C23",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -2288.3953,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2027.5543787401573,
+        "y": 1732.2755,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.049490000000000006,
+      "padMaxDifferenceMM": 0.049490000000000006
+    },
+    {
+      "ref": "C24",
+      "primitiveId": "f17e06c06dd70471",
+      "uniqueId": "AI_MCUTOOL_C24",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -2411.4168,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1968.5089,
+        "y": 1614.1564,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07396000000000513,
+      "padMaxDifferenceMM": 0.07396000000000513
+    },
+    {
+      "ref": "C25",
+      "primitiveId": "d71a5153f7e373a2",
+      "uniqueId": "AI_MCUTOOL_C25",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -2411.4168,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2007.8908,
+        "y": 1417.3408,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000397,
+      "padMaxDifferenceMM": 0.07523000000000397
+    },
+    {
+      "ref": "C26",
+      "primitiveId": "881de722a8de3741",
+      "uniqueId": "AI_MCUTOOL_C26",
+      "fromPose": {
+        "x": 359.83,
+        "y": -362.7459,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1496.043,
+        "y": 3090.5053,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "C27",
+      "primitiveId": "2a23d7cc07d38481",
+      "uniqueId": "AI_MCUTOOL_C27",
+      "fromPose": {
+        "x": 496.76699999999994,
+        "y": -362.7459,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0406,
+        "y": 3090.5053,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07523000000000686,
+      "padMaxDifferenceMM": 0.07523000000000975
+    },
+    {
+      "ref": "J1",
+      "primitiveId": "8426e917faed2b90",
+      "uniqueId": "AI_MCUTOOL_J1",
+      "fromPose": {
+        "x": 4405.3448,
+        "y": -1598.2657999999997,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 418.67500787401576,
+        "y": 1797.2515,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.23588380322146732,
+      "padMaxDifferenceMM": 0.33358671522976074
+    },
+    {
+      "ref": "J2",
+      "primitiveId": "a77429c96c0e1c51",
+      "uniqueId": "AI_MCUTOOL_J2",
+      "fromPose": {
+        "x": 5284.343799999999,
+        "y": -2221.0138,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 208.09797086614174,
+        "y": 1338.5722,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0008480697036315802,
+      "padMaxDifferenceMM": 0.0013933333333289739
+    },
+    {
+      "ref": "J3",
+      "primitiveId": "d40c0f1b4cb1e5c5",
+      "uniqueId": "AI_MCUTOOL_J3",
+      "fromPose": {
+        "x": 2846.7534,
+        "y": -1974.0418,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2125.9425,
+        "y": 3146.5033,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 1.0331155249968042e-14,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J4",
+      "primitiveId": "37e0174b42d77a70",
+      "uniqueId": "AI_MCUTOOL_J4",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -436.6773999999999,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 157.5029,
+        "y": 3296.4236,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0,
+      "padMaxDifferenceMM": 0.0
+    },
+    {
+      "ref": "J5",
+      "primitiveId": "2f34f10777a64b8c",
+      "uniqueId": "AI_MCUTOOL_J5",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -598.1734,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 157.5069,
+        "y": 3040.5376,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 8.167495362676303e-15,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J6",
+      "primitiveId": "673bfd008e0bc56d",
+      "uniqueId": "AI_MCUTOOL_J6",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -759.6694,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 157.5109,
+        "y": 2784.6516,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 8.167495362676303e-15,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J7",
+      "primitiveId": "5caba9dff3f6db59",
+      "uniqueId": "AI_MCUTOOL_J7",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -921.1654,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 157.5149,
+        "y": 2528.7656,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 8.167495362676303e-15,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J8",
+      "primitiveId": "0a857c34ba8f900f",
+      "uniqueId": "AI_MCUTOOL_J8",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -1071.7204,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 157.4599,
+        "y": 2272.8795,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 8.167495362676303e-15,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J9",
+      "primitiveId": "e3557843387d62af",
+      "uniqueId": "AI_MCUTOOL_J9",
+      "fromPose": {
+        "x": 4103.1872,
+        "y": -773.1394,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 364.9478,
+        "y": 157.4409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0,
+      "padMaxDifferenceMM": 0.0
+    },
+    {
+      "ref": "J10",
+      "primitiveId": "63f676e911f5bffd",
+      "uniqueId": "AI_MCUTOOL_J10",
+      "fromPose": {
+        "x": 3360.6342,
+        "y": -876.8324,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 994.9161,
+        "y": 157.4479,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 2.887645678129047e-15,
+      "padMaxDifferenceMM": 2.887645678129047e-15
+    },
+    {
+      "ref": "J11",
+      "primitiveId": "3ab791c0e2f337ad",
+      "uniqueId": "AI_MCUTOOL_J11",
+      "fromPose": {
+        "x": 2192.1228,
+        "y": -314.9609,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1703.5661,
+        "y": 157.5194,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 4.083747681338152e-15,
+      "padMaxDifferenceMM": 5.775291356258094e-15
+    },
+    {
+      "ref": "J12",
+      "primitiveId": "76689564c0886b5a",
+      "uniqueId": "AI_MCUTOOL_J12",
+      "fromPose": {
+        "x": 1468.3094,
+        "y": -405.9224,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2530.3244,
+        "y": 157.4579,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 1.1550582712516188e-14,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J13",
+      "primitiveId": "0849a59833290ee9",
+      "uniqueId": "AI_MCUTOOL_J13",
+      "fromPose": {
+        "x": 1697.9944,
+        "y": -405.9224,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3238.9708,
+        "y": 157.4579,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 8.167495362676303e-15,
+      "padMaxDifferenceMM": 1.1550582712516188e-14
+    },
+    {
+      "ref": "J14",
+      "primitiveId": "00f32e97e5e553e6",
+      "uniqueId": "AI_MCUTOOL_J14",
+      "fromPose": {
+        "x": 276.205,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3385.796,
+        "y": 1485.4281,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0,
+      "padMaxDifferenceMM": 0.0
+    },
+    {
+      "ref": "J15",
+      "primitiveId": "7ccb77fc1e2ecfb9",
+      "uniqueId": "AI_MCUTOOL_J15",
+      "fromPose": {
+        "x": 1092.421,
+        "y": -1552.3218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3385.805,
+        "y": 1209.8215,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 4.083747681338152e-15,
+      "padMaxDifferenceMM": 5.775291356258094e-15
+    },
+    {
+      "ref": "J16",
+      "primitiveId": "2397c817b28b7563",
+      "uniqueId": "AI_MCUTOOL_J16",
+      "fromPose": {
+        "x": 276.205,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3385.859,
+        "y": 934.247,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 2.887645678129047e-15,
+      "padMaxDifferenceMM": 2.887645678129047e-15
+    },
+    {
+      "ref": "J17",
+      "primitiveId": "2ecee5a68634bd29",
+      "uniqueId": "AI_MCUTOOL_J17",
+      "fromPose": {
+        "x": 1092.421,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3385.82,
+        "y": 658.6404,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 4.5657687092146285e-15,
+      "padMaxDifferenceMM": 5.775291356258094e-15
+    },
+    {
+      "ref": "J18",
+      "primitiveId": "1dba3f94bb121bd2",
+      "uniqueId": "AI_MCUTOOL_J18",
+      "fromPose": {
+        "x": 728.983,
+        "y": -362.7459,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1653.4974,
+        "y": 3285.8438,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 1.2913944062460055e-14,
+      "padMaxDifferenceMM": 1.2913944062460055e-14
+    },
+    {
+      "ref": "LED1",
+      "primitiveId": "7a1929d0ddfad9a3",
+      "uniqueId": "AI_MCUTOOL_LED1",
+      "fromPose": {
+        "x": 2846.7534,
+        "y": -2489.7253,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3031.4995,
+        "y": 2086.6389,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.03965346138737642,
+      "padMaxDifferenceMM": 0.03965346138737642
+    },
+    {
+      "ref": "LED2",
+      "primitiveId": "5792511f456d41a1",
+      "uniqueId": "AI_MCUTOOL_LED2",
+      "fromPose": {
+        "x": 3357.0393999999997,
+        "y": -2489.7253,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3307.076,
+        "y": 2086.5889,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.03946999999999593,
+      "padMaxDifferenceMM": 0.039470000000001705
+    },
+    {
+      "ref": "Q1",
+      "primitiveId": "60e2357a4153a5d6",
+      "uniqueId": "AI_MCUTOOL_Q1",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -275.1814,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 909.3951,
+        "y": 3297.2255,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.27995771871242614,
+      "padMaxDifferenceMM": 0.39591999999999716
+    },
+    {
+      "ref": "Q2",
+      "primitiveId": "92e35f53efd7fcf6",
+      "uniqueId": "AI_MCUTOOL_Q2",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -436.6773999999999,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 909.4146,
+        "y": 3041.316,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.279957718712437,
+      "padMaxDifferenceMM": 0.3959200000000116
+    },
+    {
+      "ref": "Q3",
+      "primitiveId": "854d8e70e1bbfafc",
+      "uniqueId": "AI_MCUTOOL_Q3",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -598.1734,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 909.4007,
+        "y": 2785.4065,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2811550861871266,
+      "padMaxDifferenceMM": 0.39761333333333476
+    },
+    {
+      "ref": "Q4",
+      "primitiveId": "df4d78a77223414b",
+      "uniqueId": "AI_MCUTOOL_Q4",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -759.6694,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 909.4202,
+        "y": 2529.497,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2811550861871157,
+      "padMaxDifferenceMM": 0.3976133333333203
+    },
+    {
+      "ref": "Q5",
+      "primitiveId": "a0beffe0625f0b5d",
+      "uniqueId": "AI_MCUTOOL_Q5",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -1033.3384,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 909.4422,
+        "y": 2273.6604,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2811550861871157,
+      "padMaxDifferenceMM": 0.3976133333333203
+    },
+    {
+      "ref": "Q6",
+      "primitiveId": "faad089a381c16da",
+      "uniqueId": "AI_MCUTOOL_Q6",
+      "fromPose": {
+        "x": 3551.4692000000005,
+        "y": -342.51840000000004,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 200.7447,
+        "y": 905.5302,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2811550861871205,
+      "padMaxDifferenceMM": 0.39761333333332827
+    },
+    {
+      "ref": "Q7",
+      "primitiveId": "a0fb1b8c2521e53a",
+      "uniqueId": "AI_MCUTOOL_Q7",
+      "fromPose": {
+        "x": 3920.9712,
+        "y": -578.7784,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 830.664,
+        "y": 1102.3406,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2811550861871198,
+      "padMaxDifferenceMM": 0.3976133333333261
+    },
+    {
+      "ref": "Q8",
+      "primitiveId": "06c43c7779c941c7",
+      "uniqueId": "AI_MCUTOOL_Q8",
+      "fromPose": {
+        "x": 3360.6342,
+        "y": -578.7784,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 393.6766,
+        "y": 421.23767637795277,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.000688992250312429,
+      "padMaxDifferenceMM": 0.0017815801697509336
+    },
+    {
+      "ref": "Q9",
+      "primitiveId": "f3234d5834ad1f1f",
+      "uniqueId": "AI_MCUTOOL_Q9",
+      "fromPose": {
+        "x": 3551.4692000000005,
+        "y": -578.7784,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 393.6822,
+        "y": 641.7544236220473,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0006654701855826765,
+      "padMaxDifferenceMM": 0.0017273291164477426
+    },
+    {
+      "ref": "Q10",
+      "primitiveId": "2644215dd8d202a7",
+      "uniqueId": "AI_MCUTOOL_Q10",
+      "fromPose": {
+        "x": 3730.1362,
+        "y": -773.1394,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1023.5958,
+        "y": 421.29867637795275,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0006889922503101225,
+      "padMaxDifferenceMM": 0.001781580169739498
+    },
+    {
+      "ref": "Q11",
+      "primitiveId": "435fd83eaa7ff420",
+      "uniqueId": "AI_MCUTOOL_Q11",
+      "fromPose": {
+        "x": 3920.9712,
+        "y": -773.1394,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1023.5944,
+        "y": 641.6934236220472,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0003291248402902935,
+      "padMaxDifferenceMM": 0.0005544786896692244
+    },
+    {
+      "ref": "Q12",
+      "primitiveId": "de94a20d7beab045",
+      "uniqueId": "AI_MCUTOOL_Q12",
+      "fromPose": {
+        "x": 1144.8554,
+        "y": -267.7574,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2507.830876377953,
+        "y": 393.6906,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0009595555555540319,
+      "padMaxDifferenceMM": 0.0014181491154372432
+    },
+    {
+      "ref": "Q13",
+      "primitiveId": "0077f399ce5c3afa",
+      "uniqueId": "AI_MCUTOOL_Q13",
+      "fromPose": {
+        "x": 1286.0934,
+        "y": -267.7574,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2728.389623622047,
+        "y": 393.7063,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.00032912484028512114,
+      "padMaxDifferenceMM": 0.0005544786896594504
+    },
+    {
+      "ref": "Q14",
+      "primitiveId": "8fc2a0390d71bdc4",
+      "uniqueId": "AI_MCUTOOL_Q14",
+      "fromPose": {
+        "x": 1468.3094,
+        "y": -267.7574,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2956.6434,
+        "y": 393.6582,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2799577187124221,
+      "padMaxDifferenceMM": 0.3959199999999885
+    },
+    {
+      "ref": "R1",
+      "primitiveId": "8b6bc93157b00089",
+      "uniqueId": "AI_MCUTOOL_R1",
+      "fromPose": {
+        "x": 4771.2868,
+        "y": -1716.2592999999997,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 866.1785,
+        "y": 2047.2848,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R2",
+      "primitiveId": "3daa1112aac4fe5f",
+      "uniqueId": "AI_MCUTOOL_R2",
+      "fromPose": {
+        "x": 5694.692800000001,
+        "y": -1971.5208000000002,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 629.9141,
+        "y": 1515.7272,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000762,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R3",
+      "primitiveId": "2e11a34fa95eeb76",
+      "uniqueId": "AI_MCUTOOL_R3",
+      "fromPose": {
+        "x": 5013.1258,
+        "y": -2049.2218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 374.0375393700788,
+        "y": 1338.5585,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R4",
+      "primitiveId": "0b5054aac805d958",
+      "uniqueId": "AI_MCUTOOL_R4",
+      "fromPose": {
+        "x": 5013.1258,
+        "y": -2475.2618,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 373.9775393700788,
+        "y": 1200.7632,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R5",
+      "primitiveId": "18a9a5a25ed3a0b6",
+      "uniqueId": "AI_MCUTOOL_R5",
+      "fromPose": {
+        "x": 3061.7644,
+        "y": -2077.7348,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.3294,
+        "y": 3070.8313,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R6",
+      "primitiveId": "365c39ed7e650166",
+      "uniqueId": "AI_MCUTOOL_R6",
+      "fromPose": {
+        "x": 3357.0393999999997,
+        "y": -1974.0418,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.3044,
+        "y": 2696.8086,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R7",
+      "primitiveId": "6d59d7bdc8f35320",
+      "uniqueId": "AI_MCUTOOL_R7",
+      "fromPose": {
+        "x": 2198.0509,
+        "y": -2402.4573,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2716.4927,
+        "y": 2637.7962,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R8",
+      "primitiveId": "eb9e299d098e327e",
+      "uniqueId": "AI_MCUTOOL_R8",
+      "fromPose": {
+        "x": 2846.7534,
+        "y": -2231.8278,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.453,
+        "y": 2637.7987,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R9",
+      "primitiveId": "447dfb02a33b7a39",
+      "uniqueId": "AI_MCUTOOL_R9",
+      "fromPose": {
+        "x": 3652.3144,
+        "y": -1974.0418,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2480.2794,
+        "y": 2913.344,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R10",
+      "primitiveId": "abb685341574e79a",
+      "uniqueId": "AI_MCUTOOL_R10",
+      "fromPose": {
+        "x": 2198.0509,
+        "y": -2489.7253,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3031.497,
+        "y": 2204.6991,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R11",
+      "primitiveId": "147b040d57757c6a",
+      "uniqueId": "AI_MCUTOOL_R11",
+      "fromPose": {
+        "x": 3061.7644,
+        "y": -2489.7253,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3307.101,
+        "y": 2204.6991,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07188999999998914,
+      "padMaxDifferenceMM": 0.07188999999998914
+    },
+    {
+      "ref": "R12",
+      "primitiveId": "1543909e494c6f3b",
+      "uniqueId": "AI_MCUTOOL_R12",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -275.1814,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 787.383,
+        "y": 3385.8209,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000762,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R13",
+      "primitiveId": "364c90fed3c64b57",
+      "uniqueId": "AI_MCUTOOL_R13",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -275.1814,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9735,
+        "y": 3326.7963,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R14",
+      "primitiveId": "600dac4a6994a98b",
+      "uniqueId": "AI_MCUTOOL_R14",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -275.1814,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9972,
+        "y": 3208.68,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R15",
+      "primitiveId": "26a6035ff7fcccf5",
+      "uniqueId": "AI_MCUTOOL_R15",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -436.6773999999999,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 787.379,
+        "y": 3129.9459,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R16",
+      "primitiveId": "b29da227924ba086",
+      "uniqueId": "AI_MCUTOOL_R16",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -436.6773999999999,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9695,
+        "y": 3070.8712,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R17",
+      "primitiveId": "d19695b1deb0fc0f",
+      "uniqueId": "AI_MCUTOOL_R17",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -598.1734,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9752,
+        "y": 2952.7825,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R18",
+      "primitiveId": "701873ec79a63f4d",
+      "uniqueId": "AI_MCUTOOL_R18",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -598.1734,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 787.375,
+        "y": 2874.0208,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R19",
+      "primitiveId": "33096f522b3f533c",
+      "uniqueId": "AI_MCUTOOL_R19",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -759.6694,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9615,
+        "y": 2814.9437,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R20",
+      "primitiveId": "f42eee08786ca8e3",
+      "uniqueId": "AI_MCUTOOL_R20",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -759.6694,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9557,
+        "y": 2696.881,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R21",
+      "primitiveId": "5939702ad9423a65",
+      "uniqueId": "AI_MCUTOOL_R21",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -921.1654,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 787.367,
+        "y": 2618.0933,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000001224,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R22",
+      "primitiveId": "06d85b24cfefb044",
+      "uniqueId": "AI_MCUTOOL_R22",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -921.1654,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9575,
+        "y": 2559.0187,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R23",
+      "primitiveId": "89f99806181de297",
+      "uniqueId": "AI_MCUTOOL_R23",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -921.1654,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9862,
+        "y": 2440.9795,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000762,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R24",
+      "primitiveId": "b0bf441cd904b817",
+      "uniqueId": "AI_MCUTOOL_R24",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -1071.7204,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 787.422,
+        "y": 2362.1683,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R25",
+      "primitiveId": "1540e2555c50b961",
+      "uniqueId": "AI_MCUTOOL_R25",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -1071.7204,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1063.0125,
+        "y": 2303.1437,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000762,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R26",
+      "primitiveId": "a51b942c2ab5335f",
+      "uniqueId": "AI_MCUTOOL_R26",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -1071.7204,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1063.0167,
+        "y": 2185.019,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R27",
+      "primitiveId": "e4c2542e5e4d0aa8",
+      "uniqueId": "AI_MCUTOOL_R27",
+      "fromPose": {
+        "x": 3730.1362,
+        "y": -342.51840000000004,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 196.8688,
+        "y": 669.2775,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999994677,
+      "padMaxDifferenceMM": 0.017049999999994677
+    },
+    {
+      "ref": "R28",
+      "primitiveId": "d0046a9992a463ae",
+      "uniqueId": "AI_MCUTOOL_R28",
+      "fromPose": {
+        "x": 3920.9712,
+        "y": -342.51840000000004,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 118.1314,
+        "y": 1062.9737,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R29",
+      "primitiveId": "c035b35e98f34d56",
+      "uniqueId": "AI_MCUTOOL_R29",
+      "fromPose": {
+        "x": 4103.1872,
+        "y": -342.51840000000004,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 255.9427,
+        "y": 1062.9737,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R30",
+      "primitiveId": "ed9f6bb699b39f7b",
+      "uniqueId": "AI_MCUTOOL_R30",
+      "fromPose": {
+        "x": 4103.1872,
+        "y": -578.7784,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 826.7501,
+        "y": 708.6486,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999988616,
+      "padMaxDifferenceMM": 0.01577999999999006
+    },
+    {
+      "ref": "R31",
+      "primitiveId": "0a67603927c53de8",
+      "uniqueId": "AI_MCUTOOL_R31",
+      "fromPose": {
+        "x": 3360.6342,
+        "y": -773.1394,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 708.6456,
+        "y": 1259.8031,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R32",
+      "primitiveId": "5c12645125e6a700",
+      "uniqueId": "AI_MCUTOOL_R32",
+      "fromPose": {
+        "x": 3551.4692000000005,
+        "y": -773.1394,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 866.1609,
+        "y": 1259.8031,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R33",
+      "primitiveId": "19375d3f3dc57525",
+      "uniqueId": "AI_MCUTOOL_R33",
+      "fromPose": {
+        "x": 1697.9944,
+        "y": -267.7574,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2677.1598,
+        "y": 531.5387,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07061999999999607,
+      "padMaxDifferenceMM": 0.07061999999999607
+    },
+    {
+      "ref": "R34",
+      "primitiveId": "3c1ff88a68668a66",
+      "uniqueId": "AI_MCUTOOL_R34",
+      "fromPose": {
+        "x": 1832.7414,
+        "y": -267.7574,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2834.6371,
+        "y": 551.2237,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R35",
+      "primitiveId": "317ab20a73f02206",
+      "uniqueId": "AI_MCUTOOL_R35",
+      "fromPose": {
+        "x": 1144.8554,
+        "y": -405.9224,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3110.2416,
+        "y": 511.7886,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07188999999998914,
+      "padMaxDifferenceMM": 0.07188999999998914
+    },
+    {
+      "ref": "R36",
+      "primitiveId": "27d8f7c2e8f9bff4",
+      "uniqueId": "AI_MCUTOOL_R36",
+      "fromPose": {
+        "x": 1286.0934,
+        "y": -405.9224,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3110.2296,
+        "y": 393.6784,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07061999999998451,
+      "padMaxDifferenceMM": 0.07061999999998451
+    },
+    {
+      "ref": "R37",
+      "primitiveId": "6747b591b1fabbbb",
+      "uniqueId": "AI_MCUTOOL_R37",
+      "fromPose": {
+        "x": 2866.5058,
+        "y": -314.9609,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1417.2837,
+        "y": 708.6672,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000762,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R38",
+      "primitiveId": "6d0a7b85493c3d66",
+      "uniqueId": "AI_MCUTOOL_R38",
+      "fromPose": {
+        "x": 3001.2528,
+        "y": -314.9609,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1732.2444,
+        "y": 669.2941,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R39",
+      "primitiveId": "91a6d6144636308f",
+      "uniqueId": "AI_MCUTOOL_R39",
+      "fromPose": {
+        "x": 2192.1228,
+        "y": -485.7134,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1574.7759,
+        "y": 964.5535,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R40",
+      "primitiveId": "19b54cc42c3ee603",
+      "uniqueId": "AI_MCUTOOL_R40",
+      "fromPose": {
+        "x": 494.879,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3188.9554,
+        "y": 1535.4023,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R41",
+      "primitiveId": "8daf485bcffbfea8",
+      "uniqueId": "AI_MCUTOOL_R41",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2992.118,
+        "y": 1535.4023,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999988904,
+      "padMaxDifferenceMM": 0.017049999999988904
+    },
+    {
+      "ref": "R42",
+      "primitiveId": "89472d25fb99edf7",
+      "uniqueId": "AI_MCUTOOL_R42",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2795.2806,
+        "y": 1535.4023,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R43",
+      "primitiveId": "c7b73b96c318d128",
+      "uniqueId": "AI_MCUTOOL_R43",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.4432,
+        "y": 1535.4023,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999994677,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R44",
+      "primitiveId": "cc2fd8efb18a0b64",
+      "uniqueId": "AI_MCUTOOL_R44",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2401.5558,
+        "y": 1535.4023,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999988904,
+      "padMaxDifferenceMM": 0.017049999999988904
+    },
+    {
+      "ref": "R45",
+      "primitiveId": "290b27c87e204e2e",
+      "uniqueId": "AI_MCUTOOL_R45",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2519.679,
+        "y": 1417.292,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.08825999999999899,
+      "padMaxDifferenceMM": 0.08826000000000477
+    },
+    {
+      "ref": "R46",
+      "primitiveId": "53e6ac3c4f50a411",
+      "uniqueId": "AI_MCUTOOL_R46",
+      "fromPose": {
+        "x": 93.989,
+        "y": -1605.0978,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1850.4327,
+        "y": 1161.4195,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R47",
+      "primitiveId": "30c94be7a7368856",
+      "uniqueId": "AI_MCUTOOL_R47",
+      "fromPose": {
+        "x": 301.652,
+        "y": -1605.0978,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1850.3957,
+        "y": 1062.9943,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R48",
+      "primitiveId": "67527c900460e716",
+      "uniqueId": "AI_MCUTOOL_R48",
+      "fromPose": {
+        "x": 494.879,
+        "y": -1605.0978,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0526,
+        "y": 1259.8447,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R49",
+      "primitiveId": "cd55c4cede83209e",
+      "uniqueId": "AI_MCUTOOL_R49",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -1552.3218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3188.9574,
+        "y": 1259.8207,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017050000000000454,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R50",
+      "primitiveId": "ecb25f6fd9fe9ddf",
+      "uniqueId": "AI_MCUTOOL_R50",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -1552.3218,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2992.12,
+        "y": 1259.8207,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R51",
+      "primitiveId": "ad1e20f788c79d47",
+      "uniqueId": "AI_MCUTOOL_R51",
+      "fromPose": {
+        "x": 93.989,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2795.2646,
+        "y": 1259.8677,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.01577999999999006,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R52",
+      "primitiveId": "d9b33057e3000d82",
+      "uniqueId": "AI_MCUTOOL_R52",
+      "fromPose": {
+        "x": 301.652,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.4272,
+        "y": 1259.8677,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999994677,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R53",
+      "primitiveId": "787ea8747b07f5ec",
+      "uniqueId": "AI_MCUTOOL_R53",
+      "fromPose": {
+        "x": 494.879,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2401.5538,
+        "y": 1259.8677,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.01577999999999006,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R54",
+      "primitiveId": "767426669ffb13b7",
+      "uniqueId": "AI_MCUTOOL_R54",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2519.677,
+        "y": 1141.7575,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.08699000000000592,
+      "padMaxDifferenceMM": 0.0869900000000117
+    },
+    {
+      "ref": "R55",
+      "primitiveId": "7cf3911e1f834c3b",
+      "uniqueId": "AI_MCUTOOL_R55",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1850.3987,
+        "y": 964.5921,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000473,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R56",
+      "primitiveId": "8988131670161c68",
+      "uniqueId": "AI_MCUTOOL_R56",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1850.4117,
+        "y": 866.1669,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R57",
+      "primitiveId": "d694528054d25a39",
+      "uniqueId": "AI_MCUTOOL_R57",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -1699.2748000000001,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1692.8944,
+        "y": 1141.7575,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R58",
+      "primitiveId": "2a89c13465ae6ef1",
+      "uniqueId": "AI_MCUTOOL_R58",
+      "fromPose": {
+        "x": 494.879,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3188.9554,
+        "y": 984.2842,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R59",
+      "primitiveId": "dd4ca5702baf0f25",
+      "uniqueId": "AI_MCUTOOL_R59",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2992.118,
+        "y": 984.2842,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999988904,
+      "padMaxDifferenceMM": 0.017049999999988904
+    },
+    {
+      "ref": "R60",
+      "primitiveId": "71c43b2e7e1945fb",
+      "uniqueId": "AI_MCUTOOL_R60",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2795.2806,
+        "y": 984.2842,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R61",
+      "primitiveId": "44cb588aef59b023",
+      "uniqueId": "AI_MCUTOOL_R61",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.4432,
+        "y": 984.2842,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999994677,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R62",
+      "primitiveId": "5f3bb90647d2636c",
+      "uniqueId": "AI_MCUTOOL_R62",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2401.5558,
+        "y": 984.2842,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999988904,
+      "padMaxDifferenceMM": 0.017049999999988904
+    },
+    {
+      "ref": "R63",
+      "primitiveId": "0544678d3f6e0ec0",
+      "uniqueId": "AI_MCUTOOL_R63",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -1802.9678,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2519.679,
+        "y": 866.1739,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.08825999999999899,
+      "padMaxDifferenceMM": 0.08826000000000477
+    },
+    {
+      "ref": "R64",
+      "primitiveId": "c3649310d2245b58",
+      "uniqueId": "AI_MCUTOOL_R64",
+      "fromPose": {
+        "x": 93.989,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2275.5974,
+        "y": 944.9209,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000358
+    },
+    {
+      "ref": "R65",
+      "primitiveId": "268259c8ee513d1f",
+      "uniqueId": "AI_MCUTOOL_R65",
+      "fromPose": {
+        "x": 301.652,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2275.5974,
+        "y": 807.0886,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000213,
+      "padMaxDifferenceMM": 0.07189000000000358
+    },
+    {
+      "ref": "R66",
+      "primitiveId": "b045f4ebb46df9b0",
+      "uniqueId": "AI_MCUTOOL_R66",
+      "fromPose": {
+        "x": 494.879,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2086.6432,
+        "y": 748.0247,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07188999999999492,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R67",
+      "primitiveId": "1916b4af67bac8aa",
+      "uniqueId": "AI_MCUTOOL_R67",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3188.9574,
+        "y": 708.6546,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017050000000000454,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R68",
+      "primitiveId": "c64f7f9edb08e206",
+      "uniqueId": "AI_MCUTOOL_R68",
+      "fromPose": {
+        "x": 1533.194,
+        "y": -1910.6068,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2992.12,
+        "y": 708.6546,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.015779999999995836,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R69",
+      "primitiveId": "49a837b12155d420",
+      "uniqueId": "AI_MCUTOOL_R69",
+      "fromPose": {
+        "x": 93.989,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2795.2646,
+        "y": 708.6776,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.01577999999999006,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R70",
+      "primitiveId": "7fe8c6cf9eca19b1",
+      "uniqueId": "AI_MCUTOOL_R70",
+      "fromPose": {
+        "x": 301.652,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.4272,
+        "y": 708.6776,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.017049999999994677,
+      "padMaxDifferenceMM": 0.017050000000000454
+    },
+    {
+      "ref": "R71",
+      "primitiveId": "4c8fef5b5c29dc88",
+      "uniqueId": "AI_MCUTOOL_R71",
+      "fromPose": {
+        "x": 494.879,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2401.5538,
+        "y": 708.6776,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.01577999999999006,
+      "padMaxDifferenceMM": 0.015779999999995836
+    },
+    {
+      "ref": "R72",
+      "primitiveId": "a033a0f6a05f2991",
+      "uniqueId": "AI_MCUTOOL_R72",
+      "fromPose": {
+        "x": 702.5419999999999,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2519.677,
+        "y": 590.5674,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.08699000000000592,
+      "padMaxDifferenceMM": 0.0869900000000117
+    },
+    {
+      "ref": "R73",
+      "primitiveId": "21e86c1b221d527c",
+      "uniqueId": "AI_MCUTOOL_R73",
+      "fromPose": {
+        "x": 910.2049999999999,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2275.5744,
+        "y": 1220.4774,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000473,
+      "padMaxDifferenceMM": 0.07062000000000762
+    },
+    {
+      "ref": "R74",
+      "primitiveId": "dc241dcd308d8258",
+      "uniqueId": "AI_MCUTOOL_R74",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2275.5744,
+        "y": 1082.6952,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R75",
+      "primitiveId": "3a772bf40fc9b9ce",
+      "uniqueId": "AI_MCUTOOL_R75",
+      "fromPose": {
+        "x": 1325.531,
+        "y": -2004.7838,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2165.3353,
+        "y": 1417.339,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "R76",
+      "primitiveId": "d820bfa30be72b05",
+      "uniqueId": "AI_MCUTOOL_R76",
+      "fromPose": {
+        "x": 359.83,
+        "y": -259.8409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1377.9937,
+        "y": 2952.7359,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R77",
+      "primitiveId": "10c464421eb810b0",
+      "uniqueId": "AI_MCUTOOL_R77",
+      "fromPose": {
+        "x": 496.76699999999994,
+        "y": -259.8409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1377.9937,
+        "y": 2795.2926,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R78",
+      "primitiveId": "237fc460e6200c1d",
+      "uniqueId": "AI_MCUTOOL_R78",
+      "fromPose": {
+        "x": 728.983,
+        "y": -259.8409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1948.8598,
+        "y": 2952.7889,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R79",
+      "primitiveId": "295da2bdf7e858a1",
+      "uniqueId": "AI_MCUTOOL_R79",
+      "fromPose": {
+        "x": 72.8385,
+        "y": -362.7459,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1535.4216,
+        "y": 2795.2297,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000358,
+      "padMaxDifferenceMM": 0.07189000000000646
+    },
+    {
+      "ref": "R80",
+      "primitiveId": "33d36fbf47849d33",
+      "uniqueId": "AI_MCUTOOL_R80",
+      "fromPose": {
+        "x": 222.893,
+        "y": -362.7459,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0166,
+        "y": 2795.2297,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07062000000000185,
+      "padMaxDifferenceMM": 0.07062000000000185
+    },
+    {
+      "ref": "R81",
+      "primitiveId": "8e5357031be818ae",
+      "uniqueId": "AI_MCUTOOL_R81",
+      "fromPose": {
+        "x": 3061.7644,
+        "y": -2571.3753,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2303.1249,
+        "y": 2637.8097,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000069,
+      "padMaxDifferenceMM": 0.07189000000000069
+    },
+    {
+      "ref": "R82",
+      "primitiveId": "c8483cdfb6a1d7a1",
+      "uniqueId": "AI_MCUTOOL_R82",
+      "fromPose": {
+        "x": 3357.0393999999997,
+        "y": -2571.3753,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2401.5501,
+        "y": 2559.0445,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.07189000000000646,
+      "padMaxDifferenceMM": 0.07189000000001224
+    },
+    {
+      "ref": "RSH1",
+      "primitiveId": "86fc51eff4b2368b",
+      "uniqueId": "AI_MCUTOOL_RSH1",
+      "fromPose": {
+        "x": 2479.4078,
+        "y": -314.9609,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1574.7953,
+        "y": 511.7969,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.42020548458462365,
+      "padMaxDifferenceMM": 0.5943343796424669
+    },
+    {
+      "ref": "SW1",
+      "primitiveId": "ffd2af9111820587",
+      "uniqueId": "AI_MCUTOOL_SW1",
+      "fromPose": {
+        "x": 3061.7644,
+        "y": -2231.8278,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2598.3896,
+        "y": 2440.9671,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0005679612662870128,
+      "padMaxDifferenceMM": 0.0005679612662921784
+    },
+    {
+      "ref": "SW2",
+      "primitiveId": "be0d0884bf02ce52",
+      "uniqueId": "AI_MCUTOOL_SW2",
+      "fromPose": {
+        "x": 3357.0393999999997,
+        "y": -2231.8278,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2952.7953,
+        "y": 2440.9671,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0005679612662895956,
+      "padMaxDifferenceMM": 0.000567961266297344
+    },
+    {
+      "ref": "SW3",
+      "primitiveId": "415bff698b6f182b",
+      "uniqueId": "AI_MCUTOOL_SW3",
+      "fromPose": {
+        "x": 3652.3144,
+        "y": -2231.8278,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 3307.101,
+        "y": 2440.9671,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0005679612662818471,
+      "padMaxDifferenceMM": 0.0005679612662870128
+    },
+    {
+      "ref": "U1",
+      "primitiveId": "51fa4a8038f29f42",
+      "uniqueId": "gge1",
+      "fromPose": {
+        "x": 4894.5713,
+        "y": -1598.2657999999997,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 708.6956,
+        "y": 1889.7925,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2623200731930293,
+      "padMaxDifferenceMM": 0.2623201097895399
+    },
+    {
+      "ref": "U2",
+      "primitiveId": "15de6807148ca216",
+      "uniqueId": "AI_MCUTOOL_U2",
+      "fromPose": {
+        "x": 5817.9773000000005,
+        "y": -1853.5273000000002,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 551.1538,
+        "y": 1338.6054,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.2623200731930337,
+      "padMaxDifferenceMM": 0.2623201097895457
+    },
+    {
+      "ref": "U3",
+      "primitiveId": "49c881071a884a96",
+      "uniqueId": "AI_MCUTOOL_U3",
+      "fromPose": {
+        "x": 6219.5318,
+        "y": -1598.2657999999997,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1253.6028,
+        "y": 1732.2743,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.27311051037079903,
+      "padMaxDifferenceMM": 0.47304042620582887
+    },
+    {
+      "ref": "U4",
+      "primitiveId": "fc35055806c90199",
+      "uniqueId": "AI_MCUTOOL_U4",
+      "fromPose": {
+        "x": 2198.0509,
+        "y": -1974.0418,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2992.1121,
+        "y": 3134.7261,
+        "rotation": 0,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.013349562565937471,
+      "padMaxDifferenceMM": 0.021993345086118117
+    },
+    {
+      "ref": "U5",
+      "primitiveId": "003993f5664d469c",
+      "uniqueId": "AI_MCUTOOL_U5",
+      "fromPose": {
+        "x": 4580.2331,
+        "y": -275.1814,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 511.7779,
+        "y": 3297.2255,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0001270000000013283,
+      "padMaxDifferenceMM": 0.00012700000000277214
+    },
+    {
+      "ref": "U6",
+      "primitiveId": "ce92ed1d543ad931",
+      "uniqueId": "AI_MCUTOOL_U6",
+      "fromPose": {
+        "x": 4880.1136,
+        "y": -436.6773999999999,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 511.7974,
+        "y": 3041.316,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.00012699999998977773,
+      "padMaxDifferenceMM": 0.00012699999999122156
+    },
+    {
+      "ref": "U7",
+      "primitiveId": "a7519e2862afd815",
+      "uniqueId": "AI_MCUTOOL_U7",
+      "fromPose": {
+        "x": 5179.9941,
+        "y": -598.1734,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 511.8169,
+        "y": 2785.4065,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0001270000000013283,
+      "padMaxDifferenceMM": 0.00012700000000277214
+    },
+    {
+      "ref": "U8",
+      "primitiveId": "e173c50b24b5ad7d",
+      "uniqueId": "AI_MCUTOOL_U8",
+      "fromPose": {
+        "x": 5479.874600000001,
+        "y": -759.6694,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 511.8364,
+        "y": 2529.497,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.00012699999998977773,
+      "padMaxDifferenceMM": 0.00012699999999122156
+    },
+    {
+      "ref": "U9",
+      "primitiveId": "507200838b13582d",
+      "uniqueId": "AI_MCUTOOL_U9",
+      "fromPose": {
+        "x": 5779.7551,
+        "y": -921.1654,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 511.8559,
+        "y": 2273.5874,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0001270000000013283,
+      "padMaxDifferenceMM": 0.00012700000000277214
+    },
+    {
+      "ref": "U10",
+      "primitiveId": "05a199839a79772f",
+      "uniqueId": "AI_MCUTOOL_U10",
+      "fromPose": {
+        "x": 3360.6342,
+        "y": -342.51840000000004,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 433.0367,
+        "y": 944.9003,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0007619999999978631,
+      "padMaxDifferenceMM": 0.000761999999999307
+    },
+    {
+      "ref": "U11",
+      "primitiveId": "d7305df0d311caf9",
+      "uniqueId": "AI_MCUTOOL_U11",
+      "fromPose": {
+        "x": 3730.1362,
+        "y": -536.8794,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1062.9559,
+        "y": 944.9113,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.0005080000000009817,
+      "padMaxDifferenceMM": 0.0005080000000024256
+    },
+    {
+      "ref": "U12",
+      "primitiveId": "5c585e83a984938c",
+      "uniqueId": "AI_MCUTOOL_U12",
+      "fromPose": {
+        "x": 2729.5648,
+        "y": -314.9609,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1574.814,
+        "y": 807.0914,
+        "rotation": 90,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.20077169084309765,
+      "padMaxDifferenceMM": 0.20077325926526274
+    },
+    {
+      "ref": "U13",
+      "primitiveId": "f1577471a25befc4",
+      "uniqueId": "AI_MCUTOOL_U13",
+      "fromPose": {
+        "x": 93.989,
+        "y": -1438.5308,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0428,
+        "y": 1417.3338,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.040533562636418885,
+      "padMaxDifferenceMM": 0.04053712495972952
+    },
+    {
+      "ref": "U14",
+      "primitiveId": "bd3c3f8101d378b1",
+      "uniqueId": "AI_MCUTOOL_U14",
+      "fromPose": {
+        "x": 276.205,
+        "y": -2197.1813,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 2086.5829,
+        "y": 1062.9871,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.06215185355240709,
+      "padMaxDifferenceMM": 0.06215417041519081
+    },
+    {
+      "ref": "U15",
+      "primitiveId": "ceb7b1d9f47d64c1",
+      "uniqueId": "AI_MCUTOOL_U15",
+      "fromPose": {
+        "x": 1117.868,
+        "y": -2197.1813,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1811.0423,
+        "y": 1811.0556,
+        "rotation": 270,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.03380106507197765,
+      "padMaxDifferenceMM": 0.03380191710540482
+    },
+    {
+      "ref": "U16",
+      "primitiveId": "f29bb84430901c81",
+      "uniqueId": "AI_MCUTOOL_U16",
+      "fromPose": {
+        "x": 72.8385,
+        "y": -259.8409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1536.7179,
+        "y": 2952.7968,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.15844279856149798,
+      "padMaxDifferenceMM": 0.194052004122596
+    },
+    {
+      "ref": "U17",
+      "primitiveId": "f20de6ae9f20b621",
+      "uniqueId": "AI_MCUTOOL_U17",
+      "fromPose": {
+        "x": 222.893,
+        "y": -259.8409,
+        "rotation": 0,
+        "layer": 1
+      },
+      "toPose": {
+        "x": 1812.3139,
+        "y": 2952.7968,
+        "rotation": 180,
+        "layer": 1
+      },
+      "padRmsDifferenceMM": 0.15968713931935774,
+      "padMaxDifferenceMM": 0.19557600409048706
+    }
+  ],
+  "adjustments": [
+    {
+      "ref": "J2",
+      "dxMM": 0.9,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "J1",
+      "dxMM": 0.1,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "R3",
+      "dxMM": 0.5,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "R4",
+      "dxMM": 0.5,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q8",
+      "dxMM": 0,
+      "dyMM": -0.3,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q9",
+      "dxMM": 0,
+      "dyMM": 0.3,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q10",
+      "dxMM": 0,
+      "dyMM": -0.3,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q11",
+      "dxMM": 0,
+      "dyMM": 0.3,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q12",
+      "dxMM": -0.3,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "Q13",
+      "dxMM": 0.3,
+      "dyMM": 0,
+      "reason": "依据原生封装的包围框及板边焊盘余量调整"
+    },
+    {
+      "ref": "C22",
+      "rotationDelta": 90,
+      "reason": "保持中心，旋转0805电容以消除相邻包围框重叠"
+    },
+    {
+      "ref": "C23",
+      "rotationDelta": 90,
+      "reason": "保持中心，旋转0805电容以消除相邻包围框重叠"
+    },
+    {
+      "ref": "C22",
+      "dxMM": 1,
+      "dyMM": 0,
+      "reason": "与U15原生封装保留约0.47mm包围框间隙"
+    },
+    {
+      "ref": "C23",
+      "dxMM": 1,
+      "dyMM": 0,
+      "reason": "与U15原生封装保留约0.47mm包围框间隙"
+    }
+  ],
+  "mechanicalPadAlignmentNotes": {
+    "J2": "信号焊盘用于朝向拟合；外壳1/2/3/4编号在两个库间不同且全部接COMMON_GND。按实际焊盘尺寸向板内移0.9mm。"
+  }
+}

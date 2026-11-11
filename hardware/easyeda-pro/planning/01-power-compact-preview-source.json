@@ -1,0 +1,1727 @@
+{
+  "schemaVersion": 1,
+  "title": "工具电源：紧凑功能模块候选",
+  "zones": [
+    {
+      "id": "dc",
+      "title": "DC 5V 输入与反向隔离",
+      "layout": {
+        "schemaVersion": 1,
+        "placements": [
+          {
+            "designator": "J1",
+            "value": "DC-005-5.5*2.1",
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -24.5,
+              "minY": -10.5,
+              "maxX": 10.5,
+              "maxY": 16.5
+            },
+            "textBboxes": [
+              {
+                "minX": -25,
+                "minY": 20,
+                "maxX": -17.60693359375,
+                "maxY": 28
+              }
+            ],
+            "pins": [
+              {
+                "number": "3",
+                "name": "3",
+                "net": "",
+                "x": 30,
+                "y": 0,
+                "rotation": 0
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 30,
+                "y": -10,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "DC_IN_5V",
+                "x": 30,
+                "y": 10,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "designator": "C1",
+            "value": "1uF",
+            "x": 100,
+            "y": -35,
+            "rotation": 180,
+            "mirror": false,
+            "bbox": {
+              "minX": 91.5,
+              "minY": -45.5,
+              "maxX": 108.5,
+              "maxY": -24.5
+            },
+            "textBboxes": [
+              {
+                "minX": 76.0517578125,
+                "minY": -43,
+                "maxX": 85,
+                "maxY": -35
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "DC_IN_5V",
+                "x": 100,
+                "y": -15,
+                "rotation": 90
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 100,
+                "y": -55,
+                "rotation": 270
+              }
+            ]
+          },
+          {
+            "designator": "R1",
+            "value": "4.7kΩ",
+            "x": 180,
+            "y": -35,
+            "rotation": 270,
+            "mirror": false,
+            "bbox": {
+              "minX": 175.5,
+              "minY": -45.5,
+              "maxX": 184.5,
+              "maxY": -24.5
+            },
+            "textBboxes": [
+              {
+                "minX": 185,
+                "minY": -33.9482421875,
+                "maxX": 193,
+                "maxY": -25
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 180,
+                "y": -55,
+                "rotation": 270
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "DC_IN_5V",
+                "x": 180,
+                "y": -15,
+                "rotation": 90
+              }
+            ]
+          },
+          {
+            "designator": "U1",
+            "value": "LM66100DCKR",
+            "x": 300,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 269.5,
+              "minY": -20.5,
+              "maxX": 330.5,
+              "maxY": 20.5
+            },
+            "textBboxes": [
+              {
+                "minX": 270,
+                "minY": 20,
+                "maxX": 278.9482421875,
+                "maxY": 28
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "VIN",
+                "net": "DC_IN_5V",
+                "x": 260,
+                "y": 10,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "GND",
+                "net": "COMMON_GND",
+                "x": 260,
+                "y": 0,
+                "rotation": 180
+              },
+              {
+                "number": "3",
+                "name": "CE#",
+                "net": "LDO_VIN",
+                "x": 260,
+                "y": -10,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "NC",
+                "net": "COMMON_GND",
+                "x": 340,
+                "y": -10,
+                "rotation": 0
+              },
+              {
+                "number": "5",
+                "name": "ST",
+                "net": "COMMON_GND",
+                "x": 340,
+                "y": 0,
+                "rotation": 0
+              },
+              {
+                "number": "6",
+                "name": "VOUT",
+                "net": "LDO_VIN",
+                "x": 340,
+                "y": 10,
+                "rotation": 0
+              }
+            ]
+          }
+        ],
+        "wires": [
+          {
+            "net": "DC_IN_5V",
+            "points": [
+              [
+                30,
+                10
+              ],
+              [
+                260,
+                10
+              ]
+            ]
+          },
+          {
+            "net": "DC_IN_5V",
+            "points": [
+              [
+                100,
+                -15
+              ],
+              [
+                100,
+                10
+              ]
+            ]
+          },
+          {
+            "net": "DC_IN_5V",
+            "points": [
+              [
+                180,
+                -15
+              ],
+              [
+                180,
+                10
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                30,
+                -10
+              ],
+              [
+                50,
+                -10
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                50,
+                -10
+              ],
+              [
+                50,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                50,
+                -90
+              ],
+              [
+                360,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                100,
+                -55
+              ],
+              [
+                100,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                180,
+                -55
+              ],
+              [
+                180,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                260,
+                0
+              ],
+              [
+                250,
+                0
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                250,
+                0
+              ],
+              [
+                250,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                340,
+                0
+              ],
+              [
+                360,
+                0
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                360,
+                0
+              ],
+              [
+                360,
+                -90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                340,
+                -10
+              ],
+              [
+                360,
+                -10
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                340,
+                10
+              ],
+              [
+                400,
+                10
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                260,
+                -10
+              ],
+              [
+                240,
+                -10
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                240,
+                -10
+              ],
+              [
+                240,
+                -130
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                240,
+                -130
+              ],
+              [
+                400,
+                -130
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                400,
+                -130
+              ],
+              [
+                400,
+                10
+              ]
+            ]
+          }
+        ],
+        "flags": [
+          {
+            "net": "DC_IN_5V",
+            "pinX": 100,
+            "pinY": 10,
+            "direction": "up",
+            "kind": "power",
+            "offset": 30
+          },
+          {
+            "net": "COMMON_GND",
+            "pinX": 180,
+            "pinY": -90,
+            "direction": "down",
+            "kind": "ground",
+            "offset": 30
+          },
+          {
+            "net": "LDO_VIN",
+            "pinX": 400,
+            "pinY": 10,
+            "direction": "right",
+            "kind": "net_port_bi",
+            "offset": 30
+          }
+        ],
+        "componentIds": {
+          "J1": "cmp-J1",
+          "C1": "cmp-C1",
+          "R1": "cmp-R1",
+          "U1": "cmp-U1"
+        },
+        "pinStates": {
+          "cmp-J1": {
+            "3": "nc"
+          },
+          "cmp-C1": {},
+          "cmp-R1": {},
+          "cmp-U1": {}
+        }
+      }
+    },
+    {
+      "id": "typec",
+      "title": "Type-C 5V 输入、CC 及反向隔离",
+      "layout": {
+        "schemaVersion": 1,
+        "placements": [
+          {
+            "designator": "J2",
+            "value": "TYPE-C-31-M-12",
+            "x": 280,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 254.5,
+              "minY": -65.5,
+              "maxX": 305.5,
+              "maxY": 65.5
+            },
+            "textBboxes": [
+              {
+                "minX": 255,
+                "minY": 65,
+                "maxX": 262.39306640625,
+                "maxY": 73
+              }
+            ],
+            "pins": [
+              {
+                "number": "A1B12",
+                "name": "GND",
+                "net": "COMMON_GND",
+                "x": 245,
+                "y": 55,
+                "rotation": 180
+              },
+              {
+                "number": "A4B9",
+                "name": "VBUS",
+                "net": "TYPEC_IN_5V",
+                "x": 245,
+                "y": 45,
+                "rotation": 180
+              },
+              {
+                "number": "B8",
+                "name": "SBU2",
+                "net": "",
+                "x": 245,
+                "y": 35,
+                "rotation": 180
+              },
+              {
+                "number": "A5",
+                "name": "CC1",
+                "net": "TYPEC_CC1",
+                "x": 245,
+                "y": 25,
+                "rotation": 180
+              },
+              {
+                "number": "B7",
+                "name": "DN2",
+                "net": "",
+                "x": 245,
+                "y": 15,
+                "rotation": 180
+              },
+              {
+                "number": "A6",
+                "name": "DP1",
+                "net": "",
+                "x": 245,
+                "y": 5,
+                "rotation": 180
+              },
+              {
+                "number": "A7",
+                "name": "DN1",
+                "net": "",
+                "x": 245,
+                "y": -5,
+                "rotation": 180
+              },
+              {
+                "number": "B6",
+                "name": "DP2",
+                "net": "",
+                "x": 245,
+                "y": -15,
+                "rotation": 180
+              },
+              {
+                "number": "A8",
+                "name": "SBU1",
+                "net": "",
+                "x": 245,
+                "y": -25,
+                "rotation": 180
+              },
+              {
+                "number": "B5",
+                "name": "CC2",
+                "net": "TYPEC_CC2",
+                "x": 245,
+                "y": -35,
+                "rotation": 180
+              },
+              {
+                "number": "B4A9",
+                "name": "VBUS",
+                "net": "TYPEC_IN_5V",
+                "x": 245,
+                "y": -45,
+                "rotation": 180
+              },
+              {
+                "number": "B1A12",
+                "name": "GND",
+                "net": "COMMON_GND",
+                "x": 245,
+                "y": -55,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "EH",
+                "net": "COMMON_GND",
+                "x": 315,
+                "y": -25,
+                "rotation": 0
+              },
+              {
+                "number": "3",
+                "name": "EH",
+                "net": "COMMON_GND",
+                "x": 315,
+                "y": -35,
+                "rotation": 0
+              },
+              {
+                "number": "2",
+                "name": "EH",
+                "net": "COMMON_GND",
+                "x": 315,
+                "y": -45,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "EH",
+                "net": "COMMON_GND",
+                "x": 315,
+                "y": -55,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "designator": "R3",
+            "value": "5.1kΩ",
+            "x": 100,
+            "y": 25,
+            "rotation": 180,
+            "mirror": false,
+            "bbox": {
+              "minX": 89.5,
+              "minY": 20.5,
+              "maxX": 110.5,
+              "maxY": 29.5
+            },
+            "textBboxes": [
+              {
+                "minX": 101.0517578125,
+                "minY": 12,
+                "maxX": 110,
+                "maxY": 20
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 80,
+                "y": 25,
+                "rotation": 180
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "TYPEC_CC1",
+                "x": 120,
+                "y": 25,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "designator": "R4",
+            "value": "5.1kΩ",
+            "x": 100,
+            "y": -35,
+            "rotation": 180,
+            "mirror": false,
+            "bbox": {
+              "minX": 89.5,
+              "minY": -39.5,
+              "maxX": 110.5,
+              "maxY": -30.5
+            },
+            "textBboxes": [
+              {
+                "minX": 101.0517578125,
+                "minY": -48,
+                "maxX": 110,
+                "maxY": -40
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 80,
+                "y": -35,
+                "rotation": 180
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "TYPEC_CC2",
+                "x": 120,
+                "y": -35,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "designator": "C2",
+            "value": "1uF",
+            "x": 440,
+            "y": 40,
+            "rotation": 180,
+            "mirror": false,
+            "bbox": {
+              "minX": 431.5,
+              "minY": 29.5,
+              "maxX": 448.5,
+              "maxY": 50.5
+            },
+            "textBboxes": [
+              {
+                "minX": 416.0517578125,
+                "minY": 32,
+                "maxX": 425,
+                "maxY": 40
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "TYPEC_IN_5V",
+                "x": 440,
+                "y": 60,
+                "rotation": 90
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 440,
+                "y": 20,
+                "rotation": 270
+              }
+            ]
+          },
+          {
+            "designator": "R2",
+            "value": "4.7kΩ",
+            "x": 520,
+            "y": 40,
+            "rotation": 270,
+            "mirror": false,
+            "bbox": {
+              "minX": 515.5,
+              "minY": 29.5,
+              "maxX": 524.5,
+              "maxY": 50.5
+            },
+            "textBboxes": [
+              {
+                "minX": 525,
+                "minY": 41.0517578125,
+                "maxX": 533,
+                "maxY": 50
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 520,
+                "y": 20,
+                "rotation": 270
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "TYPEC_IN_5V",
+                "x": 520,
+                "y": 60,
+                "rotation": 90
+              }
+            ]
+          },
+          {
+            "designator": "U2",
+            "value": "LM66100DCKR",
+            "x": 650,
+            "y": 80,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 619.5,
+              "minY": 59.5,
+              "maxX": 680.5,
+              "maxY": 100.5
+            },
+            "textBboxes": [
+              {
+                "minX": 620,
+                "minY": 100,
+                "maxX": 628.9482421875,
+                "maxY": 108
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "VIN",
+                "net": "TYPEC_IN_5V",
+                "x": 610,
+                "y": 90,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "GND",
+                "net": "COMMON_GND",
+                "x": 610,
+                "y": 80,
+                "rotation": 180
+              },
+              {
+                "number": "3",
+                "name": "CE#",
+                "net": "LDO_VIN",
+                "x": 610,
+                "y": 70,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "NC",
+                "net": "COMMON_GND",
+                "x": 690,
+                "y": 70,
+                "rotation": 0
+              },
+              {
+                "number": "5",
+                "name": "ST",
+                "net": "COMMON_GND",
+                "x": 690,
+                "y": 80,
+                "rotation": 0
+              },
+              {
+                "number": "6",
+                "name": "VOUT",
+                "net": "LDO_VIN",
+                "x": 690,
+                "y": 90,
+                "rotation": 0
+              }
+            ]
+          }
+        ],
+        "wires": [
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                245,
+                45
+              ],
+              [
+                220,
+                45
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                220,
+                45
+              ],
+              [
+                220,
+                90
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                220,
+                90
+              ],
+              [
+                610,
+                90
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                245,
+                -45
+              ],
+              [
+                220,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                220,
+                -45
+              ],
+              [
+                220,
+                45
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_CC1",
+            "points": [
+              [
+                245,
+                25
+              ],
+              [
+                120,
+                25
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_CC2",
+            "points": [
+              [
+                245,
+                -35
+              ],
+              [
+                120,
+                -35
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                80,
+                25
+              ],
+              [
+                50,
+                25
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                50,
+                25
+              ],
+              [
+                50,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                50,
+                -100
+              ],
+              [
+                710,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                80,
+                -35
+              ],
+              [
+                50,
+                -35
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                245,
+                55
+              ],
+              [
+                200,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                200,
+                55
+              ],
+              [
+                200,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                245,
+                -55
+              ],
+              [
+                200,
+                -55
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                315,
+                -25
+              ],
+              [
+                350,
+                -25
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                315,
+                -35
+              ],
+              [
+                350,
+                -35
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                315,
+                -45
+              ],
+              [
+                350,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                315,
+                -55
+              ],
+              [
+                350,
+                -55
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                350,
+                -25
+              ],
+              [
+                350,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                440,
+                60
+              ],
+              [
+                440,
+                90
+              ]
+            ]
+          },
+          {
+            "net": "TYPEC_IN_5V",
+            "points": [
+              [
+                520,
+                60
+              ],
+              [
+                520,
+                90
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                440,
+                20
+              ],
+              [
+                440,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                520,
+                20
+              ],
+              [
+                520,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                610,
+                80
+              ],
+              [
+                600,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                600,
+                80
+              ],
+              [
+                600,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                690,
+                80
+              ],
+              [
+                710,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                710,
+                80
+              ],
+              [
+                710,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                690,
+                70
+              ],
+              [
+                710,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                690,
+                90
+              ],
+              [
+                750,
+                90
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                610,
+                70
+              ],
+              [
+                590,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                590,
+                70
+              ],
+              [
+                590,
+                -140
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                590,
+                -140
+              ],
+              [
+                750,
+                -140
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                750,
+                -140
+              ],
+              [
+                750,
+                90
+              ]
+            ]
+          }
+        ],
+        "flags": [
+          {
+            "net": "TYPEC_IN_5V",
+            "pinX": 440,
+            "pinY": 90,
+            "direction": "up",
+            "kind": "power",
+            "offset": 30
+          },
+          {
+            "net": "COMMON_GND",
+            "pinX": 440,
+            "pinY": -100,
+            "direction": "down",
+            "kind": "ground",
+            "offset": 30
+          },
+          {
+            "net": "LDO_VIN",
+            "pinX": 750,
+            "pinY": 90,
+            "direction": "right",
+            "kind": "net_port_bi",
+            "offset": 30
+          },
+          {
+            "net": "TYPEC_CC1",
+            "pinX": 160,
+            "pinY": 25,
+            "direction": "up",
+            "kind": "net_port_bi",
+            "offset": 70
+          },
+          {
+            "net": "TYPEC_CC2",
+            "pinX": 160,
+            "pinY": -35,
+            "direction": "down",
+            "kind": "net_port_bi",
+            "offset": 100
+          }
+        ],
+        "componentIds": {
+          "J2": "cmp-J2",
+          "R3": "cmp-R3",
+          "R4": "cmp-R4",
+          "C2": "cmp-C2",
+          "R2": "cmp-R2",
+          "U2": "cmp-U2"
+        },
+        "pinStates": {
+          "cmp-J2": {
+            "A6": "nc",
+            "A7": "nc",
+            "A8": "nc",
+            "B6": "nc",
+            "B7": "nc",
+            "B8": "nc"
+          },
+          "cmp-R3": {},
+          "cmp-R4": {},
+          "cmp-C2": {},
+          "cmp-R2": {},
+          "cmp-U2": {}
+        }
+      }
+    },
+    {
+      "id": "ldo",
+      "title": "3.3V 线性稳压与去耦",
+      "layout": {
+        "schemaVersion": 1,
+        "placements": [
+          {
+            "designator": "U3",
+            "value": "LDL1117S33R",
+            "x": 300,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 264.5,
+              "minY": -20.5,
+              "maxX": 330.5,
+              "maxY": 20.5
+            },
+            "textBboxes": [
+              {
+                "minX": 265,
+                "minY": 20,
+                "maxX": 273.9482421875,
+                "maxY": 28
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "GND",
+                "net": "COMMON_GND",
+                "x": 255,
+                "y": 10,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "VOUT",
+                "net": "TOOL_3V3",
+                "x": 255,
+                "y": 0,
+                "rotation": 180
+              },
+              {
+                "number": "3",
+                "name": "VIN",
+                "net": "LDO_VIN",
+                "x": 255,
+                "y": -10,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "VOUT",
+                "net": "TOOL_3V3",
+                "x": 340,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "designator": "C3",
+            "value": "4.7uF",
+            "x": 120,
+            "y": -50,
+            "rotation": 270,
+            "mirror": false,
+            "bbox": {
+              "minX": 111.5,
+              "minY": -60.5,
+              "maxX": 128.5,
+              "maxY": -39.5
+            },
+            "textBboxes": [
+              {
+                "minX": 130,
+                "minY": -48.9482421875,
+                "maxX": 138,
+                "maxY": -40
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "LDO_VIN",
+                "x": 120,
+                "y": -30,
+                "rotation": 90
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 120,
+                "y": -70,
+                "rotation": 270
+              }
+            ]
+          },
+          {
+            "designator": "C4",
+            "value": "4.7uF",
+            "x": 400,
+            "y": -50,
+            "rotation": 270,
+            "mirror": false,
+            "bbox": {
+              "minX": 391.5,
+              "minY": -60.5,
+              "maxX": 408.5,
+              "maxY": -39.5
+            },
+            "textBboxes": [
+              {
+                "minX": 410,
+                "minY": -48.9482421875,
+                "maxX": 418,
+                "maxY": -40
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "TOOL_3V3",
+                "x": 400,
+                "y": -30,
+                "rotation": 90
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "COMMON_GND",
+                "x": 400,
+                "y": -70,
+                "rotation": 270
+              }
+            ]
+          }
+        ],
+        "wires": [
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                80,
+                -10
+              ],
+              [
+                255,
+                -10
+              ]
+            ]
+          },
+          {
+            "net": "LDO_VIN",
+            "points": [
+              [
+                120,
+                -30
+              ],
+              [
+                120,
+                -10
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                120,
+                -70
+              ],
+              [
+                120,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                120,
+                -100
+              ],
+              [
+                400,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                400,
+                -100
+              ],
+              [
+                400,
+                -70
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                255,
+                10
+              ],
+              [
+                230,
+                10
+              ]
+            ]
+          },
+          {
+            "net": "COMMON_GND",
+            "points": [
+              [
+                230,
+                10
+              ],
+              [
+                230,
+                -100
+              ]
+            ]
+          },
+          {
+            "net": "TOOL_3V3",
+            "points": [
+              [
+                340,
+                0
+              ],
+              [
+                440,
+                0
+              ]
+            ]
+          },
+          {
+            "net": "TOOL_3V3",
+            "points": [
+              [
+                400,
+                -30
+              ],
+              [
+                400,
+                0
+              ]
+            ]
+          },
+          {
+            "net": "TOOL_3V3",
+            "points": [
+              [
+                255,
+                0
+              ],
+              [
+                245,
+                0
+              ]
+            ]
+          },
+          {
+            "net": "TOOL_3V3",
+            "points": [
+              [
+                245,
+                0
+              ],
+              [
+                245,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "TOOL_3V3",
+            "points": [
+              [
+                245,
+                60
+              ],
+              [
+                180,
+                60
+              ]
+            ]
+          }
+        ],
+        "flags": [
+          {
+            "net": "LDO_VIN",
+            "pinX": 80,
+            "pinY": -10,
+            "direction": "left",
+            "kind": "net_port_bi",
+            "offset": 30
+          },
+          {
+            "net": "COMMON_GND",
+            "pinX": 230,
+            "pinY": -100,
+            "direction": "down",
+            "kind": "ground",
+            "offset": 30
+          },
+          {
+            "net": "TOOL_3V3",
+            "pinX": 440,
+            "pinY": 0,
+            "direction": "right",
+            "kind": "net_port_bi",
+            "offset": 30
+          },
+          {
+            "net": "TOOL_3V3",
+            "pinX": 180,
+            "pinY": 60,
+            "direction": "left",
+            "kind": "net_port_bi",
+            "offset": 30
+          }
+        ],
+        "componentIds": {
+          "U3": "cmp-U3",
+          "C3": "cmp-C3",
+          "C4": "cmp-C4"
+        },
+        "pinStates": {
+          "cmp-U3": {},
+          "cmp-C3": {},
+          "cmp-C4": {}
+        }
+      }
+    }
+  ]
+}

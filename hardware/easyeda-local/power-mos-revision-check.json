@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-02",
+  "parts": [
+    {
+      "Designator": "Q6",
+      "Manufacturer Part": "AO3400A",
+      "Supplier Part": "C20917",
+      "Unique ID": "AI_MCUTOOL_Q6",
+      "FootprintName": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+    },
+    {
+      "Designator": "Q7",
+      "Manufacturer Part": "AO3400A",
+      "Supplier Part": "C20917",
+      "Unique ID": "AI_MCUTOOL_Q7",
+      "FootprintName": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+    },
+    {
+      "Designator": "Q8",
+      "Manufacturer Part": "IRF7455TR(UMW)",
+      "Supplier Part": "C5338296",
+      "Unique ID": "AI_MCUTOOL_Q8",
+      "FootprintName": "SO-8_L4.9-W3.9-P1.27-LS5.9-BL"
+    },
+    {
+      "Designator": "Q9",
+      "Manufacturer Part": "IRF7455TR(UMW)",
+      "Supplier Part": "C5338296",
+      "Unique ID": "AI_MCUTOOL_Q9",
+      "FootprintName": "SO-8_L4.9-W3.9-P1.27-LS5.9-BL"
+    },
+    {
+      "Designator": "Q10",
+      "Manufacturer Part": "IRF7455TR(UMW)",
+      "Supplier Part": "C5338296",
+      "Unique ID": "AI_MCUTOOL_Q10",
+      "FootprintName": "SO-8_L4.9-W3.9-P1.27-LS5.9-BL"
+    },
+    {
+      "Designator": "Q11",
+      "Manufacturer Part": "IRF7455TR(UMW)",
+      "Supplier Part": "C5338296",
+      "Unique ID": "AI_MCUTOOL_Q11",
+      "FootprintName": "SO-8_L4.9-W3.9-P1.27-LS5.9-BL"
+    }
+  ],
+  "functionalConnectionsUnchanged": true,
+  "preservedNamedNets": true,
+  "instanceIdsPreserved": true,
+  "removedRedundantDrainPins": [
+    "Q10:9",
+    "Q11:9",
+    "Q8:9",
+    "Q9:9"
+  ],
+  "componentCount": 164,
+  "pinCount": 496,
+  "drc": [],
+  "freshSessionVerified": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "VOM1271Retained": true,
+  "currentDesignLimitA": 3,
+  "hardwareValidationPending": [
+    "最大VGS低于±12V限制",
+    "VOM带载开关时间与先断后通间隔",
+    "容性负载启动SOA与关断瞬态",
+    "3A温升与压降"
+  ]
+}

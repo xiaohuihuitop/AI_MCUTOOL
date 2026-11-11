@@ -1,0 +1,20 @@
+{
+  "version": "v1.14.0",
+  "arguments": [
+    "sch",
+    "compose",
+    "--from",
+    "hardware\\easyeda-pro\\planning\\01-power-authored-v3.json",
+    "--before",
+    "hardware\\easyeda-pro\\verification\\binding\\01-list.json",
+    "--replace",
+    "--preserve-instances",
+    "--out",
+    "hardware\\easyeda-pro\\planning\\01-power-plan-v3.json",
+    "--playbook",
+    "hardware\\easyeda-pro\\planning\\01-power-apply-v3.json"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "preserve-instances: before snapshot pagePrimitives has incomplete class inventory\n"
+}

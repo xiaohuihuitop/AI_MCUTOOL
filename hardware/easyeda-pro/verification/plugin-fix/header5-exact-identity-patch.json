@@ -1,0 +1,10 @@
+{
+  "manufacturer": "MINTRON(明硕)",
+  "manufacturerId": "MTP125-1105S1",
+  "supplier": "LCSC",
+  "supplierId": "C358687",
+  "name": "={Manufacturer Part}",
+  "otherProperty": {
+    "Supplier Footprint": "插件,P=2.54mm"
+  }
+}

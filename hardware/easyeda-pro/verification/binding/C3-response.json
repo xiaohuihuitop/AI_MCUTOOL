@@ -1,0 +1,105 @@
+{
+  "id": "req_271",
+  "type": "response",
+  "version": "v1",
+  "windowId": "7d86c9d0-1b16-48d2-9679-c209ba186dc8",
+  "createdAt": "2026-10-24T10:50:26.8858124Z",
+  "ok": true,
+  "result": {
+    "component": {
+      "addIntoBom": true,
+      "addIntoPcb": true,
+      "component": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "GRM21BR71C475KA73L",
+        "uuid": "bd08ae73af125881"
+      },
+      "componentType": "part",
+      "designator": "C3",
+      "device": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "={Value}",
+        "uuid": "bd08ae73af125881"
+      },
+      "footprint": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "C0805",
+        "uuid": "3b69bb3ca3716758"
+      },
+      "manufacturer": "muRata(村田)",
+      "manufacturerId": "GRM21BR71C475KA73L",
+      "mirror": false,
+      "name": "={Value}",
+      "net": "",
+      "otherProperty": {
+        "AI Design Note": "16V/X7R；有效容量≥1uF",
+        "AI Library Binding": "GRM21BR71C475KA73L",
+        "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200305/C490387_23319AE8C154DEB24C505E6C82A8106A.pdf",
+        "Description": "容值:4.7uF;精度:±10%;额定电压:16V;材质(温度系数):X7R;",
+        "EasyEDA Agent Component ID": "cmp-C3",
+        "JLCPCB Part Class": "Extended Part",
+        "LCSC Part Name": "4.7uF ±10% 16V",
+        "PCB Layer": "Default",
+        "Supplier Footprint": "0805",
+        "Temperature Coefficient": "X7R",
+        "Tolerance": "±10%",
+        "Value": "4.7uF",
+        "Voltage Rated": "16V"
+      },
+      "primitiveId": "891cbd3440f969cb",
+      "rotation": 0,
+      "subPartName": "GRM21BR71C475KA73L.1",
+      "supplier": "LCSC",
+      "supplierId": "C86040",
+      "symbol": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "GRM21BR71C475KA73L",
+        "uuid": "77a4eef256613034"
+      },
+      "uniqueId": "AI_MCUTOOL_C3",
+      "x": 610,
+      "y": 200
+    },
+    "geometryGuard": {
+      "baselineFindings": null,
+      "passed": true,
+      "phase": "readback",
+      "preexistingFindings": 0,
+      "readbackAttempts": 1,
+      "scope": "pin-exit-direction/wire-through-body"
+    },
+    "propertiesBefore": {
+      "AI Design Note": "16V/X7R；有效容量≥1uF",
+      "AI Library Binding": "GRM21BR71C475KA73L",
+      "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200305/C490387_23319AE8C154DEB24C505E6C82A8106A.pdf",
+      "Description": "容值:4.7uF;精度:±10%;额定电压:16V;材质(温度系数):X7R;",
+      "JLCPCB Part Class": "Extended Part",
+      "LCSC Part Name": "4.7uF ±10% 16V",
+      "PCB Layer": "Default",
+      "Supplier Footprint": "0805",
+      "Temperature Coefficient": "X7R",
+      "Tolerance": "±10%",
+      "Value": "4.7uF",
+      "Voltage Rated": "16V"
+    }
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 214,
+  "seqAbandoned": 0
+}

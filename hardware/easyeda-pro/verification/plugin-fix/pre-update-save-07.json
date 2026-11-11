@@ -1,0 +1,30 @@
+{
+  "id": "req_334",
+  "type": "response",
+  "version": "v1",
+  "windowId": "7d86c9d0-1b16-48d2-9679-c209ba186dc8",
+  "createdAt": "2026-10-24T13:16:43.0870006Z",
+  "ok": true,
+  "result": {
+    "saved": true
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1a6c8a76b3b64b3b",
+    "documentType": "schematic",
+    "tabId": "1a6c8a76b3b64b3b@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1a6c8a76b3b64b3b",
+    "documentType": "schematic",
+    "tabId": "1a6c8a76b3b64b3b@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContextAvailable": true,
+  "seq": 255,
+  "seqAbandoned": 0
+}

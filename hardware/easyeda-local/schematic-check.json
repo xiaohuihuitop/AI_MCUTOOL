@@ -1,0 +1,7 @@
+{
+  "componentCount": 164,
+  "pinCount": 508,
+  "netDiff": [],
+  "drc": [],
+  "verification": "完整引脚网络与迁移后基准相同；恢复J18正式模型绑定；拆分不相连的同名物理线组。"
+}

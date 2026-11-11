@@ -1,0 +1,4 @@
+
+✗ step [1/107] verify-project-unique-designators failed: expectSchematic: duplicate part designator U14; cannot attribute pins unambiguously
+  expectSchematic is a mandatory gate — stopping; journal: hardware/easyeda-pro/verification/plugin-fix/01-compact-apply.journal.jsonl
+playbook stopped at step verify-project-unique-designators: expectSchematic: duplicate part designator U14; cannot attribute pins unambiguously

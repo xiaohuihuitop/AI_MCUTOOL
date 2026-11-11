@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "nativeLoader": "D:/Application/kicad/install/bin/python.exe + pcbnew",
+  "nativeLoads": [
+    {
+      "footprint": "N_FET",
+      "nativePadCount": 9,
+      "sha256": "531711a1efccf661768c22acc89338a05b02cba1574a9401a2d13bec55d720c0"
+    },
+    {
+      "footprint": "P_FET",
+      "nativePadCount": 9,
+      "sha256": "7bf219c359a81878797e2f95bfce7e7693a2ca6f34e8be112af5cc0497dfcc79"
+    },
+    {
+      "footprint": "PHOTO_PV",
+      "nativePadCount": 4,
+      "sha256": "6608f5e406170a49087efe6e074a0508e57dc15494a922b6ad07be066a79398c"
+    },
+    {
+      "footprint": "PHOTO_MOS",
+      "nativePadCount": 4,
+      "sha256": "9226b1127a7d174755c7e41064ac26fc426bec3a6a0fa60474139bca86286f61"
+    },
+    {
+      "footprint": "SHUNT4",
+      "nativePadCount": 4,
+      "sha256": "cd1f6601384734b4c20cbcd860238e92e713a775783446ef54e9aef37aad1199"
+    },
+    {
+      "footprint": "SW4",
+      "nativePadCount": 4,
+      "sha256": "8e44a7f2a186c56e91f8fb972359c36cbfea1a5119e2bbdae24227bfe8e8f8c3"
+    }
+  ],
+  "repeatGenerationIdentical": true,
+  "schematicsUnchanged": true,
+  "oldGeometryRejected": true
+}

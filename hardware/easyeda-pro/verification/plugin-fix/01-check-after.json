@@ -1,0 +1,176 @@
+{
+  "id": "req_331",
+  "ok": true,
+  "result": {
+    "passed": false,
+    "summary": {
+      "floatingPins": 0,
+      "componentsWithFloating": 0,
+      "geomNetMismatches": 0,
+      "netMarkerMismatches": 0,
+      "multiNetWires": 0,
+      "wireCrossings": 12,
+      "wireOverPins": 0,
+      "zeroLengthWires": 0,
+      "danglingWires": 0,
+      "duplicateNetMarkers": 0,
+      "titleblockOverlaps": 0,
+      "outOfSheet": 1,
+      "markerOverlaps": 0,
+      "missingPartitions": 1,
+      "redundantNetMarkers": 0,
+      "foldedNetLabels": 0,
+      "reversedNetFlags": 0,
+      "polarityConventionOutliers": 0,
+      "total": 15
+    },
+    "findings": [
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 300,
+          "y": 1465
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 310,
+          "y": 1545
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 790,
+          "y": 1475
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 790,
+          "y": 1445
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 790,
+          "y": 1385
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 770,
+          "y": 1445
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 730,
+          "y": 1320
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 770,
+          "y": 1385
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 1160,
+          "y": 1320
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 1170,
+          "y": 1490
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 1750,
+          "y": 1540
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 1765,
+          "y": 1560
+        }
+      },
+      {
+        "type": "out-of-sheet",
+        "level": "warn",
+        "primitiveId": "a74e15dc07a2e25b",
+        "message": "sheet 的可见属性 Version 超出纸张（1881..1993 × -30..-16）— 打印不出来；移回图内，或不需要显示时关闭该属性的显示",
+        "bbox": {
+          "minX": 1881.1847229003906,
+          "minY": -30.5,
+          "maxX": 1992.8152770996094,
+          "maxY": -15.5
+        }
+      },
+      {
+        "type": "peripheral-not-direct",
+        "level": "warn",
+        "designator": "U3",
+        "message": "模块 ldo(核心 U3,外围 C3,C4)没有全部用实际导线接到核心: peripheral-direct-missing: module ldo dedicated signal TOOL_3V3 pins [U3.2 U3.4 C4.1] are split into physical wire islands (at U3.4); supply/ground connectivity and same-name labels cannot replace this branch — 同名标签不算直连;按 auto-layout-sop §2 走 `sch lib-layout` → `sch compose --preserve-instances` 重建"
+      },
+      {
+        "type": "missing-titleblock",
+        "level": "warn",
+        "count": 3,
+        "message": "图签未填:Name(图纸标题)、Drawed(设计者)、Description(图纸说明) — 交付图必须能认领(`sch titleblock --data '{\"Name\":\"…\",\"Drawed\":\"…\"}'`)"
+      }
+    ]
+  },
+  "type": "response",
+  "version": "v1"
+}

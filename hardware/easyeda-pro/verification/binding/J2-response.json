@@ -1,0 +1,119 @@
+{
+  "id": "req_255",
+  "type": "response",
+  "version": "v1",
+  "windowId": "7d86c9d0-1b16-48d2-9679-c209ba186dc8",
+  "createdAt": "2026-10-24T10:50:23.7017057Z",
+  "ok": true,
+  "result": {
+    "component": {
+      "addIntoBom": true,
+      "addIntoPcb": true,
+      "component": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "TYPE-C-31-M-12",
+        "uuid": "fbdcd28de4e64799"
+      },
+      "componentType": "part",
+      "designator": "J2",
+      "device": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "={Manufacturer Part}",
+        "uuid": "fbdcd28de4e64799"
+      },
+      "footprint": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "USB-C_SMD-TYPE-C-31-M-12_1",
+        "uuid": "0f894bf616c91273"
+      },
+      "manufacturer": "韩国韩荣",
+      "manufacturerId": "TYPE-C-31-M-12",
+      "mirror": false,
+      "name": "={Manufacturer Part}",
+      "net": "",
+      "otherProperty": {
+        "AI Design Note": "仅逻辑接口；具体VBUS/GND重复焊盘及外壳焊盘须按所选连接器展开",
+        "AI Library Binding": "TYPE-C-31-M-12",
+        "Connect-Disconnect Life": "1万次",
+        "Connector Type": "Type-C",
+        "Current Rating-Power": "5A",
+        "Datasheet": "https://item.szlcsc.com/datasheet/TYPE-C-31-M-12/177331.html",
+        "Description": "连接器类型:Type-C;协议标准:-;公母:母;安装方式:卧贴;触点数量:16P;端口数量:1;额定电流 - 电源:5A;工作温度:-30℃~+80℃;",
+        "EasyEDA Agent Component ID": "cmp-J2",
+        "Gender": "母",
+        "JLCPCB Part Class": "Extended Part",
+        "LCSC Part Name": "Type-C 母 卧贴",
+        "Length": "7.35mm",
+        "Mounting Type": "卧贴",
+        "Number of Contacts": "16P",
+        "Number of Ports": "1",
+        "Operating Temperature": "-30℃~+80℃",
+        "PCB Layer": "Default",
+        "Protocol Standard": "-",
+        "Supplier Footprint": "SMD",
+        "Voltage Rating": "20V"
+      },
+      "primitiveId": "6cab76d33cd14f35",
+      "rotation": 0,
+      "subPartName": "TYPE-C-31-M-12.1",
+      "supplier": "LCSC",
+      "supplierId": "C165948",
+      "symbol": {
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "name": "TYPE-C-31-M-12",
+        "uuid": "f3f3c1d20d0ac464"
+      },
+      "uniqueId": "AI_MCUTOOL_J2",
+      "x": 960,
+      "y": 720
+    },
+    "geometryGuard": {
+      "baselineFindings": null,
+      "passed": true,
+      "phase": "readback",
+      "preexistingFindings": 0,
+      "readbackAttempts": 1,
+      "scope": "pin-exit-direction/wire-through-body"
+    },
+    "propertiesBefore": {
+      "AI Design Note": "仅逻辑接口；具体VBUS/GND重复焊盘及外壳焊盘须按所选连接器展开",
+      "AI Library Binding": "TYPE-C-31-M-12",
+      "Connect-Disconnect Life": "1万次",
+      "Connector Type": "Type-C",
+      "Current Rating-Power": "5A",
+      "Datasheet": "https://item.szlcsc.com/datasheet/TYPE-C-31-M-12/177331.html",
+      "Description": "连接器类型:Type-C;协议标准:-;公母:母;安装方式:卧贴;触点数量:16P;端口数量:1;额定电流 - 电源:5A;工作温度:-30℃~+80℃;",
+      "Gender": "母",
+      "JLCPCB Part Class": "Extended Part",
+      "LCSC Part Name": "Type-C 母 卧贴",
+      "Length": "7.35mm",
+      "Mounting Type": "卧贴",
+      "Number of Contacts": "16P",
+      "Number of Ports": "1",
+      "Operating Temperature": "-30℃~+80℃",
+      "PCB Layer": "Default",
+      "Protocol Standard": "-",
+      "Supplier Footprint": "SMD",
+      "Voltage Rating": "20V"
+    }
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 190,
+  "seqAbandoned": 0
+}

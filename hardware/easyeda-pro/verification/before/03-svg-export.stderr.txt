@@ -1,0 +1,2 @@
+📎 artifact saved: D:\workspace\MCU_ESP\AI_MCUTOOL\.easyeda\artifacts\20261024-184301-schematic_export-a363b487.svg
+✓ wrote D:\workspace\MCU_ESP\AI_MCUTOOL\hardware\easyeda-pro\verification\before\03.svg (167053 bytes)

@@ -1,0 +1,599 @@
+{
+  "date": "2026-11-05T17:04:07.848218+08:00",
+  "project": "D:\\LCEDA\\projects\\AI_TOOL\\AI_TOOL.eprj3",
+  "baselineArchive": "hardware/versions/AI_TOOL_20261105-151800_用户重新布局保存.zip",
+  "scope": "仅铜线、过孔和覆铜；全部140颗器件的位置、朝向、锁定状态保持",
+  "components": 140,
+  "lockedComponents": 14,
+  "logicalPins": 415,
+  "pads": 451,
+  "wireHoles": 28,
+  "lines": 918,
+  "vias": 157,
+  "pours": 4,
+  "nativeDrcFinalRounds": [
+    {
+      "round": 5,
+      "count": 0,
+      "savedAndReloaded": false
+    },
+    {
+      "round": 6,
+      "count": 0,
+      "savedAndReloaded": true
+    }
+  ],
+  "allComponentPositionsRotationsAndLocksPreserved": true,
+  "allPadGeometryAndNetworksPreserved": true,
+  "allTextPreservedWithHostCoordinateQuantization": true,
+  "schematicFilesSHA256Preserved": true,
+  "rulesStackupOutlineKeepoutPreserved": true,
+  "criticalAndPowerSegmentsVerified": 460,
+  "verifiedPaths": [
+    {
+      "from": "C3.1",
+      "to": "U3.2",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ],
+      "method": "完整官方POLYGON焊盘几何及实铜连通分量"
+    },
+    {
+      "from": "RSH1.3",
+      "to": "R37.1",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "RSH1.2",
+      "to": "R38.1",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "R37.2",
+      "to": "U12.10",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "R38.2",
+      "to": "U12.9",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "U14.1",
+      "to": "U14.4",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "U18.1",
+      "to": "U18.4",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "U19.1",
+      "to": "U19.4",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "U20.1",
+      "to": "U20.4",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "SW1.1",
+      "to": "U4.3",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "SW2.1",
+      "to": "U4.27",
+      "connected": true,
+      "viaCount": 0,
+      "layers": [
+        1
+      ]
+    },
+    {
+      "from": "SW3.1",
+      "to": "U4.10",
+      "connected": true,
+      "viaCount": 2,
+      "layers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "widePowerPaths": [
+    {
+      "from": "J9.1",
+      "to": "Q8.5",
+      "minimumTrackWidthMillimeters": 2.49,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "J10.1",
+      "to": "Q10.5",
+      "minimumTrackWidthMillimeters": 2.49,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "Q9.5",
+      "to": "RSH1.4",
+      "minimumTrackWidthMillimeters": 1.19,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "Q11.5",
+      "to": "RSH1.4",
+      "minimumTrackWidthMillimeters": 1.19,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "RSH1.1",
+      "to": "J11.1",
+      "minimumTrackWidthMillimeters": 1.19,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "J12.1",
+      "to": "Q12.5",
+      "minimumTrackWidthMillimeters": 1.99,
+      "connected": true,
+      "layer": 1
+    },
+    {
+      "from": "J13.1",
+      "to": "Q13.5",
+      "minimumTrackWidthMillimeters": 1.99,
+      "connected": true,
+      "layer": 1
+    }
+  ],
+  "usbMainCenterlineGroundVoidMillimeters": 0.0,
+  "usbMainEdgeGroundVoidSquareMillimeters": 0.0,
+  "pluginDfmIncomplete": true,
+  "pluginDfmSummary": {
+    "danglingEnds": 25,
+    "acuteAngles": 3,
+    "nonOrthogonal": 134,
+    "trackOverPad": 0,
+    "clearance": 0,
+    "silkscreenFlipped": 0,
+    "overlappingVias": 0,
+    "singleLayerVias": 33,
+    "widthMismatches": 8,
+    "duplicateSegments": 0,
+    "parallelCoupling": 72,
+    "antennaKeepout": 1,
+    "netlessPours": 0,
+    "viaCrossesPlane": 0,
+    "floatingIslands": 0,
+    "powerNotPoured": 0,
+    "netlessViaInPad": 0,
+    "widthUnderSpec": 1,
+    "silkOverPad": 2,
+    "silkOffBoard": 0,
+    "decapTooFar": 0,
+    "viaInPad": 1,
+    "copperNearEdge": 0,
+    "fiducialMissing": 1,
+    "zoneViolation": 0,
+    "internalOnEdge": 0,
+    "connectorPlugClearance": 7,
+    "connectorMatingBlocked": 0,
+    "connectorOpeningInward": 0,
+    "errors": 0,
+    "warnings": 279,
+    "total": 288
+  },
+  "pluginFindingsAudit": {
+    "pluginErrors": 0,
+    "pluginWarnings": 279,
+    "pluginCoverageComplete": false,
+    "u13ViaPadCopperGapMillimeters": 0.3608196999999933,
+    "u13ViaActuallyOverlapsPad": false,
+    "existingAntennaKeepoutPreserved": true,
+    "antennaAllFourLayersCopperIntrusionSquareMillimeters": {
+      "1": 0.0,
+      "15": 0.0,
+      "16": 0.0,
+      "2": 0.0
+    },
+    "groundThinLocalBranch": {
+      "id": "e0211d1bfe046340",
+      "widthMillimeters": 0.24999949999999999,
+      "attachedPins": [
+        "R63.2"
+      ],
+      "commonGroundPlanePresent": true
+    },
+    "danglingEndpointActualCopperAudit": [
+      {
+        "id": "5c6667dbc4513187",
+        "net": "BAT_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "d6e179afec249953e19",
+          "4c8ac5c97454f89d",
+          "9badfc5c87d00225"
+        ]
+      },
+      {
+        "id": "76c3816222c6c5b0",
+        "net": "EXT_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "4b69be312be3fc1de19",
+          "057bdceaf1bcba2d",
+          "f14c1a5dd14505e2"
+        ]
+      },
+      {
+        "id": "004ee91ad1e3eca2",
+        "net": "VSEL_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "ddf28febe0fdc031e19",
+          "31b2231dfae6fed4",
+          "2294b951edca291a"
+        ]
+      },
+      {
+        "id": "6386c92539bb0da3",
+        "net": "VSEL_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "45fb6d7cacec087ce19",
+          "31b2231dfae6fed4"
+        ]
+      },
+      {
+        "id": "62d7b85f6daeb212",
+        "net": "CHG_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "8d8fe5fa89ce9fe0e19",
+          "a33a2957557aee6b",
+          "9a868d59123171c6"
+        ]
+      },
+      {
+        "id": "45d232ef651b78e1",
+        "net": "DUT_CHG_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "0ad7b42265a067eee19",
+          "0accef86d83bf9ca",
+          "cd3c93bdfa2d55e8"
+        ]
+      },
+      {
+        "id": "f50eee004e1731ba",
+        "net": "BAT_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "02a5ad6555a96df9",
+          "7308f0a893682631",
+          "9ac0f13585ede195",
+          "f6357375f86846ee"
+        ]
+      },
+      {
+        "id": "f250951773abc7fa",
+        "net": "EXT_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "2fab02560a1a4ffe",
+          "0b4285ada116bb36",
+          "8f6e48de09eec114",
+          "aa8a6fa3e11fbdf2"
+        ]
+      },
+      {
+        "id": "1e9966cbc40a59cb",
+        "net": "DUT_PWR_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "f6c99fc2c04a0d74",
+          "90cb257a8efffd15",
+          "464e83eed3785d44",
+          "032b012d3d0aa0e8"
+        ]
+      },
+      {
+        "id": "d1559634864761ce",
+        "net": "CHG_IN_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "1b5cdc97b98fa6dc",
+          "44dfe9916e0adc81"
+        ]
+      },
+      {
+        "id": "c1ef326e57502dc7",
+        "net": "DUT_CHG_P",
+        "connectedToActualCopper": true,
+        "connections": [
+          "49dc86093d0a4bc5",
+          "02b419869ab44c89"
+        ]
+      },
+      {
+        "id": "7d49538a6bda493b",
+        "net": "KEY1_A",
+        "connectedToActualCopper": true,
+        "connections": [
+          "b56e8294d009d824"
+        ]
+      },
+      {
+        "id": "0880e58cd74671d6",
+        "net": "KEY1_B",
+        "connectedToActualCopper": true,
+        "connections": [
+          "6945e92d345d5a6c"
+        ]
+      },
+      {
+        "id": "5ee7559e60a40194",
+        "net": "KEY2_A",
+        "connectedToActualCopper": true,
+        "connections": [
+          "9e9601e4f532e8c6"
+        ]
+      },
+      {
+        "id": "bcb058d0ba6fedae",
+        "net": "KEY2_B",
+        "connectedToActualCopper": true,
+        "connections": [
+          "45ea968384e7c6fc"
+        ]
+      },
+      {
+        "id": "cb76da6e32587b12",
+        "net": "KEY3_A",
+        "connectedToActualCopper": true,
+        "connections": [
+          "35fdf041345186e0"
+        ]
+      },
+      {
+        "id": "7ed0afda0466bb40",
+        "net": "KEY3_B",
+        "connectedToActualCopper": true,
+        "connections": [
+          "4627843d8a71a1ec"
+        ]
+      },
+      {
+        "id": "7d3f9481235571b4",
+        "net": "KEY4_A",
+        "connectedToActualCopper": true,
+        "connections": [
+          "a19e3f39bdf9806e"
+        ]
+      },
+      {
+        "id": "d090fe1d906a410e",
+        "net": "KEY4_B",
+        "connectedToActualCopper": true,
+        "connections": [
+          "5627697b39e6dd44"
+        ]
+      },
+      {
+        "id": "7fe4114e6f0a1e86",
+        "net": "KEY5_A",
+        "connectedToActualCopper": true,
+        "connections": [
+          "0065593df847afb1"
+        ]
+      },
+      {
+        "id": "bd904ba28dac1e2f",
+        "net": "KEY5_B",
+        "connectedToActualCopper": true,
+        "connections": [
+          "cf60f211361fad00"
+        ]
+      },
+      {
+        "id": "1c8ef0054d494e91",
+        "net": "AIN3",
+        "connectedToActualCopper": true,
+        "connections": [
+          "c2a25abdc5a53f76"
+        ]
+      },
+      {
+        "id": "d49574b7ec4f2485",
+        "net": "AIN2",
+        "connectedToActualCopper": true,
+        "connections": [
+          "897729cf33c4b831"
+        ]
+      },
+      {
+        "id": "f0a67b24855817f7",
+        "net": "AIN1",
+        "connectedToActualCopper": true,
+        "connections": [
+          "e62f2af4be9d4702"
+        ]
+      },
+      {
+        "id": "d6f411540861eb30",
+        "net": "AIN4",
+        "connectedToActualCopper": true,
+        "connections": [
+          "d36ca43fd9d5bdd1"
+        ]
+      }
+    ],
+    "preexistingSilkWarningsPreserved": [
+      {
+        "type": "silk-over-pad",
+        "level": "WARN",
+        "layer": 3,
+        "designator": "Q12",
+        "primitives": [
+          "19375d3f3dc57525e16"
+        ],
+        "message": "silk text Designator \"R33\" overlaps pad Q12.4 — fab clips silk on exposed copper; move it (`pcb silk-align` / `pcb silk-set`) [规范 §11.2 丝印不压焊盘 — pcb-design-rules.md]",
+        "at": {
+          "x": 2915.8,
+          "y": 310.3
+        }
+      },
+      {
+        "type": "silk-over-pad",
+        "level": "WARN",
+        "layer": 3,
+        "designator": "R37",
+        "primitives": [
+          "6747b591b1fabbbbe16"
+        ],
+        "message": "silk text Designator \"R37\" overlaps pad R37.2 — fab clips silk on exposed copper; move it (`pcb silk-align` / `pcb silk-set`) [规范 §11.2 丝印不压焊盘 — pcb-design-rules.md]",
+        "at": {
+          "x": 1539.8,
+          "y": 708.3
+        }
+      }
+    ]
+  },
+  "hiddenAttributeCoordinateNormalizationCount": 220,
+  "visibleTextHostCoordinateQuantizationMil": [
+    {
+      "id": "7888dbc11c2c0694",
+      "axis": "x",
+      "deltaMil": 2.5000000732688932e-05
+    },
+    {
+      "id": "7888dbc11c2c0694",
+      "axis": "y",
+      "deltaMil": 4.999999964638846e-05
+    },
+    {
+      "id": "87d4496b5a338ad2",
+      "axis": "x",
+      "deltaMil": 2.5000000732688932e-05
+    },
+    {
+      "id": "87d4496b5a338ad2",
+      "axis": "y",
+      "deltaMil": 4.999999964638846e-05
+    },
+    {
+      "id": "68fe79117b08dd71",
+      "axis": "x",
+      "deltaMil": 2.5000000732688932e-05
+    },
+    {
+      "id": "68fe79117b08dd71",
+      "axis": "y",
+      "deltaMil": 4.9999999873762135e-05
+    },
+    {
+      "id": "a09843d37a3f153d",
+      "axis": "x",
+      "deltaMil": 2.5000000732688932e-05
+    },
+    {
+      "id": "a09843d37a3f153d",
+      "axis": "y",
+      "deltaMil": 4.999999964638846e-05
+    },
+    {
+      "id": "7212e124bd0de623",
+      "axis": "x",
+      "deltaMil": 4.999999998744897e-05
+    },
+    {
+      "id": "eb9e299d098e327ee16",
+      "axis": "x",
+      "deltaMil": 4.9999999930605554e-05
+    },
+    {
+      "id": "6747b591b1fabbbbe16",
+      "axis": "x",
+      "deltaMil": 2.499999936844688e-05
+    },
+    {
+      "id": "6747b591b1fabbbbe16",
+      "axis": "y",
+      "deltaMil": 2.499999982319423e-05
+    }
+  ],
+  "sourceSHA256": {
+    "AI_TOOL.eprj3": "b8b757cb2b9deadb50ee00bd03e6924631b734632f3d3e0594ce6ddb626b9f25",
+    "eprj3-intro.md": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+    "AI_TOOL_backup/AI_TOOL_2026-11-04-22-44.epro2": "9c6353ecaaeb525129823a9fed88b87c0137551136af6190e817bd8df40b0fe6",
+    "AI_TOOL_backup/AI_TOOL_2026-11-05-11-44.epro2": "af84d2f01d10da05548b8957db718b2cf858761bce4bf3e6a1460a1d9dc8254a",
+    "AI_TOOL_backup/AI_TOOL_2026-11-05-14-44.epro2": "d5c8d76c5a31bf9614dab8c91758fbb6050244dcf998b16c9ab2fd0a9f7c20a6",
+    "panel/Panel1.epan2": "4c6861788225073b7136a2184e6159366149f1b52cb053b56c656c329e0e5f3c",
+    "panel/Panel1_1.epan2": "3d5c2e15fa86fddc67cd7b738e679777f564054ed919ff8cf4524c78defb837a",
+    "pcb/AI_MCUTOOL.epcb2": "6bf68d023df52d0ce41587cd7b69440e6ee76ae3158fa4ae172df3c26a43ecc1",
+    "sch/Schematic1_1/01-工具电源.esch2": "7a4f316af48347e7790cc56b4841a98600f9cc6f48a1e4c083734edd48eed9c3",
+    "sch/Schematic1_1/02-主控与总线.esch2": "f8efa757608ba81c2744597c0766c6a10dc9cca33fbe7224abe766a582daeb9a",
+    "sch/Schematic1_1/03-五路按键.esch2": "61730954d3ba450a89eb960a6d51889a024ee42a4473a984750dfdbe73fff3f0",
+    "sch/Schematic1_1/04-主供电选择.esch2": "529d67add06debb577b08319aa4e366479080a17e6fbbd7dbaad5de53253e17b",
+    "sch/Schematic1_1/05-独立充电.esch2": "c1141edabd6d3582bfc25e7b246df547489106c67ee56da71584c9d16d9c582d",
+    "sch/Schematic1_1/06-电池端测量.esch2": "3bbc76d92229994e6036be716a6f79155d07726c9aa1d6b6ba3a36c1eb3f3ffc",
+    "sch/Schematic1_1/07-四路电压.esch2": "f52a0984356986d1dc743b64090b94c100a753a08b7c78419d6fb13855bfa89c",
+    "sch/Schematic1_1/08-目标串口.esch2": "ebc320501d875362b67a6d7b79417ed57a878dbf3aabfdfe2f6c3c773343bcea",
+    "sch/Schematic1_1/Schematic1_1.ecfg": "2bb93702f6876378d4fac26d4dbf3957921ea6cb68f7b0efd314b9e2716a193f"
+  },
+  "pcbSHA256": "6bf68d023df52d0ce41587cd7b69440e6ee76ae3158fa4ae172df3c26a43ecc1",
+  "preview": "hardware/easyeda-local/preview/固定布局重新布线-PCB顶面.png",
+  "evidenceDirectory": "docs/temp/fixed-layout-routing-20261105",
+  "archive": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\hardware\\versions\\AI_TOOL_20261105-170407_固定布局重新布线.zip",
+  "manufactured": false,
+  "hardwareTested": false,
+  "archiveSHA256": "3c9b83aeca4cf599b734f1b1a85fa03455e9a16ca7bacaabeadb964838913ff2",
+  "archiveCrcPassed": true,
+  "archiveSourceSHA256Passed": true
+}

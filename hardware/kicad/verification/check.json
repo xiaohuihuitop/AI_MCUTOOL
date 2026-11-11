@@ -1,0 +1,2206 @@
+{
+  "passed": true,
+  "kicadVersion": "10.0.6",
+  "date": "2026-10-24T15:54:06",
+  "sheets": 9,
+  "components": 164,
+  "symbolUnits": 168,
+  "physicalPins": 508,
+  "connectedPins": 484,
+  "connectedNets": 124,
+  "ncPins": 24,
+  "netDifferences": 0,
+  "bomQuantity": 164,
+  "ercViolations": 0,
+  "ercDefaultIgnoredChecks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "unboundFootprints": [],
+  "footprintChecks": [
+    {
+      "ref": "C1",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C2",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C3",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C4",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "J1",
+      "footprint": "AI_MCUTOOL:DC_XKB_DC005_5A_2_0",
+      "missingPads": []
+    },
+    {
+      "ref": "J2",
+      "footprint": "AI_MCUTOOL:USB_C_HRO_TYPE_C_31_M_12",
+      "missingPads": []
+    },
+    {
+      "ref": "R1",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R2",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R3",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R4",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "U1",
+      "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "missingPads": []
+    },
+    {
+      "ref": "U2",
+      "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "missingPads": []
+    },
+    {
+      "ref": "U3",
+      "footprint": "AI_MCUTOOL:LDL1117",
+      "missingPads": []
+    },
+    {
+      "ref": "C5",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C6",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C7",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "J3",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "LED1",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "LED2",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R5",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R6",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R7",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R8",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R9",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R10",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R11",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R81",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R82",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "SW1",
+      "footprint": "AI_MCUTOOL:SW4",
+      "missingPads": []
+    },
+    {
+      "ref": "SW2",
+      "footprint": "AI_MCUTOOL:SW4",
+      "missingPads": []
+    },
+    {
+      "ref": "SW3",
+      "footprint": "AI_MCUTOOL:SW4",
+      "missingPads": []
+    },
+    {
+      "ref": "U4",
+      "footprint": "AI_MCUTOOL:ESP32_S3_WROOM_1_Edge",
+      "missingPads": []
+    },
+    {
+      "ref": "J4",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J5",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J6",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J7",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J8",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "Q1",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q2",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q3",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q4",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q5",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "R12",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R13",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R14",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R15",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R16",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R17",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R18",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R19",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R20",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R21",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R22",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R23",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R24",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R25",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R26",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "U5",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "missingPads": []
+    },
+    {
+      "ref": "U6",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "missingPads": []
+    },
+    {
+      "ref": "U7",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "missingPads": []
+    },
+    {
+      "ref": "U8",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "missingPads": []
+    },
+    {
+      "ref": "U9",
+      "footprint": "AI_MCUTOOL:PHOTO_MOS",
+      "missingPads": []
+    },
+    {
+      "ref": "J9",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J10",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "Q6",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q7",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "Q8",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "Q9",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "Q10",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "Q11",
+      "footprint": "AI_MCUTOOL:N_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "R27",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R28",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R29",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R30",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R31",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R32",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "U10",
+      "footprint": "AI_MCUTOOL:PHOTO_PV",
+      "missingPads": []
+    },
+    {
+      "ref": "U11",
+      "footprint": "AI_MCUTOOL:PHOTO_PV",
+      "missingPads": []
+    },
+    {
+      "ref": "J12",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J13",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "Q12",
+      "footprint": "AI_MCUTOOL:P_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "Q13",
+      "footprint": "AI_MCUTOOL:P_FET",
+      "missingPads": []
+    },
+    {
+      "ref": "Q14",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "missingPads": []
+    },
+    {
+      "ref": "R33",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R34",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R35",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R36",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C8",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C9",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "J11",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "R37",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R38",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R39",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "RSH1",
+      "footprint": "AI_MCUTOOL:SHUNT4",
+      "missingPads": []
+    },
+    {
+      "ref": "U12",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "missingPads": []
+    },
+    {
+      "ref": "C10",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C11",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C12",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C13",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C14",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C15",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C16",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C17",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C18",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C19",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C20",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C21",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C22",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C23",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C24",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C25",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "J14",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J15",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J16",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "J17",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "R40",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R41",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R42",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R43",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R44",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R45",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R46",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R47",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R48",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R49",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R50",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R51",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R52",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R53",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R54",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R55",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R56",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R57",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R58",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R59",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R60",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R61",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R62",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R63",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R64",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R65",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R66",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R67",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R68",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R69",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R70",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R71",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R72",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R73",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R74",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R75",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "U13",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "missingPads": []
+    },
+    {
+      "ref": "U14",
+      "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "missingPads": []
+    },
+    {
+      "ref": "U15",
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "missingPads": []
+    },
+    {
+      "ref": "C26",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "C27",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "J18",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "missingPads": []
+    },
+    {
+      "ref": "R76",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R77",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R78",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R79",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "R80",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "missingPads": []
+    },
+    {
+      "ref": "U16",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "missingPads": []
+    },
+    {
+      "ref": "U17",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "missingPads": []
+    }
+  ],
+  "netMapping": [
+    {
+      "designNet": "DC_IN_5V",
+      "kicadNet": "Net-(J1-+)",
+      "pins": [
+        "C1.1",
+        "J1.1",
+        "R1.1",
+        "U1.1"
+      ]
+    },
+    {
+      "designNet": "COMMON_GND",
+      "kicadNet": "COMMON_GND",
+      "pins": [
+        "C1.2",
+        "C10.2",
+        "C11.2",
+        "C12.2",
+        "C13.2",
+        "C14.2",
+        "C15.2",
+        "C16.2",
+        "C17.2",
+        "C18.2",
+        "C2.2",
+        "C20.2",
+        "C22.2",
+        "C23.2",
+        "C24.2",
+        "C25.2",
+        "C26.2",
+        "C27.2",
+        "C3.2",
+        "C4.2",
+        "C5.2",
+        "C6.2",
+        "C7.2",
+        "C9.2",
+        "J1.2",
+        "J10.2",
+        "J11.2",
+        "J12.2",
+        "J13.2",
+        "J14.2",
+        "J15.2",
+        "J16.2",
+        "J17.2",
+        "J18.3",
+        "J2.1",
+        "J2.2",
+        "J2.3",
+        "J2.4",
+        "J2.A1B12",
+        "J2.B1A12",
+        "J3.3",
+        "J9.2",
+        "LED1.1",
+        "LED2.1",
+        "Q1.2",
+        "Q14.2",
+        "Q2.2",
+        "Q3.2",
+        "Q4.2",
+        "Q5.2",
+        "Q6.2",
+        "Q7.2",
+        "R1.2",
+        "R14.2",
+        "R17.2",
+        "R2.2",
+        "R20.2",
+        "R23.2",
+        "R26.2",
+        "R29.2",
+        "R3.2",
+        "R32.2",
+        "R36.2",
+        "R4.2",
+        "R45.2",
+        "R54.2",
+        "R63.2",
+        "R7.2",
+        "R72.2",
+        "R78.2",
+        "R8.2",
+        "SW1.3",
+        "SW1.4",
+        "SW2.3",
+        "SW2.4",
+        "SW3.3",
+        "SW3.4",
+        "U1.2",
+        "U1.4",
+        "U1.5",
+        "U12.1",
+        "U12.2",
+        "U12.7",
+        "U13.1",
+        "U13.3",
+        "U15.2",
+        "U15.3",
+        "U15.5",
+        "U16.3",
+        "U17.3",
+        "U2.2",
+        "U2.4",
+        "U2.5",
+        "U3.1",
+        "U4.1",
+        "U4.40",
+        "U4.41"
+      ]
+    },
+    {
+      "designNet": "LDO_VIN",
+      "kicadNet": "Net-(U1-VOUT)",
+      "pins": [
+        "C3.1",
+        "U1.3",
+        "U1.6",
+        "U2.3",
+        "U2.6",
+        "U3.3"
+      ]
+    },
+    {
+      "designNet": "DIV1",
+      "kicadNet": "Net-(U14A-+)",
+      "pins": [
+        "C10.1",
+        "R44.2",
+        "R45.1",
+        "U14.3"
+      ]
+    },
+    {
+      "designNet": "ADC_CH1",
+      "kicadNet": "/07 四路高阻电压检测/ADC_CH1",
+      "pins": [
+        "C11.1",
+        "R48.2",
+        "U13.4"
+      ]
+    },
+    {
+      "designNet": "DIV2",
+      "kicadNet": "Net-(U14B-+)",
+      "pins": [
+        "C12.1",
+        "R53.2",
+        "R54.1",
+        "U14.5"
+      ]
+    },
+    {
+      "designNet": "ADC_CH2",
+      "kicadNet": "/07 四路高阻电压检测/ADC_CH2",
+      "pins": [
+        "C13.1",
+        "R57.2",
+        "U13.5"
+      ]
+    },
+    {
+      "designNet": "DIV3",
+      "kicadNet": "Net-(U14C-+)",
+      "pins": [
+        "C14.1",
+        "R62.2",
+        "R63.1",
+        "U14.10"
+      ]
+    },
+    {
+      "designNet": "ADC_CH3",
+      "kicadNet": "/07 四路高阻电压检测/ADC_CH3",
+      "pins": [
+        "C15.1",
+        "R66.2",
+        "U13.6"
+      ]
+    },
+    {
+      "designNet": "DIV4",
+      "kicadNet": "Net-(U14D-+)",
+      "pins": [
+        "C16.1",
+        "R71.2",
+        "R72.1",
+        "U14.12"
+      ]
+    },
+    {
+      "designNet": "ADC_CH4",
+      "kicadNet": "/07 四路高阻电压检测/ADC_CH4",
+      "pins": [
+        "C17.1",
+        "R75.2",
+        "U13.7"
+      ]
+    },
+    {
+      "designNet": "TOOL_3V3",
+      "kicadNet": "TOOL_3V3",
+      "pins": [
+        "C18.1",
+        "C19.1",
+        "C20.1",
+        "C25.1",
+        "C26.1",
+        "C27.1",
+        "C4.1",
+        "C5.1",
+        "C6.1",
+        "C9.1",
+        "R10.1",
+        "R12.1",
+        "R15.1",
+        "R18.1",
+        "R21.1",
+        "R24.1",
+        "R27.1",
+        "R30.1",
+        "R39.1",
+        "R5.1",
+        "R6.1",
+        "R76.1",
+        "R77.1",
+        "R81.1",
+        "R82.1",
+        "R9.1",
+        "U12.6",
+        "U13.8",
+        "U14.4",
+        "U15.4",
+        "U16.5",
+        "U17.5",
+        "U3.2",
+        "U3.4",
+        "U4.2"
+      ]
+    },
+    {
+      "designNet": "TYPEC_IN_5V",
+      "kicadNet": "Net-(U2-VIN)",
+      "pins": [
+        "C2.1",
+        "J2.A4B9",
+        "J2.B4A9",
+        "R2.1",
+        "U2.1"
+      ]
+    },
+    {
+      "designNet": "LM_CRES",
+      "kicadNet": "Net-(U15-CRES)",
+      "pins": [
+        "C22.1",
+        "U15.7"
+      ]
+    },
+    {
+      "designNet": "VNEG",
+      "kicadNet": "VNEG",
+      "pins": [
+        "C19.2",
+        "C23.1",
+        "C24.1",
+        "R47.2",
+        "R56.2",
+        "R65.2",
+        "R74.2",
+        "U14.11",
+        "U15.6"
+      ]
+    },
+    {
+      "designNet": "ESP_EN",
+      "kicadNet": "/02 主控与总线/ESP_EN",
+      "pins": [
+        "C7.1",
+        "J3.5",
+        "R5.2",
+        "SW1.1",
+        "SW1.2",
+        "U4.3"
+      ]
+    },
+    {
+      "designNet": "EXT_IN_P",
+      "kicadNet": "Net-(J10-Pad1)",
+      "pins": [
+        "J10.1",
+        "Q10.5",
+        "Q10.6",
+        "Q10.7",
+        "Q10.8",
+        "Q10.9"
+      ]
+    },
+    {
+      "designNet": "DUT_PWR_P",
+      "kicadNet": "Net-(RSH1-I2)",
+      "pins": [
+        "J11.1",
+        "RSH1.1",
+        "U12.8"
+      ]
+    },
+    {
+      "designNet": "CHG_IN_P",
+      "kicadNet": "Net-(J12-Pad1)",
+      "pins": [
+        "J12.1",
+        "Q12.1",
+        "Q12.2",
+        "Q12.3"
+      ]
+    },
+    {
+      "designNet": "DUT_CHG_P",
+      "kicadNet": "Net-(J13-Pad1)",
+      "pins": [
+        "J13.1",
+        "Q13.1",
+        "Q13.2",
+        "Q13.3"
+      ]
+    },
+    {
+      "designNet": "AIN1",
+      "kicadNet": "Net-(J14-Pad1)",
+      "pins": [
+        "J14.1",
+        "R40.1"
+      ]
+    },
+    {
+      "designNet": "AIN2",
+      "kicadNet": "Net-(J15-Pad1)",
+      "pins": [
+        "J15.1",
+        "R49.1"
+      ]
+    },
+    {
+      "designNet": "AIN3",
+      "kicadNet": "Net-(J16-Pad1)",
+      "pins": [
+        "J16.1",
+        "R58.1"
+      ]
+    },
+    {
+      "designNet": "AIN4",
+      "kicadNet": "Net-(J17-Pad1)",
+      "pins": [
+        "J17.1",
+        "R67.1"
+      ]
+    },
+    {
+      "designNet": "TOOL_TX",
+      "kicadNet": "Net-(J18-Pad1)",
+      "pins": [
+        "J18.1",
+        "R79.2"
+      ]
+    },
+    {
+      "designNet": "TOOL_RX",
+      "kicadNet": "Net-(J18-Pad2)",
+      "pins": [
+        "J18.2",
+        "R80.1"
+      ]
+    },
+    {
+      "designNet": "TYPEC_CC1",
+      "kicadNet": "Net-(J2-CC1)",
+      "pins": [
+        "J2.A5",
+        "R3.1"
+      ]
+    },
+    {
+      "designNet": "TYPEC_CC2",
+      "kicadNet": "Net-(J2-CC2)",
+      "pins": [
+        "J2.B5",
+        "R4.1"
+      ]
+    },
+    {
+      "designNet": "ESP_BOOT",
+      "kicadNet": "/02 主控与总线/ESP_BOOT",
+      "pins": [
+        "J3.4",
+        "R6.2",
+        "SW2.1",
+        "SW2.2",
+        "U4.27"
+      ]
+    },
+    {
+      "designNet": "UART0_RX",
+      "kicadNet": "/02 主控与总线/UART0_RX",
+      "pins": [
+        "J3.2",
+        "U4.36"
+      ]
+    },
+    {
+      "designNet": "UART0_TX",
+      "kicadNet": "/02 主控与总线/UART0_TX",
+      "pins": [
+        "J3.1",
+        "U4.37"
+      ]
+    },
+    {
+      "designNet": "BAT_IN_P",
+      "kicadNet": "Net-(J9-Pad1)",
+      "pins": [
+        "J9.1",
+        "Q8.5",
+        "Q8.6",
+        "Q8.7",
+        "Q8.8",
+        "Q8.9"
+      ]
+    },
+    {
+      "designNet": "LED1_A",
+      "kicadNet": "Net-(LED1-A)",
+      "pins": [
+        "LED1.2",
+        "R10.2"
+      ]
+    },
+    {
+      "designNet": "LED2_A",
+      "kicadNet": "Net-(LED2-A)",
+      "pins": [
+        "LED2.2",
+        "R11.2"
+      ]
+    },
+    {
+      "designNet": "KEY1_LED_K",
+      "kicadNet": "Net-(Q1-C)",
+      "pins": [
+        "Q1.3",
+        "U5.3"
+      ]
+    },
+    {
+      "designNet": "KEY1_BASE",
+      "kicadNet": "Net-(Q1-B)",
+      "pins": [
+        "Q1.1",
+        "R13.2",
+        "R14.1"
+      ]
+    },
+    {
+      "designNet": "CHG_BASE",
+      "kicadNet": "Net-(Q14-B)",
+      "pins": [
+        "Q14.1",
+        "R35.2",
+        "R36.1"
+      ]
+    },
+    {
+      "designNet": "CHG_GATE_SINK",
+      "kicadNet": "Net-(Q14-C)",
+      "pins": [
+        "Q14.3",
+        "R34.2"
+      ]
+    },
+    {
+      "designNet": "KEY2_LED_K",
+      "kicadNet": "Net-(Q2-C)",
+      "pins": [
+        "Q2.3",
+        "U6.3"
+      ]
+    },
+    {
+      "designNet": "KEY2_BASE",
+      "kicadNet": "Net-(Q2-B)",
+      "pins": [
+        "Q2.1",
+        "R16.2",
+        "R17.1"
+      ]
+    },
+    {
+      "designNet": "KEY3_LED_K",
+      "kicadNet": "Net-(Q3-C)",
+      "pins": [
+        "Q3.3",
+        "U7.3"
+      ]
+    },
+    {
+      "designNet": "KEY3_BASE",
+      "kicadNet": "Net-(Q3-B)",
+      "pins": [
+        "Q3.1",
+        "R19.2",
+        "R20.1"
+      ]
+    },
+    {
+      "designNet": "KEY4_LED_K",
+      "kicadNet": "Net-(Q4-C)",
+      "pins": [
+        "Q4.3",
+        "U8.3"
+      ]
+    },
+    {
+      "designNet": "KEY4_BASE",
+      "kicadNet": "Net-(Q4-B)",
+      "pins": [
+        "Q4.1",
+        "R22.2",
+        "R23.1"
+      ]
+    },
+    {
+      "designNet": "KEY5_LED_K",
+      "kicadNet": "Net-(Q5-C)",
+      "pins": [
+        "Q5.3",
+        "U9.3"
+      ]
+    },
+    {
+      "designNet": "KEY5_BASE",
+      "kicadNet": "Net-(Q5-B)",
+      "pins": [
+        "Q5.1",
+        "R25.2",
+        "R26.1"
+      ]
+    },
+    {
+      "designNet": "BAT_PV_K",
+      "kicadNet": "Net-(Q6-C)",
+      "pins": [
+        "Q6.3",
+        "U10.2"
+      ]
+    },
+    {
+      "designNet": "BAT_BASE",
+      "kicadNet": "Net-(Q6-B)",
+      "pins": [
+        "Q6.1",
+        "R28.2",
+        "R29.1"
+      ]
+    },
+    {
+      "designNet": "EXT_PV_K",
+      "kicadNet": "Net-(Q7-C)",
+      "pins": [
+        "Q7.3",
+        "U11.2"
+      ]
+    },
+    {
+      "designNet": "EXT_BASE",
+      "kicadNet": "Net-(Q7-B)",
+      "pins": [
+        "Q7.1",
+        "R31.2",
+        "R32.1"
+      ]
+    },
+    {
+      "designNet": "ESP_IO46_STRAP",
+      "kicadNet": "Net-(U4-IO46)",
+      "pins": [
+        "R7.1",
+        "U4.16"
+      ]
+    },
+    {
+      "designNet": "UART_RX_IN",
+      "kicadNet": "Net-(R78-Pad1)",
+      "pins": [
+        "R78.1",
+        "R80.2",
+        "U17.2"
+      ]
+    },
+    {
+      "designNet": "ESP_IO3_STRAP",
+      "kicadNet": "Net-(U4-IO3)",
+      "pins": [
+        "R8.1",
+        "U4.15"
+      ]
+    },
+    {
+      "designNet": "CONFIG_KEY",
+      "kicadNet": "Net-(U4-IO17)",
+      "pins": [
+        "R9.2",
+        "SW3.1",
+        "SW3.2",
+        "U4.10"
+      ]
+    },
+    {
+      "designNet": "CURRENT_ALERT",
+      "kicadNet": "CURRENT_ALERT",
+      "pins": [
+        "R39.2",
+        "U12.3",
+        "U4.11"
+      ]
+    },
+    {
+      "designNet": "I2C_SDA",
+      "kicadNet": "I2C_SDA",
+      "pins": [
+        "R81.2",
+        "U12.4",
+        "U13.9",
+        "U4.17"
+      ]
+    },
+    {
+      "designNet": "I2C_SCL",
+      "kicadNet": "I2C_SCL",
+      "pins": [
+        "R82.2",
+        "U12.5",
+        "U13.10",
+        "U4.18"
+      ]
+    },
+    {
+      "designNet": "INA_IN_N",
+      "kicadNet": "Net-(U12-Vin-)",
+      "pins": [
+        "C8.2",
+        "R38.2",
+        "U12.9"
+      ]
+    },
+    {
+      "designNet": "INA_IN_P",
+      "kicadNet": "Net-(U12-Vin+)",
+      "pins": [
+        "C8.1",
+        "R37.2",
+        "U12.10"
+      ]
+    },
+    {
+      "designNet": "LM_CF_P",
+      "kicadNet": "Net-(U15-CF+)",
+      "pins": [
+        "C21.1",
+        "U15.1"
+      ]
+    },
+    {
+      "designNet": "LM_CF_N",
+      "kicadNet": "Net-(U15-CF-)",
+      "pins": [
+        "C21.2",
+        "U15.8"
+      ]
+    },
+    {
+      "designNet": "DUT_UART_TX",
+      "kicadNet": "DUT_UART_TX",
+      "pins": [
+        "R77.2",
+        "U16.2",
+        "U4.22"
+      ]
+    },
+    {
+      "designNet": "UART_TX_NOE",
+      "kicadNet": "UART_TX_NOE",
+      "pins": [
+        "R76.2",
+        "U16.1",
+        "U4.31"
+      ]
+    },
+    {
+      "designNet": "UART_TX_BUF",
+      "kicadNet": "Net-(R79-Pad1)",
+      "pins": [
+        "R79.1",
+        "U16.4"
+      ]
+    },
+    {
+      "designNet": "DUT_UART_RX",
+      "kicadNet": "DUT_UART_RX",
+      "pins": [
+        "U17.4",
+        "U4.8"
+      ]
+    },
+    {
+      "designNet": "KEY1_CTRL",
+      "kicadNet": "KEY1_CTRL",
+      "pins": [
+        "R13.1",
+        "U4.4"
+      ]
+    },
+    {
+      "designNet": "KEY2_CTRL",
+      "kicadNet": "KEY2_CTRL",
+      "pins": [
+        "R16.1",
+        "U4.5"
+      ]
+    },
+    {
+      "designNet": "KEY3_CTRL",
+      "kicadNet": "KEY3_CTRL",
+      "pins": [
+        "R19.1",
+        "U4.6"
+      ]
+    },
+    {
+      "designNet": "KEY4_CTRL",
+      "kicadNet": "KEY4_CTRL",
+      "pins": [
+        "R22.1",
+        "U4.7"
+      ]
+    },
+    {
+      "designNet": "STATUS_LED",
+      "kicadNet": "/02 主控与总线/STATUS_LED",
+      "pins": [
+        "R11.1",
+        "U4.9"
+      ]
+    },
+    {
+      "designNet": "KEY5_CTRL",
+      "kicadNet": "KEY5_CTRL",
+      "pins": [
+        "R25.1",
+        "U4.12"
+      ]
+    },
+    {
+      "designNet": "BAT_PATH_EN",
+      "kicadNet": "BAT_PATH_EN",
+      "pins": [
+        "R28.1",
+        "U4.19"
+      ]
+    },
+    {
+      "designNet": "EXT_PATH_EN",
+      "kicadNet": "EXT_PATH_EN",
+      "pins": [
+        "R31.1",
+        "U4.20"
+      ]
+    },
+    {
+      "designNet": "CHARGE_PATH_EN",
+      "kicadNet": "CHARGE_PATH_EN",
+      "pins": [
+        "R35.1",
+        "U4.21"
+      ]
+    },
+    {
+      "designNet": "KEY1_LED_A",
+      "kicadNet": "Net-(U5-A)",
+      "pins": [
+        "R12.2",
+        "U5.1"
+      ]
+    },
+    {
+      "designNet": "KEY2_LED_A",
+      "kicadNet": "Net-(U6-A)",
+      "pins": [
+        "R15.2",
+        "U6.1"
+      ]
+    },
+    {
+      "designNet": "KEY3_LED_A",
+      "kicadNet": "Net-(U7-A)",
+      "pins": [
+        "R18.2",
+        "U7.1"
+      ]
+    },
+    {
+      "designNet": "KEY4_LED_A",
+      "kicadNet": "Net-(U8-A)",
+      "pins": [
+        "R21.2",
+        "U8.1"
+      ]
+    },
+    {
+      "designNet": "KEY5_LED_A",
+      "kicadNet": "Net-(U9-A)",
+      "pins": [
+        "R24.2",
+        "U9.1"
+      ]
+    },
+    {
+      "designNet": "BAT_PV_A",
+      "kicadNet": "Net-(U10-A)",
+      "pins": [
+        "R27.2",
+        "U10.1"
+      ]
+    },
+    {
+      "designNet": "EXT_PV_A",
+      "kicadNet": "Net-(U11-A)",
+      "pins": [
+        "R30.2",
+        "U11.1"
+      ]
+    },
+    {
+      "designNet": "BUF1",
+      "kicadNet": "Net-(R46-Pad1)",
+      "pins": [
+        "R46.1",
+        "R48.1",
+        "U14.1"
+      ]
+    },
+    {
+      "designNet": "FB1",
+      "kicadNet": "Net-(U14A--)",
+      "pins": [
+        "R46.2",
+        "R47.1",
+        "U14.2"
+      ]
+    },
+    {
+      "designNet": "BUF2",
+      "kicadNet": "Net-(R55-Pad1)",
+      "pins": [
+        "R55.1",
+        "R57.1",
+        "U14.7"
+      ]
+    },
+    {
+      "designNet": "FB2",
+      "kicadNet": "Net-(U14B--)",
+      "pins": [
+        "R55.2",
+        "R56.1",
+        "U14.6"
+      ]
+    },
+    {
+      "designNet": "BUF3",
+      "kicadNet": "Net-(R64-Pad1)",
+      "pins": [
+        "R64.1",
+        "R66.1",
+        "U14.8"
+      ]
+    },
+    {
+      "designNet": "FB3",
+      "kicadNet": "Net-(U14C--)",
+      "pins": [
+        "R64.2",
+        "R65.1",
+        "U14.9"
+      ]
+    },
+    {
+      "designNet": "BUF4",
+      "kicadNet": "Net-(R73-Pad1)",
+      "pins": [
+        "R73.1",
+        "R75.1",
+        "U14.14"
+      ]
+    },
+    {
+      "designNet": "FB4",
+      "kicadNet": "Net-(U14D--)",
+      "pins": [
+        "R73.2",
+        "R74.1",
+        "U14.13"
+      ]
+    },
+    {
+      "designNet": "KEY1_A",
+      "kicadNet": "Net-(U5-CONTACT_A)",
+      "pins": [
+        "J4.1",
+        "U5.4"
+      ]
+    },
+    {
+      "designNet": "KEY1_B",
+      "kicadNet": "Net-(U5-CONTACT_B)",
+      "pins": [
+        "J4.2",
+        "U5.6"
+      ]
+    },
+    {
+      "designNet": "KEY2_A",
+      "kicadNet": "Net-(U6-CONTACT_A)",
+      "pins": [
+        "J5.1",
+        "U6.4"
+      ]
+    },
+    {
+      "designNet": "KEY2_B",
+      "kicadNet": "Net-(U6-CONTACT_B)",
+      "pins": [
+        "J5.2",
+        "U6.6"
+      ]
+    },
+    {
+      "designNet": "KEY3_A",
+      "kicadNet": "Net-(U7-CONTACT_A)",
+      "pins": [
+        "J6.1",
+        "U7.4"
+      ]
+    },
+    {
+      "designNet": "KEY3_B",
+      "kicadNet": "Net-(U7-CONTACT_B)",
+      "pins": [
+        "J6.2",
+        "U7.6"
+      ]
+    },
+    {
+      "designNet": "KEY4_A",
+      "kicadNet": "Net-(U8-CONTACT_A)",
+      "pins": [
+        "J7.1",
+        "U8.4"
+      ]
+    },
+    {
+      "designNet": "KEY4_B",
+      "kicadNet": "Net-(U8-CONTACT_B)",
+      "pins": [
+        "J7.2",
+        "U8.6"
+      ]
+    },
+    {
+      "designNet": "KEY5_A",
+      "kicadNet": "Net-(U9-CONTACT_A)",
+      "pins": [
+        "J8.1",
+        "U9.4"
+      ]
+    },
+    {
+      "designNet": "KEY5_B",
+      "kicadNet": "Net-(U9-CONTACT_B)",
+      "pins": [
+        "J8.2",
+        "U9.6"
+      ]
+    },
+    {
+      "designNet": "SCOM_BAT",
+      "kicadNet": "Net-(U10-PV-)",
+      "pins": [
+        "Q8.1",
+        "Q8.2",
+        "Q8.3",
+        "Q9.1",
+        "Q9.2",
+        "Q9.3",
+        "U10.3"
+      ]
+    },
+    {
+      "designNet": "GCOM_BAT",
+      "kicadNet": "Net-(Q8-G)",
+      "pins": [
+        "Q8.4",
+        "Q9.4",
+        "U10.4"
+      ]
+    },
+    {
+      "designNet": "VSEL_P",
+      "kicadNet": "VSEL_P",
+      "pins": [
+        "Q11.5",
+        "Q11.6",
+        "Q11.7",
+        "Q11.8",
+        "Q11.9",
+        "Q9.5",
+        "Q9.6",
+        "Q9.7",
+        "Q9.8",
+        "Q9.9",
+        "RSH1.4"
+      ]
+    },
+    {
+      "designNet": "SCOM_EXT",
+      "kicadNet": "Net-(U11-PV-)",
+      "pins": [
+        "Q10.1",
+        "Q10.2",
+        "Q10.3",
+        "Q11.1",
+        "Q11.2",
+        "Q11.3",
+        "U11.3"
+      ]
+    },
+    {
+      "designNet": "GCOM_EXT",
+      "kicadNet": "Net-(Q10-G)",
+      "pins": [
+        "Q10.4",
+        "Q11.4",
+        "U11.4"
+      ]
+    },
+    {
+      "designNet": "SHUNT_E2",
+      "kicadNet": "Net-(RSH1-E2)",
+      "pins": [
+        "R38.1",
+        "RSH1.2"
+      ]
+    },
+    {
+      "designNet": "SHUNT_E1",
+      "kicadNet": "Net-(RSH1-E1)",
+      "pins": [
+        "R37.1",
+        "RSH1.3"
+      ]
+    },
+    {
+      "designNet": "GCOM_CHG",
+      "kicadNet": "Net-(Q12-G)",
+      "pins": [
+        "Q12.4",
+        "Q13.4",
+        "R33.1",
+        "R34.1"
+      ]
+    },
+    {
+      "designNet": "SCOM_CHG",
+      "kicadNet": "Net-(Q12-S-Pad5)",
+      "pins": [
+        "Q12.5",
+        "Q12.6",
+        "Q12.7",
+        "Q12.8",
+        "Q12.9",
+        "Q13.5",
+        "Q13.6",
+        "Q13.7",
+        "Q13.8",
+        "Q13.9",
+        "R33.2"
+      ]
+    },
+    {
+      "designNet": "AIN1_DIV_TAP1",
+      "kicadNet": "Net-(R40-Pad2)",
+      "pins": [
+        "R40.2",
+        "R41.1"
+      ]
+    },
+    {
+      "designNet": "AIN1_DIV_TAP2",
+      "kicadNet": "Net-(R41-Pad2)",
+      "pins": [
+        "R41.2",
+        "R42.1"
+      ]
+    },
+    {
+      "designNet": "AIN1_DIV_TAP3",
+      "kicadNet": "Net-(R42-Pad2)",
+      "pins": [
+        "R42.2",
+        "R43.1"
+      ]
+    },
+    {
+      "designNet": "AIN1_DIV_TAP4",
+      "kicadNet": "Net-(R43-Pad2)",
+      "pins": [
+        "R43.2",
+        "R44.1"
+      ]
+    },
+    {
+      "designNet": "AIN2_DIV_TAP1",
+      "kicadNet": "Net-(R49-Pad2)",
+      "pins": [
+        "R49.2",
+        "R50.1"
+      ]
+    },
+    {
+      "designNet": "AIN2_DIV_TAP2",
+      "kicadNet": "Net-(R50-Pad2)",
+      "pins": [
+        "R50.2",
+        "R51.1"
+      ]
+    },
+    {
+      "designNet": "AIN2_DIV_TAP3",
+      "kicadNet": "Net-(R51-Pad2)",
+      "pins": [
+        "R51.2",
+        "R52.1"
+      ]
+    },
+    {
+      "designNet": "AIN2_DIV_TAP4",
+      "kicadNet": "Net-(R52-Pad2)",
+      "pins": [
+        "R52.2",
+        "R53.1"
+      ]
+    },
+    {
+      "designNet": "AIN3_DIV_TAP1",
+      "kicadNet": "Net-(R58-Pad2)",
+      "pins": [
+        "R58.2",
+        "R59.1"
+      ]
+    },
+    {
+      "designNet": "AIN3_DIV_TAP2",
+      "kicadNet": "Net-(R59-Pad2)",
+      "pins": [
+        "R59.2",
+        "R60.1"
+      ]
+    },
+    {
+      "designNet": "AIN3_DIV_TAP3",
+      "kicadNet": "Net-(R60-Pad2)",
+      "pins": [
+        "R60.2",
+        "R61.1"
+      ]
+    },
+    {
+      "designNet": "AIN3_DIV_TAP4",
+      "kicadNet": "Net-(R61-Pad2)",
+      "pins": [
+        "R61.2",
+        "R62.1"
+      ]
+    },
+    {
+      "designNet": "AIN4_DIV_TAP1",
+      "kicadNet": "Net-(R67-Pad2)",
+      "pins": [
+        "R67.2",
+        "R68.1"
+      ]
+    },
+    {
+      "designNet": "AIN4_DIV_TAP2",
+      "kicadNet": "Net-(R68-Pad2)",
+      "pins": [
+        "R68.2",
+        "R69.1"
+      ]
+    },
+    {
+      "designNet": "AIN4_DIV_TAP3",
+      "kicadNet": "Net-(R69-Pad2)",
+      "pins": [
+        "R69.2",
+        "R70.1"
+      ]
+    },
+    {
+      "designNet": "AIN4_DIV_TAP4",
+      "kicadNet": "Net-(R70-Pad2)",
+      "pins": [
+        "R70.2",
+        "R71.1"
+      ]
+    }
+  ],
+  "footprintGeometryChecks": [
+    {
+      "footprint": "N_FET",
+      "errors": [],
+      "courtyardMm": [
+        3.8,
+        4.15
+      ],
+      "minimumMarginMm": 0.2515,
+      "passed": true
+    },
+    {
+      "footprint": "P_FET",
+      "errors": [],
+      "courtyardMm": [
+        3.8,
+        4.15
+      ],
+      "minimumMarginMm": 0.2515,
+      "passed": true
+    },
+    {
+      "footprint": "PHOTO_PV",
+      "errors": [],
+      "courtyardMm": [
+        5.5,
+        7.9
+      ],
+      "minimumMarginMm": 0.25,
+      "passed": true
+    },
+    {
+      "footprint": "PHOTO_MOS",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "footprint": "SHUNT4",
+      "errors": [],
+      "courtyardMm": [
+        8.8,
+        4.8
+      ],
+      "minimumMarginMm": 0.27,
+      "passed": true
+    },
+    {
+      "footprint": "SW4",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "footprint": "USB_C_HRO_TYPE_C_31_M_12",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "footprint": "DC_XKB_DC005_5A_2_0",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "bindingSha256": "4b9259bdc3fdf35ef520216ba28dc58879ba8183341973c91f53fb7dbdf20b3e",
+  "baselineSha256": "e3e691f8295cbe39ceae7f1372d61cf7c5ed53f65fdedbc18d092e08d3ef2820",
+  "schematicSha256": {
+    "01_power.kicad_sch": "8692a9e17f0004001420a2cd71ebaeca7e79d5975b3f632a64024b284bc7c1e5",
+    "02_controller.kicad_sch": "91116875539b41dcae5892d7406ba678f3456c4652c98b1c1bfcd71c72a4f7f9",
+    "03_keys.kicad_sch": "a16d9405df50a752b780191a9b6e017a0c00419570f5dd5a7f7c779a9b7ae3c2",
+    "04_source_switch.kicad_sch": "34a834e7b9235f1687922f5b9985ca4bb3c1117058f993e1109d5988e912ac22",
+    "05_charger.kicad_sch": "4e2c76e06379736ba82decbdab7ef067fa78544bb5ead6e7efa7fe99b784dece",
+    "06_current_sense.kicad_sch": "9c90e7ba3b8b60dc12640349a2446261a1f66bd8ec714f19a35e0fcfc11d9f45",
+    "07_voltage_sense.kicad_sch": "98af53cbd43d8217100a0d0616db6415e28ad7702b8ee742de72b0e375b1d96e",
+    "08_uart.kicad_sch": "a182ca37bdfa49e65f94912ca94150b6c9f6feb30768e652c489abc56ef0eb92",
+    "AI_MCUTOOL.kicad_sch": "42152b3d2445a9c2a1ca3251f262af9cfa56e06ee515bc1463e3fa198d568c5c"
+  },
+  "errors": [],
+  "cli": [
+    {
+      "command": [
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\hardware\\kicad\\verification\\netlist.xml"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\hardware\\kicad\\verification\\erc.json"
+      ],
+      "exitCode": 0,
+      "output": "发现 0 条违规项\n已将 ERC 报告保存到文件 D:/workspace/MCU_ESP/AI_MCUTOOL/hardware/kicad/verification/erc.json\n"
+    },
+    {
+      "command": [
+        "sch",
+        "export",
+        "bom",
+        "--fields",
+        "Reference,Value,Manufacturer Part,Footprint,QUANTITY,Footprint Status",
+        "--labels",
+        "位号,图纸值,制造商料号,封装,数量,封装状态",
+        "-o",
+        "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\hardware\\kicad\\AI_MCUTOOL-BOM.csv"
+      ],
+      "exitCode": 0,
+      "output": "写入物料清单到 'D:/workspace/MCU_ESP/AI_MCUTOOL/hardware/kicad/AI_MCUTOOL-BOM.csv'。\n"
+    }
+  ]
+}

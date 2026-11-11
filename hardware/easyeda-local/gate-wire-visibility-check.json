@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-02",
+  "cause": "Q8/Q10栅极导线在符号内部折返，被符号遮挡；电气上原已相连",
+  "fixedRefs": [
+    "Q8",
+    "Q10"
+  ],
+  "functionalConnectionsUnchanged": true,
+  "preservedNamedNets": true,
+  "gateAndSourcePinsChecked": [
+    {
+      "upper": "Q8",
+      "lower": "Q9",
+      "driver": "U10",
+      "gateNet": "$4N94",
+      "gatePins": [
+        [
+          "Q8",
+          "4"
+        ],
+        [
+          "Q9",
+          "4"
+        ],
+        [
+          "U10",
+          "4"
+        ]
+      ],
+      "sourcePins": [
+        [
+          "Q8",
+          "1"
+        ],
+        [
+          "Q8",
+          "2"
+        ],
+        [
+          "Q8",
+          "3"
+        ],
+        [
+          "Q9",
+          "1"
+        ],
+        [
+          "Q9",
+          "2"
+        ],
+        [
+          "Q9",
+          "3"
+        ],
+        [
+          "U10",
+          "3"
+        ]
+      ]
+    },
+    {
+      "upper": "Q10",
+      "lower": "Q11",
+      "driver": "U11",
+      "gateNet": "$4N77",
+      "gatePins": [
+        [
+          "Q10",
+          "4"
+        ],
+        [
+          "Q11",
+          "4"
+        ],
+        [
+          "U11",
+          "4"
+        ]
+      ],
+      "sourcePins": [
+        [
+          "Q10",
+          "1"
+        ],
+        [
+          "Q10",
+          "2"
+        ],
+        [
+          "Q10",
+          "3"
+        ],
+        [
+          "Q11",
+          "1"
+        ],
+        [
+          "Q11",
+          "2"
+        ],
+        [
+          "Q11",
+          "3"
+        ],
+        [
+          "U11",
+          "3"
+        ]
+      ]
+    }
+  ],
+  "componentCount": 164,
+  "pinCount": 496,
+  "drc": [],
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "routeCrossingsHaveNoJunction": true
+}

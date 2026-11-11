@@ -1,0 +1,47 @@
+{
+  "id": "req_351",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T13:38:33.8692201Z",
+  "ok": true,
+  "result": {
+    "artifactId": "art_1f8f7628-475b-4bdc-9b6f-e9c68237990c",
+    "artifactPath": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.easyeda\\artifacts\\20261024-213833-schematic_export-1f8f7628.svg",
+    "bytes": 140662,
+    "fileName": "01-after.svg.svg",
+    "format": "svg",
+    "scope": "page",
+    "selectedCount": 0
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "1723f236624877be",
+    "documentType": "schematic",
+    "tabId": "1723f236624877be@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContextAvailable": true,
+  "artifacts": [
+    {
+      "id": "art_1f8f7628-475b-4bdc-9b6f-e9c68237990c",
+      "kind": "schematic_export",
+      "path": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.easyeda\\artifacts\\20261024-213833-schematic_export-1f8f7628.svg",
+      "fileName": "01-after.svg.svg",
+      "mimeType": "image/svg+xml",
+      "size": 140662,
+      "sha256": "13b553b4799b0ea232de1ffa9767c58052ff0c4179bc554bd72a6f3244020868"
+    }
+  ],
+  "seq": 411,
+  "seqAbandoned": 0
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "name": "hq.drc.v1.DrcService",
+    "methods": [
+      {
+        "name": "RunDrc",
+        "input": "hq.drc.v1.RunDrcRequest",
+        "output": "hq.drc.v1.RunDrcResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.fab.v1.EdaBomService",
+    "methods": [
+      {
+        "name": "GetBom",
+        "input": "hq.fab.v1.GetBomRequest",
+        "output": "hq.fab.v1.EdaBom"
+      },
+      {
+        "name": "WatchBom",
+        "input": "hq.fab.v1.WatchBomRequest",
+        "output": "hq.fab.v1.EdaBom"
+      }
+    ]
+  },
+  {
+    "name": "hq.host.v1.EdaHostInfoService",
+    "methods": [
+      {
+        "name": "GetEdaHostInfo",
+        "input": "hq.host.v1.GetEdaHostInfoRequest",
+        "output": "hq.host.v1.GetEdaHostInfoResponse"
+      },
+      {
+        "name": "GetEdaHostCapabilities",
+        "input": "hq.host.v1.GetEdaHostCapabilitiesRequest",
+        "output": "hq.host.v1.GetEdaHostCapabilitiesResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.host.v1.HostSessionService",
+    "methods": [
+      {
+        "name": "InitializeSession",
+        "input": "hq.host.v1.InitializeSessionRequest",
+        "output": "hq.host.v1.InitializeSessionResponse"
+      },
+      {
+        "name": "ShutdownSession",
+        "input": "hq.host.v1.ShutdownSessionRequest",
+        "output": "hq.host.v1.ShutdownSessionResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.ir.schematic.v1.NetListService",
+    "methods": [
+      {
+        "name": "GetSelectionNetList",
+        "input": "google.protobuf.Empty",
+        "output": "hq.ir.schematic.v1.GetNetListResponse"
+      },
+      {
+        "name": "GetProjectNetList",
+        "input": "google.protobuf.Empty",
+        "output": "hq.ir.schematic.v1.GetNetListResponse"
+      },
+      {
+        "name": "GetActivePageNetList",
+        "input": "google.protobuf.Empty",
+        "output": "hq.ir.schematic.v1.GetNetListResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.pcb.v1.PcbLayoutService",
+    "methods": [
+      {
+        "name": "BindBoard",
+        "input": "hq.pcb.v1.BindBoardRequest",
+        "output": "hq.pcb.v1.BindBoardResponse"
+      },
+      {
+        "name": "GetLayoutModel",
+        "input": "hq.pcb.v1.GetLayoutModelRequest",
+        "output": "hq.pcb.v1.GetLayoutModelResponse"
+      },
+      {
+        "name": "ApplyPlacement",
+        "input": "hq.pcb.v1.ApplyPlacementRequest",
+        "output": "hq.pcb.v1.ApplyPlacementResponse"
+      },
+      {
+        "name": "ExportRoutingInput",
+        "input": "hq.pcb.v1.ExportRoutingInputRequest",
+        "output": "hq.pcb.v1.ExportRoutingInputResponse"
+      },
+      {
+        "name": "ApplyRouting",
+        "input": "hq.pcb.v1.ApplyRoutingRequest",
+        "output": "hq.pcb.v1.ApplyRoutingResponse"
+      },
+      {
+        "name": "EnsureCopperPour",
+        "input": "hq.pcb.v1.EnsureCopperPourRequest",
+        "output": "hq.pcb.v1.EnsureCopperPourResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.pcb.v1.PcbQueryService",
+    "methods": [
+      {
+        "name": "GetSelection",
+        "input": "google.protobuf.Empty",
+        "output": "hq.pcb.v1.PcbSnapshot"
+      },
+      {
+        "name": "GetBoard",
+        "input": "google.protobuf.Empty",
+        "output": "hq.pcb.v1.PcbSnapshot"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.AuthService",
+    "methods": [
+      {
+        "name": "TriggerLoginDialog",
+        "input": "google.protobuf.Empty",
+        "output": "google.protobuf.Empty"
+      },
+      {
+        "name": "TriggerLogout",
+        "input": "google.protobuf.Empty",
+        "output": "google.protobuf.Empty"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.ContextService",
+    "methods": [
+      {
+        "name": "GetContext",
+        "input": "hq.services.v1.GetContextRequest",
+        "output": "hq.services.v1.GetContextResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.ERCService",
+    "methods": [
+      {
+        "name": "RunChecks",
+        "input": "hq.services.v1.RunChecksRequest",
+        "output": "hq.services.v1.RunChecksResponse"
+      },
+      {
+        "name": "ShowFindings",
+        "input": "hq.services.v1.ShowFindingsRequest",
+        "output": "hq.services.v1.ShowFindingsResponse"
+      },
+      {
+        "name": "ClearFindings",
+        "input": "hq.services.v1.ClearFindingsRequest",
+        "output": "hq.services.v1.ClearFindingsResponse"
+      },
+      {
+        "name": "ClearAllFindings",
+        "input": "hq.services.v1.ClearAllFindingsRequest",
+        "output": "hq.services.v1.ClearFindingsResponse"
+      },
+      {
+        "name": "SetReportWebviewState",
+        "input": "hq.services.v1.SetReportWebviewStateRequest",
+        "output": "hq.services.v1.SetReportWebviewStateResponse"
+      },
+      {
+        "name": "SetErcReportWebviewVisibility",
+        "input": "hq.services.v1.SetErcReportWebviewVisibilityRequest",
+        "output": "hq.services.v1.SetErcReportWebviewVisibilityResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.EventService",
+    "methods": [
+      {
+        "name": "Subscribe",
+        "input": "hq.services.v1.SubscribeRequest",
+        "output": "hq.common.v1.EventEnvelope"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.ImportService",
+    "methods": [
+      {
+        "name": "ImportDesign",
+        "input": "hq.services.v1.ImportDesignRequest",
+        "output": "hq.services.v1.ImportDesignResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.InteractivePlaceService",
+    "methods": [
+      {
+        "name": "InteractivePlaceComponentContent",
+        "input": "hq.services.v1.InteractivePlaceComponentRequest",
+        "output": "hq.services.v1.InteractivePlaceComponentResponse"
+      },
+      {
+        "name": "InteractivePlaceDesignContent",
+        "input": "hq.services.v1.InteractivePlaceDesignBlockRequest",
+        "output": "hq.services.v1.InteractivePlaceDesignBlockResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.KernelService",
+    "methods": [
+      {
+        "name": "GetSnapshot",
+        "input": "hq.services.v1.GetSnapshotRequest",
+        "output": "hq.services.v1.GetSnapshotResponse"
+      },
+      {
+        "name": "GetEntity",
+        "input": "hq.services.v1.GetEntityRequest",
+        "output": "hq.services.v1.GetEntityResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.ProjectService",
+    "methods": [
+      {
+        "name": "OpenProject",
+        "input": "hq.services.v1.OpenProjectRequest",
+        "output": "hq.services.v1.OpenProjectResponse"
+      },
+      {
+        "name": "SaveProject",
+        "input": "hq.services.v1.SaveProjectRequest",
+        "output": "hq.services.v1.SaveProjectResponse"
+      },
+      {
+        "name": "CloseProject",
+        "input": "hq.services.v1.CloseProjectRequest",
+        "output": "hq.services.v1.CloseProjectResponse"
+      },
+      {
+        "name": "GetProject",
+        "input": "hq.services.v1.GetProjectRequest",
+        "output": "hq.services.v1.GetProjectResponse"
+      },
+      {
+        "name": "ListOpenProjects",
+        "input": "hq.services.v1.ListOpenProjectsRequest",
+        "output": "hq.services.v1.ListOpenProjectsResponse"
+      },
+      {
+        "name": "GetActiveProject",
+        "input": "hq.services.v1.GetActiveProjectRequest",
+        "output": "hq.services.v1.GetActiveProjectResponse"
+      },
+      {
+        "name": "CreateProject",
+        "input": "hq.services.v1.CreateProjectRequest",
+        "output": "hq.services.v1.CreateProjectResponse"
+      },
+      {
+        "name": "AddPageToProject",
+        "input": "hq.services.v1.AddPageToProjectRequest",
+        "output": "hq.services.v1.AddPageToProjectResponse"
+      },
+      {
+        "name": "ActivatePageInProject",
+        "input": "hq.services.v1.ActivatePageInProjectRequest",
+        "output": "hq.services.v1.ActivatePageInProjectResponse"
+      },
+      {
+        "name": "ListProjectTree",
+        "input": "hq.services.v1.ListProjectTreeRequest",
+        "output": "hq.services.v1.ListProjectTreeResponse"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.RuntimeService",
+    "methods": [
+      {
+        "name": "ExecuteCommands",
+        "input": "hq.runtime.v1.ExecuteCommandsRequest",
+        "output": "hq.runtime.v1.ExecuteCommandsResponse"
+      },
+      {
+        "name": "ValidateCommands",
+        "input": "hq.runtime.v1.ValidationRequest",
+        "output": "hq.runtime.v1.ValidationResult"
+      }
+    ]
+  },
+  {
+    "name": "hq.services.v1.SelectionService",
+    "methods": [
+      {
+        "name": "GetSelection",
+        "input": "hq.services.v1.GetSelectionRequest",
+        "output": "hq.services.v1.GetSelectionResponse"
+      },
+      {
+        "name": "SetSelection",
+        "input": "hq.services.v1.SetSelectionRequest",
+        "output": "hq.services.v1.SetSelectionResponse"
+      },
+      {
+        "name": "ClearSelection",
+        "input": "hq.services.v1.ClearSelectionRequest",
+        "output": "hq.services.v1.ClearSelectionResponse"
+      }
+    ]
+  }
+]

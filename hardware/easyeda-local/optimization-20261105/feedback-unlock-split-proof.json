@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "U14",
+    "removedSplitTail": {
+      "endX": 2356.2559,
+      "endY": 1420.2264,
+      "layer": 1,
+      "lineWidth": 7.874,
+      "locked": false,
+      "net": "$7N201",
+      "primitiveId": "62fd1b160bc5d5e9",
+      "startX": 2356.2559,
+      "startY": 1405.5
+    },
+    "reason": "unlock split original vertical at the ADC branch junction"
+  },
+  {
+    "ref": "U18",
+    "removedSplitTail": {
+      "endX": 2356.2559,
+      "endY": 1146.2671,
+      "layer": 1,
+      "lineWidth": 7.874,
+      "locked": false,
+      "net": "$7N202",
+      "primitiveId": "f2a9c76bc5c00c3c",
+      "startX": 2356.2559,
+      "startY": 1129.9
+    },
+    "reason": "unlock split original vertical at the ADC branch junction"
+  },
+  {
+    "ref": "U19",
+    "removedSplitTail": {
+      "endX": 2356.2559,
+      "endY": 870.6678,
+      "layer": 1,
+      "lineWidth": 7.874,
+      "locked": false,
+      "net": "$7N203",
+      "primitiveId": "21d7de4d22fe9273",
+      "startX": 2356.2559,
+      "startY": 854.3
+    },
+    "reason": "unlock split original vertical at the ADC branch junction"
+  }
+]

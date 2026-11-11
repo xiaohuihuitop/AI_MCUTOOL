@@ -1,0 +1,1347 @@
+{
+  "schema": "ai-mcutool-connectivity-baseline/1",
+  "provenance": "从本次修复前已通过独立审查的verification/check.json端点集合及netlist.xml的NC集合恢复；不是从修复后的工程自动更新基准。",
+  "originalBindingSha256": "4b9259bdc3fdf35ef520216ba28dc58879ba8183341973c91f53fb7dbdf20b3e",
+  "schematicSha256": {
+    "01_power.kicad_sch": "77b5de6e8fe5dfa8034151f80e2a65eb7680eda364b78fca9214823222d6db5c",
+    "02_controller.kicad_sch": "a63842ebe0c6a3a1888ef7847d0356769ff8ef8e30c271b675ef45369ce4281e",
+    "03_keys.kicad_sch": "e9cd7b4bd084b8ff5238328f0db3f29950db6cc7d9e2a8aa337de27beb6ba5e5",
+    "04_source_switch.kicad_sch": "b703c3878110cb85ec736f1344b76e47fb1300a296b0a3194aa74594c27806b5",
+    "05_charger.kicad_sch": "f5d1143925daa506aebfdde952b2c08bfa049efa2599cd13c3b4b4d8f4210390",
+    "06_current_sense.kicad_sch": "84d69fb8e6bdb09ed6e5d5ab8da63ee6a2212fb70d71fb10d5827b882ef82b5a",
+    "07_voltage_sense.kicad_sch": "5c5430e565af36cb097b4c8fa7588ea86444a71df3dd6fe78b41c6097784ebd9",
+    "08_uart.kicad_sch": "90aa6d7d3be0a04a43b444c572a59b30eefcb9bc369785b80f7600147521c15f",
+    "AI_MCUTOOL.kicad_sch": "9e2726cf531f61293e3505ba901d87dc7406c27d94fa61b355488fa92343945d"
+  },
+  "sourceCheckSha256": "7f79b5ade146b42f8b3867f2b298548351090cccb8ca2207b8432a49eafac304",
+  "components": [
+    {
+      "ref": "C1",
+      "pins": {
+        "1": "DC_IN_5V",
+        "2": "COMMON_GND"
+      }
+    },
+    {
+      "ref": "J1",
+      "pins": {
+        "1": "DC_IN_5V",
+        "2": "COMMON_GND",
+        "3": null
+      }
+    },
+    {
+      "ref": "R1",
+      "pins": {
+        "1": "DC_IN_5V",
+        "2": "COMMON_GND"
+      }
+    },
+    {
+      "ref": "U1",
+      "pins": {
+        "1": "DC_IN_5V",
+        "2": "COMMON_GND",
+        "4": "COMMON_GND",
+        "5": "COMMON_GND",
+        "3": "LDO_VIN",
+        "6": "LDO_VIN"
+      }
+    },
+    {
+      "ref": "C10",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV1"
+      }
+    },
+    {
+      "ref": "C11",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ADC_CH1"
+      }
+    },
+    {
+      "ref": "C12",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV2"
+      }
+    },
+    {
+      "ref": "C13",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ADC_CH2"
+      }
+    },
+    {
+      "ref": "C14",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV3"
+      }
+    },
+    {
+      "ref": "C15",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ADC_CH3"
+      }
+    },
+    {
+      "ref": "C16",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV4"
+      }
+    },
+    {
+      "ref": "C17",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ADC_CH4"
+      }
+    },
+    {
+      "ref": "C18",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C2",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TYPEC_IN_5V"
+      }
+    },
+    {
+      "ref": "C20",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C22",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "LM_CRES"
+      }
+    },
+    {
+      "ref": "C23",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "VNEG"
+      }
+    },
+    {
+      "ref": "C24",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "VNEG"
+      }
+    },
+    {
+      "ref": "C25",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C26",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C27",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C3",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "LDO_VIN"
+      }
+    },
+    {
+      "ref": "C4",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C5",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C6",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "C7",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ESP_EN"
+      }
+    },
+    {
+      "ref": "C9",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "J10",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "EXT_IN_P"
+      }
+    },
+    {
+      "ref": "J11",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DUT_PWR_P"
+      }
+    },
+    {
+      "ref": "J12",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "CHG_IN_P"
+      }
+    },
+    {
+      "ref": "J13",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DUT_CHG_P"
+      }
+    },
+    {
+      "ref": "J14",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "AIN1"
+      }
+    },
+    {
+      "ref": "J15",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "AIN2"
+      }
+    },
+    {
+      "ref": "J16",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "AIN3"
+      }
+    },
+    {
+      "ref": "J17",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "AIN4"
+      }
+    },
+    {
+      "ref": "J18",
+      "pins": {
+        "3": "COMMON_GND",
+        "1": "TOOL_TX",
+        "2": "TOOL_RX"
+      }
+    },
+    {
+      "ref": "J2",
+      "pins": {
+        "1": "COMMON_GND",
+        "2": "COMMON_GND",
+        "3": "COMMON_GND",
+        "4": "COMMON_GND",
+        "A1B12": "COMMON_GND",
+        "B1A12": "COMMON_GND",
+        "A4B9": "TYPEC_IN_5V",
+        "B4A9": "TYPEC_IN_5V",
+        "A5": "TYPEC_CC1",
+        "B5": "TYPEC_CC2",
+        "A6": null,
+        "A7": null,
+        "A8": null,
+        "B6": null,
+        "B7": null,
+        "B8": null
+      }
+    },
+    {
+      "ref": "J3",
+      "pins": {
+        "3": "COMMON_GND",
+        "5": "ESP_EN",
+        "4": "ESP_BOOT",
+        "2": "UART0_RX",
+        "1": "UART0_TX"
+      }
+    },
+    {
+      "ref": "J9",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "BAT_IN_P"
+      }
+    },
+    {
+      "ref": "LED1",
+      "pins": {
+        "1": "COMMON_GND",
+        "2": "LED1_A"
+      }
+    },
+    {
+      "ref": "LED2",
+      "pins": {
+        "1": "COMMON_GND",
+        "2": "LED2_A"
+      }
+    },
+    {
+      "ref": "Q1",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "KEY1_LED_K",
+        "1": "KEY1_BASE"
+      }
+    },
+    {
+      "ref": "Q14",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "CHG_BASE",
+        "3": "CHG_GATE_SINK"
+      }
+    },
+    {
+      "ref": "Q2",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "KEY2_LED_K",
+        "1": "KEY2_BASE"
+      }
+    },
+    {
+      "ref": "Q3",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "KEY3_LED_K",
+        "1": "KEY3_BASE"
+      }
+    },
+    {
+      "ref": "Q4",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "KEY4_LED_K",
+        "1": "KEY4_BASE"
+      }
+    },
+    {
+      "ref": "Q5",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "KEY5_LED_K",
+        "1": "KEY5_BASE"
+      }
+    },
+    {
+      "ref": "Q6",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "BAT_PV_K",
+        "1": "BAT_BASE"
+      }
+    },
+    {
+      "ref": "Q7",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "EXT_PV_K",
+        "1": "EXT_BASE"
+      }
+    },
+    {
+      "ref": "R14",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "KEY1_BASE"
+      }
+    },
+    {
+      "ref": "R17",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "KEY2_BASE"
+      }
+    },
+    {
+      "ref": "R2",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TYPEC_IN_5V"
+      }
+    },
+    {
+      "ref": "R20",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "KEY3_BASE"
+      }
+    },
+    {
+      "ref": "R23",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "KEY4_BASE"
+      }
+    },
+    {
+      "ref": "R26",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "KEY5_BASE"
+      }
+    },
+    {
+      "ref": "R29",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "BAT_BASE"
+      }
+    },
+    {
+      "ref": "R3",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TYPEC_CC1"
+      }
+    },
+    {
+      "ref": "R32",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "EXT_BASE"
+      }
+    },
+    {
+      "ref": "R36",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "CHG_BASE"
+      }
+    },
+    {
+      "ref": "R4",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "TYPEC_CC2"
+      }
+    },
+    {
+      "ref": "R45",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV1"
+      }
+    },
+    {
+      "ref": "R54",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV2"
+      }
+    },
+    {
+      "ref": "R63",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV3"
+      }
+    },
+    {
+      "ref": "R7",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ESP_IO46_STRAP"
+      }
+    },
+    {
+      "ref": "R72",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "DIV4"
+      }
+    },
+    {
+      "ref": "R78",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "UART_RX_IN"
+      }
+    },
+    {
+      "ref": "R8",
+      "pins": {
+        "2": "COMMON_GND",
+        "1": "ESP_IO3_STRAP"
+      }
+    },
+    {
+      "ref": "SW1",
+      "pins": {
+        "3": "COMMON_GND",
+        "4": "COMMON_GND",
+        "1": "ESP_EN",
+        "2": "ESP_EN"
+      }
+    },
+    {
+      "ref": "SW2",
+      "pins": {
+        "3": "COMMON_GND",
+        "4": "COMMON_GND",
+        "1": "ESP_BOOT",
+        "2": "ESP_BOOT"
+      }
+    },
+    {
+      "ref": "SW3",
+      "pins": {
+        "3": "COMMON_GND",
+        "4": "COMMON_GND",
+        "1": "CONFIG_KEY",
+        "2": "CONFIG_KEY"
+      }
+    },
+    {
+      "ref": "U12",
+      "pins": {
+        "1": "COMMON_GND",
+        "2": "COMMON_GND",
+        "7": "COMMON_GND",
+        "6": "TOOL_3V3",
+        "3": "CURRENT_ALERT",
+        "4": "I2C_SDA",
+        "5": "I2C_SCL",
+        "8": "DUT_PWR_P",
+        "9": "INA_IN_N",
+        "10": "INA_IN_P"
+      }
+    },
+    {
+      "ref": "U13",
+      "pins": {
+        "1": "COMMON_GND",
+        "3": "COMMON_GND",
+        "8": "TOOL_3V3",
+        "9": "I2C_SDA",
+        "10": "I2C_SCL",
+        "4": "ADC_CH1",
+        "5": "ADC_CH2",
+        "6": "ADC_CH3",
+        "7": "ADC_CH4",
+        "2": null
+      }
+    },
+    {
+      "ref": "U15",
+      "pins": {
+        "2": "COMMON_GND",
+        "3": "COMMON_GND",
+        "5": "COMMON_GND",
+        "4": "TOOL_3V3",
+        "6": "VNEG",
+        "1": "LM_CF_P",
+        "7": "LM_CRES",
+        "8": "LM_CF_N"
+      }
+    },
+    {
+      "ref": "U16",
+      "pins": {
+        "3": "COMMON_GND",
+        "5": "TOOL_3V3",
+        "2": "DUT_UART_TX",
+        "1": "UART_TX_NOE",
+        "4": "UART_TX_BUF"
+      }
+    },
+    {
+      "ref": "U17",
+      "pins": {
+        "3": "COMMON_GND",
+        "5": "TOOL_3V3",
+        "4": "DUT_UART_RX",
+        "2": "UART_RX_IN",
+        "1": null
+      }
+    },
+    {
+      "ref": "U2",
+      "pins": {
+        "2": "COMMON_GND",
+        "4": "COMMON_GND",
+        "5": "COMMON_GND",
+        "1": "TYPEC_IN_5V",
+        "3": "LDO_VIN",
+        "6": "LDO_VIN"
+      }
+    },
+    {
+      "ref": "U3",
+      "pins": {
+        "1": "COMMON_GND",
+        "3": "LDO_VIN",
+        "2": "TOOL_3V3",
+        "4": "TOOL_3V3"
+      }
+    },
+    {
+      "ref": "U4",
+      "pins": {
+        "1": "COMMON_GND",
+        "40": "COMMON_GND",
+        "41": "COMMON_GND",
+        "2": "TOOL_3V3",
+        "3": "ESP_EN",
+        "4": "KEY1_CTRL",
+        "5": "KEY2_CTRL",
+        "6": "KEY3_CTRL",
+        "7": "KEY4_CTRL",
+        "8": "DUT_UART_RX",
+        "9": "STATUS_LED",
+        "10": "CONFIG_KEY",
+        "11": "CURRENT_ALERT",
+        "12": "KEY5_CTRL",
+        "15": "ESP_IO3_STRAP",
+        "16": "ESP_IO46_STRAP",
+        "17": "I2C_SDA",
+        "18": "I2C_SCL",
+        "19": "BAT_PATH_EN",
+        "20": "EXT_PATH_EN",
+        "21": "CHARGE_PATH_EN",
+        "22": "DUT_UART_TX",
+        "27": "ESP_BOOT",
+        "31": "UART_TX_NOE",
+        "36": "UART0_RX",
+        "37": "UART0_TX",
+        "39": null,
+        "38": null,
+        "23": null,
+        "28": null,
+        "29": null,
+        "30": null,
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "26": null,
+        "24": null,
+        "25": null,
+        "14": null,
+        "13": null
+      }
+    },
+    {
+      "ref": "C19",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "VNEG"
+      }
+    },
+    {
+      "ref": "R10",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "LED1_A"
+      }
+    },
+    {
+      "ref": "R12",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "KEY1_LED_A"
+      }
+    },
+    {
+      "ref": "R15",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "KEY2_LED_A"
+      }
+    },
+    {
+      "ref": "R18",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "KEY3_LED_A"
+      }
+    },
+    {
+      "ref": "R21",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "KEY4_LED_A"
+      }
+    },
+    {
+      "ref": "R24",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "KEY5_LED_A"
+      }
+    },
+    {
+      "ref": "R27",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "BAT_PV_A"
+      }
+    },
+    {
+      "ref": "R30",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "EXT_PV_A"
+      }
+    },
+    {
+      "ref": "R39",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "CURRENT_ALERT"
+      }
+    },
+    {
+      "ref": "R5",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "ESP_EN"
+      }
+    },
+    {
+      "ref": "R6",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "ESP_BOOT"
+      }
+    },
+    {
+      "ref": "R76",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "UART_TX_NOE"
+      }
+    },
+    {
+      "ref": "R77",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "DUT_UART_TX"
+      }
+    },
+    {
+      "ref": "R81",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "I2C_SDA"
+      }
+    },
+    {
+      "ref": "R82",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "I2C_SCL"
+      }
+    },
+    {
+      "ref": "R9",
+      "pins": {
+        "1": "TOOL_3V3",
+        "2": "CONFIG_KEY"
+      }
+    },
+    {
+      "ref": "U14",
+      "pins": {
+        "4": "TOOL_3V3",
+        "3": "DIV1",
+        "1": "BUF1",
+        "2": "FB1",
+        "11": "VNEG",
+        "5": "DIV2",
+        "7": "BUF2",
+        "6": "FB2",
+        "10": "DIV3",
+        "8": "BUF3",
+        "9": "FB3",
+        "12": "DIV4",
+        "14": "BUF4",
+        "13": "FB4"
+      }
+    },
+    {
+      "ref": "R13",
+      "pins": {
+        "1": "KEY1_CTRL",
+        "2": "KEY1_BASE"
+      }
+    },
+    {
+      "ref": "R16",
+      "pins": {
+        "1": "KEY2_CTRL",
+        "2": "KEY2_BASE"
+      }
+    },
+    {
+      "ref": "R19",
+      "pins": {
+        "1": "KEY3_CTRL",
+        "2": "KEY3_BASE"
+      }
+    },
+    {
+      "ref": "R22",
+      "pins": {
+        "1": "KEY4_CTRL",
+        "2": "KEY4_BASE"
+      }
+    },
+    {
+      "ref": "R11",
+      "pins": {
+        "1": "STATUS_LED",
+        "2": "LED2_A"
+      }
+    },
+    {
+      "ref": "R25",
+      "pins": {
+        "1": "KEY5_CTRL",
+        "2": "KEY5_BASE"
+      }
+    },
+    {
+      "ref": "R28",
+      "pins": {
+        "1": "BAT_PATH_EN",
+        "2": "BAT_BASE"
+      }
+    },
+    {
+      "ref": "R31",
+      "pins": {
+        "1": "EXT_PATH_EN",
+        "2": "EXT_BASE"
+      }
+    },
+    {
+      "ref": "R35",
+      "pins": {
+        "1": "CHARGE_PATH_EN",
+        "2": "CHG_BASE"
+      }
+    },
+    {
+      "ref": "U5",
+      "pins": {
+        "1": "KEY1_LED_A",
+        "3": "KEY1_LED_K",
+        "4": "KEY1_A",
+        "6": "KEY1_B"
+      }
+    },
+    {
+      "ref": "J4",
+      "pins": {
+        "1": "KEY1_A",
+        "2": "KEY1_B"
+      }
+    },
+    {
+      "ref": "U6",
+      "pins": {
+        "1": "KEY2_LED_A",
+        "3": "KEY2_LED_K",
+        "4": "KEY2_A",
+        "6": "KEY2_B"
+      }
+    },
+    {
+      "ref": "J5",
+      "pins": {
+        "1": "KEY2_A",
+        "2": "KEY2_B"
+      }
+    },
+    {
+      "ref": "U7",
+      "pins": {
+        "1": "KEY3_LED_A",
+        "3": "KEY3_LED_K",
+        "4": "KEY3_A",
+        "6": "KEY3_B"
+      }
+    },
+    {
+      "ref": "J6",
+      "pins": {
+        "1": "KEY3_A",
+        "2": "KEY3_B"
+      }
+    },
+    {
+      "ref": "U8",
+      "pins": {
+        "1": "KEY4_LED_A",
+        "3": "KEY4_LED_K",
+        "4": "KEY4_A",
+        "6": "KEY4_B"
+      }
+    },
+    {
+      "ref": "J7",
+      "pins": {
+        "1": "KEY4_A",
+        "2": "KEY4_B"
+      }
+    },
+    {
+      "ref": "U9",
+      "pins": {
+        "1": "KEY5_LED_A",
+        "3": "KEY5_LED_K",
+        "4": "KEY5_A",
+        "6": "KEY5_B"
+      }
+    },
+    {
+      "ref": "J8",
+      "pins": {
+        "1": "KEY5_A",
+        "2": "KEY5_B"
+      }
+    },
+    {
+      "ref": "U10",
+      "pins": {
+        "1": "BAT_PV_A",
+        "2": "BAT_PV_K",
+        "3": "SCOM_BAT",
+        "4": "GCOM_BAT"
+      }
+    },
+    {
+      "ref": "Q8",
+      "pins": {
+        "1": "SCOM_BAT",
+        "2": "SCOM_BAT",
+        "3": "SCOM_BAT",
+        "4": "GCOM_BAT",
+        "5": "BAT_IN_P",
+        "6": "BAT_IN_P",
+        "7": "BAT_IN_P",
+        "8": "BAT_IN_P",
+        "9": "BAT_IN_P"
+      }
+    },
+    {
+      "ref": "Q9",
+      "pins": {
+        "1": "SCOM_BAT",
+        "2": "SCOM_BAT",
+        "3": "SCOM_BAT",
+        "4": "GCOM_BAT",
+        "5": "VSEL_P",
+        "6": "VSEL_P",
+        "7": "VSEL_P",
+        "8": "VSEL_P",
+        "9": "VSEL_P"
+      }
+    },
+    {
+      "ref": "Q11",
+      "pins": {
+        "5": "VSEL_P",
+        "6": "VSEL_P",
+        "7": "VSEL_P",
+        "8": "VSEL_P",
+        "9": "VSEL_P",
+        "1": "SCOM_EXT",
+        "2": "SCOM_EXT",
+        "3": "SCOM_EXT",
+        "4": "GCOM_EXT"
+      }
+    },
+    {
+      "ref": "RSH1",
+      "pins": {
+        "4": "VSEL_P",
+        "1": "DUT_PWR_P",
+        "2": "SHUNT_E2",
+        "3": "SHUNT_E1"
+      }
+    },
+    {
+      "ref": "U11",
+      "pins": {
+        "1": "EXT_PV_A",
+        "2": "EXT_PV_K",
+        "3": "SCOM_EXT",
+        "4": "GCOM_EXT"
+      }
+    },
+    {
+      "ref": "Q10",
+      "pins": {
+        "1": "SCOM_EXT",
+        "2": "SCOM_EXT",
+        "3": "SCOM_EXT",
+        "4": "GCOM_EXT",
+        "5": "EXT_IN_P",
+        "6": "EXT_IN_P",
+        "7": "EXT_IN_P",
+        "8": "EXT_IN_P",
+        "9": "EXT_IN_P"
+      }
+    },
+    {
+      "ref": "Q12",
+      "pins": {
+        "1": "CHG_IN_P",
+        "2": "CHG_IN_P",
+        "3": "CHG_IN_P",
+        "4": "GCOM_CHG",
+        "5": "SCOM_CHG",
+        "6": "SCOM_CHG",
+        "7": "SCOM_CHG",
+        "8": "SCOM_CHG",
+        "9": "SCOM_CHG"
+      }
+    },
+    {
+      "ref": "Q13",
+      "pins": {
+        "4": "GCOM_CHG",
+        "5": "SCOM_CHG",
+        "6": "SCOM_CHG",
+        "7": "SCOM_CHG",
+        "8": "SCOM_CHG",
+        "9": "SCOM_CHG",
+        "1": "DUT_CHG_P",
+        "2": "DUT_CHG_P",
+        "3": "DUT_CHG_P"
+      }
+    },
+    {
+      "ref": "R33",
+      "pins": {
+        "1": "GCOM_CHG",
+        "2": "SCOM_CHG"
+      }
+    },
+    {
+      "ref": "R34",
+      "pins": {
+        "1": "GCOM_CHG",
+        "2": "CHG_GATE_SINK"
+      }
+    },
+    {
+      "ref": "R38",
+      "pins": {
+        "1": "SHUNT_E2",
+        "2": "INA_IN_N"
+      }
+    },
+    {
+      "ref": "R37",
+      "pins": {
+        "1": "SHUNT_E1",
+        "2": "INA_IN_P"
+      }
+    },
+    {
+      "ref": "C8",
+      "pins": {
+        "2": "INA_IN_N",
+        "1": "INA_IN_P"
+      }
+    },
+    {
+      "ref": "R48",
+      "pins": {
+        "2": "ADC_CH1",
+        "1": "BUF1"
+      }
+    },
+    {
+      "ref": "R57",
+      "pins": {
+        "2": "ADC_CH2",
+        "1": "BUF2"
+      }
+    },
+    {
+      "ref": "R66",
+      "pins": {
+        "2": "ADC_CH3",
+        "1": "BUF3"
+      }
+    },
+    {
+      "ref": "R75",
+      "pins": {
+        "2": "ADC_CH4",
+        "1": "BUF4"
+      }
+    },
+    {
+      "ref": "R40",
+      "pins": {
+        "1": "AIN1",
+        "2": "AIN1_DIV_TAP1"
+      }
+    },
+    {
+      "ref": "R41",
+      "pins": {
+        "1": "AIN1_DIV_TAP1",
+        "2": "AIN1_DIV_TAP2"
+      }
+    },
+    {
+      "ref": "R42",
+      "pins": {
+        "1": "AIN1_DIV_TAP2",
+        "2": "AIN1_DIV_TAP3"
+      }
+    },
+    {
+      "ref": "R43",
+      "pins": {
+        "1": "AIN1_DIV_TAP3",
+        "2": "AIN1_DIV_TAP4"
+      }
+    },
+    {
+      "ref": "R44",
+      "pins": {
+        "1": "AIN1_DIV_TAP4",
+        "2": "DIV1"
+      }
+    },
+    {
+      "ref": "R46",
+      "pins": {
+        "1": "BUF1",
+        "2": "FB1"
+      }
+    },
+    {
+      "ref": "R47",
+      "pins": {
+        "1": "FB1",
+        "2": "VNEG"
+      }
+    },
+    {
+      "ref": "R56",
+      "pins": {
+        "2": "VNEG",
+        "1": "FB2"
+      }
+    },
+    {
+      "ref": "R65",
+      "pins": {
+        "2": "VNEG",
+        "1": "FB3"
+      }
+    },
+    {
+      "ref": "R74",
+      "pins": {
+        "2": "VNEG",
+        "1": "FB4"
+      }
+    },
+    {
+      "ref": "R49",
+      "pins": {
+        "1": "AIN2",
+        "2": "AIN2_DIV_TAP1"
+      }
+    },
+    {
+      "ref": "R50",
+      "pins": {
+        "1": "AIN2_DIV_TAP1",
+        "2": "AIN2_DIV_TAP2"
+      }
+    },
+    {
+      "ref": "R51",
+      "pins": {
+        "1": "AIN2_DIV_TAP2",
+        "2": "AIN2_DIV_TAP3"
+      }
+    },
+    {
+      "ref": "R52",
+      "pins": {
+        "1": "AIN2_DIV_TAP3",
+        "2": "AIN2_DIV_TAP4"
+      }
+    },
+    {
+      "ref": "R53",
+      "pins": {
+        "1": "AIN2_DIV_TAP4",
+        "2": "DIV2"
+      }
+    },
+    {
+      "ref": "R55",
+      "pins": {
+        "1": "BUF2",
+        "2": "FB2"
+      }
+    },
+    {
+      "ref": "R58",
+      "pins": {
+        "1": "AIN3",
+        "2": "AIN3_DIV_TAP1"
+      }
+    },
+    {
+      "ref": "R59",
+      "pins": {
+        "1": "AIN3_DIV_TAP1",
+        "2": "AIN3_DIV_TAP2"
+      }
+    },
+    {
+      "ref": "R60",
+      "pins": {
+        "1": "AIN3_DIV_TAP2",
+        "2": "AIN3_DIV_TAP3"
+      }
+    },
+    {
+      "ref": "R61",
+      "pins": {
+        "1": "AIN3_DIV_TAP3",
+        "2": "AIN3_DIV_TAP4"
+      }
+    },
+    {
+      "ref": "R62",
+      "pins": {
+        "1": "AIN3_DIV_TAP4",
+        "2": "DIV3"
+      }
+    },
+    {
+      "ref": "R64",
+      "pins": {
+        "1": "BUF3",
+        "2": "FB3"
+      }
+    },
+    {
+      "ref": "R67",
+      "pins": {
+        "1": "AIN4",
+        "2": "AIN4_DIV_TAP1"
+      }
+    },
+    {
+      "ref": "R68",
+      "pins": {
+        "1": "AIN4_DIV_TAP1",
+        "2": "AIN4_DIV_TAP2"
+      }
+    },
+    {
+      "ref": "R69",
+      "pins": {
+        "1": "AIN4_DIV_TAP2",
+        "2": "AIN4_DIV_TAP3"
+      }
+    },
+    {
+      "ref": "R70",
+      "pins": {
+        "1": "AIN4_DIV_TAP3",
+        "2": "AIN4_DIV_TAP4"
+      }
+    },
+    {
+      "ref": "R71",
+      "pins": {
+        "1": "AIN4_DIV_TAP4",
+        "2": "DIV4"
+      }
+    },
+    {
+      "ref": "R73",
+      "pins": {
+        "1": "BUF4",
+        "2": "FB4"
+      }
+    },
+    {
+      "ref": "C21",
+      "pins": {
+        "1": "LM_CF_P",
+        "2": "LM_CF_N"
+      }
+    },
+    {
+      "ref": "R79",
+      "pins": {
+        "1": "UART_TX_BUF",
+        "2": "TOOL_TX"
+      }
+    },
+    {
+      "ref": "R80",
+      "pins": {
+        "2": "UART_RX_IN",
+        "1": "TOOL_RX"
+      }
+    }
+  ]
+}

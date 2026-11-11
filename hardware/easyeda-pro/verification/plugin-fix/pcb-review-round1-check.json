@@ -1,0 +1,207 @@
+{
+  "passed": false,
+  "summary": {
+    "danglingEnds": 0,
+    "acuteAngles": 0,
+    "nonOrthogonal": 0,
+    "trackOverPad": 0,
+    "clearance": 0,
+    "silkscreenFlipped": 0,
+    "overlappingVias": 0,
+    "singleLayerVias": 0,
+    "widthMismatches": 0,
+    "duplicateSegments": 0,
+    "parallelCoupling": 0,
+    "antennaKeepout": 0,
+    "netlessPours": 0,
+    "viaCrossesPlane": 0,
+    "floatingIslands": 0,
+    "powerNotPoured": 1,
+    "netlessViaInPad": 0,
+    "widthUnderSpec": 0,
+    "silkOverPad": 0,
+    "silkOffBoard": 0,
+    "decapTooFar": 0,
+    "viaInPad": 0,
+    "copperNearEdge": 0,
+    "fiducialMissing": 1,
+    "zoneViolation": 0,
+    "internalOnEdge": 0,
+    "connectorPlugClearance": 7,
+    "connectorMatingBlocked": 0,
+    "connectorOpeningInward": 0,
+    "errors": 0,
+    "warnings": 8,
+    "total": 9
+  },
+  "trackCount": 0,
+  "viaCount": 0,
+  "padCount": 516,
+  "findings": [
+    {
+      "type": "fiducial-missing",
+      "level": "INFO",
+      "message": "board has 473 top-layer pads (SMT-scale) but only 0 fiducial(s) (FID*/MARK*) — SMT wants ≥3 non-collinear 1mm marks (JLC panel rails add their own; local marks needed for fine-pitch) [规范 §9 Mark点设计 — pcb-design-rules.md]"
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J14",
+      "primitives": [
+        "00f32e97e5e553e6",
+        "7ccb77fc1e2ecfb9"
+      ],
+      "message": "J14 ↔ J15 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J14 7.33mm[fallback], J15 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3385.8,
+        "y": 1347.62
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J15",
+      "primitives": [
+        "7ccb77fc1e2ecfb9",
+        "2397c817b28b7563"
+      ],
+      "message": "J15 ↔ J16 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J15 7.33mm[fallback], J16 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3385.83,
+        "y": 1072.03
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J16",
+      "primitives": [
+        "2397c817b28b7563",
+        "2ecee5a68634bd29"
+      ],
+      "message": "J16 ↔ J17 center distance 7.00mm (276mil) \u003c 7.33mm required by their plug envelopes (J16 7.33mm[fallback], J17 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 3385.84,
+        "y": 796.44
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J4",
+      "primitives": [
+        "37e0174b42d77a70",
+        "2f34f10777a64b8c"
+      ],
+      "message": "J4 ↔ J5 center distance 6.50mm (256mil) \u003c 7.33mm required by their plug envelopes (J4 7.33mm[fallback], J5 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 157.5,
+        "y": 3168.48
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J5",
+      "primitives": [
+        "2f34f10777a64b8c",
+        "673bfd008e0bc56d"
+      ],
+      "message": "J5 ↔ J6 center distance 6.50mm (256mil) \u003c 7.33mm required by their plug envelopes (J5 7.33mm[fallback], J6 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 157.51,
+        "y": 2912.59
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J6",
+      "primitives": [
+        "673bfd008e0bc56d",
+        "5caba9dff3f6db59"
+      ],
+      "message": "J6 ↔ J7 center distance 6.50mm (256mil) \u003c 7.33mm required by their plug envelopes (J6 7.33mm[fallback], J7 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 157.51,
+        "y": 2656.71
+      }
+    },
+    {
+      "type": "connector-plug-clearance",
+      "level": "WARN",
+      "designator": "J7",
+      "primitives": [
+        "5caba9dff3f6db59",
+        "0a857c34ba8f900f"
+      ],
+      "message": "J7 ↔ J8 center distance 6.50mm (256mil) \u003c 7.33mm required by their plug envelopes (J7 7.33mm[fallback], J8 7.33mm[fallback]) — the receptacle footprints may clear, but the plugs/overmolds will collide [plug-width=fallback — no envelope table entry, estimated from the rendered bbox] [规范 §3.5 插头护套包络 ≠ 母座本体宽 — pcb-design-rules.md]",
+      "at": {
+        "x": 157.49,
+        "y": 2400.82
+      }
+    },
+    {
+      "type": "power-not-poured",
+      "level": "WARN",
+      "net": "COMMON_GND",
+      "message": "power net COMMON_GND (105 pads) has no copper pour/plane — power should be poured, not carried by thin tracks: `pcb pour-fit --net COMMON_GND` (2-layer) or `pcb power-planes` (4-layer) [规范 §5.2 铺铜策略 — pcb-design-rules.md]"
+    }
+  ],
+  "limitations": [
+    "pad J2.A1B12: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.B1A12: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.B4A9: POLYGON pad geometry is not supported by pcb net-path",
+    "pad J2.A4B9: POLYGON pad geometry is not supported by pcb net-path",
+    "4 pad(s) have captured source shapes unsupported by exact pad-contact inspection"
+  ],
+  "incomplete": true,
+  "coverage": {
+    "complete": false,
+    "componentsInventoryKnown": true,
+    "padsInventoryKnown": true,
+    "componentCount": 164,
+    "totalPads": 516,
+    "knownGeometryPads": 512,
+    "unsupportedGeometryPads": 4,
+    "unknownGeometryPads": 0,
+    "legacyGeometryPads": 0,
+    "unverifiedPads": [
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e35",
+        "padNumber": "A1B12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e36",
+        "padNumber": "B1A12",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e37",
+        "padNumber": "B4A9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      },
+      {
+        "componentPrimitiveId": "a77429c96c0e1c51",
+        "designator": "J2",
+        "primitiveId": "a77429c96c0e1c51e38",
+        "padNumber": "A4B9",
+        "status": "unsupported",
+        "reason": "POLYGON pad geometry is not supported by pcb net-path"
+      }
+    ],
+    "limitations": [
+      "4 pad(s) have captured source shapes unsupported by exact pad-contact inspection"
+    ]
+  }
+}

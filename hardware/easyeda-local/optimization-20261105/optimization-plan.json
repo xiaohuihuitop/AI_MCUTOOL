@@ -1,0 +1,494 @@
+{
+  "deletedLineIds": [
+    "11c39265849c35b0",
+    "1507e9f0f8027142",
+    "1b993c8dafb18d9a",
+    "1ca367f93bc594e0",
+    "216af853cd430889",
+    "3669bf96808d9f41",
+    "3d9dfb1ab82bd155",
+    "45156fe9d86d62cb",
+    "66ce69ae73b711f4",
+    "6906eb7f0626f407",
+    "71335a9935744b51",
+    "729eb1565af505a4",
+    "89d6418b865bad80",
+    "9f14d2b8b8c4b71c",
+    "a1930b07724497c9",
+    "a31293113c08a15e",
+    "aec64879ee6fd5a4",
+    "bd78492ad6bb2fc7",
+    "d128644f4ee10f11",
+    "dbc6f6fa026055bb",
+    "dc6c8a821d4a88c9",
+    "dd294a36f92ced81",
+    "e409230f02599f31",
+    "f610c144bdeb343f"
+  ],
+  "lines": [
+    {
+      "net": "$7N201",
+      "layer": 1,
+      "a": [
+        60.617453059999995,
+        36.07375056
+      ],
+      "b": [
+        60.99134106,
+        35.69986255999999
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "$7N201",
+      "layer": 1,
+      "a": [
+        60.99134106,
+        35.69986255999999
+      ],
+      "b": [
+        61.05001506,
+        35.69986255999999
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "$7N202",
+      "layer": 1,
+      "a": [
+        60.65885506,
+        29.11518434
+      ],
+      "b": [
+        61.05001506,
+        28.72402434
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "$7N202",
+      "layer": 1,
+      "a": [
+        61.05001506,
+        28.72402434
+      ],
+      "b": [
+        61.05001506,
+        28.699894339999997
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "$7N203",
+      "layer": 1,
+      "a": [
+        60.65885506,
+        22.11496212
+      ],
+      "b": [
+        61.05001506,
+        21.723802120000002
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "$7N203",
+      "layer": 1,
+      "a": [
+        61.05001506,
+        21.723802120000002
+      ],
+      "b": [
+        61.05001506,
+        21.69967212
+      ],
+      "width": 0.20015200000000002,
+      "role": "remove-hairpin"
+    },
+    {
+      "net": "ESP_EN",
+      "layer": 1,
+      "a": [
+        1.79999894,
+        49.40000026
+      ],
+      "b": [
+        0.45,
+        50.7499992
+      ],
+      "width": 0.2,
+      "role": "usb-corridor-reset-clearance"
+    },
+    {
+      "net": "ESP_EN",
+      "layer": 1,
+      "a": [
+        0.45,
+        50.7499992
+      ],
+      "b": [
+        0.45,
+        57.6499999
+      ],
+      "width": 0.2,
+      "role": "usb-corridor-reset-clearance"
+    },
+    {
+      "net": "ESP_EN",
+      "layer": 1,
+      "a": [
+        0.45,
+        57.6499999
+      ],
+      "b": [
+        1.20000014,
+        58.400000039999995
+      ],
+      "width": 0.2,
+      "role": "usb-corridor-reset-clearance"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        13.1,
+        38.451
+      ],
+      "b": [
+        14,
+        39.351
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        14,
+        39.351
+      ],
+      "b": [
+        14,
+        40
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        14,
+        40
+      ],
+      "b": [
+        13.85,
+        40.15
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        13.85,
+        40.15
+      ],
+      "b": [
+        13.85,
+        47.05
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        13.85,
+        47.05
+      ],
+      "b": [
+        11.88,
+        49.02
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        11.88,
+        49.02
+      ],
+      "b": [
+        3,
+        49.02
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        3,
+        49.02
+      ],
+      "b": [
+        0.9,
+        51.12
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        0.9,
+        51.12
+      ],
+      "b": [
+        0.9,
+        56.927
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        0.9,
+        56.927
+      ],
+      "b": [
+        1.25,
+        57.277
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DM",
+      "layer": 1,
+      "a": [
+        1.25,
+        57.277
+      ],
+      "b": [
+        3.24612,
+        57.277
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        13.58,
+        36.551
+      ],
+      "b": [
+        14.48,
+        37.451
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        14.48,
+        37.451
+      ],
+      "b": [
+        14.48,
+        40.199
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        14.48,
+        40.199
+      ],
+      "b": [
+        14.33,
+        40.349
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        14.33,
+        40.349
+      ],
+      "b": [
+        14.33,
+        47.249
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        14.33,
+        47.249
+      ],
+      "b": [
+        12.079,
+        49.5
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        12.079,
+        49.5
+      ],
+      "b": [
+        3.199,
+        49.5
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        3.199,
+        49.5
+      ],
+      "b": [
+        1.38,
+        51.319
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        1.38,
+        51.319
+      ],
+      "b": [
+        1.38,
+        55.657
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        1.38,
+        55.657
+      ],
+      "b": [
+        1.73,
+        56.007
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    },
+    {
+      "net": "USB_DP",
+      "layer": 1,
+      "a": [
+        1.73,
+        56.007
+      ],
+      "b": [
+        3.24612,
+        56.007
+      ],
+      "width": 0.3,
+      "role": "usb-main"
+    }
+  ],
+  "vias": [],
+  "changes": [
+    {
+      "net": "$7N201",
+      "kind": "remove-hairpin",
+      "oldLengthMillimeters": 1.4181807109186546,
+      "newLengthMillimeters": 0.5874314804085594
+    },
+    {
+      "net": "$7N202",
+      "kind": "remove-hairpin",
+      "oldLengthMillimeters": 1.359629441009551,
+      "newLengthMillimeters": 0.5773137770578619
+    },
+    {
+      "net": "$7N203",
+      "kind": "remove-hairpin",
+      "oldLengthMillimeters": 1.3596294410095449,
+      "newLengthMillimeters": 0.5773137770578619
+    },
+    {
+      "net": "CONFIG_KEY",
+      "kind": "preserved-multi-branch-junction",
+      "otherLines": [
+        "2393b811fcfccdc3"
+      ]
+    },
+    {
+      "net": "LDO_VIN",
+      "kind": "preserved-multi-branch-junction",
+      "otherLines": [
+        "62aeac77d27fc5e5"
+      ]
+    },
+    {
+      "net": "USB_DP",
+      "kind": "remove-redundant-overlap",
+      "removedLengthMillimeters": 0.3025140000000004
+    },
+    {
+      "net": "ESP_EN",
+      "kind": "move-reset-corridor",
+      "lateralShiftMillimeters": 0.15,
+      "endpointsPreserved": true
+    },
+    {
+      "kind": "usb-ground-reference-margin",
+      "oldMainLengthMillimeters": 64.15353166949187,
+      "newMainLengthMillimeters": 64.08573637236165,
+      "widthMillimeters": 0.3,
+      "nominalGapMillimeters": 0.18
+    }
+  ],
+  "physicalSpacingErrors": [],
+  "minimumCopperClearanceMillimeters": 0.17999999999999972,
+  "usbOldEdgeVoidSquareMillimeters": 0.11365288879102022,
+  "usbNewEdgeVoidSquareMillimeters": 0.05489439446661135,
+  "usbCenterReferenceMissingMillimeters": 0.0
+}

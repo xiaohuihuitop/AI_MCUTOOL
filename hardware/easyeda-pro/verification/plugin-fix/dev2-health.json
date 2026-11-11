@@ -1,0 +1,60 @@
+{
+  "status": "found",
+  "host": "127.0.0.1",
+  "ports": "60832-60841",
+  "found": {
+    "port": 60832,
+    "service": "easyeda-agent",
+    "raw": {
+      "pid": 250432,
+      "service": "easyeda-agent",
+      "version": "v1.14.1-dev.2",
+      "status": "ok",
+      "port": 60832,
+      "windows": []
+    }
+  },
+  "versionGate": {
+    "cli": "v1.14.1-dev.2",
+    "daemon": "v1.14.1-dev.2",
+    "verdict": "block",
+    "findings": [
+      {
+        "component": "daemon",
+        "version": "v1.14.1-dev.2",
+        "severity": "ok",
+        "reason": "exact local development version"
+      },
+      {
+        "component": "connector",
+        "version": "",
+        "severity": "block",
+        "reason": "local development requires exact version including dev suffix"
+      }
+    ]
+  },
+  "hostCompatibility": {
+    "baseline": "4.0.0",
+    "recommended": "4.1.60",
+    "verdict": "skipped"
+  },
+  "checks": [
+    {
+      "name": "daemon",
+      "status": "ok",
+      "detail": "v1.14.1-dev.2 运行在端口 60832"
+    },
+    {
+      "name": "connector",
+      "status": "fail",
+      "detail": "没有 EasyEDA 窗口连上 daemon",
+      "fix": "在 EasyEDA Pro 导入连接器 .eext（GitHub Release 或立创插件市场），打开工程，并开启「设置 → 允许外部交互」"
+    }
+  ],
+  "checked": [
+    {
+      "port": 60832,
+      "status": "ok"
+    }
+  ]
+}

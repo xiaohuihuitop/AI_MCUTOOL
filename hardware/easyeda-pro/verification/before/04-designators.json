@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "projectId": "57a0364c842149baada4fb3ca7ccf03f",
+  "documentId": "4a2d6d8ff4e4f8cc",
+  "source": "official-current-page-attribute-bbox",
+  "count": 16,
+  "designators": [
+    {
+      "id": "4eade7c34e08ce17",
+      "parentId": "0e08a647d600b125",
+      "key": "Designator",
+      "value": "Q10",
+      "visible": true,
+      "bbox": {
+        "minX": 940,
+        "minY": 490,
+        "maxX": 953.23095703125,
+        "maxY": 498
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "2109d663711fc225",
+      "parentId": "154579969d32af48",
+      "key": "Designator",
+      "value": "J9",
+      "visible": true,
+      "bbox": {
+        "minX": 1650,
+        "minY": 475,
+        "maxX": 1657.39306640625,
+        "maxY": 483
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "c5b333f06b074708",
+      "parentId": "44a96465344121e6",
+      "key": "Designator",
+      "value": "R28",
+      "visible": true,
+      "bbox": {
+        "minX": 1300,
+        "minY": 985,
+        "maxX": 1312.84130859375,
+        "maxY": 993
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "ce2e8b1c4582421e",
+      "parentId": "55dcd6377c559dd0",
+      "key": "Designator",
+      "value": "R27",
+      "visible": true,
+      "bbox": {
+        "minX": 950,
+        "minY": 985,
+        "maxX": 962.84130859375,
+        "maxY": 993
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "fe04afc1f075a033",
+      "parentId": "601d93db47333523",
+      "key": "Designator",
+      "value": "Q11",
+      "visible": true,
+      "bbox": {
+        "minX": 1290,
+        "minY": 490,
+        "maxX": 1302.71142578125,
+        "maxY": 498
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "eeed47c73c3bbf58",
+      "parentId": "6fd697fb24e1a3cc",
+      "key": "Designator",
+      "value": "Q6",
+      "visible": true,
+      "bbox": {
+        "minX": 625,
+        "minY": 980,
+        "maxX": 634.337890625,
+        "maxY": 988
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "137bf4cee84c247e",
+      "parentId": "794eb1071d615479",
+      "key": "Designator",
+      "value": "R30",
+      "visible": true,
+      "bbox": {
+        "minX": 1650,
+        "minY": 725,
+        "maxX": 1662.84130859375,
+        "maxY": 733
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "10894151d665ea16",
+      "parentId": "87af51e6d60c4784",
+      "key": "Designator",
+      "value": "U11",
+      "visible": true,
+      "bbox": {
+        "minX": 930,
+        "minY": 750,
+        "maxX": 940.403076171875,
+        "maxY": 756.75
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "9217bfc5763a7f1c",
+      "parentId": "8956659f020f5396",
+      "key": "Designator",
+      "value": "J10",
+      "visible": true,
+      "bbox": {
+        "minX": 250,
+        "minY": 215,
+        "maxX": 261.2861328125,
+        "maxY": 223
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "800a06138f8ff1a2",
+      "parentId": "c532dd327c012b05",
+      "key": "Designator",
+      "value": "Q9",
+      "visible": true,
+      "bbox": {
+        "minX": 590,
+        "minY": 750,
+        "maxX": 599.337890625,
+        "maxY": 758
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "0f65adaffddf73c7",
+      "parentId": "c5f64d2a1adadddf",
+      "key": "Designator",
+      "value": "Q8",
+      "visible": true,
+      "bbox": {
+        "minX": 240,
+        "minY": 750,
+        "maxX": 249.337890625,
+        "maxY": 758
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "c28117e86fb26a12",
+      "parentId": "de22bfc381aad607",
+      "key": "Designator",
+      "value": "Q7",
+      "visible": true,
+      "bbox": {
+        "minX": 1325,
+        "minY": 720,
+        "maxX": 1334.337890625,
+        "maxY": 728
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "69c4736f377834f8",
+      "parentId": "e4f893a95de70c7c",
+      "key": "Designator",
+      "value": "R29",
+      "visible": true,
+      "bbox": {
+        "minX": 1650,
+        "minY": 985,
+        "maxX": 1662.84130859375,
+        "maxY": 993
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "8ece5175e7f9c53f",
+      "parentId": "e5632245ab96cee0",
+      "key": "Designator",
+      "value": "R31",
+      "visible": true,
+      "bbox": {
+        "minX": 250,
+        "minY": 465,
+        "maxX": 262.84130859375,
+        "maxY": 473
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "c51201ae819cbeb2",
+      "parentId": "f0d7f7c5c17c444b",
+      "key": "Designator",
+      "value": "U10",
+      "visible": true,
+      "bbox": {
+        "minX": 230,
+        "minY": 1010,
+        "maxX": 240.84170532226562,
+        "maxY": 1016.75
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    },
+    {
+      "id": "f70f6a8101f6f38d",
+      "parentId": "ffedb9094d22a81d",
+      "key": "Designator",
+      "value": "R32",
+      "visible": true,
+      "bbox": {
+        "minX": 600,
+        "minY": 465,
+        "maxX": 612.84130859375,
+        "maxY": 473
+      },
+      "source": "eda.sch_PrimitiveAttribute.getAll(parentId)+eda.sch_Primitive.getPrimitivesBBox([attributeId])"
+    }
+  ]
+}

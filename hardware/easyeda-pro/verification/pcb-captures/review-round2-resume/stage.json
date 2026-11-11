@@ -1,0 +1,228 @@
+{
+  "availability": {
+    "components.json": "available",
+    "drc.json": "available",
+    "nets.json": "available",
+    "pours.json": "available",
+    "snapshot.png": "available",
+    "tracks.json": "available",
+    "vias.json": "available"
+  },
+  "blank": false,
+  "capture": {
+    "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "startedAt": "2026-10-25T04:05:20.4432744Z",
+    "completedAt": "2026-10-25T04:05:24.284711Z",
+    "consistency": "sequential-response-boundaries",
+    "identityVerified": true,
+    "requests": [
+      {
+        "action": "pcb.snapshot",
+        "requestId": "req_505",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.4432744Z",
+        "completedAt": "2026-10-25T04:05:20.7483759Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.7452452Z",
+        "resultSha256": "5a98fa929dd07b99b2c14f40dea94f1bd0b733b41bc5329ce7a5ef56f33e9314",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 310,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.components.list",
+        "requestId": "req_506",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.7648852Z",
+        "completedAt": "2026-10-25T04:05:20.8836655Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.8556419Z",
+        "resultSha256": "6ee9edf9f1eccdb8c1901cad17b87cdce521ea0df791ee3fa9f6210dc507acc0",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 311,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.line.list",
+        "requestId": "req_507",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.8949907Z",
+        "completedAt": "2026-10-25T04:05:20.9030124Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.9025003Z",
+        "resultSha256": "3e1cbb7e2283b7c0baef63908866616c731413c4f78e606b35342f216a671364",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 312,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.via.list",
+        "requestId": "req_508",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.9035211Z",
+        "completedAt": "2026-10-25T04:05:20.9099938Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.9099938Z",
+        "resultSha256": "3ebdd5ba8869fde231f904ec153c60513572e2fa13fe0b2f9349ca0b8ae8aece",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 313,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.pour.list",
+        "requestId": "req_509",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.9110136Z",
+        "completedAt": "2026-10-25T04:05:20.9205424Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.9200297Z",
+        "resultSha256": "450c1cb71382370ba8aaffcab65e3f244b157175ee7fdae5ee286b048694be4d",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 314,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.nets.list",
+        "requestId": "req_510",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.9210697Z",
+        "completedAt": "2026-10-25T04:05:20.9295937Z",
+        "responseCreatedAt": "2026-10-25T04:05:20.9280572Z",
+        "resultSha256": "dba6e683b6f7ef39bf67fb9c642e357107200f97c0d17a1ae68e25500254b9a0",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 315,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.drc.check",
+        "requestId": "req_511",
+        "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+        "startedAt": "2026-10-25T04:05:20.9306293Z",
+        "completedAt": "2026-10-25T04:05:24.284711Z",
+        "responseCreatedAt": "2026-10-25T04:05:24.2171661Z",
+        "resultSha256": "9eb33e942f153ab7142dbb6506af9931448993b31f92175f0837ca6de5103568",
+        "context": {
+          "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+          "projectName": "AI-MCUTOOL-RevA",
+          "documentUuid": "3472e543e4569c48",
+          "documentType": "pcb",
+          "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 316,
+          "SeqAbandoned": 0,
+          "Unordered": false,
+          "AbandonedIDs": null
+        },
+        "status": "available"
+      }
+    ]
+  },
+  "captureKind": "board-fitted-viewport-png",
+  "dataFiles": [
+    "components.json",
+    "tracks.json",
+    "vias.json",
+    "pours.json",
+    "nets.json",
+    "drc.json"
+  ],
+  "dir": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round2-resume",
+  "drcPassKnown": true,
+  "drcPassed": false,
+  "fileHashes": {
+    "components.json": "4797aff925cea847e90a21551ba418794da3b2d2b1ad0468e26a28bd0d68c84d",
+    "drc.json": "c5bab7b54acff852c9086ea0e1d86e6c58ac706526f902fa7868d77e381b888c",
+    "nets.json": "3ae7f9a50cb332025cc805858ba67ce9810991c3af60fc7df1133e2acc720e43",
+    "pours.json": "a83d614fa38eae9421abdddb355a6e01d76b7f98a16578d245b8283e476200dc",
+    "snapshot.png": "3dfd8b06e05e822446b66ff061952e289d20db34be2a5885a186336a1a0b0e30",
+    "tracks.json": "e91ffe188d8665a6318c3cdf3608813e8b35d17ce2ea438b908f972fb39e5adb",
+    "vias.json": "5980bdf09bfbb007516b642d70d5a500013989248b3a5a1c8131182d45e54846"
+  },
+  "fitApi": "eda.pcb_Document.zoomToBoardOutline",
+  "fitMode": "board",
+  "frameColors": 354,
+  "frameContent": 0.9668370265837751,
+  "imageValid": true,
+  "objectLevelExport": false,
+  "partial": [],
+  "sameImageAsPrevious": false,
+  "sha256": "3dfd8b06e05e822446b66ff061952e289d20db34be2a5885a186336a1a0b0e30",
+  "sha256Source": "cli-artifact",
+  "snapshot": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round2-resume\\snapshot.png",
+  "stage": "review-round2-resume",
+  "stale": false
+}

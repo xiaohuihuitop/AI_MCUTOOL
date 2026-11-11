@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "components": 164,
+  "logicalPins": 508,
+  "physicalNumberedPads": 520,
+  "copperLayers": 4,
+  "tracksAndVias": 0,
+  "layoutViolations": 0,
+  "schematicParityIssues": 0,
+  "unconnectedItems": 336,
+  "errors": [],
+  "stage": "未布线布局初稿；通过本检查不代表已完成布线、散热、外壳或制造验收"
+}

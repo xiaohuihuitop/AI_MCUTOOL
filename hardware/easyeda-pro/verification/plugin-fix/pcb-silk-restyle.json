@@ -1,0 +1,3974 @@
+{
+  "id": "req_1270",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T14:28:52.2080847Z",
+  "ok": true,
+  "result": {
+    "appliedIds": [
+      "44494a2c5d43db3ce18",
+      "a90a6a4ad996b98fe18",
+      "cd5eada78dea4781e20",
+      "4f30649f592ba58ee20",
+      "21ad79d7699b9adae20",
+      "093564dca33aa513e18",
+      "5a5074ea1e81098ae18",
+      "6267441eac24d6afe18",
+      "188441358e4d92b7e18",
+      "b1e8011e60296430e18",
+      "7f68a63e3545dadfe18",
+      "dd9240e911aec7ece18",
+      "7b68bf97e1d1d92ce18",
+      "65bdd8ad5d20e30de18",
+      "67c75a6ef14b3299e18",
+      "f3fefd85fc8d0680e18",
+      "f48798e34a2ce2e4e18",
+      "1d0b4d57b1b531aae18",
+      "f03c0aca0b5d65efe18",
+      "b178d6a896db4799e18",
+      "b50891e17e39851be20",
+      "6a97aff78328c689e20",
+      "d112add24279cb48e20",
+      "f17e06c06dd70471e18",
+      "d71a5153f7e373a2e18",
+      "881de722a8de3741e18",
+      "2a23d7cc07d38481e18",
+      "8426e917faed2b90e21",
+      "a77429c96c0e1c51e2",
+      "d40c0f1b4cb1e5c5e19",
+      "37e0174b42d77a70e9",
+      "2f34f10777a64b8ce9",
+      "673bfd008e0bc56de9",
+      "5caba9dff3f6db59e9",
+      "0a857c34ba8f900fe9",
+      "e3557843387d62afe9",
+      "63f676e911f5bffde9",
+      "3ab791c0e2f337ade9",
+      "76689564c0886b5ae9",
+      "0849a59833290ee9e9",
+      "00f32e97e5e553e6e9",
+      "7ccb77fc1e2ecfb9e9",
+      "2397c817b28b7563e9",
+      "2ecee5a68634bd29e9",
+      "1dba3f94bb121bd2e15",
+      "7a1929d0ddfad9a3e27",
+      "5792511f456d41a1e27",
+      "60e2357a4153a5d6e2",
+      "92e35f53efd7fcf6e2",
+      "854d8e70e1bbfafce2",
+      "df4d78a77223414be2",
+      "a0beffe0625f0b5de2",
+      "faad089a381c16dae2",
+      "a0fb1b8c2521e53ae2",
+      "06c43c7779c941c7e35",
+      "f3234d5834ad1f1fe35",
+      "2644215dd8d202a7e35",
+      "435fd83eaa7ff420e35",
+      "de94a20d7beab045e35",
+      "0077f399ce5c3afae35",
+      "8fc2a0390d71bdc4e2",
+      "8b6bc93157b00089e16",
+      "3daa1112aac4fe5fe16",
+      "2e11a34fa95eeb76e16",
+      "0b5054aac805d958e16",
+      "18a9a5a25ed3a0b6e16",
+      "365c39ed7e650166e16",
+      "6d59d7bdc8f35320e16",
+      "eb9e299d098e327ee16",
+      "447dfb02a33b7a39e16",
+      "abb685341574e79ae16",
+      "147b040d57757c6ae16",
+      "1543909e494c6f3be16",
+      "364c90fed3c64b57e16",
+      "600dac4a6994a98be16",
+      "26a6035ff7fcccf5e16",
+      "b29da227924ba086e16",
+      "d19695b1deb0fc0fe16",
+      "701873ec79a63f4de16",
+      "33096f522b3f533ce16",
+      "f42eee08786ca8e3e16",
+      "5939702ad9423a65e16",
+      "06d85b24cfefb044e16",
+      "89f99806181de297e16",
+      "b0bf441cd904b817e16",
+      "1540e2555c50b961e16",
+      "a51b942c2ab5335fe16",
+      "e4c2542e5e4d0aa8e16",
+      "d0046a9992a463aee16",
+      "c035b35e98f34d56e16",
+      "ed9f6bb699b39f7be16",
+      "0a67603927c53de8e16",
+      "5c12645125e6a700e16",
+      "19375d3f3dc57525e16",
+      "3c1ff88a68668a66e16",
+      "317ab20a73f02206e16",
+      "27d8f7c2e8f9bff4e16",
+      "6747b591b1fabbbbe16",
+      "6d0a7b85493c3d66e16",
+      "91a6d6144636308fe16",
+      "19b54cc42c3ee603e16",
+      "8daf485bcffbfea8e16",
+      "89472d25fb99edf7e16",
+      "c7b73b96c318d128e16",
+      "cc2fd8efb18a0b64e16",
+      "290b27c87e204e2ee2",
+      "53e6ac3c4f50a411e16",
+      "30c94be7a7368856e16",
+      "67527c900460e716e16",
+      "cd55c4cede83209ee16",
+      "ecb25f6fd9fe9ddfe16",
+      "ad1e20f788c79d47e16",
+      "d9b33057e3000d82e16",
+      "787ea8747b07f5ece16",
+      "767426669ffb13b7e2",
+      "7cf3911e1f834c3be16",
+      "8988131670161c68e16",
+      "d694528054d25a39e16",
+      "2a89c13465ae6ef1e16",
+      "dd4ca5702baf0f25e16",
+      "71c43b2e7e1945fbe16",
+      "44cb588aef59b023e16",
+      "5f3bb90647d2636ce16",
+      "0544678d3f6e0ec0e2",
+      "c3649310d2245b58e16",
+      "268259c8ee513d1fe16",
+      "b045f4ebb46df9b0e16",
+      "1916b4af67bac8aae16",
+      "c64f7f9edb08e206e16",
+      "49a837b12155d420e16",
+      "7fe8c6cf9eca19b1e16",
+      "4c8fef5b5c29dc88e16",
+      "a033a0f6a05f2991e2",
+      "21e86c1b221d527ce16",
+      "dc241dcd308d8258e16",
+      "3a772bf40fc9b9cee16",
+      "d820bfa30be72b05e16",
+      "10c464421eb810b0e16",
+      "237fc460e6200c1de16",
+      "295da2bdf7e858a1e16",
+      "33d36fbf47849d33e16",
+      "8e5357031be818aee16",
+      "c8483cdfb6a1d7a1e16",
+      "86fc51eff4b2368be16",
+      "ffd2af9111820587e33",
+      "be0d0884bf02ce52e33",
+      "415bff698b6f182be33",
+      "51fa4a8038f29f42e30",
+      "15de6807148ca216e30",
+      "49c881071a884a96e21",
+      "fc35055806c90199e126",
+      "003993f5664d469ce22",
+      "ce92ed1d543ad931e22",
+      "a7519e2862afd815e22",
+      "e173c50b24b5ad7de22",
+      "507200838b13582de22",
+      "05a199839a79772fe2",
+      "d7305df0d311caf9e2",
+      "5c585e83a984938ce42",
+      "f1577471a25befc4e41",
+      "bd3c3f8101d378b1e54",
+      "ceb7b1d9f47d64c1e39",
+      "f29bb84430901c81e30",
+      "f20de6ae9f20b621e30"
+    ],
+    "count": 164,
+    "partial": false,
+    "requestedIds": [
+      "44494a2c5d43db3ce18",
+      "a90a6a4ad996b98fe18",
+      "cd5eada78dea4781e20",
+      "4f30649f592ba58ee20",
+      "21ad79d7699b9adae20",
+      "093564dca33aa513e18",
+      "5a5074ea1e81098ae18",
+      "6267441eac24d6afe18",
+      "188441358e4d92b7e18",
+      "b1e8011e60296430e18",
+      "7f68a63e3545dadfe18",
+      "dd9240e911aec7ece18",
+      "7b68bf97e1d1d92ce18",
+      "65bdd8ad5d20e30de18",
+      "67c75a6ef14b3299e18",
+      "f3fefd85fc8d0680e18",
+      "f48798e34a2ce2e4e18",
+      "1d0b4d57b1b531aae18",
+      "f03c0aca0b5d65efe18",
+      "b178d6a896db4799e18",
+      "b50891e17e39851be20",
+      "6a97aff78328c689e20",
+      "d112add24279cb48e20",
+      "f17e06c06dd70471e18",
+      "d71a5153f7e373a2e18",
+      "881de722a8de3741e18",
+      "2a23d7cc07d38481e18",
+      "8426e917faed2b90e21",
+      "a77429c96c0e1c51e2",
+      "d40c0f1b4cb1e5c5e19",
+      "37e0174b42d77a70e9",
+      "2f34f10777a64b8ce9",
+      "673bfd008e0bc56de9",
+      "5caba9dff3f6db59e9",
+      "0a857c34ba8f900fe9",
+      "e3557843387d62afe9",
+      "63f676e911f5bffde9",
+      "3ab791c0e2f337ade9",
+      "76689564c0886b5ae9",
+      "0849a59833290ee9e9",
+      "00f32e97e5e553e6e9",
+      "7ccb77fc1e2ecfb9e9",
+      "2397c817b28b7563e9",
+      "2ecee5a68634bd29e9",
+      "1dba3f94bb121bd2e15",
+      "7a1929d0ddfad9a3e27",
+      "5792511f456d41a1e27",
+      "60e2357a4153a5d6e2",
+      "92e35f53efd7fcf6e2",
+      "854d8e70e1bbfafce2",
+      "df4d78a77223414be2",
+      "a0beffe0625f0b5de2",
+      "faad089a381c16dae2",
+      "a0fb1b8c2521e53ae2",
+      "06c43c7779c941c7e35",
+      "f3234d5834ad1f1fe35",
+      "2644215dd8d202a7e35",
+      "435fd83eaa7ff420e35",
+      "de94a20d7beab045e35",
+      "0077f399ce5c3afae35",
+      "8fc2a0390d71bdc4e2",
+      "8b6bc93157b00089e16",
+      "3daa1112aac4fe5fe16",
+      "2e11a34fa95eeb76e16",
+      "0b5054aac805d958e16",
+      "18a9a5a25ed3a0b6e16",
+      "365c39ed7e650166e16",
+      "6d59d7bdc8f35320e16",
+      "eb9e299d098e327ee16",
+      "447dfb02a33b7a39e16",
+      "abb685341574e79ae16",
+      "147b040d57757c6ae16",
+      "1543909e494c6f3be16",
+      "364c90fed3c64b57e16",
+      "600dac4a6994a98be16",
+      "26a6035ff7fcccf5e16",
+      "b29da227924ba086e16",
+      "d19695b1deb0fc0fe16",
+      "701873ec79a63f4de16",
+      "33096f522b3f533ce16",
+      "f42eee08786ca8e3e16",
+      "5939702ad9423a65e16",
+      "06d85b24cfefb044e16",
+      "89f99806181de297e16",
+      "b0bf441cd904b817e16",
+      "1540e2555c50b961e16",
+      "a51b942c2ab5335fe16",
+      "e4c2542e5e4d0aa8e16",
+      "d0046a9992a463aee16",
+      "c035b35e98f34d56e16",
+      "ed9f6bb699b39f7be16",
+      "0a67603927c53de8e16",
+      "5c12645125e6a700e16",
+      "19375d3f3dc57525e16",
+      "3c1ff88a68668a66e16",
+      "317ab20a73f02206e16",
+      "27d8f7c2e8f9bff4e16",
+      "6747b591b1fabbbbe16",
+      "6d0a7b85493c3d66e16",
+      "91a6d6144636308fe16",
+      "19b54cc42c3ee603e16",
+      "8daf485bcffbfea8e16",
+      "89472d25fb99edf7e16",
+      "c7b73b96c318d128e16",
+      "cc2fd8efb18a0b64e16",
+      "290b27c87e204e2ee2",
+      "53e6ac3c4f50a411e16",
+      "30c94be7a7368856e16",
+      "67527c900460e716e16",
+      "cd55c4cede83209ee16",
+      "ecb25f6fd9fe9ddfe16",
+      "ad1e20f788c79d47e16",
+      "d9b33057e3000d82e16",
+      "787ea8747b07f5ece16",
+      "767426669ffb13b7e2",
+      "7cf3911e1f834c3be16",
+      "8988131670161c68e16",
+      "d694528054d25a39e16",
+      "2a89c13465ae6ef1e16",
+      "dd4ca5702baf0f25e16",
+      "71c43b2e7e1945fbe16",
+      "44cb588aef59b023e16",
+      "5f3bb90647d2636ce16",
+      "0544678d3f6e0ec0e2",
+      "c3649310d2245b58e16",
+      "268259c8ee513d1fe16",
+      "b045f4ebb46df9b0e16",
+      "1916b4af67bac8aae16",
+      "c64f7f9edb08e206e16",
+      "49a837b12155d420e16",
+      "7fe8c6cf9eca19b1e16",
+      "4c8fef5b5c29dc88e16",
+      "a033a0f6a05f2991e2",
+      "21e86c1b221d527ce16",
+      "dc241dcd308d8258e16",
+      "3a772bf40fc9b9cee16",
+      "d820bfa30be72b05e16",
+      "10c464421eb810b0e16",
+      "237fc460e6200c1de16",
+      "295da2bdf7e858a1e16",
+      "33d36fbf47849d33e16",
+      "8e5357031be818aee16",
+      "c8483cdfb6a1d7a1e16",
+      "86fc51eff4b2368be16",
+      "ffd2af9111820587e33",
+      "be0d0884bf02ce52e33",
+      "415bff698b6f182be33",
+      "51fa4a8038f29f42e30",
+      "15de6807148ca216e30",
+      "49c881071a884a96e21",
+      "fc35055806c90199e126",
+      "003993f5664d469ce22",
+      "ce92ed1d543ad931e22",
+      "a7519e2862afd815e22",
+      "e173c50b24b5ad7de22",
+      "507200838b13582de22",
+      "05a199839a79772fe2",
+      "d7305df0d311caf9e2",
+      "5c585e83a984938ce42",
+      "f1577471a25befc4e41",
+      "bd3c3f8101d378b1e54",
+      "ceb7b1d9f47d64c1e39",
+      "f29bb84430901c81e30",
+      "f20de6ae9f20b621e30"
+    ],
+    "results": [
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "44494a2c5d43db3ce18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "44494a2c5d43db3ce18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a90a6a4ad996b98fe18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a90a6a4ad996b98fe18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "cd5eada78dea4781e20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "cd5eada78dea4781e20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "4f30649f592ba58ee20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "4f30649f592ba58ee20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "21ad79d7699b9adae20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "21ad79d7699b9adae20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "093564dca33aa513e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "093564dca33aa513e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5a5074ea1e81098ae18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5a5074ea1e81098ae18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "6267441eac24d6afe18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "6267441eac24d6afe18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "188441358e4d92b7e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "188441358e4d92b7e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b1e8011e60296430e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b1e8011e60296430e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7f68a63e3545dadfe18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7f68a63e3545dadfe18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "dd9240e911aec7ece18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "dd9240e911aec7ece18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7b68bf97e1d1d92ce18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7b68bf97e1d1d92ce18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "65bdd8ad5d20e30de18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "65bdd8ad5d20e30de18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "67c75a6ef14b3299e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "67c75a6ef14b3299e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f3fefd85fc8d0680e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f3fefd85fc8d0680e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f48798e34a2ce2e4e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f48798e34a2ce2e4e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "1d0b4d57b1b531aae18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "1d0b4d57b1b531aae18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f03c0aca0b5d65efe18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f03c0aca0b5d65efe18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b178d6a896db4799e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b178d6a896db4799e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b50891e17e39851be20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b50891e17e39851be20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "6a97aff78328c689e20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "6a97aff78328c689e20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d112add24279cb48e20",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d112add24279cb48e20",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f17e06c06dd70471e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f17e06c06dd70471e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d71a5153f7e373a2e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d71a5153f7e373a2e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "881de722a8de3741e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "881de722a8de3741e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2a23d7cc07d38481e18",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2a23d7cc07d38481e18",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8426e917faed2b90e21",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8426e917faed2b90e21",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a77429c96c0e1c51e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a77429c96c0e1c51e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d40c0f1b4cb1e5c5e19",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d40c0f1b4cb1e5c5e19",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "37e0174b42d77a70e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "37e0174b42d77a70e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2f34f10777a64b8ce9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2f34f10777a64b8ce9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "673bfd008e0bc56de9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "673bfd008e0bc56de9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5caba9dff3f6db59e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5caba9dff3f6db59e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0a857c34ba8f900fe9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0a857c34ba8f900fe9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "e3557843387d62afe9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "e3557843387d62afe9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "63f676e911f5bffde9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "63f676e911f5bffde9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "3ab791c0e2f337ade9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "3ab791c0e2f337ade9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "76689564c0886b5ae9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "76689564c0886b5ae9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0849a59833290ee9e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0849a59833290ee9e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "00f32e97e5e553e6e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "00f32e97e5e553e6e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7ccb77fc1e2ecfb9e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7ccb77fc1e2ecfb9e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2397c817b28b7563e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2397c817b28b7563e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2ecee5a68634bd29e9",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2ecee5a68634bd29e9",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "1dba3f94bb121bd2e15",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "1dba3f94bb121bd2e15",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7a1929d0ddfad9a3e27",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7a1929d0ddfad9a3e27",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5792511f456d41a1e27",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5792511f456d41a1e27",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "60e2357a4153a5d6e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "60e2357a4153a5d6e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "92e35f53efd7fcf6e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "92e35f53efd7fcf6e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "854d8e70e1bbfafce2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "854d8e70e1bbfafce2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "df4d78a77223414be2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "df4d78a77223414be2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a0beffe0625f0b5de2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a0beffe0625f0b5de2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "faad089a381c16dae2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "faad089a381c16dae2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a0fb1b8c2521e53ae2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a0fb1b8c2521e53ae2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "06c43c7779c941c7e35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "06c43c7779c941c7e35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f3234d5834ad1f1fe35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f3234d5834ad1f1fe35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2644215dd8d202a7e35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2644215dd8d202a7e35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "435fd83eaa7ff420e35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "435fd83eaa7ff420e35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "de94a20d7beab045e35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "de94a20d7beab045e35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0077f399ce5c3afae35",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0077f399ce5c3afae35",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8fc2a0390d71bdc4e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8fc2a0390d71bdc4e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8b6bc93157b00089e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8b6bc93157b00089e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "3daa1112aac4fe5fe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "3daa1112aac4fe5fe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2e11a34fa95eeb76e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2e11a34fa95eeb76e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0b5054aac805d958e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0b5054aac805d958e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "18a9a5a25ed3a0b6e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "18a9a5a25ed3a0b6e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "365c39ed7e650166e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "365c39ed7e650166e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "6d59d7bdc8f35320e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "6d59d7bdc8f35320e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "eb9e299d098e327ee16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "eb9e299d098e327ee16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "447dfb02a33b7a39e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "447dfb02a33b7a39e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "abb685341574e79ae16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "abb685341574e79ae16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "147b040d57757c6ae16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "147b040d57757c6ae16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "1543909e494c6f3be16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "1543909e494c6f3be16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "364c90fed3c64b57e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "364c90fed3c64b57e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "600dac4a6994a98be16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "600dac4a6994a98be16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "26a6035ff7fcccf5e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "26a6035ff7fcccf5e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b29da227924ba086e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b29da227924ba086e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d19695b1deb0fc0fe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d19695b1deb0fc0fe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "701873ec79a63f4de16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "701873ec79a63f4de16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "33096f522b3f533ce16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "33096f522b3f533ce16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f42eee08786ca8e3e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f42eee08786ca8e3e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5939702ad9423a65e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5939702ad9423a65e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "06d85b24cfefb044e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "06d85b24cfefb044e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "89f99806181de297e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "89f99806181de297e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b0bf441cd904b817e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b0bf441cd904b817e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "1540e2555c50b961e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "1540e2555c50b961e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a51b942c2ab5335fe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a51b942c2ab5335fe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "e4c2542e5e4d0aa8e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "e4c2542e5e4d0aa8e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d0046a9992a463aee16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d0046a9992a463aee16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "c035b35e98f34d56e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "c035b35e98f34d56e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ed9f6bb699b39f7be16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ed9f6bb699b39f7be16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0a67603927c53de8e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0a67603927c53de8e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5c12645125e6a700e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5c12645125e6a700e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "19375d3f3dc57525e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "19375d3f3dc57525e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "3c1ff88a68668a66e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "3c1ff88a68668a66e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "317ab20a73f02206e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "317ab20a73f02206e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "27d8f7c2e8f9bff4e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "27d8f7c2e8f9bff4e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "6747b591b1fabbbbe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "6747b591b1fabbbbe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "6d0a7b85493c3d66e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "6d0a7b85493c3d66e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "91a6d6144636308fe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "91a6d6144636308fe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "19b54cc42c3ee603e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "19b54cc42c3ee603e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8daf485bcffbfea8e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8daf485bcffbfea8e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "89472d25fb99edf7e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "89472d25fb99edf7e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "c7b73b96c318d128e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "c7b73b96c318d128e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "cc2fd8efb18a0b64e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "cc2fd8efb18a0b64e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "290b27c87e204e2ee2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "290b27c87e204e2ee2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "53e6ac3c4f50a411e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "53e6ac3c4f50a411e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "30c94be7a7368856e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "30c94be7a7368856e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "67527c900460e716e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "67527c900460e716e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "cd55c4cede83209ee16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "cd55c4cede83209ee16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ecb25f6fd9fe9ddfe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ecb25f6fd9fe9ddfe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ad1e20f788c79d47e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ad1e20f788c79d47e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d9b33057e3000d82e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d9b33057e3000d82e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "787ea8747b07f5ece16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "787ea8747b07f5ece16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "767426669ffb13b7e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "767426669ffb13b7e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7cf3911e1f834c3be16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7cf3911e1f834c3be16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8988131670161c68e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8988131670161c68e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d694528054d25a39e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d694528054d25a39e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "2a89c13465ae6ef1e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "2a89c13465ae6ef1e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "dd4ca5702baf0f25e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "dd4ca5702baf0f25e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "71c43b2e7e1945fbe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "71c43b2e7e1945fbe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "44cb588aef59b023e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "44cb588aef59b023e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5f3bb90647d2636ce16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5f3bb90647d2636ce16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "0544678d3f6e0ec0e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "0544678d3f6e0ec0e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "c3649310d2245b58e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "c3649310d2245b58e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "268259c8ee513d1fe16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "268259c8ee513d1fe16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "b045f4ebb46df9b0e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "b045f4ebb46df9b0e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "1916b4af67bac8aae16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "1916b4af67bac8aae16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "c64f7f9edb08e206e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "c64f7f9edb08e206e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "49a837b12155d420e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "49a837b12155d420e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "7fe8c6cf9eca19b1e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "7fe8c6cf9eca19b1e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "4c8fef5b5c29dc88e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "4c8fef5b5c29dc88e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a033a0f6a05f2991e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a033a0f6a05f2991e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "21e86c1b221d527ce16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "21e86c1b221d527ce16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "dc241dcd308d8258e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "dc241dcd308d8258e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "3a772bf40fc9b9cee16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "3a772bf40fc9b9cee16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d820bfa30be72b05e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d820bfa30be72b05e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "10c464421eb810b0e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "10c464421eb810b0e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "237fc460e6200c1de16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "237fc460e6200c1de16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "295da2bdf7e858a1e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "295da2bdf7e858a1e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "33d36fbf47849d33e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "33d36fbf47849d33e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "8e5357031be818aee16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "8e5357031be818aee16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "c8483cdfb6a1d7a1e16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "c8483cdfb6a1d7a1e16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "86fc51eff4b2368be16",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "86fc51eff4b2368be16",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ffd2af9111820587e33",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ffd2af9111820587e33",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "be0d0884bf02ce52e33",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "be0d0884bf02ce52e33",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "415bff698b6f182be33",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "415bff698b6f182be33",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "51fa4a8038f29f42e30",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "51fa4a8038f29f42e30",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "15de6807148ca216e30",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "15de6807148ca216e30",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "49c881071a884a96e21",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "49c881071a884a96e21",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "fc35055806c90199e126",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "fc35055806c90199e126",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "003993f5664d469ce22",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "003993f5664d469ce22",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ce92ed1d543ad931e22",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ce92ed1d543ad931e22",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "a7519e2862afd815e22",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "a7519e2862afd815e22",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "e173c50b24b5ad7de22",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "e173c50b24b5ad7de22",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "507200838b13582de22",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "507200838b13582de22",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "05a199839a79772fe2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "05a199839a79772fe2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "d7305df0d311caf9e2",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "d7305df0d311caf9e2",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "5c585e83a984938ce42",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "5c585e83a984938ce42",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f1577471a25befc4e41",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f1577471a25befc4e41",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "bd3c3f8101d378b1e54",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "bd3c3f8101d378b1e54",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "ceb7b1d9f47d64c1e39",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "ceb7b1d9f47d64c1e39",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f29bb84430901c81e30",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f29bb84430901c81e30",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      },
+      {
+        "actual": {
+          "fontSize": 31.496062992125992,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "primitiveId": "f20de6ae9f20b621e30",
+          "reverse": false,
+          "rotation": 0
+        },
+        "attempted": true,
+        "fontFamily": null,
+        "ok": true,
+        "primitiveId": "f20de6ae9f20b621e30",
+        "requested": {
+          "fontSize": 31.49606299212599,
+          "lineWidth": 5.905511811023622,
+          "mirror": false,
+          "reverse": false,
+          "rotation": 0
+        },
+        "verified": true
+      }
+    ],
+    "verified": true
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 1149,
+  "seqAbandoned": 0
+}

@@ -1,0 +1,10 @@
+{
+  "manufacturer": "Ckmtw(灿科盟)",
+  "manufacturerId": "B-2100S02P-A110",
+  "supplier": "LCSC",
+  "supplierId": "C124375",
+  "name": "={Manufacturer Part}",
+  "otherProperty": {
+    "Supplier Footprint": "插件,P=2.54mm"
+  }
+}

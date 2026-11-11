@@ -1,0 +1,62 @@
+{
+  "status": "两轮布局数据与原生截图已核对；机械边界未闭合，非制造版",
+  "visualReview": {
+    "completed": "2026-10-25",
+    "round1": "布局、丝印及模块关系未见新增异常",
+    "round2": "与上一轮布局一致；黄色交叉标记为未布线DRC显示，不等同新增实体铜盘或新增连线",
+    "fixesApplied": false
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "components": 164,
+      "logicalPins": 508,
+      "physicalPads": 516,
+      "connectivityOrIdentityDifferences": [],
+      "silkPoseDifferences": [],
+      "silkOverComponentBounds": [],
+      "silkPairClearanceBelowPoint179mm": [],
+      "componentBBoxOverlap": [],
+      "padEdgeBelowPoint2mm": [],
+      "differentNetPadBoundsBelowPoint15mm": [],
+      "silkCount": 164,
+      "fixesApplied": false,
+      "dump": "hardware\\easyeda-pro\\verification\\plugin-fix\\pcb-review-round1.json",
+      "dumpSHA256": "c561edd47542f2ed6e35c78d7f1f32691938f0741988bc1dd8f4d96d4e4856fb",
+      "render": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round1\\snapshot.png",
+      "renderAvailable": true,
+      "renderSHA256": "a5365d50fcc53c48cbeb09428729c47b1b7f43178526fabfea18cda03c54b29b",
+      "nativeDRCAvailable": true,
+      "nativeDRCPassed": false
+    },
+    {
+      "round": 2,
+      "components": 164,
+      "logicalPins": 508,
+      "physicalPads": 516,
+      "connectivityOrIdentityDifferences": [],
+      "silkPoseDifferences": [],
+      "silkOverComponentBounds": [],
+      "silkPairClearanceBelowPoint179mm": [],
+      "componentBBoxOverlap": [],
+      "padEdgeBelowPoint2mm": [],
+      "differentNetPadBoundsBelowPoint15mm": [],
+      "silkCount": 164,
+      "fixesApplied": false,
+      "dump": "hardware\\easyeda-pro\\verification\\plugin-fix\\pcb-review-round2-resume.json",
+      "dumpSHA256": "3228b4915dd44c1fcd02656233bbb43eccd57da6f906cb2053db3efc90614ce2",
+      "render": "hardware\\easyeda-pro\\verification\\pcb-captures\\review-round2-resume\\snapshot.png",
+      "renderAvailable": true,
+      "renderSHA256": "3dfd8b06e05e822446b66ff061952e289d20db34be2a5885a186336a1a0b0e30",
+      "nativeDRCAvailable": true,
+      "nativeDRCPassed": false
+    }
+  ],
+  "persistenceDifferences": [],
+  "limits": [
+    "U4天线外伸约6.144mm，15mm外壳净空与100mm整机边界仍待闭合",
+    "7项插头空间告警来自插件估算护套尺寸，未取得实际配套插头机械包络",
+    "尚未布线、铺铜及生产定位点设计",
+    "原生检查4个多边形焊盘不支持精确接触算法；本报告使用已捕获直线多边形AABB保守核验，不等于精确曲线求距"
+  ]
+}

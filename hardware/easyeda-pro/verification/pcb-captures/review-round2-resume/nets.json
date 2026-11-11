@@ -1,0 +1,1245 @@
+{
+  "count": 124,
+  "nets": [
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "COMMON_GND"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DC_IN_5V"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TYPEC_IN_5V"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LDO_VIN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TOOL_3V3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ESP_EN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "INA_IN_N"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "INA_IN_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DIV1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ADC_CH1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DIV2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ADC_CH2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DIV3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ADC_CH3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DIV4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ADC_CH4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "VNEG"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LM_CF_N"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LM_CF_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LM_CRES"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TYPEC_CC1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TYPEC_CC2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "UART0_TX"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "UART0_RX"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ESP_BOOT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_B"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_B"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_B"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_B"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_B"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BAT_IN_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "EXT_IN_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DUT_PWR_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CHG_IN_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DUT_CHG_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LED1_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LED2_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_LED_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_LED_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_LED_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_LED_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_LED_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BAT_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BAT_PV_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "EXT_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "EXT_PV_K"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SCOM_BAT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "GCOM_BAT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "VSEL_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SCOM_EXT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "GCOM_EXT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "GCOM_CHG"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SCOM_CHG"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CHG_BASE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CHG_GATE_SINK"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ESP_IO46_STRAP"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "ESP_IO3_STRAP"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CONFIG_KEY"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "STATUS_LED"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_LED_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY1_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_LED_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY2_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_LED_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY3_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_LED_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY4_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_LED_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "KEY5_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BAT_PV_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BAT_PATH_EN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "EXT_PV_A"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "EXT_PATH_EN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CHARGE_PATH_EN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SHUNT_E1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SHUNT_E2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CURRENT_ALERT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN1_DIV_TAP1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN1_DIV_TAP2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN1_DIV_TAP3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN1_DIV_TAP4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "FB1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BUF1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN2_DIV_TAP1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN2_DIV_TAP2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN2_DIV_TAP3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN2_DIV_TAP4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "FB2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BUF2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN3_DIV_TAP1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN3_DIV_TAP2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN3_DIV_TAP3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN3_DIV_TAP4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "FB3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BUF3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN4_DIV_TAP1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN4_DIV_TAP2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN4_DIV_TAP3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AIN4_DIV_TAP4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "FB4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BUF4"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "UART_TX_NOE"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DUT_UART_TX"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "UART_RX_IN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TOOL_TX"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "UART_TX_BUF"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "TOOL_RX"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "I2C_SDA"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "I2C_SCL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "DUT_UART_RX"
+    }
+  ]
+}

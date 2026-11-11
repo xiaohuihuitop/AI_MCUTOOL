@@ -1,0 +1,16 @@
+* text=auto
+
+# AI:保留原生EDA工程、装配文件和归档字节，避免换行转换影响保存点摘要。
+*.eprj3 -text
+*.epcb2 -text
+*.esch2 -text
+*.epan2 -text
+*.ecfg -text
+*.epro2 binary
+*.csv -text
+*.zip binary
+*.pdf binary
+*.png binary
+
+# AI:本批装配交付附逐文件SHA256，连同说明文件一起按原字节保存。
+/hardware/easyeda-local/assembly/** -text

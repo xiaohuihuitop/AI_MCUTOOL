@@ -1,0 +1,1 @@
+schematic.designators.list failed: Could not measure every current-page Designator. — missing/duplicate part designator: U14

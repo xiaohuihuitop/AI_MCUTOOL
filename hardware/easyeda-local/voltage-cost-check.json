@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-03",
+  "components": 156,
+  "logicalPins": 456,
+  "drc": [],
+  "functionalConnectivityUnchanged": true,
+  "otherSixPageFilesUnchanged": true,
+  "uartExistingPropertiesAndConnectivityUnchanged": true,
+  "uartNote": "EDA曾因新增去耦实例Unique ID冲突自动重写原C26/C27身份；已恢复原Unique ID并核对全部属性和网络。第8页文件记录ticket变化。",
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "pageSHA256": "a45dac04d46897cb52bc1643dc31ac8b9414b6e9d98757e6634b78a8816cdc76",
+  "differentNetCrossings": [],
+  "opampRefs": [
+    "U14",
+    "U18",
+    "U19",
+    "U20"
+  ],
+  "upperRefs": [
+    "R40",
+    "R49",
+    "R58",
+    "R67"
+  ],
+  "upperSupplier": "C2483353",
+  "feedbackOhms": 1500,
+  "nominalGain": 1.015,
+  "nominalOffsetV": 0.00348,
+  "inputStepV": 0.0006773399014778326,
+  "hardwareAccuracyValidated": false
+}

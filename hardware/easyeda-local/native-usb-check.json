@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-04",
+  "components": 140,
+  "logicalPins": 415,
+  "schematicDRC": [],
+  "removedRefs": [
+    "J3"
+  ],
+  "newRefs": {
+    "D5": "C2687116",
+    "R85": "C23345",
+    "R86": "C23345"
+  },
+  "gpioUsb": {
+    "GPIO19": "D-",
+    "GPIO20": "D+"
+  },
+  "usbTypeCOrientationPairsVerified": true,
+  "esdPinsAndSeriesResistorsVerified": true,
+  "uart0PinsMarkedUnconnected": [
+    "U4.36",
+    "U4.37"
+  ],
+  "allOtherFunctionalConnectivityPreserved": true,
+  "retainedInstanceUniqueIdsAndPropertiesPreserved": true,
+  "baselineApiDescriptionEncodingAnomalyVerifiedAgainstUnchangedNativePage": [
+    "R37.Description"
+  ],
+  "otherSixPagesAndPCBUnchanged": true,
+  "newDifferentNetCrossings": [],
+  "existingCrossingCounts": {
+    "01": 6,
+    "02": 0
+  },
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "pcbPendingSchematicSync": true,
+  "firmwareChanged": false,
+  "hardwareTested": false
+}

@@ -1,0 +1,21 @@
+{
+  "created": 0,
+  "dryRun": true,
+  "layer": 12,
+  "ok": true,
+  "planned": 1,
+  "regions": [
+    {
+      "designator": "U4",
+      "device": "ESP32-S3-WROOM-1-N16R8",
+      "rect": [
+        2598.0946,
+        3524.9,
+        3386.1295999999998,
+        3805.1971
+      ],
+      "created": false
+    }
+  ],
+  "skipped": null
+}

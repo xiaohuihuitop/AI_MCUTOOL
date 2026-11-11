@@ -1,0 +1,232 @@
+[
+  {
+    "footprint": "N_FET",
+    "source": "CSD17577Q3A",
+    "pads": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "8",
+      "7",
+      "6",
+      "5",
+      "9"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "b12103dd0fbc3e1cfbc8a47b09dd553e4e78ce34e4f50cedd051702d73b9217a",
+    "manufacturerReview": null,
+    "bodyGeometryMm": {
+      "nominal": [
+        3.15,
+        3.0
+      ],
+      "maximum": [
+        3.25,
+        3.1
+      ]
+    },
+    "courtyardMm": [
+      3.8,
+      4.15
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "P_FET",
+    "source": "CSD25402Q3A",
+    "pads": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "8",
+      "7",
+      "6",
+      "5",
+      "9"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "410be79bba2b174a140f321c45fa25d663a2c622f305788a114c0c4cbb97ec37",
+    "manufacturerReview": null,
+    "bodyGeometryMm": {
+      "nominal": [
+        3.15,
+        3.0
+      ],
+      "maximum": [
+        3.25,
+        3.1
+      ]
+    },
+    "courtyardMm": [
+      3.8,
+      4.15
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "SHUNT4",
+    "source": "WSK2512R0100DEA",
+    "pads": [
+      "3",
+      "4",
+      "2",
+      "1"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "5c47191299686f6fe432e4b2d89f284b3a947e0606fb3c75edab279a1c3d3d8d",
+    "manufacturerReview": {
+      "date": "2026-10-24",
+      "source": "https://www.vishay.com/docs/30108/wsk2512.pdf",
+      "page": 2,
+      "resistanceRangeOhm": [
+        0.005,
+        0.2
+      ],
+      "report": "../../docs/四端分流器封装尺寸核定.md",
+      "change": "按厂家毫米表重建四盘；感测小盘改为外侧边齐平，1.70×0.76mm。输入仍为Y向上坐标。"
+    },
+    "bodyGeometryMm": {
+      "nominal": [
+        6.35,
+        3.18
+      ],
+      "maximum": [
+        6.604,
+        3.434
+      ]
+    },
+    "courtyardMm": [
+      8.8,
+      4.8
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "PHOTO_MOS",
+    "source": "TLP176AM_C6285455",
+    "pads": [
+      "1",
+      "3",
+      "4",
+      "6"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "59498987837ab80027148304c6903bf93810e39cacba73604e7aa0ebc454da3d",
+    "manufacturerReview": null,
+    "bodyGeometryMm": null,
+    "courtyardMm": [
+      9.0,
+      4.6
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "PHOTO_PV",
+    "source": "VOM1271T",
+    "pads": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "10a67f64c1d145d747cf18386ab14a2155531ea5c46f10e664c1c07f0d819840",
+    "manufacturerReview": null,
+    "bodyGeometryMm": {
+      "nominal": [
+        4.42,
+        4.57
+      ],
+      "maximum": [
+        4.92,
+        4.82
+      ]
+    },
+    "courtyardMm": [
+      5.5,
+      7.9
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "SW4",
+    "source": "TS-1187A-B-A-B",
+    "pads": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "copperCoordinates": "固定来源已换算为mm，X保持、Y反号；正交中心对称焊盘保留原轴角度",
+    "sourceFile": "footprint-source.json",
+    "unfixedFootprintSha256": "cd7f080db45e2bdf693b9b8550cda56366d6807320d140d229c965e156eb50fa",
+    "manufacturerReview": null,
+    "bodyGeometryMm": null,
+    "courtyardMm": [
+      7.5,
+      5.2
+    ],
+    "manufacturingReview": "方向已修正；焊盘尺寸、钢网/阻焊及未登记本体外形仍待制造审查"
+  },
+  {
+    "footprint": "LDL1117",
+    "source": "KiCad SOT-223-3_TabPin2",
+    "pads": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "note": "库编号4仅指散热片，与实际VOUT/2同网，不是新增芯片功能引脚"
+  },
+  {
+    "footprint": "USB_C_HRO_TYPE_C_31_M_12",
+    "source": "HRO TYPE-C-31-M-12, drawing 2020-12-08, Rev A, component side",
+    "sourceFile": "typec-footprint-source.json",
+    "pads": [
+      "A1B12",
+      "A4B9",
+      "B8",
+      "A5",
+      "B7",
+      "A6",
+      "A7",
+      "B6",
+      "A8",
+      "B5",
+      "B4A9",
+      "B1A12",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "report": "../../docs/电源连接器封装核定.md",
+    "manufacturingReview": "已按厂家铜盘/槽孔核定；实际采购图版、钢网及装配待确认"
+  },
+  {
+    "footprint": "DC_XKB_DC005_5A_2_0",
+    "source": "XKB DC-005-5A-2.0 Rev A0, manufacturer drawing hosted by Huaqiu, bottom view mirrored to component side",
+    "sourceFile": "dc-footprint-source.json",
+    "pads": [
+      "1",
+      "2",
+      "3"
+    ],
+    "report": "../../docs/电源连接器封装核定.md",
+    "manufacturingReview": "按厂家孔位及触点映射建立；实物配合与焊接工艺待样机确认"
+  },
+  {
+    "footprint": "ESP32_S3_WROOM_1_Edge",
+    "source": "KiCad10 RF_Module:ESP32-S3-WROOM-1",
+    "change": "仅将标准丝印图形转至Fab，保留全部焊盘和全铜层天线禁布规则",
+    "report": "../../docs/ESP32模组天线布局核定.md"
+  }
+]

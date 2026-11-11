@@ -1,0 +1,102 @@
+{
+  "manufacturer": "XKB INDUSTRIAL PRECISION CO., LIMITED",
+  "mpn": "DC-005-5A-2.0",
+  "drawing": "DC-005-5A-2.0 Rev A0, 1/1, date blank",
+  "source_url": "https://file.huaqiu.com/web1/M00/A7/25/pIYBAF2B1q6AKkTfABbJAnUjDHU127.pdf?filename=DC-005-5A-2.0.pdf",
+  "units": "mm",
+  "view": "component-side top view, mirrored y from manufacturer bottom-view PCB layout",
+  "origin": "pin 1 center",
+  "x_positive": "right, away from connector mouth",
+  "y_positive": "down",
+  "manufacturer_to_project_pins": {
+    "1": "1",
+    "2": "2",
+    "3": "3"
+  },
+  "pads": [
+    {
+      "number": "1",
+      "type": "thru_hole",
+      "xy": [
+        0,
+        0
+      ],
+      "size": [
+        1.8,
+        4.3
+      ],
+      "drill": [
+        1,
+        3.5
+      ],
+      "shape": "rect",
+      "net": "DC_IN_5V",
+      "function": "center contact"
+    },
+    {
+      "number": "2",
+      "type": "thru_hole",
+      "xy": [
+        -6,
+        0
+      ],
+      "size": [
+        1.8,
+        3.8
+      ],
+      "drill": [
+        1,
+        3
+      ],
+      "shape": "oval",
+      "net": "COMMON_GND",
+      "function": "outer sleeve spring contact"
+    },
+    {
+      "number": "3",
+      "type": "thru_hole",
+      "xy": [
+        -3,
+        4.7
+      ],
+      "size": [
+        3.8,
+        1.8
+      ],
+      "drill": [
+        3,
+        1
+      ],
+      "shape": "oval",
+      "net": null,
+      "function": "normally closed switched contact to pin 2; opens when plug inserted"
+    }
+  ],
+  "body_nominal": {
+    "x_min": -13.7,
+    "x_max": 0.7,
+    "y_min": -4.5,
+    "y_max": 4.5,
+    "height": 11,
+    "leg_extension_below_body": 3.5
+  },
+  "pcb_edge_x": -13.7,
+  "pcb_edge_note": "engineering placement reference, mouth flush with board edge; not a mandatory factory edge datum",
+  "locating_holes": [],
+  "copper_note": "factory gives slot sizes only; project copper pads add 0.4 mm nominal annulus per side; courtyard includes body general tolerance 0.3 mm plus assembly 0.5 mm, and copper plus 0.5 mm",
+  "rating_sources": {
+    "hqchip_product": "24 V / 5 A",
+    "manufacturer_drawing": "RATING line blank, model suffix 5A"
+  },
+  "mating_note": "factory drawing shows mating plug OD 5.5 mm and center pin variant 2.0 mm; conventional 5.5/2.1 plug family, distinguish actual socket pin from plug bore; drawing does not annotate plug bore tolerance",
+  "coordinateFrame": "component-side-x-right-y-down",
+  "source": "XKB DC-005-5A-2.0 Rev A0, manufacturer drawing hosted by Huaqiu, bottom view mirrored to component side",
+  "courtyard": {
+    "x_min": -14.5,
+    "x_max": 1.5,
+    "y_min": -5.3,
+    "y_max": 6.1
+  },
+  "pdfSha256": "4d9086191193109fbdb36111311044df8aef9a79684afb23b04a2dd0927708b6",
+  "purchase_url": "https://item.hqchip.com/1026633819.html"
+}

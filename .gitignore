@@ -1,0 +1,15 @@
+# AI:临时调查、浏览器记录和扩展运行产物保留在本地，不纳入工程版本。
+/docs/temp/
+/.playwright-mcp/
+/.easyeda/
+
+# AI:客户端自动备份与解释器缓存；正式版本归档位于hardware/versions。
+**/*_backup/
+**/*-backups/
+**/.history/
+**/__pycache__/
+*.py[cod]
+node_modules/
+*.kicad_prl
+*.lck
+~$*

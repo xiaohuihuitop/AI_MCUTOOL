@@ -1,0 +1,1 @@
+step reset-drawing-preserving-instances (action schematic.primitives.delete) needs confirmation — run it? [y/N] step reset-drawing-preserving-instances: declined — stopping (resume later with --resume)

@@ -1,0 +1,130 @@
+{
+  "pcbBefore": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1",
+  "pages": [
+    {
+      "page": 1,
+      "uuid": "58316ac9a100868e",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\01-工具电源.esch2",
+      "nonTextSHA256": "28b729abbe5c34152b4660595e33ac418c062f0fdf14080afea074ab2fa12cd6",
+      "addedTextIds": [
+        "82a5fa93504840f1",
+        "0321e415c7c24993",
+        "13b780488ee54db9",
+        "c7cb32006b894094",
+        "cdbd8cf9323b450a",
+        "98983afbd49a4361",
+        "a49b2c6dbc0743f9",
+        "f2ec363a7797440f"
+      ]
+    },
+    {
+      "page": 2,
+      "uuid": "6ac5c47b59291a93",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\02-主控与总线.esch2",
+      "nonTextSHA256": "edc368b7cb86490ce28f3dcb3bbdac18e1e25eadf37e607a98e2589a9de05054",
+      "addedTextIds": [
+        "ae053f96a9d44ee8",
+        "54b41e2101404039",
+        "4da2b8d0a6844fef",
+        "cbce8bcd4bfb4f5a",
+        "0894e9d7b1ba4cbc",
+        "3af1f8053b4c42cd",
+        "03a6ab786b2d40c1",
+        "06cca57d396e4f3c",
+        "421d6bac34654286",
+        "f3fa74ca925e4a26",
+        "0cead849169d41b8",
+        "2f2ae62fb057478c"
+      ]
+    },
+    {
+      "page": 3,
+      "uuid": "8acf11b5cb7fef5d",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\03-五路按键.esch2",
+      "nonTextSHA256": "f5bcbcaad0c1d721290b6184bd199cec58ac93da7597b44d66706616065d763f",
+      "addedTextIds": [
+        "e0cc964519154960",
+        "939295f6c7704e9e",
+        "8f7c10a2fed948df",
+        "33d04abb3be54fd7",
+        "3cda5dd648264a3c",
+        "cee621d7faf142dd"
+      ]
+    },
+    {
+      "page": 4,
+      "uuid": "fc93d0ec90c4481b",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\04-主供电选择.esch2",
+      "nonTextSHA256": "727bf837ae926aa55e5e153939bb0d8b96bd72353be00f77f98ee8c07eed3e0d",
+      "addedTextIds": [
+        "72e9ad586eea4b58",
+        "a502ad446fc84aa5",
+        "bfe63fd7744a4863",
+        "afd9499c181b4ebe",
+        "b19a85df37484ae4",
+        "fbc32490a5f14b04"
+      ]
+    },
+    {
+      "page": 5,
+      "uuid": "984a9bed1747817a",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\05-独立充电.esch2",
+      "nonTextSHA256": "15691acdcbd14468bacbc9ce4c5c7e3de93fc0fd727d24d46941b72da5a0dc7a",
+      "addedTextIds": [
+        "d1c74f7f0618453d",
+        "fa2d0dd44237464d",
+        "9087e6c2da954103",
+        "830818e4f47b4c82"
+      ]
+    },
+    {
+      "page": 6,
+      "uuid": "4459834174268cdf",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\06-电池端测量.esch2",
+      "nonTextSHA256": "dceab1e13af8ffe2bacc94e1ecf3fb700dadd6278310dc9c1e5d085a68c56bde",
+      "addedTextIds": [
+        "24e702ed40cd484d",
+        "26378f06b6024925",
+        "be4168379e534de2",
+        "f308615734a349ea",
+        "c6995150b0934f4f",
+        "cff8b8978ee84c95"
+      ]
+    },
+    {
+      "page": 7,
+      "uuid": "b64f32ff6a10f61f",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\07-四路电压.esch2",
+      "nonTextSHA256": "cf5f8fe158f131ded8fbfde5323ba3746fd44ac69de0b5c53a7d39cf81ab14d7",
+      "addedTextIds": [
+        "f6d2944c88204d46",
+        "e3f9bd746f364297",
+        "f293b5af6c4145d3",
+        "0a90b91114b1444c",
+        "b8b697867c3641d0",
+        "46ecdf0e6ecb4813"
+      ]
+    },
+    {
+      "page": 8,
+      "uuid": "44c68f3606fe991d",
+      "path": "D:\\LCEDA\\projects\\AI_TOOL\\sch\\Schematic1_1\\08-目标串口.esch2",
+      "nonTextSHA256": "2a5ea6ab55f2c293812dbc660fa1d0e9cfb6af01e40a2c97da1b7fa0368578f1",
+      "addedTextIds": [
+        "5e742e2676b14151",
+        "db9fc220e92f44f1",
+        "2e205fc222194f2e",
+        "8acdcb622abb4ac8",
+        "b6249966911b41c8",
+        "77edf0ada61d4c7a"
+      ]
+    }
+  ],
+  "pcbAfter": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1",
+  "componentCount": 164,
+  "pinCount": 508,
+  "netDiff": [],
+  "drc": [],
+  "pcbFinal": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1",
+  "visualCheck": "八页原生导出逐页核验，新增解析无电路遮挡，中文与公式正常显示。"
+}

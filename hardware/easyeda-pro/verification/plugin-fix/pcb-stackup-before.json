@@ -1,0 +1,15 @@
+{
+  "id": "req_819",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T14:07:45.9425336Z",
+  "ok": false,
+  "error": {
+    "code": "PRECONDITION_REFUSED",
+    "message": "pcb.layers.list needs a pcb document, but the foreground document is schematic \"1723f236624877be\". Retry with --doc set to the target pcb name or uuid (list them with `easyeda doc ls`), or run `easyeda doc switch` to it first.",
+    "detail": "original error: EDA_CALL_FAILED: Failed to list PCB layers. — Cannot read properties of null (reading 'map')"
+  },
+  "seq": 888,
+  "seqAbandoned": 0
+}

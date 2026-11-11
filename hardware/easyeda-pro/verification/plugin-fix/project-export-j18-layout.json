@@ -1,0 +1,15 @@
+{
+  "id": "req_504",
+  "ok": true,
+  "result": {
+    "bytes": 873015,
+    "format": "epro2",
+    "path": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\hardware\\easyeda-pro\\AI-MCUTOOL-RevA-J18-layout.epro2",
+    "restoreVerified": false,
+    "sha256": "0f544dfe5fc6f20aff8365e7b59d5eb841f13734bba397ff4c0c35bdf70e47b2",
+    "uuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "zipIntegrityVerified": true
+  },
+  "type": "response",
+  "version": "v1"
+}

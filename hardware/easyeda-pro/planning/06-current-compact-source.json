@@ -1,0 +1,1413 @@
+{
+  "schemaVersion": 1,
+  "connectivity": {
+    "schemaVersion": "1.4",
+    "projectId": "57a0364c842149baada4fb3ca7ccf03f",
+    "documentId": "adb82841fcb5f3ba",
+    "components": [
+      {
+        "id": "cmp-C8",
+        "uniqueId": "AI_MCUTOOL_C8",
+        "ref": "C8",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "12b3818ac26c4590b4cad87fb3ce8d66",
+          "name": "={Value}"
+        },
+        "footprint": "77b4be01a950a6f4",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "C0603",
+          "uuid": "77b4be01a950a6f4"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 590,
+            "y": 200
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 630,
+            "y": 200
+          }
+        ],
+        "placement": {
+          "x": 610,
+          "y": 200,
+          "bbox": {
+            "minX": 599.5,
+            "minY": 191.5,
+            "maxX": 620.5,
+            "maxY": 208.5
+          }
+        }
+      },
+      {
+        "id": "cmp-C9",
+        "uniqueId": "AI_MCUTOOL_C9",
+        "ref": "C9",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "12b3818ac26c4590b4cad87fb3ce8d66",
+          "name": "={Value}"
+        },
+        "footprint": "77b4be01a950a6f4",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "C0603",
+          "uuid": "77b4be01a950a6f4"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 940,
+            "y": 200
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 980,
+            "y": 200
+          }
+        ],
+        "placement": {
+          "x": 960,
+          "y": 200,
+          "bbox": {
+            "minX": 949.5,
+            "minY": 191.5,
+            "maxX": 970.5,
+            "maxY": 208.5
+          }
+        }
+      },
+      {
+        "id": "cmp-J11",
+        "uniqueId": "AI_MCUTOOL_J11",
+        "ref": "J11",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 240,
+            "y": 465
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 240,
+            "y": 455
+          }
+        ],
+        "placement": {
+          "x": 260,
+          "y": 460,
+          "bbox": {
+            "minX": 249.5,
+            "minY": 444.5,
+            "maxX": 280.5,
+            "maxY": 475.5
+          }
+        }
+      },
+      {
+        "id": "cmp-R37",
+        "uniqueId": "AI_MCUTOOL_R37",
+        "ref": "R37",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "91ed62e3d3584de481255b4ba4b37f6f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1290,
+            "y": 460
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1330,
+            "y": 460
+          }
+        ],
+        "placement": {
+          "x": 1310,
+          "y": 460,
+          "bbox": {
+            "minX": 1299.5,
+            "minY": 455.5,
+            "maxX": 1320.5,
+            "maxY": 464.5
+          }
+        }
+      },
+      {
+        "id": "cmp-R38",
+        "uniqueId": "AI_MCUTOOL_R38",
+        "ref": "R38",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "91ed62e3d3584de481255b4ba4b37f6f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1640,
+            "y": 460
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1680,
+            "y": 460
+          }
+        ],
+        "placement": {
+          "x": 1660,
+          "y": 460,
+          "bbox": {
+            "minX": 1649.5,
+            "minY": 455.5,
+            "maxX": 1670.5,
+            "maxY": 464.5
+          }
+        }
+      },
+      {
+        "id": "cmp-R39",
+        "uniqueId": "AI_MCUTOOL_R39",
+        "ref": "R39",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 240,
+            "y": 200
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 280,
+            "y": 200
+          }
+        ],
+        "placement": {
+          "x": 260,
+          "y": 200,
+          "bbox": {
+            "minX": 249.5,
+            "minY": 195.5,
+            "maxX": 270.5,
+            "maxY": 204.5
+          }
+        }
+      },
+      {
+        "id": "cmp-RSH1",
+        "uniqueId": "AI_MCUTOOL_RSH1",
+        "ref": "RSH1",
+        "device": {
+          "libraryUuid": "a1f2036875bb455c81bcb336ee86682f",
+          "deviceUuid": "52802c9addfb44648bba8d5b8c4dcf28",
+          "name": "20mOhm"
+        },
+        "footprint": "9627079403ee9ac3",
+        "footprintRef": {
+          "libraryUuid": "a1f2036875bb455c81bcb336ee86682f",
+          "name": "RES-SMD_L6.4-W3.2_WSK2512R0100FEA",
+          "uuid": "9627079403ee9ac3"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "I2",
+            "x": 580,
+            "y": 470
+          },
+          {
+            "number": "2",
+            "name": "E2",
+            "x": 580,
+            "y": 450
+          },
+          {
+            "number": "3",
+            "name": "E1",
+            "x": 640,
+            "y": 470
+          },
+          {
+            "number": "4",
+            "name": "I1",
+            "x": 640,
+            "y": 450
+          }
+        ],
+        "placement": {
+          "x": 610,
+          "y": 460,
+          "bbox": {
+            "minX": 589.5,
+            "minY": 449.5,
+            "maxX": 630.5,
+            "maxY": 470.5
+          }
+        }
+      },
+      {
+        "id": "cmp-U12",
+        "uniqueId": "AI_MCUTOOL_U12",
+        "ref": "U12",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "a265f3e81ae24d3d9857561595c7420e",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "06c0215ff17f2d55",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL",
+          "uuid": "06c0215ff17f2d55"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "A1",
+            "x": 915,
+            "y": 480
+          },
+          {
+            "number": "10",
+            "name": "IN+",
+            "x": 1005,
+            "y": 480
+          },
+          {
+            "number": "2",
+            "name": "A0",
+            "x": 915,
+            "y": 470
+          },
+          {
+            "number": "3",
+            "name": "ALERT",
+            "x": 915,
+            "y": 460
+          },
+          {
+            "number": "4",
+            "name": "SDA",
+            "x": 915,
+            "y": 450
+          },
+          {
+            "number": "5",
+            "name": "SCL",
+            "x": 915,
+            "y": 440
+          },
+          {
+            "number": "6",
+            "name": "VS",
+            "x": 1005,
+            "y": 440
+          },
+          {
+            "number": "7",
+            "name": "GND",
+            "x": 1005,
+            "y": 450
+          },
+          {
+            "number": "8",
+            "name": "VBUS",
+            "x": 1005,
+            "y": 460
+          },
+          {
+            "number": "9",
+            "name": "IN–",
+            "x": 1005,
+            "y": 470
+          }
+        ],
+        "placement": {
+          "x": 960,
+          "y": 460,
+          "bbox": {
+            "minX": 924.5,
+            "minY": 429.5,
+            "maxX": 995.5,
+            "maxY": 490.5
+          }
+        }
+      }
+    ],
+    "nets": [
+      {
+        "id": "net-1ec8dcc9321eb3be24f9ec686c063a6b0b0477844d48af12349f124ba2e4a4c3",
+        "name": "SHUNT_E2",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-3a1c32bb549e7a4b82578268efd93f169e4ae6f1cb8c2c170781b8c0f1e76441",
+        "name": "I2C_SDA",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-4ebd153cde31b8161300f57240eb7d8635412d630046aaf9336e3d3de98b87db",
+        "name": "I2C_SCL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-62d09781eedf7edfcb929a442afe57022a1a07dc21b6116dbc59b2efd507d0e0",
+        "name": "INA_IN_N",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-9add57749153663f38d108edee083fb2238a255b7b7fe82d9287be2c6a6f1a52",
+        "name": "INA_IN_P",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-a600549e81e14c624f5b946a49de209faa814125e8accda83ba675098e60f535",
+        "name": "VSEL_P",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-ad590fbfb58566655cc772d7bab79d5f7ebf5a4ba4cc459f8a84bbe257324fd2",
+        "name": "SHUNT_E1",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "name": "COMMON_GND",
+        "scope": "global",
+        "role": "ground"
+      },
+      {
+        "id": "net-d128dcfa2b4ba70d62740184101927d3974354de00e03e7252ba093e32e66f04",
+        "name": "DUT_PWR_P",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "name": "TOOL_3V3",
+        "scope": "global",
+        "role": "power"
+      },
+      {
+        "id": "net-ef46901844070a83420f7f7e054c26ace6441ec831b18136bc436e4ae106d106",
+        "name": "CURRENT_ALERT",
+        "scope": "local",
+        "role": "signal"
+      }
+    ],
+    "connections": [
+      {
+        "componentId": "cmp-C8",
+        "pinNumber": "1",
+        "netId": "net-9add57749153663f38d108edee083fb2238a255b7b7fe82d9287be2c6a6f1a52",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-C8",
+        "pinNumber": "2",
+        "netId": "net-62d09781eedf7edfcb929a442afe57022a1a07dc21b6116dbc59b2efd507d0e0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-C9",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-C9",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J11",
+        "pinNumber": "1",
+        "netId": "net-d128dcfa2b4ba70d62740184101927d3974354de00e03e7252ba093e32e66f04",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J11",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R37",
+        "pinNumber": "1",
+        "netId": "net-ad590fbfb58566655cc772d7bab79d5f7ebf5a4ba4cc459f8a84bbe257324fd2",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R37",
+        "pinNumber": "2",
+        "netId": "net-9add57749153663f38d108edee083fb2238a255b7b7fe82d9287be2c6a6f1a52",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R38",
+        "pinNumber": "1",
+        "netId": "net-1ec8dcc9321eb3be24f9ec686c063a6b0b0477844d48af12349f124ba2e4a4c3",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R38",
+        "pinNumber": "2",
+        "netId": "net-62d09781eedf7edfcb929a442afe57022a1a07dc21b6116dbc59b2efd507d0e0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R39",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R39",
+        "pinNumber": "2",
+        "netId": "net-ef46901844070a83420f7f7e054c26ace6441ec831b18136bc436e4ae106d106",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-RSH1",
+        "pinNumber": "1",
+        "netId": "net-d128dcfa2b4ba70d62740184101927d3974354de00e03e7252ba093e32e66f04",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-RSH1",
+        "pinNumber": "2",
+        "netId": "net-1ec8dcc9321eb3be24f9ec686c063a6b0b0477844d48af12349f124ba2e4a4c3",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-RSH1",
+        "pinNumber": "3",
+        "netId": "net-ad590fbfb58566655cc772d7bab79d5f7ebf5a4ba4cc459f8a84bbe257324fd2",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-RSH1",
+        "pinNumber": "4",
+        "netId": "net-a600549e81e14c624f5b946a49de209faa814125e8accda83ba675098e60f535",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "1",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "10",
+        "netId": "net-9add57749153663f38d108edee083fb2238a255b7b7fe82d9287be2c6a6f1a52",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "3",
+        "netId": "net-ef46901844070a83420f7f7e054c26ace6441ec831b18136bc436e4ae106d106",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "4",
+        "netId": "net-3a1c32bb549e7a4b82578268efd93f169e4ae6f1cb8c2c170781b8c0f1e76441",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "5",
+        "netId": "net-4ebd153cde31b8161300f57240eb7d8635412d630046aaf9336e3d3de98b87db",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "6",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "7",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "8",
+        "netId": "net-d128dcfa2b4ba70d62740184101927d3974354de00e03e7252ba093e32e66f04",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U12",
+        "pinNumber": "9",
+        "netId": "net-62d09781eedf7edfcb929a442afe57022a1a07dc21b6116dbc59b2efd507d0e0",
+        "kind": "netlist"
+      }
+    ],
+    "modules": [
+      {
+        "id": "battery-measure",
+        "name": "电池端双向电流与电压测量",
+        "coreComponents": [
+          "cmp-U12",
+          "cmp-RSH1"
+        ],
+        "peripheralComponents": [
+          "cmp-R37",
+          "cmp-R38",
+          "cmp-R39",
+          "cmp-C8",
+          "cmp-C9",
+          "cmp-J11"
+        ]
+      }
+    ]
+  },
+  "sheet": {
+    "maxX": 2338,
+    "maxY": 1652,
+    "minX": 0,
+    "minY": 0
+  },
+  "sheetBorder": {
+    "minX": 10,
+    "minY": 10,
+    "maxX": 2328,
+    "maxY": 1642
+  },
+  "keepouts": [],
+  "modules": [
+    {
+      "id": "battery-measure",
+      "title": "电池端双向电流与电压测量 / Kelvin 取样",
+      "placements": [
+        {
+          "designator": "U12",
+          "value": "INA228AIDGSR",
+          "x": 300,
+          "y": 0,
+          "rotation": 0,
+          "mirror": false,
+          "bbox": {
+            "minX": 264.5,
+            "minY": -30.5,
+            "maxX": 335.5,
+            "maxY": 30.5
+          },
+          "textBboxes": [
+            {
+              "minX": 265,
+              "minY": 30,
+              "maxX": 277.84130859375,
+              "maxY": 38
+            }
+          ],
+          "pins": [
+            {
+              "number": "1",
+              "name": "A1",
+              "net": "COMMON_GND",
+              "x": 255,
+              "y": 20,
+              "rotation": 180
+            },
+            {
+              "number": "2",
+              "name": "A0",
+              "net": "COMMON_GND",
+              "x": 255,
+              "y": 10,
+              "rotation": 180
+            },
+            {
+              "number": "3",
+              "name": "ALERT",
+              "net": "CURRENT_ALERT",
+              "x": 255,
+              "y": 0,
+              "rotation": 180
+            },
+            {
+              "number": "4",
+              "name": "SDA",
+              "net": "I2C_SDA",
+              "x": 255,
+              "y": -10,
+              "rotation": 180
+            },
+            {
+              "number": "5",
+              "name": "SCL",
+              "net": "I2C_SCL",
+              "x": 255,
+              "y": -20,
+              "rotation": 180
+            },
+            {
+              "number": "6",
+              "name": "VS",
+              "net": "TOOL_3V3",
+              "x": 345,
+              "y": -20,
+              "rotation": 0
+            },
+            {
+              "number": "7",
+              "name": "GND",
+              "net": "COMMON_GND",
+              "x": 345,
+              "y": -10,
+              "rotation": 0
+            },
+            {
+              "number": "8",
+              "name": "VBUS",
+              "net": "DUT_PWR_P",
+              "x": 345,
+              "y": 0,
+              "rotation": 0
+            },
+            {
+              "number": "9",
+              "name": "IN–",
+              "net": "INA_IN_N",
+              "x": 345,
+              "y": 10,
+              "rotation": 0
+            },
+            {
+              "number": "10",
+              "name": "IN+",
+              "net": "INA_IN_P",
+              "x": 345,
+              "y": 20,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "designator": "RSH1",
+          "value": "20mOhm",
+          "x": 650,
+          "y": 120,
+          "rotation": 180,
+          "mirror": false,
+          "bbox": {
+            "minX": 629.5,
+            "minY": 109.5,
+            "maxX": 670.5,
+            "maxY": 130.5
+          },
+          "textBboxes": [
+            {
+              "minX": 654.2352294921875,
+              "minY": 103.25,
+              "maxX": 670,
+              "maxY": 110
+            }
+          ],
+          "pins": [
+            {
+              "number": "2",
+              "name": "E2",
+              "net": "SHUNT_E2",
+              "x": 680,
+              "y": 130,
+              "rotation": 0
+            },
+            {
+              "number": "1",
+              "name": "I2",
+              "net": "DUT_PWR_P",
+              "x": 680,
+              "y": 110,
+              "rotation": 0
+            },
+            {
+              "number": "3",
+              "name": "E1",
+              "net": "SHUNT_E1",
+              "x": 620,
+              "y": 110,
+              "rotation": 180
+            },
+            {
+              "number": "4",
+              "name": "I1",
+              "net": "VSEL_P",
+              "x": 620,
+              "y": 130,
+              "rotation": 180
+            }
+          ]
+        },
+        {
+          "designator": "R37",
+          "value": "10Ω",
+          "x": 500,
+          "y": 20,
+          "rotation": 180,
+          "mirror": false,
+          "bbox": {
+            "minX": 489.5,
+            "minY": 15.5,
+            "maxX": 510.5,
+            "maxY": 24.5
+          },
+          "textBboxes": [
+            {
+              "minX": 497.15869140625,
+              "minY": 7,
+              "maxX": 510,
+              "maxY": 15
+            }
+          ],
+          "pins": [
+            {
+              "number": "2",
+              "name": "2",
+              "net": "INA_IN_P",
+              "x": 480,
+              "y": 20,
+              "rotation": 180
+            },
+            {
+              "number": "1",
+              "name": "1",
+              "net": "SHUNT_E1",
+              "x": 520,
+              "y": 20,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "designator": "R38",
+          "value": "10Ω",
+          "x": 500,
+          "y": -50,
+          "rotation": 180,
+          "mirror": false,
+          "bbox": {
+            "minX": 489.5,
+            "minY": -54.5,
+            "maxX": 510.5,
+            "maxY": -45.5
+          },
+          "textBboxes": [
+            {
+              "minX": 497.15869140625,
+              "minY": -63,
+              "maxX": 510,
+              "maxY": -55
+            }
+          ],
+          "pins": [
+            {
+              "number": "2",
+              "name": "2",
+              "net": "INA_IN_N",
+              "x": 480,
+              "y": -50,
+              "rotation": 180
+            },
+            {
+              "number": "1",
+              "name": "1",
+              "net": "SHUNT_E2",
+              "x": 520,
+              "y": -50,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "designator": "C8",
+          "value": "100nF",
+          "x": 440,
+          "y": -15,
+          "rotation": 270,
+          "mirror": false,
+          "bbox": {
+            "minX": 431.5,
+            "minY": -25.5,
+            "maxX": 448.5,
+            "maxY": -4.5
+          },
+          "textBboxes": [
+            {
+              "minX": 450,
+              "minY": -13.9482421875,
+              "maxX": 458,
+              "maxY": -5
+            }
+          ],
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "net": "INA_IN_P",
+              "x": 440,
+              "y": 5,
+              "rotation": 90
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "net": "INA_IN_N",
+              "x": 440,
+              "y": -35,
+              "rotation": 270
+            }
+          ]
+        },
+        {
+          "designator": "C9",
+          "value": "100nF",
+          "x": 550,
+          "y": -170,
+          "rotation": 270,
+          "mirror": false,
+          "bbox": {
+            "minX": 541.5,
+            "minY": -180.5,
+            "maxX": 558.5,
+            "maxY": -159.5
+          },
+          "textBboxes": [
+            {
+              "minX": 560,
+              "minY": -168.9482421875,
+              "maxX": 568,
+              "maxY": -160
+            }
+          ],
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "net": "TOOL_3V3",
+              "x": 550,
+              "y": -150,
+              "rotation": 90
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "net": "COMMON_GND",
+              "x": 550,
+              "y": -190,
+              "rotation": 270
+            }
+          ]
+        },
+        {
+          "designator": "R39",
+          "value": "10kΩ",
+          "x": 130,
+          "y": 0,
+          "rotation": 0,
+          "mirror": false,
+          "bbox": {
+            "minX": 119.5,
+            "minY": -4.5,
+            "maxX": 140.5,
+            "maxY": 4.5
+          },
+          "textBboxes": [
+            {
+              "minX": 120,
+              "minY": 5,
+              "maxX": 132.84130859375,
+              "maxY": 13
+            }
+          ],
+          "pins": [
+            {
+              "number": "2",
+              "name": "2",
+              "net": "CURRENT_ALERT",
+              "x": 150,
+              "y": 0,
+              "rotation": 0
+            },
+            {
+              "number": "1",
+              "name": "1",
+              "net": "TOOL_3V3",
+              "x": 110,
+              "y": 0,
+              "rotation": 180
+            }
+          ]
+        },
+        {
+          "designator": "J11",
+          "value": "",
+          "x": 920,
+          "y": 105,
+          "rotation": 0,
+          "mirror": false,
+          "bbox": {
+            "minX": 909.5,
+            "minY": 89.5,
+            "maxX": 940.5,
+            "maxY": 120.5
+          },
+          "textBboxes": [
+            {
+              "minX": 910,
+              "minY": 120,
+              "maxX": 920.7666015625,
+              "maxY": 128
+            }
+          ],
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "net": "DUT_PWR_P",
+              "x": 900,
+              "y": 110,
+              "rotation": 180
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "net": "COMMON_GND",
+              "x": 900,
+              "y": 100,
+              "rotation": 180
+            }
+          ]
+        }
+      ],
+      "wires": [
+        {
+          "net": "INA_IN_P",
+          "points": [
+            [
+              345,
+              20
+            ],
+            [
+              480,
+              20
+            ]
+          ]
+        },
+        {
+          "net": "INA_IN_P",
+          "points": [
+            [
+              440,
+              5
+            ],
+            [
+              440,
+              20
+            ]
+          ]
+        },
+        {
+          "net": "INA_IN_N",
+          "points": [
+            [
+              345,
+              10
+            ],
+            [
+              400,
+              10
+            ],
+            [
+              400,
+              -50
+            ],
+            [
+              480,
+              -50
+            ]
+          ]
+        },
+        {
+          "net": "INA_IN_N",
+          "points": [
+            [
+              440,
+              -35
+            ],
+            [
+              440,
+              -50
+            ]
+          ]
+        },
+        {
+          "net": "SHUNT_E1",
+          "points": [
+            [
+              520,
+              20
+            ],
+            [
+              590,
+              20
+            ],
+            [
+              590,
+              110
+            ],
+            [
+              620,
+              110
+            ]
+          ]
+        },
+        {
+          "net": "SHUNT_E2",
+          "points": [
+            [
+              520,
+              -50
+            ],
+            [
+              820,
+              -50
+            ],
+            [
+              820,
+              130
+            ],
+            [
+              680,
+              130
+            ]
+          ]
+        },
+        {
+          "net": "DUT_PWR_P",
+          "points": [
+            [
+              680,
+              110
+            ],
+            [
+              900,
+              110
+            ]
+          ]
+        },
+        {
+          "net": "DUT_PWR_P",
+          "points": [
+            [
+              345,
+              0
+            ],
+            [
+              750,
+              0
+            ],
+            [
+              750,
+              110
+            ]
+          ]
+        },
+        {
+          "net": "COMMON_GND",
+          "points": [
+            [
+              255,
+              20
+            ],
+            [
+              230,
+              20
+            ],
+            [
+              230,
+              -220
+            ],
+            [
+              880,
+              -220
+            ],
+            [
+              880,
+              100
+            ],
+            [
+              900,
+              100
+            ]
+          ]
+        },
+        {
+          "net": "COMMON_GND",
+          "points": [
+            [
+              255,
+              10
+            ],
+            [
+              230,
+              10
+            ]
+          ]
+        },
+        {
+          "net": "COMMON_GND",
+          "points": [
+            [
+              345,
+              -10
+            ],
+            [
+              380,
+              -10
+            ],
+            [
+              380,
+              -220
+            ]
+          ]
+        },
+        {
+          "net": "COMMON_GND",
+          "points": [
+            [
+              550,
+              -190
+            ],
+            [
+              550,
+              -220
+            ]
+          ]
+        },
+        {
+          "net": "TOOL_3V3",
+          "points": [
+            [
+              345,
+              -20
+            ],
+            [
+              370,
+              -20
+            ],
+            [
+              370,
+              -140
+            ],
+            [
+              550,
+              -140
+            ],
+            [
+              550,
+              -150
+            ]
+          ]
+        },
+        {
+          "net": "TOOL_3V3",
+          "points": [
+            [
+              110,
+              0
+            ],
+            [
+              80,
+              0
+            ],
+            [
+              80,
+              50
+            ]
+          ]
+        },
+        {
+          "net": "CURRENT_ALERT",
+          "points": [
+            [
+              150,
+              0
+            ],
+            [
+              255,
+              0
+            ]
+          ]
+        }
+      ],
+      "flags": [
+        {
+          "net": "VSEL_P",
+          "pinX": 620,
+          "pinY": 130,
+          "direction": "left",
+          "kind": "net_port_bi",
+          "offset": 30
+        },
+        {
+          "net": "DUT_PWR_P",
+          "pinX": 750,
+          "pinY": 110,
+          "direction": "up",
+          "kind": "net_port_bi",
+          "offset": 60
+        },
+        {
+          "net": "SHUNT_E1",
+          "pinX": 590,
+          "pinY": 70,
+          "direction": "left",
+          "kind": "net_port_bi",
+          "offset": 40
+        },
+        {
+          "net": "SHUNT_E2",
+          "pinX": 820,
+          "pinY": 130,
+          "direction": "up",
+          "kind": "net_port_bi",
+          "offset": 60
+        },
+        {
+          "net": "INA_IN_P",
+          "pinX": 400,
+          "pinY": 20,
+          "direction": "up",
+          "kind": "net_port_bi",
+          "offset": 60
+        },
+        {
+          "net": "INA_IN_N",
+          "pinX": 440,
+          "pinY": -50,
+          "direction": "down",
+          "kind": "net_port_bi",
+          "offset": 70
+        },
+        {
+          "net": "TOOL_3V3",
+          "pinX": 550,
+          "pinY": -140,
+          "direction": "up",
+          "kind": "power",
+          "offset": 30
+        },
+        {
+          "net": "TOOL_3V3",
+          "pinX": 80,
+          "pinY": 50,
+          "direction": "up",
+          "kind": "power",
+          "offset": 30
+        },
+        {
+          "net": "COMMON_GND",
+          "pinX": 600,
+          "pinY": -220,
+          "direction": "down",
+          "kind": "ground",
+          "offset": 40
+        },
+        {
+          "net": "CURRENT_ALERT",
+          "pinX": 200,
+          "pinY": 0,
+          "direction": "up",
+          "kind": "net_port_out",
+          "offset": 50
+        },
+        {
+          "net": "I2C_SDA",
+          "pinX": 255,
+          "pinY": -10,
+          "direction": "left",
+          "kind": "net_port_bi",
+          "offset": 50
+        },
+        {
+          "net": "I2C_SCL",
+          "pinX": 255,
+          "pinY": -20,
+          "direction": "left",
+          "kind": "net_port_bi",
+          "offset": 50
+        }
+      ]
+    }
+  ]
+}

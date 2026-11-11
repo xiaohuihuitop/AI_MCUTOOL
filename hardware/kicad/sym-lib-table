@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib
+    (name "AI_MCUTOOL")
+    (type "KiCad")
+    (uri "${KIPRJMOD}/AI_MCUTOOL.kicad_sym")
+    (options "")
+    (descr "本项目已核脚号与绘图符号")))

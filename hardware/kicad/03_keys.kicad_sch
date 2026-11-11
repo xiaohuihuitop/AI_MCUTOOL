@@ -1,0 +1,6556 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "34362b02-e3a6-5600-a9b0-678ffbf61eef")
+	(paper "A3")
+	(title_block
+		(title "03 五路按键模拟")
+		(date "2026-10-24")
+		(rev "A-KiCad")
+		(company "AI-MCUTOOL")
+		(comment 1 "原理样机；封装、热设计和测量精度仍需验证")
+	)
+	(lib_symbols
+		(symbol "AI_MCUTOOL:COMMON_GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.635)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "COMMON_GND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "COMMON_GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy -2.54 -1.27) (xy 0 -3.81) (xy 2.54 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "COMMON_GND_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "COMMON_GND"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AI_MCUTOOL:HDR2_L"
+			(pin_names
+				(offset 0.635)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "HDR2_L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HDR2_L_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "HDR2_L_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AI_MCUTOOL:MMBT3904"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBT3904"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "NPN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=B 2=E 3=C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "NPN Transistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBT3904_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBT3904_1_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AI_MCUTOOL:PHOTO_MOS"
+			(pin_names
+				(offset 0.635)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "PHOTO_MOS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PHOTO_MOS_0_1"
+				(rectangle
+					(start -8.89 6.35)
+					(end 8.89 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 1.27) (xy -3.81 -2.54) (xy -1.27 1.27) (xy -6.35 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 2.54) (xy -3.81 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 3.81) (xy 3.81 -1.27) (xy 6.35 1.27) (xy 6.35 -3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PHOTO_MOS_1_1"
+				(pin passive line
+					(at -11.43 3.81 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 -3.81 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 3.81 180)
+					(length 2.54)
+					(name "CONTACT_A"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 -3.81 180)
+					(length 2.54)
+					(name "CONTACT_B"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AI_MCUTOOL:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "AI_MCUTOOL:TOOL_3V3"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.635)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "TOOL_3V3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TOOL_3V3_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TOOL_3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "TOOL_3V3"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "KEY4"
+		(exclude_from_sim no)
+		(at 218.44 114.3 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b285143-6b18-5180-9578-da25dfadf722")
+	)
+	(text "KEY1"
+		(exclude_from_sim no)
+		(at 21.59 40.64 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e1dfb4c-a370-5c7b-ad92-b249237ca4ac")
+	)
+	(text "KEY3"
+		(exclude_from_sim no)
+		(at 21.59 114.3 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "46065de2-4a37-5dee-b5b7-b56ace59c04e")
+	)
+	(text "03 五路按键模拟"
+		(exclude_from_sim no)
+		(at 15.24 16.51 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "96938e75-8769-50a2-ab6c-f3202a4cb23d")
+	)
+	(text "KEY5"
+		(exclude_from_sim no)
+		(at 21.59 187.96 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "9ce3ff18-91c2-50e6-9552-9654e2736e4f")
+	)
+	(text "触点独立、无极性；被测按键≤6V、≤20mA。触点不接工具公共地。"
+		(exclude_from_sim no)
+		(at 15.24 25.4 0)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7bad494-d802-5412-9010-203ad0a2ed11")
+	)
+	(text "240Ω为PhotoMOS LED限流；680Ω为基极电阻；10kΩ保证控制悬空时关闭。"
+		(exclude_from_sim no)
+		(at 209.55 254 0)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+			(justify left bottom)
+		)
+		(uuid "daaed297-0b9b-537f-b55d-d459367fc27e")
+	)
+	(text "KEY2"
+		(exclude_from_sim no)
+		(at 218.44 40.64 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "f56cd64a-b57c-55e1-ab88-4ddc95a14298")
+	)
+	(junction
+		(at 247.65 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35a12abd-2539-5584-99d1-b40750c1ee28")
+	)
+	(junction
+		(at 50.8 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b9aab52-6aee-5d89-8f05-7764deba16d3")
+	)
+	(junction
+		(at 247.65 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81680f6a-bf69-5dfe-9300-89011f9efe20")
+	)
+	(junction
+		(at 50.8 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dcd53e0f-9bc3-5e93-8440-0a37e507db49")
+	)
+	(junction
+		(at 50.8 226.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "df6c26c7-bab8-523a-95b6-1748bb026210")
+	)
+	(wire
+		(pts
+			(xy 66.04 148.59) (xy 95.25 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03afcfb4-e520-5b1f-9954-7384dbf881ac")
+	)
+	(wire
+		(pts
+			(xy 132.08 218.44) (xy 137.16 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "043b69f3-7ef6-5a8d-afe4-7dc625866c06")
+	)
+	(wire
+		(pts
+			(xy 118.11 148.59) (xy 127 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09e2f844-94f4-504d-80bf-2f2660384c98")
+	)
+	(wire
+		(pts
+			(xy 66.04 73.66) (xy 66.04 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b1347b7-e962-54ff-a825-318f01cb85da")
+	)
+	(wire
+		(pts
+			(xy 82.55 132.08) (xy 82.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "116f8713-ca9a-5004-8d6a-3ff00fef6716")
+	)
+	(wire
+		(pts
+			(xy 127 147.32) (xy 127 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "196eb34c-b266-51f1-9975-4a98fcbf79c9")
+	)
+	(wire
+		(pts
+			(xy 323.85 147.32) (xy 334.01 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b04c64e-1c87-5969-8b57-4b391128d967")
+	)
+	(wire
+		(pts
+			(xy 238.76 152.4) (xy 247.65 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22cde298-e270-5d39-a5e9-751e45b7b87a")
+	)
+	(wire
+		(pts
+			(xy 132.08 140.97) (xy 132.08 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2eb331a3-46ac-5027-bf7d-e47752dd49fd")
+	)
+	(wire
+		(pts
+			(xy 82.55 119.38) (xy 82.55 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30405270-6947-5920-8869-71dcf9534431")
+	)
+	(wire
+		(pts
+			(xy 279.4 132.08) (xy 279.4 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30c19d56-16a3-501e-a6e6-ecc5a01bdca7")
+	)
+	(wire
+		(pts
+			(xy 279.4 140.97) (xy 292.1 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32de5b5b-1dfb-5416-9cc1-9745b670a65f")
+	)
+	(wire
+		(pts
+			(xy 27.94 78.74) (xy 34.29 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "374ef95d-6920-5b69-8c2b-f4c6e157a50a")
+	)
+	(wire
+		(pts
+			(xy 118.11 140.97) (xy 132.08 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a6d9945-be78-5372-b168-aa083d81d76f")
+	)
+	(wire
+		(pts
+			(xy 262.89 74.93) (xy 292.1 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a730415-eb8f-55ec-b4ff-ef673e0a57b1")
+	)
+	(wire
+		(pts
+			(xy 323.85 73.66) (xy 334.01 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b7f4db6-7ac1-54e5-a508-13b852929133")
+	)
+	(wire
+		(pts
+			(xy 50.8 226.06) (xy 50.8 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d7b3bed-3b34-5b2d-a39f-b6d77ca4df83")
+	)
+	(wire
+		(pts
+			(xy 262.89 147.32) (xy 262.89 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "447f83a3-55c2-50bd-adea-cf327a701fe2")
+	)
+	(wire
+		(pts
+			(xy 41.91 152.4) (xy 50.8 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44d9385c-6d92-5b08-a45d-84c2dff9090e")
+	)
+	(wire
+		(pts
+			(xy 82.55 45.72) (xy 82.55 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4932f4c6-6c7d-5b46-93c7-e1d69a572e97")
+	)
+	(wire
+		(pts
+			(xy 314.96 140.97) (xy 328.93 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49337c40-0ad6-5714-bec9-59550523a503")
+	)
+	(wire
+		(pts
+			(xy 314.96 148.59) (xy 323.85 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4aa23f8f-3953-5ea8-a96b-2638afaafe36")
+	)
+	(wire
+		(pts
+			(xy 224.79 152.4) (xy 231.14 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e1e4d66-3261-5595-a6e5-3ecefbb35933")
+	)
+	(wire
+		(pts
+			(xy 279.4 45.72) (xy 279.4 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5341f898-4494-56ec-a33c-66c720768021")
+	)
+	(wire
+		(pts
+			(xy 118.11 74.93) (xy 127 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53c9203c-ddbd-5592-8a38-52a4017daa49")
+	)
+	(wire
+		(pts
+			(xy 328.93 67.31) (xy 328.93 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "573cdfd2-4bc6-51b7-a402-32a183c2270e")
+	)
+	(wire
+		(pts
+			(xy 82.55 214.63) (xy 95.25 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5dba4cbe-11c8-55d4-9ec4-f64fce2b65cf")
+	)
+	(wire
+		(pts
+			(xy 262.89 73.66) (xy 262.89 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f6ad8c0-6970-5819-abe2-e2a14b936ba9")
+	)
+	(wire
+		(pts
+			(xy 247.65 173.99) (xy 247.65 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6259ea5f-77a4-5b5c-98ab-0a22940ac98f")
+	)
+	(wire
+		(pts
+			(xy 314.96 74.93) (xy 323.85 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "665dcde8-265b-5c76-a590-2ff858730d32")
+	)
+	(wire
+		(pts
+			(xy 279.4 67.31) (xy 292.1 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6814bd35-2c4d-598c-9e20-86bb7dcdf777")
+	)
+	(wire
+		(pts
+			(xy 66.04 157.48) (xy 66.04 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b976132-3234-5895-ba23-bc88bf6938be")
+	)
+	(wire
+		(pts
+			(xy 323.85 147.32) (xy 323.85 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71259461-6689-58c4-aa59-f43d195d2215")
+	)
+	(wire
+		(pts
+			(xy 66.04 231.14) (xy 66.04 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "715887da-3d5a-596a-bd48-fc4801e67a8c")
+	)
+	(wire
+		(pts
+			(xy 66.04 220.98) (xy 66.04 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7437b034-4f21-53d0-bf4b-8640ff9d1a43")
+	)
+	(wire
+		(pts
+			(xy 127 147.32) (xy 137.16 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75d55245-e904-5058-b7e2-935a8f0fbd7f")
+	)
+	(wire
+		(pts
+			(xy 132.08 67.31) (xy 132.08 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7615e122-6e11-564e-b45f-1f943dc197d0")
+	)
+	(wire
+		(pts
+			(xy 132.08 144.78) (xy 137.16 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "790954f5-a309-55ee-969c-a0384755ba4b")
+	)
+	(wire
+		(pts
+			(xy 82.55 205.74) (xy 82.55 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dc5393b-35de-55a7-8ef6-e854853e80fc")
+	)
+	(wire
+		(pts
+			(xy 118.11 67.31) (xy 132.08 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7de8afba-dbcc-5879-904c-fd0d1a8ed54f")
+	)
+	(wire
+		(pts
+			(xy 247.65 152.4) (xy 247.65 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f688564-3b62-5fde-b44e-16701fcab86a")
+	)
+	(wire
+		(pts
+			(xy 50.8 226.06) (xy 58.42 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84503ddb-7341-5194-b4ab-02864fc43bcf")
+	)
+	(wire
+		(pts
+			(xy 247.65 78.74) (xy 255.27 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85faf4a6-0527-5951-9473-3632f231871d")
+	)
+	(wire
+		(pts
+			(xy 328.93 140.97) (xy 328.93 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c43fb6c-50c1-5c61-9153-7447df19d240")
+	)
+	(wire
+		(pts
+			(xy 50.8 100.33) (xy 50.8 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91113a23-0fc0-5393-badd-b2929457c055")
+	)
+	(wire
+		(pts
+			(xy 82.55 58.42) (xy 82.55 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bde04c9-05e1-598e-b708-41db437de739")
+	)
+	(wire
+		(pts
+			(xy 323.85 73.66) (xy 323.85 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dc0bada-fbb5-5155-8b47-6068209937b8")
+	)
+	(wire
+		(pts
+			(xy 118.11 214.63) (xy 132.08 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a132873f-c486-5f1e-b0e9-30f165b781c6")
+	)
+	(wire
+		(pts
+			(xy 50.8 173.99) (xy 50.8 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2318a50-efa9-5f1d-995b-01efd00d630a")
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 58.42 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a40c4afa-3c2d-5c4d-960d-198cde8e1a3f")
+	)
+	(wire
+		(pts
+			(xy 127 73.66) (xy 127 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a93059ef-d637-5924-9869-30b4aa168e75")
+	)
+	(wire
+		(pts
+			(xy 50.8 152.4) (xy 58.42 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a996ac6e-663c-5176-a272-d7169313d95a")
+	)
+	(wire
+		(pts
+			(xy 127 220.98) (xy 127 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9ae3ed2-0ed1-57a9-bdba-c52dd5a19543")
+	)
+	(wire
+		(pts
+			(xy 41.91 226.06) (xy 50.8 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa03ab57-0347-596a-9d6a-a7cd6054de54")
+	)
+	(wire
+		(pts
+			(xy 262.89 148.59) (xy 292.1 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1728ff0-0647-5bf5-b047-12d9011f39f1")
+	)
+	(wire
+		(pts
+			(xy 328.93 71.12) (xy 334.01 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4703533-2f8d-5630-9e0b-1207bf2e4a97")
+	)
+	(wire
+		(pts
+			(xy 247.65 100.33) (xy 247.65 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b59dd3c9-bc8c-542c-b896-9e7fe9de11d7")
+	)
+	(wire
+		(pts
+			(xy 314.96 67.31) (xy 328.93 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9887f09-2014-5b98-a47e-85a273f3fe28")
+	)
+	(wire
+		(pts
+			(xy 66.04 222.25) (xy 95.25 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0cce3ce-cf93-567b-8f93-6e7452d31c34")
+	)
+	(wire
+		(pts
+			(xy 27.94 226.06) (xy 34.29 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c22f3a99-ab6b-596e-8163-07a1e84ce864")
+	)
+	(wire
+		(pts
+			(xy 262.89 157.48) (xy 262.89 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2440b9e-b475-50ef-b73e-8ad856296076")
+	)
+	(wire
+		(pts
+			(xy 132.08 71.12) (xy 137.16 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3e8ab09-8613-5d6f-95f4-0e4f732a837e")
+	)
+	(wire
+		(pts
+			(xy 50.8 247.65) (xy 50.8 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c51d2b69-01e1-54ed-a595-eb4e68456b02")
+	)
+	(wire
+		(pts
+			(xy 279.4 58.42) (xy 279.4 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5bd0f86-dc6c-524c-a434-e1121e25e221")
+	)
+	(wire
+		(pts
+			(xy 66.04 147.32) (xy 66.04 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5bf329a-fe84-5a9e-a714-0377c60fa1b2")
+	)
+	(wire
+		(pts
+			(xy 262.89 83.82) (xy 262.89 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca5fdcaa-1639-59e6-98c3-e322c55b2b10")
+	)
+	(wire
+		(pts
+			(xy 127 220.98) (xy 137.16 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc4ec1db-7cb8-5ded-8cb9-104841939021")
+	)
+	(wire
+		(pts
+			(xy 66.04 83.82) (xy 66.04 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cee9d7be-302f-5de2-b432-3fc3da766f55")
+	)
+	(wire
+		(pts
+			(xy 41.91 78.74) (xy 50.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef29f97-5f3c-5403-8ee4-08cf26f10440")
+	)
+	(wire
+		(pts
+			(xy 247.65 152.4) (xy 255.27 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf9e3927-189e-5f9a-94eb-d378d5b9ecb2")
+	)
+	(wire
+		(pts
+			(xy 279.4 119.38) (xy 279.4 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0bb4e19-d2b3-563a-bdc9-81b5819f32f9")
+	)
+	(wire
+		(pts
+			(xy 224.79 78.74) (xy 231.14 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d463ac08-e155-56be-9667-943fb64be3a8")
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 50.8 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9323c1d-8495-538d-a070-a7bf3d65ba56")
+	)
+	(wire
+		(pts
+			(xy 82.55 67.31) (xy 95.25 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db8a93cf-d008-5a60-90fe-be6a3b129957")
+	)
+	(wire
+		(pts
+			(xy 127 73.66) (xy 137.16 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd0d5a5f-b71c-524d-864c-a12dba622084")
+	)
+	(wire
+		(pts
+			(xy 27.94 152.4) (xy 34.29 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1aa6f2-fd1c-5b7a-95a8-abd9e11392ed")
+	)
+	(wire
+		(pts
+			(xy 328.93 144.78) (xy 334.01 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1333907-26d9-5d81-a77a-a26dc35edc76")
+	)
+	(wire
+		(pts
+			(xy 66.04 74.93) (xy 95.25 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2293394-a5ce-5afc-a3b6-ab95646be805")
+	)
+	(wire
+		(pts
+			(xy 238.76 78.74) (xy 247.65 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e68cd565-0ab3-529c-97cb-55a5398ef724")
+	)
+	(wire
+		(pts
+			(xy 118.11 222.25) (xy 127 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8b7f4b7-e9ad-5a78-8ac8-2afe04122181")
+	)
+	(wire
+		(pts
+			(xy 247.65 78.74) (xy 247.65 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8b9c10a-15a5-5a41-999a-f70c1007b61e")
+	)
+	(wire
+		(pts
+			(xy 82.55 193.04) (xy 82.55 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaedc0e8-ce76-5dda-99a9-de237c3fac1d")
+	)
+	(wire
+		(pts
+			(xy 132.08 214.63) (xy 132.08 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edf5c4db-18fa-559c-a867-ee009517f5ce")
+	)
+	(wire
+		(pts
+			(xy 50.8 152.4) (xy 50.8 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0a2fd2b-81d0-58f6-a0e4-b0b5be39c86b")
+	)
+	(wire
+		(pts
+			(xy 82.55 140.97) (xy 95.25 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f573ec54-ef76-52c0-909d-93ac39809f8d")
+	)
+	(global_label "KEY2_CTRL"
+		(shape bidirectional)
+		(at 224.79 78.74 180)
+		(effects
+			(font
+				(size 0.95 0.95)
+			)
+			(justify right)
+		)
+		(uuid "1ac6a63c-4cff-5170-bb85-0ac9f2f39d45")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(global_label "KEY3_CTRL"
+		(shape bidirectional)
+		(at 27.94 152.4 180)
+		(effects
+			(font
+				(size 0.95 0.95)
+			)
+			(justify right)
+		)
+		(uuid "57280b56-6623-55e8-8b0f-9c005e84ed43")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(global_label "KEY1_CTRL"
+		(shape bidirectional)
+		(at 27.94 78.74 180)
+		(effects
+			(font
+				(size 0.95 0.95)
+			)
+			(justify right)
+		)
+		(uuid "6b032f00-2c47-5cb9-a57a-e25f579db272")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(global_label "KEY4_CTRL"
+		(shape bidirectional)
+		(at 224.79 152.4 180)
+		(effects
+			(font
+				(size 0.95 0.95)
+			)
+			(justify right)
+		)
+		(uuid "bd8f6fe9-92b9-55ad-bb6f-feec28adab95")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(global_label "KEY5_CTRL"
+		(shape bidirectional)
+		(at 27.94 226.06 180)
+		(effects
+			(font
+				(size 0.95 0.95)
+			)
+			(justify right)
+		)
+		(uuid "c6396a12-fd6f-514a-8493-cd8dc835d899")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 50.8 243.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0299a641-6822-5f90-af55-720b8ac7a6bd")
+		(property "Reference" "R26"
+			(at 55.88 242.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.88 245.745 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 243.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "607d1ce3-982f-5aab-9294-a58c232ce8f6")
+		)
+		(pin "2"
+			(uuid "ba307bac-9e10-59a7-ada6-b1ea08a54506")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:PHOTO_MOS")
+		(at 106.68 218.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0a59957c-614b-51f3-9123-8b9f281078c9")
+		(property "Reference" "U9"
+			(at 106.68 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TLP176AM"
+			(at 106.68 210.185 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI_MCUTOOL:PHOTO_MOS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TLP176AM(TPL,E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "2/5位置无引脚；准确采购包装后缀待核"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c2629094-99fe-5349-84e3-81b3301ac04f")
+		)
+		(pin "3"
+			(uuid "921b007a-eb3f-5d1f-87ad-e3d4da541850")
+		)
+		(pin "4"
+			(uuid "a73c376c-21b8-5653-9b54-ea27a64349e2")
+		)
+		(pin "6"
+			(uuid "12c41810-2f61-52f4-bbaf-f06f7d3f0931")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 247.65 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0bcce1d7-12df-51a8-80ff-3d77e60f16b6")
+		(property "Reference" "R17"
+			(at 252.73 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 252.73 98.425 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f657b68a-5fb5-587c-bf17-12b4cad7ee1a")
+		)
+		(pin "2"
+			(uuid "660f4c53-f406-54c6-a8ac-c08d4b4f221c")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 66.04 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0fa4c175-4ba3-5035-b554-288b046148b2")
+		(property "Reference" "#PWR03036"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 66.04 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "249accb7-9bf3-458b-a3bc-1e4c9311d93d")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 279.4 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "16ef9a48-3128-5021-b51e-da7867d6b216")
+		(property "Reference" "R15"
+			(at 284.48 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240"
+			(at 284.48 56.515 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07240RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "73dbc2f8-f383-516b-a7f6-f8bd0f675baf")
+		)
+		(pin "2"
+			(uuid "f2b6e928-10f8-53b2-b300-0c96b5076534")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:MMBT3904")
+		(at 63.5 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1a17d102-ccd1-599d-8f38-e28aaf8c3ed4")
+		(property "Reference" "Q1"
+			(at 71.12 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 71.12 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "MMBT3904LT1G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1fcc7ff4-bc9b-5229-a3ec-3ff603c18775")
+		)
+		(pin "2"
+			(uuid "c386c827-e21e-5011-90a3-cea2fa07e0d8")
+		)
+		(pin "3"
+			(uuid "d3312505-4d00-5185-972f-19b5dbb279f8")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:TOOL_3V3")
+		(at 279.4 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1a313300-6400-54ea-b5d0-7e862a9ceed0")
+		(property "Reference" "#PWR03040"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TOOL_3V3"
+			(at 279.4 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 279.4 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "664f5f61-eb03-429b-8e14-c67e5d783a38")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 50.8 252.73 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1cd810e7-c244-5d9b-a2ec-1a3cd49b022c")
+		(property "Reference" "#PWR03044"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 50.8 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 252.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 252.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d430c77-778e-4b0e-b574-22428fed3f4d")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 50.8 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3012d7f0-ba6a-56c3-879b-21d421f144f8")
+		(property "Reference" "R20"
+			(at 55.88 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.88 172.085 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4711109b-5ac4-5529-bb26-f63c379413ef")
+		)
+		(pin "2"
+			(uuid "7e36a853-d531-5393-99c5-edfe2c813efb")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 247.65 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "38a41fcb-6902-588c-b977-6d428151ea9f")
+		(property "Reference" "#PWR03041"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 247.65 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c1d960f-5af0-4794-95b6-9cf3a9dcef0f")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 247.65 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3932f368-e1b4-53d7-bc63-8a432e10b858")
+		(property "Reference" "R23"
+			(at 252.73 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 252.73 172.085 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e47c69c-4b4d-58a8-9f4f-fdf91da22027")
+		)
+		(pin "2"
+			(uuid "2d8c0aa3-53d5-56f0-bcf5-229a0afb0208")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 234.95 78.74 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c9545e0-c686-5112-a202-d10577152f83")
+		(property "Reference" "R16"
+			(at 234.95 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 234.95 82.55 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07680RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d02ce1b3-1ca1-58a2-a861-3183171a6e96")
+		)
+		(pin "2"
+			(uuid "a3a13c7c-fdde-5f0a-82a4-8cca61edb63e")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:TOOL_3V3")
+		(at 82.55 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "41b2ca1d-960f-5032-a90d-07baf2101a99")
+		(property "Reference" "#PWR03031"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TOOL_3V3"
+			(at 82.55 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bc42eb97-8c6f-4950-924a-84e474e23861")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:MMBT3904")
+		(at 63.5 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "43334cc9-7013-5da9-a5fc-ccc8c7c109dd")
+		(property "Reference" "Q3"
+			(at 71.12 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 71.12 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "MMBT3904LT1G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4369e5ed-1406-51b0-ace0-715514b4550b")
+		)
+		(pin "2"
+			(uuid "674d761e-0131-5868-ac29-a4a5d8ebbcf1")
+		)
+		(pin "3"
+			(uuid "6fa17cf2-c5ea-5220-883e-3c1b566d6809")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 50.8 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4e023f22-5552-5a58-ae5a-5132c67b914e")
+		(property "Reference" "#PWR03038"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 50.8 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95903ef9-6323-4ce4-94d5-06f6927b22f7")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:HDR2_L")
+		(at 142.24 218.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5422c703-897e-5f5c-b5e7-76b978fa1cea")
+		(property "Reference" "J8"
+			(at 142.24 210.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "KEY5"
+			(at 142.24 213.995 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "元件面1脚方焊盘；板端、线端及压降待选型核验"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5a7e998b-2033-5834-9dff-8e23a8748701")
+		)
+		(pin "2"
+			(uuid "2d2c632d-da51-53fe-84e3-b3ce55eaf7c9")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 50.8 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "61b5a0ad-6a0e-5902-b71c-56e503f33fd3")
+		(property "Reference" "R14"
+			(at 55.88 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.88 98.425 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88bef4fb-9204-5d73-98ef-7cf97dcefe42")
+		)
+		(pin "2"
+			(uuid "3c10c310-add4-5b53-b94f-7f0ff03d561f")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 234.95 152.4 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "70dea128-5a9b-5f24-a4f0-ce921a3d3ef0")
+		(property "Reference" "R22"
+			(at 234.95 148.59 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 234.95 156.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07680RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3cd30ac2-92c0-550a-b00a-2b4f3b9e1bba")
+		)
+		(pin "2"
+			(uuid "1f489a0f-9a27-5f25-997b-0a94d64055a5")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 38.1 226.06 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "782051f9-74e2-512e-9c13-1972bdeabfe2")
+		(property "Reference" "R25"
+			(at 38.1 222.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 38.1 229.87 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 226.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07680RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "58905ded-c72b-54a7-b94e-ce74622c19d3")
+		)
+		(pin "2"
+			(uuid "07d6bbf5-7e3d-5970-8dd1-a13e05225e9b")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:PHOTO_MOS")
+		(at 303.53 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "78bf5e01-563d-5af3-9e95-c5109cbd2709")
+		(property "Reference" "U6"
+			(at 303.53 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TLP176AM"
+			(at 303.53 62.865 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI_MCUTOOL:PHOTO_MOS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 303.53 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TLP176AM(TPL,E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "2/5位置无引脚；准确采购包装后缀待核"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bca25276-6215-5c27-929e-28a00cb02436")
+		)
+		(pin "3"
+			(uuid "c24e90d3-2f56-5531-b4cd-05328feca2fc")
+		)
+		(pin "4"
+			(uuid "7b8fadfb-a1b7-58d8-b230-e1e21cd83a33")
+		)
+		(pin "6"
+			(uuid "d7e4b85b-4a59-5878-b669-249af2f14826")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 82.55 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "83a2846f-776c-55e0-90f3-86937228d361")
+		(property "Reference" "R12"
+			(at 87.63 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240"
+			(at 87.63 56.515 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07240RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a754488c-d829-5cee-8c85-3b75f012d075")
+		)
+		(pin "2"
+			(uuid "bec3781c-c75c-5263-9c48-c3bcd4c5b432")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:HDR2_L")
+		(at 142.24 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8687d99f-fefb-57f6-8d7e-addfd7640fd9")
+		(property "Reference" "J6"
+			(at 142.24 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "KEY3"
+			(at 142.24 140.335 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "元件面1脚方焊盘；板端、线端及压降待选型核验"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fcf05d7b-83bd-550c-bfe4-6444c845f73b")
+		)
+		(pin "2"
+			(uuid "5326e04f-25aa-5624-a0b0-0db6ba1cd25b")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:PHOTO_MOS")
+		(at 106.68 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8727f35c-adfd-5323-b858-0f4cac5c308b")
+		(property "Reference" "U5"
+			(at 106.68 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TLP176AM"
+			(at 106.68 62.865 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI_MCUTOOL:PHOTO_MOS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TLP176AM(TPL,E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "2/5位置无引脚；准确采购包装后缀待核"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "04796276-5bab-58cf-a7fa-a76091fe0d8d")
+		)
+		(pin "3"
+			(uuid "6597f523-e731-58b2-9ac8-7111fc680885")
+		)
+		(pin "4"
+			(uuid "40325dc5-9288-56f8-a57a-b230d915308e")
+		)
+		(pin "6"
+			(uuid "cb47b0aa-0797-5b56-ab1b-604d1530b765")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:HDR2_L")
+		(at 339.09 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "874d1c74-fc77-5f70-a225-6149c031e289")
+		(property "Reference" "J5"
+			(at 339.09 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "KEY2"
+			(at 339.09 66.675 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 339.09 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "元件面1脚方焊盘；板端、线端及压降待选型核验"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e292095-4493-5c0a-8b06-f31d136cef88")
+		)
+		(pin "2"
+			(uuid "d319a3d5-bebb-585b-8f8d-d09578c7abf2")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:PHOTO_MOS")
+		(at 303.53 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "874fc925-cf4d-58a3-b736-ba40746afd0a")
+		(property "Reference" "U8"
+			(at 303.53 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TLP176AM"
+			(at 303.53 136.525 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI_MCUTOOL:PHOTO_MOS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 303.53 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TLP176AM(TPL,E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "2/5位置无引脚；准确采购包装后缀待核"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e9b9bbf-8df7-5a9c-a9fe-55dd5891de24")
+		)
+		(pin "3"
+			(uuid "9211278a-d125-576e-a2c0-8fd685c61920")
+		)
+		(pin "4"
+			(uuid "ef0333ae-8da1-5a73-9d37-42305bf7c949")
+		)
+		(pin "6"
+			(uuid "aab9ecbd-5a23-581a-a0c1-06624ad945b2")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 262.89 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "88c454d3-bcd9-57d7-b445-f831b8b6593c")
+		(property "Reference" "#PWR03039"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 262.89 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.89 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 262.89 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b9b9c24d-0143-42b8-998c-410a49a60daa")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:MMBT3904")
+		(at 260.35 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8afbd5b4-7ca0-57d6-b6f4-569bb6b51303")
+		(property "Reference" "Q2"
+			(at 267.97 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 267.97 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 260.35 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "MMBT3904LT1G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b696e81f-b720-5f70-8b73-0a853d1c8d15")
+		)
+		(pin "2"
+			(uuid "63a3db9e-fd84-5371-b5c0-47780489a614")
+		)
+		(pin "3"
+			(uuid "ad4601f1-f382-5883-9ef7-fbcd2a986fe8")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 50.8 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b8f62c2-e30b-5b93-af7f-c5bf7039e3d6")
+		(property "Reference" "#PWR03032"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 50.8 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba9eaed8-aa0c-4686-abdd-5408bbe46f5e")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 82.55 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8d2a778a-3bf2-52e5-8251-2f6f3373eb1d")
+		(property "Reference" "R18"
+			(at 87.63 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240"
+			(at 87.63 130.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07240RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d18b026a-8daf-59ae-b153-f7a6aa8ddd83")
+		)
+		(pin "2"
+			(uuid "1cd72628-5ee9-57a4-ab6a-31857dc05db7")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 262.89 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "92697a9b-bdd8-514a-bc2e-525816156eca")
+		(property "Reference" "#PWR03033"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 262.89 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.89 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 262.89 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4f1775c3-6aa9-4690-ad31-12755115aa46")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 38.1 152.4 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "951982a6-d18c-5232-9143-af3a1a5031e0")
+		(property "Reference" "R19"
+			(at 38.1 148.59 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 38.1 156.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07680RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4685079c-a9ce-5f7b-b1da-5458f2e78fca")
+		)
+		(pin "2"
+			(uuid "0fa3e386-0b0c-5768-aefa-d14488b9ebf0")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 66.04 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9ba9f0cf-f938-5695-bc09-212d60cb921c")
+		(property "Reference" "#PWR03030"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 66.04 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cf6a8b0a-fb50-44a2-970c-cec485474785")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 247.65 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a1186ffe-9410-5ce0-bd74-b47ccf8aff99")
+		(property "Reference" "#PWR03035"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 247.65 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80653c2e-89bc-4c38-a19b-d829cb180157")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:TOOL_3V3")
+		(at 82.55 193.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a12a988d-03d0-5d06-97f9-c6781bca8ef9")
+		(property "Reference" "#PWR03043"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TOOL_3V3"
+			(at 82.55 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "825bb705-278a-4908-9b64-9b33dfa4daed")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 82.55 201.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b23b7014-d399-5cc7-87d0-edd83463b1f8")
+		(property "Reference" "R24"
+			(at 87.63 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240"
+			(at 87.63 203.835 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 201.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07240RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "101b65e3-84c6-52e4-921f-0a6af43c367d")
+		)
+		(pin "2"
+			(uuid "60a4156c-3f3a-58d8-88f2-d9ac2574a79f")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:PHOTO_MOS")
+		(at 106.68 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bfcd67dc-73d4-543f-a840-bf3ab9d865dd")
+		(property "Reference" "U7"
+			(at 106.68 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TLP176AM"
+			(at 106.68 136.525 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI_MCUTOOL:PHOTO_MOS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TLP176AM(TPL,E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "2/5位置无引脚；准确采购包装后缀待核"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9f688140-0c9f-5896-9d43-92d27171f2ef")
+		)
+		(pin "3"
+			(uuid "e5b6c550-3066-5e98-81b1-ef65ab15a708")
+		)
+		(pin "4"
+			(uuid "fd4e56de-0e5b-58bf-a196-57985c549e4f")
+		)
+		(pin "6"
+			(uuid "ae3514ae-c2f6-509c-9f81-e5e8ebba94ac")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 38.1 78.74 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6a56b34-8c08-52be-9792-70cbcb7c3570")
+		(property "Reference" "R13"
+			(at 38.1 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 38.1 82.55 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07680RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a894469-ed9b-55ef-9773-d0370f2a6bce")
+		)
+		(pin "2"
+			(uuid "d4d4cfac-e3fc-5d8e-9cc0-82f038578efe")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:HDR2_L")
+		(at 339.09 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7621e70-fa10-5c49-b0d3-9b129bfa7791")
+		(property "Reference" "J7"
+			(at 339.09 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "KEY4"
+			(at 339.09 140.335 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 339.09 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "元件面1脚方焊盘；板端、线端及压降待选型核验"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7bb2299c-70a1-5be4-8c09-78718c21cbf0")
+		)
+		(pin "2"
+			(uuid "038f45b2-f48a-5478-8819-f26664f9105f")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:R")
+		(at 279.4 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca0386ed-e30b-581e-8f1c-3f3511012880")
+		(property "Reference" "R21"
+			(at 284.48 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240"
+			(at 284.48 130.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RC0603FR-07240RL"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "1%，额定≥0.1W初值"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "19bda755-9e26-57a3-ae1c-de9ddcaba9a8")
+		)
+		(pin "2"
+			(uuid "f1ddc11d-0aca-5fbc-9568-2378665cd552")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:HDR2_L")
+		(at 142.24 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cbec8e1f-635b-5088-820d-4b47cf55cd8f")
+		(property "Reference" "J4"
+			(at 142.24 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "KEY1"
+			(at 142.24 66.675 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" "元件面1脚方焊盘；板端、线端及压降待选型核验"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d0c44c3b-af8c-5c85-8c32-ab88b5ddb7ed")
+		)
+		(pin "2"
+			(uuid "9584ad75-b188-578b-928d-5434e42b4bf4")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:TOOL_3V3")
+		(at 279.4 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "df8e8d99-9fc7-5345-a8f1-c472d5eefce8")
+		(property "Reference" "#PWR03034"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TOOL_3V3"
+			(at 279.4 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 279.4 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "57f838f6-af7d-4737-a776-39f7dd990d1e")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:TOOL_3V3")
+		(at 82.55 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f33c05ed-689c-5174-8693-557d3df3cc12")
+		(property "Reference" "#PWR03037"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TOOL_3V3"
+			(at 82.55 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ec1fe77-c464-40fc-ae7e-85d724213d8b")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:MMBT3904")
+		(at 260.35 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f520866f-ab38-53ca-ac6b-1290d7e4eec3")
+		(property "Reference" "Q4"
+			(at 267.97 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 267.97 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 260.35 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "MMBT3904LT1G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "06e1bd13-490e-56b2-9ca6-f43b0e8951bd")
+		)
+		(pin "2"
+			(uuid "e50f9a90-6bc3-5131-ad80-38ac2b19766f")
+		)
+		(pin "3"
+			(uuid "72f643c1-3a8d-5ddc-8b0b-d7c64d6f8caf")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:MMBT3904")
+		(at 63.5 226.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa54e539-7b4a-5f93-8afa-c62c3ebc3091")
+		(property "Reference" "Q5"
+			(at 71.12 223.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904"
+			(at 71.12 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 226.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "MMBT3904LT1G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Design Note" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint Status" "封装几何仍需制造审查"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a06843f-76b5-5ea4-9e42-35bda6534a7e")
+		)
+		(pin "2"
+			(uuid "a2af2880-1c83-5dd5-b8d9-c0eae82c964a")
+		)
+		(pin "3"
+			(uuid "191fc841-2bd0-55a4-ae92-dfd76962129e")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "AI_MCUTOOL:COMMON_GND")
+		(at 66.04 236.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa78b7ab-df14-5506-b47b-2d3c4b7537a9")
+		(property "Reference" "#PWR03042"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "COMMON_GND"
+			(at 66.04 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "28f37d98-a88a-45b2-8e70-703ad053ab9f")
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7/28266022-32b9-522f-ad77-12a35322da95"
+					(reference "#PWR03042")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

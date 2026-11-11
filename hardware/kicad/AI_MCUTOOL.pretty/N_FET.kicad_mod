@@ -1,0 +1,120 @@
+(footprint "N_FET"
+  (version 20241229)
+  (generator pcbnew)
+  (layer "F.Cu")
+  (descr "迁移自实际库焊盘；尺寸、钢网及焊接工艺待制造审查")
+  (attr smd)
+  (pad "1" smd rect
+    (at -0.987552 1.498473 90.0)
+    (size 0.680009 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "2" smd rect
+    (at -0.337566 1.498473 90.0)
+    (size 0.680009 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "3" smd rect
+    (at 0.312674 1.498473 90.0)
+    (size 0.680009 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "4" smd rect
+    (at 0.962406 1.498473 90.0)
+    (size 0.680009 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "8" smd rect
+    (at -0.962406 -1.498473 90.0)
+    (size 0.599999 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "7" smd rect
+    (at -0.31242 -1.498473 90.0)
+    (size 0.599999 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "6" smd rect
+    (at 0.337566 -1.498473 90.0)
+    (size 0.599999 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "5" smd rect
+    (at 0.987552 -1.498473 90.0)
+    (size 0.599999 0.299999)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "9" smd rect
+    (at 0.0127 -0.406527 0.0)
+    (size 2.650007 1.999996)
+    (layers "F.Cu" "F.Paste" "F.Mask"))
+  (fp_line
+    (start -1.575 -1.5)
+    (end 1.575 -1.5)
+    (stroke
+      (width 0.1)
+      (type default))
+    (layer "F.Fab"))
+  (fp_line
+    (start 1.575 -1.5)
+    (end 1.575 1.5)
+    (stroke
+      (width 0.1)
+      (type default))
+    (layer "F.Fab"))
+  (fp_line
+    (start 1.575 1.5)
+    (end -1.175 1.5)
+    (stroke
+      (width 0.1)
+      (type default))
+    (layer "F.Fab"))
+  (fp_line
+    (start -1.175 1.5)
+    (end -1.575 1.1)
+    (stroke
+      (width 0.1)
+      (type default))
+    (layer "F.Fab"))
+  (fp_line
+    (start -1.575 1.1)
+    (end -1.575 -1.5)
+    (stroke
+      (width 0.1)
+      (type default))
+    (layer "F.Fab"))
+  (fp_rect
+    (start -1.9 -2.05)
+    (end 1.9 2.1)
+    (stroke
+      (width 0.05)
+      (type default))
+    (fill none)
+    (layer "F.CrtYd"))
+  (fp_line
+    (start -2.05 1.498473)
+    (end -2.4 1.298473)
+    (stroke
+      (width 0.12)
+      (type default))
+    (layer "F.SilkS"))
+  (fp_line
+    (start -2.4 1.298473)
+    (end -2.4 1.698473)
+    (stroke
+      (width 0.12)
+      (type default))
+    (layer "F.SilkS"))
+  (fp_line
+    (start -2.4 1.698473)
+    (end -2.05 1.498473)
+    (stroke
+      (width 0.12)
+      (type default))
+    (layer "F.SilkS"))
+  (fp_text reference "REF**"
+    (at 0 -3.05)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (fp_text value "N_FET"
+    (at 0 3.1)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)))))

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "footprint": "N_FET",
+      "errors": [],
+      "courtyardMm": [
+        3.8,
+        4.15
+      ],
+      "minimumMarginMm": 0.2515,
+      "passed": true
+    },
+    {
+      "footprint": "P_FET",
+      "errors": [],
+      "courtyardMm": [
+        3.8,
+        4.15
+      ],
+      "minimumMarginMm": 0.2515,
+      "passed": true
+    },
+    {
+      "footprint": "PHOTO_PV",
+      "errors": [],
+      "courtyardMm": [
+        5.5,
+        7.9
+      ],
+      "minimumMarginMm": 0.25,
+      "passed": true
+    },
+    {
+      "footprint": "PHOTO_MOS",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "footprint": "SHUNT4",
+      "errors": [],
+      "courtyardMm": [
+        8.8,
+        4.8
+      ],
+      "minimumMarginMm": 0.27,
+      "passed": true
+    },
+    {
+      "footprint": "SW4",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "footprint": "USB_C_HRO_TYPE_C_31_M_12",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "footprint": "DC_XKB_DC005_5A_2_0",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "scope": "编号方向、MOS/VOM/SHUNT4装配边界、WSK2512及HRO推荐铜盘/孔位；不替代钢网及完整制造审查"
+}

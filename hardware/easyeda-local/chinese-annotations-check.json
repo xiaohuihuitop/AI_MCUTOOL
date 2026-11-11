@@ -1,0 +1,59 @@
+{
+  "invariants": {
+    "04": {
+      "nonTextRecordsUnchanged": true,
+      "count": 727
+    },
+    "05": {
+      "nonTextRecordsUnchanged": true,
+      "count": 385
+    },
+    "06": {
+      "nonTextRecordsUnchanged": true,
+      "count": 344
+    },
+    "pcb": {
+      "electricalAndCopperRecordsUnchanged": true,
+      "count": 2671
+    }
+  },
+  "components": 140,
+  "pins": 415,
+  "isolated": {
+    "schDRC": [],
+    "pcbDRC": [],
+    "pinNetworksUnchanged": true,
+    "lines": 1682,
+    "vias": 192
+  },
+  "visible": {
+    "schDRC": [],
+    "pcbDRC": [],
+    "pinNetworksUnchanged": true,
+    "lines": 1682,
+    "vias": 192
+  },
+  "pcbSHA256": "99c6e4e2554fce6e989b8d43b23de2d6dd04b2390b8e24286c74e06f51b47378",
+  "project": "D:\\LCEDA\\projects\\AI_TOOL\\AI_TOOL.eprj3",
+  "date": "2026-11-04",
+  "standaloneStrings": 57,
+  "designators": 140,
+  "chineseFont": "黑体",
+  "chineseGerberContoursVerified": true,
+  "sourceSHA256": {
+    "AI_TOOL.eprj3": "2098bfec3976d29e3e51262bc019c1de34581f0a703d11966f27aa1efb29f978",
+    "eprj3-intro.md": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+    "panel/Panel1.epan2": "4c6861788225073b7136a2184e6159366149f1b52cb053b56c656c329e0e5f3c",
+    "panel/Panel1_1.epan2": "3d5c2e15fa86fddc67cd7b738e679777f564054ed919ff8cf4524c78defb837a",
+    "pcb/AI_MCUTOOL.epcb2": "99c6e4e2554fce6e989b8d43b23de2d6dd04b2390b8e24286c74e06f51b47378",
+    "sch/Schematic1_1/01-工具电源.esch2": "7a4f316af48347e7790cc56b4841a98600f9cc6f48a1e4c083734edd48eed9c3",
+    "sch/Schematic1_1/02-主控与总线.esch2": "f8efa757608ba81c2744597c0766c6a10dc9cca33fbe7224abe766a582daeb9a",
+    "sch/Schematic1_1/03-五路按键.esch2": "61730954d3ba450a89eb960a6d51889a024ee42a4473a984750dfdbe73fff3f0",
+    "sch/Schematic1_1/04-主供电选择.esch2": "529d67add06debb577b08319aa4e366479080a17e6fbbd7dbaad5de53253e17b",
+    "sch/Schematic1_1/05-独立充电.esch2": "c1141edabd6d3582bfc25e7b246df547489106c67ee56da71584c9d16d9c582d",
+    "sch/Schematic1_1/06-电池端测量.esch2": "3bbc76d92229994e6036be716a6f79155d07726c9aa1d6b6ba3a36c1eb3f3ffc",
+    "sch/Schematic1_1/07-四路电压.esch2": "f52a0984356986d1dc743b64090b94c100a753a08b7c78419d6fb13855bfa89c",
+    "sch/Schematic1_1/08-目标串口.esch2": "ebc320501d875362b67a6d7b79417ed57a878dbf3aabfdfe2f6c3c773343bcea",
+    "sch/Schematic1_1/Schematic1_1.ecfg": "2bb93702f6876378d4fac26d4dbf3957921ea6cb68f7b0efd314b9e2716a193f"
+  }
+}

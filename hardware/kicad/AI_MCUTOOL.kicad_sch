@@ -1,0 +1,490 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5a7df9ae-eab7-5620-9b7a-3993db99abc7")
+	(paper "A3")
+	(title_block
+		(title "MCU开发辅助工具 / 系统总览")
+		(date "2026-10-24")
+		(rev "A-KiCad")
+		(company "AI-MCUTOOL")
+	)
+	(lib_symbols)
+	(text "KEY1～KEY5独立无极性触点\nTLP176AM + MMBT3904\n按键边界：≤6V、≤20mA\n触点侧不接工具公共地"
+		(exclude_from_sim no)
+		(at 227 61 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "298f5294-ad61-5094-822f-e1641c62bb84")
+	)
+	(text "BAT_IN / EXT_IN → VSEL_P\nVOM1271T隔离栅极驱动\n共源背靠背N-MOS\n两路互斥、先断后通"
+		(exclude_from_sim no)
+		(at 325 61 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "2e1b8de2-22f7-582f-bc4a-86c37151c91c")
+	)
+	(text "DUT_UART：3.3V TTL\nTX三态缓冲，默认高阻\nRX施密特缓冲，持续接收\nTX / RX / GND三针接口"
+		(exclude_from_sim no)
+		(at 325 161 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "53d46e45-f720-56d9-ae86-c6eceb00a3ae")
+	)
+	(text "AI-MCUTOOL  /  ESP32-S3-WROOM-1-N16R8\nWi-Fi控制 · 五路按键 · 电源切换 · 充电插拔 · 电池测量 · 四路电压 · 3.3V UART"
+		(exclude_from_sim no)
+		(at 25 25 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ea34ae2-fc98-56c4-a538-10ec1420e8c8")
+	)
+	(text "CHG_IN → DUT_CHG\n独立5V充电器输入\n共源背靠背P-MOS\n无主动放电；真实电池模式验证"
+		(exclude_from_sim no)
+		(at 31 161 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "68881e44-c4e6-50f3-b8ef-2a2f112d5b02")
+	)
+	(text "外部电池 / 模拟电源 / 充电器各自独立；工具自身仅使用5V供电。\n双击功能框进入图页。跨页接口使用命名端口；同页功能电路优先直接连线。\n当前为原理图设计，未做PCB、样机或整机额定能力验收。"
+		(exclude_from_sim no)
+		(at 25 245 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b369e784-8b0e-5f83-8a4c-9404e6165ceb")
+	)
+	(text "DC / Type-C：仅5V\nLM66100双入口隔离\nLDL1117输出3.3V\n输出：TOOL_3V3 / COMMON_GND"
+		(exclude_from_sim no)
+		(at 31 61 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "cd7adf41-85c8-5533-8c3f-d0d569abcc78")
+	)
+	(text "VSEL_P → DUT_PWR\n20mΩ四端分流 + INA228\n电池端双向电流 / 接口电压\nI2C + CURRENT_ALERT"
+		(exclude_from_sim no)
+		(at 129 161 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "de142147-eccf-5a75-8713-cb3117a827d8")
+	)
+	(text "ESP32-S3-WROOM-1-N16R8\nWi-Fi控制与共享I2C\nRESET / BOOT / CONFIG\n独立下载口和状态指示"
+		(exclude_from_sim no)
+		(at 129 61 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "e2a3e632-8ec0-5329-b98e-4bb9209a40d0")
+	)
+	(text "AIN1～AIN4：共地0～15V\n高阻分压 → OPA4391 → ADS1115\nLM7705提供近零测量负轨\n四路分别校准；I2C读取"
+		(exclude_from_sim no)
+		(at 227 161 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "e82baa87-04bf-5285-9178-1e182b853738")
+	)
+	(sheet
+		(at 319 145)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "01a2aade-35ec-59cd-a980-432b813584e7")
+		(property "Sheetname" "08 目标UART接口"
+			(at 319 143 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "08_uart.kicad_sch"
+			(at 319 212 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 123 45)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "1b1b619b-14a7-5444-93ae-7a83695e413d")
+		(property "Sheetname" "02 主控与总线"
+			(at 123 43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "02_controller.kicad_sch"
+			(at 123 112 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 221 145)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "23e08aee-9634-504f-bf25-a659f5266717")
+		(property "Sheetname" "07 四路高阻电压检测"
+			(at 221 143 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "07_voltage_sense.kicad_sch"
+			(at 221 212 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 221 45)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "28266022-32b9-522f-ad77-12a35322da95")
+		(property "Sheetname" "03 五路按键模拟"
+			(at 221 43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "03_keys.kicad_sch"
+			(at 221 112 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 123 145)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3534114f-2f64-527b-a926-eec63c4381c2")
+		(property "Sheetname" "06 电池端电流与电压"
+			(at 123 143 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "06_current_sense.kicad_sch"
+			(at 123 212 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25 145)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "978755fc-a43c-5618-b9d2-aa72bbfea714")
+		(property "Sheetname" "05 独立充电输入"
+			(at 25 143 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "05_charger.kicad_sch"
+			(at 25 212 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25 45)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c979b1a3-ac71-53a4-9ed3-0a403d2fef72")
+		(property "Sheetname" "01 工具电源"
+			(at 25 43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "01_power.kicad_sch"
+			(at 25 112 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 319 45)
+		(size 85 65)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f8db24b2-1b0b-58f6-96c5-04c8364b40af")
+		(property "Sheetname" "04 主供电选择"
+			(at 319 43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "04_source_switch.kicad_sch"
+			(at 319 112 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AI_MCUTOOL"
+				(path "/5a7df9ae-eab7-5620-9b7a-3993db99abc7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

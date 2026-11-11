@@ -1,0 +1,40 @@
+{
+  "id": "req_1319",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T14:41:01.6594737Z",
+  "ok": true,
+  "result": {
+    "value": {
+      "bytes": 932475,
+      "database": "User_a1f2036875bb455c81bcb336ee86682f_v6",
+      "newVersion": "1.14.1-dev.2",
+      "ok": true,
+      "oldVersion": "1.14.1-dev.1",
+      "permissionsPreserved": true,
+      "reloadScheduled": true,
+      "sha256": "4aa4a8b4e980639ef25cb58ff35181d6f8a28201347d21ae14f2a37bb346e8be",
+      "uuid": "4dae27407c1d43be98e8e210d45fe587"
+    }
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "visible"
+  },
+  "mutationContextAvailable": true,
+  "seq": 1184,
+  "seqAbandoned": 0
+}

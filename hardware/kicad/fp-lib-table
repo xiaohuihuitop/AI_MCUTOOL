@@ -1,0 +1,44 @@
+(fp_lib_table
+  (version 7)
+  (lib
+    (name "AI_MCUTOOL")
+    (type "KiCad")
+    (uri "${KIPRJMOD}/AI_MCUTOOL.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "Capacitor_SMD")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/Capacitor_SMD.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "Connector_PinHeader_2.54mm")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/Connector_PinHeader_2.54mm.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "LED_SMD")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/LED_SMD.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "Package_SO")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/Package_SO.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "Package_TO_SOT_SMD")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/Package_TO_SOT_SMD.pretty")
+    (options "")
+    (descr "项目关联封装"))
+  (lib
+    (name "Resistor_SMD")
+    (type "KiCad")
+    (uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty")
+    (options "")
+    (descr "项目关联封装")))

@@ -1,0 +1,10 @@
+{
+  "manufacturer": "XFCN(兴飞)",
+  "manufacturerId": "PZ254V-11-03P",
+  "supplier": "LCSC",
+  "supplierId": "C2937625",
+  "name": "={Manufacturer Part}",
+  "otherProperty": {
+    "Supplier Footprint": "插件,P=2.54mm"
+  }
+}

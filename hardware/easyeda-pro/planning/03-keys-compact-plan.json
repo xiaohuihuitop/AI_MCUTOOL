@@ -1,0 +1,6835 @@
+{
+  "schemaVersion": 1,
+  "connectivity": {
+    "schemaVersion": "1.4",
+    "projectId": "57a0364c842149baada4fb3ca7ccf03f",
+    "documentId": "11bf161323c12964",
+    "components": [
+      {
+        "id": "cmp-J4",
+        "uniqueId": "AI_MCUTOOL_J4",
+        "ref": "J4",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 530,
+            "y": 1415
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 530,
+            "y": 1405
+          }
+        ],
+        "placement": {
+          "x": 550,
+          "y": 1410,
+          "bbox": {
+            "minX": 539.5,
+            "minY": 1394.5,
+            "maxX": 570.5,
+            "maxY": 1425.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-J5",
+        "uniqueId": "AI_MCUTOOL_J5",
+        "ref": "J5",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1100,
+            "y": 1415
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1100,
+            "y": 1405
+          }
+        ],
+        "placement": {
+          "x": 1120,
+          "y": 1410,
+          "bbox": {
+            "minX": 1109.5,
+            "minY": 1394.5,
+            "maxX": 1140.5,
+            "maxY": 1425.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-J6",
+        "uniqueId": "AI_MCUTOOL_J6",
+        "ref": "J6",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1670,
+            "y": 1415
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1670,
+            "y": 1405
+          }
+        ],
+        "placement": {
+          "x": 1690,
+          "y": 1410,
+          "bbox": {
+            "minX": 1679.5,
+            "minY": 1394.5,
+            "maxX": 1710.5,
+            "maxY": 1425.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-J7",
+        "uniqueId": "AI_MCUTOOL_J7",
+        "ref": "J7",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 2240,
+            "y": 1415
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 2240,
+            "y": 1405
+          }
+        ],
+        "placement": {
+          "x": 2260,
+          "y": 1410,
+          "bbox": {
+            "minX": 2249.5,
+            "minY": 1394.5,
+            "maxX": 2280.5,
+            "maxY": 1425.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-J8",
+        "uniqueId": "AI_MCUTOOL_J8",
+        "ref": "J8",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "eab4a8150b6d4918927e38d645cd50f2"
+        },
+        "footprint": "12a7268e4143b37b",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "HDR-TH_2P-P2.54-V-M-1",
+          "uuid": "12a7268e4143b37b"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 530,
+            "y": 860
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 530,
+            "y": 850
+          }
+        ],
+        "placement": {
+          "x": 550,
+          "y": 855,
+          "bbox": {
+            "minX": 539.5,
+            "minY": 839.5,
+            "maxX": 570.5,
+            "maxY": 870.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-Q1",
+        "uniqueId": "AI_MCUTOOL_Q1",
+        "ref": "Q1",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "564cadce804e4fdcb009ae93bf75eeb3",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "8683129e86c6ebca",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+          "uuid": "8683129e86c6ebca"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 290,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 310,
+            "y": 1310
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "x": 310,
+            "y": 1350
+          }
+        ],
+        "placement": {
+          "x": 300,
+          "y": 1330,
+          "bbox": {
+            "minX": 299.5,
+            "minY": 1319.5,
+            "maxX": 310.5,
+            "maxY": 1340.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-Q2",
+        "uniqueId": "AI_MCUTOOL_Q2",
+        "ref": "Q2",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "564cadce804e4fdcb009ae93bf75eeb3",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "8683129e86c6ebca",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+          "uuid": "8683129e86c6ebca"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 860,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 880,
+            "y": 1310
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "x": 880,
+            "y": 1350
+          }
+        ],
+        "placement": {
+          "x": 870,
+          "y": 1330,
+          "bbox": {
+            "minX": 869.5,
+            "minY": 1319.5,
+            "maxX": 880.5,
+            "maxY": 1340.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-Q3",
+        "uniqueId": "AI_MCUTOOL_Q3",
+        "ref": "Q3",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "564cadce804e4fdcb009ae93bf75eeb3",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "8683129e86c6ebca",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+          "uuid": "8683129e86c6ebca"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1430,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1450,
+            "y": 1310
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "x": 1450,
+            "y": 1350
+          }
+        ],
+        "placement": {
+          "x": 1440,
+          "y": 1330,
+          "bbox": {
+            "minX": 1439.5,
+            "minY": 1319.5,
+            "maxX": 1450.5,
+            "maxY": 1340.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-Q4",
+        "uniqueId": "AI_MCUTOOL_Q4",
+        "ref": "Q4",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "564cadce804e4fdcb009ae93bf75eeb3",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "8683129e86c6ebca",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+          "uuid": "8683129e86c6ebca"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 2000,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 2020,
+            "y": 1310
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "x": 2020,
+            "y": 1350
+          }
+        ],
+        "placement": {
+          "x": 2010,
+          "y": 1330,
+          "bbox": {
+            "minX": 2009.5,
+            "minY": 1319.5,
+            "maxX": 2020.5,
+            "maxY": 1340.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-Q5",
+        "uniqueId": "AI_MCUTOOL_Q5",
+        "ref": "Q5",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "564cadce804e4fdcb009ae93bf75eeb3",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "8683129e86c6ebca",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+          "uuid": "8683129e86c6ebca"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 290,
+            "y": 775
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 310,
+            "y": 755
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "x": 310,
+            "y": 795
+          }
+        ],
+        "placement": {
+          "x": 300,
+          "y": 775,
+          "bbox": {
+            "minX": 299.5,
+            "minY": 764.5,
+            "maxX": 310.5,
+            "maxY": 785.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R12",
+        "uniqueId": "AI_MCUTOOL_R12",
+        "ref": "R12",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "c1a2fa96d0c34731be5bfd6900656dbf",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 230,
+            "y": 1430
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 270,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 250,
+          "y": 1430,
+          "bbox": {
+            "minX": 239.5,
+            "minY": 1425.5,
+            "maxX": 260.5,
+            "maxY": 1434.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R13",
+        "uniqueId": "AI_MCUTOOL_R13",
+        "ref": "R13",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "578f1b98999b4b398794b3688d79f691",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 180,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 220,
+            "y": 1330
+          }
+        ],
+        "placement": {
+          "x": 200,
+          "y": 1330,
+          "bbox": {
+            "minX": 189.5,
+            "minY": 1325.5,
+            "maxX": 210.5,
+            "maxY": 1334.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R14",
+        "uniqueId": "AI_MCUTOOL_R14",
+        "ref": "R14",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 250,
+            "y": 1295
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 250,
+            "y": 1255
+          }
+        ],
+        "placement": {
+          "x": 250,
+          "y": 1275,
+          "rotation": 270,
+          "bbox": {
+            "minX": 245.5,
+            "minY": 1264.5,
+            "maxX": 254.5,
+            "maxY": 1285.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R15",
+        "uniqueId": "AI_MCUTOOL_R15",
+        "ref": "R15",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "c1a2fa96d0c34731be5bfd6900656dbf",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 800,
+            "y": 1430
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 840,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 820,
+          "y": 1430,
+          "bbox": {
+            "minX": 809.5,
+            "minY": 1425.5,
+            "maxX": 830.5,
+            "maxY": 1434.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R16",
+        "uniqueId": "AI_MCUTOOL_R16",
+        "ref": "R16",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "578f1b98999b4b398794b3688d79f691",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 750,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 790,
+            "y": 1330
+          }
+        ],
+        "placement": {
+          "x": 770,
+          "y": 1330,
+          "bbox": {
+            "minX": 759.5,
+            "minY": 1325.5,
+            "maxX": 780.5,
+            "maxY": 1334.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R17",
+        "uniqueId": "AI_MCUTOOL_R17",
+        "ref": "R17",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 820,
+            "y": 1295
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 820,
+            "y": 1255
+          }
+        ],
+        "placement": {
+          "x": 820,
+          "y": 1275,
+          "rotation": 270,
+          "bbox": {
+            "minX": 815.5,
+            "minY": 1264.5,
+            "maxX": 824.5,
+            "maxY": 1285.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R18",
+        "uniqueId": "AI_MCUTOOL_R18",
+        "ref": "R18",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "c1a2fa96d0c34731be5bfd6900656dbf",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1370,
+            "y": 1430
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1410,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 1390,
+          "y": 1430,
+          "bbox": {
+            "minX": 1379.5,
+            "minY": 1425.5,
+            "maxX": 1400.5,
+            "maxY": 1434.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R19",
+        "uniqueId": "AI_MCUTOOL_R19",
+        "ref": "R19",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "578f1b98999b4b398794b3688d79f691",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1320,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1360,
+            "y": 1330
+          }
+        ],
+        "placement": {
+          "x": 1340,
+          "y": 1330,
+          "bbox": {
+            "minX": 1329.5,
+            "minY": 1325.5,
+            "maxX": 1350.5,
+            "maxY": 1334.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R20",
+        "uniqueId": "AI_MCUTOOL_R20",
+        "ref": "R20",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1390,
+            "y": 1295
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1390,
+            "y": 1255
+          }
+        ],
+        "placement": {
+          "x": 1390,
+          "y": 1275,
+          "rotation": 270,
+          "bbox": {
+            "minX": 1385.5,
+            "minY": 1264.5,
+            "maxX": 1394.5,
+            "maxY": 1285.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R21",
+        "uniqueId": "AI_MCUTOOL_R21",
+        "ref": "R21",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "c1a2fa96d0c34731be5bfd6900656dbf",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1940,
+            "y": 1430
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1980,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 1960,
+          "y": 1430,
+          "bbox": {
+            "minX": 1949.5,
+            "minY": 1425.5,
+            "maxX": 1970.5,
+            "maxY": 1434.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R22",
+        "uniqueId": "AI_MCUTOOL_R22",
+        "ref": "R22",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "578f1b98999b4b398794b3688d79f691",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1890,
+            "y": 1330
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1930,
+            "y": 1330
+          }
+        ],
+        "placement": {
+          "x": 1910,
+          "y": 1330,
+          "bbox": {
+            "minX": 1899.5,
+            "minY": 1325.5,
+            "maxX": 1920.5,
+            "maxY": 1334.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R23",
+        "uniqueId": "AI_MCUTOOL_R23",
+        "ref": "R23",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 1960,
+            "y": 1295
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 1960,
+            "y": 1255
+          }
+        ],
+        "placement": {
+          "x": 1960,
+          "y": 1275,
+          "rotation": 270,
+          "bbox": {
+            "minX": 1955.5,
+            "minY": 1264.5,
+            "maxX": 1964.5,
+            "maxY": 1285.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R24",
+        "uniqueId": "AI_MCUTOOL_R24",
+        "ref": "R24",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "c1a2fa96d0c34731be5bfd6900656dbf",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 230,
+            "y": 875
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 270,
+            "y": 875
+          }
+        ],
+        "placement": {
+          "x": 250,
+          "y": 875,
+          "bbox": {
+            "minX": 239.5,
+            "minY": 870.5,
+            "maxX": 260.5,
+            "maxY": 879.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R25",
+        "uniqueId": "AI_MCUTOOL_R25",
+        "ref": "R25",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "578f1b98999b4b398794b3688d79f691",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 180,
+            "y": 775
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 220,
+            "y": 775
+          }
+        ],
+        "placement": {
+          "x": 200,
+          "y": 775,
+          "bbox": {
+            "minX": 189.5,
+            "minY": 770.5,
+            "maxX": 210.5,
+            "maxY": 779.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-R26",
+        "uniqueId": "AI_MCUTOOL_R26",
+        "ref": "R26",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "9b698a84139c4c4b998625f003a0615f",
+          "name": "={Value}"
+        },
+        "footprint": "fb3d59e5287e807c",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "R0603",
+          "uuid": "fb3d59e5287e807c"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 250,
+            "y": 740
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 250,
+            "y": 700
+          }
+        ],
+        "placement": {
+          "x": 250,
+          "y": 720,
+          "rotation": 270,
+          "bbox": {
+            "minX": 245.5,
+            "minY": 709.5,
+            "maxX": 254.5,
+            "maxY": 730.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-U5",
+        "uniqueId": "AI_MCUTOOL_U5",
+        "ref": "U5",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "2f7b3a577bc547c99b80db12f8c92fbd",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "70136bde11e9aa45",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SMD-4_L4.6-W3.7-P2.54-LS7.0",
+          "uuid": "70136bde11e9aa45"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "Anode",
+            "x": 350,
+            "y": 1430
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "x": 350,
+            "y": 1390
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "x": 450,
+            "y": 1390
+          },
+          {
+            "number": "6",
+            "name": "Drain",
+            "x": 450,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 400,
+          "y": 1410,
+          "bbox": {
+            "minX": 369.5,
+            "minY": 1379.5,
+            "maxX": 430.5,
+            "maxY": 1440.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-U6",
+        "uniqueId": "AI_MCUTOOL_U6",
+        "ref": "U6",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "2f7b3a577bc547c99b80db12f8c92fbd",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "70136bde11e9aa45",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SMD-4_L4.6-W3.7-P2.54-LS7.0",
+          "uuid": "70136bde11e9aa45"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "Anode",
+            "x": 920,
+            "y": 1430
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "x": 920,
+            "y": 1390
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "x": 1020,
+            "y": 1390
+          },
+          {
+            "number": "6",
+            "name": "Drain",
+            "x": 1020,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 970,
+          "y": 1410,
+          "bbox": {
+            "minX": 939.5,
+            "minY": 1379.5,
+            "maxX": 1000.5,
+            "maxY": 1440.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-U7",
+        "uniqueId": "AI_MCUTOOL_U7",
+        "ref": "U7",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "2f7b3a577bc547c99b80db12f8c92fbd",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "70136bde11e9aa45",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SMD-4_L4.6-W3.7-P2.54-LS7.0",
+          "uuid": "70136bde11e9aa45"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "Anode",
+            "x": 1490,
+            "y": 1430
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "x": 1490,
+            "y": 1390
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "x": 1590,
+            "y": 1390
+          },
+          {
+            "number": "6",
+            "name": "Drain",
+            "x": 1590,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 1540,
+          "y": 1410,
+          "bbox": {
+            "minX": 1509.5,
+            "minY": 1379.5,
+            "maxX": 1570.5,
+            "maxY": 1440.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-U8",
+        "uniqueId": "AI_MCUTOOL_U8",
+        "ref": "U8",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "2f7b3a577bc547c99b80db12f8c92fbd",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "70136bde11e9aa45",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SMD-4_L4.6-W3.7-P2.54-LS7.0",
+          "uuid": "70136bde11e9aa45"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "Anode",
+            "x": 2060,
+            "y": 1430
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "x": 2060,
+            "y": 1390
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "x": 2160,
+            "y": 1390
+          },
+          {
+            "number": "6",
+            "name": "Drain",
+            "x": 2160,
+            "y": 1430
+          }
+        ],
+        "placement": {
+          "x": 2110,
+          "y": 1410,
+          "bbox": {
+            "minX": 2079.5,
+            "minY": 1379.5,
+            "maxX": 2140.5,
+            "maxY": 1440.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      },
+      {
+        "id": "cmp-U9",
+        "uniqueId": "AI_MCUTOOL_U9",
+        "ref": "U9",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "deviceUuid": "2f7b3a577bc547c99b80db12f8c92fbd",
+          "name": "={Manufacturer Part}"
+        },
+        "footprint": "70136bde11e9aa45",
+        "footprintRef": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "SMD-4_L4.6-W3.7-P2.54-LS7.0",
+          "uuid": "70136bde11e9aa45"
+        },
+        "pins": [
+          {
+            "number": "1",
+            "name": "Anode",
+            "x": 350,
+            "y": 875
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "x": 350,
+            "y": 835
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "x": 450,
+            "y": 835
+          },
+          {
+            "number": "6",
+            "name": "Drain",
+            "x": 450,
+            "y": 875
+          }
+        ],
+        "placement": {
+          "x": 400,
+          "y": 855,
+          "bbox": {
+            "minX": 369.5,
+            "minY": 824.5,
+            "maxX": 430.5,
+            "maxY": 885.5
+          }
+        },
+        "pageId": "11bf161323c12964"
+      }
+    ],
+    "nets": [
+      {
+        "id": "net-018a84fcd6b3e687c9f3f3c831cfa441125150e79a9d0ea8dfb84bc4dd564485",
+        "name": "KEY5_B",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-1c80a53fe11ec070d527144921e1fa81ca222dfba0eddf69ad80c89deecb1a60",
+        "name": "KEY3_LED_K",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-2e2b9fedab588a136738e9fbf13911cca7e7ebc6a93e98f2119256e3ff6e73c4",
+        "name": "KEY4_CTRL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-2eabec0b8a13e66e4829619b61b02f06331cc6ab3f5a505f78d9cddbaad1a2c0",
+        "name": "KEY4_B",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-3474d9928d90373f0814e0573a2b460484ec62cfa1988738badc8ce6359276ea",
+        "name": "KEY2_B",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-3ffff9f35e589a19af018d8ea86923cfc99d480520e76efa301aab9288b1045e",
+        "name": "KEY2_LED_K",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-4de91dae7f67b030942e54be89e06d1fe8475e8d490e343398efa900cad5c528",
+        "name": "KEY3_LED_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-54dfcda794380505c4ab3b8421038d116e0730cc44c3ebfd6db33e9a63fcb1b6",
+        "name": "KEY4_LED_K",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-5561ab438bc1cd7ded3d0a372b8ee0bf17877ca0d88b66dc4c7541386365bd06",
+        "name": "KEY4_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-64c71e92361233931c9aed2070698d711c5a41bae65d295b9d705fc35e92fbf6",
+        "name": "KEY3_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-6dd5dc161353a83f233d28b7df750510c249c5282c58a93a0d5c63c40fb9b752",
+        "name": "KEY1_B",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-6e1e50a2f8ebcec24970364c872f03f228566d9cc8f9b1079d6548be65270d49",
+        "name": "KEY4_LED_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-6f52d2fd28ea88872f254acb307a3c21e0d534f32b7eb182dfd7ada51596ac08",
+        "name": "KEY5_LED_K",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-717acaa5df4a66491c9c94879ddea22014f0659aa398fad1022fea2f2ea630ea",
+        "name": "KEY1_CTRL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-75f0111e60d49d228addf49466d79183de24f183c2d1ceedb1509bf370c0897e",
+        "name": "KEY2_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-825b056fdae3407cd4125705aff2897f1eec5b3bad1a1744dcd0c43a4d8b4a0b",
+        "name": "KEY1_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-8e5189d0decba7b5af5efcd5f8b1074910342daaff00ff58f4bfa13518a38f66",
+        "name": "KEY3_CTRL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-8ee1100694eb89efb4c126e55d45bf74a9d8f1d421d52ebd831c09fccc3ddcad",
+        "name": "KEY3_BASE",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-904bbcb54e9bece4f23126174e1fb8503c5fa2d471c60e4e594f1a682c7801f7",
+        "name": "KEY2_LED_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-9d9b9d76bf73bb17aac3fc9bc3d4b4bf45b4f60ec3c213b9286ecc698aad63bc",
+        "name": "KEY5_BASE",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-abfd408ac801a5dc1f579bd3f8cf8a5020ab411683e1e3297b68ffd616950f4b",
+        "name": "KEY2_CTRL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-b727a977622b7c5225df4b60ac1ad2e7296e75f446354280b750c333f8b0f042",
+        "name": "KEY5_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-c3eb9755bf5b30e53f1b6fd55c0453e48e0df1fd4bc4d228291f2439586e14a7",
+        "name": "KEY4_BASE",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-c447ed24ffaf4472ddbb822d5ae2e505c8cab7f9052dd195f592396ea4794920",
+        "name": "KEY1_LED_K",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-c68359c6199043242284c11cf28ce3017c53ef25f846a11bfc02f8abeb3e3000",
+        "name": "KEY5_CTRL",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-caa8850ead03183cc52ed1bb89c7f27cccfd01fa0eb35dc1f7b6f97af161e2c6",
+        "name": "KEY1_LED_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "name": "COMMON_GND",
+        "scope": "global",
+        "role": "ground"
+      },
+      {
+        "id": "net-ce7c69873443a420cbeb6c1faa2b8f93344f1a87663582ad0136a9c2f57b01eb",
+        "name": "KEY3_B",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "name": "TOOL_3V3",
+        "scope": "global",
+        "role": "power"
+      },
+      {
+        "id": "net-f1ecca1e9777397424ab7e8a586828a677a4119b18aadf87a6ca216b7532b307",
+        "name": "KEY5_LED_A",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-f3e8bf5ca56d5c3cefe936b3dceb5f9f4b1d10b691e875247824019b097df8d0",
+        "name": "KEY1_BASE",
+        "scope": "local",
+        "role": "signal"
+      },
+      {
+        "id": "net-fb14b95e985477ef9466fb9853d828229a8f6a924571e858cd5aab09e6377607",
+        "name": "KEY2_BASE",
+        "scope": "local",
+        "role": "signal"
+      }
+    ],
+    "connections": [
+      {
+        "componentId": "cmp-J4",
+        "pinNumber": "1",
+        "netId": "net-825b056fdae3407cd4125705aff2897f1eec5b3bad1a1744dcd0c43a4d8b4a0b",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J4",
+        "pinNumber": "2",
+        "netId": "net-6dd5dc161353a83f233d28b7df750510c249c5282c58a93a0d5c63c40fb9b752",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J5",
+        "pinNumber": "1",
+        "netId": "net-75f0111e60d49d228addf49466d79183de24f183c2d1ceedb1509bf370c0897e",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J5",
+        "pinNumber": "2",
+        "netId": "net-3474d9928d90373f0814e0573a2b460484ec62cfa1988738badc8ce6359276ea",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J6",
+        "pinNumber": "1",
+        "netId": "net-64c71e92361233931c9aed2070698d711c5a41bae65d295b9d705fc35e92fbf6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J6",
+        "pinNumber": "2",
+        "netId": "net-ce7c69873443a420cbeb6c1faa2b8f93344f1a87663582ad0136a9c2f57b01eb",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J7",
+        "pinNumber": "1",
+        "netId": "net-5561ab438bc1cd7ded3d0a372b8ee0bf17877ca0d88b66dc4c7541386365bd06",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J7",
+        "pinNumber": "2",
+        "netId": "net-2eabec0b8a13e66e4829619b61b02f06331cc6ab3f5a505f78d9cddbaad1a2c0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J8",
+        "pinNumber": "1",
+        "netId": "net-b727a977622b7c5225df4b60ac1ad2e7296e75f446354280b750c333f8b0f042",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-J8",
+        "pinNumber": "2",
+        "netId": "net-018a84fcd6b3e687c9f3f3c831cfa441125150e79a9d0ea8dfb84bc4dd564485",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q1",
+        "pinNumber": "1",
+        "netId": "net-f3e8bf5ca56d5c3cefe936b3dceb5f9f4b1d10b691e875247824019b097df8d0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q1",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q1",
+        "pinNumber": "3",
+        "netId": "net-c447ed24ffaf4472ddbb822d5ae2e505c8cab7f9052dd195f592396ea4794920",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q2",
+        "pinNumber": "1",
+        "netId": "net-fb14b95e985477ef9466fb9853d828229a8f6a924571e858cd5aab09e6377607",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q2",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q2",
+        "pinNumber": "3",
+        "netId": "net-3ffff9f35e589a19af018d8ea86923cfc99d480520e76efa301aab9288b1045e",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q3",
+        "pinNumber": "1",
+        "netId": "net-8ee1100694eb89efb4c126e55d45bf74a9d8f1d421d52ebd831c09fccc3ddcad",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q3",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q3",
+        "pinNumber": "3",
+        "netId": "net-1c80a53fe11ec070d527144921e1fa81ca222dfba0eddf69ad80c89deecb1a60",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q4",
+        "pinNumber": "1",
+        "netId": "net-c3eb9755bf5b30e53f1b6fd55c0453e48e0df1fd4bc4d228291f2439586e14a7",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q4",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q4",
+        "pinNumber": "3",
+        "netId": "net-54dfcda794380505c4ab3b8421038d116e0730cc44c3ebfd6db33e9a63fcb1b6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q5",
+        "pinNumber": "1",
+        "netId": "net-9d9b9d76bf73bb17aac3fc9bc3d4b4bf45b4f60ec3c213b9286ecc698aad63bc",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q5",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-Q5",
+        "pinNumber": "3",
+        "netId": "net-6f52d2fd28ea88872f254acb307a3c21e0d534f32b7eb182dfd7ada51596ac08",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R12",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R12",
+        "pinNumber": "2",
+        "netId": "net-caa8850ead03183cc52ed1bb89c7f27cccfd01fa0eb35dc1f7b6f97af161e2c6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R13",
+        "pinNumber": "1",
+        "netId": "net-717acaa5df4a66491c9c94879ddea22014f0659aa398fad1022fea2f2ea630ea",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R13",
+        "pinNumber": "2",
+        "netId": "net-f3e8bf5ca56d5c3cefe936b3dceb5f9f4b1d10b691e875247824019b097df8d0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R14",
+        "pinNumber": "1",
+        "netId": "net-f3e8bf5ca56d5c3cefe936b3dceb5f9f4b1d10b691e875247824019b097df8d0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R14",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R15",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R15",
+        "pinNumber": "2",
+        "netId": "net-904bbcb54e9bece4f23126174e1fb8503c5fa2d471c60e4e594f1a682c7801f7",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R16",
+        "pinNumber": "1",
+        "netId": "net-abfd408ac801a5dc1f579bd3f8cf8a5020ab411683e1e3297b68ffd616950f4b",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R16",
+        "pinNumber": "2",
+        "netId": "net-fb14b95e985477ef9466fb9853d828229a8f6a924571e858cd5aab09e6377607",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R17",
+        "pinNumber": "1",
+        "netId": "net-fb14b95e985477ef9466fb9853d828229a8f6a924571e858cd5aab09e6377607",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R17",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R18",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R18",
+        "pinNumber": "2",
+        "netId": "net-4de91dae7f67b030942e54be89e06d1fe8475e8d490e343398efa900cad5c528",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R19",
+        "pinNumber": "1",
+        "netId": "net-8e5189d0decba7b5af5efcd5f8b1074910342daaff00ff58f4bfa13518a38f66",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R19",
+        "pinNumber": "2",
+        "netId": "net-8ee1100694eb89efb4c126e55d45bf74a9d8f1d421d52ebd831c09fccc3ddcad",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R20",
+        "pinNumber": "1",
+        "netId": "net-8ee1100694eb89efb4c126e55d45bf74a9d8f1d421d52ebd831c09fccc3ddcad",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R20",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R21",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R21",
+        "pinNumber": "2",
+        "netId": "net-6e1e50a2f8ebcec24970364c872f03f228566d9cc8f9b1079d6548be65270d49",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R22",
+        "pinNumber": "1",
+        "netId": "net-2e2b9fedab588a136738e9fbf13911cca7e7ebc6a93e98f2119256e3ff6e73c4",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R22",
+        "pinNumber": "2",
+        "netId": "net-c3eb9755bf5b30e53f1b6fd55c0453e48e0df1fd4bc4d228291f2439586e14a7",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R23",
+        "pinNumber": "1",
+        "netId": "net-c3eb9755bf5b30e53f1b6fd55c0453e48e0df1fd4bc4d228291f2439586e14a7",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R23",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R24",
+        "pinNumber": "1",
+        "netId": "net-e9a5218255dc04251a64cc3398002b5310be1ed80bedbb69a4ae29614e3c78b8",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R24",
+        "pinNumber": "2",
+        "netId": "net-f1ecca1e9777397424ab7e8a586828a677a4119b18aadf87a6ca216b7532b307",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R25",
+        "pinNumber": "1",
+        "netId": "net-c68359c6199043242284c11cf28ce3017c53ef25f846a11bfc02f8abeb3e3000",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R25",
+        "pinNumber": "2",
+        "netId": "net-9d9b9d76bf73bb17aac3fc9bc3d4b4bf45b4f60ec3c213b9286ecc698aad63bc",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R26",
+        "pinNumber": "1",
+        "netId": "net-9d9b9d76bf73bb17aac3fc9bc3d4b4bf45b4f60ec3c213b9286ecc698aad63bc",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-R26",
+        "pinNumber": "2",
+        "netId": "net-cc6baa62f07b56e4f1fe32402f70b7e960f699acc73304363d1beb50d3ae9943",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U5",
+        "pinNumber": "1",
+        "netId": "net-caa8850ead03183cc52ed1bb89c7f27cccfd01fa0eb35dc1f7b6f97af161e2c6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U5",
+        "pinNumber": "3",
+        "netId": "net-c447ed24ffaf4472ddbb822d5ae2e505c8cab7f9052dd195f592396ea4794920",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U5",
+        "pinNumber": "4",
+        "netId": "net-825b056fdae3407cd4125705aff2897f1eec5b3bad1a1744dcd0c43a4d8b4a0b",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U5",
+        "pinNumber": "6",
+        "netId": "net-6dd5dc161353a83f233d28b7df750510c249c5282c58a93a0d5c63c40fb9b752",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U6",
+        "pinNumber": "1",
+        "netId": "net-904bbcb54e9bece4f23126174e1fb8503c5fa2d471c60e4e594f1a682c7801f7",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U6",
+        "pinNumber": "3",
+        "netId": "net-3ffff9f35e589a19af018d8ea86923cfc99d480520e76efa301aab9288b1045e",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U6",
+        "pinNumber": "4",
+        "netId": "net-75f0111e60d49d228addf49466d79183de24f183c2d1ceedb1509bf370c0897e",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U6",
+        "pinNumber": "6",
+        "netId": "net-3474d9928d90373f0814e0573a2b460484ec62cfa1988738badc8ce6359276ea",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U7",
+        "pinNumber": "1",
+        "netId": "net-4de91dae7f67b030942e54be89e06d1fe8475e8d490e343398efa900cad5c528",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U7",
+        "pinNumber": "3",
+        "netId": "net-1c80a53fe11ec070d527144921e1fa81ca222dfba0eddf69ad80c89deecb1a60",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U7",
+        "pinNumber": "4",
+        "netId": "net-64c71e92361233931c9aed2070698d711c5a41bae65d295b9d705fc35e92fbf6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U7",
+        "pinNumber": "6",
+        "netId": "net-ce7c69873443a420cbeb6c1faa2b8f93344f1a87663582ad0136a9c2f57b01eb",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U8",
+        "pinNumber": "1",
+        "netId": "net-6e1e50a2f8ebcec24970364c872f03f228566d9cc8f9b1079d6548be65270d49",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U8",
+        "pinNumber": "3",
+        "netId": "net-54dfcda794380505c4ab3b8421038d116e0730cc44c3ebfd6db33e9a63fcb1b6",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U8",
+        "pinNumber": "4",
+        "netId": "net-5561ab438bc1cd7ded3d0a372b8ee0bf17877ca0d88b66dc4c7541386365bd06",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U8",
+        "pinNumber": "6",
+        "netId": "net-2eabec0b8a13e66e4829619b61b02f06331cc6ab3f5a505f78d9cddbaad1a2c0",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U9",
+        "pinNumber": "1",
+        "netId": "net-f1ecca1e9777397424ab7e8a586828a677a4119b18aadf87a6ca216b7532b307",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U9",
+        "pinNumber": "3",
+        "netId": "net-6f52d2fd28ea88872f254acb307a3c21e0d534f32b7eb182dfd7ada51596ac08",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U9",
+        "pinNumber": "4",
+        "netId": "net-b727a977622b7c5225df4b60ac1ad2e7296e75f446354280b750c333f8b0f042",
+        "kind": "netlist"
+      },
+      {
+        "componentId": "cmp-U9",
+        "pinNumber": "6",
+        "netId": "net-018a84fcd6b3e687c9f3f3c831cfa441125150e79a9d0ea8dfb84bc4dd564485",
+        "kind": "netlist"
+      }
+    ],
+    "modules": [
+      {
+        "id": "key1",
+        "name": "按键 1：无极性隔离触点",
+        "coreComponents": [
+          "cmp-U5",
+          "cmp-Q1"
+        ],
+        "peripheralComponents": [
+          "cmp-R12",
+          "cmp-R13",
+          "cmp-R14",
+          "cmp-J4"
+        ]
+      },
+      {
+        "id": "key2",
+        "name": "按键 2：无极性隔离触点",
+        "coreComponents": [
+          "cmp-U6",
+          "cmp-Q2"
+        ],
+        "peripheralComponents": [
+          "cmp-R15",
+          "cmp-R16",
+          "cmp-R17",
+          "cmp-J5"
+        ]
+      },
+      {
+        "id": "key3",
+        "name": "按键 3：无极性隔离触点",
+        "coreComponents": [
+          "cmp-U7",
+          "cmp-Q3"
+        ],
+        "peripheralComponents": [
+          "cmp-R18",
+          "cmp-R19",
+          "cmp-R20",
+          "cmp-J6"
+        ]
+      },
+      {
+        "id": "key4",
+        "name": "按键 4：无极性隔离触点",
+        "coreComponents": [
+          "cmp-U8",
+          "cmp-Q4"
+        ],
+        "peripheralComponents": [
+          "cmp-R21",
+          "cmp-R22",
+          "cmp-R23",
+          "cmp-J7"
+        ]
+      },
+      {
+        "id": "key5",
+        "name": "按键 5：无极性隔离触点",
+        "coreComponents": [
+          "cmp-U9",
+          "cmp-Q5"
+        ],
+        "peripheralComponents": [
+          "cmp-R24",
+          "cmp-R25",
+          "cmp-R26",
+          "cmp-J8"
+        ]
+      }
+    ]
+  },
+  "sheet": {
+    "minX": 0,
+    "minY": 0,
+    "maxX": 3304,
+    "maxY": 2338
+  },
+  "sheetBorder": {
+    "minX": 10,
+    "minY": 10,
+    "maxX": 2328,
+    "maxY": 1642
+  },
+  "placementBoundarySource": "explicit-sheet-border",
+  "usableBounds": {
+    "minX": 25,
+    "minY": 25,
+    "maxX": 2315,
+    "maxY": 1630
+  },
+  "keepouts": [],
+  "layout": {
+    "schemaVersion": 1,
+    "documentId": "11bf161323c12964",
+    "placements": [
+      {
+        "primitiveId": "",
+        "designator": "U5",
+        "value": "TLP176AM(TPL,E",
+        "x": 400,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 369.5,
+          "minY": 1379.5,
+          "maxX": 430.5,
+          "maxY": 1440.5
+        },
+        "textBboxes": [
+          {
+            "minX": 370,
+            "minY": 1440,
+            "maxX": 378.948242188,
+            "maxY": 1448
+          }
+        ],
+        "pins": [
+          {
+            "number": "6",
+            "name": "Drain",
+            "net": "KEY1_B",
+            "x": 450,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "net": "KEY1_A",
+            "x": 450,
+            "y": 1390,
+            "rotation": 0
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "net": "KEY1_LED_K",
+            "x": 350,
+            "y": 1390,
+            "rotation": 180
+          },
+          {
+            "number": "1",
+            "name": "Anode",
+            "net": "KEY1_LED_A",
+            "x": 350,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "Q1",
+        "value": "MMBT3904LT1G",
+        "x": 300,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 299.5,
+          "minY": 1319.5,
+          "maxX": 310.5,
+          "maxY": 1340.5
+        },
+        "textBboxes": [
+          {
+            "minX": 315,
+            "minY": 1330,
+            "maxX": 324.337890625,
+            "maxY": 1338
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY1_BASE",
+            "x": 290,
+            "y": 1330,
+            "rotation": 180
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "net": "KEY1_LED_K",
+            "x": 310,
+            "y": 1350,
+            "rotation": 90
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 310,
+            "y": 1310,
+            "rotation": 270
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R12",
+        "value": "240Ω",
+        "x": 250,
+        "y": 1430,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 239.5,
+          "minY": 1425.5,
+          "maxX": 260.5,
+          "maxY": 1434.5
+        },
+        "textBboxes": [
+          {
+            "minX": 240,
+            "minY": 1435,
+            "maxX": 252.841308594,
+            "maxY": 1443
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY1_LED_A",
+            "x": 270,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "TOOL_3V3",
+            "x": 230,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R13",
+        "value": "680Ω",
+        "x": 200,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 189.5,
+          "minY": 1325.5,
+          "maxX": 210.5,
+          "maxY": 1334.5
+        },
+        "textBboxes": [
+          {
+            "minX": 190,
+            "minY": 1335,
+            "maxX": 202.841308594,
+            "maxY": 1343
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY1_BASE",
+            "x": 220,
+            "y": 1330,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY1_CTRL",
+            "x": 180,
+            "y": 1330,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R14",
+        "value": "10kΩ",
+        "x": 250,
+        "y": 1275,
+        "rotation": 270,
+        "mirror": false,
+        "bbox": {
+          "minX": 245.5,
+          "minY": 1264.5,
+          "maxX": 254.5,
+          "maxY": 1285.5
+        },
+        "textBboxes": [
+          {
+            "minX": 255,
+            "minY": 1272.158691406,
+            "maxX": 263,
+            "maxY": 1285
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 250,
+            "y": 1255,
+            "rotation": 270
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY1_BASE",
+            "x": 250,
+            "y": 1295,
+            "rotation": 90
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "J4",
+        "x": 550,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 539.5,
+          "minY": 1394.5,
+          "maxX": 570.5,
+          "maxY": 1425.5
+        },
+        "textBboxes": [
+          {
+            "minX": 540,
+            "minY": 1425,
+            "maxX": 547.393066406,
+            "maxY": 1433
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY1_A",
+            "x": 530,
+            "y": 1415,
+            "rotation": 180
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY1_B",
+            "x": 530,
+            "y": 1405,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "U6",
+        "value": "TLP176AM(TPL,E",
+        "x": 970,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 939.5,
+          "minY": 1379.5,
+          "maxX": 1000.5,
+          "maxY": 1440.5
+        },
+        "textBboxes": [
+          {
+            "minX": 940,
+            "minY": 1440,
+            "maxX": 948.948242188,
+            "maxY": 1448
+          }
+        ],
+        "pins": [
+          {
+            "number": "6",
+            "name": "Drain",
+            "net": "KEY2_B",
+            "x": 1020,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "net": "KEY2_A",
+            "x": 1020,
+            "y": 1390,
+            "rotation": 0
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "net": "KEY2_LED_K",
+            "x": 920,
+            "y": 1390,
+            "rotation": 180
+          },
+          {
+            "number": "1",
+            "name": "Anode",
+            "net": "KEY2_LED_A",
+            "x": 920,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "Q2",
+        "value": "MMBT3904LT1G",
+        "x": 870,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 869.5,
+          "minY": 1319.5,
+          "maxX": 880.5,
+          "maxY": 1340.5
+        },
+        "textBboxes": [
+          {
+            "minX": 885,
+            "minY": 1330,
+            "maxX": 894.337890625,
+            "maxY": 1338
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY2_BASE",
+            "x": 860,
+            "y": 1330,
+            "rotation": 180
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "net": "KEY2_LED_K",
+            "x": 880,
+            "y": 1350,
+            "rotation": 90
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 880,
+            "y": 1310,
+            "rotation": 270
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R15",
+        "value": "240Ω",
+        "x": 820,
+        "y": 1430,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 809.5,
+          "minY": 1425.5,
+          "maxX": 830.5,
+          "maxY": 1434.5
+        },
+        "textBboxes": [
+          {
+            "minX": 810,
+            "minY": 1435,
+            "maxX": 822.841308594,
+            "maxY": 1443
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY2_LED_A",
+            "x": 840,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "TOOL_3V3",
+            "x": 800,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R16",
+        "value": "680Ω",
+        "x": 770,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 759.5,
+          "minY": 1325.5,
+          "maxX": 780.5,
+          "maxY": 1334.5
+        },
+        "textBboxes": [
+          {
+            "minX": 760,
+            "minY": 1335,
+            "maxX": 772.841308594,
+            "maxY": 1343
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY2_BASE",
+            "x": 790,
+            "y": 1330,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY2_CTRL",
+            "x": 750,
+            "y": 1330,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R17",
+        "value": "10kΩ",
+        "x": 820,
+        "y": 1275,
+        "rotation": 270,
+        "mirror": false,
+        "bbox": {
+          "minX": 815.5,
+          "minY": 1264.5,
+          "maxX": 824.5,
+          "maxY": 1285.5
+        },
+        "textBboxes": [
+          {
+            "minX": 825,
+            "minY": 1272.158691406,
+            "maxX": 833,
+            "maxY": 1285
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 820,
+            "y": 1255,
+            "rotation": 270
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY2_BASE",
+            "x": 820,
+            "y": 1295,
+            "rotation": 90
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "J5",
+        "x": 1120,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1109.5,
+          "minY": 1394.5,
+          "maxX": 1140.5,
+          "maxY": 1425.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1110,
+            "minY": 1425,
+            "maxX": 1117.393066406,
+            "maxY": 1433
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY2_A",
+            "x": 1100,
+            "y": 1415,
+            "rotation": 180
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY2_B",
+            "x": 1100,
+            "y": 1405,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "U7",
+        "value": "TLP176AM(TPL,E",
+        "x": 1540,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1509.5,
+          "minY": 1379.5,
+          "maxX": 1570.5,
+          "maxY": 1440.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1510,
+            "minY": 1440,
+            "maxX": 1518.948242188,
+            "maxY": 1448
+          }
+        ],
+        "pins": [
+          {
+            "number": "6",
+            "name": "Drain",
+            "net": "KEY3_B",
+            "x": 1590,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "net": "KEY3_A",
+            "x": 1590,
+            "y": 1390,
+            "rotation": 0
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "net": "KEY3_LED_K",
+            "x": 1490,
+            "y": 1390,
+            "rotation": 180
+          },
+          {
+            "number": "1",
+            "name": "Anode",
+            "net": "KEY3_LED_A",
+            "x": 1490,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "Q3",
+        "value": "MMBT3904LT1G",
+        "x": 1440,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1439.5,
+          "minY": 1319.5,
+          "maxX": 1450.5,
+          "maxY": 1340.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1455,
+            "minY": 1330,
+            "maxX": 1464.337890625,
+            "maxY": 1338
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY3_BASE",
+            "x": 1430,
+            "y": 1330,
+            "rotation": 180
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "net": "KEY3_LED_K",
+            "x": 1450,
+            "y": 1350,
+            "rotation": 90
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 1450,
+            "y": 1310,
+            "rotation": 270
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R18",
+        "value": "240Ω",
+        "x": 1390,
+        "y": 1430,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1379.5,
+          "minY": 1425.5,
+          "maxX": 1400.5,
+          "maxY": 1434.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1380,
+            "minY": 1435,
+            "maxX": 1392.841308594,
+            "maxY": 1443
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY3_LED_A",
+            "x": 1410,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "TOOL_3V3",
+            "x": 1370,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R19",
+        "value": "680Ω",
+        "x": 1340,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1329.5,
+          "minY": 1325.5,
+          "maxX": 1350.5,
+          "maxY": 1334.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1330,
+            "minY": 1335,
+            "maxX": 1342.841308594,
+            "maxY": 1343
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY3_BASE",
+            "x": 1360,
+            "y": 1330,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY3_CTRL",
+            "x": 1320,
+            "y": 1330,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R20",
+        "value": "10kΩ",
+        "x": 1390,
+        "y": 1275,
+        "rotation": 270,
+        "mirror": false,
+        "bbox": {
+          "minX": 1385.5,
+          "minY": 1264.5,
+          "maxX": 1394.5,
+          "maxY": 1285.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1395,
+            "minY": 1272.158691406,
+            "maxX": 1403,
+            "maxY": 1285
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 1390,
+            "y": 1255,
+            "rotation": 270
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY3_BASE",
+            "x": 1390,
+            "y": 1295,
+            "rotation": 90
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "J6",
+        "x": 1690,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1679.5,
+          "minY": 1394.5,
+          "maxX": 1710.5,
+          "maxY": 1425.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1680,
+            "minY": 1425,
+            "maxX": 1687.393066406,
+            "maxY": 1433
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY3_A",
+            "x": 1670,
+            "y": 1415,
+            "rotation": 180
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY3_B",
+            "x": 1670,
+            "y": 1405,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "U8",
+        "value": "TLP176AM(TPL,E",
+        "x": 2110,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 2079.5,
+          "minY": 1379.5,
+          "maxX": 2140.5,
+          "maxY": 1440.5
+        },
+        "textBboxes": [
+          {
+            "minX": 2080,
+            "minY": 1440,
+            "maxX": 2088.948242188,
+            "maxY": 1448
+          }
+        ],
+        "pins": [
+          {
+            "number": "6",
+            "name": "Drain",
+            "net": "KEY4_B",
+            "x": 2160,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "net": "KEY4_A",
+            "x": 2160,
+            "y": 1390,
+            "rotation": 0
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "net": "KEY4_LED_K",
+            "x": 2060,
+            "y": 1390,
+            "rotation": 180
+          },
+          {
+            "number": "1",
+            "name": "Anode",
+            "net": "KEY4_LED_A",
+            "x": 2060,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "Q4",
+        "value": "MMBT3904LT1G",
+        "x": 2010,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 2009.5,
+          "minY": 1319.5,
+          "maxX": 2020.5,
+          "maxY": 1340.5
+        },
+        "textBboxes": [
+          {
+            "minX": 2025,
+            "minY": 1330,
+            "maxX": 2034.337890625,
+            "maxY": 1338
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY4_BASE",
+            "x": 2000,
+            "y": 1330,
+            "rotation": 180
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "net": "KEY4_LED_K",
+            "x": 2020,
+            "y": 1350,
+            "rotation": 90
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 2020,
+            "y": 1310,
+            "rotation": 270
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R21",
+        "value": "240Ω",
+        "x": 1960,
+        "y": 1430,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1949.5,
+          "minY": 1425.5,
+          "maxX": 1970.5,
+          "maxY": 1434.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1950,
+            "minY": 1435,
+            "maxX": 1962.841308594,
+            "maxY": 1443
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY4_LED_A",
+            "x": 1980,
+            "y": 1430,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "TOOL_3V3",
+            "x": 1940,
+            "y": 1430,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R22",
+        "value": "680Ω",
+        "x": 1910,
+        "y": 1330,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 1899.5,
+          "minY": 1325.5,
+          "maxX": 1920.5,
+          "maxY": 1334.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1900,
+            "minY": 1335,
+            "maxX": 1912.841308594,
+            "maxY": 1343
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY4_BASE",
+            "x": 1930,
+            "y": 1330,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY4_CTRL",
+            "x": 1890,
+            "y": 1330,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R23",
+        "value": "10kΩ",
+        "x": 1960,
+        "y": 1275,
+        "rotation": 270,
+        "mirror": false,
+        "bbox": {
+          "minX": 1955.5,
+          "minY": 1264.5,
+          "maxX": 1964.5,
+          "maxY": 1285.5
+        },
+        "textBboxes": [
+          {
+            "minX": 1965,
+            "minY": 1272.158691406,
+            "maxX": 1973,
+            "maxY": 1285
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 1960,
+            "y": 1255,
+            "rotation": 270
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY4_BASE",
+            "x": 1960,
+            "y": 1295,
+            "rotation": 90
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "J7",
+        "x": 2260,
+        "y": 1410,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 2249.5,
+          "minY": 1394.5,
+          "maxX": 2280.5,
+          "maxY": 1425.5
+        },
+        "textBboxes": [
+          {
+            "minX": 2250,
+            "minY": 1425,
+            "maxX": 2257.393066406,
+            "maxY": 1433
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY4_A",
+            "x": 2240,
+            "y": 1415,
+            "rotation": 180
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY4_B",
+            "x": 2240,
+            "y": 1405,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "U9",
+        "value": "TLP176AM(TPL,E",
+        "x": 400,
+        "y": 855,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 369.5,
+          "minY": 824.5,
+          "maxX": 430.5,
+          "maxY": 885.5
+        },
+        "textBboxes": [
+          {
+            "minX": 370,
+            "minY": 885,
+            "maxX": 378.948242188,
+            "maxY": 893
+          }
+        ],
+        "pins": [
+          {
+            "number": "6",
+            "name": "Drain",
+            "net": "KEY5_B",
+            "x": 450,
+            "y": 875,
+            "rotation": 0
+          },
+          {
+            "number": "4",
+            "name": "Drain",
+            "net": "KEY5_A",
+            "x": 450,
+            "y": 835,
+            "rotation": 0
+          },
+          {
+            "number": "3",
+            "name": "Cathode",
+            "net": "KEY5_LED_K",
+            "x": 350,
+            "y": 835,
+            "rotation": 180
+          },
+          {
+            "number": "1",
+            "name": "Anode",
+            "net": "KEY5_LED_A",
+            "x": 350,
+            "y": 875,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "Q5",
+        "value": "MMBT3904LT1G",
+        "x": 300,
+        "y": 775,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 299.5,
+          "minY": 764.5,
+          "maxX": 310.5,
+          "maxY": 785.5
+        },
+        "textBboxes": [
+          {
+            "minX": 315,
+            "minY": 775,
+            "maxX": 324.337890625,
+            "maxY": 783
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY5_BASE",
+            "x": 290,
+            "y": 775,
+            "rotation": 180
+          },
+          {
+            "number": "3",
+            "name": "3",
+            "net": "KEY5_LED_K",
+            "x": 310,
+            "y": 795,
+            "rotation": 90
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 310,
+            "y": 755,
+            "rotation": 270
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R24",
+        "value": "240Ω",
+        "x": 250,
+        "y": 875,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 239.5,
+          "minY": 870.5,
+          "maxX": 260.5,
+          "maxY": 879.5
+        },
+        "textBboxes": [
+          {
+            "minX": 240,
+            "minY": 880,
+            "maxX": 252.841308594,
+            "maxY": 888
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY5_LED_A",
+            "x": 270,
+            "y": 875,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "TOOL_3V3",
+            "x": 230,
+            "y": 875,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R25",
+        "value": "680Ω",
+        "x": 200,
+        "y": 775,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 189.5,
+          "minY": 770.5,
+          "maxX": 210.5,
+          "maxY": 779.5
+        },
+        "textBboxes": [
+          {
+            "minX": 190,
+            "minY": 780,
+            "maxX": 202.841308594,
+            "maxY": 788
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY5_BASE",
+            "x": 220,
+            "y": 775,
+            "rotation": 0
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY5_CTRL",
+            "x": 180,
+            "y": 775,
+            "rotation": 180
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "R26",
+        "value": "10kΩ",
+        "x": 250,
+        "y": 720,
+        "rotation": 270,
+        "mirror": false,
+        "bbox": {
+          "minX": 245.5,
+          "minY": 709.5,
+          "maxX": 254.5,
+          "maxY": 730.5
+        },
+        "textBboxes": [
+          {
+            "minX": 255,
+            "minY": 717.158691406,
+            "maxX": 263,
+            "maxY": 730
+          }
+        ],
+        "pins": [
+          {
+            "number": "2",
+            "name": "2",
+            "net": "COMMON_GND",
+            "x": 250,
+            "y": 700,
+            "rotation": 270
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY5_BASE",
+            "x": 250,
+            "y": 740,
+            "rotation": 90
+          }
+        ]
+      },
+      {
+        "primitiveId": "",
+        "designator": "J8",
+        "x": 550,
+        "y": 855,
+        "rotation": 0,
+        "mirror": false,
+        "bbox": {
+          "minX": 539.5,
+          "minY": 839.5,
+          "maxX": 570.5,
+          "maxY": 870.5
+        },
+        "textBboxes": [
+          {
+            "minX": 540,
+            "minY": 870,
+            "maxX": 547.393066406,
+            "maxY": 878
+          }
+        ],
+        "pins": [
+          {
+            "number": "1",
+            "name": "1",
+            "net": "KEY5_A",
+            "x": 530,
+            "y": 860,
+            "rotation": 180
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "net": "KEY5_B",
+            "x": 530,
+            "y": 850,
+            "rotation": 180
+          }
+        ]
+      }
+    ],
+    "wires": [
+      {
+        "net": "KEY1_LED_A",
+        "points": [
+          [
+            270,
+            1430
+          ],
+          [
+            350,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "TOOL_3V3",
+        "points": [
+          [
+            230,
+            1430
+          ],
+          [
+            210,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_LED_K",
+        "points": [
+          [
+            310,
+            1350
+          ],
+          [
+            310,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_LED_K",
+        "points": [
+          [
+            310,
+            1390
+          ],
+          [
+            350,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_BASE",
+        "points": [
+          [
+            220,
+            1330
+          ],
+          [
+            290,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_BASE",
+        "points": [
+          [
+            250,
+            1295
+          ],
+          [
+            250,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            250,
+            1255
+          ],
+          [
+            250,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            250,
+            1230
+          ],
+          [
+            360,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            310,
+            1310
+          ],
+          [
+            310,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_A",
+        "points": [
+          [
+            450,
+            1390
+          ],
+          [
+            490,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_A",
+        "points": [
+          [
+            490,
+            1390
+          ],
+          [
+            490,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_A",
+        "points": [
+          [
+            490,
+            1415
+          ],
+          [
+            530,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_B",
+        "points": [
+          [
+            450,
+            1430
+          ],
+          [
+            510,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_B",
+        "points": [
+          [
+            510,
+            1430
+          ],
+          [
+            510,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY1_B",
+        "points": [
+          [
+            510,
+            1405
+          ],
+          [
+            530,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_LED_A",
+        "points": [
+          [
+            840,
+            1430
+          ],
+          [
+            920,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "TOOL_3V3",
+        "points": [
+          [
+            800,
+            1430
+          ],
+          [
+            780,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_LED_K",
+        "points": [
+          [
+            880,
+            1350
+          ],
+          [
+            880,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_LED_K",
+        "points": [
+          [
+            880,
+            1390
+          ],
+          [
+            920,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_BASE",
+        "points": [
+          [
+            790,
+            1330
+          ],
+          [
+            860,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_BASE",
+        "points": [
+          [
+            820,
+            1295
+          ],
+          [
+            820,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            820,
+            1255
+          ],
+          [
+            820,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            820,
+            1230
+          ],
+          [
+            930,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            880,
+            1310
+          ],
+          [
+            880,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_A",
+        "points": [
+          [
+            1020,
+            1390
+          ],
+          [
+            1060,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_A",
+        "points": [
+          [
+            1060,
+            1390
+          ],
+          [
+            1060,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_A",
+        "points": [
+          [
+            1060,
+            1415
+          ],
+          [
+            1100,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_B",
+        "points": [
+          [
+            1020,
+            1430
+          ],
+          [
+            1080,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_B",
+        "points": [
+          [
+            1080,
+            1430
+          ],
+          [
+            1080,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY2_B",
+        "points": [
+          [
+            1080,
+            1405
+          ],
+          [
+            1100,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_LED_A",
+        "points": [
+          [
+            1410,
+            1430
+          ],
+          [
+            1490,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "TOOL_3V3",
+        "points": [
+          [
+            1370,
+            1430
+          ],
+          [
+            1350,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_LED_K",
+        "points": [
+          [
+            1450,
+            1350
+          ],
+          [
+            1450,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_LED_K",
+        "points": [
+          [
+            1450,
+            1390
+          ],
+          [
+            1490,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_BASE",
+        "points": [
+          [
+            1360,
+            1330
+          ],
+          [
+            1430,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_BASE",
+        "points": [
+          [
+            1390,
+            1295
+          ],
+          [
+            1390,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            1390,
+            1255
+          ],
+          [
+            1390,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            1390,
+            1230
+          ],
+          [
+            1500,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            1450,
+            1310
+          ],
+          [
+            1450,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_A",
+        "points": [
+          [
+            1590,
+            1390
+          ],
+          [
+            1630,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_A",
+        "points": [
+          [
+            1630,
+            1390
+          ],
+          [
+            1630,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_A",
+        "points": [
+          [
+            1630,
+            1415
+          ],
+          [
+            1670,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_B",
+        "points": [
+          [
+            1590,
+            1430
+          ],
+          [
+            1650,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_B",
+        "points": [
+          [
+            1650,
+            1430
+          ],
+          [
+            1650,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY3_B",
+        "points": [
+          [
+            1650,
+            1405
+          ],
+          [
+            1670,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_LED_A",
+        "points": [
+          [
+            1980,
+            1430
+          ],
+          [
+            2060,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "TOOL_3V3",
+        "points": [
+          [
+            1940,
+            1430
+          ],
+          [
+            1920,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_LED_K",
+        "points": [
+          [
+            2020,
+            1350
+          ],
+          [
+            2020,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_LED_K",
+        "points": [
+          [
+            2020,
+            1390
+          ],
+          [
+            2060,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_BASE",
+        "points": [
+          [
+            1930,
+            1330
+          ],
+          [
+            2000,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_BASE",
+        "points": [
+          [
+            1960,
+            1295
+          ],
+          [
+            1960,
+            1330
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            1960,
+            1255
+          ],
+          [
+            1960,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            1960,
+            1230
+          ],
+          [
+            2070,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            2020,
+            1310
+          ],
+          [
+            2020,
+            1230
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_A",
+        "points": [
+          [
+            2160,
+            1390
+          ],
+          [
+            2200,
+            1390
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_A",
+        "points": [
+          [
+            2200,
+            1390
+          ],
+          [
+            2200,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_A",
+        "points": [
+          [
+            2200,
+            1415
+          ],
+          [
+            2240,
+            1415
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_B",
+        "points": [
+          [
+            2160,
+            1430
+          ],
+          [
+            2220,
+            1430
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_B",
+        "points": [
+          [
+            2220,
+            1430
+          ],
+          [
+            2220,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY4_B",
+        "points": [
+          [
+            2220,
+            1405
+          ],
+          [
+            2240,
+            1405
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_LED_A",
+        "points": [
+          [
+            270,
+            875
+          ],
+          [
+            350,
+            875
+          ]
+        ]
+      },
+      {
+        "net": "TOOL_3V3",
+        "points": [
+          [
+            230,
+            875
+          ],
+          [
+            210,
+            875
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_LED_K",
+        "points": [
+          [
+            310,
+            795
+          ],
+          [
+            310,
+            835
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_LED_K",
+        "points": [
+          [
+            310,
+            835
+          ],
+          [
+            350,
+            835
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_BASE",
+        "points": [
+          [
+            220,
+            775
+          ],
+          [
+            290,
+            775
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_BASE",
+        "points": [
+          [
+            250,
+            740
+          ],
+          [
+            250,
+            775
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            250,
+            700
+          ],
+          [
+            250,
+            675
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            250,
+            675
+          ],
+          [
+            360,
+            675
+          ]
+        ]
+      },
+      {
+        "net": "COMMON_GND",
+        "points": [
+          [
+            310,
+            755
+          ],
+          [
+            310,
+            675
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_A",
+        "points": [
+          [
+            450,
+            835
+          ],
+          [
+            490,
+            835
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_A",
+        "points": [
+          [
+            490,
+            835
+          ],
+          [
+            490,
+            860
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_A",
+        "points": [
+          [
+            490,
+            860
+          ],
+          [
+            530,
+            860
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_B",
+        "points": [
+          [
+            450,
+            875
+          ],
+          [
+            510,
+            875
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_B",
+        "points": [
+          [
+            510,
+            875
+          ],
+          [
+            510,
+            850
+          ]
+        ]
+      },
+      {
+        "net": "KEY5_B",
+        "points": [
+          [
+            510,
+            850
+          ],
+          [
+            530,
+            850
+          ]
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "net": "TOOL_3V3",
+        "kind": "power",
+        "pinX": 210,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 50
+      },
+      {
+        "net": "KEY1_LED_A",
+        "kind": "net_port_bi",
+        "pinX": 320,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "KEY1_LED_K",
+        "kind": "net_port_bi",
+        "pinX": 310,
+        "pinY": 1390,
+        "direction": "left",
+        "offset": 60
+      },
+      {
+        "net": "KEY1_BASE",
+        "kind": "net_port_bi",
+        "pinX": 280,
+        "pinY": 1330,
+        "direction": "down",
+        "offset": 130
+      },
+      {
+        "net": "KEY1_CTRL",
+        "kind": "net_port_in",
+        "pinX": 180,
+        "pinY": 1330,
+        "direction": "left",
+        "offset": 40
+      },
+      {
+        "net": "COMMON_GND",
+        "kind": "ground",
+        "pinX": 360,
+        "pinY": 1230,
+        "direction": "down",
+        "offset": 30
+      },
+      {
+        "net": "KEY1_A",
+        "kind": "net_port_bi",
+        "pinX": 480,
+        "pinY": 1390,
+        "direction": "down",
+        "offset": 60
+      },
+      {
+        "net": "KEY1_B",
+        "kind": "net_port_bi",
+        "pinX": 480,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "TOOL_3V3",
+        "kind": "power",
+        "pinX": 780,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 50
+      },
+      {
+        "net": "KEY2_LED_A",
+        "kind": "net_port_bi",
+        "pinX": 890,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "KEY2_LED_K",
+        "kind": "net_port_bi",
+        "pinX": 880,
+        "pinY": 1390,
+        "direction": "left",
+        "offset": 60
+      },
+      {
+        "net": "KEY2_BASE",
+        "kind": "net_port_bi",
+        "pinX": 850,
+        "pinY": 1330,
+        "direction": "down",
+        "offset": 130
+      },
+      {
+        "net": "KEY2_CTRL",
+        "kind": "net_port_in",
+        "pinX": 750,
+        "pinY": 1330,
+        "direction": "left",
+        "offset": 40
+      },
+      {
+        "net": "COMMON_GND",
+        "kind": "ground",
+        "pinX": 930,
+        "pinY": 1230,
+        "direction": "down",
+        "offset": 30
+      },
+      {
+        "net": "KEY2_A",
+        "kind": "net_port_bi",
+        "pinX": 1050,
+        "pinY": 1390,
+        "direction": "down",
+        "offset": 60
+      },
+      {
+        "net": "KEY2_B",
+        "kind": "net_port_bi",
+        "pinX": 1050,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "TOOL_3V3",
+        "kind": "power",
+        "pinX": 1350,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 50
+      },
+      {
+        "net": "KEY3_LED_A",
+        "kind": "net_port_bi",
+        "pinX": 1460,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "KEY3_LED_K",
+        "kind": "net_port_bi",
+        "pinX": 1450,
+        "pinY": 1390,
+        "direction": "left",
+        "offset": 60
+      },
+      {
+        "net": "KEY3_BASE",
+        "kind": "net_port_bi",
+        "pinX": 1420,
+        "pinY": 1330,
+        "direction": "down",
+        "offset": 130
+      },
+      {
+        "net": "KEY3_CTRL",
+        "kind": "net_port_in",
+        "pinX": 1320,
+        "pinY": 1330,
+        "direction": "left",
+        "offset": 40
+      },
+      {
+        "net": "COMMON_GND",
+        "kind": "ground",
+        "pinX": 1500,
+        "pinY": 1230,
+        "direction": "down",
+        "offset": 30
+      },
+      {
+        "net": "KEY3_A",
+        "kind": "net_port_bi",
+        "pinX": 1620,
+        "pinY": 1390,
+        "direction": "down",
+        "offset": 60
+      },
+      {
+        "net": "KEY3_B",
+        "kind": "net_port_bi",
+        "pinX": 1620,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "TOOL_3V3",
+        "kind": "power",
+        "pinX": 1920,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 50
+      },
+      {
+        "net": "KEY4_LED_A",
+        "kind": "net_port_bi",
+        "pinX": 2030,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "KEY4_LED_K",
+        "kind": "net_port_bi",
+        "pinX": 2020,
+        "pinY": 1390,
+        "direction": "left",
+        "offset": 60
+      },
+      {
+        "net": "KEY4_BASE",
+        "kind": "net_port_bi",
+        "pinX": 1990,
+        "pinY": 1330,
+        "direction": "down",
+        "offset": 130
+      },
+      {
+        "net": "KEY4_CTRL",
+        "kind": "net_port_in",
+        "pinX": 1890,
+        "pinY": 1330,
+        "direction": "left",
+        "offset": 40
+      },
+      {
+        "net": "COMMON_GND",
+        "kind": "ground",
+        "pinX": 2070,
+        "pinY": 1230,
+        "direction": "down",
+        "offset": 30
+      },
+      {
+        "net": "KEY4_A",
+        "kind": "net_port_bi",
+        "pinX": 2190,
+        "pinY": 1390,
+        "direction": "down",
+        "offset": 60
+      },
+      {
+        "net": "KEY4_B",
+        "kind": "net_port_bi",
+        "pinX": 2190,
+        "pinY": 1430,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "TOOL_3V3",
+        "kind": "power",
+        "pinX": 210,
+        "pinY": 875,
+        "direction": "up",
+        "offset": 50
+      },
+      {
+        "net": "KEY5_LED_A",
+        "kind": "net_port_bi",
+        "pinX": 320,
+        "pinY": 875,
+        "direction": "up",
+        "offset": 80
+      },
+      {
+        "net": "KEY5_LED_K",
+        "kind": "net_port_bi",
+        "pinX": 310,
+        "pinY": 835,
+        "direction": "left",
+        "offset": 60
+      },
+      {
+        "net": "KEY5_BASE",
+        "kind": "net_port_bi",
+        "pinX": 280,
+        "pinY": 775,
+        "direction": "down",
+        "offset": 130
+      },
+      {
+        "net": "KEY5_CTRL",
+        "kind": "net_port_in",
+        "pinX": 180,
+        "pinY": 775,
+        "direction": "left",
+        "offset": 40
+      },
+      {
+        "net": "COMMON_GND",
+        "kind": "ground",
+        "pinX": 360,
+        "pinY": 675,
+        "direction": "down",
+        "offset": 30
+      },
+      {
+        "net": "KEY5_A",
+        "kind": "net_port_bi",
+        "pinX": 480,
+        "pinY": 835,
+        "direction": "down",
+        "offset": 60
+      },
+      {
+        "net": "KEY5_B",
+        "kind": "net_port_bi",
+        "pinX": 480,
+        "pinY": 875,
+        "direction": "up",
+        "offset": 80
+      }
+    ],
+    "expectedPinNets": {
+      "J4.1": "KEY1_A",
+      "J4.2": "KEY1_B",
+      "J5.1": "KEY2_A",
+      "J5.2": "KEY2_B",
+      "J6.1": "KEY3_A",
+      "J6.2": "KEY3_B",
+      "J7.1": "KEY4_A",
+      "J7.2": "KEY4_B",
+      "J8.1": "KEY5_A",
+      "J8.2": "KEY5_B",
+      "Q1.1": "KEY1_BASE",
+      "Q1.2": "COMMON_GND",
+      "Q1.3": "KEY1_LED_K",
+      "Q2.1": "KEY2_BASE",
+      "Q2.2": "COMMON_GND",
+      "Q2.3": "KEY2_LED_K",
+      "Q3.1": "KEY3_BASE",
+      "Q3.2": "COMMON_GND",
+      "Q3.3": "KEY3_LED_K",
+      "Q4.1": "KEY4_BASE",
+      "Q4.2": "COMMON_GND",
+      "Q4.3": "KEY4_LED_K",
+      "Q5.1": "KEY5_BASE",
+      "Q5.2": "COMMON_GND",
+      "Q5.3": "KEY5_LED_K",
+      "R12.1": "TOOL_3V3",
+      "R12.2": "KEY1_LED_A",
+      "R13.1": "KEY1_CTRL",
+      "R13.2": "KEY1_BASE",
+      "R14.1": "KEY1_BASE",
+      "R14.2": "COMMON_GND",
+      "R15.1": "TOOL_3V3",
+      "R15.2": "KEY2_LED_A",
+      "R16.1": "KEY2_CTRL",
+      "R16.2": "KEY2_BASE",
+      "R17.1": "KEY2_BASE",
+      "R17.2": "COMMON_GND",
+      "R18.1": "TOOL_3V3",
+      "R18.2": "KEY3_LED_A",
+      "R19.1": "KEY3_CTRL",
+      "R19.2": "KEY3_BASE",
+      "R20.1": "KEY3_BASE",
+      "R20.2": "COMMON_GND",
+      "R21.1": "TOOL_3V3",
+      "R21.2": "KEY4_LED_A",
+      "R22.1": "KEY4_CTRL",
+      "R22.2": "KEY4_BASE",
+      "R23.1": "KEY4_BASE",
+      "R23.2": "COMMON_GND",
+      "R24.1": "TOOL_3V3",
+      "R24.2": "KEY5_LED_A",
+      "R25.1": "KEY5_CTRL",
+      "R25.2": "KEY5_BASE",
+      "R26.1": "KEY5_BASE",
+      "R26.2": "COMMON_GND",
+      "U5.1": "KEY1_LED_A",
+      "U5.3": "KEY1_LED_K",
+      "U5.4": "KEY1_A",
+      "U5.6": "KEY1_B",
+      "U6.1": "KEY2_LED_A",
+      "U6.3": "KEY2_LED_K",
+      "U6.4": "KEY2_A",
+      "U6.6": "KEY2_B",
+      "U7.1": "KEY3_LED_A",
+      "U7.3": "KEY3_LED_K",
+      "U7.4": "KEY3_A",
+      "U7.6": "KEY3_B",
+      "U8.1": "KEY4_LED_A",
+      "U8.3": "KEY4_LED_K",
+      "U8.4": "KEY4_A",
+      "U8.6": "KEY4_B",
+      "U9.1": "KEY5_LED_A",
+      "U9.3": "KEY5_LED_K",
+      "U9.4": "KEY5_A",
+      "U9.6": "KEY5_B"
+    },
+    "frames": [
+      {
+        "id": "key1",
+        "title": "按键 1：无极性隔离触点",
+        "rect": {
+          "minX": 25,
+          "minY": 1085,
+          "maxX": 585,
+          "maxY": 1630
+        },
+        "titleX": 35,
+        "titleY": 1620,
+        "fontSize": 20,
+        "color": "#AA00AA",
+        "lineType": 1,
+        "titleLayout": {
+          "width": 230,
+          "height": 20,
+          "clearance": 5,
+          "obstacles": [
+            {
+              "minX": 369.5,
+              "minY": 1359.5,
+              "maxX": 430.5,
+              "maxY": 1455.5
+            },
+            {
+              "minX": 370,
+              "minY": 1440,
+              "maxX": 378.948242188,
+              "maxY": 1448
+            },
+            {
+              "minX": 430,
+              "minY": 1429.5,
+              "maxX": 450.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 430,
+              "minY": 1389.5,
+              "maxX": 450.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 1389.5,
+              "maxX": 370,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 1429.5,
+              "maxX": 370,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 299.5,
+              "minY": 1299.5,
+              "maxX": 310.5,
+              "maxY": 1355.5
+            },
+            {
+              "minX": 315,
+              "minY": 1330,
+              "maxX": 324.337890625,
+              "maxY": 1338
+            },
+            {
+              "minX": 289.5,
+              "minY": 1329.5,
+              "maxX": 300,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 1340,
+              "maxX": 310.5,
+              "maxY": 1350.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 1309.5,
+              "maxX": 310.5,
+              "maxY": 1320
+            },
+            {
+              "minX": 239.5,
+              "minY": 1405.5,
+              "maxX": 260.5,
+              "maxY": 1449.5
+            },
+            {
+              "minX": 240,
+              "minY": 1435,
+              "maxX": 252.841308594,
+              "maxY": 1443
+            },
+            {
+              "minX": 260,
+              "minY": 1429.5,
+              "maxX": 270.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 229.5,
+              "minY": 1429.5,
+              "maxX": 240,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 189.5,
+              "minY": 1305.5,
+              "maxX": 210.5,
+              "maxY": 1349.5
+            },
+            {
+              "minX": 190,
+              "minY": 1335,
+              "maxX": 202.841308594,
+              "maxY": 1343
+            },
+            {
+              "minX": 210,
+              "minY": 1329.5,
+              "maxX": 220.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 179.5,
+              "minY": 1329.5,
+              "maxX": 190,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 245.5,
+              "minY": 1244.5,
+              "maxX": 254.5,
+              "maxY": 1300.5
+            },
+            {
+              "minX": 255,
+              "minY": 1272.158691406,
+              "maxX": 263,
+              "maxY": 1285
+            },
+            {
+              "minX": 249.5,
+              "minY": 1254.5,
+              "maxX": 250.5,
+              "maxY": 1265
+            },
+            {
+              "minX": 249.5,
+              "minY": 1285,
+              "maxX": 250.5,
+              "maxY": 1295.5
+            },
+            {
+              "minX": 539.5,
+              "minY": 1374.5,
+              "maxX": 570.5,
+              "maxY": 1440.5
+            },
+            {
+              "minX": 540,
+              "minY": 1425,
+              "maxX": 547.393066406,
+              "maxY": 1433
+            },
+            {
+              "minX": 529.5,
+              "minY": 1414.5,
+              "maxX": 540,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 529.5,
+              "minY": 1404.5,
+              "maxX": 540,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 269.5,
+              "minY": 1429.5,
+              "maxX": 350.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 1429.5,
+              "maxX": 230.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 1349.5,
+              "maxX": 310.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 1389.5,
+              "maxX": 350.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 219.5,
+              "minY": 1329.5,
+              "maxX": 290.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 1294.5,
+              "maxX": 250.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 1229.5,
+              "maxX": 250.5,
+              "maxY": 1255.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 1229.5,
+              "maxX": 360.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 1229.5,
+              "maxX": 310.5,
+              "maxY": 1310.5
+            },
+            {
+              "minX": 449.5,
+              "minY": 1389.5,
+              "maxX": 490.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 489.5,
+              "minY": 1389.5,
+              "maxX": 490.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 489.5,
+              "minY": 1414.5,
+              "maxX": 530.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 449.5,
+              "minY": 1429.5,
+              "maxX": 510.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 509.5,
+              "minY": 1404.5,
+              "maxX": 510.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 509.5,
+              "minY": 1404.5,
+              "maxX": 530.5,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 204.5,
+              "minY": 1484.5,
+              "maxX": 215.5,
+              "maxY": 1490.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 1429.5,
+              "maxX": 210.5,
+              "maxY": 1480.5
+            },
+            {
+              "minX": 314.5,
+              "minY": 1519.5,
+              "maxX": 325.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 314.5,
+              "minY": 1550.5,
+              "maxX": 325.5,
+              "maxY": 1618.5
+            },
+            {
+              "minX": 319.5,
+              "minY": 1429.5,
+              "maxX": 320.5,
+              "maxY": 1510.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 1384.5,
+              "maxX": 240.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 141.5,
+              "minY": 1384.5,
+              "maxX": 209.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 1389.5,
+              "maxX": 310.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 274.5,
+              "minY": 1159.5,
+              "maxX": 285.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 274.5,
+              "minY": 1097.5,
+              "maxX": 285.5,
+              "maxY": 1159.5
+            },
+            {
+              "minX": 279.5,
+              "minY": 1199.5,
+              "maxX": 280.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 99.5,
+              "minY": 1324.5,
+              "maxX": 130.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 37.5,
+              "minY": 1324.5,
+              "maxX": 99.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 139.5,
+              "minY": 1329.5,
+              "maxX": 180.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 1180.5,
+              "maxX": 370.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 359.5,
+              "minY": 1199.5,
+              "maxX": 360.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 1289.5,
+              "maxX": 485.5,
+              "maxY": 1320.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 1245.5,
+              "maxX": 485.5,
+              "maxY": 1289.5
+            },
+            {
+              "minX": 479.5,
+              "minY": 1329.5,
+              "maxX": 480.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 1519.5,
+              "maxX": 485.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 1550.5,
+              "maxX": 485.5,
+              "maxY": 1594.5
+            },
+            {
+              "minX": 479.5,
+              "minY": 1429.5,
+              "maxX": 480.5,
+              "maxY": 1510.5
+            }
+          ]
+        }
+      },
+      {
+        "id": "key2",
+        "title": "按键 2：无极性隔离触点",
+        "rect": {
+          "minX": 595,
+          "minY": 1085,
+          "maxX": 1155,
+          "maxY": 1630
+        },
+        "titleX": 605,
+        "titleY": 1620,
+        "fontSize": 20,
+        "color": "#AA00AA",
+        "lineType": 1,
+        "titleLayout": {
+          "width": 230,
+          "height": 20,
+          "clearance": 5,
+          "obstacles": [
+            {
+              "minX": 939.5,
+              "minY": 1359.5,
+              "maxX": 1000.5,
+              "maxY": 1455.5
+            },
+            {
+              "minX": 940,
+              "minY": 1440,
+              "maxX": 948.948242188,
+              "maxY": 1448
+            },
+            {
+              "minX": 1000,
+              "minY": 1429.5,
+              "maxX": 1020.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1000,
+              "minY": 1389.5,
+              "maxX": 1020.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 919.5,
+              "minY": 1389.5,
+              "maxX": 940,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 919.5,
+              "minY": 1429.5,
+              "maxX": 940,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 869.5,
+              "minY": 1299.5,
+              "maxX": 880.5,
+              "maxY": 1355.5
+            },
+            {
+              "minX": 885,
+              "minY": 1330,
+              "maxX": 894.337890625,
+              "maxY": 1338
+            },
+            {
+              "minX": 859.5,
+              "minY": 1329.5,
+              "maxX": 870,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 879.5,
+              "minY": 1340,
+              "maxX": 880.5,
+              "maxY": 1350.5
+            },
+            {
+              "minX": 879.5,
+              "minY": 1309.5,
+              "maxX": 880.5,
+              "maxY": 1320
+            },
+            {
+              "minX": 809.5,
+              "minY": 1405.5,
+              "maxX": 830.5,
+              "maxY": 1449.5
+            },
+            {
+              "minX": 810,
+              "minY": 1435,
+              "maxX": 822.841308594,
+              "maxY": 1443
+            },
+            {
+              "minX": 830,
+              "minY": 1429.5,
+              "maxX": 840.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 799.5,
+              "minY": 1429.5,
+              "maxX": 810,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 759.5,
+              "minY": 1305.5,
+              "maxX": 780.5,
+              "maxY": 1349.5
+            },
+            {
+              "minX": 760,
+              "minY": 1335,
+              "maxX": 772.841308594,
+              "maxY": 1343
+            },
+            {
+              "minX": 780,
+              "minY": 1329.5,
+              "maxX": 790.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 749.5,
+              "minY": 1329.5,
+              "maxX": 760,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 815.5,
+              "minY": 1244.5,
+              "maxX": 824.5,
+              "maxY": 1300.5
+            },
+            {
+              "minX": 825,
+              "minY": 1272.158691406,
+              "maxX": 833,
+              "maxY": 1285
+            },
+            {
+              "minX": 819.5,
+              "minY": 1254.5,
+              "maxX": 820.5,
+              "maxY": 1265
+            },
+            {
+              "minX": 819.5,
+              "minY": 1285,
+              "maxX": 820.5,
+              "maxY": 1295.5
+            },
+            {
+              "minX": 1109.5,
+              "minY": 1374.5,
+              "maxX": 1140.5,
+              "maxY": 1440.5
+            },
+            {
+              "minX": 1110,
+              "minY": 1425,
+              "maxX": 1117.393066406,
+              "maxY": 1433
+            },
+            {
+              "minX": 1099.5,
+              "minY": 1414.5,
+              "maxX": 1110,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1099.5,
+              "minY": 1404.5,
+              "maxX": 1110,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 839.5,
+              "minY": 1429.5,
+              "maxX": 920.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 779.5,
+              "minY": 1429.5,
+              "maxX": 800.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 879.5,
+              "minY": 1349.5,
+              "maxX": 880.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 879.5,
+              "minY": 1389.5,
+              "maxX": 920.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 789.5,
+              "minY": 1329.5,
+              "maxX": 860.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 819.5,
+              "minY": 1294.5,
+              "maxX": 820.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 819.5,
+              "minY": 1229.5,
+              "maxX": 820.5,
+              "maxY": 1255.5
+            },
+            {
+              "minX": 819.5,
+              "minY": 1229.5,
+              "maxX": 930.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 879.5,
+              "minY": 1229.5,
+              "maxX": 880.5,
+              "maxY": 1310.5
+            },
+            {
+              "minX": 1019.5,
+              "minY": 1389.5,
+              "maxX": 1060.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1059.5,
+              "minY": 1389.5,
+              "maxX": 1060.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1059.5,
+              "minY": 1414.5,
+              "maxX": 1100.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1019.5,
+              "minY": 1429.5,
+              "maxX": 1080.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1079.5,
+              "minY": 1404.5,
+              "maxX": 1080.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1079.5,
+              "minY": 1404.5,
+              "maxX": 1100.5,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 774.5,
+              "minY": 1484.5,
+              "maxX": 785.5,
+              "maxY": 1490.5
+            },
+            {
+              "minX": 779.5,
+              "minY": 1429.5,
+              "maxX": 780.5,
+              "maxY": 1480.5
+            },
+            {
+              "minX": 884.5,
+              "minY": 1519.5,
+              "maxX": 895.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 884.5,
+              "minY": 1550.5,
+              "maxX": 895.5,
+              "maxY": 1618.5
+            },
+            {
+              "minX": 889.5,
+              "minY": 1429.5,
+              "maxX": 890.5,
+              "maxY": 1510.5
+            },
+            {
+              "minX": 779.5,
+              "minY": 1384.5,
+              "maxX": 810.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 711.5,
+              "minY": 1384.5,
+              "maxX": 779.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 819.5,
+              "minY": 1389.5,
+              "maxX": 880.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 844.5,
+              "minY": 1159.5,
+              "maxX": 855.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 844.5,
+              "minY": 1097.5,
+              "maxX": 855.5,
+              "maxY": 1159.5
+            },
+            {
+              "minX": 849.5,
+              "minY": 1199.5,
+              "maxX": 850.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 669.5,
+              "minY": 1324.5,
+              "maxX": 700.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 607.5,
+              "minY": 1324.5,
+              "maxX": 669.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 709.5,
+              "minY": 1329.5,
+              "maxX": 750.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 919.5,
+              "minY": 1180.5,
+              "maxX": 940.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 929.5,
+              "minY": 1199.5,
+              "maxX": 930.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 1044.5,
+              "minY": 1289.5,
+              "maxX": 1055.5,
+              "maxY": 1320.5
+            },
+            {
+              "minX": 1044.5,
+              "minY": 1245.5,
+              "maxX": 1055.5,
+              "maxY": 1289.5
+            },
+            {
+              "minX": 1049.5,
+              "minY": 1329.5,
+              "maxX": 1050.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1044.5,
+              "minY": 1519.5,
+              "maxX": 1055.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 1044.5,
+              "minY": 1550.5,
+              "maxX": 1055.5,
+              "maxY": 1594.5
+            },
+            {
+              "minX": 1049.5,
+              "minY": 1429.5,
+              "maxX": 1050.5,
+              "maxY": 1510.5
+            }
+          ]
+        }
+      },
+      {
+        "id": "key3",
+        "title": "按键 3：无极性隔离触点",
+        "rect": {
+          "minX": 1165,
+          "minY": 1085,
+          "maxX": 1725,
+          "maxY": 1630
+        },
+        "titleX": 1175,
+        "titleY": 1620,
+        "fontSize": 20,
+        "color": "#AA00AA",
+        "lineType": 1,
+        "titleLayout": {
+          "width": 230,
+          "height": 20,
+          "clearance": 5,
+          "obstacles": [
+            {
+              "minX": 1509.5,
+              "minY": 1359.5,
+              "maxX": 1570.5,
+              "maxY": 1455.5
+            },
+            {
+              "minX": 1510,
+              "minY": 1440,
+              "maxX": 1518.948242188,
+              "maxY": 1448
+            },
+            {
+              "minX": 1570,
+              "minY": 1429.5,
+              "maxX": 1590.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1570,
+              "minY": 1389.5,
+              "maxX": 1590.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1489.5,
+              "minY": 1389.5,
+              "maxX": 1510,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1489.5,
+              "minY": 1429.5,
+              "maxX": 1510,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1439.5,
+              "minY": 1299.5,
+              "maxX": 1450.5,
+              "maxY": 1355.5
+            },
+            {
+              "minX": 1455,
+              "minY": 1330,
+              "maxX": 1464.337890625,
+              "maxY": 1338
+            },
+            {
+              "minX": 1429.5,
+              "minY": 1329.5,
+              "maxX": 1440,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1449.5,
+              "minY": 1340,
+              "maxX": 1450.5,
+              "maxY": 1350.5
+            },
+            {
+              "minX": 1449.5,
+              "minY": 1309.5,
+              "maxX": 1450.5,
+              "maxY": 1320
+            },
+            {
+              "minX": 1379.5,
+              "minY": 1405.5,
+              "maxX": 1400.5,
+              "maxY": 1449.5
+            },
+            {
+              "minX": 1380,
+              "minY": 1435,
+              "maxX": 1392.841308594,
+              "maxY": 1443
+            },
+            {
+              "minX": 1400,
+              "minY": 1429.5,
+              "maxX": 1410.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1369.5,
+              "minY": 1429.5,
+              "maxX": 1380,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1329.5,
+              "minY": 1305.5,
+              "maxX": 1350.5,
+              "maxY": 1349.5
+            },
+            {
+              "minX": 1330,
+              "minY": 1335,
+              "maxX": 1342.841308594,
+              "maxY": 1343
+            },
+            {
+              "minX": 1350,
+              "minY": 1329.5,
+              "maxX": 1360.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1319.5,
+              "minY": 1329.5,
+              "maxX": 1330,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1385.5,
+              "minY": 1244.5,
+              "maxX": 1394.5,
+              "maxY": 1300.5
+            },
+            {
+              "minX": 1395,
+              "minY": 1272.158691406,
+              "maxX": 1403,
+              "maxY": 1285
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1254.5,
+              "maxX": 1390.5,
+              "maxY": 1265
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1285,
+              "maxX": 1390.5,
+              "maxY": 1295.5
+            },
+            {
+              "minX": 1679.5,
+              "minY": 1374.5,
+              "maxX": 1710.5,
+              "maxY": 1440.5
+            },
+            {
+              "minX": 1680,
+              "minY": 1425,
+              "maxX": 1687.393066406,
+              "maxY": 1433
+            },
+            {
+              "minX": 1669.5,
+              "minY": 1414.5,
+              "maxX": 1680,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1669.5,
+              "minY": 1404.5,
+              "maxX": 1680,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 1409.5,
+              "minY": 1429.5,
+              "maxX": 1490.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1349.5,
+              "minY": 1429.5,
+              "maxX": 1370.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1449.5,
+              "minY": 1349.5,
+              "maxX": 1450.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1449.5,
+              "minY": 1389.5,
+              "maxX": 1490.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1359.5,
+              "minY": 1329.5,
+              "maxX": 1430.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1294.5,
+              "maxX": 1390.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1229.5,
+              "maxX": 1390.5,
+              "maxY": 1255.5
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1229.5,
+              "maxX": 1500.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 1449.5,
+              "minY": 1229.5,
+              "maxX": 1450.5,
+              "maxY": 1310.5
+            },
+            {
+              "minX": 1589.5,
+              "minY": 1389.5,
+              "maxX": 1630.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1629.5,
+              "minY": 1389.5,
+              "maxX": 1630.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1629.5,
+              "minY": 1414.5,
+              "maxX": 1670.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 1589.5,
+              "minY": 1429.5,
+              "maxX": 1650.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1649.5,
+              "minY": 1404.5,
+              "maxX": 1650.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1649.5,
+              "minY": 1404.5,
+              "maxX": 1670.5,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 1344.5,
+              "minY": 1484.5,
+              "maxX": 1355.5,
+              "maxY": 1490.5
+            },
+            {
+              "minX": 1349.5,
+              "minY": 1429.5,
+              "maxX": 1350.5,
+              "maxY": 1480.5
+            },
+            {
+              "minX": 1454.5,
+              "minY": 1519.5,
+              "maxX": 1465.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 1454.5,
+              "minY": 1550.5,
+              "maxX": 1465.5,
+              "maxY": 1618.5
+            },
+            {
+              "minX": 1459.5,
+              "minY": 1429.5,
+              "maxX": 1460.5,
+              "maxY": 1510.5
+            },
+            {
+              "minX": 1349.5,
+              "minY": 1384.5,
+              "maxX": 1380.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 1281.5,
+              "minY": 1384.5,
+              "maxX": 1349.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 1389.5,
+              "minY": 1389.5,
+              "maxX": 1450.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1414.5,
+              "minY": 1159.5,
+              "maxX": 1425.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 1414.5,
+              "minY": 1097.5,
+              "maxX": 1425.5,
+              "maxY": 1159.5
+            },
+            {
+              "minX": 1419.5,
+              "minY": 1199.5,
+              "maxX": 1420.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1239.5,
+              "minY": 1324.5,
+              "maxX": 1270.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 1177.5,
+              "minY": 1324.5,
+              "maxX": 1239.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 1279.5,
+              "minY": 1329.5,
+              "maxX": 1320.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1489.5,
+              "minY": 1180.5,
+              "maxX": 1510.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 1499.5,
+              "minY": 1199.5,
+              "maxX": 1500.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 1614.5,
+              "minY": 1289.5,
+              "maxX": 1625.5,
+              "maxY": 1320.5
+            },
+            {
+              "minX": 1614.5,
+              "minY": 1245.5,
+              "maxX": 1625.5,
+              "maxY": 1289.5
+            },
+            {
+              "minX": 1619.5,
+              "minY": 1329.5,
+              "maxX": 1620.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1614.5,
+              "minY": 1519.5,
+              "maxX": 1625.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 1614.5,
+              "minY": 1550.5,
+              "maxX": 1625.5,
+              "maxY": 1594.5
+            },
+            {
+              "minX": 1619.5,
+              "minY": 1429.5,
+              "maxX": 1620.5,
+              "maxY": 1510.5
+            }
+          ]
+        }
+      },
+      {
+        "id": "key4",
+        "title": "按键 4：无极性隔离触点",
+        "rect": {
+          "minX": 1735,
+          "minY": 1085,
+          "maxX": 2295,
+          "maxY": 1630
+        },
+        "titleX": 1745,
+        "titleY": 1620,
+        "fontSize": 20,
+        "color": "#AA00AA",
+        "lineType": 1,
+        "titleLayout": {
+          "width": 230,
+          "height": 20,
+          "clearance": 5,
+          "obstacles": [
+            {
+              "minX": 2079.5,
+              "minY": 1359.5,
+              "maxX": 2140.5,
+              "maxY": 1455.5
+            },
+            {
+              "minX": 2080,
+              "minY": 1440,
+              "maxX": 2088.948242188,
+              "maxY": 1448
+            },
+            {
+              "minX": 2140,
+              "minY": 1429.5,
+              "maxX": 2160.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 2140,
+              "minY": 1389.5,
+              "maxX": 2160.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 2059.5,
+              "minY": 1389.5,
+              "maxX": 2080,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 2059.5,
+              "minY": 1429.5,
+              "maxX": 2080,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 2009.5,
+              "minY": 1299.5,
+              "maxX": 2020.5,
+              "maxY": 1355.5
+            },
+            {
+              "minX": 2025,
+              "minY": 1330,
+              "maxX": 2034.337890625,
+              "maxY": 1338
+            },
+            {
+              "minX": 1999.5,
+              "minY": 1329.5,
+              "maxX": 2010,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 2019.5,
+              "minY": 1340,
+              "maxX": 2020.5,
+              "maxY": 1350.5
+            },
+            {
+              "minX": 2019.5,
+              "minY": 1309.5,
+              "maxX": 2020.5,
+              "maxY": 1320
+            },
+            {
+              "minX": 1949.5,
+              "minY": 1405.5,
+              "maxX": 1970.5,
+              "maxY": 1449.5
+            },
+            {
+              "minX": 1950,
+              "minY": 1435,
+              "maxX": 1962.841308594,
+              "maxY": 1443
+            },
+            {
+              "minX": 1970,
+              "minY": 1429.5,
+              "maxX": 1980.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1939.5,
+              "minY": 1429.5,
+              "maxX": 1950,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1899.5,
+              "minY": 1305.5,
+              "maxX": 1920.5,
+              "maxY": 1349.5
+            },
+            {
+              "minX": 1900,
+              "minY": 1335,
+              "maxX": 1912.841308594,
+              "maxY": 1343
+            },
+            {
+              "minX": 1920,
+              "minY": 1329.5,
+              "maxX": 1930.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1889.5,
+              "minY": 1329.5,
+              "maxX": 1900,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1955.5,
+              "minY": 1244.5,
+              "maxX": 1964.5,
+              "maxY": 1300.5
+            },
+            {
+              "minX": 1965,
+              "minY": 1272.158691406,
+              "maxX": 1973,
+              "maxY": 1285
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1254.5,
+              "maxX": 1960.5,
+              "maxY": 1265
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1285,
+              "maxX": 1960.5,
+              "maxY": 1295.5
+            },
+            {
+              "minX": 2249.5,
+              "minY": 1374.5,
+              "maxX": 2280.5,
+              "maxY": 1440.5
+            },
+            {
+              "minX": 2250,
+              "minY": 1425,
+              "maxX": 2257.393066406,
+              "maxY": 1433
+            },
+            {
+              "minX": 2239.5,
+              "minY": 1414.5,
+              "maxX": 2250,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 2239.5,
+              "minY": 1404.5,
+              "maxX": 2250,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 1979.5,
+              "minY": 1429.5,
+              "maxX": 2060.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 1919.5,
+              "minY": 1429.5,
+              "maxX": 1940.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 2019.5,
+              "minY": 1349.5,
+              "maxX": 2020.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 2019.5,
+              "minY": 1389.5,
+              "maxX": 2060.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1929.5,
+              "minY": 1329.5,
+              "maxX": 2000.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1294.5,
+              "maxX": 1960.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1229.5,
+              "maxX": 1960.5,
+              "maxY": 1255.5
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1229.5,
+              "maxX": 2070.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 2019.5,
+              "minY": 1229.5,
+              "maxX": 2020.5,
+              "maxY": 1310.5
+            },
+            {
+              "minX": 2159.5,
+              "minY": 1389.5,
+              "maxX": 2200.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 2199.5,
+              "minY": 1389.5,
+              "maxX": 2200.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 2199.5,
+              "minY": 1414.5,
+              "maxX": 2240.5,
+              "maxY": 1415.5
+            },
+            {
+              "minX": 2159.5,
+              "minY": 1429.5,
+              "maxX": 2220.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 2219.5,
+              "minY": 1404.5,
+              "maxX": 2220.5,
+              "maxY": 1430.5
+            },
+            {
+              "minX": 2219.5,
+              "minY": 1404.5,
+              "maxX": 2240.5,
+              "maxY": 1405.5
+            },
+            {
+              "minX": 1914.5,
+              "minY": 1484.5,
+              "maxX": 1925.5,
+              "maxY": 1490.5
+            },
+            {
+              "minX": 1919.5,
+              "minY": 1429.5,
+              "maxX": 1920.5,
+              "maxY": 1480.5
+            },
+            {
+              "minX": 2024.5,
+              "minY": 1519.5,
+              "maxX": 2035.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 2024.5,
+              "minY": 1550.5,
+              "maxX": 2035.5,
+              "maxY": 1618.5
+            },
+            {
+              "minX": 2029.5,
+              "minY": 1429.5,
+              "maxX": 2030.5,
+              "maxY": 1510.5
+            },
+            {
+              "minX": 1919.5,
+              "minY": 1384.5,
+              "maxX": 1950.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 1851.5,
+              "minY": 1384.5,
+              "maxX": 1919.5,
+              "maxY": 1395.5
+            },
+            {
+              "minX": 1959.5,
+              "minY": 1389.5,
+              "maxX": 2020.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 1984.5,
+              "minY": 1159.5,
+              "maxX": 1995.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 1984.5,
+              "minY": 1097.5,
+              "maxX": 1995.5,
+              "maxY": 1159.5
+            },
+            {
+              "minX": 1989.5,
+              "minY": 1199.5,
+              "maxX": 1990.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 1809.5,
+              "minY": 1324.5,
+              "maxX": 1840.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 1747.5,
+              "minY": 1324.5,
+              "maxX": 1809.5,
+              "maxY": 1335.5
+            },
+            {
+              "minX": 1849.5,
+              "minY": 1329.5,
+              "maxX": 1890.5,
+              "maxY": 1330.5
+            },
+            {
+              "minX": 2059.5,
+              "minY": 1180.5,
+              "maxX": 2080.5,
+              "maxY": 1190.5
+            },
+            {
+              "minX": 2069.5,
+              "minY": 1199.5,
+              "maxX": 2070.5,
+              "maxY": 1230.5
+            },
+            {
+              "minX": 2184.5,
+              "minY": 1289.5,
+              "maxX": 2195.5,
+              "maxY": 1320.5
+            },
+            {
+              "minX": 2184.5,
+              "minY": 1245.5,
+              "maxX": 2195.5,
+              "maxY": 1289.5
+            },
+            {
+              "minX": 2189.5,
+              "minY": 1329.5,
+              "maxX": 2190.5,
+              "maxY": 1390.5
+            },
+            {
+              "minX": 2184.5,
+              "minY": 1519.5,
+              "maxX": 2195.5,
+              "maxY": 1550.5
+            },
+            {
+              "minX": 2184.5,
+              "minY": 1550.5,
+              "maxX": 2195.5,
+              "maxY": 1594.5
+            },
+            {
+              "minX": 2189.5,
+              "minY": 1429.5,
+              "maxX": 2190.5,
+              "maxY": 1510.5
+            }
+          ]
+        }
+      },
+      {
+        "id": "key5",
+        "title": "按键 5：无极性隔离触点",
+        "rect": {
+          "minX": 25,
+          "minY": 530,
+          "maxX": 585,
+          "maxY": 1075
+        },
+        "titleX": 35,
+        "titleY": 1065,
+        "fontSize": 20,
+        "color": "#AA00AA",
+        "lineType": 1,
+        "titleLayout": {
+          "width": 230,
+          "height": 20,
+          "clearance": 5,
+          "obstacles": [
+            {
+              "minX": 369.5,
+              "minY": 804.5,
+              "maxX": 430.5,
+              "maxY": 900.5
+            },
+            {
+              "minX": 370,
+              "minY": 885,
+              "maxX": 378.948242188,
+              "maxY": 893
+            },
+            {
+              "minX": 430,
+              "minY": 874.5,
+              "maxX": 450.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 430,
+              "minY": 834.5,
+              "maxX": 450.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 834.5,
+              "maxX": 370,
+              "maxY": 835.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 874.5,
+              "maxX": 370,
+              "maxY": 875.5
+            },
+            {
+              "minX": 299.5,
+              "minY": 744.5,
+              "maxX": 310.5,
+              "maxY": 800.5
+            },
+            {
+              "minX": 315,
+              "minY": 775,
+              "maxX": 324.337890625,
+              "maxY": 783
+            },
+            {
+              "minX": 289.5,
+              "minY": 774.5,
+              "maxX": 300,
+              "maxY": 775.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 785,
+              "maxX": 310.5,
+              "maxY": 795.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 754.5,
+              "maxX": 310.5,
+              "maxY": 765
+            },
+            {
+              "minX": 239.5,
+              "minY": 850.5,
+              "maxX": 260.5,
+              "maxY": 894.5
+            },
+            {
+              "minX": 240,
+              "minY": 880,
+              "maxX": 252.841308594,
+              "maxY": 888
+            },
+            {
+              "minX": 260,
+              "minY": 874.5,
+              "maxX": 270.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 229.5,
+              "minY": 874.5,
+              "maxX": 240,
+              "maxY": 875.5
+            },
+            {
+              "minX": 189.5,
+              "minY": 750.5,
+              "maxX": 210.5,
+              "maxY": 794.5
+            },
+            {
+              "minX": 190,
+              "minY": 780,
+              "maxX": 202.841308594,
+              "maxY": 788
+            },
+            {
+              "minX": 210,
+              "minY": 774.5,
+              "maxX": 220.5,
+              "maxY": 775.5
+            },
+            {
+              "minX": 179.5,
+              "minY": 774.5,
+              "maxX": 190,
+              "maxY": 775.5
+            },
+            {
+              "minX": 245.5,
+              "minY": 689.5,
+              "maxX": 254.5,
+              "maxY": 745.5
+            },
+            {
+              "minX": 255,
+              "minY": 717.158691406,
+              "maxX": 263,
+              "maxY": 730
+            },
+            {
+              "minX": 249.5,
+              "minY": 699.5,
+              "maxX": 250.5,
+              "maxY": 710
+            },
+            {
+              "minX": 249.5,
+              "minY": 730,
+              "maxX": 250.5,
+              "maxY": 740.5
+            },
+            {
+              "minX": 539.5,
+              "minY": 819.5,
+              "maxX": 570.5,
+              "maxY": 885.5
+            },
+            {
+              "minX": 540,
+              "minY": 870,
+              "maxX": 547.393066406,
+              "maxY": 878
+            },
+            {
+              "minX": 529.5,
+              "minY": 859.5,
+              "maxX": 540,
+              "maxY": 860.5
+            },
+            {
+              "minX": 529.5,
+              "minY": 849.5,
+              "maxX": 540,
+              "maxY": 850.5
+            },
+            {
+              "minX": 269.5,
+              "minY": 874.5,
+              "maxX": 350.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 874.5,
+              "maxX": 230.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 794.5,
+              "maxX": 310.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 834.5,
+              "maxX": 350.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 219.5,
+              "minY": 774.5,
+              "maxX": 290.5,
+              "maxY": 775.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 739.5,
+              "maxX": 250.5,
+              "maxY": 775.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 674.5,
+              "maxX": 250.5,
+              "maxY": 700.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 674.5,
+              "maxX": 360.5,
+              "maxY": 675.5
+            },
+            {
+              "minX": 309.5,
+              "minY": 674.5,
+              "maxX": 310.5,
+              "maxY": 755.5
+            },
+            {
+              "minX": 449.5,
+              "minY": 834.5,
+              "maxX": 490.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 489.5,
+              "minY": 834.5,
+              "maxX": 490.5,
+              "maxY": 860.5
+            },
+            {
+              "minX": 489.5,
+              "minY": 859.5,
+              "maxX": 530.5,
+              "maxY": 860.5
+            },
+            {
+              "minX": 449.5,
+              "minY": 874.5,
+              "maxX": 510.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 509.5,
+              "minY": 849.5,
+              "maxX": 510.5,
+              "maxY": 875.5
+            },
+            {
+              "minX": 509.5,
+              "minY": 849.5,
+              "maxX": 530.5,
+              "maxY": 850.5
+            },
+            {
+              "minX": 204.5,
+              "minY": 929.5,
+              "maxX": 215.5,
+              "maxY": 935.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 874.5,
+              "maxX": 210.5,
+              "maxY": 925.5
+            },
+            {
+              "minX": 314.5,
+              "minY": 964.5,
+              "maxX": 325.5,
+              "maxY": 995.5
+            },
+            {
+              "minX": 314.5,
+              "minY": 995.5,
+              "maxX": 325.5,
+              "maxY": 1063.5
+            },
+            {
+              "minX": 319.5,
+              "minY": 874.5,
+              "maxX": 320.5,
+              "maxY": 955.5
+            },
+            {
+              "minX": 209.5,
+              "minY": 829.5,
+              "maxX": 240.5,
+              "maxY": 840.5
+            },
+            {
+              "minX": 141.5,
+              "minY": 829.5,
+              "maxX": 209.5,
+              "maxY": 840.5
+            },
+            {
+              "minX": 249.5,
+              "minY": 834.5,
+              "maxX": 310.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 274.5,
+              "minY": 604.5,
+              "maxX": 285.5,
+              "maxY": 635.5
+            },
+            {
+              "minX": 274.5,
+              "minY": 542.5,
+              "maxX": 285.5,
+              "maxY": 604.5
+            },
+            {
+              "minX": 279.5,
+              "minY": 644.5,
+              "maxX": 280.5,
+              "maxY": 775.5
+            },
+            {
+              "minX": 99.5,
+              "minY": 769.5,
+              "maxX": 130.5,
+              "maxY": 780.5
+            },
+            {
+              "minX": 37.5,
+              "minY": 769.5,
+              "maxX": 99.5,
+              "maxY": 780.5
+            },
+            {
+              "minX": 139.5,
+              "minY": 774.5,
+              "maxX": 180.5,
+              "maxY": 775.5
+            },
+            {
+              "minX": 349.5,
+              "minY": 625.5,
+              "maxX": 370.5,
+              "maxY": 635.5
+            },
+            {
+              "minX": 359.5,
+              "minY": 644.5,
+              "maxX": 360.5,
+              "maxY": 675.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 734.5,
+              "maxX": 485.5,
+              "maxY": 765.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 690.5,
+              "maxX": 485.5,
+              "maxY": 734.5
+            },
+            {
+              "minX": 479.5,
+              "minY": 774.5,
+              "maxX": 480.5,
+              "maxY": 835.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 964.5,
+              "maxX": 485.5,
+              "maxY": 995.5
+            },
+            {
+              "minX": 474.5,
+              "minY": 995.5,
+              "maxX": 485.5,
+              "maxY": 1039.5
+            },
+            {
+              "minX": 479.5,
+              "minY": 874.5,
+              "maxX": 480.5,
+              "maxY": 955.5
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "rows": 2,
+  "rowHeight": 545,
+  "rowHeights": [
+    545,
+    545
+  ],
+  "pageMargin": 10,
+  "moduleGap": 10
+}

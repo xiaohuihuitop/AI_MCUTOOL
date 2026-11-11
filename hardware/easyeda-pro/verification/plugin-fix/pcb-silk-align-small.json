@@ -1,0 +1,108 @@
+{
+  "id": "req_1288",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T14:30:06.9775835Z",
+  "ok": true,
+  "result": {
+    "aligned": 0,
+    "appliedIds": [],
+    "details": [],
+    "geometryScope": "rendered component envelopes, measured pads and text; outline bounding-box containment",
+    "normalization": [],
+    "partial": false,
+    "skipped": 0,
+    "skippedDetails": [],
+    "unresolved": 13,
+    "unresolvedDetails": [
+      {
+        "designator": "R64",
+        "primitiveId": "c3649310d2245b58e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R74",
+        "primitiveId": "dc241dcd308d8258e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R29",
+        "primitiveId": "c035b35e98f34d56e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C14",
+        "primitiveId": "65bdd8ad5d20e30de18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "U14",
+        "primitiveId": "bd3c3f8101d378b1e54",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C12",
+        "primitiveId": "dd9240e911aec7ece18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R73",
+        "primitiveId": "21e86c1b221d527ce16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R28",
+        "primitiveId": "d0046a9992a463aee16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C8",
+        "primitiveId": "6267441eac24d6afe18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R8",
+        "primitiveId": "eb9e299d098e327ee16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R47",
+        "primitiveId": "30c94be7a7368856e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "C25",
+        "primitiveId": "d71a5153f7e373a2e18",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      },
+      {
+        "designator": "R48",
+        "primitiveId": "67527c900460e716e16",
+        "reason": "No collision-free slot within search range that sits closer to its own part than to any other part"
+      }
+    ],
+    "verification": [],
+    "verified": false,
+    "warned": 0
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "3472e543e4569c48",
+    "documentType": "pcb",
+    "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 1159,
+  "seqAbandoned": 0
+}

@@ -1,0 +1,30 @@
+{
+  "project": "D:\\LCEDA\\projects\\AI_TOOL\\AI_TOOL.eprj3",
+  "date": "2026-11-04",
+  "currentRevision": "接口焊线孔添加后",
+  "components": 140,
+  "logicalPins": 415,
+  "physicalPads": 451,
+  "componentPads": 423,
+  "independentWirePads": 28,
+  "lines": 28,
+  "vias": 0,
+  "pours": 4,
+  "schDRC": [],
+  "pcbDRCCounts": {
+    "Connection Error": 394
+  },
+  "beforeChangePcbDRCCounts": {
+    "Connection Error": 394
+  },
+  "pinNetDifferences": [],
+  "newPhysicalViolations": [],
+  "routingComplete": false,
+  "manufactured": false,
+  "visibleWindowVerified": true,
+  "independentCopyVerified": true,
+  "nativeScreenshotsPassed": true,
+  "pcbSHA256": "24cc5c7cd4014d91fffbb132eb865baf901d7f728fb07fde6078055e0afe8049",
+  "currentEvidence": "hardware/easyeda-local/wire-test-pads-check.json",
+  "historicalCompletedRoutingEvidence": "hardware/easyeda-local/functional-layout-check.json"
+}

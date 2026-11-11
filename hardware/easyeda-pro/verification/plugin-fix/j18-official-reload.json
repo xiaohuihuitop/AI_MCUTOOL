@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "windowId": "df2db79a-e42c-4cc1-a84f-072072dc8f96",
+  "target": "6d2f0a95f4a336fa",
+  "documentType": "schematic",
+  "saved": true,
+  "closed": true,
+  "reloaded": "6d2f0a95f4a336fa",
+  "activeRestored": "6d2f0a95f4a336fa",
+  "startedAt": "2026-10-24T14:43:44.7154248Z",
+  "completedAt": "2026-10-24T14:43:47.2453711Z",
+  "timeSource": "cli-host-observation",
+  "targetContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "6d2f0a95f4a336fa",
+    "documentType": "schematic",
+    "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+  },
+  "finalContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "6d2f0a95f4a336fa",
+    "documentType": "schematic",
+    "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+  },
+  "readiness": {
+    "ready": true,
+    "scope": "component-inventory-readiness",
+    "active": {
+      "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+      "projectName": "AI-MCUTOOL-RevA",
+      "documentUuid": "6d2f0a95f4a336fa",
+      "documentType": "schematic",
+      "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+    },
+    "componentCount": 37,
+    "componentSha256": "caf774cb92ba9c8922c081fdaa8594b1457d8ffde62c86ebda1259aa787913fd",
+    "samples": 2,
+    "stableSamples": 2,
+    "requestIds": [
+      "req_27",
+      "req_28",
+      "req_29",
+      "req_30",
+      "req_31"
+    ],
+    "observedAt": "2026-10-24T14:43:47.2453711Z"
+  },
+  "steps": [
+    {
+      "stage": "inspect",
+      "action": "document.current",
+      "startedAt": "2026-10-24T14:43:44.7154292Z",
+      "completedAt": "2026-10-24T14:43:44.7263136Z",
+      "requestId": "req_22",
+      "responseCreatedAt": "2026-10-24T14:43:44.7257886Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA",
+        "documentUuid": "6d2f0a95f4a336fa",
+        "documentType": "schematic",
+        "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+      },
+      "ok": true
+    },
+    {
+      "stage": "save",
+      "action": "schematic.save",
+      "startedAt": "2026-10-24T14:43:44.7263136Z",
+      "completedAt": "2026-10-24T14:43:44.7334948Z",
+      "requestId": "req_23",
+      "responseCreatedAt": "2026-10-24T14:43:44.7329834Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA",
+        "documentUuid": "6d2f0a95f4a336fa",
+        "documentType": "schematic",
+        "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+      },
+      "ok": true
+    },
+    {
+      "stage": "close",
+      "action": "document.close",
+      "startedAt": "2026-10-24T14:43:44.7334948Z",
+      "completedAt": "2026-10-24T14:43:44.7656515Z",
+      "requestId": "req_24",
+      "responseCreatedAt": "2026-10-24T14:43:44.7651419Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA"
+      },
+      "ok": true
+    },
+    {
+      "stage": "close-settle",
+      "action": "document.current",
+      "startedAt": "2026-10-24T14:43:44.7656515Z",
+      "completedAt": "2026-10-24T14:43:45.1755477Z",
+      "requestId": "req_25",
+      "responseCreatedAt": "2026-10-24T14:43:45.175036Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA",
+        "documentUuid": "3472e543e4569c48",
+        "documentType": "pcb",
+        "tabId": "3472e543e4569c48@57a0364c842149baada4fb3ca7ccf03f"
+      },
+      "ok": true
+    },
+    {
+      "stage": "reopen",
+      "action": "document.open",
+      "startedAt": "2026-10-24T14:43:45.1755477Z",
+      "completedAt": "2026-10-24T14:43:46.5388046Z",
+      "requestId": "req_26",
+      "responseCreatedAt": "2026-10-24T14:43:46.5382767Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA",
+        "documentUuid": "6d2f0a95f4a336fa",
+        "documentType": "schematic",
+        "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+      },
+      "ok": true
+    },
+    {
+      "stage": "ready",
+      "startedAt": "2026-10-24T14:43:46.5388046Z",
+      "completedAt": "2026-10-24T14:43:47.2453711Z",
+      "context": {
+        "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+        "projectName": "AI-MCUTOOL-RevA",
+        "documentUuid": "6d2f0a95f4a336fa",
+        "documentType": "schematic",
+        "tabId": "6d2f0a95f4a336fa@57a0364c842149baada4fb3ca7ccf03f"
+      },
+      "ok": true
+    }
+  ]
+}

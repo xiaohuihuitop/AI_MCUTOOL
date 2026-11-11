@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-28",
+  "change": "图1：U1/U2 LM66100替换为D1/D2 SS34（C8678）",
+  "componentCount": 164,
+  "pinCount": 500,
+  "expectedNetChangesOnly": true,
+  "schematicDrc": [],
+  "pcbImportPerformed": false,
+  "pcbPendingChanges": [
+    "移除U1/U2",
+    "导入D1/D2 SMA封装并局部布线"
+  ],
+  "pcbSHA256": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1"
+}

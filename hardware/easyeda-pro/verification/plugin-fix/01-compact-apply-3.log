@@ -1,0 +1,4 @@
+
+✗ step [18/107] verify-physical-pins-before-wiring failed: expectSchematic: attribute-preservation: attributes.02f0fa2fa3fd2725.AlignMode: expected 9, observed 3
+  expectSchematic is a mandatory gate — stopping; journal: hardware/easyeda-pro/verification/plugin-fix/01-compact-apply-3.journal.jsonl
+playbook stopped at step verify-physical-pins-before-wiring: expectSchematic: attribute-preservation: attributes.02f0fa2fa3fd2725.AlignMode: expected 9, observed 3

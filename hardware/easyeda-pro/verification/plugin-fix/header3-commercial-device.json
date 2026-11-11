@@ -1,0 +1,104 @@
+{
+  "id": "req_673",
+  "type": "response",
+  "version": "v1",
+  "windowId": "62a1a615-c060-4660-9ab6-484e8db3d0ae",
+  "createdAt": "2026-10-24T13:47:28.7402692Z",
+  "ok": true,
+  "result": {
+    "device": {
+      "association": {
+        "footprint": {
+          "libraryUuid": "bf74a816c06243e393e2dc57c2700b3d",
+          "uuid": "62009aa5855147c1a6da994302c236fd"
+        },
+        "footprintUuid": "62009aa5855147c1a6da994302c236fd",
+        "images": [
+          "https://alimg.szlcsc.com/upload/public/product/middle/20251009/3294C4ED5E5719DA2CA1CBBE178BF7F9.jpg"
+        ],
+        "symbol": {
+          "libraryUuid": "bf74a816c06243e393e2dc57c2700b3d",
+          "type": 2,
+          "uuid": "d6959abb87de4a6689c22a9f22b53b84"
+        },
+        "symbolType": 2,
+        "symbolUuid": "d6959abb87de4a6689c22a9f22b53b84"
+      },
+      "classification": [
+        "连接器",
+        "排针"
+      ],
+      "description": "插针结构:1x3P;间距:2.54mm;行距:-;圆针/方针:方针;安装方式:直插;排数:单排;总PIN位数:3P;额定电流:3A;额定电压:250V;配合针长度:6mm;塑高:2.5mm;端接针长度:3mm;工作温度:-40℃~+105℃;颜色:黑色;",
+      "libraryType": "3",
+      "libraryUuid": "bf74a816c06243e393e2dc57c2700b3d",
+      "name": "PZ254V-11-03P",
+      "property": {
+        "addIntoBom": true,
+        "addIntoPcb": true,
+        "designator": "H?",
+        "manufacturer": "XFCN(兴飞)",
+        "manufacturerId": "PZ254V-11-03P",
+        "name": "PZ254V-11-03P",
+        "otherProperty": {
+          "3D Model": "bd28a638fbd247be9398fd5d39c366ec",
+          "3D Model Title": "HDR-TH_3P-P2.54-V-M_PZ254V-11-03P",
+          "3D Model Transform": "300.3931,100,0,0,0,0,0,0,-118.11",
+          "Add into BOM": "yes",
+          "Circluar Pins/Square Pins": "方针",
+          "Color": "黑色",
+          "Convert to PCB": "yes",
+          "Current Rating": "3A",
+          "Datasheet": "https://item.szlcsc.com/datasheet/PZ254V-11-03P/3293280.html",
+          "Description": "插针结构:1x3P;间距:2.54mm;行距:-;圆针/方针:方针;安装方式:直插;排数:单排;总PIN位数:3P;额定电流:3A;额定电压:250V;配合针长度:6mm;塑高:2.5mm;端接针长度:3mm;工作温度:-40℃~+105℃;颜色:黑色;",
+          "Designator": "H?",
+          "Footprint": "62009aa5855147c1a6da994302c236fd",
+          "Insulation Height": "2.5mm",
+          "JLCPCB Part Class": "扩展库",
+          "LCSC Part Name": "1x3P 间距:2.54mm 方针 直插",
+          "Length of End Connection Pin": "3mm",
+          "Length of Mating Pin": "6mm",
+          "Manufacturer": "XFCN(兴飞)",
+          "Manufacturer Part": "PZ254V-11-03P",
+          "Mounting Type": "直插",
+          "Name": "={Manufacturer Part}",
+          "Number of Pins": "3P",
+          "Number of Rows": "单排",
+          "Operating Temperature": "-40℃~+105℃",
+          "Pin Structure": "1x3P",
+          "Pitch": "2.54mm",
+          "Row Spacing": "-",
+          "Supplier": "LCSC",
+          "Supplier Footprint": "插件,P=2.54mm",
+          "Supplier Part": "C2937625",
+          "Symbol": "d6959abb87de4a6689c22a9f22b53b84",
+          "Voltage Rating (Max)": "250V"
+        },
+        "supplier": "LCSC",
+        "supplierId": "C2937625"
+      },
+      "subPartNames": [
+        "PZ254V-11-03P_C2937625.1"
+      ],
+      "uuid": "c99ea4da874a4b3597fe11e2f3f07c8b"
+    }
+  },
+  "context": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "11bf161323c12964",
+    "documentType": "schematic",
+    "tabId": "11bf161323c12964@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContext": {
+    "projectUuid": "57a0364c842149baada4fb3ca7ccf03f",
+    "projectName": "AI-MCUTOOL-RevA",
+    "documentUuid": "11bf161323c12964",
+    "documentType": "schematic",
+    "tabId": "11bf161323c12964@57a0364c842149baada4fb3ca7ccf03f",
+    "pageVisibility": "hidden"
+  },
+  "mutationContextAvailable": true,
+  "seq": 761,
+  "seqAbandoned": 0
+}

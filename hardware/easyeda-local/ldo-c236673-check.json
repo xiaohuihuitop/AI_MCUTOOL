@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-04",
+  "replacedRefs": [
+    "U3",
+    "C4"
+  ],
+  "supplierIds": {
+    "U3": "C236673",
+    "C4": "C408142"
+  },
+  "components": 138,
+  "logicalPins": 410,
+  "drc": [],
+  "functionalConnectivityPreservedWithU3PinRemap": true,
+  "u3PinMapping": {
+    "1": "COMMON_GND",
+    "2": "LDO_VIN",
+    "3": "TOOL_3V3"
+  },
+  "removedOldRedundantTabPin": "U3.4",
+  "instanceAndUniqueIdsPreserved": true,
+  "otherComponentPropertiesAndGeometryUnchanged": true,
+  "otherSevenPageFilesUnchanged": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "newDifferentNetCrossings": [],
+  "existingInputAreaCrossingsUnchanged": 6,
+  "hardwareStabilityAndTransientValidated": false,
+  "currentDecision": "用户确认采用500mA的C236673；旧0.75A预留点不再作为当前供电能力承诺。"
+}

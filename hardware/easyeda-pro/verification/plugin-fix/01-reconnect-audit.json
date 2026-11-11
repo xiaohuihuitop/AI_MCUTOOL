@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 1,
+  "beforeSha256": "236b4a58ded2eaa564fcff5143e5efdc37ad26319ecd601ffd471a87509cfcd7",
+  "sourceSha256": "d648de36ac13f4608f1bec590009a7f59593e5fd9d50b631419fb16919486017",
+  "pins": [
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "1",
+      "pinName": "VIN",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "DC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "2",
+      "pinName": "GND",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "3",
+      "pinName": "CE#",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "4",
+      "pinName": "NC",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "5",
+      "pinName": "ST",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U1",
+      "ref": "U1",
+      "pinNumber": "6",
+      "pinName": "VOUT",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "1",
+      "pinName": "VIN",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "2",
+      "pinName": "GND",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "3",
+      "pinName": "CE#",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "4",
+      "pinName": "NC",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "5",
+      "pinName": "ST",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U2",
+      "ref": "U2",
+      "pinNumber": "6",
+      "pinName": "VOUT",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J1",
+      "ref": "J1",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J1",
+      "ref": "J1",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "DC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "A1B12",
+      "pinName": "GND",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "A4B9",
+      "pinName": "VBUS",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "A5",
+      "pinName": "CC1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_CC1",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "B5",
+      "pinName": "CC2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_CC2",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "B4A9",
+      "pinName": "VBUS",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "B1A12",
+      "pinName": "GND",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "4",
+      "pinName": "EH",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "3",
+      "pinName": "EH",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "2",
+      "pinName": "EH",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-J2",
+      "ref": "J2",
+      "pinNumber": "1",
+      "pinName": "EH",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R1",
+      "ref": "R1",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R1",
+      "ref": "R1",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "DC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R2",
+      "ref": "R2",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R2",
+      "ref": "R2",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C1",
+      "ref": "C1",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "DC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C1",
+      "ref": "C1",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C2",
+      "ref": "C2",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_IN_5V",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C2",
+      "ref": "C2",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R3",
+      "ref": "R3",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R3",
+      "ref": "R3",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_CC1",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R4",
+      "ref": "R4",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-R4",
+      "ref": "R4",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TYPEC_CC2",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U3",
+      "ref": "U3",
+      "pinNumber": "1",
+      "pinName": "GND",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U3",
+      "ref": "U3",
+      "pinNumber": "2",
+      "pinName": "VOUT",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TOOL_3V3",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U3",
+      "ref": "U3",
+      "pinNumber": "3",
+      "pinName": "VIN",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-U3",
+      "ref": "U3",
+      "pinNumber": "4",
+      "pinName": "VOUT",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TOOL_3V3",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C3",
+      "ref": "C3",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "LDO_VIN",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C3",
+      "ref": "C3",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C4",
+      "ref": "C4",
+      "pinNumber": "1",
+      "pinName": "1",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "TOOL_3V3",
+        "noConnected": false
+      }
+    },
+    {
+      "componentId": "cmp-C4",
+      "ref": "C4",
+      "pinNumber": "2",
+      "pinName": "2",
+      "before": {
+        "net": "",
+        "noConnected": false
+      },
+      "after": {
+        "net": "COMMON_GND",
+        "noConnected": false
+      }
+    }
+  ]
+}

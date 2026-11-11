@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "removedRefs": [
+    "U16",
+    "R76",
+    "R77",
+    "C26"
+  ],
+  "components": 138,
+  "logicalPins": 411,
+  "drc": [],
+  "approvedConnectivityChangesVerified": true,
+  "retainedComponentPropertiesAndUartGeometryUnchanged": true,
+  "rxCircuitUnchanged": true,
+  "gpio38ReleasedAndNoConnectMarked": true,
+  "remainingTxEnableNetworks": 0,
+  "otherSixPageFilesUnchanged": true,
+  "pcbUnchanged": true,
+  "pcbSHA256": "f5907b6435a140bf519bf42c2c0b2bc4eb0a06f539e8c294b5ef1abaf418df8b",
+  "differentNetCrossings": [],
+  "firmwareModified": false,
+  "hardwarePowerOffIsolationValidated": false
+}

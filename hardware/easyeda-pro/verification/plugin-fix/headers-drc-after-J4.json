@@ -1,0 +1,110 @@
+{
+  "id": "req_671",
+  "ok": true,
+  "result": {
+    "passed": false,
+    "nativePassed": false,
+    "strict": true,
+    "fatal": 0,
+    "summary": {
+      "fatal": 0,
+      "error": 0,
+      "warn": 1,
+      "info": 0,
+      "unknown": 0,
+      "total": 1
+    },
+    "violations": [
+      {
+        "level": "warn",
+        "type": "warn",
+        "rule": "ATTRMATCHCODE",
+        "raw": {
+          "primitives": [
+            {
+              "name": "J3($2I29)",
+              "primitiveId": "8a5b5474193d770d",
+              "sheet": "ac31dbf8e924f563"
+            },
+            {
+              "name": "J5($3I41)",
+              "primitiveId": "4425c747176d95ed",
+              "sheet": "11bf161323c12964"
+            },
+            {
+              "name": "J6($3I62)",
+              "primitiveId": "8a2f8f66c25802c7",
+              "sheet": "11bf161323c12964"
+            },
+            {
+              "name": "J7($3I83)",
+              "primitiveId": "3ff56879321115da",
+              "sheet": "11bf161323c12964"
+            },
+            {
+              "name": "J8($3I104)",
+              "primitiveId": "31fa64872b464275",
+              "sheet": "11bf161323c12964"
+            },
+            {
+              "name": "J9($4I78)",
+              "primitiveId": "154579969d32af48",
+              "sheet": "4a2d6d8ff4e4f8cc"
+            },
+            {
+              "name": "J10($4I81)",
+              "primitiveId": "8956659f020f5396",
+              "sheet": "4a2d6d8ff4e4f8cc"
+            },
+            {
+              "name": "J12($5I38)",
+              "primitiveId": "6f8f4be53c43ffc7",
+              "sheet": "cd726d91de8833ec"
+            },
+            {
+              "name": "J13($5I41)",
+              "primitiveId": "f071ca4ce4504d41",
+              "sheet": "cd726d91de8833ec"
+            },
+            {
+              "name": "J11($6I2)",
+              "primitiveId": "e7500f7faa394a19",
+              "sheet": "adb82841fcb5f3ba"
+            },
+            {
+              "name": "J14($7I12)",
+              "primitiveId": "e74a950727dc9185",
+              "sheet": "1a6c8a76b3b64b3b"
+            },
+            {
+              "name": "J15($7I48)",
+              "primitiveId": "ea4367563765a69e",
+              "sheet": "1a6c8a76b3b64b3b"
+            },
+            {
+              "name": "J16($7I84)",
+              "primitiveId": "ea267f4875222b46",
+              "sheet": "1a6c8a76b3b64b3b"
+            },
+            {
+              "name": "J17($7I120)",
+              "primitiveId": "92bc8839b44d34f0",
+              "sheet": "1a6c8a76b3b64b3b"
+            },
+            {
+              "name": "J18($8I34)",
+              "primitiveId": "fd9886abb629a3fa",
+              "sheet": "6d2f0a95f4a336fa"
+            }
+          ],
+          "rule": "ATTRMATCHCODE",
+          "type": "warn"
+        }
+      }
+    ],
+    "countsAvailable": true,
+    "detailsAvailable": true
+  },
+  "type": "response",
+  "version": "v1"
+}

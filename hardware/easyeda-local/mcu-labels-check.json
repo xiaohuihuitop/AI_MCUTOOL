@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-28",
+  "change": "U4周围26个网名移至水平引线上方，底部8路错层引出",
+  "componentCount": 164,
+  "pinCount": 500,
+  "netDiff": [],
+  "drc": [],
+  "pcbUnchanged": true,
+  "pcbSHA256": "52322952e5c63fcfd8848d3c517d11e2b6d6a800965a797c8670201834f3e6d1"
+}

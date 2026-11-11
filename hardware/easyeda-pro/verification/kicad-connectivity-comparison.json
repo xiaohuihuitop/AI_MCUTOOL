@@ -1,0 +1,21 @@
+{
+  "components": 164,
+  "symbolUnits": 167,
+  "physicalPins": 508,
+  "connectedNets": 124,
+  "ncPins": 24,
+  "connectionDifferences": [],
+  "unitPinConflicts": [],
+  "passed": true,
+  "source": "官方sch list逐页物理引脚快照；不是失败的第七页connectivity命令输出",
+  "snapshotsSha256": {
+    "01-list.json": "7896507190020a3b0bfc8fd396747e2fdb2991ba8614694dac8d6d12c42869ef",
+    "02-list.json": "258750432fbc8259458c423b2117bd24568b7116bbf570ab1ce3f031aaa320f9",
+    "03-list.json": "fb8b6af91ecd299b72127393e7d965040fb618261adea2fd38c2c022d5f7b63d",
+    "04-list.json": "ea61b39e1ac98c75125b33fbb54f735ad1ca3e8bcf56b5337daecabfe7ef4556",
+    "05-list.json": "5d824c6a03db7afe97fa0ae01a5a3c80bb64f309c596b2dee334344c2f0416c0",
+    "06-list.json": "761a644f6c1dc3a7e93b29032cef4d536c935eeb901f057cf2f956d19de117e6",
+    "07-list.json": "8e1f401c0fd7ba14bde73a57684f3c39628f435083c04b8d887fbcec53f3b89b",
+    "08-list.json": "0239473d337a4e937d48a4eba97aeb4150e7ed1b2cc636fc10b02dfa2b1f3899"
+  }
+}
