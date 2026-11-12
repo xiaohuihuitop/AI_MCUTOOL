@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "cmd_start": "passed",
+  "same_instance_reused": true,
+  "status_query": "passed",
+  "stop": {
+    "outputs_changed": false,
+    "shutdown_requested": true
+  },
+  "listener_closed": true,
+  "connected": false,
+  "test_mode": false
+}

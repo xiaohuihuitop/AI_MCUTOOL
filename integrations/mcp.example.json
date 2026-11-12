@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mcutool": {
+      "command": "D:/workspace/MCU_ESP/AI_MCUTOOL/.venv/Scripts/python.exe",
+      "args": ["-m", "mcutool.mcp", "--data-dir", "D:/workspace/MCU_ESP/AI_MCUTOOL/.mcutool"]
+    }
+  }
+}

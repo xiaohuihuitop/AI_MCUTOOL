@@ -1,0 +1,1445 @@
+{
+  "started_at": "2026-11-12T16:26:20.872559+08:00",
+  "port": "COM40",
+  "outputs_changed": false,
+  "samples": [
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 6846,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 7863,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 8888,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 9908,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 10924,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 11943,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 12961,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 13977,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 14990,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 16014,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 17034,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 18047,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 19061,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 20085,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 21108,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 22130,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 23143,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 24163,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 25187,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 26210,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 27230,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 28241,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 29263,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 30274,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 31294,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 32315,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 33335,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 34354,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 35371,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    },
+    {
+      "power": "off",
+      "charge": false,
+      "keys_mask": 0,
+      "revision": 0,
+      "busy": false,
+      "power_switching": false,
+      "controller": "",
+      "controller_active": false,
+      "power_deadtime_ms": 100,
+      "timing_verified": false,
+      "key_remaining_ms": 0,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "uptime_ms": 36392,
+      "nvs_ready": true,
+      "uart": {
+        "ready": true,
+        "tx_enabled": false,
+        "tx_draining": false,
+        "baudrate": 115200,
+        "format": "8N1",
+        "received_bytes": 0,
+        "hardware_overflow_events": 0
+      },
+      "measurement": {
+        "i2c_ready": true,
+        "ina226_ready": true,
+        "ads1115_ready": true,
+        "hardware_accuracy_verified": false
+      },
+      "network": {
+        "ready": true,
+        "connected": false,
+        "connecting": false,
+        "provisioning": true,
+        "ssid": "",
+        "ip": ""
+      }
+    }
+  ],
+  "device": {
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+    "firmware_version": "0.1.1",
+    "hardware_revision": "2026-11-10",
+    "protocol_version": 1,
+    "test_device": false,
+    "measurement": {
+      "battery_sensor": "INA226",
+      "shunt_ohms": 0.02,
+      "current_lsb_a": 0.000125,
+      "battery_voltage_lsb_v": 0.00125,
+      "averaging_samples": 128,
+      "conversion_time_us": 2116,
+      "nominal_cycle_us": 541696,
+      "accuracy_verified": false
+    },
+    "capabilities": [
+      "device.info",
+      "device.status",
+      "control.claim",
+      "control.renew",
+      "control.release",
+      "power.select",
+      "charge.set",
+      "keys.run",
+      "action.get",
+      "action.cancel",
+      "uart.configure",
+      "uart.tx",
+      "uart.write",
+      "telemetry.read",
+      "calibration.get",
+      "calibration.set",
+      "timing.set",
+      "network.status",
+      "network.configure",
+      "network.connect"
+    ],
+    "limits": {
+      "keys": 5,
+      "max_steps": 128,
+      "max_sequence_ms": 600000,
+      "min_step_ms": 10,
+      "max_step_ms": 60000,
+      "owner_ttl_ms": 60000,
+      "uart_write_bytes": 4096,
+      "uart_buffer_bytes": 262144,
+      "measurement_records": 1024,
+      "dedup_records": 64,
+      "action_records": 32,
+      "power_min_v": 2.8,
+      "power_max_v": 12,
+      "current_max_a": 3,
+      "measurement_max_v": 15,
+      "charge_v": 5,
+      "charge_max_a": 2,
+      "key_max_v": 6,
+      "key_max_ma": 20,
+      "hardware_verified": false
+    }
+  },
+  "latest": {
+    "battery_v": {
+      "seq": 217,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "battery_v",
+      "unit": "V",
+      "value": 0,
+      "nominal": 0,
+      "t_us": 37221334,
+      "window_start_us": 36029334,
+      "window_estimated": true,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.7750065,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 217,
+      "age_ms": 177,
+      "stale": false
+    },
+    "battery_i": {
+      "seq": 218,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "battery_i",
+      "unit": "A",
+      "value": -0.000125,
+      "nominal": -0.000125,
+      "t_us": 37221334,
+      "window_start_us": 36029334,
+      "window_estimated": true,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.7750065,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 218,
+      "age_ms": 177,
+      "stale": false
+    },
+    "ain1": {
+      "seq": 219,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "ain1",
+      "unit": "V",
+      "value": 0,
+      "nominal": 0,
+      "t_us": 37352224,
+      "window_start_us": 37221444,
+      "window_estimated": false,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.8791611,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 219,
+      "age_ms": 46,
+      "stale": false
+    },
+    "ain2": {
+      "seq": 214,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "ain2",
+      "unit": "V",
+      "value": 0.001375,
+      "nominal": 0.001375,
+      "t_us": 36477226,
+      "window_start_us": 36349338,
+      "window_estimated": false,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.0006886,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 214,
+      "age_ms": 921,
+      "stale": false
+    },
+    "ain3": {
+      "seq": 215,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "ain3",
+      "unit": "V",
+      "value": 0,
+      "nominal": 0,
+      "t_us": 36606224,
+      "window_start_us": 36477347,
+      "window_estimated": false,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.1515772,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 215,
+      "age_ms": 792,
+      "stale": false
+    },
+    "ain4": {
+      "seq": 216,
+      "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+      "channel": "ain4",
+      "unit": "V",
+      "value": 0.001375,
+      "nominal": 0.001375,
+      "t_us": 36735242,
+      "window_start_us": 36606311,
+      "window_estimated": false,
+      "quality": "uncalibrated",
+      "calibration_revision": 0,
+      "received_at": 1794472011.2911716,
+      "device_id": "MCUTOOL-68EE8F59EE9C",
+      "cursor": 216,
+      "age_ms": 663,
+      "stale": false
+    }
+  },
+  "events": {
+    "items": [
+      {
+        "source": "host",
+        "name": "connected",
+        "detail": "工具已连接，尚未取得操作权",
+        "received_at": 1794471980.3709629,
+        "device_id": "MCUTOOL-68EE8F59EE9C",
+        "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+        "cursor": 1
+      },
+      {
+        "seq": 1,
+        "t_us": 89601,
+        "name": "boot",
+        "detail": "工具已启动，业务输出关闭，UART发送禁用",
+        "received_at": 1794471980.476517,
+        "device_id": "MCUTOOL-68EE8F59EE9C",
+        "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+        "cursor": 2
+      },
+      {
+        "seq": 2,
+        "t_us": 187892,
+        "name": "provisioning",
+        "detail": "配置热点已开启，请连接后访问192.168.4.1/setup",
+        "received_at": 1794471980.476517,
+        "device_id": "MCUTOOL-68EE8F59EE9C",
+        "boot_id": "e0cabb629003f0dd6f33754bc2eab973",
+        "cursor": 3
+      }
+    ],
+    "next": 3,
+    "lost": 0,
+    "instance_id": "e1f2b4500a12435f8be316afdc9c3580"
+  },
+  "calibration": {
+    "channels": [
+      {
+        "channel": "battery_v",
+        "state": "uncalibrated"
+      },
+      {
+        "channel": "battery_i",
+        "state": "uncalibrated"
+      },
+      {
+        "channel": "ain1",
+        "state": "uncalibrated"
+      },
+      {
+        "channel": "ain2",
+        "state": "uncalibrated"
+      },
+      {
+        "channel": "ain3",
+        "state": "uncalibrated"
+      },
+      {
+        "channel": "ain4",
+        "state": "uncalibrated"
+      }
+    ]
+  },
+  "status": "passed",
+  "completed_at": "2026-11-12T16:26:51.922507+08:00"
+}

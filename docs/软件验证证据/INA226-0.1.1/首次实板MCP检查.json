@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "tools": 27,
+  "device_id": "MCUTOOL-68EE8F59EE9C",
+  "firmware": "0.1.1",
+  "battery_sensor": "INA226",
+  "channels": [
+    "ain1",
+    "ain2",
+    "ain3",
+    "ain4",
+    "battery_i",
+    "battery_v"
+  ],
+  "outputs_changed": false,
+  "detach_kept_connection": true
+}

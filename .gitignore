@@ -10,6 +10,17 @@
 **/__pycache__/
 *.py[cod]
 node_modules/
+.venv/
+.mcutool/
+.pytest_cache/
+*.egg-info/
+/firmware/build/
+/firmware/sdkconfig.old
+/firmware/sdkconfig
+/web/dist/
+/web/test-results/
+/web/playwright-report/
+/release/
 *.kicad_prl
 *.lck
 ~$*

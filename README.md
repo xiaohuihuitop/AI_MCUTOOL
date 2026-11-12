@@ -2,6 +2,19 @@
 
 通过Wi-Fi及原生USB，向AI提供五路按键模拟、供电通路选择、充电器插拔模拟、电压电流测量和目标串口交互能力。
 
+## 软件入口
+
+当前版本0.1.1已按实板INA226调整，首块工具板已完成USB烧录与启动检查。2026-11-12用户实测反馈“效果很好，都正常”，已记录功能使用测试通过；[实板结果及测量限制](docs/INA226实板启动与测量限制.md)。测量精度仍以独立校准和量化验收记录为准。
+
+- 双击 [启动工具.cmd](启动工具.cmd) 打开本机网页；本次工作区已准备Python环境和网页产物。
+- [软件使用说明](docs/软件使用说明.md)：连接、操作、记录、配网、校准和后台退出。
+- [软件验证报告](docs/软件验证报告.md)：本次构建与离线验证结果，实物待验收项单列。
+- `firmware/` 为ESP-IDF固件，`host/` 为共享后台与MCP，`web/` 为Vue网页，`protocol/` 为设备契约。
+- [MCP配置示例](integrations/mcp.example.json)与[配套使用Skill](integrations/skill/mcu-assistant-tool/SKILL.md)。不会自动覆盖其他AI客户端配置。
+- 本次交付位置由 `release/latest.json` 记录；软件包包含固件、已构建网页、源码、启动和安装脚本及SHA256清单。
+
+复制到其他电脑后先运行 `scripts/install.ps1`。源码验证入口为 `scripts/verify.ps1`，其中测试设备始终明确标识，不能代替工具板电气验收。程序启动不会自动连接设备或开启供电。
+
 ## 当前工程与版本
 
 - 当前编辑的主工程：`D:\LCEDA\projects\AI_TOOL\AI_TOOL.eprj3`，使用嘉立创EDA专业版本地客户端。

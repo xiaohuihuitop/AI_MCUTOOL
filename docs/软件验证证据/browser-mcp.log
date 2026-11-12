@@ -1,0 +1,36 @@
+
+> mcu-tool-web@0.1.0 test:e2e
+> playwright test
+
+
+Running 1 test using 1 worker
+
+(node:261848) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+[11/12/26 02:53:17] INFO     Starting MCP server 'mcu-tool' with server.py:2506
+                             transport 'stdio'
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+[11/12/26 02:53:26] INFO     Starting MCP server 'mcu-tool' with server.py:2506
+                             transport 'stdio'
+  ok 1 tests\workbench.spec.ts:8:1 › 网页、共享MCP和记录器完整闭环 (14.7s)
+
+  1 passed (19.2s)

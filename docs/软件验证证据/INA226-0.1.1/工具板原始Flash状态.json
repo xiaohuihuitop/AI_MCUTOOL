@@ -1,0 +1,7 @@
+{
+  "bytes": 16777216,
+  "sha256": "dffab0dd410657cb30c7b2fd7f2586a4792e8472e58882b3532581f8111a646d",
+  "all_erased": true,
+  "bootloader_magic": 255,
+  "application_magic": 255
+}

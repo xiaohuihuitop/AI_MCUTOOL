@@ -1,0 +1,82 @@
+[
+  {
+    "source": "host",
+    "name": "device_segment_changed",
+    "detail": "设备或启动已变化，旧启动尚未传出的缓存无法确认恢复",
+    "received_at": 1794471362.617842,
+    "previous_device": "MCUTOOL-68EE8F59EE9C",
+    "previous_boot": "7c5c5f73db2b8d67c98a90d96e4ef9ce",
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 6
+  },
+  {
+    "source": "host",
+    "name": "connected",
+    "detail": "工具已连接，尚未取得操作权",
+    "received_at": 1794471362.6219027,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 7
+  },
+  {
+    "seq": 1,
+    "t_us": 19448,
+    "name": "debug_ina",
+    "detail": "[DEBUG-ina228] 厂商寄存器读取: ESP_OK",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 8
+  },
+  {
+    "seq": 2,
+    "t_us": 20153,
+    "name": "debug_ina",
+    "detail": "[DEBUG-ina228] 芯片寄存器读取: ESP_OK; 厂商=5449",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 9
+  },
+  {
+    "seq": 3,
+    "t_us": 20186,
+    "name": "debug_ina",
+    "detail": "[DEBUG-ina228] 芯片ID=2260",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 10
+  },
+  {
+    "seq": 4,
+    "t_us": 20215,
+    "name": "measurement",
+    "detail": "INA228初始化失败，读数标记无效",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 11
+  },
+  {
+    "seq": 5,
+    "t_us": 175466,
+    "name": "provisioning",
+    "detail": "配置热点已开启，请连接后访问192.168.4.1/setup",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 12
+  },
+  {
+    "seq": 6,
+    "t_us": 175831,
+    "name": "boot",
+    "detail": "工具已启动，业务输出关闭，UART发送禁用",
+    "received_at": 1794471362.7517014,
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "4239662032fadf46f9cf5f982e480f1e",
+    "cursor": 13
+  }
+]

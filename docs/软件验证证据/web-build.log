@@ -1,0 +1,13 @@
+
+> mcu-tool-web@0.1.0 build
+> vue-tsc --noEmit && vite build
+
+vite v6.4.6 building for production...
+transforming...
+✓ 1564 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.80 kB │ gzip:  0.52 kB
+dist/assets/index-BlGzN5Vc.css   19.07 kB │ gzip:  5.01 kB
+dist/assets/index-COnQ76Qz.js   114.26 kB │ gzip: 42.74 kB │ map: 687.54 kB
+✓ built in 2.13s
