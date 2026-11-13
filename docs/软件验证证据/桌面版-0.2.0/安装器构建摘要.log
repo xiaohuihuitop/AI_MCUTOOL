@@ -1,0 +1,27 @@
+
+warning 6040: LangString "choowHowToInstall" is not set in language table of language SimpChinese
+warning 6040: LangString "choowHowToInstall" is not set in language table of language SimpChinese
+warning 6040: LangString "choowHowToInstall" is not set in language table of language SimpChinese
+
+Output: "D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\nsis\x64\nsis-output.exe"
+Install: 6 pages (384 bytes), 2 sections (4144 bytes), 4419 instructions (123732 bytes), 1757 strings (197260 bytes), 1 language table (406 bytes).
+Uninstall: 2 pages (192 bytes), 1 section (2072 bytes), 2045 instructions (57260 bytes), 1586 strings (201894 bytes), 1 language table (274 bytes).
+Datablock optimizer saved 220111 bytes (~0.0%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:               52736 / 38912 bytes
+Install code:                          (326390 bytes)
+Install data:                          (288919885 bytes)
+Uninstall code+data:                   (335464 bytes)
+Compressed data:           248800100 / 289581739 bytes
+CRC (0xA46F2FD8):                  4 / 4 bytes
+
+Total size:                248852840 / 289620655 bytes (85.9%)
+
+2 warnings:
+  6010: install function "Skip" not referenced - zeroing code (3950-3952) out
+
+  6040: LangString "choowHowToInstall" is not set in language table of language SimpChinese
+    Finished [tauri_bundler::bundle] 1 bundle at:
+        D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\bundle\nsis\MCU TOOL_0.2.0_x64-setup.exe (237.32 MiB)

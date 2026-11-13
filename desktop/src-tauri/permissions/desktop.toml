@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "desktop-actions"
+description = "允许工作台查询自己的桌面会话、保存下载及明确退出。"
+commands.allow = ["desktop_context", "desktop_start_status", "desktop_exit", "desktop_stop", "desktop_export", "desktop_save_recording"]

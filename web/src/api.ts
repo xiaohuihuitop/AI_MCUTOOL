@@ -9,6 +9,8 @@ export type Snapshot = {
   last_error: {message: string} | null;
 }
 
+import { desktopCommand, isDesktop } from './desktop'
+
 export const token = document.querySelector<HTMLMetaElement>('meta[name="mcutool-token"]')?.content ?? ''
 let sessionId = ''
 
@@ -28,9 +30,24 @@ export async function api<T = any>(path: string, method = 'GET', body?: unknown)
 }
 /** AI:下载原始记录文件。@param record 记录目录。@param filename 文件名。@returns 完成或抛错。 */
 export async function download(record: string, filename: string) {
+  if (isDesktop) {
+    await desktopCommand('desktop_save_recording', {record, filename})
+    return
+  }
   const response = await fetch(`/api/recordings/${encodeURIComponent(record)}/${encodeURIComponent(filename)}`, {headers: {'Authorization': `Bearer ${token}`, 'X-Session-ID': sessionId}})
   if (!response.ok) throw new Error('记录文件下载失败')
   const url = URL.createObjectURL(await response.blob())
   const link = document.createElement('a'); link.href = url; link.download = filename; link.click()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
+}
+
+/** AI:导出脱敏诊断ZIP。@returns 是否已发起保存或下载，取消保存为false。 */
+export async function exportDiagnostics(): Promise<boolean> {
+  if (isDesktop) return desktopCommand<boolean>('desktop_export')
+  const response = await fetch('/api/diagnostics', {headers: {'Authorization': `Bearer ${token}`, 'X-Session-ID': sessionId}})
+  if (!response.ok) throw new Error('诊断日志导出失败，请检查后台连接')
+  const url = URL.createObjectURL(await response.blob())
+  const link = document.createElement('a'); link.href = url; link.download = 'MCUTOOL-诊断日志.zip'; link.click()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+  return true
 }

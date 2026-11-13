@@ -1,20 +1,22 @@
 # AI:只打包本次已构建的软件，始终创建新目录，不覆盖旧交付。
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
-$version = '0.1.2'
+$version = '0.2.0'
 $name = 'MCUTOOL-' + $version + '-' + (Get-Date -Format 'yyyyMMdd-HHmmss')
 $releaseRoot = Join-Path $projectRoot 'release'
 $destination = Join-Path $releaseRoot $name
 if (Test-Path -LiteralPath $destination) { throw '交付目录已存在，停止以避免覆盖' }
 New-Item -ItemType Directory -Path $destination -Force | Out-Null
 $files = @()
-foreach ($directory in @('firmware/main','host/mcutool','web/src','web/tests','web/dist','protocol','integrations','scripts','tests','docs/软件验证证据','docs/软件界面')) {
+foreach ($directory in @('firmware/main','host/mcutool','web/src','web/tests','web/dist','protocol','integrations','scripts','tests','docs/软件验证证据','docs/软件界面','desktop/loading','desktop/src-tauri/src','desktop/src-tauri/.cargo','desktop/src-tauri/capabilities','desktop/src-tauri/permissions','desktop/src-tauri/nsis','desktop/src-tauri/icons')) {
     $files += Get-ChildItem -LiteralPath (Join-Path $projectRoot $directory) -Recurse -File | Where-Object { $_.FullName -notmatch '[\\/]__pycache__[\\/]' -and $_.Extension -ne '.pyc' }
 }
 $singleFiles = @('GLOSSARY.md','pyproject.toml','requirements.lock.txt','启动工具.cmd',
     'firmware/CMakeLists.txt','firmware/sdkconfig.defaults','firmware/sdkconfig','firmware/partitions.csv',
     'web/package.json','web/package-lock.json','web/tsconfig.json','web/vite.config.ts','web/index.html','web/playwright.config.ts',
-    'docs/软件使用说明.md','docs/软件验证报告.md','docs/INA226实板启动与测量限制.md','docs/Wi-Fi连接修复记录.md',
+    'docs/软件使用说明.md','docs/软件验证报告.md','docs/INA226实板启动与测量限制.md','docs/Wi-Fi连接修复记录.md','docs/桌面版使用说明.md','docs/桌面版验证报告.md',
+    'desktop/package.json','desktop/package-lock.json','desktop/requirements-build.txt','desktop/service_entry.py','desktop/service.spec','desktop/icon.png',
+    'desktop/src-tauri/Cargo.toml','desktop/src-tauri/Cargo.lock','desktop/src-tauri/rust-toolchain.toml','desktop/src-tauri/build.rs','desktop/src-tauri/tauri.conf.json',
     'firmware/build/ai_mcutool.bin','firmware/build/ai_mcutool.elf','firmware/build/ai_mcutool.map',
     'firmware/build/bootloader/bootloader.bin','firmware/build/partition_table/partition-table.bin',
     'firmware/build/flash_args','firmware/build/flasher_args.json','firmware/build/project_description.json')
@@ -33,14 +35,15 @@ foreach ($file in ($files | Sort-Object FullName -Unique)) {
 }
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 $packageReadme = @'
-# MCU TOOL 0.1.2 软件交付
+# MCU TOOL 0.2.0 源码交付
 
-这是电脑端及网页0.1.2软件包，修复Wi-Fi地址首尾空白导致连接失败的问题。工具固件保持0.1.1，包含共享后台、已构建网页、MCP、使用Skill、源码和验证资料。
+这是电脑端、网页和桌面0.2.0源码包，包含共享后台、已构建网页、MCP、桌面源码、使用Skill和验证资料。工具固件保持0.1.1。
 
-新目录首次使用：准备Python 3.11、Node.js 22和PowerShell 7，运行 `scripts/install.ps1`，然后双击 `启动工具.cmd`。软件包没有附带独立运行时或桌面安装器。
+源码方式首次使用：准备Python 3.11、Node.js 22和PowerShell 7，运行 `scripts/install.ps1`，然后双击 `启动工具.cmd`。普通用户直接使用另行交付的Windows桌面安装器，不需要这些开发环境。桌面安装器由 `release/latest-desktop.json` 定位。
 
 - [使用说明](docs/软件使用说明.md)
 - [验证报告](docs/软件验证报告.md)
+- [桌面版说明](docs/桌面版使用说明.md)与[桌面验证报告](docs/桌面版验证报告.md)
 - [Wi-Fi连接修复记录](docs/Wi-Fi连接修复记录.md)
 - [INA226实板检查与测量限制](docs/INA226实板启动与测量限制.md)
 - [AI使用Skill](integrations/skill/mcu-assistant-tool/SKILL.md)

@@ -8,13 +8,16 @@ from typing import Literal
 from urllib.parse import urlsplit
 import uuid
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, model_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from serial.tools import list_ports
 from .errors import ToolError
 from .runtime import Runtime
+from . import __version__
+from .diagnostics import diagnostic_archive
+from .paths import web_dist
 
 
 class Input(BaseModel):
@@ -25,7 +28,7 @@ class Input(BaseModel):
 class SessionInput(Input):
     """AI:客户端登记参数。"""
     name: str = Field(min_length=1, max_length=80)
-    kind: Literal["web", "mcp", "cli"]
+    kind: Literal["web", "mcp", "cli", "desktop"]
 
 
 class ConnectInput(Input):
@@ -86,7 +89,7 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
         finally:
             await runtime.close()
 
-    app = FastAPI(title="MCU TOOL", version="0.1.2", lifespan=lifespan, docs_url=None, redoc_url=None)
+    app = FastAPI(title="MCU TOOL", version=__version__, lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.runtime, app.state.token = runtime, runtime_token
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost"] + (["testserver"] if test_mode else []))
 
@@ -120,7 +123,7 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
     @app.get("/api/ping")
     async def ping():
         """AI:只查询后台身份，不连接设备。@return 版本及后台标识。"""
-        return {"version": "0.1.2", "protocol": 1, "instance_id": runtime.instance_id, "test_mode": test_mode}
+        return {"version": __version__, "protocol": 1, "desktop_protocol": 1, "instance_id": runtime.instance_id, "test_mode": test_mode}
 
     @app.post("/api/sessions")
     async def attach(body: SessionInput):
@@ -224,6 +227,13 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
         callback()
         return result
 
+    @app.get("/api/diagnostics")
+    async def diagnostics(request: Request):
+        """AI:导出脱敏诊断信息。@param request 有效本机会话。@return ZIP，不访问硬件或修改记录。"""
+        session_id(request)
+        return Response(diagnostic_archive(runtime, runtime_token), media_type="application/zip",
+                        headers={"Content-Disposition": 'attachment; filename="MCUTOOL-diagnostics.zip"'})
+
     @app.get("/api/recordings")
     async def recordings(request: Request):
         """AI:列出本项目已有记录。@param request 请求。@return 文件列表。"""
@@ -279,7 +289,7 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
             with suppress_websocket():
                 await ws.close(code=1008)
 
-    dist = Path(__file__).resolve().parents[2] / "web" / "dist"
+    dist = web_dist()
 
     @app.get("/", response_class=HTMLResponse)
     async def index():

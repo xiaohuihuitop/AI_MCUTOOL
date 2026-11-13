@@ -1,0 +1,5 @@
+# AI:打包工具独立于产品运行依赖，具体版本与桌面交付一起固定。
+pyinstaller==6.22.3
+altgraph==0.17.5
+pefile==2024.8.26
+pyinstaller-hooks-contrib==2026.10

@@ -2,7 +2,8 @@
 import { computed, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { Activity, Cable, Check, ChevronDown, CircleHelp, Download, Gauge, KeyRound, Link, LockKeyhole, Pause, Play, Power, Radio, RefreshCw, Settings2, Square, Terminal, Unplug, Wifi, X } from 'lucide-vue-next'
 import Trend from './Trend.vue'
-import { api, download, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
+import { api, download, exportDiagnostics, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
+import { desktopCommand, desktopSession, isDesktop } from './desktop'
 
 const state = ref<Snapshot | null>(null), clientId = ref(''), socketLive = ref(false), starting = ref(false)
 const tab = ref('操作面板'), connectionOpen = ref(true), connectionKind = ref<'usb'|'http'>('usb')
@@ -42,7 +43,8 @@ const serialDisplay = computed(() => {
 
 /** AI:统一展示操作失败且不重发。@param name 等待标识。@param work 单次操作。@returns 完成。 */
 async function run(name: string, work: () => Promise<void>) {
-  error.value = ''; pending.value = name
+  // AI:新操作拥有当前提示；旧任务继续在记录中更新，不能覆盖导出等新结果。
+  error.value = ''; pending.value = name; lastRequest.value = ''
   try { await work() } catch (e) { error.value = e instanceof Error ? e.message : '操作未完成' }
   finally { pending.value = '' }
 }
@@ -52,7 +54,7 @@ async function start() {
   if (heartbeat) clearInterval(heartbeat)
   socket?.close()
   try {
-    const session = await api('/api/sessions','POST',{name:`网页 ${new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})}`,kind:'web'})
+    const session = isDesktop ? await desktopSession() : await api('/api/sessions','POST',{name:`网页 ${new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})}`,kind:'web'})
     setSession(session.session_id); clientId.value = session.client_id
     state.value = await api('/api/status')
     await refreshPorts()
@@ -67,7 +69,8 @@ async function start() {
     }
     socket.onclose = () => { socketLive.value = false }
     socket.onerror = () => { error.value = '页面连接中断，请点击“重新连接页面”核对状态。' }
-    heartbeat = setInterval(() => { if (socket?.readyState === WebSocket.OPEN) socket.send(JSON.stringify({type:'heartbeat'})) },10000)
+    // AI:桌面活性由原生进程维护，隐藏窗口或网页重载不能令操作持有者过期。
+    if (!isDesktop) heartbeat = setInterval(() => { if (socket?.readyState === WebSocket.OPEN) socket.send(JSON.stringify({type:'heartbeat'})) },10000)
   } catch(e) { error.value = e instanceof Error ? e.message : '后台连接失败' }
   finally { starting.value = false }
 }
@@ -118,6 +121,11 @@ async function send() {
 }
 /** AI:读取记录清单。@returns 完成。 */
 async function refreshRecords() { records.value = (await api('/api/recordings')).recordings }
+/** AI:按当前运行形态明确停止后台。@returns 请求完成，后台仍执行共享退出检查。 */
+async function stopRuntime() {
+  if (isDesktop) await desktopCommand('desktop_stop')
+  else { await api('/api/runtime/shutdown','POST'); shutdownRequested.value = true }
+}
 /** AI:读取校准和网络配置的可公开状态。@returns 完成。 */
 async function refreshSettings() { await run('settings', async()=> {
   calRecords.value = (await api('/api/read','POST',{method:'calibration.get',params:{}})).channels
@@ -215,8 +223,8 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
 
       <section class="panel activity-panel"><div class="panel-title"><h2>操作与事件</h2><span class="hint">{{activeJobs.length}} 项正在执行</span></div><div class="activity-table" role="table"><div class="activity-head" role="row"><span>时间</span><span>操作 / 来源</span><span>状态</span><span>说明</span></div><div v-for="job in (state?.jobs??[]).slice(0,8)" :key="job.request_id" class="activity-row" role="row"><span class="mono">{{new Date(job.created_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{methodNames[job.method]??job.method}}<small>{{job.actor}}</small></span><span class="badge" :class="{teal:job.state==='succeeded',amber:['running','unknown','failed'].includes(job.state)}">{{jobNames[job.state]??job.state}}</span><span>{{job.error?.message || (job.state==='succeeded'?'控制执行完成，设备响应需另行观测':'可通过任务编号追踪')}}<small class="mono">{{job.request_id.slice(0,12)}}</small></span></div><p v-if="!state?.jobs.length" class="empty-log">尚无操作记录。连接工具后，人工与 AI 的操作会显示在这里。</p></div><details class="event-details"><summary>连接与采集事件（{{events.length}}）</summary><div v-for="event in [...events].reverse().slice(0,30)" :key="event.cursor" class="event-row"><span class="mono">{{new Date(event.received_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{event.detail}}</span></div></details></section>
 
-      <details class="panel runtime-management"><summary>后台与客户端</summary><div class="client-list"><div v-for="client in state?.clients??[]" :key="client.id"><strong>{{client.name}}</strong><span>{{client.kind==='web'?'网页':client.kind==='mcp'?'AI':'命令行'}}</span><span class="badge" :class="{teal:client.active}">{{client.active?'在线':'已离线'}}</span></div></div><div class="button-row"><p class="hint grow">关闭网页后，后台仍可采集和记录。退出程序前请停止记录，并让其他客户端退出会话；关闭页面的客户端最多60秒后标为离线。</p><button class="button" :disabled="!socketLive || recording || !!activeJobs.length || !!pending" @click="run('shutdown',async()=>{await api('/api/runtime/shutdown','POST');shutdownRequested=true})">退出后台</button></div></details>
-      <footer><span>MCU TOOL <b>0.1</b></span><span>控制状态与实测数据分别呈现 · 实物精度及电气时序待验收</span></footer>
+      <details class="panel runtime-management"><summary>后台与客户端</summary><div class="client-list"><div v-for="client in state?.clients??[]" :key="client.id"><strong>{{client.name}}</strong><span>{{client.kind==='desktop'?'桌面':client.kind==='web'?'网页':client.kind==='mcp'?'AI':'命令行'}}</span><span class="badge" :class="{teal:client.active}">{{client.active?'在线':'已离线'}}</span></div></div><div class="button-row runtime-actions"><p class="hint grow">{{isDesktop?'关闭窗口后保留在托盘。仅退出桌面端会保留后台采集和记录；停止后台前请结束记录、等待动作完成，并让其他客户端退出。':'关闭网页后，后台仍可采集和记录。退出程序前请停止记录，并让其他客户端退出会话；关闭页面的客户端最多60秒后标为离线。'}}</p><button class="button" :disabled="!socketLive || !!pending" @click="run('diagnostics',async()=>{notice=await exportDiagnostics()?'诊断日志已导出':'已取消保存'})"><Download :size="16"/>导出诊断日志</button><button v-if="isDesktop" class="button" :disabled="!!pending" @click="run('desktop-exit',()=>desktopCommand('desktop_exit'))">仅退出桌面端</button><button class="button" :disabled="!socketLive || recording || !!activeJobs.length || !!pending" @click="run('shutdown',stopRuntime)">{{isDesktop?'停止后台并退出':'退出后台'}}</button></div></details>
+      <footer><span>MCU TOOL <b>0.2</b></span><span>控制状态与实测数据分别呈现 · 实物精度及电气时序待验收</span></footer>
     </main>
     <div v-if="takeoverOpen" class="modal-backdrop" @click.self="takeoverOpen=false"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="takeover-title"><h2 id="takeover-title">交接操作权</h2><p>当前操作者：{{state?.control.owner?.name}}。接管后，你可以改变被测设备状态，请先确认原测试已允许交接。</p><p>有在途动作或状态变化时，后台会拒绝本次接管。</p><div class="button-row"><button class="button" @click="takeoverOpen=false">继续观察</button><button class="button primary" :disabled="!!activeJobs.length || !!pending" @click="claim(true)">确认接管</button></div></section></div>
   </div>

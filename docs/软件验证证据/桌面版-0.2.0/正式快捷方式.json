@@ -1,0 +1,10 @@
+[
+  {
+    "shortcut": "C:\\Users\\admin\\Desktop\\MCU TOOL.lnk",
+    "target": "C:\\Users\\admin\\AppData\\Local\\MCU TOOL\\mcutool-desktop.exe"
+  },
+  {
+    "shortcut": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\MCU TOOL\\MCU TOOL.lnk",
+    "target": "C:\\Users\\admin\\AppData\\Local\\MCU TOOL\\mcutool-desktop.exe"
+  }
+]

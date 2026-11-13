@@ -21,6 +21,10 @@ node_modules/
 /web/test-results/
 /web/playwright-report/
 /release/
+/desktop/runtime/
+/desktop/src-tauri/target/
+/desktop/src-tauri/gen/
+/desktop/build/
 *.kicad_prl
 *.lck
 ~$*

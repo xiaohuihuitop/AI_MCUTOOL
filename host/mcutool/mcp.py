@@ -52,7 +52,7 @@ def build_server(data_dir: Path) -> FastMCP:
     @server.tool()
     async def ping() -> dict:
         """AI:查询MCP版本和工具清单，不连接硬件。@return 版本与可用工具。"""
-        return {"version": "0.1.2", "mode": "shared-runtime", "tools": sorted(await server.get_tools()),
+        return {"version": "0.2.0", "mode": "shared-runtime", "tools": sorted(await server.get_tools()),
                 "limits": {"keys": 5, "key_min_step_ms": 10, "key_max_steps": 128, "key_max_sequence_ms": 600000, "uart_write_bytes": 4096}}
 
     @server.tool()

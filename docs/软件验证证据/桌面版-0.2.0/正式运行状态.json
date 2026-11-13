@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "instance_id": "cbb9701a50054afca20df97f3d2724dc",
+  "connected": false,
+  "recording": {
+    "state": "idle",
+    "path": null,
+    "error": null,
+    "written_records": 0,
+    "queued": 0
+  },
+  "clients": [
+    {
+      "id": "fb29820e",
+      "name": "桌面工作台",
+      "kind": "desktop",
+      "active": true
+    }
+  ],
+  "control": {
+    "owner": null,
+    "owner_active": false,
+    "revision": 0,
+    "device_claimed": false
+  }
+}

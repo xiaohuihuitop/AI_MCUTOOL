@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MCU TOOL</title>
+<style>
+body{margin:0;background:#eef3f6;color:#183b51;font-family:"Segoe UI","Microsoft YaHei",sans-serif;display:grid;place-items:center;min-height:100vh}main{max-width:650px;padding:48px}.mark{font-size:28px;letter-spacing:3px;font-weight:650;border-left:4px solid #65b6b2;padding-left:18px}h1{font-size:24px;margin-top:48px}p{color:#627d8d;line-height:1.8;overflow-wrap:anywhere}.error{color:#9b4b3d}button{margin-top:20px;background:#245f85;color:white;border:0;border-radius:6px;padding:12px 25px;font:inherit}.line{width:70px;height:3px;background:#65b6b2;margin-top:25px;animation:pulse 1s infinite alternate}@keyframes pulse{to{opacity:.25}}
+</style></head><body><main><div class="mark">MCU TOOL</div><h1 id="heading">正在打开设备工作台</h1><p id="detail">正在准备本机运行环境，请稍候。</p><div id="progress" class="line"></div><button id="exit" hidden>退出桌面端</button></main><script>
+const invoke = window.__TAURI__.core.invoke;
+const timer = setInterval(async () => {
+  const status = await invoke('desktop_start_status');
+  if (status.error) {
+    document.getElementById('heading').textContent = '工作台暂时无法启动';
+    document.getElementById('detail').textContent = status.error;
+    document.getElementById('detail').className = 'error';
+    document.getElementById('progress').hidden = true;
+    document.getElementById('exit').hidden = false;
+    clearInterval(timer);
+  }
+}, 400);
+document.getElementById('exit').onclick = () => invoke('desktop_exit');
+</script></body></html>

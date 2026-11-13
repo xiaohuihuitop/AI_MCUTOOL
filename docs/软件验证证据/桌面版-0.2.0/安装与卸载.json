@@ -1,0 +1,9 @@
+{
+  "installer": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\desktop\\src-tauri\\target\\x86_64-pc-windows-msvc\\release\\bundle\\nsis\\MCU TOOL_0.2.0_x64-setup.exe",
+  "installer_sha256": "433e010fb845aa16283e1c4b218952916fb6571223b42d2de4829116836d35c9",
+  "install_dir": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\docs\\temp\\installed-desktop-0.2.0",
+  "installation": "passed",
+  "uninstall_while_runtime_active": "refused; runtime preserved",
+  "uninstallation": "passed",
+  "data_preserved": true
+}

@@ -57,7 +57,7 @@ class Runtime:
         """AI:建立客户端会话。@param name 名称；kind 入口类型。@return 私有会话令牌及公开标识。"""
         if self.stopping or self.closing:
             raise ToolError("RUNTIME_STOPPING", "后台正在退出，请等待清理完成后重新启动")
-        if not name or len(name) > 80 or kind not in ("web", "mcp", "cli"):
+        if not name or len(name) > 80 or kind not in ("web", "mcp", "cli", "desktop"):
             raise ToolError("INVALID_PARAMS", "客户端名称或类型不合法")
         token = uuid.uuid4().hex
         public_id = uuid.uuid4().hex[:8]

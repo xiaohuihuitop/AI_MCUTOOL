@@ -4,14 +4,15 @@
 
 ## 软件入口
 
-当前电脑端和网页为0.1.2，已修复Wi-Fi地址首尾空白导致连接失败的问题，并通过真实Wi-Fi连接验证；见[修复记录](docs/Wi-Fi连接修复记录.md)。工具板固件保持0.1.1，按实板INA226调整；2026-11-12用户对0.1.1实测反馈“效果很好，都正常”，见[实板结果及测量限制](docs/INA226实板启动与测量限制.md)。测量精度仍以独立校准和量化验收记录为准。
+当前桌面端、共享后台和网页为0.2.0，提供独立Windows窗口、托盘、文件保存和诊断导出。沿用0.1.2的Wi-Fi地址修复，见[修复记录](docs/Wi-Fi连接修复记录.md)。工具板固件保持0.1.1，按实板INA226调整；2026-11-12用户对0.1.1实测反馈“效果很好，都正常”，见[实板结果及测量限制](docs/INA226实板启动与测量限制.md)。测量精度仍以独立校准和量化验收记录为准。
 
-- 双击 [启动工具.cmd](启动工具.cmd) 打开本机网页；本次工作区已准备Python环境和网页产物。
+- 日常使用安装Windows桌面版后双击 **MCU TOOL**；见[桌面版说明](docs/桌面版使用说明.md)和[桌面验证报告](docs/桌面版验证报告.md)。安装器随附运行环境，不要求另装Python或Node。
+- 开发方式仍可双击 [启动工具.cmd](启动工具.cmd) 打开本机网页；本次工作区已准备Python环境和网页产物。
 - [软件使用说明](docs/软件使用说明.md)：连接、操作、记录、配网、校准和后台退出。
 - [软件验证报告](docs/软件验证报告.md)：本次构建与离线验证结果，实物待验收项单列。
-- `firmware/` 为ESP-IDF固件，`host/` 为共享后台与MCP，`web/` 为Vue网页，`protocol/` 为设备契约。
+- `firmware/` 为ESP-IDF固件，`host/` 为共享后台与MCP，`web/` 为Vue网页，`desktop/` 为Tauri窗口及打包配置，`protocol/` 为设备契约。
 - [MCP配置示例](integrations/mcp.example.json)与[配套使用Skill](integrations/skill/mcu-assistant-tool/SKILL.md)。不会自动覆盖其他AI客户端配置。
-- 本次交付位置由 `release/latest.json` 记录；软件包包含固件、已构建网页、源码、启动和安装脚本及SHA256清单。
+- 桌面安装器位置由 `release/latest-desktop.json` 记录；源码包由 `release/latest.json` 记录，均提供SHA256清单。
 
 复制到其他电脑后先运行 `scripts/install.ps1`。源码验证入口为 `scripts/verify.ps1`，其中测试设备始终明确标识，不能代替工具板电气验收。程序启动不会自动连接设备或开启供电。
 

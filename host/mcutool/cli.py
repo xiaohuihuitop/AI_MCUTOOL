@@ -15,12 +15,14 @@ from .client import RuntimeClient, query_runtime, runtime_info
 from .data import json_text
 from .errors import ToolError
 from .locking import ProcessLock
+from . import __version__
+from .paths import default_data_dir, runtime_command, web_dist
 
 
 def ensure_runtime(data_dir: Path, *, port=8766, browser=False) -> dict:
     """AI:复用后台或显式启动一个无设备连接的实例。@param data_dir 目录；port 本地端口；browser 是否展示。@return 端点元数据。"""
     data_dir = data_dir.resolve()
-    if not (Path(__file__).resolve().parents[2] / "web" / "dist" / "index.html").is_file():
+    if not (web_dist() / "index.html").is_file():
         raise ToolError("WEB_ASSETS_MISSING", "网页产物缺失，请先运行安装或网页构建脚本")
     data_dir.mkdir(parents=True, exist_ok=True)
     startup_lock = ProcessLock(data_dir / "startup.lock")
@@ -31,6 +33,8 @@ def ensure_runtime(data_dir: Path, *, port=8766, browser=False) -> dict:
             try:
                 response = httpx.get(previous["url"] + "/api/ping", headers={"Authorization": "Bearer " + previous["token"]}, timeout=2, trust_env=False)
                 if response.status_code == 200 and response.json().get("instance_id") == previous.get("instance_id"):
+                    if response.json().get('version') != __version__ or response.json().get('protocol') != 1:
+                        raise ToolError('RUNTIME_MISMATCH', '已有后台版本不同，请先在原窗口正常退出后台，再启动当前版本')
                     info = previous
             except (httpx.HTTPError, ValueError):
                 # AI:只检查启动定位；后续系统锁会拒绝仍在运行的其他后台。
@@ -41,7 +45,7 @@ def ensure_runtime(data_dir: Path, *, port=8766, browser=False) -> dict:
             startup_id = uuid.uuid4().hex
             log = (data_dir / "runtime.log").open("ab")
             try:
-                process = subprocess.Popen([sys.executable, "-m", "mcutool.cli", "serve", "--data-dir", str(data_dir), "--port", str(port), "--startup-id", startup_id],
+                process = subprocess.Popen(runtime_command() + ["serve", "--data-dir", str(data_dir), "--port", str(port), "--startup-id", startup_id],
                                            stdin=subprocess.DEVNULL, stdout=log, stderr=log,
                                            creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
             finally:
@@ -79,7 +83,7 @@ def serve(data_dir: Path, port: int, test_mode=False, startup_id=None):
     lock = ProcessLock(data_dir / "runtime.lock")
     try:
         app = create_app(data_dir, test_mode=test_mode)
-        info = {"url": f"http://127.0.0.1:{port}", "token": app.state.token, "protocol": 1,
+        info = {"url": f"http://127.0.0.1:{port}", "token": app.state.token, "protocol": 1, "version": __version__,
                 "pid": os.getpid(), "instance_id": app.state.runtime.instance_id, "data_dir": str(data_dir), "test_mode": test_mode, "startup_id": startup_id}
         temporary = data_dir / "runtime.json.tmp"
         temporary.write_text(json_text(info), encoding="utf-8")
@@ -114,8 +118,8 @@ async def cli_call(args):
 def main():
     """AI:解析启动和只读命令行。@return 进程退出码由异常决定。"""
     parser = argparse.ArgumentParser(description="MCU TOOL 共享后台")
-    parser.add_argument("action", choices=("start", "serve", "status", "read", "job", "stop"))
-    parser.add_argument("--data-dir", type=Path, default=Path.cwd() / ".mcutool")
+    parser.add_argument("action", choices=("start", "serve", "status", "read", "job", "stop", "desktop-start", "can-uninstall"))
+    parser.add_argument("--data-dir", type=Path, default=default_data_dir())
     parser.add_argument("--port", type=int, default=8766)
     parser.add_argument("--no-browser", action="store_true")
     parser.add_argument("--test-mode", action="store_true", help="明确允许测试设备，页面持续显示测试标识")
@@ -129,6 +133,12 @@ def main():
             raise ToolError("INVALID_PARAMS", "后台端口须为1024到65535")
         if args.action == "serve":
             serve(args.data_dir, args.port, args.test_mode, args.startup_id)
+        elif args.action == "can-uninstall":
+            from .desktop import check_uninstall
+            check_uninstall()
+        elif args.action == "desktop-start":
+            from .desktop import desktop_start
+            print(json_text(desktop_start(args.data_dir, args.port, args.test_mode)))
         elif args.action == "start":
             if args.test_mode:
                 raise ToolError("INVALID_PARAMS", "测试环境请显式使用serve --test-mode，不复用生产启动入口")
