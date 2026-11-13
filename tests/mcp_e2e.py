@@ -16,8 +16,11 @@ async def verify(data_dir: Path, connection_check=False):
         if connection_check:
             attached = await client.call_tool("connect", {"client_name": "MCP连接流程检查"})
             assert attached.data["connected"] is False
-            selected = await client.call_tool("connect", {"kind": "http", "address": "http://127.0.0.1:28767", "token": "fixture"})
+            selected = await client.call_tool("connect", {"kind": "http", "address": " http://127.0.0.1:28767/ ", "token": "fixture"})
             assert selected.data["connected"] is True
+            assert selected.data["connection"]["address"] == "http://127.0.0.1:28767"
+            reused = await client.call_tool("connect", {"kind": "http", "address": "\thttp://127.0.0.1:28767 "})
+            assert reused.data["connected"] is True
             mismatch = await client.call_tool("connect", {"expected_device_id": "wrong-device"})
             assert mismatch.data["error"]["code"] == "DEVICE_MISMATCH"
             assert (await client.call_tool("device_status", {})).data["connected"] is True

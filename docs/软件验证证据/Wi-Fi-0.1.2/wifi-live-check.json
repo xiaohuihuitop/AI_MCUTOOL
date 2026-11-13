@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "completed_at": "2026-11-12T17:51:24.051807+08:00",
+  "runtime_version": "0.1.2",
+  "firmware_version": "0.1.1",
+  "device_id": "MCUTOOL-68EE8F59EE9C",
+  "connection": {
+    "kind": "http",
+    "address": "http://192.168.1.62"
+  },
+  "live_channels": [
+    "ain1",
+    "ain2",
+    "ain3",
+    "ain4",
+    "battery_i",
+    "battery_v"
+  ],
+  "status_samples": [
+    {
+      "uptime_ms": 2924447,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2924976,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2926077,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2928331,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2929382,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2930632,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2932355,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2933416,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2934533,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    },
+    {
+      "uptime_ms": 2936138,
+      "boot_id": "1debcca64069cfe67889ab60a978e4b8"
+    }
+  ],
+  "mcp_padded_address_reused": true,
+  "writes_requested": false,
+  "detached_kept_connection": true
+}

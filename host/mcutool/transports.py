@@ -9,6 +9,15 @@ from .errors import ToolError
 from .protocol import FrameDecoder, MAX_PAYLOAD, encode_frame
 
 
+def normalize_http_address(address: str) -> str:
+    """AI:统一校验和请求使用的HTTP地址。@param address 用户填写的设备地址。@return 去首尾空白及末尾斜杠的地址；不补协议或更换目标。"""
+    address = address.strip()
+    parts = urlsplit(address)
+    if parts.scheme != "http" or not parts.hostname or parts.username or parts.password or parts.query or parts.fragment or parts.path not in ("", "/") or any(char.isspace() for char in address):
+        raise ToolError("INVALID_ADDRESS", "填写设备 HTTP 地址，例如 http://192.168.1.80")
+    return address.rstrip("/")
+
+
 class Transport(Protocol):
     """AI:USB 和 HTTP 的公共通信接口。"""
 
@@ -26,12 +35,10 @@ class HttpTransport:
 
     def __init__(self, address: str, token: str):
         """AI:建立 HTTP 通信。@param address 设备地址；token 设备令牌。@return 无。"""
-        parts = urlsplit(address)
-        if parts.scheme != "http" or not parts.hostname or parts.username or parts.password or parts.query or parts.fragment or parts.path not in ("", "/"):
-            raise ToolError("INVALID_ADDRESS", "填写设备 HTTP 地址，例如 http://192.168.1.80")
+        address = normalize_http_address(address)
         if not token or "\r" in token or "\n" in token:
             raise ToolError("INVALID_TOKEN", "需要有效的设备访问令牌")
-        self.client = httpx.AsyncClient(base_url=address.rstrip("/"), timeout=8, trust_env=False,
+        self.client = httpx.AsyncClient(base_url=address, timeout=8, trust_env=False,
                                        follow_redirects=False, headers={"Authorization": f"Bearer {token}"})
 
     async def request(self, message: dict) -> dict:

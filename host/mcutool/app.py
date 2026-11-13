@@ -86,7 +86,7 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
         finally:
             await runtime.close()
 
-    app = FastAPI(title="MCU TOOL", version="0.1.1", lifespan=lifespan, docs_url=None, redoc_url=None)
+    app = FastAPI(title="MCU TOOL", version="0.1.2", lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.runtime, app.state.token = runtime, runtime_token
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost"] + (["testserver"] if test_mode else []))
 
@@ -120,7 +120,7 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
     @app.get("/api/ping")
     async def ping():
         """AI:只查询后台身份，不连接设备。@return 版本及后台标识。"""
-        return {"version": "0.1.1", "protocol": 1, "instance_id": runtime.instance_id, "test_mode": test_mode}
+        return {"version": "0.1.2", "protocol": 1, "instance_id": runtime.instance_id, "test_mode": test_mode}
 
     @app.post("/api/sessions")
     async def attach(body: SessionInput):

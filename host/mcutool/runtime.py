@@ -12,7 +12,7 @@ from .data import History, JobStore, Recorder
 from .errors import ToolError
 from .locking import ProcessLock
 from .protocol import response_result, validate_telemetry
-from .transports import HttpTransport, UsbTransport
+from .transports import HttpTransport, UsbTransport, normalize_http_address
 from .validation import READ_METHODS, RESOURCES, validate
 
 CONNECTION_ERRORS = {"CONNECTION_ERROR", "FRAME_CRC", "FRAME_LIMIT", "FRAME_JSON", "PROTOCOL_MISMATCH", "DEVICE_RESTARTED"}
@@ -122,6 +122,8 @@ class Runtime:
             transport = None
             acquired = None
             try:
+                if spec["kind"] == "http":
+                    spec = {**spec, "address": normalize_http_address(spec["address"])}
                 if self.transport_factory:
                     transport = self.transport_factory(spec)
                 elif spec["kind"] == "usb":
