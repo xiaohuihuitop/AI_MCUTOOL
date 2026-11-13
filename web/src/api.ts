@@ -1,4 +1,4 @@
-export type Sample = {channel: string; value: number | null; nominal: number | null; unit: string; quality: string; t_us: number; boot_id: string; cursor: number; stale?: boolean; age_ms?: number}
+export type Sample = {channel: string; value: number | null; nominal: number | null; unit: string; quality: string; t_us: number; boot_id: string; device_id: string; cursor: number; stale?: boolean; age_ms?: number; break_before?: boolean}
 export type Job = {request_id: string; method: string; state: string; action_id: number | null; actor: string; error: {message: string} | null; created_at: number; result: Record<string, unknown> | null}
 export type Snapshot = {
   instance_id: string; connected: boolean; test_mode: boolean;

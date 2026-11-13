@@ -1,0 +1,21 @@
+{
+  "version": "0.3.0",
+  "web_build": "passed",
+  "web_tests": {
+    "passed": 10,
+    "source": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\docs\\temp\\browser-1794557180305\\results"
+  },
+  "python_tests": {
+    "passed": 38,
+    "includes_frozen_runtime": true,
+    "source": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\docs\\temp\\workbench-pytest-final-0.3.0"
+  },
+  "windows_checks": {
+    "passed": 9,
+    "source": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\docs\\temp\\desktop-ui-1794557318088"
+  },
+  "resources_sha256": "000cd0f0545b5a0ec16f9cf4518851578533405b8e9d1f60a017211cf2b68261",
+  "installer_build": "passed",
+  "installed_directory_updated": false,
+  "hardware_accuracy_tested": false
+}

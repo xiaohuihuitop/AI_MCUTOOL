@@ -42,9 +42,12 @@ def test_frozen_runtime_and_mcp_share_one_process_without_development_path(tmp_p
             async with Client({'mcpServers':{'mcutool':{'command':str(executable),'args':['mcp','--data-dir',str(data)],'env':env}}}) as client:
                 ping = (await client.call_tool('ping',{})).data
                 state = (await client.call_tool('connect',{'client_name':'冻结MCP验证'})).data
-                assert ping['version']=='0.2.0' and len(ping['tools'])==27
-                assert state['instance_id']==identity and not state['connected']
-                assert (await client.call_tool('detach',{})).data['detached']
+                try:
+                    assert ping['version']=='0.3.0' and len(ping['tools'])==27
+                    assert state['instance_id']==identity and not state['connected']
+                finally:
+                    # AI:即使断言失败也明确分离本测试会话，避免阻塞测试后台退出。
+                    assert (await client.call_tool('detach',{})).data['detached']
         asyncio.run(mcp())
     finally:
         result = call('stop','--data-dir',str(data))
