@@ -1,0 +1,14 @@
+{
+  "skill": "mcu-assistant-tool",
+  "version": "0.3.0",
+  "references_checked": 5,
+  "schemas_checked": 12,
+  "ping_version": "0.3.0",
+  "tools_available": 27,
+  "hardware_connected": false,
+  "hardware_writes_executed": false,
+  "installed": "C:\\Users\\admin\\.codex\\skills\\mcu-assistant-tool",
+  "archive": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\release\\MCUTOOL-Desktop-0.3.0-20261113-161147\\MCUTOOL-Skill-0.3.0.zip",
+  "archive_sha256": "5019a883c96277369f05a9ea92fb4b228f5fdc1c778606e80362d8cb3ac5a78e",
+  "files_verified": 5
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "xiaohuihuitop/AI_MCUTOOL",
+  "tag": "v0.4.1",
+  "version": "0.4.1",
+  "firmware_version": "0.1.2",
+  "installer": "MCUTOOL-0.4.1-windows-x64-setup.exe",
+  "sha256": "e2414cbbe487f5f8403773651bc369ee8eb3610072a660708dc64980b62659e5"
+}

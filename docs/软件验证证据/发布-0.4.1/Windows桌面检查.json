@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "runRoot": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\docs\\temp\\desktop-ui-1794650849498",
+  "desktopExe": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\desktop\\src-tauri\\target\\x86_64-pc-windows-msvc\\release\\mcutool-desktop.exe",
+  "checks": [
+    "原生窗口缩放后最新时间继续推进，图表说明已移除",
+    "独立电池波形暂停与原生CSV导出，行数及原始单位正确",
+    "记录进行中拒绝停止后台",
+    "关闭隐藏70秒且页面脚本暂停，操作权和磁盘记录保持",
+    "重复启动复用同一桌面窗口和后台",
+    "页面刷新复用原桌面会话",
+    "退出桌面端后MCP与记录继续",
+    "原生保存对话框下载完整测量记录",
+    "仍有MCP使用者时拒绝停止后台",
+    "原生保存对话框导出诊断日志",
+    "停止后台并退出完成"
+  ]
+}

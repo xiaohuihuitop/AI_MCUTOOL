@@ -1,0 +1,12 @@
+{
+  "version": "0.4.1",
+  "exe": "C:/Users/admin/AppData/Local/MCU TOOL/mcutool-desktop.exe",
+  "pid": 313296,
+  "device": "MCUTOOL-68EE8F59EE9C",
+  "connection": "COM40",
+  "scrollFollow": {
+    "before": 3815.537327,
+    "after": 3816.337326
+  },
+  "desktopLeftOpen": true
+}

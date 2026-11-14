@@ -11,21 +11,31 @@ if (Test-Path -LiteralPath $destination) { throw '交付目录已存在，不覆
 New-Item -ItemType Directory -Path $destination | Out-Null
 $installer = Join-Path $destination ('MCUTOOL-' + $version + '-windows-x64-setup.exe')
 Copy-Item -LiteralPath $installers[0].FullName -Destination $installer
-foreach ($file in @('docs/桌面版使用说明.md','docs/桌面版验证报告.md','docs/软件使用说明.md','docs/INA226实板启动与测量限制.md','docs/Wi-Fi连接修复记录.md','integrations/mcp.desktop.example.json')) {
+foreach ($file in @('README.md','AGENTS.md','docs/桌面版使用说明.md','docs/软件使用说明.md','docs/上位机界面与图表使用说明.md','docs/固定10Hz与长时间波形验证报告.md','docs/0.4.1发布与验证说明.md','docs/INA226实板启动与测量限制.md','docs/Wi-Fi连接修复记录.md','integrations/mcp.desktop.example.json','integrations/desktop-release.json','scripts/setup-desktop.ps1','scripts/flash-firmware.ps1','firmware/build/ai_mcutool.bin','firmware/build/bootloader/bootloader.bin','firmware/build/partition_table/partition-table.bin','firmware/build/flash_args')) {
     $target = Join-Path $destination $file
     New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
     Copy-Item -LiteralPath (Join-Path $projectRoot $file) -Destination $target
 }
 $evidence = Join-Path $destination 'docs/软件验证证据'
 New-Item -ItemType Directory -Path $evidence -Force | Out-Null
-Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/软件验证证据/桌面版-0.2.0') -Destination $evidence -Recurse
+Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/软件验证证据/固定10Hz-0.4.0') -Destination $evidence -Recurse
+Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/软件验证证据/发布-0.4.1') -Destination $evidence -Recurse
+$skillTarget = Join-Path $destination 'integrations/skill'
+New-Item -ItemType Directory -Path $skillTarget -Force | Out-Null
+Copy-Item -LiteralPath (Join-Path $projectRoot 'integrations/skill/mcu-assistant-tool') -Destination $skillTarget -Recurse
+Compress-Archive -LiteralPath (Join-Path $skillTarget 'mcu-assistant-tool') -DestinationPath (Join-Path $destination ('MCUTOOL-Skill-' + $version + '.zip'))
 $utf8 = [Text.UTF8Encoding]::new($false)
 $hash = (Get-FileHash -LiteralPath $installer -Algorithm SHA256).Hash.ToLowerInvariant()
+<# AI:仓库安装入口必须绑定本次真实安装器，拒绝打包过期摘要。 #>
+$releaseDescriptor = Get-Content -Raw -LiteralPath (Join-Path $projectRoot 'integrations/desktop-release.json') | ConvertFrom-Json
+if ($releaseDescriptor.version -cne $version -or $releaseDescriptor.sha256 -cne $hash) { throw '固定发布描述与本次安装器不一致，请核对版本与SHA256后再打包' }
 [IO.File]::WriteAllText(($installer + '.sha256'),($hash + '  ' + (Split-Path $installer -Leaf) + "`n"),$utf8)
 $files = @(Get-ChildItem -LiteralPath $destination -Recurse -File | ForEach-Object {
     @{path=$_.FullName.Substring($destination.Length+1).Replace('\','/'); bytes=$_.Length; sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
 })
-$manifest = @{version=$version; platform='windows-x64'; firmware_version='0.1.1'; source_state='uncommitted-working-tree'; created_at=(Get-Date).ToString('o'); files=$files}
+$firmwareProject = Get-Content -Raw -LiteralPath (Join-Path $projectRoot 'firmware/CMakeLists.txt')
+if ($firmwareProject -notmatch 'project\(ai_mcutool VERSION ([0-9]+\.[0-9]+\.[0-9]+)\)') { throw '无法确定固件版本，不生成交付清单' }
+$manifest = @{version=$version; platform='windows-x64'; firmware_version=$Matches[1]; source_state='uncommitted-working-tree'; created_at=(Get-Date).ToString('o'); files=$files}
 [IO.File]::WriteAllText((Join-Path $destination 'manifest.json'),($manifest | ConvertTo-Json -Depth 6),$utf8)
 $latest = @{version=$version; directory=$destination; installer=$installer; sha256=$hash; created_at=(Get-Date).ToString('o')}
 [IO.File]::WriteAllText((Join-Path $releaseRoot 'latest-desktop.json'),($latest | ConvertTo-Json),$utf8)

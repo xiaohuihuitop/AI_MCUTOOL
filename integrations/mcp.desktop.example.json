@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "mcutool": {
-      "command": "C:/Users/admin/AppData/Local/MCU TOOL/runtime/MCUTOOL-service/MCUTOOL-service.exe",
-      "args": ["mcp", "--data-dir", "D:/workspace/MCU_ESP/AI_MCUTOOL/.mcutool"]
+      "command": "C:/Users/你的用户名/AppData/Local/MCU TOOL/runtime/MCUTOOL-service/MCUTOOL-service.exe",
+      "args": ["mcp", "--data-dir", "C:/Users/你的用户名/AppData/Local/MCU_TOOL/data"]
     }
   }
 }

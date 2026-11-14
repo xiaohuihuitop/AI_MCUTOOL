@@ -1,0 +1,13 @@
+interface:
+  display_name: "MCU TOOL"
+  short_description: "通过共享 MCP 操作辅助板，快速查看测量、执行按键和分析区间电量"
+  default_prompt: "使用 $mcu-assistant-tool 查看当前 MCU TOOL 的连接、设备身份和测量状态。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mcutool"
+      description: "MCU TOOL 共享设备控制与原始数据服务"
+
+policy:
+  allow_implicit_invocation: true
