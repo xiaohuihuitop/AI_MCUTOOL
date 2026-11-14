@@ -19,3 +19,5 @@ Progress: completed
 已更新 Skill 的任务入口、桌面安装说明和测量分析参考，新增自动发现元数据。格式及 5 处引用、12 组真实工具 schema 校验通过；内存 MCP 只读 ping 返回 0.3.0 / 27 个工具。未连接硬件，未执行硬件写操作。
 
 已安装到 `C:/Users/admin/.codex/skills/mcu-assistant-tool`，并将 5 个文件打包为交付目录内的 `MCUTOOL-Skill-0.3.0.zip`，源码、安装副本及压缩包逐文件一致。安装器二进制保持原 SHA256。验证详情见 `../skill-validation.json`。本轮 Skill 改动尚未提交 Git。
+
+2026-11-14后续：用户授权提交和发布，Skill已同步0.4.1并随0bba896提交、推送及v0.4.1 Release交付。上段为0.3.0阶段验证记录。

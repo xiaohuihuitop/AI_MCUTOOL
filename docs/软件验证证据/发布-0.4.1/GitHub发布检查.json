@@ -1,0 +1,59 @@
+{
+  "id": 445204455,
+  "tag": "v0.4.1",
+  "target": "0bba8963c65fe557f4a63e48160b8e111554f46c",
+  "draft": false,
+  "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.4.1",
+  "assets": [
+    {
+      "name": "MCUTOOL-0.4.1-windows-x64-setup.exe",
+      "size": 248803684,
+      "digest": "sha256:e2414cbbe487f5f8403773651bc369ee8eb3610072a660708dc64980b62659e5",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/MCUTOOL-0.4.1-windows-x64-setup.exe",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747096521"
+    },
+    {
+      "name": "MCUTOOL-0.4.1-windows-x64-setup.exe.sha256",
+      "size": 103,
+      "digest": "sha256:3f6178ddf9836bbc184a1de458ad2bb1ee23337cbcda4597a7d71a58e12287c9",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/MCUTOOL-0.4.1-windows-x64-setup.exe.sha256",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747099775"
+    },
+    {
+      "name": "MCUTOOL-AI-Setup-0.4.1.zip",
+      "size": 21079,
+      "digest": "sha256:a36ff070d29a2f68c6a4771c879a2724c97391313788a4811324f4bd66814798",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/MCUTOOL-AI-Setup-0.4.1.zip",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747100087"
+    },
+    {
+      "name": "MCUTOOL-Firmware-0.1.2.zip",
+      "size": 531265,
+      "digest": "sha256:fccb9c887c97f70bbfd1df815eade6c0f352e2fad6d34cff55404bcd857237b1",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/MCUTOOL-Firmware-0.1.2.zip",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747100205"
+    },
+    {
+      "name": "MCUTOOL-Skill-0.4.1.zip",
+      "size": 13379,
+      "digest": "sha256:cb31b9104132868e3c11d06e37ec39ee5ec4caa5d6f88ac3de1456d4e237a4a2",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/MCUTOOL-Skill-0.4.1.zip",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747099905"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 492,
+      "digest": "sha256:318cc75b8a63481eb761c0f6f874118c89b72f9ab6cc3423cd1baa230fd32466",
+      "url": "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download/v0.4.1/SHA256SUMS.txt",
+      "api_url": "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/assets/747100379"
+    }
+  ],
+  "assets_verified": true,
+  "setup_download_test": {
+    "status": "passed",
+    "shell": "Windows PowerShell 5.1",
+    "authentication": "Git credential manager",
+    "sha256": "e2414cbbe487f5f8403773651bc369ee8eb3610072a660708dc64980b62659e5",
+    "mode": "DownloadOnly"
+  }
+}
