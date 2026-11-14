@@ -10,7 +10,7 @@
 #define TOOL_GPIO_KEYS_MASK ((1ULL<<4)|(1ULL<<5)|(1ULL<<6)|(1ULL<<7)|(1ULL<<8)) /**< AI:五路触点驱动，高有效。 */
 #define TOOL_FRAME_MAX 32768 /**< AI:USB与HTTP共用的JSON最大字节数。 */
 #define TOOL_UART_CAPACITY 262144 /**< AI:目标串口原始接收环形缓存容量。 */
-#define TOOL_SAMPLE_CAPACITY 1024 /**< AI:六路测量共享的历史记录数量。 */
+#define TOOL_SAMPLE_CAPACITY 8192 /**< AI:六路10Hz共享约136秒的通信缓存，完整长时间记录由电脑保存。 */
 
 extern tool_core_t g_core;
 extern SemaphoreHandle_t g_core_mutex;

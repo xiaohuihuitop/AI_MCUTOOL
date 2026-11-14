@@ -34,8 +34,7 @@ test('网页、共享MCP和记录器完整闭环', async ({ page, browser }, tes
   await expect(page.locator('.notice')).toContainText('取消按键：已完成')
   await expect(page.locator('.key-cap.pressed')).toHaveCount(0)
   await expect(page.locator('.reading-number').first()).toContainText('3.900')
-  await page.locator('[data-mode="battery"] .measurement-details').last().locator('summary').click()
-  await expect(page.getByText('INA226：电流读数步进 0.125mA，电池电压步进 1.25mV。步进不代表精度，小电流与零点需校准、实测。')).toBeVisible()
+  await expect(page.locator('[data-mode="battery"] .measurement-details')).toHaveCount(0)
 
   const observerContext = await browser.newContext()
   const observer = await observerContext.newPage()

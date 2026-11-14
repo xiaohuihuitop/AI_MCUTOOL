@@ -72,7 +72,7 @@ static cJSON *device_info(void)
     cJSON *out = cJSON_CreateObject();
     cJSON_AddStringToObject(out, "device_id", g_device_id);
     cJSON_AddStringToObject(out, "boot_id", g_boot_id);
-    cJSON_AddStringToObject(out, "firmware_version", "0.1.1");
+    cJSON_AddStringToObject(out, "firmware_version", "0.1.2");
     cJSON_AddStringToObject(out, "hardware_revision", "2026-11-10");
     cJSON_AddNumberToObject(out, "protocol_version", 1);
     cJSON_AddBoolToObject(out, "test_device", false);
@@ -81,9 +81,10 @@ static cJSON *device_info(void)
     cJSON_AddNumberToObject(measurement, "shunt_ohms", TOOL_INA226_SHUNT_OHMS);
     cJSON_AddNumberToObject(measurement, "current_lsb_a", TOOL_INA226_CURRENT_LSB_A);
     cJSON_AddNumberToObject(measurement, "battery_voltage_lsb_v", TOOL_INA226_BUS_LSB_V);
-    cJSON_AddNumberToObject(measurement, "averaging_samples", 128);
+    cJSON_AddNumberToObject(measurement, "averaging_samples", 16);
     cJSON_AddNumberToObject(measurement, "conversion_time_us", 2116);
-    cJSON_AddNumberToObject(measurement, "nominal_cycle_us", 541696);
+    cJSON_AddNumberToObject(measurement, "nominal_cycle_us", 67712);
+    cJSON_AddNumberToObject(measurement, "sample_rate_hz", 10);
     cJSON_AddBoolToObject(measurement, "accuracy_verified", false);
     const char *methods[] = {"device.info", "device.status", "control.claim", "control.renew", "control.release", "power.select", "charge.set", "keys.run", "action.get", "action.cancel", "uart.configure", "uart.tx", "uart.write", "telemetry.read", "calibration.get", "calibration.set", "timing.set", "network.status", "network.configure", "network.connect"};
     cJSON *capabilities = cJSON_AddArrayToObject(out, "capabilities");

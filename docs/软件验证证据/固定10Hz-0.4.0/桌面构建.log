@@ -1,0 +1,174 @@
+
+> mcu-tool-web@0.4.0 build
+> vue-tsc --noEmit && vite build
+
+vite v6.4.6 building for production...
+transforming...
+✓ 1570 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.80 kB │ gzip:  0.52 kB
+dist/assets/index-C_sZpci4.css   30.66 kB │ gzip:  7.02 kB
+dist/assets/index-jmLA_QW9.js   142.01 kB │ gzip: 52.31 kB │ map: 778.26 kB
+✓ built in 2.22s
+126 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
+127 INFO: Python: 3.11.9
+141 INFO: Platform: Windows-10-10.0.19044-SP0
+141 INFO: Python environment: D:\workspace\MCU_ESP\AI_MCUTOOL\.venv
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+3775 INFO: Module search paths (PYTHONPATH):
+['D:\\workspace\\MCU_ESP\\AI_MCUTOOL',
+ 'D:\\Application\\python\\install\\python311.zip',
+ 'D:\\Application\\python\\install\\DLLs',
+ 'D:\\Application\\python\\install\\Lib',
+ 'D:\\Application\\python\\install',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\host',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\win32',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\win32\\lib',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\pythonwin',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\desktop',
+ 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\host']
+4032 INFO: Appending 'datas' from .spec
+4079 INFO: checking Analysis
+4136 INFO: Building because excludes changed
+4136 INFO: Looking for Python shared library...
+4136 INFO: Using Python shared library: D:\Application\python\install\python311.dll
+4136 INFO: Running Analysis Analysis-00.toc
+4136 INFO: Target bytecode optimization level: 0
+4136 INFO: Initializing module dependency graph...
+4138 INFO: Initializing module graph hook caches...
+4156 INFO: Analyzing modules for base_library.zip ...
+5164 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5249 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6786 INFO: Processing standard module hook 'hook-math.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6939 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8211 INFO: Caching module dependency graph...
+8247 INFO: Analyzing D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\service_entry.py
+8284 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8419 INFO: Processing standard module hook 'hook-xml.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8634 INFO: Processing standard module hook 'hook-_ctypes.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9009 INFO: Processing standard module hook 'hook-fastmcp.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+9021 INFO: Processing pre-safe-import-module hook 'hook-platformdirs.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9022 INFO: SetuptoolsInfo: initializing cached setuptools info...
+9581 INFO: Processing standard module hook 'hook-platformdirs.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+9660 INFO: Processing standard module hook 'hook-pydantic.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+9999 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+10238 INFO: Processing standard module hook 'hook-platform.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10568 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+10589 INFO: Processing standard module hook 'hook-sysconfig.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10691 INFO: Processing standard module hook 'hook-rich.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+11302 INFO: Processing standard module hook 'hook-pygments.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13102 INFO: Processing standard module hook 'hook-webbrowser.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+14173 INFO: Processing standard module hook 'hook-dns.rdata.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+14769 INFO: Processing standard module hook 'hook-anyio.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+15580 INFO: Processing standard module hook 'hook-pythoncom.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+15661 INFO: Processing standard module hook 'hook-pywintypes.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+16793 INFO: Processing standard module hook 'hook-certifi.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+17479 INFO: Processing standard module hook 'hook-difflib.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+17622 INFO: Processing standard module hook 'hook-jsonschema.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+17783 INFO: Processing standard module hook 'hook-jsonschema_specifications.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+17807 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+18669 INFO: Processing standard module hook 'hook-uvicorn.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+19435 INFO: Processing standard module hook 'hook-websockets.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20305 INFO: Processing standard module hook 'hook-opentelemetry.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20651 INFO: Processing standard module hook 'hook-cryptography.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+22837 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
+25705 INFO: Processing standard module hook 'hook-cloudpickle.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+27322 INFO: Processing standard module hook 'hook-sqlite3.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+28065 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+29125 INFO: Analyzing hidden import 'uvicorn.__main__'
+29126 INFO: Analyzing hidden import 'uvicorn.lifespan'
+29127 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
+29128 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
+29132 INFO: Analyzing hidden import 'uvicorn.loops'
+29133 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
+29134 INFO: Analyzing hidden import 'uvicorn.loops.auto'
+29136 INFO: Analyzing hidden import 'uvicorn.loops.zuvloop'
+29137 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
+29138 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
+29139 INFO: Analyzing hidden import 'uvicorn.workers'
+29143 INFO: Analyzing hidden import 'fastmcp.cli'
+29971 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+31021 INFO: Analyzing hidden import 'fastmcp.cli.__main__'
+31022 INFO: Analyzing hidden import 'fastmcp.client.sampling.handlers'
+31022 INFO: Analyzing hidden import 'fastmcp.client.sampling.handlers.anthropic'
+31030 INFO: Analyzing hidden import 'fastmcp.client.sampling.handlers.openai'
+31038 INFO: Analyzing hidden import 'fastmcp.dependencies'
+31039 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.auth0'
+31043 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.aws'
+31048 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.azure'
+31055 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.descope'
+31059 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.discord'
+31066 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.github'
+31070 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.google'
+31076 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.in_memory'
+31083 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.introspection'
+31089 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.oci'
+31092 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.scalekit'
+31097 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.supabase'
+31101 INFO: Analyzing hidden import 'fastmcp.server.auth.providers.workos'
+31109 INFO: Analyzing hidden import 'fastmcp.server.middleware.caching'
+31134 INFO: Analyzing hidden import 'fastmcp.server.middleware.error_handling'
+31139 INFO: Analyzing hidden import 'fastmcp.server.middleware.logging'
+31145 INFO: Analyzing hidden import 'fastmcp.server.middleware.rate_limiting'
+31150 INFO: Analyzing hidden import 'fastmcp.server.middleware.timing'
+31154 INFO: Analyzing hidden import 'fastmcp.server.middleware.tool_injection'
+31158 INFO: Analyzing hidden import 'fastmcp.utilities.tests'
+31164 INFO: Analyzing hidden import 'mcp.cli'
+31553 INFO: Analyzing hidden import 'mcp.client.__main__'
+31557 INFO: Analyzing hidden import 'mcp.client.auth.extensions'
+31558 INFO: Analyzing hidden import 'mcp.client.auth.extensions.client_credentials'
+31569 INFO: Analyzing hidden import 'mcp.server.__main__'
+31571 INFO: Analyzing hidden import 'mcp.server.websocket'
+31575 INFO: Analyzing hidden import 'mcp.shared.metadata_utils'
+31576 INFO: Analyzing hidden import 'mcp.shared.progress'
+31578 INFO: Analyzing hidden import 'burner_redis'
+31609 INFO: Processing module hooks (post-graph stage)...
+32024 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+34401 INFO: Processing standard module hook 'hook-tzdata.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+34924 INFO: Performing binary vs. data reclassification (1076 entries)
+35075 INFO: Looking for ctypes DLLs
+35128 WARNING: Ignoring /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation imported from D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+35129 WARNING: Ignoring /System/Library/Frameworks/IOKit.framework/IOKit imported from D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+35209 INFO: Analyzing run-time hooks ...
+35225 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+35232 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+35235 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+35236 INFO: Including run-time hook 'pyi_rth_pythoncom.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+35237 INFO: Including run-time hook 'pyi_rth_pywintypes.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+35238 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+35308 INFO: Creating base_library.zip...
+35329 INFO: Looking for dynamic libraries
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\fastmcp\server\auth\providers\jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\authlib\integrations\httpx_client\assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+37755 INFO: Extra DLL search directories (AddDllDirectory): []
+37756 INFO: Extra DLL search directories (PATH): []
+38476 INFO: Warnings written to D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\build\pyinstaller\service\warn-service.txt
+38720 INFO: Graph cross-reference written to D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\build\pyinstaller\service\xref-service.html
+38812 INFO: checking PYZ
+38940 INFO: checking PKG
+38941 INFO: Bootloader D:\workspace\MCU_ESP\AI_MCUTOOL\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+38941 INFO: checking EXE
+38948 INFO: checking COLLECT
+38958 INFO: Removing dir D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\runtime\MCUTOOL-service
+39125 INFO: Building COLLECT COLLECT-00.toc
+40349 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+40388 INFO: Build complete! The results are available in: D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\runtime
+        Info Looking up installed tauri packages to check mismatched versions...
+   Compiling mcutool-desktop v0.4.0 (D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri)
+    Finished `release` profile [optimized] target(s) in 1m 01s
+       Built application at: D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\mcutool-desktop.exe
+        Info Patching D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\mcutool-desktop.exe with bundle type information: nsis
+        Info Target: x64
+     Running makensis to produce D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\bundle\nsis\MCU TOOL_0.4.0_x64-setup.exe
+    Finished 1 bundle at:
+        D:\workspace\MCU_ESP\AI_MCUTOOL\desktop\src-tauri\target\x86_64-pc-windows-msvc\release\bundle\nsis\MCU TOOL_0.4.0_x64-setup.exe (237.27 MiB)

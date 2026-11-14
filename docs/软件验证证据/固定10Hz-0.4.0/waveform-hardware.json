@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "device": {
+    "device_id": "MCUTOOL-68EE8F59EE9C",
+    "boot_id": "e274a254aca0dd77d5c731cc082ddc55",
+    "firmware_version": "0.1.2",
+    "hardware_revision": "2026-11-10",
+    "protocol_version": 1,
+    "test_device": false,
+    "measurement": {
+      "battery_sensor": "INA226",
+      "shunt_ohms": 0.02,
+      "current_lsb_a": 0.000125,
+      "battery_voltage_lsb_v": 0.00125,
+      "averaging_samples": 16,
+      "conversion_time_us": 2116,
+      "nominal_cycle_us": 67712,
+      "sample_rate_hz": 10,
+      "accuracy_verified": false
+    },
+    "capabilities": [
+      "device.info",
+      "device.status",
+      "control.claim",
+      "control.renew",
+      "control.release",
+      "power.select",
+      "charge.set",
+      "keys.run",
+      "action.get",
+      "action.cancel",
+      "uart.configure",
+      "uart.tx",
+      "uart.write",
+      "telemetry.read",
+      "calibration.get",
+      "calibration.set",
+      "timing.set",
+      "network.status",
+      "network.configure",
+      "network.connect"
+    ],
+    "limits": {
+      "keys": 5,
+      "max_steps": 128,
+      "max_sequence_ms": 600000,
+      "min_step_ms": 10,
+      "max_step_ms": 60000,
+      "owner_ttl_ms": 60000,
+      "uart_write_bytes": 4096,
+      "uart_buffer_bytes": 262144,
+      "measurement_records": 8192,
+      "dedup_records": 64,
+      "action_records": 32,
+      "power_min_v": 2.8,
+      "power_max_v": 12,
+      "current_max_a": 3,
+      "measurement_max_v": 15,
+      "charge_v": 5,
+      "charge_max_a": 2,
+      "key_max_v": 6,
+      "key_max_ma": 20,
+      "hardware_verified": false
+    }
+  },
+  "channels": {
+    "battery_v": {
+      "samples": 319,
+      "frequency_hz": 9.999973270511699,
+      "interval_min_ms": 98.89600000000343,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 101.08400000000017,
+      "quality": {
+        "uncalibrated": 319
+      }
+    },
+    "battery_i": {
+      "samples": 319,
+      "frequency_hz": 9.999973270511699,
+      "interval_min_ms": 98.89600000000343,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 101.08400000000017,
+      "quality": {
+        "uncalibrated": 319
+      }
+    },
+    "ain1": {
+      "samples": 319,
+      "frequency_hz": 9.999999056603864,
+      "interval_min_ms": 95.91999999999956,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 103.13700000000381,
+      "quality": {
+        "out_of_range": 96,
+        "uncalibrated": 223
+      }
+    },
+    "ain2": {
+      "samples": 319,
+      "frequency_hz": 9.999999999999998,
+      "interval_min_ms": 96.99700000000178,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 103.00300000000107,
+      "quality": {
+        "uncalibrated": 311,
+        "out_of_range": 8
+      }
+    },
+    "ain3": {
+      "samples": 319,
+      "frequency_hz": 10.000000943396316,
+      "interval_min_ms": 97.00000000000131,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 103.01199999999966,
+      "quality": {
+        "out_of_range": 277,
+        "uncalibrated": 42
+      }
+    },
+    "ain4": {
+      "samples": 320,
+      "frequency_hz": 9.999948589605996,
+      "interval_min_ms": 96.49000000000285,
+      "interval_median_ms": 100.00000000000142,
+      "interval_max_ms": 103.88400000000075,
+      "quality": {
+        "uncalibrated": 300,
+        "out_of_range": 20
+      }
+    }
+  },
+  "lost": 0,
+  "duration_seconds": 32,
+  "outputs": {
+    "power": "off",
+    "charge": false,
+    "keys_mask": 0
+  },
+  "limitations": "只读32秒采样验证，不代表3小时实板稳定性或测量精度验收"
+}

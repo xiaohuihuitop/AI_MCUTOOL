@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref, shallowRef, watch } from 'vue'
 import { Activity, Cable, Check, ChevronDown, CircleHelp, Download, Gauge, KeyRound, Link, LockKeyhole, Pause, Play, Power, Radio, RefreshCw, Settings2, Square, Terminal, Unplug, Wifi, X } from 'lucide-vue-next'
 import Trend from './Trend.vue'
+import { version as appVersion } from '../package.json'
 import { api, download, exportDiagnostics, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
 import { desktopCommand, desktopSession, isDesktop } from './desktop'
 
@@ -10,13 +11,14 @@ const tab = ref('供电与测量'), connectionOpen = ref(true), connectionKind =
 const ports = ref<any[]>([]), port = ref(''), address = ref(''), deviceToken = ref('')
 const error = ref(''), notice = ref(''), pending = ref(''), lastRequest = ref('')
 const selectedKeys = ref([1]), pressMs = ref(100), gapMs = ref(100), repeat = ref(1)
-const samples = ref<Sample[]>([])
+const samples = shallowRef<Sample[]>([])
 const uartRows = ref<any[]>([]), events = ref<any[]>([]), serialMode = ref('text'), sendMode = ref('text'), sendText = ref(''), baud = ref(115200)
 const records = ref<{id:string;files:string[]}[]>([]), takeoverOpen = ref(false), shutdownRequested = ref(false)
 const settingsSsid = ref(''), settingsPassword = ref(''), networkInfo = ref<any>(null)
 const calChannel = ref('battery_v'), calGain = ref(1), calOffset = ref(0), calMin = ref(0), calMax = ref(15), calReference = ref(''), calRecords = ref<any[]>([]), deadtime = ref(100)
 let socket: WebSocket | null = null, heartbeat: ReturnType<typeof setInterval> | undefined
 let measurementContext = ''
+let measurementCursor = 0
 const interruptedChannels = new Set<string>()
 
 const connected = computed(() => Boolean(state.value?.connected && socketLive.value))
@@ -67,15 +69,16 @@ async function start() {
       const frame = JSON.parse(message.data); state.value = frame.status; socketLive.value = true
       // AI:不同后台、设备或启动不能拼成同一曲线；页面重连的历史回放按游标去重。
       const context = `${frame.status.instance_id}/${frame.status.device.device_id}/${frame.status.device.boot_id}`
-      if (measurementContext !== context) { samples.value = []; interruptedChannels.clear(); measurementContext = context }
+      if (measurementContext !== context) { samples.value = []; measurementCursor = 0; interruptedChannels.clear(); measurementContext = context }
       const lostMeasurements = frame.data.measurements.lost || frame.data.events.items.some((event: any) => event.name === 'device_data_gap' && event.stream === 'measurements')
       if (lostMeasurements) channels.forEach(channel => interruptedChannels.add(channel))
-      const merged = new Map(samples.value.map(sample => [sample.cursor, sample]))
+      const batch: Sample[] = []
       for (const sample of frame.data.measurements.items as Sample[]) {
-        if (sample.device_id !== frame.status.device.device_id || sample.boot_id !== frame.status.device.boot_id || merged.has(sample.cursor)) continue
-        merged.set(sample.cursor, {...sample, break_before: interruptedChannels.delete(sample.channel)})
+        if (sample.device_id !== frame.status.device.device_id || sample.boot_id !== frame.status.device.boot_id || sample.cursor <= measurementCursor) continue
+        batch.push({...sample, break_before: interruptedChannels.delete(sample.channel)})
+        measurementCursor = sample.cursor
       }
-      samples.value = [...merged.values()].sort((a,b) => a.cursor-b.cursor).slice(-1200)
+      samples.value = batch
       uartRows.value = [...uartRows.value, ...frame.data.uart.items].slice(-300)
       events.value = [...events.value, ...frame.data.events.items].slice(-300)
       if (frame.data.uart.lost || frame.data.measurements.lost) notice.value = '页面显示缓存存在缺失，请检查原始记录。'
@@ -204,15 +207,14 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
         </aside>
 
         <div class="measurement-column">
-          <Trend mode="battery" :samples="samples" :latest="state?.latest ?? {}" :device-id="state?.device.device_id ?? ''" :boot-id="state?.device.boot_id ?? ''" :live="connected">
+          <Trend mode="battery" :samples="samples" :latest="state?.latest ?? {}" :device-id="state?.device.device_id ?? ''" :boot-id="state?.device.boot_id ?? ''" :runtime-id="state?.instance_id ?? ''" :sample-rate="state?.device.measurement?.sample_rate_hz" :live="connected">
             <template #status><div class="measurement-state"><Power :size="14"/><strong>{{connected ? powerNames[board.power] : '供电状态未读取'}}</strong><span>·</span><span>充电器通路{{connected ? board.charge?'接通':'关闭' : '未读取'}}</span></div></template>
-            <details class="measurement-details"><summary>测量说明</summary><p>电流正值表示向被测设备供电，负值表示反向流动；读数包含经过测量通路的接入负载。</p><p v-if="state?.device.measurement?.battery_sensor==='INA226'">INA226：电流读数步进 0.125mA，电池电压步进 1.25mV。步进不代表精度，小电流与零点需校准、实测。</p></details>
           </Trend>
         </div>
       </div>
 
       <div v-show="tab==='四路电压'">
-        <Trend mode="aux" :samples="samples" :latest="state?.latest ?? {}" :device-id="state?.device.device_id ?? ''" :boot-id="state?.device.boot_id ?? ''" :live="connected"/>
+        <Trend mode="aux" :samples="samples" :latest="state?.latest ?? {}" :device-id="state?.device.device_id ?? ''" :boot-id="state?.device.boot_id ?? ''" :runtime-id="state?.instance_id ?? ''" :sample-rate="state?.device.measurement?.sample_rate_hz" :live="connected"/>
       </div>
 
       <div v-show="tab==='串口与记录'" class="serial-grid">
@@ -237,7 +239,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
       <section v-show="tab==='操作记录'" class="panel activity-panel"><div class="panel-title"><h2>操作记录</h2><span class="hint">{{activeJobs.length}} 项正在执行</span></div><div class="activity-table" role="table"><div class="activity-head" role="row"><span>时间</span><span>操作 / 来源</span><span>状态</span><span>说明</span></div><div v-for="job in (state?.jobs??[])" :key="job.request_id" class="activity-row" role="row"><span class="mono">{{new Date(job.created_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{methodNames[job.method]??job.method}}<small>{{job.actor}}</small></span><span class="badge" :class="{teal:job.state==='succeeded',amber:['running','unknown','failed'].includes(job.state)}">{{jobNames[job.state]??job.state}}</span><span>{{job.error?.message || (job.state==='succeeded'?'控制执行完成，设备响应需另行观测':'可通过任务编号追踪')}}<small class="mono">{{job.request_id.slice(0,12)}}</small></span></div><p v-if="!state?.jobs.length" class="empty-log">尚无操作记录。连接工具后，人工与 AI 的操作会显示在这里。</p></div><details class="event-details"><summary>连接与采集事件（{{events.length}}）</summary><div v-for="event in [...events].reverse().slice(0,30)" :key="event.cursor" class="event-row"><span class="mono">{{new Date(event.received_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{event.detail}}</span></div></details></section>
 
       <details v-show="tab==='设备设置'" class="panel runtime-management"><summary>后台与客户端</summary><div class="client-list"><div v-for="client in state?.clients??[]" :key="client.id"><strong>{{client.name}}</strong><span>{{client.kind==='desktop'?'桌面':client.kind==='web'?'网页':client.kind==='mcp'?'AI':'命令行'}}</span><span class="badge" :class="{teal:client.active}">{{client.active?'在线':'已离线'}}</span></div></div><div class="button-row runtime-actions"><p class="hint grow">{{isDesktop?'关闭窗口后保留在托盘。仅退出桌面端会保留后台采集和记录；停止后台前请结束记录、等待动作完成，并让其他客户端退出。':'关闭网页后，后台仍可采集和记录。退出程序前请停止记录，并让其他客户端退出会话；关闭页面的客户端最多60秒后标为离线。'}}</p><button class="button" :disabled="!socketLive || !!pending" @click="run('diagnostics',async()=>{notice=await exportDiagnostics()?'诊断日志已导出':'已取消保存'})"><Download :size="16"/>导出诊断日志</button><button v-if="isDesktop" class="button" :disabled="!!pending" @click="run('desktop-exit',()=>desktopCommand('desktop_exit'))">仅退出桌面端</button><button class="button" :disabled="!socketLive || recording || !!activeJobs.length || !!pending" @click="run('shutdown',stopRuntime)">{{isDesktop?'停止后台并退出':'退出后台'}}</button></div></details>
-      <footer><span>MCU TOOL <b>0.3</b></span><span>控制状态与实测数据分别呈现 · 实物精度及电气时序待验收</span></footer>
+      <footer><span>MCU TOOL <b>{{appVersion}}</b></span><span>控制状态与实测数据分别呈现 · 实物精度及电气时序待验收</span></footer>
     </main>
     <div v-if="takeoverOpen" class="modal-backdrop" @click.self="takeoverOpen=false"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="takeover-title"><h2 id="takeover-title">交接操作权</h2><p>当前操作者：{{state?.control.owner?.name}}。接管后，你可以改变被测设备状态，请先确认原测试已允许交接。</p><p>有在途动作或状态变化时，后台会拒绝本次接管。</p><div class="button-row"><button class="button" @click="takeoverOpen=false">继续观察</button><button class="button primary" :disabled="!!activeJobs.length || !!pending" @click="claim(true)">确认接管</button></div></section></div>
   </div>

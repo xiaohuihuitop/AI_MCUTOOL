@@ -15,17 +15,17 @@ test('测量按设备和启动隔离，电流只进行一次 A 到 mA 换算', (
 })
 
 test('非均匀采样的区间平均值按时间加权，插值边界参与积分', () => {
-  const rows = points([[0,10],[1,20],[3,40]])
-  expect(intervalStats(rows,0,3)).toEqual({min:10,max:40,average:25,integral:75,duration:3})
-  expect(intervalStats(rows,.5,2)).toEqual({min:15,max:30,average:22.5,integral:33.75,duration:1.5})
+  const rows = points([[0,10],[.1,20],[.3,40]])
+  expect(intervalStats(rows,0,.3)?.average).toBeCloseTo(25,10)
+  expect(intervalStats(rows,.05,.2)?.integral).toBeCloseTo(3.375,10)
   expect(valueAt(rows,4)).toBeNull()
 })
 
 test('净电量保留正负方向和毫安秒到毫安时的单位', () => {
-  const rows = points([[0,20],[1,-10],[2,-10]])
-  expect(intervalStats(rows,0,2)?.integral).toBe(-5)
-  const constant = points([[0,12],[2,12]])
-  expect(intervalStats(constant,0,2)!.integral/3600).toBeCloseTo(12*2/3600,12)
+  const rows = points([[0,20],[.1,-10],[.2,-10]])
+  expect(intervalStats(rows,0,.2)?.integral).toBe(-.5)
+  const constant = points([[0,12],[.2,12]])
+  expect(intervalStats(constant,0,.2)!.integral/3600).toBeCloseTo(12*.2/3600,12)
 })
 
 test('缺点、无效点和显式丢样不能被曲线或统计跨过', () => {

@@ -3,7 +3,7 @@
 mod backend;
 use backend::{Backend, Settings};
 use serde_json::{json, Value};
-use std::{path::PathBuf, sync::{atomic::{AtomicBool, Ordering}, Mutex}, thread, time::Duration};
+use std::{io::Write, path::PathBuf, sync::{atomic::{AtomicBool, Ordering}, Mutex}, thread, time::Duration};
 use tauri::{menu::{Menu, MenuItem}, tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent}, AppHandle, Manager, WebviewUrl, WebviewWindowBuilder, WindowEvent};
 use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
 
@@ -109,6 +109,26 @@ async fn desktop_save_recording(app: AppHandle, record: String, filename: String
     tauri::async_runtime::spawn_blocking(move || save_dialog(&app, &path, &filename)).await.map_err(|_| "文件保存失败")?
 }
 
+#[tauri::command]
+/// AI:保存当前图表的CSV快照。@param app 桌面实例；filename 默认名称；content UTF-8文本。@return true已保存、false已取消，失败保留原文件。
+async fn desktop_save_waveform(app: AppHandle, filename: String, content: String) -> Result<bool, String> {
+    if !filename.starts_with("MCUTOOL-") || !filename.ends_with(".csv") || filename.contains(['/', '\\', '\0']) || content.len() > 128 * 1024 * 1024 {
+        return Err("波形导出内容或名称不合法".into());
+    }
+    tauri::async_runtime::spawn_blocking(move || {
+        let target = app.dialog().file().add_filter("CSV 波形数据", &["csv"]).set_file_name(&filename).blocking_save_file();
+        let Some(target) = target else { return Ok(false); };
+        let target: PathBuf = target.into_path().map_err(|_| "所选保存位置不受支持")?;
+        let parent = target.parent().ok_or("保存位置不合法")?;
+        let mut file = tempfile::NamedTempFile::new_in(parent).map_err(|_| "保存目录不可写")?;
+        file.write_all(content.as_bytes()).map_err(|_| "波形数据写入失败，原文件保持")?;
+        file.flush().map_err(|_| "波形数据写入失败")?;
+        file.as_file().sync_all().map_err(|_| "波形数据保存失败")?;
+        file.persist(target).map_err(|_| "无法保存到所选位置，请检查文件占用或权限")?;
+        Ok(true)
+    }).await.map_err(|_| "波形导出失败")?
+}
+
 /// AI:原生线程维护会话，隐藏窗口不会暂停续约。@param app 桌面实例；backend 已验证后台。@return 无；错误后停止续约并提示，不自动恢复。
 fn keepalive(app: AppHandle, backend: Backend) {
     thread::spawn(move || loop {
@@ -148,7 +168,7 @@ fn main() {
             }
         }))
         .manage(DesktopState { backend: Mutex::new(None), error: Mutex::new(config_error.clone()), exit_pending: AtomicBool::new(false), exiting: AtomicBool::new(false), settings })
-        .invoke_handler(tauri::generate_handler![desktop_context, desktop_start_status, desktop_exit, desktop_stop, desktop_export, desktop_save_recording])
+        .invoke_handler(tauri::generate_handler![desktop_context, desktop_start_status, desktop_exit, desktop_stop, desktop_export, desktop_save_recording, desktop_save_waveform])
         .setup(move |app| {
             let window = WebviewWindowBuilder::new(app, "main", WebviewUrl::App("index.html".into()))
                 .title("MCU TOOL · 设备工作台").inner_size(1280.0, 900.0).min_inner_size(920.0, 680.0)

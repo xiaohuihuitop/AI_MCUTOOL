@@ -1,8 +1,9 @@
 import type { Sample } from './api'
 
-/** AI:沿用既有曲线连续性判据，超过此间隔的样本不连接、不积分，单位秒。 */
-export const MAX_SAMPLE_GAP = 2.5
+/** AI:10Hz下超过250ms代表采样中断，不连接、不积分，单位秒。 */
+export const MAX_SAMPLE_GAP = .25
 export type Point = { t: number; value: number | null; breakBefore: boolean }
+export type PointSource = { readonly length: number; at(index: number): Point | undefined }
 export type IntervalStats = { min: number; max: number; average: number; integral: number; duration: number }
 export type Domain = { low: number; high: number }
 
@@ -29,12 +30,12 @@ export function seriesFor(samples: Sample[], channel: string, deviceId: string, 
  * @param time 查询的设备采样秒数。
  * @returns 对应显示单位的读数，缺乏有效依据时为 null。
  */
-export function valueAt(points: Point[], time: number): number | null {
+export function valueAt(points: PointSource, time: number): number | null {
   let low = 0, high = points.length
-  while (low < high) { const mid = (low + high) >>> 1; if (points[mid].t < time) low = mid + 1; else high = mid }
-  const right = points[low]
+  while (low < high) { const mid = (low + high) >>> 1; if (points.at(mid)!.t < time) low = mid + 1; else high = mid }
+  const right = points.at(low)
   if (right?.t === time) return right.value
-  const left = points[low - 1]
+  const left = low > 0 ? points.at(low - 1) : undefined
   if (!left || !right || left.value === null || right.value === null || right.breakBefore || right.t - left.t > MAX_SAMPLE_GAP) return null
   return left.value + (right.value - left.value) * (time - left.t) / (right.t - left.t)
 }
@@ -45,17 +46,22 @@ export function valueAt(points: Point[], time: number): number | null {
  * @param end B 游标绝对采样秒数，必须大于 A。
  * @returns 完整区间结果或 null；电流积分单位为 mA·s，除以 3600 得到带符号 mAh。
  */
-export function intervalStats(points: Point[], start: number, end: number): IntervalStats | null {
+export function intervalStats(points: PointSource, start: number, end: number): IntervalStats | null {
   if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return null
   const first = valueAt(points, start), last = valueAt(points, end)
   if (first === null || last === null) return null
-  const rows = [{ t: start, value: first, breakBefore: false }, ...points.filter(point => point.t > start && point.t < end), { t: end, value: last, breakBefore: points.some(point => point.t === end && point.breakBefore) }]
   let integral = 0, min = first, max = first
-  for (let index = 1; index < rows.length; index++) {
-    const left = rows[index - 1], right = rows[index], dt = right.t - left.t
+  let left: Point = { t: start, value: first, breakBefore: false }
+  for (let index = 0; index <= points.length; index++) {
+    const point = points.at(index)
+    if (point && point.t <= start) continue
+    const right = !point || point.t >= end ? { t: end, value: last, breakBefore: point?.t === end && point.breakBefore } : point
+    const dt = right.t - left.t
     if (left.value === null || right.value === null || right.breakBefore || dt > MAX_SAMPLE_GAP) return null
     integral += (left.value + right.value) * dt / 2
     min = Math.min(min, right.value); max = Math.max(max, right.value)
+    if (right.t === end) break
+    left = right as Point
   }
   return { min, max, average: integral / (end - start), integral, duration: end - start }
 }
@@ -65,10 +71,11 @@ export function intervalStats(points: Point[], start: number, end: number): Inte
  * @param padding 最小留白，对应通道显示单位。
  * @returns 数据范围；无有效样本时为 null。
  */
-export function dataDomain(points: Point[], padding: number): Domain | null {
-  const values = points.filter(point => point.value !== null).map(point => point.value!)
-  if (!values.length) return null
-  const low = Math.min(...values), high = Math.max(...values), margin = Math.max((high - low) * .15, padding)
+export function dataDomain(points: PointSource, padding: number): Domain | null {
+  let low = Infinity, high = -Infinity
+  for (let i = 0; i < points.length; i++) { const value = points.at(i)!.value; if (value !== null) { low = Math.min(low, value); high = Math.max(high, value) } }
+  if (!Number.isFinite(low)) return null
+  const margin = Math.max((high - low) * .15, padding)
   return { low: low - margin, high: high + margin }
 }
 
@@ -78,14 +85,31 @@ export function dataDomain(points: Point[], padding: number): Domain | null {
  * @param y 读数到纵坐标的变换。
  * @returns SVG 路径，独立片段使用 M 开始。
  */
-export function linePath(points: Point[], x: (time: number) => number, y: (value: number) => number): string {
+export function linePath(points: PointSource, x: (time: number) => number, y: (value: number) => number, window?: Domain): string {
   let path = '', previous: Point | null = null
-  for (const point of points) {
-    if (point.value === null) { previous = null; continue }
-    const join = previous && !point.breakBefore && point.t - previous.t <= MAX_SAMPLE_GAP
-    path += `${join ? 'L' : 'M'}${x(point.t).toFixed(2)},${y(point.value).toFixed(2)} `
-    previous = point
+  let bucket = NaN, first: Point | null = null, last: Point | null = null, minimum: Point | null = null, maximum: Point | null = null, pen = false
+  // AI:每个横向像素保留首尾与极值，统计仍读原始点；断点依据压缩前的数据。
+  const flush = () => {
+    if (!first) return
+    const selected = [...new Set([first, minimum!, maximum!, last!])].sort((a,b) => a.t-b.t)
+    for (const point of selected) { path += `${pen ? 'L' : 'M'}${x(point.t).toFixed(2)},${y(point.value!).toFixed(2)} `; pen = true }
+    first = last = minimum = maximum = null
   }
+  for (let i = 0; i < points.length; i++) {
+    const point = points.at(i)!
+    if (window && point.t < window.low && i + 1 < points.length && points.at(i + 1)!.t < window.low) continue
+    if (point.value === null) { flush(); previous = null; pen = false; continue }
+    if (!previous || point.breakBefore || point.t - previous.t > MAX_SAMPLE_GAP) { flush(); pen = false }
+    const pixel = Math.floor(x(point.t))
+    if (pixel !== bucket) { flush(); bucket = pixel }
+    if (!first) first = minimum = maximum = point
+    last = point
+    if (point.value < minimum!.value!) minimum = point
+    if (point.value > maximum!.value!) maximum = point
+    previous = point
+    if (window && point.t > window.high) break
+  }
+  flush()
   return path
 }
 

@@ -51,3 +51,12 @@ export async function exportDiagnostics(): Promise<boolean> {
   setTimeout(() => URL.revokeObjectURL(url), 1000)
   return true
 }
+
+/** AI:保存当前图表的CSV原始采样。@param filename 默认文件名。@param parts UTF-8无BOM文本块。@returns 已保存/开始下载为true，原生取消为false。 */
+export async function saveWaveform(filename: string, parts: string[]): Promise<boolean> {
+  if (isDesktop) return desktopCommand<boolean>('desktop_save_waveform', { filename, content: parts.join('') })
+  const url = URL.createObjectURL(new Blob(parts, {type:'text/csv;charset=utf-8'}))
+  const link = document.createElement('a'); link.href = url; link.download = filename; link.click()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+  return true
+}

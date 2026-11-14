@@ -32,6 +32,10 @@ static int cal_state[6]; /* AI:0未校准、1有效记录、-1记录损坏，禁
 static SemaphoreHandle_t measure_mutex;
 static bool i2c_ready, ina_ready, ads_ready;
 
+#define MEASUREMENT_PERIOD_MS 100 /**< AI:六路固定每秒十轮，四路电压共用ADC依次转换。 */
+#define ADS1115_CONFIG 0x8583 /**< AI:单次转换、±2.048V、128SPS，四路转换及总线开销小于100ms。 */
+#define ADS1115_TIMEOUT_US 20000 /**< AI:单次转换最长名义约8.69ms，20ms后明确报告无效样本。 */
+
 /** AI:读取指定I2C寄存器。@param address 地址。@param reg 寄存器。@param data 输出。@param size 字节数。@return 总线错误。 */
 static esp_err_t read_register(uint8_t address, uint8_t reg, uint8_t *data, size_t size)
 {
@@ -112,9 +116,9 @@ static bool configure_ina(void)
 static void measurement_task(void *arg)
 {
     (void)arg;
-    vTaskDelay(pdMS_TO_TICKS(1200));
+    vTaskDelay(pdMS_TO_TICKS(MEASUREMENT_PERIOD_MS));
+    TickType_t cycle_tick = xTaskGetTickCount();
     while (true) {
-        int64_t cycle_start = esp_timer_get_time();
         uint8_t bus[2], shunt[2];
         bool ina_ok = i2c_ready && ina_ready &&
             read_register(TOOL_INA226_ADDRESS, TOOL_INA226_REG_BUS, bus, 2) == ESP_OK &&
@@ -132,12 +136,12 @@ static void measurement_task(void *arg)
         bool ads_cycle_ok = true;
         for (int channel = 0; channel < 4; channel++) {
             uint64_t start = esp_timer_get_time();
-            uint16_t config = 0x8503 | ((4 + channel) << 12);
+            uint16_t config = ADS1115_CONFIG | ((4 + channel) << 12);
             bool ok = i2c_ready && write_register(0x48, 0x01, config) == ESP_OK;
             bool ready = false;
             uint8_t data[2];
-            while (ok && esp_timer_get_time() - (int64_t)start < 220000) {
-                vTaskDelay(pdMS_TO_TICKS(5));
+            while (ok && esp_timer_get_time() - (int64_t)start < ADS1115_TIMEOUT_US) {
+                vTaskDelay(pdMS_TO_TICKS(1));
                 ok = read_register(0x48, 0x01, data, 2) == ESP_OK;
                 if (ok && (data[0] & 0x80)) { ready = true; break; }
             }
@@ -147,8 +151,8 @@ static void measurement_task(void *arg)
             ads_cycle_ok = ads_cycle_ok && ok;
         }
         ads_ready = ads_cycle_ok;
-        int64_t remaining = 1000000 - (esp_timer_get_time() - cycle_start);
-        if (remaining > 0) vTaskDelay(pdMS_TO_TICKS((remaining + 999) / 1000));
+        /* AI:相对固定节拍等待，正常总线时不累积每轮执行耗时造成的采样漂移。 */
+        xTaskDelayUntil(&cycle_tick, pdMS_TO_TICKS(MEASUREMENT_PERIOD_MS));
     }
 }
 
@@ -192,6 +196,7 @@ cJSON *tool_measure_status(void)
     cJSON_AddBoolToObject(out, "ina226_ready", ina_ready);
     cJSON_AddBoolToObject(out, "ads1115_ready", ads_ready);
     cJSON_AddBoolToObject(out, "hardware_accuracy_verified", false);
+    cJSON_AddNumberToObject(out, "sample_rate_hz", 1000 / MEASUREMENT_PERIOD_MS);
     return out;
 }
 

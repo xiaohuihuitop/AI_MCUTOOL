@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "desktopVersion": "0.4.0",
+  "exe": "C:/Users/admin/AppData/Local/MCU TOOL/mcutool-desktop.exe",
+  "pid": 354348,
+  "dataDir": "D:\\workspace\\MCU_ESP\\AI_MCUTOOL\\.mcutool",
+  "device": "MCUTOOL-68EE8F59EE9C",
+  "port": "COM40",
+  "batteryCount": 4850,
+  "desktopLeftOpen": true,
+  "latestReadingsFresh": true
+}

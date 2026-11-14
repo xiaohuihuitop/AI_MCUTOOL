@@ -45,12 +45,13 @@ class TestDevice:
                 self.state["revision"] += 1
         self.state["busy"] = any(a["state"] == "running" for a in self.actions.values())
         self.state["uptime_ms"] = int((now - self.started) * 1000)
-        if int(now - self.started) > self.sample_time:
-            self.sample_time = int(now - self.started)
+        # AI:按固定100ms生成测试样本，调用疏密不改变被测采样频率。
+        for tick in range(self.sample_time + 1, int((now - self.started) * 10) + 1):
+            self.sample_time = tick
             for channel, value, unit in (("battery_v", 3.9, "V"), ("battery_i", .012, "A"), ("ain1", 3.3, "V"), ("ain2", 1.8, "V"), ("ain3", 5.0, "V"), ("ain4", 0.003, "V")):
                 self.samples.append({"seq": len(self.samples) + 1, "boot_id": self.boot, "channel": channel,
                                      "value": value, "nominal": value, "unit": unit, "quality": "uncalibrated",
-                                     "t_us": self.state["uptime_ms"] * 1000, "window_start_us": max(0, self.state["uptime_ms"] * 1000 - 1192000),
+                                     "t_us": tick * 100000, "window_start_us": max(0, tick * 100000 - 149000),
                                      "window_estimated": True, "calibration_revision": 0})
 
     async def request(self, request: dict) -> dict:
@@ -88,7 +89,7 @@ class TestDevice:
     def execute(self, method, params, controller):
         """AI:执行测试对端公开动作。@param method 方法；params 参数；controller 控制者。@return 结果。"""
         if method == "device.info":
-            return {"device_id": self.device_id, "boot_id": self.boot, "protocol_version": 1, "firmware_version": "test-0.1.1",
+            return {"device_id": self.device_id, "boot_id": self.boot, "protocol_version": 1, "firmware_version": "test-0.1.2", "measurement": {"sample_rate_hz": 10},
                     "measurement": {"battery_sensor": "INA226", "shunt_ohms": 0.02, "current_lsb_a": 0.000125, "battery_voltage_lsb_v": 0.00125},
                     "test_device": True, "capabilities": ["power.select", "keys.run", "charge.set", "telemetry.read", "uart.write"],
                     "limits": {"keys": 5, "max_steps": 128, "max_sequence_ms": 600000, "hardware_verified": False}}
