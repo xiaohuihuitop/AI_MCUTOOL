@@ -54,8 +54,10 @@ export async function exportDiagnostics(): Promise<boolean> {
 
 /** AI:保存当前图表的CSV原始采样。@param filename 默认文件名。@param parts UTF-8无BOM文本块。@returns 已保存/开始下载为true，原生取消为false。 */
 export async function saveWaveform(filename: string, parts: string[]): Promise<boolean> {
-  if (isDesktop) return desktopCommand<boolean>('desktop_save_waveform', { filename, content: parts.join('') })
-  const url = URL.createObjectURL(new Blob(parts, {type:'text/csv;charset=utf-8'}))
+  // AI:仅在导出文件边界添加UTF-8标记，让表格软件直接打开时正确识别中文。
+  const csvParts = ['\uFEFF', ...parts]
+  if (isDesktop) return desktopCommand<boolean>('desktop_save_waveform', { filename, content: csvParts.join('') })
+  const url = URL.createObjectURL(new Blob(csvParts, {type:'text/csv;charset=utf-8'}))
   const link = document.createElement('a'); link.href = url; link.download = filename; link.click()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
   return true

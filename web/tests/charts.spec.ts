@@ -1,6 +1,12 @@
 import { test, expect, type Page, type WebSocketRoute } from '@playwright/test'
 import type { Sample } from '../src/api'
 
+/** AI:模拟中文Windows直接打开CSV时按编码标记识别UTF-8，否则按系统中文编码读取。@param bytes 实际导出字节。@returns 表格软件读取的文本。 */
+function spreadsheetCsv(bytes: Uint8Array) {
+  const utf8 = bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf
+  return new TextDecoder(utf8 ? 'utf-8' : 'gbk').decode(bytes)
+}
+
 /** AI:构造明确标识的浏览器测量夹具，不访问真实设备。@param boot 当前启动标识。@param gap 是否注入电流缺口。@param end 最后采样秒数。@returns 状态及推送帧。 */
 function fixture(boot='chart-boot',gap=false,end=120) {
   const samples:Sample[]=[]
@@ -153,7 +159,7 @@ test('两组暂停、清空和导出独立，隐藏通道仍导出',async({page}
   await battery.getByRole('button',{name:'导出',exact:true}).click()
   const download=await downloadPromise
   const file=testInfo.outputPath('电池波形.csv');await download.saveAs(file)
-  const {readFile}=await import('node:fs/promises'),csv=await readFile(file,'utf8')
+  const {readFile}=await import('node:fs/promises'),csv=spreadsheetCsv(await readFile(file))
   expect(csv.startsWith('设备,启动')).toBe(true)
   expect(csv.trim().split('\n')).toHaveLength(2403)
   expect(csv).toContain('"battery_i","0.012","A"')
@@ -170,11 +176,38 @@ test('两组暂停、清空和导出独立，隐藏通道仍导出',async({page}
   const auxDownload=page.waitForEvent('download')
   await aux.getByRole('button',{name:'导出',exact:true}).click()
   const auxFile=testInfo.outputPath('四路电压波形.csv');await (await auxDownload).saveAs(auxFile)
-  const auxCsv=await readFile(auxFile,'utf8')
+  const auxCsv=spreadsheetCsv(await readFile(auxFile))
+  expect(auxCsv.startsWith('设备,启动')).toBe(true)
   expect(auxCsv).toContain('"ain2","1.8","V"');expect(auxCsv).not.toContain('battery_')
   await aux.getByRole('button',{name:'清空',exact:true}).click()
   await expect(aux.locator('.waveform-state')).toHaveAttribute('data-count','0')
   await expect(battery.locator('.waveform-state')).toHaveAttribute('data-count','20')
+})
+
+test('桌面波形导出可识别中文编码且原始时间、数值和单位保持一致',async({page})=>{
+  const exports:{filename:string;content:string}[]=[]
+  await page.exposeFunction('captureWaveform',(args:{filename:string;content:string})=>{exports.push(args);return true})
+  await page.addInitScript(()=>{
+    // AI:只替换原生保存对话框，沿用实际图表、CSV生成和桌面调用链。
+    (window as any).__TAURI__={core:{invoke:async(command:string,args:any)=>{
+      if(command==='desktop_context') return {session_id:'chart-session',client_id:'chart-client',instance_id:'chart-runtime'}
+      if(command==='desktop_save_waveform') return (window as any).captureWaveform(args)
+      throw new Error(`未预期的桌面命令：${command}`)
+    }}}
+  })
+  await openChart(page)
+  for(const mode of ['battery','aux']) {
+    if(mode==='aux') await page.getByRole('button',{name:'四路电压',exact:true}).click()
+    await page.locator(`[data-mode="${mode}"]`).getByRole('button',{name:'导出',exact:true}).click()
+    await expect.poll(()=>exports.length).toBe(mode==='battery'?1:2)
+    const csv=spreadsheetCsv(Buffer.from(exports.at(-1)!.content,'utf8'))
+    expect(csv.split('\r\n')[0]).toBe('设备,启动,采样时间_s,相对时间_s,通道,数值,单位,质量,前方断点')
+    const rows=csv.trim().split('\r\n').slice(1).map(row=>row.slice(1,-1).split('","'))
+    expect(rows).toHaveLength(1201*(mode==='battery'?2:4))
+    expect(rows.every(row=>row.length===9)).toBe(true)
+    expect(rows[0]).toEqual(['CHART-TEST','chart-boot','0.000000','0.000000',mode==='battery'?'battery_v':'ain1',mode==='battery'?'3.9':'3.3','V','uncalibrated','0'])
+    expect(rows.at(-1)!.slice(2,7)).toEqual(['120.000000','120.000000',mode==='battery'?'battery_i':'ain4',mode==='battery'?'0.012':'0.003',mode==='battery'?'A':'V'])
+  }
 })
 
 test('三小时以上的10Hz波形可交互并从原始采样计算电量',async({page},testInfo)=>{
