@@ -63,13 +63,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps
 | 数据与原始记录 | `%LOCALAPPDATA%/MCU_TOOL/data/`；存在`desktop.json`时沿用其`data_dir` |
 | 桌面配置 | `%LOCALAPPDATA%/MCU_TOOL/desktop.json` |
 | 接入配置、下载与备份 | `%LOCALAPPDATA%/MCU_TOOL/setup/` |
-| Codex Skill | 新安装使用`~/.agents/skills/mcu-assistant-tool/`；已有`~/.codex/skills/`同名副本时原地更新 |
+| Codex Skill | 新安装使用`~/.agents/skills/xhh-mcu-tool/`；已有`~/.codex/skills/`同名副本时原地更新 |
 
 桌面与MCP必须使用**同一数据目录**。本开发机的绝对路径不适用于其他电脑，安装脚本会按目标电脑生成配置。
 
 ## AI如何操作工具
 
-安装后先读[配套Skill](integrations/skill/mcu-assistant-tool/SKILL.md)，按具体任务读取[操作参数与异常处理](integrations/skill/mcu-assistant-tool/references/operations.md)或[测量与区间分析](integrations/skill/mcu-assistant-tool/references/measurements.md)。工具名以当前客户端显示的命名空间和schema为准。
+安装后先读[配套Skill](integrations/skill/xhh-mcu-tool/SKILL.md)，按具体任务读取[操作参数与异常处理](integrations/skill/xhh-mcu-tool/references/operations.md)或[测量与区间分析](integrations/skill/xhh-mcu-tool/references/measurements.md)。工具名以当前客户端显示的命名空间和schema为准。
 
 | 步骤 | 接口与完成依据 |
 | --- | --- |

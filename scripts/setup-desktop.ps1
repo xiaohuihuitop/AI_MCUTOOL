@@ -197,15 +197,15 @@ $mcpPath = Join-Path $IntegrationDirectory 'mcp-config.json'
 Write-Utf8 $mcpPath ($mcp | ConvertTo-Json -Depth 5)
 
 if (-not $SkillDirectory) {
-    $oldSkill = Join-Path $env:USERPROFILE '.codex/skills/mcu-assistant-tool'
-    $SkillDirectory = if (Test-Path -LiteralPath $oldSkill) { $oldSkill } else { Join-Path $env:USERPROFILE '.agents/skills/mcu-assistant-tool' }
+    $oldSkill = Join-Path $env:USERPROFILE '.codex/skills/xhh-mcu-tool'
+    $SkillDirectory = if (Test-Path -LiteralPath $oldSkill) { $oldSkill } else { Join-Path $env:USERPROFILE '.agents/skills/xhh-mcu-tool' }
 }
 $SkillDirectory = [IO.Path]::GetFullPath($SkillDirectory)
-$skillSource = Join-Path $projectRoot 'integrations/skill/mcu-assistant-tool'
+$skillSource = Join-Path $projectRoot 'integrations/skill/xhh-mcu-tool'
 $backupDirectory = Join-Path $IntegrationDirectory ('backups/'+[Guid]::NewGuid().ToString('N'))
 if (Test-Path -LiteralPath $SkillDirectory) {
     New-Item -ItemType Directory -Path $backupDirectory -Force | Out-Null
-    Copy-Item -LiteralPath $SkillDirectory -Destination (Join-Path $backupDirectory 'mcu-assistant-tool') -Recurse
+    Copy-Item -LiteralPath $SkillDirectory -Destination (Join-Path $backupDirectory 'xhh-mcu-tool') -Recurse
 }
 New-Item -ItemType Directory -Path $SkillDirectory -Force | Out-Null
 Get-ChildItem -LiteralPath $skillSource | Copy-Item -Destination $SkillDirectory -Recurse -Force

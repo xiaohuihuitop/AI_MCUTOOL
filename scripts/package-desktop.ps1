@@ -22,8 +22,8 @@ Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/软件验证证据/固定10
 Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/软件验证证据/发布-0.4.1') -Destination $evidence -Recurse
 $skillTarget = Join-Path $destination 'integrations/skill'
 New-Item -ItemType Directory -Path $skillTarget -Force | Out-Null
-Copy-Item -LiteralPath (Join-Path $projectRoot 'integrations/skill/mcu-assistant-tool') -Destination $skillTarget -Recurse
-Compress-Archive -LiteralPath (Join-Path $skillTarget 'mcu-assistant-tool') -DestinationPath (Join-Path $destination ('MCUTOOL-Skill-' + $version + '.zip'))
+Copy-Item -LiteralPath (Join-Path $projectRoot 'integrations/skill/xhh-mcu-tool') -Destination $skillTarget -Recurse
+Compress-Archive -LiteralPath (Join-Path $skillTarget 'xhh-mcu-tool') -DestinationPath (Join-Path $destination ('MCUTOOL-Skill-' + $version + '.zip'))
 $utf8 = [Text.UTF8Encoding]::new($false)
 $hash = (Get-FileHash -LiteralPath $installer -Algorithm SHA256).Hash.ToLowerInvariant()
 <# AI:仓库安装入口必须绑定本次真实安装器，拒绝打包过期摘要。 #>

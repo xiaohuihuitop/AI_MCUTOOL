@@ -71,6 +71,6 @@ def test_existing_runtime_probe_and_skill_install_are_isolated(tmp_path):
     assert Path(service['command']).is_file()
     assert service['args'][0:2]==['mcp','--data-dir']
     assert Path(service['args'][2]).is_absolute()
-    for source in (ROOT/'integrations/skill/mcu-assistant-tool').rglob('*'):
+    for source in (ROOT/'integrations/skill/xhh-mcu-tool').rglob('*'):
         if source.is_file():
-            assert (skill/source.relative_to(ROOT/'integrations/skill/mcu-assistant-tool')).read_bytes()==source.read_bytes()
+            assert (skill/source.relative_to(ROOT/'integrations/skill/xhh-mcu-tool')).read_bytes()==source.read_bytes()

@@ -12,7 +12,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps
 
 仓库为私有时，默认使用Git已有的GitHub凭据；显式 `-Auth Token` 使用环境变量 `GH_TOKEN`，`-Auth Anonymous` 适用于公开访问。下载失败直接报告，不切换协议、镜像或其他版本。已下载发布安装器和同名`.sha256`时，用 `-PackageDirectory <目录>`。
 
-安装器包含后台运行环境及WebView2离线安装程序。脚本复用同版本安装，安装Skill、生成绝对路径 `mcp-config.json`、只读MCP `ping`核对版本与工具。`-ConfigureCodex`调用官方CLI更新`mcutool`条目并备份原配置，不改其他服务；Codex命令未在PATH时传`-CodexCommand <完整路径>`。省略该选项则只生成通用MCP配置，AI按客户端类型合并。Skill沿用已有`.codex/skills/mcu-assistant-tool`，新安装使用`.agents/skills/mcu-assistant-tool`，避免两个位置出现同名副本。
+安装器包含后台运行环境及WebView2离线安装程序。脚本复用同版本安装，安装Skill、生成绝对路径 `mcp-config.json`、只读MCP `ping`核对版本与工具。`-ConfigureCodex`调用官方CLI更新`mcutool`条目并备份原配置，不改其他服务；Codex命令未在PATH时传`-CodexCommand <完整路径>`。省略该选项则只生成通用MCP配置，AI按客户端类型合并。Skill沿用已有`.codex/skills/xhh-mcu-tool`，新安装使用`.agents/skills/xhh-mcu-tool`，避免两个位置出现同名副本。
 
 运行中旧版须正常结束任务与记录后升级，脚本不强杀使用者。脚本不会连接工具板、申请操作权或烧录固件。成功输出包括实际程序、数据目录、Skill和MCP配置路径；MCP配置变更后按客户端要求重新载入或重新开始会话。
 
@@ -31,7 +31,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps
 }
 ```
 
-4. 脚本会安装整个Skill；手动安装时将 `mcu-assistant-tool` 文件夹放进客户端Skill目录，保留`references/`和`agents/`。Codex新安装采用用户`.agents/skills/`，本机已有`.codex/skills/`副本时原地更新。其他客户端使用各自安装方式。
+4. 脚本会安装整个Skill；手动安装时将 `xhh-mcu-tool` 文件夹放进客户端Skill目录，保留`references/`和`agents/`。Codex新安装采用用户`.agents/skills/`，本机已有`.codex/skills/`副本时原地更新。其他客户端使用各自安装方式。
 5. MCP 可用后先调用 `ping()`、`runtime_status()`，再 `connect()` 附着。桌面已经连接工具板时复用它；没有连接时只返回未连接状态，不自行选硬件。
 
 软件升级先按桌面流程正常退出旧版及共享后台，再安装新版。版本不一致时先统一软件版本，不绕过版本检查。

@@ -46,7 +46,7 @@ $packageReadme = @'
 - [桌面版说明](docs/桌面版使用说明.md)与[桌面验证报告](docs/桌面版验证报告.md)
 - [Wi-Fi连接修复记录](docs/Wi-Fi连接修复记录.md)
 - [INA226实板检查与测量限制](docs/INA226实板启动与测量限制.md)
-- [AI使用Skill](integrations/skill/mcu-assistant-tool/SKILL.md)
+- [AI使用Skill](integrations/skill/xhh-mcu-tool/SKILL.md)
 - [MCP配置示例](integrations/mcp.example.json)：移动后需调整两个绝对路径。
 
 本次固件位于 `firmware/build/`。`manifest.json` 包含每个交付文件的SHA256。启动不会自动连接硬件或开启输出；已完成首板USB启动、真实Wi-Fi连接及只读采集检查，量化电气与精度验收尚未完成。

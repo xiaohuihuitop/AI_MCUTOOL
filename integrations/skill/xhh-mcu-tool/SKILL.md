@@ -1,5 +1,5 @@
 ---
-name: mcu-assistant-tool
+name: xhh-mcu-tool
 description: 使用 MCU TOOL 辅助板进行按键、供电与充电通路控制、3.3V UART交互，以及电压电流观察、记录和区间电量分析。通过共享MCP与桌面共用设备；不用于MCU烧录、SWD、RTT或外部电源调压。
 metadata:
   version: "0.4.1"
