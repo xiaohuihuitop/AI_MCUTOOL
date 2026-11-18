@@ -4,6 +4,8 @@
 
 ## 版本与下载
 
+此分支用于 [0.6.0-rc.1 三路开关时序预发布](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.6.0-rc.1)。配套固件为 0.1.4，已通过实板空载测试，带载边沿待验收。使用预发布资产时，下载安装器和同名校验文件，按下文离线方式指定 `-PackageDirectory`。三路组合和完成、取消状态的实例见[设备协议](protocol/设备协议.md#三路开关板上时序固件-014)。
+
 **桌面／后台／MCP：0.5.0；工具板固件：0.1.3。** [下载正式版本](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.5.0) · [版本列表](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases)。当前仓库为私有，克隆和下载需要有仓库访问权限的GitHub账号。
 
 六路固定每路每秒10次。电池电压、电流共用双轴图；四路电压另有独立页面，支持每路比例、偏移、颜色和曲线显隐。两组分别开始/暂停、清空、导出CSV，保留最近4小时完整采样；电池图支持A/B游标、极值、时间加权平均与区间净电量。详细规则见[图表使用说明](docs/上位机界面与图表使用说明.md)。
