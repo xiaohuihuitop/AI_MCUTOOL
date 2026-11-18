@@ -89,8 +89,8 @@ class TestDevice:
     def execute(self, method, params, controller):
         """AI:执行测试对端公开动作。@param method 方法；params 参数；controller 控制者。@return 结果。"""
         if method == "device.info":
-            return {"device_id": self.device_id, "boot_id": self.boot, "protocol_version": 1, "firmware_version": "test-0.1.2", "measurement": {"sample_rate_hz": 10},
-                    "measurement": {"battery_sensor": "INA226", "shunt_ohms": 0.02, "current_lsb_a": 0.000125, "battery_voltage_lsb_v": 0.00125},
+            return {"device_id": self.device_id, "boot_id": self.boot, "protocol_version": 1, "firmware_version": "test-0.1.2",
+                    "measurement": {"sample_rate_hz": 10, "battery_sensor": "INA226", "shunt_ohms": 0.02, "current_lsb_a": 0.000125, "battery_voltage_lsb_v": 0.00125},
                     "test_device": True, "capabilities": ["power.select", "keys.run", "charge.set", "telemetry.read", "uart.write"],
                     "limits": {"keys": 5, "max_steps": 128, "max_sequence_ms": 600000, "hardware_verified": False}}
         if method == "device.status":

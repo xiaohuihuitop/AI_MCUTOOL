@@ -19,6 +19,7 @@ test('网页、共享MCP和记录器完整闭环', async ({ page, browser }, tes
   await page.getByLabel('访问令牌',{exact:true}).fill('fixture')
   await page.getByRole('button',{name:'连接工具',exact:true}).click()
   await expect(page.getByLabel('设备地址',{exact:true})).toHaveValue('http://127.0.0.1:28767')
+  await expect(page.locator('[data-mode="battery"] .waveform-state')).toContainText('10 Hz')
   await page.getByRole('button',{name:'申请操作权',exact:true}).click()
   await page.getByRole('button',{name:'真实电池',exact:true}).click()
   await expect(page.locator('.notice')).toContainText('供电选择：已完成')
