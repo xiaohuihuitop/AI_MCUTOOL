@@ -1,6 +1,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod backend;
+mod updates;
 use backend::{Backend, Settings};
 use serde_json::{json, Value};
 use std::{io::Write, path::PathBuf, sync::{atomic::{AtomicBool, Ordering}, Mutex}, thread, time::Duration};
@@ -12,6 +13,7 @@ struct DesktopState {
     error: Mutex<Option<String>>,
     // AI:请求门闩与最终退出分开，后台拒绝退出时不能停止原生续约。
     exit_pending: AtomicBool,
+    checking_update: AtomicBool,
     exiting: AtomicBool,
     settings: Settings,
 }
@@ -160,6 +162,7 @@ fn main() {
     let hidden = settings.hidden;
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_single_instance::init(|app, args, _| {
             let state = app.state::<DesktopState>();
             match Settings::load(&args.into_iter().skip(1).collect::<Vec<_>>()) {
@@ -167,7 +170,7 @@ fn main() {
                 _ => show_error(app, "工作台已打开。若要改用其他记录目录，请先明确退出当前桌面端。"),
             }
         }))
-        .manage(DesktopState { backend: Mutex::new(None), error: Mutex::new(config_error.clone()), exit_pending: AtomicBool::new(false), exiting: AtomicBool::new(false), settings })
+        .manage(DesktopState { backend: Mutex::new(None), error: Mutex::new(config_error.clone()), exit_pending: AtomicBool::new(false), checking_update: AtomicBool::new(false), exiting: AtomicBool::new(false), settings })
         .invoke_handler(tauri::generate_handler![desktop_context, desktop_start_status, desktop_exit, desktop_stop, desktop_export, desktop_save_recording, desktop_save_waveform])
         .setup(move |app| {
             let window = WebviewWindowBuilder::new(app, "main", WebviewUrl::App("index.html".into()))
@@ -187,10 +190,11 @@ fn main() {
                 }
             });
             let show = MenuItem::with_id(app, "show", "显示工作台", true, None::<&str>)?;
+            let update = MenuItem::with_id(app, "update", "检查更新…", true, None::<&str>)?;
             let export = MenuItem::with_id(app, "export", "导出诊断日志…", true, None::<&str>)?;
             let exit = MenuItem::with_id(app, "exit", "退出桌面端（后台继续运行）", true, None::<&str>)?;
             let stop = MenuItem::with_id(app, "stop", "停止后台并退出", true, None::<&str>)?;
-            let menu = Menu::with_items(app, &[&show, &export, &exit, &stop])?;
+            let menu = Menu::with_items(app, &[&show, &update, &export, &exit, &stop])?;
             let tray = TrayIconBuilder::with_id("main").icon(app.default_window_icon().ok_or("缺少应用图标")?.clone())
                 .tooltip("MCU TOOL · 关闭窗口后继续运行").menu(&menu).show_menu_on_left_click(false)
                 .on_tray_icon_event(|tray, event| {
@@ -199,6 +203,7 @@ fn main() {
                 .on_menu_event(|app, event| {
                     let action = event.id.as_ref().to_owned();
                     if action == "show" { show_main(app); return; }
+                    if action == "update" { updates::check(app.clone(), true); return; }
                     let handle = app.clone();
                     tauri::async_runtime::spawn_blocking(move || {
                         let result = match action.as_str() {
@@ -221,6 +226,7 @@ fn main() {
                             let address = backend.info.url.parse();
                             if let Ok(mut target) = state.backend.lock() { *target = Some(backend.clone()); }
                             keepalive(handle.clone(), backend);
+                            if !state.settings.test_mode { updates::check(handle.clone(), false); }
                             if let (Some(window), Ok(address)) = (handle.get_webview_window("main"), address) {
                                 if window.navigate(address).is_err() {
                                     if let Ok(mut error) = state.error.lock() { *error = Some("工作台页面打开失败，请退出桌面端后重新打开".into()); }

@@ -4,6 +4,12 @@
   "version": "0.5.0",
   "identifier": "cn.mcutool.desktop",
   "build": {"frontendDist": "../loading"},
+  "plugins": {"updater": {
+    "pubkey": "",
+    "endpoints": ["https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/latest"],
+    "requireSignedVersion": true,
+    "windows": {"installMode": "passive"}
+  }},
   "app": {
     "withGlobalTauri": true,
     "windows": [],

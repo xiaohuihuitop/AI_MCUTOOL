@@ -40,6 +40,29 @@ def submit(http, headers, request_id, method, params):
     return http.post("/api/commands", headers=headers, json={"request_id": request_id, "method": method, "params": params})
 
 
+def test_update_shutdown_leaves_recording_and_active_action_running(tmp_path):
+    """AI:安装前的退出检查保护录制及在途动作。@param tmp_path 测试目录。@return 无。"""
+    device = TestDevice()
+    app = create_app(tmp_path, token="update-test", transport_factory=lambda _: device, test_mode=True)
+    acknowledged = []
+    app.state.shutdown_callback = lambda: acknowledged.append(True)
+    with TestClient(app) as http:
+        auth = {"Authorization": "Bearer update-test"}
+        session = http.post("/api/sessions", headers=auth, json={"name":"升级测试","kind":"desktop"}).json()
+        headers = {**auth, "X-Session-ID": session["session_id"]}
+        assert http.post("/api/connect", headers=headers, json={"kind":"http","address":"http://test","token":"fixture"}).is_success
+        assert http.post("/api/control/claim", headers=headers, json={}).is_success
+        assert http.post("/api/recording/start", headers=headers, json={}).is_success
+        assert http.post("/api/runtime/shutdown", headers=headers).json()["error"]["code"] == "BUSY"
+        assert http.get("/api/status", headers=headers).json()["recording"]["state"] == "recording"
+        assert http.post("/api/recording/stop", headers=headers, json={}).is_success
+        assert submit(http, headers, "held", "keys.run", {"steps":[{"mask":1,"duration_ms":500}], "repeat":1}).is_success
+        assert http.post("/api/runtime/shutdown", headers=headers).json()["error"]["code"] == "BUSY"
+        assert not acknowledged and wait_job(http, headers, "held")["state"] == "succeeded"
+        assert http.post("/api/runtime/shutdown", headers=headers).json()["shutdown_requested"]
+        assert acknowledged == [True]
+
+
 def test_request_id_deduplicates_and_conflicting_content_is_rejected(connected):
     """AI:重复请求不能产生第二次实体动作。@param connected 已连接夹具。@return 无。"""
     http, a, _, device, _ = connected

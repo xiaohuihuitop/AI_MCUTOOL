@@ -8,6 +8,17 @@ if (-not (Test-Path -LiteralPath $pythonPath) -or -not (Test-Path -LiteralPath (
     throw '缺少项目Python环境或Rust构建工具，请先按桌面版说明准备环境'
 }
 $env:PATH = $cargoBin + ';' + $env:PATH
+# AI:可分发安装器需内嵌公钥，并由 Tauri 将同一版本写入签名；仅构建程序仍可用于本地开发。
+if (-not $NoInstaller) {
+    if (-not $env:MCUTOOL_UPDATE_PUBLIC_KEY -or -not $env:TAURI_SIGNING_PRIVATE_KEY) {
+        throw '构建可更新安装器需要 MCUTOOL_UPDATE_PUBLIC_KEY 和 TAURI_SIGNING_PRIVATE_KEY（私钥或私钥文件路径）'
+    }
+    $runDirectory = Join-Path $projectRoot ('docs/temp/signed-bundle-' + [Guid]::NewGuid().ToString('N'))
+    New-Item -ItemType Directory -Path $runDirectory -Force | Out-Null
+    $signConfig = Join-Path $runDirectory 'updater.json'
+    $config = @{plugins=@{updater=@{pubkey=$env:MCUTOOL_UPDATE_PUBLIC_KEY.Trim()}};bundle=@{createUpdaterArtifacts=$true}}
+    [IO.File]::WriteAllText($signConfig, ($config | ConvertTo-Json -Depth 5), [Text.UTF8Encoding]::new($false))
+}
 Push-Location $projectRoot
 try {
     Push-Location web
@@ -24,6 +35,7 @@ try {
     try {
         $buildArgs = @('exec','--','tauri','build','--ci','--target','x86_64-pc-windows-msvc')
         if ($NoInstaller) { $buildArgs += '--no-bundle' }
+        else { $buildArgs += @('--config', $signConfig) }
         $buildArgs += @('--','--locked')
         & npm.cmd @buildArgs
         if ($LASTEXITCODE -ne 0) { throw '桌面程序或安装器构建失败' }
