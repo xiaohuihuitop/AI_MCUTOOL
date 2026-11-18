@@ -23,12 +23,27 @@ test('网页、共享MCP和记录器完整闭环', async ({ page, browser }, tes
   await page.getByRole('button',{name:'申请操作权',exact:true}).click()
   await page.getByRole('button',{name:'真实电池',exact:true}).click()
   await expect(page.locator('.notice')).toContainText('供电选择：已完成')
-  await page.getByRole('switch',{name:'充电器通路'}).click()
-  await expect(page.getByRole('switch',{name:'充电器通路'})).toHaveAttribute('aria-checked','true')
-  await expect(page.getByRole('button',{name:'外部电源',exact:true})).toBeDisabled()
-  await expect(page.getByRole('button',{name:'关闭',exact:true})).toBeDisabled()
-  await page.getByRole('switch',{name:'充电器通路'}).click()
-  await expect(page.getByRole('switch',{name:'充电器通路'})).toHaveAttribute('aria-checked','false')
+  const charge = page.getByRole('switch',{name:'充电器通路'})
+  const chargeHint = page.getByText('切换或关闭主供电前，请先关闭充电。',{exact:true})
+  const description = page.getByText('仅真实电池通路允许充电。通路关闭后，设备电容仍可能有余电。',{exact:true})
+  for (const width of [1440, 320]) {
+    await page.setViewportSize({width,height:1080})
+    await charge.scrollIntoViewIfNeeded()
+    const target = (await charge.boundingBox())!
+    const below = await description.boundingBox()
+    for (const enabled of [true,false,true,false]) {
+      // AI:定位器点击会自动追踪移动的开关，这里重复点击用户最初对准的位置。
+      await page.mouse.click(target.x + target.width/2, target.y + target.height/2)
+      await expect(charge).toHaveAttribute('aria-checked',String(enabled))
+      await expect(chargeHint).toBeVisible({visible:enabled})
+      expect(await charge.boundingBox()).toEqual(target)
+      expect(await description.boundingBox()).toEqual(below)
+      for (const name of ['外部电源','关闭']) {
+        await expect(page.getByRole('button',{name,exact:true})).toBeEnabled({enabled:!enabled})
+      }
+    }
+  }
+  await page.setViewportSize({width:1440,height:1080})
   await page.getByLabel('按下 / ms',{exact:true}).fill('3000')
   await page.getByRole('button',{name:'执行按键',exact:true}).click()
   await page.getByRole('button',{name:'取消',exact:true}).click()

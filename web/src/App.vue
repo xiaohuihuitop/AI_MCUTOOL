@@ -192,7 +192,8 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
         <aside class="control-column">
           <section class="panel power-panel"><div class="panel-title"><h2><Power :size="18"/>供电与充电</h2><span class="badge" :class="{teal:board.power && board.power!=='off'}">{{ state?.connected ? powerNames[board.power] : '未读取' }}</span></div>
             <label class="field-label">主供电通路</label><div class="power-options"><button v-for="source in ['off','battery','external']" :key="source" :class="{selected:board.power===source && connected}" :disabled="!canWrite || powerBusy || (!!board.charge && source!=='battery')" @click="command('power.select',{source})"><span class="radio-indicator"></span>{{ powerNames[source] }}</button></div>
-            <p v-if="board.power_switching" class="hint">正在先断后通，请等待切换结束。</p><p v-if="board.charge" class="hint amber">切换或关闭主供电前，请先关闭充电。</p>
+            <p v-if="board.power_switching" class="hint">正在先断后通，请等待切换结束。</p>
+            <p class="hint amber" :style="{visibility:board.charge ? 'visible' : 'hidden'}">切换或关闭主供电前，请先关闭充电。</p>
             <div class="charge-row"><div><strong>充电器通路</strong><small>独立 5V 输入</small></div><button class="switch" role="switch" :aria-checked="!!board.charge" aria-label="充电器通路" :class="{on:board.charge}" :disabled="!canWrite || powerBusy || (!board.charge && board.power!=='battery')" @click="command('charge.set',{enabled:!board.charge})"><span></span></button></div>
             <p class="hint">仅真实电池通路允许充电。通路关闭后，设备电容仍可能有余电。</p>
             <div class="rating-line"><span>主通路目标 <b>2.8–12V / 3A</b></span><span>充电目标 <b>5V / 2A</b></span></div>
