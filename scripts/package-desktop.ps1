@@ -5,15 +5,12 @@ $version = (Get-Content -Raw -LiteralPath (Join-Path $projectRoot 'desktop/packa
 $installerDir = Join-Path $projectRoot 'desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis'
 $installers = @(Get-ChildItem -LiteralPath $installerDir -File -Filter "*_${version}_x64-setup.exe")
 if ($installers.Count -ne 1) { throw '未找到当前版本的唯一Windows x64安装器，请先完成桌面构建' }
-$signaturePath = $installers[0].FullName + '.sig'
-if (-not (Test-Path -LiteralPath $signaturePath -PathType Leaf)) { throw '当前安装器缺少更新签名，请使用正式签名配置重新构建' }
 $releaseRoot = Join-Path $projectRoot 'release'
 $destination = Join-Path $releaseRoot ('MCUTOOL-Desktop-' + $version + '-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
 if (Test-Path -LiteralPath $destination) { throw '交付目录已存在，不覆盖已有产物' }
 New-Item -ItemType Directory -Path $destination | Out-Null
 $installer = Join-Path $destination ('MCUTOOL-' + $version + '-windows-x64-setup.exe')
 Copy-Item -LiteralPath $installers[0].FullName -Destination $installer
-Copy-Item -LiteralPath $signaturePath -Destination ($installer + '.sig')
 foreach ($file in @('README.md','AGENTS.md','docs/桌面版使用说明.md','docs/软件使用说明.md','docs/上位机界面与图表使用说明.md','docs/固定10Hz与长时间波形验证报告.md','docs/0.4.1发布与验证说明.md','docs/INA226实板启动与测量限制.md','docs/Wi-Fi连接修复记录.md','integrations/mcp.desktop.example.json','integrations/desktop-release.json','scripts/setup-desktop.ps1','scripts/flash-firmware.ps1','firmware/build/ai_mcutool.bin','firmware/build/bootloader/bootloader.bin','firmware/build/partition_table/partition-table.bin','firmware/build/flash_args')) {
     $target = Join-Path $destination $file
     New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null

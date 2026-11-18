@@ -1,11 +1,11 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "MCU TOOL",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "identifier": "cn.mcutool.desktop",
   "build": {"frontendDist": "../loading"},
   "plugins": {"updater": {
-    "pubkey": "",
+    "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDUxQjcyRTFEQTNERUE5MjIKUldRaXFkNmpIUzYzVVc5N1NBOE9Da0dGTzZ2QUhyaHVYOUZtbVdFQkN5MlNYQTN2N0xKenVVL1UK",
     "endpoints": ["https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/latest"],
     "requireSignedVersion": true,
     "windows": {"installMode": "passive"}

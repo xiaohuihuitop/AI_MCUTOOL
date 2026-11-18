@@ -7,7 +7,7 @@
 取得完整仓库且用户要求安装/接入时，优先运行仓库根目录下的 `scripts/setup-desktop.ps1`，不要默认构建源码。它支持Windows自带PowerShell 5.1，读取 `integrations/desktop-release.json` 中的版本与SHA256：
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -ConfigureCodex -Launch
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -Auth Anonymous -ConfigureCodex -Launch
 ```
 
 仓库为私有时，默认使用Git已有的GitHub凭据；显式 `-Auth Token` 使用环境变量 `GH_TOKEN`，`-Auth Anonymous` 适用于公开访问。下载失败直接报告，不切换协议、镜像或其他版本。已下载发布安装器和同名`.sha256`时，用 `-PackageDirectory <目录>`。

@@ -90,8 +90,7 @@ fn check_and_install(app: &AppHandle, interactive: &mut bool) -> Result<(), Stri
     let url = format!("{DOWNLOADS}/v{version}/{name}");
     let signature = fetch(&client, &format!("{url}.sig"), signature_size, Duration::from_secs(20))?;
     if signature.len() as u64 != signature_size { return Err("更新签名下载不完整".into()); }
-    let key = option_env!("MCUTOOL_UPDATE_PUBLIC_KEY").filter(|s| !s.trim().is_empty()).ok_or("此构建未配置更新公钥")?;
-    let updater = app.updater_builder().pubkey(key.trim()).restart_after_install(true).build().map_err(|_| "无法初始化签名验证")?;
+    let updater = app.updater_builder().restart_after_install(true).build().map_err(|_| "无法初始化签名验证")?;
     let update = updater.restore_update(json!({"version":version.to_string(), "url":url, "signature":std::str::from_utf8(&signature).map_err(|_| "签名格式不正确")?.trim()}))
         .map_err(|_| "更新包与本机平台或版本不匹配")?.ok_or("当前版本无需更新")?;
     let bytes = fetch(&client, &url, size, Duration::from_secs(600))?;
@@ -134,6 +133,24 @@ mod tests {
         r.tag_name = "v1.0.0".into();
         r.prerelease = true;
         assert!(r.newer(&current).unwrap().is_none());
+    }
+
+    #[test]
+    #[ignore = "需显式指定已下载的正式安装器和同名签名目录"]
+    /// AI:使用当前客户端发布公钥核验正式安装器。@return 无，签名不匹配或文件缺失时断言失败。
+    fn published_installer_matches_embedded_key() {
+        let config: serde_json::Value = serde_json::from_str(include_str!("../tauri.conf.json")).unwrap();
+        let version = config["version"].as_str().unwrap();
+        let name = format!("MCUTOOL-{version}-windows-x64-setup.exe");
+        let dir = std::path::PathBuf::from(std::env::var_os("MCUTOOL_VERIFY_DIRECTORY").unwrap());
+        let bytes = std::fs::read(dir.join(&name)).unwrap();
+        let signature = std::fs::read_to_string(dir.join(format!("{name}.sig"))).unwrap();
+        let mut context = tauri::test::mock_context(tauri::test::noop_assets());
+        context.config_mut().plugins.0.insert("updater".into(), config["plugins"]["updater"].clone());
+        let app = tauri::test::mock_builder().plugin(tauri_plugin_updater::Builder::new().build()).build(context).unwrap();
+        let updater = app.updater_builder().version_comparator(|_, _| true).build().unwrap();
+        let release = json!({"version":version,"url":format!("{DOWNLOADS}/v{version}/{name}"),"signature":signature.trim()});
+        updater.restore_update(release).unwrap().unwrap().verify(&bytes).unwrap();
     }
 
     #[test]

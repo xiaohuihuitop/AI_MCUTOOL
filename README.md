@@ -4,7 +4,7 @@
 
 ## 版本与下载
 
-**桌面／后台／MCP：0.5.0；工具板固件：0.1.3。** [下载正式版本](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.5.0) · [版本列表](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases)。当前仓库为私有，克隆和下载需要有仓库访问权限的GitHub账号。
+**桌面／后台／MCP：0.5.1；工具板固件：0.1.3。** [下载正式版本](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.5.1) · [版本列表](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases)。正式安装器可匿名下载。0.5.0 用户首次手动升级至 0.5.1，之后可通过托盘“检查更新”获取新正式版；选择“更新并重启”后，桌面会验证签名并检查后台占用。
 
 六路固定每路每秒10次。电池电压、电流共用双轴图；四路电压另有独立页面，支持每路比例、偏移、颜色和曲线显隐。两组分别开始/暂停、清空、导出CSV，保留最近4小时完整采样；电池图支持A/B游标、极值、时间加权平均与区间净电量。详细规则见[图表使用说明](docs/上位机界面与图表使用说明.md)。
 
@@ -20,7 +20,7 @@
 
 ```powershell
 # Codex：安装桌面、运行环境、Skill，登记MCP并打开工作台
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -ConfigureCodex -Launch
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -Auth Anonymous -ConfigureCodex -Launch
 ```
 
 安装脚本会依次完成：
@@ -37,7 +37,7 @@ Codex CLI未在PATH中时，AI应定位已安装客户端的`codex.exe`，通过
 **其他AI客户端**使用同一个安装入口，省略`-ConfigureCodex`：
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -Launch
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1 -Auth Anonymous -Launch
 ```
 
 脚本输出桌面程序、数据目录、Skill和`mcp-config.json`的实际位置。AI将其中`mcutool`条目合并到该客户端支持的MCP配置，保留已有服务；手动配置格式见[安装版MCP示例](integrations/mcp.desktop.example.json)。Skill提供使用规则，MCP提供实际执行接口，两者都要接好。

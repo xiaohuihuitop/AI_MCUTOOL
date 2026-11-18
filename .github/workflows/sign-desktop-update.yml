@@ -1,0 +1,64 @@
+name: Sign desktop update
+on: workflow_dispatch
+permissions:
+  contents: write
+concurrency:
+  group: desktop-release-signing
+  cancel-in-progress: false
+jobs:
+  sign:
+    if: github.repository == 'xiaohuihuitop/AI_MCUTOOL' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: desktop-release
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: 核对草稿、提交和安装器摘要
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir signer
+          repo="repos/$GITHUB_REPOSITORY"
+          read_at_commit() {
+            gh api "$repo/contents/$1?ref=$GITHUB_SHA" --jq .content | base64 -d
+          }
+          read_at_commit integrations/desktop-release.json > descriptor.json
+          version=$(jq -er '.version | select(test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))' descriptor.json)
+          tag="v$version"
+          file="MCUTOOL-$version-windows-x64-setup.exe"
+          jq -e --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg file "$file" \
+            '.repository == $repo and .tag == $tag and .installer == $file and (.sha256|test("^[0-9a-f]{64}$"))' descriptor.json >/dev/null
+          gh api --paginate --slurp "$repo/releases?per_page=100" | jq -e --arg tag "$tag" --arg sha "$GITHUB_SHA" \
+            '[.[][] | select(.tag_name == $tag and .target_commitish == $sha and .draft and (.prerelease|not))] | select(length == 1) | first' > draft.json
+          asset=$(jq -er --arg f "$file" '[.assets[] | select(.name == $f and .state == "uploaded")] | select(length == 1) | first.id' draft.json)
+          gh api "$repo/releases/assets/$asset" -H 'Accept: application/octet-stream' > "$file"
+          printf '%s  %s\n' "$(jq -r .sha256 descriptor.json)" "$file" | sha256sum -c -
+          read_at_commit desktop/package.json > signer/package.json
+          read_at_commit desktop/package-lock.json > signer/package-lock.json
+          npm ci --prefix signer --ignore-scripts --no-audit --no-fund
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          echo "INSTALLER=$file" >> "$GITHUB_ENV"
+          echo "RELEASE_ID=$(jq -r .id draft.json)" >> "$GITHUB_ENV"
+
+      - name: 签署经核验的版本
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
+        run: |
+          set -euo pipefail
+          test -n "$TAURI_SIGNING_PRIVATE_KEY"
+          node signer/node_modules/@tauri-apps/cli/tauri.js signer sign --app-version "$VERSION" "$INSTALLER" >/dev/null
+          test -s "$INSTALLER.sig"
+
+      - name: 向同一草稿上传签名
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID" | jq -e --arg sha "$GITHUB_SHA" '.draft and .target_commitish == $sha' >/dev/null
+          url="https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID/assets?name=$INSTALLER.sig"
+          curl --fail-with-body --silent --show-error -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'Content-Type: application/octet-stream' --data-binary "@$INSTALLER.sig" "$url" | jq -e '.state == "uploaded"'
