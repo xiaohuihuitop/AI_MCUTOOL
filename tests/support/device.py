@@ -36,6 +36,16 @@ class TestDevice:
         """AI:推进测试动作与预定输入样本。@return 无。"""
         now = time.monotonic()
         for action in self.actions.values():
+            if action["kind"] == "charge" and action["state"] == "running":
+                elapsed_ms = int((now - self.started) * 1000) - action["started_ms"]
+                period = action["on_ms"] + action["off_ms"]
+                action["completed"] = min(elapsed_ms // period, action["count"])
+                action["on"] = action["completed"] < action["count"] and elapsed_ms % period < action["on_ms"]
+                self.state["charge"] = action["on"]
+                if action["completed"] == action["count"]:
+                    action.update(state="succeeded", finished_ms=action["started_ms"] + period * action["count"])
+                    self.state["charge_cycle_id"] = 0
+                continue
             if action["state"] == "running" and now >= action["deadline"]:
                 action.update(state="succeeded", finished_ms=int((now - self.started) * 1000))
                 if action["kind"] == "keys":
@@ -91,7 +101,7 @@ class TestDevice:
         if method == "device.info":
             return {"device_id": self.device_id, "boot_id": self.boot, "protocol_version": 1, "firmware_version": "test-0.1.2",
                     "measurement": {"sample_rate_hz": 10, "battery_sensor": "INA226", "shunt_ohms": 0.02, "current_lsb_a": 0.000125, "battery_voltage_lsb_v": 0.00125},
-                    "test_device": True, "capabilities": ["power.select", "keys.run", "charge.set", "telemetry.read", "uart.write"],
+                    "test_device": True, "capabilities": ["power.select", "keys.run", "charge.set", "charge.run", "charge.cancel", "telemetry.read", "uart.write"],
                     "limits": {"keys": 5, "max_steps": 128, "max_sequence_ms": 600000, "hardware_verified": False}}
         if method == "device.status":
             return {**self.state, "boot_id": self.boot, "device_id": self.device_id}
@@ -117,6 +127,27 @@ class TestDevice:
                     "events": {"items": [], "next": params["event_after"], "lost": 0},
                     "uart": {"data_hex": self.rx[offset:offset + 8192].hex(), "start": offset, "next": min(len(self.rx), offset + 8192), "lost": 0, "hardware_overflow_events": 0}}
         validate(method, params)
+        if method in ("power.select", "charge.run", "charge.set") and self.state.get("charge_cycle_id"):
+            raise ToolError("BUSY", "充电循环执行中")
+        if method == "charge.run":
+            if self.state["power"] != "battery" or self.state["power_switching"] or self.state["charge"]:
+                raise ToolError("INTERLOCK", "启动需要真实电池且充电断开")
+            action_id = len(self.actions) + 1
+            action = {**params, "action_id": action_id, "kind": "charge", "state": "running", "on": True,
+                      "started_ms": self.state["uptime_ms"], "finished_ms": 0, "completed": 0}
+            self.actions[action_id] = action
+            self.state.update(charge=True, charge_cycle_id=action_id, busy=True)
+            return action
+        if method == "charge.cancel":
+            action = self.actions.get(params["action_id"])
+            if not action:
+                raise ToolError("NOT_FOUND", "动作记录不存在")
+            if action["kind"] != "charge":
+                raise ToolError("INVALID_PARAMS", "只能取消充电循环")
+            if action["state"] == "running":
+                action.update(state="cancelled", on=False, finished_ms=self.state["uptime_ms"])
+                self.state.update(charge=False, charge_cycle_id=0)
+            return action
         if method in ("power.select", "keys.run"):
             if method == "power.select" and self.state["charge"] and params["source"] != "battery":
                 raise ToolError("INTERLOCK", "请先关闭充电")

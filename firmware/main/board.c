@@ -82,8 +82,8 @@ static void control_task(void *arg)
     int64_t pressed_at = 0;
     bool handled = false;
     while (true) {
-        uint64_t now = esp_timer_get_time() / 1000;
         xSemaphoreTake(g_core_mutex, portMAX_DELAY);
+        uint64_t now = esp_timer_get_time() / 1000;
         tool_core_tick(&g_core, now);
         tool_board_apply();
         xSemaphoreGive(g_core_mutex);
@@ -136,6 +136,7 @@ cJSON *tool_board_status(void)
     xSemaphoreTake(g_core_mutex, portMAX_DELAY);
     cJSON_AddStringToObject(out, "power", names[g_core.power]);
     cJSON_AddBoolToObject(out, "charge", g_core.charge);
+    cJSON_AddNumberToObject(out, "charge_cycle_id", g_core.charge_slot < 0 ? 0 : g_core.actions[g_core.charge_slot].id);
     cJSON_AddNumberToObject(out, "keys_mask", g_core.keys);
     cJSON_AddNumberToObject(out, "revision", g_core.revision);
     cJSON_AddBoolToObject(out, "busy", tool_core_busy(&g_core));

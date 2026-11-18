@@ -57,10 +57,24 @@ static cJSON *action_json(uint32_t id)
     if (action) {
         out = cJSON_CreateObject();
         cJSON_AddNumberToObject(out, "action_id", action->id);
-        cJSON_AddStringToObject(out, "kind", action->is_keys ? "keys" : "power");
+        const char *kind = action->kind == TOOL_KIND_CHARGE ? "charge" : action->kind == TOOL_KIND_KEYS ? "keys" : "power";
+        cJSON_AddStringToObject(out, "kind", kind);
         cJSON_AddStringToObject(out, "state", action->state == TOOL_ACTION_RUNNING ? "running" : action->state == TOOL_ACTION_CANCELLED ? "cancelled" : "succeeded");
         cJSON_AddNumberToObject(out, "started_ms", action->started_ms);
         cJSON_AddNumberToObject(out, "finished_ms", action->finished_ms);
+        if (action->kind == TOOL_KIND_CHARGE) {
+            const tool_charge_cycle_t *cycle = &action->cycle;
+            cJSON_AddBoolToObject(out, "on", cycle->on);
+            cJSON_AddNumberToObject(out, "phase_start_ms", cycle->phase_start_ms);
+            cJSON_AddNumberToObject(out, "on_ms", cycle->on_ms);
+            cJSON_AddNumberToObject(out, "off_ms", cycle->off_ms);
+            cJSON_AddNumberToObject(out, "count", cycle->count);
+            cJSON_AddNumberToObject(out, "completed", cycle->completed);
+            cJSON_AddNumberToObject(out, "min_on_ms", cycle->min_on_ms);
+            cJSON_AddNumberToObject(out, "max_on_ms", cycle->max_on_ms);
+            cJSON_AddNumberToObject(out, "min_off_ms", cycle->min_off_ms);
+            cJSON_AddNumberToObject(out, "max_off_ms", cycle->max_off_ms);
+        }
     }
     xSemaphoreGive(g_core_mutex);
     return out;
@@ -72,7 +86,7 @@ static cJSON *device_info(void)
     cJSON *out = cJSON_CreateObject();
     cJSON_AddStringToObject(out, "device_id", g_device_id);
     cJSON_AddStringToObject(out, "boot_id", g_boot_id);
-    cJSON_AddStringToObject(out, "firmware_version", "0.1.2");
+    cJSON_AddStringToObject(out, "firmware_version", "0.1.3");
     cJSON_AddStringToObject(out, "hardware_revision", "2026-11-10");
     cJSON_AddNumberToObject(out, "protocol_version", 1);
     cJSON_AddBoolToObject(out, "test_device", false);
@@ -86,7 +100,7 @@ static cJSON *device_info(void)
     cJSON_AddNumberToObject(measurement, "nominal_cycle_us", 67712);
     cJSON_AddNumberToObject(measurement, "sample_rate_hz", 10);
     cJSON_AddBoolToObject(measurement, "accuracy_verified", false);
-    const char *methods[] = {"device.info", "device.status", "control.claim", "control.renew", "control.release", "power.select", "charge.set", "keys.run", "action.get", "action.cancel", "uart.configure", "uart.tx", "uart.write", "telemetry.read", "calibration.get", "calibration.set", "timing.set", "network.status", "network.configure", "network.connect"};
+    const char *methods[] = {"device.info", "device.status", "control.claim", "control.renew", "control.release", "power.select", "charge.set", "charge.run", "charge.cancel", "keys.run", "action.get", "action.cancel", "uart.configure", "uart.tx", "uart.write", "telemetry.read", "calibration.get", "calibration.set", "timing.set", "network.status", "network.configure", "network.connect"};
     cJSON *capabilities = cJSON_AddArrayToObject(out, "capabilities");
     for (size_t i = 0; i < sizeof(methods)/sizeof(methods[0]); i++) cJSON_AddItemToArray(capabilities, cJSON_CreateString(methods[i]));
     cJSON *limits = cJSON_AddObjectToObject(out, "limits");
@@ -193,6 +207,16 @@ cJSON *tool_rpc(const cJSON *request, bool usb)
         tool_board_apply();
         xSemaphoreGive(g_core_mutex);
         if (core_result(response, code)) result = tool_board_status();
+    } else if (!strcmp(method, "charge.run")) {
+        uint64_t on_ms, off_ms, count;
+        if (!integer_field(params, "on_ms", 60000, &on_ms) || !integer_field(params, "off_ms", 60000, &off_ms) ||
+            !integer_field(params, "count", 1000, &count)) goto invalid;
+        uint32_t action;
+        xSemaphoreTake(g_core_mutex, portMAX_DELAY);
+        tool_result_t code = tool_core_charge_run(&g_core, on_ms, off_ms, count, esp_timer_get_time() / 1000, &action);
+        tool_board_apply();
+        xSemaphoreGive(g_core_mutex);
+        if (core_result(response, code)) result = action_json(action);
     } else if (!strcmp(method, "keys.run")) {
         const cJSON *steps = cJSON_GetObjectItemCaseSensitive(params, "steps");
         uint64_t repeat;
@@ -211,12 +235,12 @@ cJSON *tool_rpc(const cJSON *request, bool usb)
         tool_board_apply();
         xSemaphoreGive(g_core_mutex);
         if (core_result(response, code)) result = action_json(action);
-    } else if (!strcmp(method, "action.get") || !strcmp(method, "action.cancel")) {
+    } else if (!strcmp(method, "action.get") || !strcmp(method, "action.cancel") || !strcmp(method, "charge.cancel")) {
         uint64_t action;
         if (!integer_field(params, "action_id", UINT32_MAX, &action) || !action) goto invalid;
-        if (!strcmp(method, "action.cancel")) {
+        if (strcmp(method, "action.get")) {
             xSemaphoreTake(g_core_mutex, portMAX_DELAY);
-            tool_result_t code = tool_core_cancel(&g_core, action, now);
+            tool_result_t code = !strcmp(method, "charge.cancel") ? tool_core_charge_cancel(&g_core, action, esp_timer_get_time() / 1000) : tool_core_cancel(&g_core, action, now);
             tool_board_apply();
             xSemaphoreGive(g_core_mutex);
             if (!core_result(response, code)) goto save;

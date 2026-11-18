@@ -152,6 +152,21 @@ def build_server(data_dir: Path) -> FastMCP:
         return await write("charge.set", request_id, {"enabled": enabled})
 
     @server.tool()
+    async def run_charge_cycle(on_ms: StrictInt, off_ms: StrictInt, count: StrictInt, request_id: str) -> dict:
+        """AI:启动板上有限充电循环，要求真实电池且充电已断开。@param on_ms 接通毫秒。@param off_ms 断开毫秒。@param count 完整次数。@param request_id 稳定请求编号。@return 后台任务，失联不重放。"""
+        return await write("charge.run", request_id, {"on_ms": on_ms, "off_ms": off_ms, "count": count})
+
+    @server.tool()
+    async def action_status(action_id: StrictInt) -> dict:
+        """AI:读取当前启动保留的板上动作。@param action_id 当前设备本次启动的动作编号。@return 阶段、终态及该动作的进度证据。"""
+        return await invoke("POST", "/api/read", {"method": "action.get", "params": {"action_id": action_id}})
+
+    @server.tool()
+    async def cancel_charge_cycle(action_id: StrictInt, request_id: str) -> dict:
+        """AI:取消指定充电循环并断开充电。@param action_id 本次启动的循环动作编号。@param request_id 独立取消请求编号。@return 可查询取消任务。"""
+        return await write("charge.cancel", request_id, {"action_id": action_id})
+
+    @server.tool()
     async def press_keys(keys: list[StrictInt], press_ms: StrictInt, request_id: str,
                          release_ms: StrictInt = 100, count: StrictInt = 1) -> dict:
         """AI:由板上计时执行单击、长按、连击或多键组合。@param keys 1到5的按键；press_ms 按下时长；request_id 编号；release_ms 释放间隔；count 次数。@return 任务。"""

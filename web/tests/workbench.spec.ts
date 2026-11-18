@@ -100,4 +100,6 @@ test('网页、共享MCP和记录器完整闭环', async ({ page, browser }, tes
   await (await diagnostics).saveAs(testInfo.outputPath('诊断日志.zip'))
   await expect(page.locator('.notice')).toContainText('诊断日志已导出')
   expect(errors).toEqual([])
+  const cycle = execFileSync(resolve(root,'.venv/Scripts/python.exe'),[resolve(root,'tests/mcp_e2e.py'),resolve(process.env.MCUTOOL_E2E_DIR!,'runtime'),'--charge-check'],{cwd:root,encoding:'utf8',timeout:20000})
+  expect(JSON.parse(cycle.trim()).cycle_completed_and_cancelled).toBe(true)
 })

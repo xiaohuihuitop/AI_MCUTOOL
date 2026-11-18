@@ -14,6 +14,8 @@
 | `read_data` | measurements、uart、events三个独立游标；after为上次next，limit最多500条 |
 | `job_status` | 用request_id查询后台记录；action_id是另一个板上动作编号 |
 | `cancel_keys` | 传板上action_id和独立取消请求request_id；取消成功后原按键任务变为cancelled |
+| `run_charge_cycle` | 仅设备声明 `charge.run` 时使用。真实电池、充电关闭后，传 on_ms、off_ms、count 和稳定的 request_id；到期或失联后继续有限次数，最后断开 |
+| `action_status` / `cancel_charge_cycle` | 查询同一设备本次启动的 action_id；取消充电循环另用独立 request_id。已完成次数按完整接通、断开两段计，实体时序另行测量 |
 
 这些是当前软件限额，物理触点时序和持续吞吐仍需实测。输入参数必须符合工具额定条件；外部电源自身的调压、限流由其专用工具负责。
 

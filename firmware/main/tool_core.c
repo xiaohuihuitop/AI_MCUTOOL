@@ -1,19 +1,19 @@
 #include "tool_core.h"
 #include <string.h>
 
-/** AI:分配动作记录。@param c 实例。@param keys 是否按键动作。@param now 开始时刻。@return 记录下标。 */
-static int allocate_action(tool_core_t *c, bool keys, uint64_t now)
+/** AI:分配动作记录。@param c 实例。@param kind 动作类型。@param now 开始时刻。@return 记录下标。 */
+static int allocate_action(tool_core_t *c, tool_action_kind_t kind, uint64_t now)
 {
     int slot = -1;
     uint32_t oldest = UINT32_MAX;
     for (int i = 0; i < TOOL_MAX_ACTIONS; i++) {
-        if (i != c->key_slot && i != c->power_slot && c->actions[i].id < oldest) {
+        if (i != c->key_slot && i != c->power_slot && i != c->charge_slot && c->actions[i].id < oldest) {
             oldest = c->actions[i].id;
             slot = i;
         }
     }
     if (slot >= 0) {
-        c->actions[slot] = (tool_action_t){.id = ++c->next_action, .is_keys = keys,
+        c->actions[slot] = (tool_action_t){.id = ++c->next_action, .kind = kind,
             .state = TOOL_ACTION_RUNNING, .started_ms = now};
     }
     return slot;
@@ -22,13 +22,13 @@ static int allocate_action(tool_core_t *c, bool keys, uint64_t now)
 void tool_core_init(tool_core_t *c)
 {
     memset(c, 0, sizeof(*c));
-    c->key_slot = c->power_slot = -1;
+    c->key_slot = c->power_slot = c->charge_slot = -1;
     c->deadtime_ms = 100; /* AI:工程初值，必须通过实际MOS关断波形确认。 */
 }
 
 bool tool_core_busy(const tool_core_t *c)
 {
-    return c->key_slot >= 0 || c->power_slot >= 0;
+    return c->key_slot >= 0 || c->power_slot >= 0 || c->charge_slot >= 0;
 }
 
 tool_result_t tool_core_owner(const tool_core_t *c, const char *owner, uint64_t now)
@@ -76,9 +76,9 @@ tool_result_t tool_core_release(tool_core_t *c, const char *owner, uint64_t now)
 tool_result_t tool_core_power(tool_core_t *c, tool_power_t source, uint64_t now, uint32_t *id)
 {
     if (source < TOOL_POWER_OFF || source > TOOL_POWER_EXTERNAL || !id) return TOOL_INVALID;
-    if (c->power_slot >= 0) return TOOL_BUSY;
+    if (c->power_slot >= 0 || c->charge_slot >= 0) return TOOL_BUSY;
     if (c->charge && source != TOOL_POWER_BATTERY) return TOOL_INTERLOCK;
-    int slot = allocate_action(c, false, now);
+    int slot = allocate_action(c, TOOL_KIND_POWER, now);
     if (slot < 0) return TOOL_BUSY;
     *id = c->actions[slot].id;
     if (c->power == source) {
@@ -101,10 +101,70 @@ tool_result_t tool_core_power(tool_core_t *c, tool_power_t source, uint64_t now,
 
 tool_result_t tool_core_charge(tool_core_t *c, bool enabled)
 {
+    if (c->charge_slot >= 0) return TOOL_BUSY;
     if (enabled && (c->power != TOOL_POWER_BATTERY || c->power_slot >= 0)) return TOOL_INTERLOCK;
     if (c->charge != enabled) c->revision++;
     c->charge = enabled;
     return TOOL_OK;
+}
+
+tool_result_t tool_core_charge_run(tool_core_t *c, uint32_t on_ms, uint32_t off_ms, uint32_t count, uint64_t now, uint32_t *id)
+{
+    if (!id || on_ms < 10 || on_ms > 60000 || off_ms < 10 || off_ms > 60000 || !count || count > 1000 ||
+        (uint64_t)(on_ms + off_ms) * count > TOOL_MAX_SEQUENCE_MS) return TOOL_INVALID;
+    if (c->charge_slot >= 0 || c->power_slot >= 0) return TOOL_BUSY;
+    if (c->power != TOOL_POWER_BATTERY || c->charge) return TOOL_INTERLOCK;
+    int slot = allocate_action(c, TOOL_KIND_CHARGE, now);
+    if (slot < 0) return TOOL_BUSY;
+    c->actions[slot].cycle = (tool_charge_cycle_t){.on_ms = on_ms, .off_ms = off_ms, .count = count,
+        .phase_start_ms = now, .on = true};
+    c->charge_slot = slot;
+    c->charge = true;
+    c->revision++;
+    *id = c->actions[slot].id;
+    return TOOL_OK;
+}
+
+tool_result_t tool_core_charge_cancel(tool_core_t *c, uint32_t id, uint64_t now)
+{
+    const tool_action_t *action = tool_core_action(c, id);
+    if (!action) return TOOL_NOT_FOUND;
+    if (action->kind != TOOL_KIND_CHARGE) return TOOL_INVALID;
+    if (action->state != TOOL_ACTION_RUNNING) return TOOL_OK;
+    tool_action_t *active = &c->actions[c->charge_slot];
+    active->state = TOOL_ACTION_CANCELLED;
+    active->finished_ms = now;
+    active->cycle.on = false;
+    c->charge = false;
+    c->charge_slot = -1;
+    c->revision++;
+    return TOOL_OK;
+}
+
+/** AI:每次最多执行一次真实切换，调度延迟不压缩下一段。@param c 实例。@param now 锁内读取的单调毫秒。@return 无。 */
+static void tick_charge(tool_core_t *c, uint64_t now)
+{
+    if (c->charge_slot < 0) return;
+    tool_action_t *action = &c->actions[c->charge_slot];
+    tool_charge_cycle_t *cycle = &action->cycle;
+    uint32_t target = cycle->on ? cycle->on_ms : cycle->off_ms;
+    if (now < cycle->phase_start_ms + target) return;
+    uint32_t elapsed = (uint32_t)(now - cycle->phase_start_ms);
+    uint32_t *min_ms = cycle->on ? &cycle->min_on_ms : &cycle->min_off_ms;
+    uint32_t *max_ms = cycle->on ? &cycle->max_on_ms : &cycle->max_off_ms;
+    if (!*min_ms || elapsed < *min_ms) *min_ms = elapsed;
+    if (elapsed > *max_ms) *max_ms = elapsed;
+    if (!cycle->on) cycle->completed++;
+    if (cycle->completed == cycle->count) {
+        action->state = TOOL_ACTION_SUCCEEDED;
+        action->finished_ms = now;
+        c->charge_slot = -1;
+    } else {
+        cycle->on = !cycle->on;
+        cycle->phase_start_ms = now;
+        c->charge = cycle->on;
+    }
+    c->revision++;
 }
 
 tool_result_t tool_core_keys(tool_core_t *c, const tool_key_step_t *steps, size_t count, uint32_t repeat, uint64_t now, uint32_t *id)
@@ -117,7 +177,7 @@ tool_result_t tool_core_keys(tool_core_t *c, const tool_key_step_t *steps, size_
         duration += steps[i].duration_ms;
     }
     if (duration * repeat > TOOL_MAX_SEQUENCE_MS) return TOOL_INVALID;
-    int slot = allocate_action(c, true, now);
+    int slot = allocate_action(c, TOOL_KIND_KEYS, now);
     if (slot < 0) return TOOL_BUSY;
     memcpy(c->steps, steps, count * sizeof(*steps));
     c->step_count = count;
@@ -133,6 +193,7 @@ tool_result_t tool_core_keys(tool_core_t *c, const tool_key_step_t *steps, size_
 
 void tool_core_tick(tool_core_t *c, uint64_t now)
 {
+    tick_charge(c, now);
     if (c->power_slot >= 0 && now >= c->power_deadline_ms) {
         c->power = c->pending_power;
         c->actions[c->power_slot].state = TOOL_ACTION_SUCCEEDED;
@@ -169,7 +230,7 @@ tool_result_t tool_core_cancel(tool_core_t *c, uint32_t id, uint64_t now)
 {
     const tool_action_t *action = tool_core_action(c, id);
     if (!action) return TOOL_NOT_FOUND;
-    if (!action->is_keys) return TOOL_INVALID;
+    if (action->kind != TOOL_KIND_KEYS) return TOOL_INVALID;
     if (action->state != TOOL_ACTION_RUNNING) return TOOL_OK;
     c->actions[c->key_slot].state = TOOL_ACTION_CANCELLED;
     c->actions[c->key_slot].finished_ms = now;

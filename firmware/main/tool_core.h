@@ -14,13 +14,21 @@ typedef enum { TOOL_OK, TOOL_INVALID, TOOL_BUSY, TOOL_INTERLOCK, TOOL_NOT_OWNER,
                TOOL_OWNER_EXPIRED, TOOL_STALE_STATE, TOOL_NOT_FOUND } tool_result_t;
 typedef enum { TOOL_POWER_OFF, TOOL_POWER_BATTERY, TOOL_POWER_EXTERNAL } tool_power_t;
 typedef enum { TOOL_ACTION_RUNNING, TOOL_ACTION_SUCCEEDED, TOOL_ACTION_CANCELLED } tool_action_state_t;
+typedef enum { TOOL_KIND_POWER, TOOL_KIND_KEYS, TOOL_KIND_CHARGE } tool_action_kind_t;
+typedef struct {
+    uint32_t on_ms, off_ms, count, completed; /**< AI:目标时长、目标次数及已走完断开段的次数。 */
+    uint32_t min_on_ms, max_on_ms, min_off_ms, max_off_ms; /**< AI:完整控制段实耗范围，零表示尚未记录。 */
+    uint64_t phase_start_ms; /**< AI:当前段起始控制时刻，单位毫秒。 */
+    bool on; /**< AI:当前段是否接通，结束时为假。 */
+} tool_charge_cycle_t;
 typedef struct { uint8_t mask; uint32_t duration_ms; } tool_key_step_t;
 typedef struct {
     uint32_t id;
-    bool is_keys;
+    tool_action_kind_t kind;
     tool_action_state_t state;
     uint64_t started_ms;
     uint64_t finished_ms;
+    tool_charge_cycle_t cycle;
 } tool_action_t;
 
 typedef struct {
@@ -36,6 +44,7 @@ typedef struct {
     uint32_t next_action;
     int key_slot;
     int power_slot;
+    int charge_slot; /**< AI:占用充电和主供电的循环槽位，空闲为负一。 */
     uint64_t key_deadline_ms;
     uint64_t power_deadline_ms;
     tool_key_step_t steps[TOOL_MAX_STEPS];
@@ -60,6 +69,10 @@ tool_result_t tool_core_release(tool_core_t *core, const char *owner, uint64_t n
 tool_result_t tool_core_power(tool_core_t *core, tool_power_t source, uint64_t now_ms, uint32_t *action_id);
 /** AI:控制独立充电通路并校验真实电池互锁。@param core 实例。@param enabled 是否接通。@return 结果代码。 */
 tool_result_t tool_core_charge(tool_core_t *core, bool enabled);
+/** AI:从断开状态启动板上有限充电循环。@param core 实例。@param on_ms 接通毫秒。@param off_ms 断开毫秒。@param count 完整循环次数。@param now_ms 单调毫秒。@param action_id 返回动作编号。@return 参数、互锁、占用或成功状态。 */
+tool_result_t tool_core_charge_run(tool_core_t *core, uint32_t on_ms, uint32_t off_ms, uint32_t count, uint64_t now_ms, uint32_t *action_id);
+/** AI:取消指定充电循环并断开充电。@param core 实例。@param action_id 充电动作编号。@param now_ms 单调毫秒。@return 动作类型、存在性或成功状态。 */
+tool_result_t tool_core_charge_cancel(tool_core_t *core, uint32_t action_id, uint64_t now_ms);
 /** AI:启动有限按键序列。@param core 实例。@param steps 步骤。@param count 步数。@param repeat 重复次数。@param now_ms 当前时刻。@param action_id 返回编号。@return 结果代码。 */
 tool_result_t tool_core_keys(tool_core_t *core, const tool_key_step_t *steps, size_t count, uint32_t repeat, uint64_t now_ms, uint32_t *action_id);
 /** AI:取消按键动作并释放触点。@param core 实例。@param action_id 编号。@param now_ms 当前时刻。@return 结果代码。 */

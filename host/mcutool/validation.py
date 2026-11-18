@@ -4,7 +4,7 @@ import re
 from .errors import ToolError
 
 READ_METHODS = {"device.info", "device.status", "network.status", "calibration.get", "action.get"}
-RESOURCES = {"power.select": "power", "charge.set": "power", "timing.set": "power",
+RESOURCES = {"power.select": "power", "charge.set": "power", "charge.run": "power", "charge.cancel": "cancel", "timing.set": "power",
              "keys.run": "keys", "action.cancel": "cancel", "uart.configure": "uart", "uart.tx": "uart",
              "uart.write": "uart", "calibration.set": "measurement", "network.configure": "network", "network.connect": "network"}
 BAUDRATES = (9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600)
@@ -37,7 +37,12 @@ def validate(method: str, params: dict) -> None:
             valid = all(isinstance(s, dict) and set(s) == {"mask", "duration_ms"} and integer(s["mask"], 0, 31) and integer(s["duration_ms"], 10, 60000) for s in steps)
         if valid:
             valid = sum(s["duration_ms"] for s in steps) * repeat <= 600000
-    elif method in ("action.get", "action.cancel"):
+    elif method == "charge.run":
+        fields = {"on_ms", "off_ms", "count"}
+        on_ms, off_ms, count = (params.get(key) for key in ("on_ms", "off_ms", "count"))
+        valid = (integer(on_ms, 10, 60000) and integer(off_ms, 10, 60000) and integer(count, 1, 1000)
+                 and (on_ms + off_ms) * count <= 600000)
+    elif method in ("action.get", "action.cancel", "charge.cancel"):
         fields = {"action_id"}
         valid = integer(params.get("action_id"), 1, 2**32 - 1)
     elif method == "uart.configure":

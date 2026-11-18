@@ -65,7 +65,7 @@ def test_existing_runtime_probe_and_skill_install_are_isolated(tmp_path):
     skill=tmp_path/'skill'
     result=run(ROOT/'scripts/setup-desktop.ps1','-InstallDirectory',os.environ['MCUTOOL_SETUP_INSTALLED'],'-IntegrationDirectory',output,'-SkillDirectory',skill)
     assert result.returncode==0,result.stderr
-    assert f'MCP ready: version {VERSION}, 27 tools'.encode() in result.stdout
+    assert f'MCP ready: version {VERSION}, 30 tools'.encode() in result.stdout
     config=json.loads((output/'mcp-config.json').read_text(encoding='utf-8'))
     service=config['mcpServers']['mcutool']
     assert Path(service['command']).is_file()

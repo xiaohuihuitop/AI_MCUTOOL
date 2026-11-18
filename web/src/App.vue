@@ -25,10 +25,10 @@ const connected = computed(() => Boolean(state.value?.connected && socketLive.va
 const ownsControl = computed(() => Boolean(state.value?.control.owner?.id === clientId.value && state.value?.control.owner_active))
 const canWrite = computed(() => connected.value && ownsControl.value && state.value?.control.device_claimed && !state.value.device_state_stale)
 const activeJobs = computed(() => (state.value?.jobs ?? []).filter(j => ['accepted','running'].includes(j.state)))
-const keyJob = computed(() => activeJobs.value.find(j => j.method === 'keys.run'))
-const powerBusy = computed(() => activeJobs.value.some(j => ['power.select','charge.set','timing.set'].includes(j.method)))
-const uartBusy = computed(() => activeJobs.value.some(j => j.method.startsWith('uart.')))
 const board = computed(() => state.value?.device_state ?? {})
+const keyJob = computed(() => activeJobs.value.find(j => j.method === 'keys.run'))
+const powerBusy = computed(() => Boolean(board.value.charge_cycle_id) || activeJobs.value.some(j => ['power.select','charge.set','charge.run','timing.set'].includes(j.method)))
+const uartBusy = computed(() => activeJobs.value.some(j => j.method.startsWith('uart.')))
 const recording = computed(() => state.value?.recording.state === 'recording')
 const canStopOrphanRecord = computed(() => recording.value && !ownsControl.value && !state.value?.control.owner_active && !activeJobs.value.length)
 const channels = ['battery_v','battery_i','ain1','ain2','ain3','ain4']

@@ -103,6 +103,53 @@ def test_unknown_result_is_not_replayed_on_manual_reconnection(connected):
     assert sum(r["method"] == "keys.run" for r in device.requests) == 1
 
 
+def test_charge_cycle_reconciles_after_connection_loss_without_replay(connected):
+    """AI:动作已受理且随后失联，同一次启动可查回终态。@param connected 隔离的共享后台和模拟设备。@return 无。"""
+    http, a, _, device, _ = connected
+    submit(http, a, "bat-cycle", "power.select", {"source": "battery"})
+    assert wait_job(http, a, "bat-cycle")["state"] == "succeeded"
+    params = {"on_ms": 200, "off_ms": 500, "count": 1}
+    device.drop_response_for = "action.get"
+    submit(http, a, "lost-cycle", "charge.run", params)
+    row = wait_job(http, a, "lost-cycle")
+    assert row["state"] == "unknown" and row["action_id"]
+    device.drop_response_for = None
+    assert http.post("/api/connect", headers=a, json={"kind": "http", "address": "http://test", "token": "fixture"}).status_code == 200
+    deadline = time.monotonic() + 3
+    while time.monotonic() < deadline:
+        row = http.post("/api/jobs/lost-cycle/reconcile", headers=a).json()
+        if row["state"] == "succeeded":
+            break
+        time.sleep(.02)
+    assert row["state"] == "succeeded" and row["result"]["completed"] == 1 and not row["result"]["on"]
+    assert sum(request["method"] == "charge.run" for request in device.requests) == 1
+
+
+def test_older_firmware_receives_no_charge_cycle_command(tmp_path):
+    """AI:旧固件缺少循环能力时，后台直接拒绝。@param tmp_path 隔离目录。@return 无。"""
+    device = TestDevice()
+    app = create_app(tmp_path, token="old-fw", transport_factory=lambda _: device, test_mode=True)
+    with TestClient(app) as http:
+        base = {"Authorization": "Bearer old-fw"}
+        session = http.post("/api/sessions", headers=base, json={"name":"旧固件测试", "kind":"mcp"}).json()
+        headers = {**base, "X-Session-ID": session["session_id"]}
+        original = device.execute
+
+        def old_info(method, params, controller):
+            """AI:提供旧版真实能力集合中的充电命令。@param method 方法。@param params 参数。@param controller 操作者。@return 设备响应。"""
+            result = original(method, params, controller)
+            if method == "device.info":
+                result["capabilities"] = ["charge.set", "power.select"]
+            return result
+
+        device.execute = old_info
+        assert http.post("/api/connect", headers=headers, json={"kind":"http", "address":"http://test", "token":"fixture"}).status_code == 200
+        assert http.post("/api/control/claim", headers=headers, json={}).status_code == 200
+        rejected = submit(http, headers, "old-cycle", "charge.run", {"on_ms":200, "off_ms":500, "count":1})
+        assert rejected.json()["error"]["code"] == "METHOD_NOT_FOUND"
+        assert not any(request["method"] in ("charge.run", "charge.set") for request in device.requests)
+
+
 def test_observer_detach_and_page_absence_do_not_stop_recording(connected):
     """AI:原始记录由后台持续保存，观察者退出不停止记录。@param connected 夹具。@return 无。"""
     http, a, b, _, root = connected
