@@ -48,6 +48,18 @@ static bool core_result(cJSON *response, tool_result_t result)
     return false;
 }
 
+static const char *const output_names[] = {"off", "battery", "external", "battery_charge"}; /**< AI:与供电互锁一致的四种组合。 */
+
+/** AI:从请求读取明确指定的三路组合。@param item 输入对象。@param field 字段名。@param value 输出枚举。@return 是否识别。 */
+static bool output_field(const cJSON *item, const char *field, tool_output_t *value)
+{
+    const char *name = string_field(item, field);
+    for (size_t i = 0; name && i < sizeof(output_names)/sizeof(output_names[0]); i++) {
+        if (!strcmp(name, output_names[i])) { *value = (tool_output_t)i; return true; }
+    }
+    return false;
+}
+
 /** AI:打包动作控制记录。@param id 动作编号。@return JSON或NULL。 */
 static cJSON *action_json(uint32_t id)
 {
@@ -57,11 +69,22 @@ static cJSON *action_json(uint32_t id)
     if (action) {
         out = cJSON_CreateObject();
         cJSON_AddNumberToObject(out, "action_id", action->id);
-        const char *kind = action->kind == TOOL_KIND_CHARGE ? "charge" : action->kind == TOOL_KIND_KEYS ? "keys" : "power";
+        const char *const kinds[] = {"power", "keys", "charge", "outputs"};
+        const char *kind = kinds[action->kind];
         cJSON_AddStringToObject(out, "kind", kind);
         cJSON_AddStringToObject(out, "state", action->state == TOOL_ACTION_RUNNING ? "running" : action->state == TOOL_ACTION_CANCELLED ? "cancelled" : "succeeded");
         cJSON_AddNumberToObject(out, "started_ms", action->started_ms);
         cJSON_AddNumberToObject(out, "finished_ms", action->finished_ms);
+        if (action->kind == TOOL_KIND_OUTPUTS) {
+            const tool_output_progress_t *s = &action->sequence;
+            cJSON_AddStringToObject(out, "output", output_names[s->output]);
+            cJSON_AddBoolToObject(out, "settling", s->settling);
+            cJSON_AddNumberToObject(out, "step_index", s->index);
+            cJSON_AddNumberToObject(out, "step_count", s->step_count);
+            cJSON_AddNumberToObject(out, "completed", s->completed);
+            cJSON_AddNumberToObject(out, "repeat", s->repeat);
+            cJSON_AddNumberToObject(out, "max_late_ms", s->max_late_ms);
+        }
         if (action->kind == TOOL_KIND_CHARGE) {
             const tool_charge_cycle_t *cycle = &action->cycle;
             cJSON_AddBoolToObject(out, "on", cycle->on);
@@ -86,7 +109,7 @@ static cJSON *device_info(void)
     cJSON *out = cJSON_CreateObject();
     cJSON_AddStringToObject(out, "device_id", g_device_id);
     cJSON_AddStringToObject(out, "boot_id", g_boot_id);
-    cJSON_AddStringToObject(out, "firmware_version", "0.1.3");
+    cJSON_AddStringToObject(out, "firmware_version", "0.1.4");
     cJSON_AddStringToObject(out, "hardware_revision", "2026-11-10");
     cJSON_AddNumberToObject(out, "protocol_version", 1);
     cJSON_AddBoolToObject(out, "test_device", false);
@@ -103,6 +126,8 @@ static cJSON *device_info(void)
     const char *methods[] = {"device.info", "device.status", "control.claim", "control.renew", "control.release", "power.select", "charge.set", "charge.run", "charge.cancel", "keys.run", "action.get", "action.cancel", "uart.configure", "uart.tx", "uart.write", "telemetry.read", "calibration.get", "calibration.set", "timing.set", "network.status", "network.configure", "network.connect"};
     cJSON *capabilities = cJSON_AddArrayToObject(out, "capabilities");
     for (size_t i = 0; i < sizeof(methods)/sizeof(methods[0]); i++) cJSON_AddItemToArray(capabilities, cJSON_CreateString(methods[i]));
+    cJSON_AddItemToArray(capabilities, cJSON_CreateString("outputs.run"));
+    cJSON_AddItemToArray(capabilities, cJSON_CreateString("outputs.cancel"));
     cJSON *limits = cJSON_AddObjectToObject(out, "limits");
     cJSON_AddNumberToObject(limits, "keys", 5);
     cJSON_AddNumberToObject(limits, "max_steps", TOOL_MAX_STEPS);
@@ -207,6 +232,27 @@ cJSON *tool_rpc(const cJSON *request, bool usb)
         tool_board_apply();
         xSemaphoreGive(g_core_mutex);
         if (core_result(response, code)) result = tool_board_status();
+    } else if (!strcmp(method, "outputs.run")) {
+        const cJSON *steps = cJSON_GetObjectItemCaseSensitive(params, "steps");
+        int n = cJSON_GetArraySize(steps);
+        uint64_t repeat;
+        tool_output_t finish, cancel;
+        if (!cJSON_IsArray(steps) || n < 1 || n > TOOL_MAX_STEPS || !integer_field(params, "repeat", 1000, &repeat) ||
+            !output_field(params, "finish", &finish) || !output_field(params, "cancel", &cancel)) goto invalid;
+        tool_output_step_t sequence[TOOL_MAX_STEPS];
+        const cJSON *step;
+        size_t i = 0;
+        cJSON_ArrayForEach(step, steps) {
+            uint64_t duration;
+            if (!output_field(step, "state", &sequence[i].output) || !integer_field(step, "duration_ms", 60000, &duration)) goto invalid;
+            sequence[i++].duration_ms = duration;
+        }
+        uint32_t action;
+        xSemaphoreTake(g_core_mutex, portMAX_DELAY);
+        tool_result_t code = tool_outputs_run(&g_core, sequence, n, repeat, finish, cancel, esp_timer_get_time()/1000, &action);
+        tool_board_apply();
+        xSemaphoreGive(g_core_mutex);
+        if (core_result(response, code)) result = action_json(action);
     } else if (!strcmp(method, "charge.run")) {
         uint64_t on_ms, off_ms, count;
         if (!integer_field(params, "on_ms", 60000, &on_ms) || !integer_field(params, "off_ms", 60000, &off_ms) ||
@@ -235,12 +281,16 @@ cJSON *tool_rpc(const cJSON *request, bool usb)
         tool_board_apply();
         xSemaphoreGive(g_core_mutex);
         if (core_result(response, code)) result = action_json(action);
-    } else if (!strcmp(method, "action.get") || !strcmp(method, "action.cancel") || !strcmp(method, "charge.cancel")) {
+    } else if (!strcmp(method, "action.get") || !strcmp(method, "action.cancel") || !strcmp(method, "charge.cancel") || !strcmp(method, "outputs.cancel")) {
         uint64_t action;
         if (!integer_field(params, "action_id", UINT32_MAX, &action) || !action) goto invalid;
         if (strcmp(method, "action.get")) {
             xSemaphoreTake(g_core_mutex, portMAX_DELAY);
-            tool_result_t code = !strcmp(method, "charge.cancel") ? tool_core_charge_cancel(&g_core, action, esp_timer_get_time() / 1000) : tool_core_cancel(&g_core, action, now);
+            now = esp_timer_get_time() / 1000;
+            tool_result_t code;
+            if (!strcmp(method, "outputs.cancel")) code = tool_outputs_cancel(&g_core, action, now);
+            else if (!strcmp(method, "charge.cancel")) code = tool_core_charge_cancel(&g_core, action, now);
+            else code = tool_core_cancel(&g_core, action, now);
             tool_board_apply();
             xSemaphoreGive(g_core_mutex);
             if (!core_result(response, code)) goto save;

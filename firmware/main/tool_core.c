@@ -7,7 +7,7 @@ static int allocate_action(tool_core_t *c, tool_action_kind_t kind, uint64_t now
     int slot = -1;
     uint32_t oldest = UINT32_MAX;
     for (int i = 0; i < TOOL_MAX_ACTIONS; i++) {
-        if (i != c->key_slot && i != c->power_slot && i != c->charge_slot && c->actions[i].id < oldest) {
+        if (i != c->key_slot && i != c->power_slot && i != c->charge_slot && i != c->output_slot && c->actions[i].id < oldest) {
             oldest = c->actions[i].id;
             slot = i;
         }
@@ -22,13 +22,13 @@ static int allocate_action(tool_core_t *c, tool_action_kind_t kind, uint64_t now
 void tool_core_init(tool_core_t *c)
 {
     memset(c, 0, sizeof(*c));
-    c->key_slot = c->power_slot = c->charge_slot = -1;
+    c->key_slot = c->power_slot = c->charge_slot = c->output_slot = -1;
     c->deadtime_ms = 100; /* AI:工程初值，必须通过实际MOS关断波形确认。 */
 }
 
 bool tool_core_busy(const tool_core_t *c)
 {
-    return c->key_slot >= 0 || c->power_slot >= 0 || c->charge_slot >= 0;
+    return c->key_slot >= 0 || c->power_slot >= 0 || c->charge_slot >= 0 || c->output_slot >= 0;
 }
 
 tool_result_t tool_core_owner(const tool_core_t *c, const char *owner, uint64_t now)
@@ -76,7 +76,7 @@ tool_result_t tool_core_release(tool_core_t *c, const char *owner, uint64_t now)
 tool_result_t tool_core_power(tool_core_t *c, tool_power_t source, uint64_t now, uint32_t *id)
 {
     if (source < TOOL_POWER_OFF || source > TOOL_POWER_EXTERNAL || !id) return TOOL_INVALID;
-    if (c->power_slot >= 0 || c->charge_slot >= 0) return TOOL_BUSY;
+    if (c->power_slot >= 0 || c->charge_slot >= 0 || c->output_slot >= 0) return TOOL_BUSY;
     if (c->charge && source != TOOL_POWER_BATTERY) return TOOL_INTERLOCK;
     int slot = allocate_action(c, TOOL_KIND_POWER, now);
     if (slot < 0) return TOOL_BUSY;
@@ -101,7 +101,7 @@ tool_result_t tool_core_power(tool_core_t *c, tool_power_t source, uint64_t now,
 
 tool_result_t tool_core_charge(tool_core_t *c, bool enabled)
 {
-    if (c->charge_slot >= 0) return TOOL_BUSY;
+    if (c->charge_slot >= 0 || c->output_slot >= 0) return TOOL_BUSY;
     if (enabled && (c->power != TOOL_POWER_BATTERY || c->power_slot >= 0)) return TOOL_INTERLOCK;
     if (c->charge != enabled) c->revision++;
     c->charge = enabled;
@@ -112,7 +112,7 @@ tool_result_t tool_core_charge_run(tool_core_t *c, uint32_t on_ms, uint32_t off_
 {
     if (!id || on_ms < 10 || on_ms > 60000 || off_ms < 10 || off_ms > 60000 || !count || count > 1000 ||
         (uint64_t)(on_ms + off_ms) * count > TOOL_MAX_SEQUENCE_MS) return TOOL_INVALID;
-    if (c->charge_slot >= 0 || c->power_slot >= 0) return TOOL_BUSY;
+    if (c->charge_slot >= 0 || c->power_slot >= 0 || c->output_slot >= 0) return TOOL_BUSY;
     if (c->power != TOOL_POWER_BATTERY || c->charge) return TOOL_INTERLOCK;
     int slot = allocate_action(c, TOOL_KIND_CHARGE, now);
     if (slot < 0) return TOOL_BUSY;
@@ -191,8 +191,135 @@ tool_result_t tool_core_keys(tool_core_t *c, const tool_key_step_t *steps, size_
     return TOOL_OK;
 }
 
+/** AI:把可执行状态映射到互斥供电选择。@param output 三路输出状态。@return 主供电源。 */
+static tool_power_t output_source(tool_output_t output)
+{
+    if (output == OUTPUT_EXTERNAL) return TOOL_POWER_EXTERNAL;
+    return output == OUTPUT_OFF ? TOOL_POWER_OFF : TOOL_POWER_BATTERY;
+}
+
+/** AI:应用已满足换源条件的状态并开始本段计时。@param c 实例。@param now 实际控制毫秒。@return 无。 */
+static void enter_output(tool_core_t *c, uint64_t now)
+{
+    tool_action_t *a = &c->actions[c->output_slot];
+    tool_power_t source = output_source(c->output_target);
+    if (source == TOOL_POWER_OFF && c->power != TOOL_POWER_OFF) c->output_off_since_ms = now;
+    c->power = source;
+    c->charge = c->output_target == OUTPUT_CHARGING;
+    a->sequence.output = c->output_target;
+    a->sequence.settling = false;
+    a->state = c->output_goal;
+    if (a->state == TOOL_ACTION_RUNNING) {
+        c->output_due_ms = now + c->output_steps[a->sequence.index].duration_ms;
+    } else {
+        a->finished_ms = now;
+        c->output_slot = -1;
+    }
+    c->revision++;
+}
+
+/** AI:准备首步、普通步骤或收尾；关断间隔按板端实际时刻计算。@param c 实例。@param target 目标。@param goal 到达后动作状态。@param now 实际控制毫秒。@return 无。 */
+static void select_output(tool_core_t *c, tool_output_t target, tool_action_state_t goal, uint64_t now)
+{
+    tool_action_t *a = &c->actions[c->output_slot];
+    c->output_target = target;
+    c->output_goal = goal;
+    tool_power_t source = output_source(target);
+    if (source != TOOL_POWER_OFF && c->power != source) {
+        if (c->power != TOOL_POWER_OFF) c->output_off_since_ms = now;
+        uint64_t ready = c->output_off_since_ms + c->deadtime_ms;
+        if (now < ready) {
+            c->charge = false;
+            c->power = TOOL_POWER_OFF;
+            a->sequence.output = OUTPUT_OFF;
+            a->sequence.settling = true;
+            c->output_due_ms = ready;
+            c->revision++;
+            return;
+        }
+    }
+    enter_output(c, now);
+}
+
+tool_result_t tool_outputs_run(tool_core_t *c, const tool_output_step_t *steps, size_t n, uint32_t repeat,
+                               tool_output_t finish, tool_output_t cancel, uint64_t now, uint32_t *id)
+{
+    if (!steps || !id || !n || n > TOOL_MAX_STEPS || !repeat || repeat > 1000 ||
+        (unsigned)finish > OUTPUT_CHARGING || (unsigned)cancel > OUTPUT_CHARGING) return TOOL_INVALID;
+    if (c->power_slot >= 0 || c->charge_slot >= 0 || c->output_slot >= 0) return TOOL_BUSY;
+    uint64_t duration = 0;
+    for (size_t i = 0; i < n; i++) {
+        if ((unsigned)steps[i].output > OUTPUT_CHARGING || steps[i].duration_ms < 10 || steps[i].duration_ms > 60000) return TOOL_INVALID;
+        duration += steps[i].duration_ms;
+    }
+    if (duration * repeat > TOOL_MAX_SEQUENCE_MS) return TOOL_INVALID;
+    /* AI:预检相邻段及重复边界。用户编排的全断时间不能被隐式保护延时拉长。 */
+    tool_power_t previous = TOOL_POWER_OFF;
+    uint32_t off_ms = 0;
+    for (unsigned pass = 0; pass < (repeat > 1 ? 2U : 1U); pass++) {
+        for (size_t i = 0; i < n; i++) {
+            tool_power_t source = output_source(steps[i].output);
+            if (source == TOOL_POWER_OFF) {
+                off_ms += steps[i].duration_ms;
+                continue;
+            }
+            if (off_ms && off_ms < c->deadtime_ms) return TOOL_INTERLOCK;
+            if (!off_ms && previous != TOOL_POWER_OFF && previous != source) return TOOL_INTERLOCK;
+            previous = source;
+            off_ms = 0;
+        }
+    }
+    if (previous == TOOL_POWER_OFF) off_ms = (uint32_t)(duration * repeat);
+    if (finish != OUTPUT_OFF && off_ms && off_ms < c->deadtime_ms) return TOOL_INTERLOCK;
+    int slot = allocate_action(c, TOOL_KIND_OUTPUTS, now);
+    if (slot < 0) return TOOL_BUSY;
+    memcpy(c->output_steps, steps, n * sizeof(*steps));
+    c->output_slot = slot;
+    c->output_finish = finish;
+    c->output_cancel = cancel;
+    c->output_off_since_ms = now;
+    tool_action_t *a = &c->actions[slot];
+    a->sequence.step_count = n;
+    a->sequence.repeat = repeat;
+    *id = a->id;
+    select_output(c, steps[0].output, TOOL_ACTION_RUNNING, now);
+    return TOOL_OK;
+}
+
+tool_result_t tool_outputs_cancel(tool_core_t *c, uint32_t id, uint64_t now)
+{
+    const tool_action_t *a = tool_core_action(c, id);
+    if (!a) return TOOL_NOT_FOUND;
+    if (a->kind != TOOL_KIND_OUTPUTS) return TOOL_INVALID;
+    if (a->state == TOOL_ACTION_RUNNING && c->output_goal != TOOL_ACTION_CANCELLED)
+        select_output(c, c->output_cancel, TOOL_ACTION_CANCELLED, now);
+    return TOOL_OK;
+}
+
+/** AI:单次推进一个边沿，调度迟到时保留后续完整段长。@param c 实例。@param now 当前毫秒。@return 无。 */
+static void tick_outputs(tool_core_t *c, uint64_t now)
+{
+    if (c->output_slot < 0 || now < c->output_due_ms) return;
+    tool_action_t *a = &c->actions[c->output_slot];
+    if (a->sequence.settling) { enter_output(c, now); return; }
+    uint32_t late = (uint32_t)(now - c->output_due_ms);
+    if (late > a->sequence.max_late_ms) a->sequence.max_late_ms = late;
+    if (a->sequence.index + 1 == a->sequence.step_count) {
+        a->sequence.completed++;
+        if (a->sequence.completed == a->sequence.repeat) {
+            select_output(c, c->output_finish, TOOL_ACTION_SUCCEEDED, now);
+            return;
+        }
+        a->sequence.index = 0;
+    } else {
+        a->sequence.index++;
+    }
+    select_output(c, c->output_steps[a->sequence.index].output, TOOL_ACTION_RUNNING, now);
+}
+
 void tool_core_tick(tool_core_t *c, uint64_t now)
 {
+    tick_outputs(c, now);
     tick_charge(c, now);
     if (c->power_slot >= 0 && now >= c->power_deadline_ms) {
         c->power = c->pending_power;

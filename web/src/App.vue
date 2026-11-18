@@ -27,7 +27,7 @@ const canWrite = computed(() => connected.value && ownsControl.value && state.va
 const activeJobs = computed(() => (state.value?.jobs ?? []).filter(j => ['accepted','running'].includes(j.state)))
 const board = computed(() => state.value?.device_state ?? {})
 const keyJob = computed(() => activeJobs.value.find(j => j.method === 'keys.run'))
-const powerBusy = computed(() => Boolean(board.value.charge_cycle_id) || activeJobs.value.some(j => ['power.select','charge.set','charge.run','timing.set'].includes(j.method)))
+const powerBusy = computed(() => Boolean(board.value.charge_cycle_id || board.value.output_sequence_id) || activeJobs.value.some(j => ['power.select','charge.set','charge.run','outputs.run','timing.set'].includes(j.method)))
 const uartBusy = computed(() => activeJobs.value.some(j => j.method.startsWith('uart.')))
 const recording = computed(() => state.value?.recording.state === 'recording')
 const canStopOrphanRecord = computed(() => recording.value && !ownsControl.value && !state.value?.control.owner_active && !activeJobs.value.length)

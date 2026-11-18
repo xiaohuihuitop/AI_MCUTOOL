@@ -65,12 +65,14 @@ cJSON *tool_events_read(uint64_t after)
 
 void tool_board_apply(void)
 {
+    /* AI:取消充电先关充电MOS，再切换主通路；接通充电时先建立真实电池通路。 */
+    if (!g_core.charge) gpio_set_level(13, 0);
     /* AI:先拉低未选支路再拉高目标，禁止用两个独立外部命令驱动主供电。 */
     if (g_core.power != TOOL_POWER_BATTERY) gpio_set_level(11, 0);
     if (g_core.power != TOOL_POWER_EXTERNAL) gpio_set_level(12, 0);
     gpio_set_level(11, g_core.power == TOOL_POWER_BATTERY);
     gpio_set_level(12, g_core.power == TOOL_POWER_EXTERNAL);
-    gpio_set_level(13, g_core.charge);
+    if (g_core.charge) gpio_set_level(13, 1);
     for (int i = 0; i < 5; i++) gpio_set_level(4 + i, (g_core.keys >> i) & 1);
 }
 
@@ -137,6 +139,7 @@ cJSON *tool_board_status(void)
     cJSON_AddStringToObject(out, "power", names[g_core.power]);
     cJSON_AddBoolToObject(out, "charge", g_core.charge);
     cJSON_AddNumberToObject(out, "charge_cycle_id", g_core.charge_slot < 0 ? 0 : g_core.actions[g_core.charge_slot].id);
+    cJSON_AddNumberToObject(out, "output_sequence_id", g_core.output_slot < 0 ? 0 : g_core.actions[g_core.output_slot].id);
     cJSON_AddNumberToObject(out, "keys_mask", g_core.keys);
     cJSON_AddNumberToObject(out, "revision", g_core.revision);
     cJSON_AddBoolToObject(out, "busy", tool_core_busy(&g_core));

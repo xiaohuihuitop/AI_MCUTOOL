@@ -5,6 +5,7 @@ from .errors import ToolError
 
 READ_METHODS = {"device.info", "device.status", "network.status", "calibration.get", "action.get"}
 RESOURCES = {"power.select": "power", "charge.set": "power", "charge.run": "power", "charge.cancel": "cancel", "timing.set": "power",
+             "outputs.run": "power", "outputs.cancel": "cancel",
              "keys.run": "keys", "action.cancel": "cancel", "uart.configure": "uart", "uart.tx": "uart",
              "uart.write": "uart", "calibration.set": "measurement", "network.configure": "network", "network.connect": "network"}
 BAUDRATES = (9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600)
@@ -42,7 +43,17 @@ def validate(method: str, params: dict) -> None:
         on_ms, off_ms, count = (params.get(key) for key in ("on_ms", "off_ms", "count"))
         valid = (integer(on_ms, 10, 60000) and integer(off_ms, 10, 60000) and integer(count, 1, 1000)
                  and (on_ms + off_ms) * count <= 600000)
-    elif method in ("action.get", "action.cancel", "charge.cancel"):
+    elif method == "outputs.run":
+        fields = {"steps", "repeat", "finish", "cancel"}
+        states = ("off", "battery", "external", "battery_charge")
+        steps, repeat = params.get("steps"), params.get("repeat")
+        valid = (params.get("finish") in states and params.get("cancel") in states and integer(repeat, 1, 1000)
+                 and isinstance(steps, list) and 1 <= len(steps) <= 128
+                 and all(isinstance(step, dict) and set(step) == {"state", "duration_ms"}
+                         and step["state"] in states and integer(step["duration_ms"], 10, 60000) for step in steps))
+        if valid:
+            valid = sum(step["duration_ms"] for step in steps) * repeat <= 600000
+    elif method in ("action.get", "action.cancel", "charge.cancel", "outputs.cancel"):
         fields = {"action_id"}
         valid = integer(params.get("action_id"), 1, 2**32 - 1)
     elif method == "uart.configure":

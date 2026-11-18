@@ -4,6 +4,8 @@ import time
 from fastapi.testclient import TestClient
 import pytest
 from mcutool.app import create_app
+from mcutool.errors import ToolError
+from mcutool.validation import validate
 from tests.support.device import TestDevice
 
 
@@ -125,8 +127,12 @@ def test_charge_cycle_reconciles_after_connection_loss_without_replay(connected)
     assert sum(request["method"] == "charge.run" for request in device.requests) == 1
 
 
-def test_older_firmware_receives_no_charge_cycle_command(tmp_path):
-    """AI:旧固件缺少循环能力时，后台直接拒绝。@param tmp_path 隔离目录。@return 无。"""
+@pytest.mark.parametrize("method,params", [
+    ("charge.run", {"on_ms":200, "off_ms":500, "count":1}),
+    ("outputs.run", {"steps":[{"state":"battery","duration_ms":200}], "repeat":2, "finish":"off", "cancel":"external"}),
+])
+def test_older_firmware_receives_no_timed_output_command(tmp_path, method, params):
+    """AI:旧固件缺少所请求的能力时，后台直接拒绝。@param tmp_path 隔离目录。@param method 方法。@param params 原参数。@return 无。"""
     device = TestDevice()
     app = create_app(tmp_path, token="old-fw", transport_factory=lambda _: device, test_mode=True)
     with TestClient(app) as http:
@@ -145,9 +151,20 @@ def test_older_firmware_receives_no_charge_cycle_command(tmp_path):
         device.execute = old_info
         assert http.post("/api/connect", headers=headers, json={"kind":"http", "address":"http://test", "token":"fixture"}).status_code == 200
         assert http.post("/api/control/claim", headers=headers, json={}).status_code == 200
-        rejected = submit(http, headers, "old-cycle", "charge.run", {"on_ms":200, "off_ms":500, "count":1})
+        rejected = submit(http, headers, "old-cycle", method, params)
         assert rejected.json()["error"]["code"] == "METHOD_NOT_FOUND"
-        assert not any(request["method"] in ("charge.run", "charge.set") for request in device.requests)
+        assert not any(request["method"] in ("charge.run", "charge.set", "outputs.run", "power.select") for request in device.requests)
+
+
+def test_timed_outputs_require_explicit_valid_terminal_states_and_durations():
+    """AI:校验三路组合命令并拒绝不完整的收尾状态、过长序列及伪整数。@return 无。"""
+    plan = {"steps":[{"state":"external", "duration_ms":300}], "repeat":2, "finish":"battery", "cancel":"off"}
+    validate("outputs.run", plan)
+    for change in ({"cancel":None}, {"finish":"external_charge"}, {"repeat":True},
+                   {"steps":[{"state":"off","duration_ms":True}]},
+                   {"steps":[{"state":"battery","duration_ms":60000}], "repeat":11}):
+        with pytest.raises(ToolError):
+            validate("outputs.run", {**plan, **change})
 
 
 def test_observer_detach_and_page_absence_do_not_stop_recording(connected):

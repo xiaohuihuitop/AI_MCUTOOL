@@ -14,7 +14,14 @@ typedef enum { TOOL_OK, TOOL_INVALID, TOOL_BUSY, TOOL_INTERLOCK, TOOL_NOT_OWNER,
                TOOL_OWNER_EXPIRED, TOOL_STALE_STATE, TOOL_NOT_FOUND } tool_result_t;
 typedef enum { TOOL_POWER_OFF, TOOL_POWER_BATTERY, TOOL_POWER_EXTERNAL } tool_power_t;
 typedef enum { TOOL_ACTION_RUNNING, TOOL_ACTION_SUCCEEDED, TOOL_ACTION_CANCELLED } tool_action_state_t;
-typedef enum { TOOL_KIND_POWER, TOOL_KIND_KEYS, TOOL_KIND_CHARGE } tool_action_kind_t;
+typedef enum { TOOL_KIND_POWER, TOOL_KIND_KEYS, TOOL_KIND_CHARGE, TOOL_KIND_OUTPUTS } tool_action_kind_t;
+typedef enum { OUTPUT_OFF, OUTPUT_BATTERY, OUTPUT_EXTERNAL, OUTPUT_CHARGING } tool_output_t;
+typedef struct { tool_output_t output; uint32_t duration_ms; } tool_output_step_t;
+typedef struct {
+    uint32_t index, completed, repeat, step_count, max_late_ms;
+    tool_output_t output; /**< AI:当前实际命令状态，换源保护期间为全断。 */
+    bool settling; /**< AI:正在等待换源保护间隔，此时尚未开始计算下一步时长。 */
+} tool_output_progress_t;
 typedef struct {
     uint32_t on_ms, off_ms, count, completed; /**< AI:目标时长、目标次数及已走完断开段的次数。 */
     uint32_t min_on_ms, max_on_ms, min_off_ms, max_off_ms; /**< AI:完整控制段实耗范围，零表示尚未记录。 */
@@ -29,6 +36,7 @@ typedef struct {
     uint64_t started_ms;
     uint64_t finished_ms;
     tool_charge_cycle_t cycle;
+    tool_output_progress_t sequence;
 } tool_action_t;
 
 typedef struct {
@@ -45,6 +53,11 @@ typedef struct {
     int key_slot;
     int power_slot;
     int charge_slot; /**< AI:占用充电和主供电的循环槽位，空闲为负一。 */
+    int output_slot; /**< AI:三路通断序列共用一个槽位，避免两个动作写同一输出。 */
+    tool_output_step_t output_steps[TOOL_MAX_STEPS];
+    tool_output_t output_finish, output_cancel, output_target;
+    tool_action_state_t output_goal; /**< AI:保护等待结束后进入运行、完成或取消状态。 */
+    uint64_t output_due_ms, output_off_since_ms;
     uint64_t key_deadline_ms;
     uint64_t power_deadline_ms;
     tool_key_step_t steps[TOOL_MAX_STEPS];
@@ -52,6 +65,11 @@ typedef struct {
     size_t step_index;
     uint32_t repeats_left;
 } tool_core_t;
+
+/** AI:一次接收三路开关的完整时序。@param c 控制实例。@param steps 步骤。@param n 步数。@param repeat 有限次数。@param finish 完成后状态。@param cancel 取消后状态。@param now 板端单调毫秒。@param id 返回动作编号。@return 受理或拒绝原因。 */
+tool_result_t tool_outputs_run(tool_core_t *c, const tool_output_step_t *steps, size_t n, uint32_t repeat, tool_output_t finish, tool_output_t cancel, uint64_t now, uint32_t *id);
+/** AI:按预定取消状态收尾，必要时先断后通。@param c 控制实例。@param id 动作编号。@param now 板端单调毫秒。@return 请求结果。 */
+tool_result_t tool_outputs_cancel(tool_core_t *c, uint32_t id, uint64_t now);
 
 /** AI:初始化安全控制状态。@param core 执行模块实例。@return 无。 */
 void tool_core_init(tool_core_t *core);

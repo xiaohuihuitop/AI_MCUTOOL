@@ -281,8 +281,8 @@ class Runtime:
             existing = self.jobs.existing(request_id, fingerprint)
             if existing:
                 return existing
-            if method in ("charge.run", "charge.cancel") and method not in self.info["capabilities"]:
-                raise ToolError("METHOD_NOT_FOUND", "当前固件未提供板上充电循环")
+            if method in ("charge.run", "charge.cancel", "outputs.run", "outputs.cancel") and method not in self.info["capabilities"]:
+                raise ToolError("METHOD_NOT_FOUND", f"当前固件未提供板上命令 {method}")
             resource = RESOURCES[method]
             if resource != "cancel" and resource in self.active_jobs.values():
                 raise ToolError("BUSY", "该功能仍有在途动作，未排队新操作")
@@ -308,7 +308,7 @@ class Runtime:
                 while result.get("state") == "running":
                     await asyncio.sleep(0.05)
                     result = await self._rpc("action.get", {"action_id": result["action_id"]})
-                state = "cancelled" if result.get("state") == "cancelled" and method not in ("action.cancel", "charge.cancel") else "succeeded"
+                state = "cancelled" if result.get("state") == "cancelled" and RESOURCES[method] != "cancel" else "succeeded"
             else:
                 state = "succeeded"
             record = self.jobs.update(request_id, state=state, result=result, finished_at=time.time())
@@ -359,7 +359,8 @@ class Runtime:
             result = await self._rpc("action.get", {"action_id": job["action_id"]})
             state = result.get("state")
             if state in ("succeeded", "cancelled"):
-                return self.jobs.update(request_id, state=state, result=result, error=None)
+                terminal = "succeeded" if state == "cancelled" and RESOURCES.get(job["method"]) == "cancel" else state
+                return self.jobs.update(request_id, state=terminal, result=result, error=None)
             return {**job, "observed_action": result}
 
     def _ingest(self, packet: dict):
