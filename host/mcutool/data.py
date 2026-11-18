@@ -60,6 +60,8 @@ class JobStore:
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute("PRAGMA synchronous=FULL")
         self.db.execute("CREATE TABLE IF NOT EXISTS jobs (id TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, body TEXT NOT NULL, created REAL NOT NULL)")
+        # AI:状态推送与设备采集共用事件循环，旧库也需要索引以避免每次刷新扫描整份任务日志。
+        self.db.execute("CREATE INDEX IF NOT EXISTS jobs_created ON jobs(created)")
         for row in self.db.execute("SELECT id,body FROM jobs").fetchall():
             body = json.loads(row[1])
             if body["state"] in ("accepted", "running"):

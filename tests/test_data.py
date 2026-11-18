@@ -1,4 +1,6 @@
 """AI:有界数据及任务中断的接口验证。"""
+import sqlite3
+
 from mcutool.data import History, JobStore
 
 
@@ -24,3 +26,21 @@ def test_backend_restart_marks_unfinished_journal_unknown(tmp_path):
     assert recovered.get("request-a")["state"] == "unknown"
     assert recovered.get("request-a")["action_id"] == 42
     recovered.close()
+
+
+def test_recent_jobs_on_existing_database_has_bounded_work(tmp_path):
+    """AI:旧库升级后查询最近任务的工作量只随返回条数增长。@param tmp_path 隔离目录。@return 无。"""
+    path = tmp_path / "jobs.sqlite3"
+    db = sqlite3.connect(path)
+    db.execute("CREATE TABLE jobs (id TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, body TEXT NOT NULL, created REAL NOT NULL)")
+    db.executemany("INSERT INTO jobs VALUES (?, 'test', ?, ?)",
+                   ((str(i), '{"state":"succeeded","n":%d}' % i, i) for i in range(2000)))
+    db.commit()
+    db.close()
+    jobs = JobStore(path)
+    try:
+        # AI:对查询指令数设上限，避免用不同机器上的绝对耗时判断全表扫描。
+        jobs.db.set_progress_handler(lambda: 1, 2000)
+        assert [row["n"] for row in jobs.recent(30)] == list(range(1999, 1969, -1))
+    finally:
+        jobs.close()
