@@ -1,8 +1,8 @@
 {
   "repository": "xiaohuihuitop/AI_MCUTOOL",
-  "tag": "v0.4.2",
-  "version": "0.4.2",
-  "firmware_version": "0.1.2",
-  "installer": "MCUTOOL-0.4.2-windows-x64-setup.exe",
-  "sha256": "4f244b2ea6425dff113f35350211b3b794cdcc7813fcaee29f433030a30d9b14"
+  "tag": "v0.5.0",
+  "version": "0.5.0",
+  "firmware_version": "0.1.3",
+  "installer": "MCUTOOL-0.5.0-windows-x64-setup.exe",
+  "sha256": "17a6993966db378e0280680f1529e129c453122e61c6705d766d6e59112a6464"
 }
