@@ -115,8 +115,8 @@ Codex配置方式参考[官方MCP文档](https://developers.openai.com/codex/mcp
 
 ## 当前工程与版本
 
-- 当前编辑的主工程：`D:\LCEDA\projects\AI_TOOL\AI_TOOL.eprj3`，使用嘉立创EDA专业版本地客户端。
-- [本次保存的原生工程目录](hardware/easyeda-local/project/AI_TOOL/)：供Git保存和恢复的目录镜像，日常编辑仍以上述主工程为准。
+- 当前编辑的主工程已于2026-11-12切换为嘉立创EDA专业版全在线模式的云端`AI_TOOL`；官方CLI读取、DRC、截图及导出已实测，见[云端操作记录](docs/嘉立创云端AI_TOOL操作实测.md)。
+- `D:\LCEDA\projects\AI_TOOL\AI_TOOL.eprj3`及[已保存的原生工程目录](hardware/easyeda-local/project/AI_TOOL/)保留为切换前本地保存点，不与云端自动同步；当前云端工程标识见[接入信息](hardware/easyeda-cloud/connection.json)。
 - [最新保存点](hardware/easyeda-local/latest-version.json)及[完整版本归档](hardware/versions/版本记录.md)：包含源文件SHA256、完整目录快照和官方工程导出。
 - [装配资料](hardware/easyeda-local/assembly/2026-11-10/)：140颗器件、37种采购物料；[物料统一记录](docs/已回板物料统一修改记录.md)。
 - [按键光继电器选型调查](docs/按键光继电器替代料手册核验.md)：当前工程仍使用GAQY221S/C7435105，候选料和TLP187尚未替换。

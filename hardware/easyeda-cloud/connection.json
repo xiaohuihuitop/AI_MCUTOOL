@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-12",
+  "projectName": "AI_TOOL",
+  "storageMode": "cloud",
+  "editorMode": "online",
+  "projectUuid": "84be21ae55574be5bd4b2a41b3117a59",
+  "teamUuid": "23aac2b6e01e4ff88834c02687c3d603",
+  "pcbDocuments": [
+    {
+      "uuid": "9443dd1f7dacbd7f",
+      "name": ""
+    }
+  ],
+  "schematicPages": [
+    {
+      "uuid": "58316ac9a100868e",
+      "name": "01-工具电源",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "6ac5c47b59291a93",
+      "name": "02-主控与总线",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "8acf11b5cb7fef5d",
+      "name": "03-五路按键",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "fc93d0ec90c4481b",
+      "name": "04-主供电选择",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "984a9bed1747817a",
+      "name": "05-独立充电",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "4459834174268cdf",
+      "name": "06-电池端测量",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "b64f32ff6a10f61f",
+      "name": "07-四路电压",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    },
+    {
+      "uuid": "44c68f3606fe991d",
+      "name": "08-目标串口",
+      "parentSchematicUuid": "2b7d86483e2da7c8"
+    }
+  ],
+  "useCurrentLoggedInDesktopSession": true,
+  "reuseOldSessionId": false,
+  "independentHeadlessCloudOpenVerified": false,
+  "oldLocalProjectIsHistoricalSnapshot": true,
+  "oldLocalProjectPath": "D:/LCEDA/projects/AI_TOOL/AI_TOOL.eprj3",
+  "designWritesTestedInThisProbe": false,
+  "report": "docs/嘉立创云端AI_TOOL操作实测.md"
+}

@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-12",
+  "name": "AI_TOOL",
+  "projectUuid": "84be21ae55574be5bd4b2a41b3117a59",
+  "teamUuid": "23aac2b6e01e4ff88834c02687c3d603",
+  "client": true,
+  "online": true,
+  "halfOffline": false,
+  "schematicPages": 8,
+  "independentHeadlessProjectOpen": false,
+  "componentWritesPerformed": false,
+  "cloudDesignSavePerformed": false,
+  "schematicDrc": [
+    {
+      "type": "warn",
+      "rule": "ATTRMATCHCODE",
+      "primitives": [
+        {
+          "primitiveId": "1cbfae4824755100",
+          "sheet": "8acf11b5cb7fef5d",
+          "name": "Q1($3I97)"
+        },
+        {
+          "primitiveId": "0fcd567b089c8a43",
+          "sheet": "8acf11b5cb7fef5d",
+          "name": "Q2($3I99)"
+        },
+        {
+          "primitiveId": "81817391d5fed99c",
+          "sheet": "8acf11b5cb7fef5d",
+          "name": "Q3($3I101)"
+        },
+        {
+          "primitiveId": "fc932f1efb361ebd",
+          "sheet": "8acf11b5cb7fef5d",
+          "name": "Q4($3I103)"
+        },
+        {
+          "primitiveId": "aa3f927e5717227f",
+          "sheet": "8acf11b5cb7fef5d",
+          "name": "Q5($3I105)"
+        },
+        {
+          "primitiveId": "e74de296a196569e",
+          "sheet": "984a9bed1747817a",
+          "name": "Q14($5I44)"
+        }
+      ]
+    }
+  ],
+  "components": 140,
+  "lines": 930,
+  "vias": 159,
+  "componentModifyApiAvailable": true,
+  "wireCreateApiAvailable": true,
+  "logicalPins": 415,
+  "currentRelay": "GAQY221S",
+  "currentCurrentMonitor": "INA228AIDGSR",
+  "pcbImage": {
+    "file": "main-cloud-pcb.png",
+    "bytes": 431139
+  },
+  "pcbDrc": [],
+  "nativeExport": {
+    "file": "AI_TOOL_cloud_probe.epro2",
+    "bytes": 573283
+  },
+  "nativeExportCrcPassed": true,
+  "bomExport": {
+    "file": "AI_TOOL_cloud_probe_BOM.csv",
+    "bytes": 6830
+  },
+  "cplExport": {
+    "file": "AI_TOOL_cloud_probe_CPL.csv",
+    "bytes": 59166
+  },
+  "fullSchematicPcbIdentityMaterialAndNetworkMatched": true,
+  "matchesLastVerifiedLocalIdentityMaterialAndNetwork": true,
+  "procurementSkuCount": 37,
+  "nativeBomRows": 38,
+  "nativeBomEncoding": "UTF-16LE with BOM",
+  "editingAndCloudSaveTested": false,
+  "verifiedAgainstExistingCloudProject": true,
+  "evidenceDirectory": "docs/temp/cloud-operation-probe-20261112",
+  "report": "docs/嘉立创云端AI_TOOL操作实测.md",
+  "pcbPadsTracksRulesAndComponentPlacementUnchangedDuringProbe": true,
+  "observedTextUpdatesDuringProbe": [
+    {
+      "type": "PCB文字",
+      "id": "389da85935420cf8",
+      "before": "KEY5",
+      "after": "KEY1"
+    },
+    {
+      "type": "PCB文字",
+      "id": "627bbb189c498777",
+      "before": "KEY4",
+      "after": "KEY2"
+    },
+    {
+      "type": "PCB文字",
+      "id": "83098fb98bfb4a08",
+      "before": "KEY1",
+      "after": "KEY5"
+    },
+    {
+      "type": "PCB文字",
+      "id": "ed250983ee1db811",
+      "before": "KEY2",
+      "after": "KEY4"
+    },
+    {
+      "type": "器件说明",
+      "id": "f168e87acb2920e1",
+      "before": "AI:四脚常开轻触按键；1/2接原控制信号，3/4接公共地，按下闭合。保留原上拉和RC；PCB最后更新正式4.5×4.5mm封装。",
+      "after": "AI:四脚常开轻��按键；1/2接原控制信号，3/4接公共地，按下闭合。保留原上拉和RC；PCB最后更新正式4.5×4.5mm封装。"
+    }
+  ],
+  "probeDidNotWriteOrRevertObservedTextUpdates": true
+}
