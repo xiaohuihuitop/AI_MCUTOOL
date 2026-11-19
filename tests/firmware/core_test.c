@@ -54,10 +54,75 @@ static void test_charge_cycle(void)
     }
 }
 
+/** AI:按实际控制时刻核对三路组合、保护间隔、断线自主执行和指定收尾状态。@return 无。 */
+static void test_output_sequence(void)
+{
+    tool_core_t c;
+    uint32_t id, other;
+    tool_core_init(&c);
+    const tool_output_step_t unsafe[] = {{OUTPUT_BATTERY, 100}, {OUTPUT_OFF, 99}, {OUTPUT_EXTERNAL, 100}};
+    assert(tool_outputs_run(&c, unsafe, 3, 1, OUTPUT_OFF, OUTPUT_OFF, 0, &id) == TOOL_INTERLOCK);
+    const tool_output_step_t wrap[] = {{OUTPUT_BATTERY, 100}, {OUTPUT_OFF, 100}, {OUTPUT_EXTERNAL, 100}};
+    assert(tool_outputs_run(&c, wrap, 3, 2, OUTPUT_OFF, OUTPUT_OFF, 0, &id) == TOOL_INTERLOCK);
+    assert(!tool_core_busy(&c) && !c.charge && c.power == TOOL_POWER_OFF && c.next_action == 0);
+    const tool_output_step_t steps[] = {{OUTPUT_BATTERY, 50}, {OUTPUT_CHARGING, 200}, {OUTPUT_OFF, 100},
+                                         {OUTPUT_EXTERNAL, 75}, {OUTPUT_OFF, 100}};
+    assert(tool_outputs_run(&c, steps, 5, 2, OUTPUT_BATTERY, OUTPUT_EXTERNAL, 60000, &id) == TOOL_OK);
+    const tool_action_t *a = tool_core_action(&c, id);
+    assert(a->sequence.settling);
+    assert(tool_core_power(&c, TOOL_POWER_EXTERNAL, 60000, &other) == TOOL_BUSY);
+    assert(tool_core_charge(&c, true) == TOOL_BUSY);
+    assert(tool_core_charge_run(&c, 200, 500, 1, 60000, &other) == TOOL_BUSY);
+    assert(tool_core_cancel(&c, id, 60000) == TOOL_INVALID);
+    assert(tool_core_charge_cancel(&c, id, 60000) == TOOL_INVALID);
+    tool_core_tick(&c, 60099);
+    assert(c.power == TOOL_POWER_OFF);
+    uint64_t base = 60100;
+    tool_core_tick(&c, base);
+    for (unsigned i = 0; i < 2; i++) {
+        assert(c.power == TOOL_POWER_BATTERY && !c.charge);
+        tool_core_tick(&c, base + 50);
+        assert(c.power == TOOL_POWER_BATTERY && c.charge);
+        tool_core_tick(&c, base + 249);
+        assert(c.charge);
+        tool_core_tick(&c, base + 252);
+        assert(c.power == TOOL_POWER_OFF && !c.charge);
+        tool_core_tick(&c, base + 351);
+        assert(c.power == TOOL_POWER_OFF);
+        tool_core_tick(&c, base + 352);
+        assert(c.power == TOOL_POWER_EXTERNAL && !c.charge);
+        tool_core_tick(&c, base + 427);
+        assert(c.power == TOOL_POWER_OFF);
+        base += 527;
+        tool_core_tick(&c, base);
+    }
+    assert(a->state == TOOL_ACTION_SUCCEEDED && a->sequence.completed == 2 && a->sequence.max_late_ms == 2);
+    assert(c.power == TOOL_POWER_BATTERY && !c.charge && !tool_core_busy(&c));
+    assert(tool_outputs_run(&c, steps, 5, 1, OUTPUT_OFF, OUTPUT_EXTERNAL, base, &id) == TOOL_OK);
+    tool_core_tick(&c, base + 50);
+    assert(c.charge);
+    assert(tool_outputs_cancel(&c, id, base + 55) == TOOL_OK);
+    assert(!c.charge && c.power == TOOL_POWER_OFF && tool_core_busy(&c));
+    assert(tool_outputs_cancel(&c, id, base + 100) == TOOL_OK);
+    tool_core_tick(&c, base + 154);
+    assert(c.power == TOOL_POWER_OFF);
+    tool_core_tick(&c, base + 155);
+    assert(!tool_core_busy(&c) && c.power == TOOL_POWER_EXTERNAL);
+    assert(tool_core_action(&c,id)->state == TOOL_ACTION_CANCELLED);
+    assert(tool_outputs_cancel(&c, id, base + 156) == TOOL_OK);
+    const tool_output_step_t external[] = {{OUTPUT_EXTERNAL, 50}};
+    assert(tool_outputs_run(&c, external, 1, 1, OUTPUT_CHARGING, OUTPUT_OFF, base + 200, &id) == TOOL_OK);
+    tool_core_tick(&c, base + 250);
+    assert(tool_core_busy(&c) && c.power == TOOL_POWER_OFF && !c.charge);
+    tool_core_tick(&c, base + 350);
+    assert(!tool_core_busy(&c) && c.power == TOOL_POWER_BATTERY && c.charge);
+}
+
 /** AI:验证启动、互锁、取消和失联行为。@return 0 表示全部断言通过。 */
 int main(void)
 {
     test_charge_cycle();
+    test_output_sequence();
     tool_core_t core;
     tool_core_init(&core);
     assert(core.power == TOOL_POWER_OFF && !core.charge && core.keys == 0);

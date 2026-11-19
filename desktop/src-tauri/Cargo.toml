@@ -1,6 +1,6 @@
 [package]
 name = "mcutool-desktop"
-version = "0.5.5"
+version = "1.0.0"
 description = "MCU TOOL Windows 桌面工作台"
 edition = "2021"
 

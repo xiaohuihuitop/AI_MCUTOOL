@@ -75,7 +75,7 @@ def test_existing_runtime_probe_and_skill_install_are_isolated(tmp_path):
         '} finally { [Console]::InputEncoding = $previous }\n', encoding='utf-8')
     result=run(wrapper,ROOT/'scripts/setup-desktop.ps1',os.environ['MCUTOOL_SETUP_INSTALLED'],output,skill)
     assert result.returncode==0,result.stderr
-    assert f'MCP ready: version {VERSION}, 30 tools'.encode() in result.stdout
+    assert f'MCP ready: version {VERSION}, 32 tools'.encode() in result.stdout
     config=json.loads((output/'mcp-config.json').read_text(encoding='utf-8'))
     service=config['mcpServers']['mcutool']
     assert Path(service['command']).is_file()

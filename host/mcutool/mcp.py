@@ -152,6 +152,18 @@ def build_server(data_dir: Path) -> FastMCP:
         return await write("charge.set", request_id, {"enabled": enabled})
 
     @server.tool()
+    async def run_output_sequence(steps: list[dict], repeat: StrictInt,
+                                  finish: Literal["off", "battery", "external", "battery_charge"],
+                                  cancel: Literal["off", "battery", "external", "battery_charge"], request_id: str) -> dict:
+        """AI:一次下发整段三路开关时序。@param steps 每步为 state 和 duration_ms，状态同 finish，换源插入足够时长的 off 步骤。@param repeat 有限次数。@param finish 正常完成的输出。@param cancel 显式取消的输出。@param request_id 稳定编号。@return 后台任务，板上计时，失联继续执行。"""
+        return await write("outputs.run", request_id, {"steps": steps, "repeat": repeat, "finish": finish, "cancel": cancel})
+
+    @server.tool()
+    async def cancel_output_sequence(action_id: StrictInt, request_id: str) -> dict:
+        """AI:停止指定三路时序并转入预先指定的取消状态。@param action_id 本次启动的板上动作号。@param request_id 独立请求号。@return 取消任务，切换供电时等待板上保护间隔。"""
+        return await write("outputs.cancel", request_id, {"action_id": action_id})
+
+    @server.tool()
     async def run_charge_cycle(on_ms: StrictInt, off_ms: StrictInt, count: StrictInt, request_id: str) -> dict:
         """AI:启动板上有限充电循环，要求真实电池且充电已断开。@param on_ms 接通毫秒。@param off_ms 断开毫秒。@param count 完整次数。@param request_id 稳定请求编号。@return 后台任务，失联不重放。"""
         return await write("charge.run", request_id, {"on_ms": on_ms, "off_ms": off_ms, "count": count})

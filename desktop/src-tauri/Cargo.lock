@@ -2132,7 +2132,7 @@ dependencies = [
 
 [[package]]
 name = "mcutool-desktop"
-version = "0.5.5"
+version = "1.0.0"
 dependencies = [
  "reqwest 0.12.28",
  "semver",
