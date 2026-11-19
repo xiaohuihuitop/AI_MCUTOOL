@@ -26,13 +26,24 @@ jobs:
             gh api "$repo/contents/$1?ref=$GITHUB_SHA" --jq .content | base64 -d
           }
           read_at_commit integrations/desktop-release.json > descriptor.json
-          version=$(jq -er '.version | select(test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))' descriptor.json)
+          version=$(jq -er '.version | select(test("^[0-9]+\\.[0-9]+\\.[0-9]+(-rc\\.[0-9]+)?$"))' descriptor.json)
           tag="v$version"
           file="MCUTOOL-$version-windows-x64-setup.exe"
           jq -e --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg file "$file" \
             '.repository == $repo and .tag == $tag and .installer == $file and (.sha256|test("^[0-9a-f]{64}$"))' descriptor.json >/dev/null
-          gh api --paginate --slurp "$repo/releases?per_page=100" | jq -e --arg tag "$tag" --arg sha "$GITHUB_SHA" \
-            '[.[][] | select(.tag_name == $tag and .target_commitish == $sha and .draft and (.prerelease|not))] | select(length == 1) | first' > draft.json
+          gh api --paginate --slurp "$repo/releases?per_page=100" > releases.json
+          # AI:保护公开桌面版本的两条升级来源，候选版也从同一主线签发。
+          jq -r '[.[][] | select(.draft|not) | select(any(.assets[]; .name|test("^MCUTOOL-.*-windows-x64-setup\\.exe$")))]
+            | group_by(.prerelease)[] | max_by(.published_at).tag_name | @uri' releases.json > previous-tags
+          while IFS= read -r previous; do
+            gh api "$repo/compare/$previous...$GITHUB_SHA" | jq -e '.status == "ahead" or .status == "identical"' >/dev/null || {
+              echo "发布提交尚未包含 $previous，或无法核验其历史" >&2
+              exit 1
+            }
+          done < previous-tags
+          gh api "$repo/git/ref/heads/master" | jq -e --arg sha "$GITHUB_SHA" '.object.sha == $sha' >/dev/null
+          jq -e --arg tag "$tag" --arg sha "$GITHUB_SHA" \
+            '[.[][] | select(.tag_name == $tag and .target_commitish == $sha and .draft and (.prerelease == ($tag|contains("-rc."))))] | select(length == 1) | first' releases.json > draft.json
           asset=$(jq -er --arg f "$file" '[.assets[] | select(.name == $f and .state == "uploaded")] | select(length == 1) | first.id' draft.json)
           gh api "$repo/releases/assets/$asset" -H 'Accept: application/octet-stream' > "$file"
           printf '%s  %s\n' "$(jq -r .sha256 descriptor.json)" "$file" | sha256sum -c -
