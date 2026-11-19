@@ -1,5 +1,5 @@
 import { test, expect, type Page, type WebSocketRoute } from '@playwright/test'
-import type { Sample } from '../src/api'
+import type { Job, Sample } from '../src/api'
 
 /** AI:模拟中文Windows直接打开CSV时按编码标记识别UTF-8，否则按系统中文编码读取。@param bytes 实际导出字节。@returns 表格软件读取的文本。 */
 function spreadsheetCsv(bytes: Uint8Array) {
@@ -17,7 +17,7 @@ function fixture(boot='chart-boot',gap=false,end=120) {
   }
   const latest=Object.fromEntries(samples.slice(-6).map(row=>[row.channel,row]))
   const status={instance_id:'chart-runtime',connected:true,test_mode:true,device:{device_id:'CHART-TEST',boot_id:boot,measurement:{sample_rate_hz:10}},device_state:{power:'off',charge:false,keys_mask:0,uart:{}},device_state_stale:false,control:{owner:null,owner_active:false,revision:0,device_claimed:false},latest,jobs:[],clients:[],recording:{state:'idle',written_records:0},last_error:null}
-  return {status,data:{measurements:{items:samples,lost:0},uart:{items:[],lost:0},events:{items:[],lost:0}}}
+  return {status:{...status,jobs:[] as Job[]},data:{measurements:{items:samples,lost:0},uart:{items:[],lost:0},events:{items:[],lost:0}}}
 }
 
 /** AI:隔离浏览器后台读取和推送，只提供显式测试样本。@param page 测试页面。@param gap 是否注入缺口。@returns 可发送后续启动数据的连接。 */
@@ -32,6 +32,39 @@ async function openChart(page:Page,gap=false) {
   await expect(page.locator('[data-mode="battery"] .reading-number').first()).toContainText('3.900')
   return {send:(boot:string,end=120)=>socket.send(JSON.stringify(fixture(boot,false,end))), sendFrame:(next:ReturnType<typeof fixture>)=>socket.send(JSON.stringify(next))}
 }
+
+test('观察者清空已结束操作后，待确认与在途任务仍能追踪，新操作正常出现', async ({page}) => {
+  const stream = await openChart(page)
+  const frame = fixture('chart-boot',false,0)
+  const item = (id:string,state:string): Job => ({request_id:id,method:'power.select',state,actor:'测试',
+    action_id:null,created_at:100,result:null,error:null})
+  frame.status.jobs = [item('old1','succeeded'),item('old2','succeeded')]
+  stream.sendFrame(frame)
+  const tab = page.getByRole('button',{name:'操作记录',exact:true})
+  await tab.click()
+  const panel = page.locator('.activity-panel'), rows = panel.locator('.activity-row')
+  const clear = panel.getByRole('button',{name:'清空显示'})
+  await expect(rows).toHaveCount(2)
+  await clear.click()
+  await expect(rows).toHaveCount(0)
+  stream.sendFrame(frame)
+  await page.getByRole('button',{name:'供电与测量',exact:true}).click()
+  await tab.click()
+  await expect(rows).toHaveCount(0)
+  frame.status.jobs.unshift(item('new','failed'),item('queued','accepted'),item('active','running'),item('uncertain','unknown'))
+  stream.sendFrame(frame)
+  await expect(rows).toHaveCount(4)
+  await clear.click()
+  await expect(rows).toHaveCount(3)
+  await expect(panel).toContainText('2 项正在执行')
+  frame.status.jobs[1].state='succeeded'
+  frame.status.jobs[2].state='cancelled'
+  frame.status.jobs[3].state='succeeded'
+  stream.sendFrame(frame)
+  await expect(rows).toHaveCount(3)
+  await expect(panel).toContainText('0 项正在执行')
+  await expect(clear).toBeEnabled()
+})
 
 for (const mode of ['battery','aux']) test(`${mode}滚轮缩放后新数据继续进入可见窗口`,async({page})=>{
   const stream=await openChart(page)

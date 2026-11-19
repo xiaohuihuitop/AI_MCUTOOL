@@ -28,6 +28,15 @@ const connected = computed(() => Boolean(state.value?.connected && socketLive.va
 const ownsControl = computed(() => Boolean(state.value?.control.owner?.id === clientId.value && state.value?.control.owner_active))
 const canWrite = computed(() => connected.value && ownsControl.value && state.value?.control.device_claimed && !state.value.device_state_stale)
 const activeJobs = computed(() => (state.value?.jobs ?? []).filter(j => ['accepted','running'].includes(j.state)))
+const hiddenJobIds = ref(new Set<string>())
+const visibleJobs = computed(() => (state.value?.jobs ?? []).filter(job => !hiddenJobIds.value.has(job.request_id)))
+const finishedJobs = computed(() => visibleJobs.value.filter(job => ['succeeded','failed','cancelled'].includes(job.state)))
+/** AI:仅隐藏本页当前的已结束任务，保留未知结果和在途任务以便继续追踪。@returns 无。 */
+function clearActivity() {
+  const ids = new Set((state.value?.jobs ?? []).filter(job => hiddenJobIds.value.has(job.request_id)).map(job => job.request_id))
+  for (const job of finishedJobs.value) ids.add(job.request_id)
+  hiddenJobIds.value = ids
+}
 const board = computed(() => state.value?.device_state ?? {})
 const keyJob = computed(() => activeJobs.value.find(j => j.method === 'keys.run'))
 const powerBusy = computed(() => Boolean(board.value.charge_cycle_id) || activeJobs.value.some(j => ['power.select','charge.set','charge.run','timing.set'].includes(j.method)))
@@ -112,7 +121,13 @@ async function refreshPorts() {
 /** AI:连接用户指定工具。@returns 完成。 */
 async function connect() { await run('connect', async () => {
   const spec = connectionKind.value === 'usb' ? {kind:'usb',port:port.value} : {kind:'http',address:address.value,token:deviceToken.value}
+  const selected = spec.kind === 'usb' ? ports.value.find(p => p.port === spec.port) : undefined
   state.value = await api('/api/connect','POST',spec); connectionOpen.value = false; notice.value = '工具已连接，可先查看状态，再申请操作权。'
+  if (selected && state.value?.connected && state.value.device.device_id) {
+    const identity = usbIdentity(selected)
+    if (identity) localStorage.setItem(lastUsbKey, identity)
+    else localStorage.removeItem(lastUsbKey)
+  }
 }) }
 /** AI:显式申请或接管操作权。@param takeover 是否已确认接管。@returns 完成。 */
 async function claim(takeover = false) { await run('claim', async () => {
@@ -121,13 +136,7 @@ async function claim(takeover = false) { await run('claim', async () => {
 }) }
 /** AI:提交一次有编号的操作。@param method 公共方法。@param params 参数。@returns 完成提交，不代表动作完成。 */
 async function command(method: string, params: Record<string,unknown>) { await run(method, async () => {
-  const selected = spec.kind === 'usb' ? ports.value.find(p => p.port === spec.port) : undefined
   const requestId = crypto.randomUUID(); lastRequest.value = requestId
-  if (selected && state.value?.connected && state.value.device.device_id) {
-    const identity = usbIdentity(selected)
-    if (identity) localStorage.setItem(lastUsbKey, identity)
-    else localStorage.removeItem(lastUsbKey)
-  }
   const job: Job = await api('/api/commands','POST',{request_id:requestId,method,params})
   notice.value = `${methodNames[method] ?? method}：${jobNames[job.state] ?? job.state}`
 }) }
@@ -263,7 +272,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
         <section class="panel"><div class="panel-title"><h2>供电切换参数</h2><span class="badge amber">实物待验证</span></div><label>先断后通间隔 / ms<input v-model.number="deadtime" type="number" min="10" max="1000"/></label><button class="button" :disabled="!canWrite || !!activeJobs.length" @click="command('timing.set',{power_deadtime_ms:deadtime})">应用本次间隔</button><p class="hint">仅作用于本次启动，重启恢复 100ms 工程初值。应结合 MOS 关断波形核定，不能当作已验证指标。</p><div class="definition-list"><span>固件版本</span><b>{{state?.device.firmware_version||'未读取'}}</b><span>设备身份</span><b class="mono wrap">{{state?.device.device_id||'未读取'}}</b></div><button class="button full" :disabled="!connected || !!activeJobs.length || (!!state?.control.owner && !ownsControl)" @click="run('disconnect',async()=>{state=await api('/api/disconnect','POST');connectionOpen=true})"><Unplug :size="16"/>断开设备通信</button></section>
       </div>
 
-      <section v-show="tab==='操作记录'" class="panel activity-panel"><div class="panel-title"><h2>操作记录</h2><span class="hint">{{activeJobs.length}} 项正在执行</span></div><div class="activity-table" role="table"><div class="activity-head" role="row"><span>时间</span><span>操作 / 来源</span><span>状态</span><span>说明</span></div><div v-for="job in (state?.jobs??[])" :key="job.request_id" class="activity-row" role="row"><span class="mono">{{new Date(job.created_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{methodNames[job.method]??job.method}}<small>{{job.actor}}</small></span><span class="badge" :class="{teal:job.state==='succeeded',amber:['running','unknown','failed'].includes(job.state)}">{{jobNames[job.state]??job.state}}</span><span>{{job.error?.message || (job.state==='succeeded'?'控制执行完成，设备响应需另行观测':'可通过任务编号追踪')}}<small class="mono">{{job.request_id.slice(0,12)}}</small></span></div><p v-if="!state?.jobs.length" class="empty-log">尚无操作记录。连接工具后，人工与 AI 的操作会显示在这里。</p></div><details class="event-details"><summary>连接与采集事件（{{events.length}}）</summary><div v-for="event in [...events].reverse().slice(0,30)" :key="event.cursor" class="event-row"><span class="mono">{{new Date(event.received_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{event.detail}}</span></div></details></section>
+      <section v-show="tab==='操作记录'" class="panel activity-panel"><div class="panel-title"><h2>操作记录</h2><div class="button-row"><span class="hint">{{activeJobs.length}} 项正在执行</span><button class="button compact-button" :disabled="!finishedJobs.length" @click="clearActivity">清空显示</button></div></div><div class="activity-table" role="table"><div class="activity-head" role="row"><span>时间</span><span>操作 / 来源</span><span>状态</span><span>说明</span></div><div v-for="job in visibleJobs" :key="job.request_id" class="activity-row" role="row"><span class="mono">{{new Date(job.created_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{methodNames[job.method]??job.method}}<small>{{job.actor}}</small></span><span class="badge" :class="{teal:job.state==='succeeded',amber:['running','unknown','failed'].includes(job.state)}">{{jobNames[job.state]??job.state}}</span><span>{{job.error?.message || (job.state==='succeeded'?'控制执行完成，设备响应需另行观测':'可通过任务编号追踪')}}<small class="mono">{{job.request_id.slice(0,12)}}</small></span></div><p v-if="!visibleJobs.length" class="empty-log">当前没有可显示的操作记录。</p></div><details class="event-details"><summary>连接与采集事件（{{events.length}}）</summary><div v-for="event in [...events].reverse().slice(0,30)" :key="event.cursor" class="event-row"><span class="mono">{{new Date(event.received_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{event.detail}}</span></div></details></section>
 
       <details v-show="tab==='设备设置'" class="panel runtime-management"><summary>后台与客户端</summary><div class="client-list"><div v-for="client in state?.clients??[]" :key="client.id"><strong>{{client.name}}</strong><span>{{client.kind==='desktop'?'桌面':client.kind==='web'?'网页':client.kind==='mcp'?'AI':'命令行'}}</span><span class="badge" :class="{teal:client.active}">{{client.active?'在线':'已离线'}}</span></div></div><div class="button-row runtime-actions"><p class="hint grow">{{isDesktop?'关闭窗口后保留在托盘。仅退出桌面端会保留后台采集和记录；停止后台前请结束记录、等待动作完成，并让其他客户端退出。':'关闭网页后，后台仍可采集和记录。退出程序前请停止记录，并让其他客户端退出会话；关闭页面的客户端最多60秒后标为离线。'}}</p><button class="button" :disabled="!socketLive || !!pending" @click="run('diagnostics',async()=>{notice=await exportDiagnostics()?'诊断日志已导出':'已取消保存'})"><Download :size="16"/>导出诊断日志</button><button v-if="isDesktop" class="button" :disabled="!!pending" @click="run('desktop-exit',()=>desktopCommand('desktop_exit'))">仅退出桌面端</button><button class="button" :disabled="!socketLive || recording || !!activeJobs.length || !!pending" @click="run('shutdown',stopRuntime)">{{isDesktop?'停止后台并退出':'退出后台'}}</button></div></details>
       <footer><span>MCU TOOL <b>{{appVersion}}</b></span><span>控制状态与实测数据分别呈现 · 实物精度及电气时序待验收</span></footer>
