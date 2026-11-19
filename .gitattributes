@@ -3,6 +3,9 @@
 # AI:Windows批处理使用CRLF，保留UTF-8无BOM，避免cmd按字节读行错位。
 *.cmd text eol=crlf
 
+# AI:固件发布清单按原始字节签名，各平台检出统一换行。
+/integrations/firmware-release.json text eol=lf
+
 # AI:保留原生EDA工程、装配文件和归档字节，避免换行转换影响保存点摘要。
 *.eprj3 -text
 *.epcb2 -text
