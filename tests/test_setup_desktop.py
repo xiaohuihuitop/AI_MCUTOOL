@@ -63,7 +63,17 @@ def test_existing_runtime_probe_and_skill_install_are_isolated(tmp_path):
     """AI:复用已安装版本并只调用ping，配置输出与Skill均限制在测试目录。@param tmp_path 隔离目录。@return 无。"""
     output=tmp_path/'output'
     skill=tmp_path/'skill'
-    result=run(ROOT/'scripts/setup-desktop.ps1','-InstallDirectory',os.environ['MCUTOOL_SETUP_INSTALLED'],'-IntegrationDirectory',output,'-SkillDirectory',skill)
+    # AI:显式覆盖 Windows PowerShell 5.1 在 UTF-8 控制台中创建带 BOM 管道的情况。
+    wrapper = tmp_path / 'utf8-console.ps1'
+    wrapper.write_text(
+        'param($ScriptPath,$Install,$Integration,$Skill)\n'
+        "$ErrorActionPreference = 'Stop'\n"
+        '$previous = [Console]::InputEncoding\n'
+        'try {\n'
+        '    [Console]::InputEncoding = [Text.UTF8Encoding]::new($true)\n'
+        '    & $ScriptPath -InstallDirectory $Install -IntegrationDirectory $Integration -SkillDirectory $Skill\n'
+        '} finally { [Console]::InputEncoding = $previous }\n', encoding='utf-8')
+    result=run(wrapper,ROOT/'scripts/setup-desktop.ps1',os.environ['MCUTOOL_SETUP_INSTALLED'],output,skill)
     assert result.returncode==0,result.stderr
     assert f'MCP ready: version {VERSION}, 30 tools'.encode() in result.stdout
     config=json.loads((output/'mcp-config.json').read_text(encoding='utf-8'))

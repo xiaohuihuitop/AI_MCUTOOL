@@ -129,11 +129,20 @@ function Confirm-McpRuntime {
     $info.RedirectStandardInput = $true; $info.RedirectStandardOutput = $true; $info.RedirectStandardError = $true
     $process = [Diagnostics.Process]::new(); $process.StartInfo = $info
     try {
-        [void]$process.Start(); $errorOutput = $process.StandardError.ReadToEndAsync()
-        $process.StandardInput.WriteLine('{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"MCUTOOL-Setup","version":"1.0"}}}')
+        <# AI:.NET Framework 在 Start 时就把控制台编码的 BOM 写进管道，须在创建管道前指定编码。 #>
+        $inputEncoding = [Console]::InputEncoding
+        if ($inputEncoding.GetPreamble().Length -gt 0) {
+            try {
+                [Console]::InputEncoding = $script:utf8
+                [void]$process.Start()
+            } finally { [Console]::InputEncoding = $inputEncoding }
+        } else { [void]$process.Start() }
+        $writer = $process.StandardInput
+        $errorOutput = $process.StandardError.ReadToEndAsync()
+        $writer.WriteLine('{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"MCUTOOL-Setup","version":"1.0"}}}')
         $null = Read-McpReply $process 1
-        $process.StandardInput.WriteLine('{"jsonrpc":"2.0","method":"notifications/initialized"}')
-        $process.StandardInput.WriteLine('{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"ping","arguments":{}}}')
+        $writer.WriteLine('{"jsonrpc":"2.0","method":"notifications/initialized"}')
+        $writer.WriteLine('{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"ping","arguments":{}}}')
         $reply = Read-McpReply $process 2
         $text = @($reply.content | Where-Object type -EQ 'text')[0].text
         $ping = $text | ConvertFrom-Json
