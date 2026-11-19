@@ -27,8 +27,15 @@ async function openChart(page:Page,gap=false) {
   await page.route('**/api/sessions',route=>route.fulfill({json:{session_id:'chart-session',client_id:'chart-client'}}))
   await page.route('**/api/status',route=>route.fulfill({json:frame.status}))
   await page.route('**/api/ports',route=>route.fulfill({json:{ports:[]}}))
-  await page.routeWebSocket('**/ws',ws=>{socket=ws;ws.onMessage(()=>ws.send(JSON.stringify(frame)))})
+  await page.routeWebSocket('**/ws',ws=>{
+    socket=ws
+    ws.onMessage(message=>{
+      // AI:首次登记才发送初始快照，后续续约不会把已推送的任务列表重置。
+      if (typeof message==='string' && 'session_id' in JSON.parse(message)) ws.send(JSON.stringify(frame))
+    })
+  })
   await page.goto('/')
+  await expect(page.locator('.header-meta')).toContainText('工具已连接')
   await expect(page.locator('[data-mode="battery"] .reading-number').first()).toContainText('3.900')
   return {send:(boot:string,end=120)=>socket.send(JSON.stringify(fixture(boot,false,end))), sendFrame:(next:ReturnType<typeof fixture>)=>socket.send(JSON.stringify(next))}
 }
