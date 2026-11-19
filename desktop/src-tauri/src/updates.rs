@@ -93,8 +93,8 @@ fn verify(update: &Update, package: &Package, bytes: &[u8]) -> Result<(), String
     update.verify(bytes).map_err(|_| "工具包的发布签名或签名版本不正确".into())
 }
 
-/// AI:从官方正式版检查并缓存已验签工具包。@param app 原生桌面。@return 最终状态或明确错误。
-fn prepare(app: &AppHandle, redownload: bool) -> Result<Status, String> {
+/// AI:从官方正式版检查并缓存已验签工具包。@param app 原生桌面；replace_bad_cache 允许手动重试时替换已失效的缓存。@return 最终状态或明确错误。
+fn prepare(app: &AppHandle, replace_bad_cache: bool) -> Result<Status, String> {
     let client = Client::builder().user_agent(concat!("MCUTOOL/", env!("CARGO_PKG_VERSION")))
         .https_only(true).connect_timeout(Duration::from_secs(10)).build().map_err(|_| "无法初始化更新连接")?;
     let metadata = fetch(&client, LATEST, 2 * 1024 * 1024, Duration::from_secs(20))?;
@@ -109,7 +109,7 @@ fn prepare(app: &AppHandle, redownload: bool) -> Result<Status, String> {
     let package = Package { version: version.to_string(), size, signature: std::str::from_utf8(&sig).map_err(|_| "工具更新签名无效")?.trim().into() };
     let update = update_for(app, &package)?;
     let dir = cache_dir(app)?;
-    if !redownload {
+    if !replace_bad_cache {
         if let Some((cached, bytes)) = Package::load(&dir, MAX_INSTALLER)? {
             if cached.version == package.version && cached.signature == package.signature {
                 verify(&update, &package, &bytes)?;
@@ -154,10 +154,11 @@ pub fn check(app: AppHandle, manual: bool) {
     if state.settings.test_mode { return; }
     if manual { show_main(&app); }
     if state.checking_update.swap(true, Ordering::SeqCst) { return; }
-    let redownload = manual && matches!(desktop_update_status(app.clone()), Ok(Status::Failed { .. }));
+    // AI:断网或安装占用后已验签的缓存仍可复用；只有缺少可用缓存时才跳过旧文件。
+    let replace_bad_cache = manual && matches!(desktop_update_status(app.clone()), Ok(Status::Failed { cached_version: None, .. }));
     report(&app, Status::Checking);
     thread::spawn(move || {
-        let status = match prepare(&app, redownload) {
+        let status = match prepare(&app, replace_bad_cache) {
             Ok(status) => status,
             Err(message) => {
                 crate::backend::log_error(&app.state::<DesktopState>().settings, &message);
