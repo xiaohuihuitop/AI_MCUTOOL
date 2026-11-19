@@ -1,12 +1,12 @@
-use crate::{current_backend, show_error, DesktopState};
+use crate::{current_backend, show_main, update_cache::Package, DesktopState};
 use reqwest::blocking::Client;
 use semver::Version;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::{io::Read, os::windows::process::CommandExt, process::Command, sync::atomic::Ordering, thread, time::{Duration, Instant}};
 use tauri::{AppHandle, Manager};
-use tauri_plugin_dialog::{DialogExt, MessageDialogButtons};
-use tauri_plugin_updater::UpdaterExt;
+use tauri_plugin_dialog::DialogExt;
+use tauri_plugin_updater::{Update, UpdaterExt};
 
 const LATEST: &str = "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/latest";
 const DOWNLOADS: &str = "https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/download";
@@ -16,7 +16,7 @@ const MAX_INSTALLER: u64 = 512 * 1024 * 1024; // AI:限制安装包内存占用�
 struct Asset { name: String, size: u64 }
 
 #[derive(Deserialize)]
-struct Release { tag_name: String, body: Option<String>, draft: bool, prerelease: bool, assets: Vec<Asset> }
+struct Release { tag_name: String, draft: bool, prerelease: bool, assets: Vec<Asset> }
 
 impl Release {
     /// AI:识别比当前版本新的正式发布。@param current 已安装版本。@return 可更新的版本或无更新。
@@ -48,54 +48,155 @@ fn fetch(client: &Client, url: &str, limit: u64, timeout: Duration) -> Result<Ve
     Ok(bytes)
 }
 
-/// AI:检查最新正式版并处理确认后的更新。@param app 原生桌面。@param manual 是否由用户手动发起。@return 无，后台检查失败写日志。
-pub fn check(app: AppHandle, manual: bool) {
-    let state = app.state::<DesktopState>();
-    if state.checking_update.swap(true, Ordering::SeqCst) {
-        if manual { app.dialog().message("正在检查或准备更新。").title("检查更新").show(|_| {}); }
-        return;
-    }
-    thread::spawn(move || {
-        let mut interactive = manual;
-        let result = check_and_install(&app, &mut interactive);
-        let state = app.state::<DesktopState>();
-        state.checking_update.store(false, Ordering::SeqCst);
-        if let Err(error) = result {
-            if interactive { show_error(&app, &error); }
-            else { crate::backend::log_error(&state.settings, &error); }
-        }
-    });
+#[derive(Clone, Serialize)]
+#[serde(tag = "phase", rename_all = "snake_case")]
+pub enum Status {
+    Idle,
+    Checking,
+    Current,
+    Downloading { version: String, received: u64, total: u64 },
+    Ready { version: String },
+    Installing { version: String },
+    Failed { message: String, cached_version: Option<String> },
 }
 
-/// AI:按固定发布源检查版本，用户确认后查验签名并调用安装器。@param app 桌面实例。@param interactive 是否需要显示结果。@return 完成或原因。
-fn check_and_install(app: &AppHandle, interactive: &mut bool) -> Result<(), String> {
+/// AI:发布原生更新进度，网页重载后仍能查询。@param app 桌面；status 本次真实状态。@return 无。
+fn report(app: &AppHandle, status: Status) {
+    if let Ok(mut value) = app.state::<DesktopState>().update_status.lock() { *value = status; }
+}
+
+#[tauri::command]
+/// AI:查询当前工具更新进度。@param app 桌面实例。@return 更新阶段或读取错误。
+pub fn desktop_update_status(app: AppHandle) -> Result<Status, String> {
+    app.state::<DesktopState>().update_status.lock().map(|s| s.clone()).map_err(|_| "无法读取更新状态".into())
+}
+
+#[tauri::command]
+/// AI:用户手动检查正式工具版。@param app 桌面实例。@return 无，进度通过状态接口公开。
+pub fn desktop_prepare_update(app: AppHandle) { check(app, true); }
+
+/// AI:为同平台的正式版本重建设备无关的桌面签名校验器。@param app 桌面；package 待检查的包描述。@return 通过版本策略的更新对象。
+fn update_for(app: &AppHandle, package: &Package) -> Result<Update, String> {
+    let version = Version::parse(&package.version).map_err(|_| "更新版本无效")?;
+    if !version.pre.is_empty() || !version.build.is_empty() || version <= app.package_info().version || package.size == 0 || package.size > MAX_INSTALLER {
+        return Err("工具包版本或大小不适用于当前桌面".into());
+    }
+    let name = format!("MCUTOOL-{version}-windows-x64-setup.exe");
+    let updater = app.updater_builder().restart_after_install(true).build().map_err(|_| "无法初始化签名验证")?;
+    updater.restore_update(json!({"version":package.version,"url":format!("{DOWNLOADS}/v{version}/{name}"),"signature":package.signature}))
+        .map_err(|_| "工具包与本机平台或版本不匹配")?.ok_or("当前工具版本无需更新".into())
+}
+
+/// AI:只校验将要使用的同一份字节。@param update 版本签名；package 包描述；bytes 文件。@return 校验结果。
+fn verify(update: &Update, package: &Package, bytes: &[u8]) -> Result<(), String> {
+    if bytes.len() as u64 != package.size { return Err("工具包长度不符".into()); }
+    update.verify(bytes).map_err(|_| "工具包的发布签名或签名版本不正确".into())
+}
+
+/// AI:从官方正式版检查并缓存已验签工具包。@param app 原生桌面。@return 最终状态或明确错误。
+fn prepare(app: &AppHandle, redownload: bool) -> Result<Status, String> {
     let client = Client::builder().user_agent(concat!("MCUTOOL/", env!("CARGO_PKG_VERSION")))
         .https_only(true).connect_timeout(Duration::from_secs(10)).build().map_err(|_| "无法初始化更新连接")?;
     let metadata = fetch(&client, LATEST, 2 * 1024 * 1024, Duration::from_secs(20))?;
     let release: Release = serde_json::from_slice(&metadata).map_err(|_| "无法读取 GitHub 发布信息")?;
-    let current = app.package_info().version.clone();
-    let Some(version) = release.newer(&current)? else {
-        if *interactive { app.dialog().message(format!("当前版本 {current}，暂无更新。")).title("检查更新").show(|_| {}); }
-        return Ok(());
-    };
+    let Some(version) = release.newer(&app.package_info().version)? else { return Ok(Status::Current); };
     let name = format!("MCUTOOL-{version}-windows-x64-setup.exe");
     let size = release.asset_size(&name, MAX_INSTALLER)?;
-    let signature_size = release.asset_size(&format!("{name}.sig"), 8192)?;
-    let notes = release.body.as_deref().unwrap_or("").trim();
-    let accepted = app.dialog().message(format!("当前版本 {current}\n最新版本 {version}\n\n{notes}"))
-        .title("发现新版本").buttons(MessageDialogButtons::OkCancelCustom("更新并重启".into(), "稍后".into())).blocking_show();
-    if !accepted { return Ok(()); }
-    *interactive = true;
-    let backend = current_backend(app)?;
+    let sig_size = release.asset_size(&format!("{name}.sig"), 8192)?;
     let url = format!("{DOWNLOADS}/v{version}/{name}");
-    let signature = fetch(&client, &format!("{url}.sig"), signature_size, Duration::from_secs(20))?;
-    if signature.len() as u64 != signature_size { return Err("更新签名下载不完整".into()); }
-    let updater = app.updater_builder().restart_after_install(true).build().map_err(|_| "无法初始化签名验证")?;
-    let update = updater.restore_update(json!({"version":version.to_string(), "url":url, "signature":std::str::from_utf8(&signature).map_err(|_| "签名格式不正确")?.trim()}))
-        .map_err(|_| "更新包与本机平台或版本不匹配")?.ok_or("当前版本无需更新")?;
-    let bytes = fetch(&client, &url, size, Duration::from_secs(600))?;
-    if bytes.len() as u64 != size { return Err("安装包下载不完整，已停止更新".into()); }
-    update.verify(&bytes).map_err(|_| "更新包的发布签名或签名版本不正确，已停止安装")?;
+    let sig = fetch(&client, &format!("{url}.sig"), sig_size, Duration::from_secs(20))?;
+    if sig.len() as u64 != sig_size { return Err("工具更新签名下载不完整".into()); }
+    let package = Package { version: version.to_string(), size, signature: std::str::from_utf8(&sig).map_err(|_| "工具更新签名无效")?.trim().into() };
+    let update = update_for(app, &package)?;
+    let dir = cache_dir(app)?;
+    if !redownload {
+        if let Some((cached, bytes)) = Package::load(&dir, MAX_INSTALLER)? {
+            if cached.version == package.version && cached.signature == package.signature {
+                verify(&update, &package, &bytes)?;
+                return Ok(Status::Ready { version: package.version });
+            }
+        }
+    }
+    let mut response = client.get(&url).timeout(Duration::from_secs(600)).send()
+        .and_then(|r| r.error_for_status()).map_err(|_| "工具包下载失败，请检查网络后重试")?;
+    let mut bytes = Vec::new();
+    let mut block = [0; 65536];
+    report(app, Status::Downloading { version: package.version.clone(), received: 0, total: size });
+    loop {
+        let count = response.read(&mut block).map_err(|_| "工具包下载中断")?;
+        if count == 0 { break; }
+        let received = bytes.len() as u64 + count as u64;
+        if received > size { return Err("工具包超过发布大小".into()); }
+        bytes.extend_from_slice(&block[..count]);
+        report(app, Status::Downloading { version: package.version.clone(), received, total: size });
+    }
+    verify(&update, &package, &bytes)?;
+    package.save(&dir, &bytes)?;
+    Ok(Status::Ready { version: package.version })
+}
+
+/// AI:定位当前用户的桌面更新缓存。@param app 原生应用。@return 工具包缓存目录。
+fn cache_dir(app: &AppHandle) -> Result<std::path::PathBuf, String> {
+    app.path().app_cache_dir().map(|dir| dir.join("tool-update")).map_err(|_| "无法定位更新缓存".into())
+}
+
+/// AI:仅把当前机器可安装且签名有效的本地包提供给离线用户。@param app 原生应用。@return 已验证版本或无。
+fn cached_version(app: &AppHandle) -> Option<String> {
+    let (package, bytes) = Package::load(&cache_dir(app).ok()?, MAX_INSTALLER).ok()??;
+    let update = update_for(app, &package).ok()?;
+    verify(&update, &package, &bytes).ok()?;
+    Some(package.version)
+}
+
+/// AI:启动一次正式版检查，桌面与托盘共用进度。@param app 桌面；manual 是否由用户发起。@return 无。
+pub fn check(app: AppHandle, manual: bool) {
+    let state = app.state::<DesktopState>();
+    if state.settings.test_mode { return; }
+    if manual { show_main(&app); }
+    if state.checking_update.swap(true, Ordering::SeqCst) { return; }
+    let redownload = manual && matches!(desktop_update_status(app.clone()), Ok(Status::Failed { .. }));
+    report(&app, Status::Checking);
+    thread::spawn(move || {
+        let status = match prepare(&app, redownload) {
+            Ok(status) => status,
+            Err(message) => {
+                crate::backend::log_error(&app.state::<DesktopState>().settings, &message);
+                Status::Failed { message, cached_version: cached_version(&app) }
+            }
+        };
+        if manual && matches!(status, Status::Current) { app.dialog().message("当前工具已是最新正式版。").title("检查更新").show(|_| {}); }
+        report(&app, status);
+        app.state::<DesktopState>().checking_update.store(false, Ordering::SeqCst);
+    });
+}
+
+#[tauri::command]
+/// AI:用户点击安装后重读和复核缓存，再进行后台交接。@param app 原生应用；version 用户看到并选择的工具版本。@return 受理结果或失败原因。
+pub async fn desktop_install_update(app: AppHandle, version: String) -> Result<(), String> {
+    let state = app.state::<DesktopState>();
+    if state.settings.test_mode { return Err("测试模式无法安装正式更新".into()); }
+    if state.checking_update.swap(true, Ordering::SeqCst) { return Err("工具更新正在处理中".into()); }
+    let worker = app.clone();
+    let result = tauri::async_runtime::spawn_blocking(move || {
+        let directory = cache_dir(&worker)?;
+        let (package, bytes) = Package::load(&directory, MAX_INSTALLER)?.ok_or("尚无已下载的工具包")?;
+        if package.version != version { return Err("已准备的版本已变化，请重新检查".into()); }
+        let update = update_for(&worker, &package)?;
+        verify(&update, &package, &bytes)?;
+        report(&worker, Status::Installing { version });
+        install(&worker, update, bytes)
+    }).await.map_err(|_| "工具更新线程未正常结束".to_owned()).and_then(|r| r);
+    if let Err(message) = &result {
+        let cached = tauri::async_runtime::spawn_blocking({ let app=app.clone(); move || cached_version(&app) }).await.ok().flatten();
+        report(&app, Status::Failed { message:message.clone(), cached_version: cached });
+    }
+    state.checking_update.store(false, Ordering::SeqCst);
+    result
+}
+
+/// AI:安装已验签的同一份工具字节。@param app 桌面；update 发布信息；bytes 已验证的包。@return 安装交接结果。
+fn install(app: &AppHandle, update: Update, bytes: Vec<u8>) -> Result<(), String> {
+    let backend = current_backend(app)?;
     let service = app.path().resource_dir().map_err(|_| "无法确定安装位置")?.join("runtime/MCUTOOL-service/MCUTOOL-service.exe");
     let state = app.state::<DesktopState>();
     if state.exit_pending.swap(true, Ordering::SeqCst) { return Err("正在退出，请稍后再更新".into()); }
@@ -147,7 +248,7 @@ mod tests {
     #[test]
     /// AI:验证正式版本的数值比较、相同版本和预发布过滤。@return 无。
     fn only_newer_stable_versions_are_offered() {
-        let mut r = Release { tag_name:"v0.10.0".into(), body:None, draft:false, prerelease:false, assets:vec![] };
+        let mut r = Release { tag_name:"v0.10.0".into(), draft:false, prerelease:false, assets:vec![] };
         let current = Version::parse("0.9.9").unwrap();
         assert_eq!(r.newer(&current).unwrap().unwrap(), Version::parse("0.10.0").unwrap());
         for tag in ["v0.9.9", "v0.5.0", "v1.0.0-rc.1"] {

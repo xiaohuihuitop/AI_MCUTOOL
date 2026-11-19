@@ -2,6 +2,7 @@
 
 mod backend;
 mod updates;
+mod update_cache;
 use backend::{Backend, Settings};
 use serde_json::{json, Value};
 use std::{io::Write, path::PathBuf, sync::{atomic::{AtomicBool, Ordering}, Mutex}, thread, time::Duration};
@@ -14,6 +15,7 @@ struct DesktopState {
     // AI:请求门闩与最终退出分开，后台拒绝退出时不能停止原生续约。
     exit_pending: AtomicBool,
     checking_update: AtomicBool,
+    update_status: Mutex<updates::Status>,
     exiting: AtomicBool,
     settings: Settings,
 }
@@ -175,8 +177,8 @@ fn main() {
                 _ => show_error(app, "工作台已打开。若要改用其他记录目录，请先明确退出当前桌面端。"),
             }
         }))
-        .manage(DesktopState { backend: Mutex::new(None), error: Mutex::new(config_error.clone()), exit_pending: AtomicBool::new(false), checking_update: AtomicBool::new(false), exiting: AtomicBool::new(false), settings })
-        .invoke_handler(tauri::generate_handler![desktop_context, desktop_start_status, desktop_exit, desktop_stop, desktop_export, desktop_save_recording, desktop_save_waveform])
+        .manage(DesktopState { backend: Mutex::new(None), error: Mutex::new(config_error.clone()), exit_pending: AtomicBool::new(false), checking_update: AtomicBool::new(false), update_status: Mutex::new(updates::Status::Idle), exiting: AtomicBool::new(false), settings })
+        .invoke_handler(tauri::generate_handler![desktop_context, desktop_start_status, desktop_exit, desktop_stop, desktop_export, desktop_save_recording, desktop_save_waveform, updates::desktop_update_status, updates::desktop_prepare_update, updates::desktop_install_update])
         .setup(move |app| {
             let window = WebviewWindowBuilder::new(app, "main", WebviewUrl::App("index.html".into()))
                 .title("MCU TOOL · 设备工作台").inner_size(1280.0, 900.0).min_inner_size(920.0, 680.0)

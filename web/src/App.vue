@@ -3,6 +3,7 @@ import { computed, onMounted, onBeforeUnmount, ref, shallowRef, watch } from 'vu
 import { Activity, Cable, Check, ChevronDown, CircleHelp, Download, Gauge, KeyRound, Link, LockKeyhole, Pause, Play, Power, Radio, RefreshCw, Settings2, Square, Terminal, Unplug, Wifi, X } from 'lucide-vue-next'
 import Trend from './Trend.vue'
 import BoardModel from './BoardModel.vue'
+import ToolUpdate from './ToolUpdate.vue'
 import { version as appVersion } from '../package.json'
 import { api, download, exportDiagnostics, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
 import { desktopCommand, desktopSession, isDesktop } from './desktop'
@@ -212,6 +213,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
       <div class="header-meta"><span class="status-dot" :class="{online:connected}"></span><span>{{ connected ? '工具已连接' : '工具未连接' }}</span><span>固件 {{ connected ? state?.device.firmware_version || '—' : '—' }}</span><span class="header-divider"></span><span class="mono">{{ connected ? state?.device.device_id : '尚未选择设备' }}</span></div>
       <button class="button light" @click="connectionOpen=!connectionOpen"><Cable :size="16"/>连接设置<ChevronDown :size="14"/></button>
     </header>
+    <ToolUpdate v-if="isDesktop"/>
     <div v-if="state?.test_mode" class="test-banner">测试环境 · 当前数据来自显式测试设备，不代表实物测量。</div>
     <main>
       <section v-if="connectionOpen" class="panel connect-panel">
