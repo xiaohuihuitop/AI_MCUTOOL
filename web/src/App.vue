@@ -208,8 +208,8 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
 <template>
   <div class="workbench">
     <header class="masthead">
-      <div class="brand-mark"><Activity :size="26"/><div><strong>MCU <span>TOOL</span></strong><small>设备工作台</small></div></div>
-      <div class="header-meta"><span class="status-dot" :class="{online:connected}"></span><span>{{ connected ? '工具已连接' : '工具未连接' }}</span><span class="header-divider"></span><span class="mono">{{ state?.device.device_id || '尚未选择设备' }}</span></div>
+      <div class="brand-mark"><Activity :size="26"/><div><strong>MCU <span>TOOL</span></strong><small>设备工作台 · {{appVersion}}</small></div></div>
+      <div class="header-meta"><span class="status-dot" :class="{online:connected}"></span><span>{{ connected ? '工具已连接' : '工具未连接' }}</span><span>固件 {{ connected ? state?.device.firmware_version || '—' : '—' }}</span><span class="header-divider"></span><span class="mono">{{ connected ? state?.device.device_id : '尚未选择设备' }}</span></div>
       <button class="button light" @click="connectionOpen=!connectionOpen"><Cable :size="16"/>连接设置<ChevronDown :size="14"/></button>
     </header>
     <div v-if="state?.test_mode" class="test-banner">测试环境 · 当前数据来自显式测试设备，不代表实物测量。</div>
