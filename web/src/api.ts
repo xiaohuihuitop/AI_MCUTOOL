@@ -2,6 +2,7 @@ export type Sample = {channel: string; value: number | null; nominal: number | n
 export type Job = {request_id: string; method: string; state: string; action_id: number | null; actor: string; error: {message: string} | null; created_at: number; result: Record<string, unknown> | null}
 export type Snapshot = {
   instance_id: string; connected: boolean; test_mode: boolean;
+  connection?: {kind?:'usb'|'http';port?:string;address?:string};
   device: Record<string, any>; device_state: Record<string, any>; device_state_stale: boolean;
   control: {owner: {id: string; name: string; kind: string} | null; owner_active: boolean; revision: number; device_claimed: boolean};
   latest: Record<string, Sample>; jobs: Job[]; clients: {id: string; name: string; kind: string; active: boolean}[];

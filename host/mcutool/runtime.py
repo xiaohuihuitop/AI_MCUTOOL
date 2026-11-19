@@ -173,10 +173,10 @@ class Runtime:
                 self.device_lock = None
                 raise
 
-    async def _lost(self, error: ToolError):
-        """AI:通信故障明确进入断开，不自动恢复。@param error 原错误。@return 无。"""
+    async def _lost(self, error: ToolError, transport=None):
+        """AI:关闭出现故障的通信。@param error 原错误；transport 轮询失败时对应的连接。@return 无。"""
         async with self.connection_lock:
-            if not self.connected:
+            if not self.connected or (transport is not None and self.transport is not transport):
                 return
             self.connected = self.device_claimed = False
             self.last_error = error.as_dict()
@@ -244,14 +244,15 @@ class Runtime:
                 self.require_owner(token)
             if self.active_jobs:
                 raise ToolError("BUSY", "动作正在执行，等待完成后断开")
-            if self.connected and self.device_claimed:
-                await self._rpc("control.release", mutation=True)
-            self.device_claimed = False
             async with self.connection_lock:
-                self.connected = False
-                if self.transport:
-                    await self.transport.close()
-                    self.transport = None
+                if self.connected and self.device_claimed:
+                    await self._rpc("control.release", mutation=True)
+                self.device_claimed = False
+                async with self.rpc_lock:
+                    if self.transport:
+                        await self.transport.close()
+                        self.transport = None
+                    self.connected = False
                 if self.device_lock:
                     self.device_lock.close()
                     self.device_lock = None
@@ -393,8 +394,12 @@ class Runtime:
         """AI:持续采集不依赖网页或单次MCP调用。@return 无。"""
         last_status = last_renew = 0.0
         while not self.stopping:
+            transport = self.transport
             try:
-                if self.connected:
+                async with self.connection_lock:
+                    transport = self.transport
+                    if not self.connected:
+                        continue
                     now = time.monotonic()
                     if self.device_claimed and now - last_renew >= 15:
                         try:
@@ -412,12 +417,13 @@ class Runtime:
                         last_status = now
                     self._ingest(await self._rpc("telemetry.read", dict(self.cursors)))
             except ToolError as exc:
-                await self._lost(exc)
+                await self._lost(exc, transport)
             except (KeyError, TypeError, ValueError) as exc:
-                await self._lost(ToolError("PROTOCOL_MISMATCH", f"设备数据结构不合法：{type(exc).__name__}"))
+                await self._lost(ToolError("PROTOCOL_MISMATCH", f"设备数据结构不合法：{type(exc).__name__}"), transport)
             except Exception as exc:
-                await self._lost(ToolError("INTERNAL_ERROR", f"采集处理异常，已停止设备通信：{type(exc).__name__}"))
-            await asyncio.sleep(0.04 if self.connected else 0.2)
+                await self._lost(ToolError("INTERNAL_ERROR", f"采集处理异常，已停止设备通信：{type(exc).__name__}"), transport)
+            finally:
+                await asyncio.sleep(0.04 if self.connected else 0.2)
 
     def snapshot(self) -> dict:
         """AI:返回公共状态，不暴露令牌或控制秘密。@return 状态快照，未采集值不会补零。"""

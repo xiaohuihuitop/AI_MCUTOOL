@@ -30,6 +30,9 @@ const connected = computed(() => Boolean(state.value?.connected && socketLive.va
 const ownsControl = computed(() => Boolean(state.value?.control.owner?.id === clientId.value && state.value?.control.owner_active))
 const canWrite = computed(() => connected.value && ownsControl.value && state.value?.control.device_claimed && !state.value.device_state_stale)
 const activeJobs = computed(() => (state.value?.jobs ?? []).filter(j => ['accepted','running'].includes(j.state)))
+const disconnectReason = computed(() => activeJobs.value.length ? '有操作正在执行，请等待完成后断开。' :
+  state.value?.control.owner && !ownsControl.value ? '其他客户端持有操作权，请先完成交接。' : '')
+const deviceEndpoint = computed(() => state.value?.connection?.kind === 'usb' ? state.value.connection.port : state.value?.connection?.address)
 const hiddenJobIds = ref(new Set<string>())
 const visibleJobs = computed(() => (state.value?.jobs ?? []).filter(job => !hiddenJobIds.value.has(job.request_id)))
 const finishedJobs = computed(() => visibleJobs.value.filter(job => ['succeeded','failed','cancelled'].includes(job.state)))
@@ -132,6 +135,14 @@ async function connect() { await run('connect', async () => {
     else localStorage.removeItem(lastUsbKey)
   }
 }) }
+/** AI:明确断开当前共享连接，等待后台确认后更新显示。@returns 提交和处理结果。 */
+async function disconnect() {
+  await run('disconnect', async () => {
+    state.value = await api('/api/disconnect','POST')
+    connectionOpen.value = true
+    notice.value = '工具通信已断开。'
+  })
+}
 /** AI:显式申请或接管操作权。@param takeover 是否已确认接管。@returns 完成。 */
 async function claim(takeover = false) { await run('claim', async () => {
   state.value = await api('/api/control/claim','POST',takeover ? {takeover:true,expected_revision:state.value!.control.revision,expected_device_revision:board.value.revision} : {})
@@ -211,8 +222,9 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
             <option v-for="p in ports" :key="p.port" :value="p.port">{{ p.port }} · {{ p.description }}{{ p.esp_candidate?' · ESP32 USB 候选':'' }}</option>
           </select></label><button class="button" :disabled="!!pending || starting" @click="run('ports',refreshPorts)"><RefreshCw :size="16"/>刷新端口</button></template>
           <template v-else><label class="grow">设备地址<input v-model.trim="address" placeholder="http://192.168.1.80" inputmode="url"/></label><label class="grow">访问令牌<input v-model="deviceToken" type="password" autocomplete="off" placeholder="从USB或配网页面取得"/></label></template>
-          <button class="button primary" :disabled="!!pending || !!state?.connected || !socketLive || (connectionKind==='usb' && !port)" @click="connect">{{ pending==='connect'?'连接中…':'连接工具' }}</button>
-        </div><p class="hint"><CircleHelp :size="14"/>USB 接电脑时不同时接 DC。Wi-Fi 访问令牌可通过 USB 的设备设置查看。</p>
+          <button v-if="state?.connected" class="button" :disabled="!!pending || !socketLive || !!disconnectReason" @click="disconnect"><Unplug :size="16"/>断开连接</button>
+          <button v-else class="button primary" :disabled="!!pending || !socketLive || (connectionKind==='usb' && !port)" @click="connect">{{ pending==='connect'?'连接中…':'连接工具' }}</button>
+        </div><p v-if="state?.connected" class="hint">当前连接：{{deviceEndpoint}} · {{state.device.device_id}}。{{disconnectReason}}</p><p v-else class="hint"><CircleHelp :size="14"/>USB 接电脑时不同时接 DC。Wi-Fi 访问令牌可通过 USB 的设备设置查看。</p>
       </section>
 
       <div v-if="!socketLive" class="alert warning" role="status"><Radio :size="18"/><span>{{ shutdownRequested?'已请求退出后台。需要使用时请重新运行“启动工具.cmd”；若仍在清理，请等待完成。':starting?'正在连接本机后台…':'页面连接已断开，显示的数据可能过期。' }}</span><button v-if="!shutdownRequested" class="text-button" :disabled="starting" @click="start">重新连接页面</button></div>
@@ -272,7 +284,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
       <div v-show="tab==='设备设置'" class="settings-grid">
         <section class="panel"><div class="panel-title"><h2>Wi-Fi 配置</h2><button class="icon-button" aria-label="刷新设备设置" :disabled="!connected" @click="refreshSettings"><RefreshCw :size="16"/></button></div><label>Wi-Fi 名称<input v-model="settingsSsid" maxlength="32"/></label><label>Wi-Fi 密码<input v-model="settingsPassword" type="password" autocomplete="new-password"/></label><div class="button-row"><button class="button primary" :disabled="!canWrite || !!pending" @click="command('network.configure',{ssid:settingsSsid,password:settingsPassword})">保存并连接</button><button class="button" :disabled="!canWrite || !!pending" @click="command('network.connect',{})">连接已保存网络</button></div><p class="hint">长按板上 CONFIG 3 秒可进入配网。网络中断不会改变供电状态。</p><div v-if="networkInfo" class="definition-list"><span>当前 IP</span><b class="mono">{{networkInfo.ip||'未取得'}}</b><span>热点</span><b>{{networkInfo.provisioning?'已开启':'关闭'}}</b></div><details v-if="networkInfo?.api_token" class="token-details"><summary>查看 Wi-Fi 访问令牌</summary><code>{{networkInfo.api_token}}</code></details></section>
         <section class="panel"><div class="panel-title"><h2>测量校准</h2><span class="badge">需要参考仪表</span></div><label>通道<select v-model="calChannel"><option v-for="c in channels" :key="c" :value="c">{{labels[c]}}</option></select></label><div class="two-fields"><label>增益<input v-model.number="calGain" type="number" step="0.000001"/></label><label>偏移 / {{calChannel==='battery_i'?'A':'V'}}<input v-model.number="calOffset" type="number" step="0.000001"/></label></div><div class="two-fields"><label>校准范围下限<input v-model.number="calMin" type="number" step="0.001"/></label><label>校准范围上限<input v-model.number="calMax" type="number" step="0.001"/></label></div><label>参考条件<input v-model="calReference" placeholder="仪表、校准点、温度和日期"/></label><button class="button primary" :disabled="!canWrite || !!pending || !calReference" @click="command('calibration.set',{channel:calChannel,gain:calGain,offset:calOffset,min_value:calMin,max_value:calMax,reference:calReference})">保存此通道校准</button><p class="hint">换算值 = 名义读数 × 增益 + 偏移。应用校准不代表额定精度已经验收；近零非线性不能用固定偏移掩盖。</p><div class="cal-summary"><span v-for="c in calRecords" :key="c.channel">{{labels[c.channel]}}：{{c.state==='calibrated'?'有校准记录':c.state==='invalid'?'记录无效':'未校准'}}</span></div></section>
-        <section class="panel"><div class="panel-title"><h2>供电切换参数</h2><span class="badge amber">实物待验证</span></div><label>先断后通间隔 / ms<input v-model.number="deadtime" type="number" min="10" max="1000"/></label><button class="button" :disabled="!canWrite || !!activeJobs.length" @click="command('timing.set',{power_deadtime_ms:deadtime})">应用本次间隔</button><p class="hint">仅作用于本次启动，重启恢复 100ms 工程初值。应结合 MOS 关断波形核定，不能当作已验证指标。</p><div class="definition-list"><span>固件版本</span><b>{{state?.device.firmware_version||'未读取'}}</b><span>设备身份</span><b class="mono wrap">{{state?.device.device_id||'未读取'}}</b></div><button class="button full" :disabled="!connected || !!activeJobs.length || (!!state?.control.owner && !ownsControl)" @click="run('disconnect',async()=>{state=await api('/api/disconnect','POST');connectionOpen=true})"><Unplug :size="16"/>断开设备通信</button></section>
+        <section class="panel"><div class="panel-title"><h2>供电切换参数</h2><span class="badge amber">实物待验证</span></div><label>先断后通间隔 / ms<input v-model.number="deadtime" type="number" min="10" max="1000"/></label><button class="button" :disabled="!canWrite || !!activeJobs.length" @click="command('timing.set',{power_deadtime_ms:deadtime})">应用本次间隔</button><p class="hint">仅作用于本次启动，重启恢复 100ms 工程初值。应结合 MOS 关断波形核定，不能当作已验证指标。</p><div class="definition-list"><span>固件版本</span><b>{{state?.device.firmware_version||'未读取'}}</b><span>设备身份</span><b class="mono wrap">{{state?.device.device_id||'未读取'}}</b></div><button class="button full" :disabled="!!pending || !connected || !!disconnectReason" @click="disconnect"><Unplug :size="16"/>断开设备通信</button></section>
       </div>
 
       <BoardModel v-if="tab==='操作记录'" :snapshot="state" :live="socketLive" :received-at="receivedAt"/>
