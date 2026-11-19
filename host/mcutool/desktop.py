@@ -30,8 +30,8 @@ def desktop_start(data_dir: Path, port: int, test_mode: bool = False) -> dict:
         return {**info, 'session_id': session['session_id'], 'client_id': session['client_id']}
 
 
-def check_uninstall() -> None:
-    """AI:卸载前检查同安装目录是否仍有后台或MCP进程。@return 无，检测到占用时抛错；不强杀共享使用者。"""
+def check_uninstall(runtime_pid: int | None = None) -> None:
+    """AI:检查安装目录的运行程序占用。@param runtime_pid 更新预检时允许的已核验后台，卸载时为空。@return 无，有其他占用则报告进程号。"""
     if os.name != 'nt' or not getattr(sys, 'frozen', False):
         raise ToolError('INVALID_MODE', '卸载检查只用于已安装的Windows运行程序')
     kernel = ctypes.WinDLL('kernel32', use_last_error=True)
@@ -46,7 +46,7 @@ def check_uninstall() -> None:
     kernel.CloseHandle.argtypes = [wintypes.HANDLE]
     executable = Path(sys.executable).resolve()
     for pid in process_ids[:used.value // ctypes.sizeof(wintypes.DWORD)]:
-        if pid in (0, os.getpid()):
+        if pid in (0, os.getpid(), runtime_pid):
             continue
         handle = kernel.OpenProcess(0x1000, False, pid)
         if not handle:
@@ -55,6 +55,6 @@ def check_uninstall() -> None:
             name = ctypes.create_unicode_buffer(32768)
             size = wintypes.DWORD(len(name))
             if kernel.QueryFullProcessImageNameW(handle, 0, name, ctypes.byref(size)) and Path(name.value).resolve() == executable:
-                raise ToolError('RUNTIME_IN_USE', '后台或MCP仍在使用此安装，请停止后台并退出AI会话后再卸载')
+                raise ToolError('RUNTIME_IN_USE', f'安装目录中的服务进程 PID {pid} 仍在使用。请先从对应 AI 客户端退出 MCP，或正常关闭其他共享后台，再重试。')
         finally:
             kernel.CloseHandle(handle)

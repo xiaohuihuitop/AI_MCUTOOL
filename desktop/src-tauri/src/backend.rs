@@ -53,6 +53,7 @@ impl Settings {
 
 #[derive(Clone, Deserialize)]
 pub struct Bootstrap {
+    pub pid: u32,
     pub url: String,
     pub token: String,
     pub instance_id: String,

@@ -205,7 +205,7 @@ async def cli_call(args):
 def main():
     """AI:解析启动和只读命令行。@return 进程退出码由异常决定。"""
     parser = argparse.ArgumentParser(description="MCU TOOL 共享后台")
-    parser.add_argument("action", choices=("start", "serve", "status", "read", "job", "stop", "desktop-start", "can-uninstall"))
+    parser.add_argument("action", choices=("start", "serve", "status", "read", "job", "stop", "desktop-start", "can-uninstall", "can-update"))
     parser.add_argument("--data-dir", type=Path, default=default_data_dir())
     parser.add_argument("--port", type=int)
     parser.add_argument("--no-browser", action="store_true")
@@ -214,15 +214,16 @@ def main():
     parser.add_argument("--params", default="{}")
     parser.add_argument("--request-id", default="")
     parser.add_argument("--startup-id", default=None, help=argparse.SUPPRESS)
+    parser.add_argument("--runtime-pid", type=int, help=argparse.SUPPRESS)
     args = parser.parse_args()
     try:
         if args.port is not None and not 1024 <= args.port <= 65535:
             raise ToolError("INVALID_PARAMS", "后台端口须为1024到65535")
         if args.action == "serve":
             serve(args.data_dir, args.port or configured_port(args.data_dir), args.test_mode, args.startup_id)
-        elif args.action == "can-uninstall":
+        elif args.action in ("can-uninstall", "can-update"):
             from .desktop import check_uninstall
-            check_uninstall()
+            check_uninstall(args.runtime_pid if args.action == "can-update" else None)
         elif args.action == "desktop-start":
             from .desktop import desktop_start
             print(json_text(desktop_start(args.data_dir, args.port or configured_port(args.data_dir), args.test_mode)))

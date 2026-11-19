@@ -99,8 +99,17 @@ fn check_and_install(app: &AppHandle, interactive: &mut bool) -> Result<(), Stri
     let service = app.path().resource_dir().map_err(|_| "无法确定安装位置")?.join("runtime/MCUTOOL-service/MCUTOOL-service.exe");
     let state = app.state::<DesktopState>();
     if state.exit_pending.swap(true, Ordering::SeqCst) { return Err("正在退出，请稍后再更新".into()); }
-    let result = (|| {
+    let mut stopped = false;
+    let mut result = (|| {
+        let preflight = Command::new(&service).args(["can-update", "--runtime-pid", &backend.info.pid.to_string()])
+            .creation_flags(0x08000000).output().map_err(|e| format!("更新前检查安装占用失败：{e}"))?;
+        if !preflight.status.success() {
+            let error = crate::backend::service_error(&preflight.stderr);
+            return Err(error.as_ref().and_then(|v| v.pointer("/error/message")).and_then(|v| v.as_str())
+                .unwrap_or("更新前无法确认安装目录是否空闲，请稍后重试").to_owned());
+        }
         backend.json("POST", "/api/runtime/shutdown").map_err(|e| format!("请稍后更新。{e}"))?;
+        stopped = true;
         // AI:退出确认先于进程释放；同一安装目录的其他后台或 MCP 仍在运行时不能覆盖文件。
         let until = Instant::now() + Duration::from_secs(20);
         loop {
@@ -110,8 +119,23 @@ fn check_and_install(app: &AppHandle, interactive: &mut bool) -> Result<(), Stri
             if Instant::now() >= until { return Err("仍有程序使用此安装目录，请结束相关会话后重新打开工作台更新".into()); }
             thread::sleep(Duration::from_millis(250));
         }
-        update.install(bytes).map_err(|_| "安装器启动失败，请重新打开工作台。".to_owned())
+        update.install(bytes).map_err(|e| format!("启动更新安装器失败：{e}"))
     })();
+    if let (true, Err(cause)) = (stopped, &result) {
+        // AI:安装交接失败后恢复原版后台和页面会话；恢复失败时仍保留仅退出桌面端的路径。
+        let recovery = (|| -> Result<(), String> {
+            let restored = crate::backend::Backend::start(&service, &state.settings)?;
+            let url = restored.info.url.parse().map_err(|_| "后台地址无效")?;
+            *state.backend.lock().map_err(|_| "桌面会话不可用")? = Some(restored);
+            *state.error.lock().map_err(|_| "桌面状态不可用")? = None;
+            app.get_webview_window("main").ok_or("工作台窗口不可用")?
+                .navigate(url).map_err(|_| "工作台页面无法打开".to_owned())
+        })();
+        result = Err(match recovery {
+            Ok(()) => format!("{cause}。原版本后台和桌面会话已恢复，可在连接设置中重新选择设备。"),
+            Err(reason) => format!("{cause}。恢复工作台失败：{reason}。请从托盘选择仅退出桌面端，再打开工作台。"),
+        });
+    }
     state.exit_pending.store(false, Ordering::SeqCst);
     result
 }

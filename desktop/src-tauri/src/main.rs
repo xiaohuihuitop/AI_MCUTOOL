@@ -131,16 +131,21 @@ async fn desktop_save_waveform(app: AppHandle, filename: String, content: String
     }).await.map_err(|_| "波形导出失败")?
 }
 
-/// AI:原生线程维护会话，隐藏窗口不会暂停续约。@param app 桌面实例；backend 已验证后台。@return 无；错误后停止续约并提示，不自动恢复。
-fn keepalive(app: AppHandle, backend: Backend) {
+/// AI:维护当前桌面会话，更新交接期间暂停续约。@param app 桌面实例。@return 无。
+fn keepalive(app: AppHandle) {
     thread::spawn(move || loop {
         for _ in 0..15 {
             thread::sleep(Duration::from_secs(1));
             if app.state::<DesktopState>().exiting.load(Ordering::SeqCst) { return; }
         }
+        if app.state::<DesktopState>().exit_pending.load(Ordering::SeqCst) { continue; }
+        let Ok(backend) = current_backend(&app) else { return; };
         if let Err(error) = backend.json("POST", "/api/sessions/heartbeat") {
             let state = app.state::<DesktopState>();
             if state.exiting.load(Ordering::SeqCst) { return; }
+            if state.exit_pending.load(Ordering::SeqCst) { continue; }
+            if state.backend.lock().ok().and_then(|b| b.as_ref().map(|b| b.info.session_id.clone()))
+                .as_deref() != Some(backend.info.session_id.as_str()) { continue; }
             let message = format!("{error}。请从托盘退出桌面端后重新打开；已接受的板上动作不受此窗口影响。");
             backend::log_error(&state.settings, &message);
             if let Ok(mut status) = state.error.lock() { *status = Some(message); }
@@ -225,7 +230,7 @@ fn main() {
                         Ok(backend) => {
                             let address = backend.info.url.parse();
                             if let Ok(mut target) = state.backend.lock() { *target = Some(backend.clone()); }
-                            keepalive(handle.clone(), backend);
+                            keepalive(handle.clone());
                             if !state.settings.test_mode { updates::check(handle.clone(), false); }
                             if let (Some(window), Ok(address)) = (handle.get_webview_window("main"), address) {
                                 if window.navigate(address).is_err() {

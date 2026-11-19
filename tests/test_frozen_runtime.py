@@ -36,11 +36,16 @@ def test_frozen_runtime_and_mcp_share_one_process_without_development_path(tmp_p
         assert repeated.returncode == 0, repeated.stderr
         assert json.loads(repeated.stdout)['instance_id'] == identity
         assert call('can-uninstall').returncode != 0
+        runtime_pid = str(json.loads((data/'runtime.json').read_text(encoding='utf-8'))['pid'])
+        preflight = call('can-update', '--runtime-pid', runtime_pid)
+        assert preflight.returncode == 0, preflight.stderr
 
         async def mcp():
             """AI:用真实stdio验证冻结MCP与同一后台。@return 无。"""
             async with Client({'mcpServers':{'mcutool':{'command':str(executable),'args':['mcp','--data-dir',str(data)],'env':env}}}) as client:
                 ping = (await client.call_tool('ping',{})).data
+                occupied = call('can-update', '--runtime-pid', runtime_pid)
+                assert occupied.returncode != 0 and 'RUNTIME_IN_USE' in occupied.stderr and 'PID' in occupied.stderr
                 state = (await client.call_tool('connect',{'client_name':'冻结MCP验证'})).data
                 try:
                     assert ping['version']=='0.5.3' and {'run_charge_cycle','cancel_charge_cycle','action_status'} <= set(ping['tools'])
