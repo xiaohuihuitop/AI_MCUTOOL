@@ -57,6 +57,17 @@ test('只读板图按已确认的设备、启动和数据时效绘制通路与�
   await expect(route('charge')).toHaveAttribute('data-state','off')
   await expect(route('supply').locator('.flow')).toHaveCount(1)
   await panel.screenshot({path:testInfo.outputPath('板图-组合键.png')})
+  // AI:按交付板元件面的实际顺序逐路激活，防止标签、触点位置和固件位号错配。
+  let previousY = -Infinity
+  for (let n = 1; n <= 5; n++) {
+    frame.status.device_state.keys_mask = 1 << (n - 1)
+    stream.sendFrame(frame)
+    await expect(key(n)).toHaveAttribute('data-contact','closed')
+    await expect(panel.locator('[data-contact="open"]')).toHaveCount(4)
+    const box = await key(n).getByText(`KEY${n}`,{exact:true}).boundingBox()
+    expect(box!.y).toBeGreaterThan(previousY)
+    previousY = box!.y
+  }
   Object.assign(frame.status.device_state,{keys_mask:2,power:'battery',charge:true})
   current.value=-.01
   stream.sendFrame(frame)

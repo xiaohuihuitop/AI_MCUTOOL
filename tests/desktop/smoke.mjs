@@ -181,7 +181,7 @@ try {
   const exported=resolve(runRoot,'desktop-diagnostics.zip')
   windowAction('save',exported)
   await until('原生对话框日志保存',async()=>existsSync(exported))
-  execFileSync(python,['-c','import json,sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); assert set(z.namelist()) <= {"诊断信息.json","runtime.log","desktop.log"}; assert json.loads(z.read("诊断信息.json"))["version"] == "0.5.2"',exported],{windowsHide:true})
+  execFileSync(python,['-c','import json,sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); assert set(z.namelist()) <= {"诊断信息.json","runtime.log","desktop.log"}; assert json.loads(z.read("诊断信息.json"))["version"] == "0.5.3"',exported],{windowsHide:true})
   report.checks.push('原生保存对话框导出诊断日志')
   await page.getByRole('button',{name:'供电与测量',exact:true}).click()
   const visible=launch('show-final-window',desktopExe,appArgs)
