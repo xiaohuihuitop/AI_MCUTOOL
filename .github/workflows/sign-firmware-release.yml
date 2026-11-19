@@ -1,0 +1,61 @@
+name: Sign firmware release
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  sign:
+    if: github.repository == 'xiaohuihuitop/AI_MCUTOOL' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: firmware-release
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: 核对本次提交批准的固件及公开下载文件
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          repo="repos/$GITHUB_REPOSITORY"
+          read_source() {
+            gh api "$repo/contents/$1?ref=$GITHUB_SHA" --jq .content | base64 -d
+          }
+          read_source integrations/firmware-release.json > firmware-release.json
+          read_source host/mcutool/firmware-signing.pub > firmware-signing.pub
+          jq -e --arg repo "$GITHUB_REPOSITORY" '
+            .schema == "mcutool-firmware-v1" and .repository == $repo and .chip == "esp32s3"
+            and (.hardware_revision | test("^[0-9]{4}-[0-9]{2}-[0-9]{2}$"))
+            and (.release_tag | test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))
+            and (.firmware_version | test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))
+            and .asset == ("MCUTOOL-Firmware-" + .firmware_version + ".zip")
+            and (.size | type == "number" and . == floor and . > 0 and . <= 16777216)
+            and (.sha256 | test("^[0-9a-f]{64}$"))' firmware-release.json >/dev/null
+          tag=$(jq -r .release_tag firmware-release.json)
+          name=$(jq -r .asset firmware-release.json)
+          size=$(jq -r .size firmware-release.json)
+          sha=$(jq -r .sha256 firmware-release.json)
+          gh api "$repo/releases/tags/$tag" | jq -e --arg tag "$tag" --arg name "$name" --argjson size "$size" --arg digest "sha256:$sha" '
+            .tag_name == $tag and (.draft|not) and (.prerelease|not) and
+            ([.assets[] | select(.name==$name and .state=="uploaded" and .size==$size and .digest==$digest)]|length)==1' >/dev/null
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' --max-filesize "$size" \
+            "https://github.com/$GITHUB_REPOSITORY/releases/download/$tag/$name" -o firmware.zip
+          printf '%s  firmware.zip\n' "$sha" | sha256sum --check
+          test "$(wc -c < firmware.zip)" -eq "$size"
+      - name: 使用固件专用密钥签署清单并回验
+        env:
+          FIRMWARE_ED25519_PRIVATE_KEY: ${{ secrets.FIRMWARE_ED25519_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$FIRMWARE_ED25519_PRIVATE_KEY"
+          openssl pkeyutl -sign -rawin -inkey <(printf '%s\n' "$FIRMWARE_ED25519_PRIVATE_KEY") \
+            -in firmware-release.json -out signature.bin
+          openssl pkeyutl -verify -rawin -pubin -inkey firmware-signing.pub \
+            -in firmware-release.json -sigfile signature.bin
+          base64 --wrap=0 signature.bin > firmware-release.json.sig
+      - name: 交付本次签名
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: firmware-release-signature
+          path: firmware-release.json.sig
+          if-no-files-found: error
