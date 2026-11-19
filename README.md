@@ -4,7 +4,7 @@
 
 ## 版本与下载
 
-**桌面／后台／MCP：0.5.3；工具板固件：0.1.3。** [下载正式版本](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.5.3) · [版本列表](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases)。正式安装器可匿名下载。0.5.0 用户首次手动升级至 0.5.1，之后可通过托盘“检查更新”获取新正式版；选择“更新并重启”后，桌面会验证签名并检查后台占用。
+**桌面／后台／MCP：0.5.4；工具板固件：0.1.3。** [下载正式版本](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases/tag/v0.5.4) · [版本列表](https://github.com/xiaohuihuitop/AI_MCUTOOL/releases)。正式安装器可匿名下载。0.5.0 用户首次手动升级至 0.5.1，之后可通过托盘“检查更新”获取新正式版；选择“更新并重启”后，桌面会验证签名并检查后台占用。
 
 六路固定每路每秒10次。电池电压、电流共用双轴图；四路电压另有独立页面，支持每路比例、偏移、颜色和曲线显隐。两组分别开始/暂停、清空、导出CSV，保留最近4小时完整采样；电池图支持A/B游标、极值、时间加权平均与区间净电量。详细规则见[图表使用说明](docs/上位机界面与图表使用说明.md)。
 
