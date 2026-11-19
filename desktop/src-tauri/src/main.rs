@@ -157,7 +157,7 @@ fn main() {
     let parsed = Settings::load(&arguments);
     let config_error = parsed.as_ref().err().cloned();
     // AI:无效配置仅展示错误页，不据此启动另一数据目录或后台。
-    let settings = parsed.unwrap_or(Settings { data_dir: PathBuf::new(), port: 8766, test_mode: false, hidden: false });
+    let settings = parsed.unwrap_or(Settings { data_dir: PathBuf::new(), port: 5210, test_mode: false, hidden: false });
     let allowed_port = settings.port;
     let hidden = settings.hidden;
     tauri::Builder::default()

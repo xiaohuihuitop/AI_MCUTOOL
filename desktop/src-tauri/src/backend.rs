@@ -26,7 +26,7 @@ impl Settings {
             serde_json::from_slice::<Self>(&fs::read(&file).map_err(|_| "无法读取桌面配置")?)
                 .map_err(|_| "桌面配置格式不正确，请检查用户目录中的MCU_TOOL/desktop.json")?
         } else {
-            Self { data_dir: root.join("data"), port: 8766, test_mode: false, hidden: false }
+            Self { data_dir: root.join("data"), port: 5210, test_mode: false, hidden: false }
         };
         settings.apply_args(args)?;
         if !settings.data_dir.is_absolute() || settings.port < 1024 {
@@ -97,7 +97,7 @@ impl Backend {
         let output = process.wait_with_output().map_err(|_| "读取启动结果失败")?;
         if !output.status.success() {
             // AI:只展示结构化错误说明；私有管道可能含凭据，禁止原样输出或写日志。
-            let error = serde_json::from_slice::<Value>(&output.stderr).ok();
+            let error = service_error(&output.stderr);
             return Err(error.as_ref().and_then(|v| v.pointer("/error/message")).and_then(Value::as_str)
                 .unwrap_or("后台启动失败，请查看记录目录中的runtime.log。其他客户端仍在线时需先正常退出旧后台。")
                 .to_owned());
@@ -149,6 +149,12 @@ impl Backend {
     }
 }
 
+/// AI:从服务标准错误中读取最后一条结构化错误，忽略库启动警告。@param bytes 标准错误。@return 错误对象或空。
+pub fn service_error(bytes: &[u8]) -> Option<Value> {
+    String::from_utf8_lossy(bytes).lines().rev().filter_map(|line| serde_json::from_str::<Value>(line).ok())
+        .find(|value| value.pointer("/error/message").and_then(Value::as_str).is_some())
+}
+
 /// AI:记录不含凭据的桌面错误。@param settings 数据位置；message 已筛选的说明。@return 无，写入失败不会改动设备。
 pub fn log_error(settings: &Settings, message: &str) {
     if let Ok(mut file) = fs::OpenOptions::new().create(true).append(true).open(settings.data_dir.join("desktop.log")) {
@@ -181,7 +187,7 @@ mod tests {
     #[test]
     /// AI:验证明确启动参数不引入猜测和自动选项。@return 无，失败触发断言。
     fn launch_arguments_are_explicit_and_do_not_switch_to_another_port() {
-        let mut settings = Settings { data_dir: PathBuf::from("C:/records"), port:8766, test_mode:false, hidden:false };
+        let mut settings = Settings { data_dir: PathBuf::from("C:/records"), port:5210, test_mode:false, hidden:false };
         settings.apply_args(&["--port".into(), "28768".into(), "--hidden".into()]).unwrap();
         assert_eq!(settings.port, 28768);
         assert!(settings.hidden);

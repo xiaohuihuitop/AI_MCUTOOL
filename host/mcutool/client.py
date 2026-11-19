@@ -14,6 +14,10 @@ def runtime_info(data_dir: Path) -> dict:
         info = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as exc:
         raise ToolError("RUNTIME_UNAVAILABLE", "尚未找到可用后台，请先启动工具") from exc
+    if info.get("state") == "failed":
+        raise ToolError(info["error"]["code"], info["error"]["message"])
+    if info.get("state") in ("starting","stopped"):
+        raise ToolError("RUNTIME_UNAVAILABLE", "后台正在启动" if info["state"] == "starting" else "后台已退出")
     parts = urlsplit(info.get("url", ""))
     if parts.scheme != "http" or parts.hostname != "127.0.0.1" or not parts.port or parts.path or parts.username or parts.password or parts.query or parts.fragment or not isinstance(info.get("token"), str) or info.get("protocol") != 1:
         raise ToolError("RUNTIME_MISMATCH", "后台定位信息不合法，不会向其他地址发送凭据")
