@@ -6,7 +6,11 @@ test('工具更新展示进度，稍后保留包，用户点击安装才交接',
     qa.updateState = {phase:'downloading',version:'9.0.0',received:250,total:1000}
     qa.installs = []
     qa.__TAURI__ = {core:{invoke: async (name:string, args?:{version:string})=>{
-      if (name==='desktop_update_status') return qa.updateState
+      if (name==='desktop_update_status') {
+        if (qa.readError) throw '状态暂不可读'
+        return qa.updateState
+      }
+      if (name==='desktop_prepare_update') throw '检查未能启动'
       if (name==='desktop_install_update') { qa.installs.push(args?.version); return }
       if (name==='desktop_context') {
         const token = document.querySelector<HTMLMetaElement>('meta[name="mcutool-token"]')!.content
@@ -29,4 +33,10 @@ test('工具更新展示进度，稍后保留包，用户点击安装才交接',
   expect(await page.evaluate(()=>(window as any).installs)).toEqual(['9.0.0'])
   await page.evaluate(()=>{ (window as any).updateState={phase:'failed',message:'无法联网',cached_version:'9.0.0'} })
   await expect(panel.getByRole('button',{name:'安装已下载的 9.0.0'})).toBeVisible()
+  await panel.getByRole('button',{name:'重新检查'}).click()
+  await expect(panel.getByText('检查未能启动')).toBeVisible()
+  await page.evaluate(()=>{ (window as any).readError = true })
+  await expect(panel.getByText('状态暂不可读')).toBeVisible()
+  await page.evaluate(()=>{ (window as any).readError = false })
+  await expect(panel.getByText('状态暂不可读')).toHaveCount(0)
 })
