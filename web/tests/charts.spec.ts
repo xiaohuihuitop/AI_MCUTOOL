@@ -33,6 +33,59 @@ async function openChart(page:Page,gap=false) {
   return {send:(boot:string,end=120)=>socket.send(JSON.stringify(fixture(boot,false,end))), sendFrame:(next:ReturnType<typeof fixture>)=>socket.send(JSON.stringify(next))}
 }
 
+test('只读板图按已确认的设备、启动和数据时效绘制通路与触点', async ({page},testInfo) => {
+  const writes: string[] = []
+  page.on('request', request => {
+    if (/\/api\/(commands|connect|control\/)/.test(request.url())) writes.push(request.url())
+  })
+  const stream = await openChart(page)
+  await page.getByRole('button',{name:'操作记录',exact:true}).click()
+  const panel = page.getByRole('region',{name:'工具板实时状态'})
+  const key = (n:number) => panel.locator(`[data-key="${n}"]`)
+  const route = (id:string) => panel.locator(`[data-route="${id}"]`)
+  const frame = fixture('chart-boot',false,0)
+  const control = {device_id:'CHART-TEST',boot_id:'chart-boot',power:'external',charge:false,keys_mask:5}
+  Object.assign(frame.status.device_state,control)
+  const current = frame.status.latest.battery_i
+  Object.assign(current,{stale:false,age_ms:10,value:.012})
+  stream.sendFrame(frame)
+  await expect(key(1)).toHaveAttribute('data-contact','closed')
+  await expect(key(3)).toHaveAttribute('data-contact','closed')
+  await expect(key(2)).toHaveAttribute('data-contact','open')
+  await expect(route('external')).toHaveAttribute('data-state','on')
+  await expect(route('battery')).toHaveAttribute('data-state','off')
+  await expect(route('charge')).toHaveAttribute('data-state','off')
+  await expect(route('supply').locator('.flow')).toHaveCount(1)
+  await panel.screenshot({path:testInfo.outputPath('板图-组合键.png')})
+  Object.assign(frame.status.device_state,{keys_mask:2,power:'battery',charge:true})
+  current.value=-.01
+  stream.sendFrame(frame)
+  await expect(key(2)).toHaveAttribute('data-contact','closed')
+  await expect(key(1)).toHaveAttribute('data-contact','open')
+  await expect(route('battery').locator('.flow.reverse')).toHaveCount(1)
+  await expect(route('charge')).toHaveAttribute('data-state','on')
+  for (const update of [{stale:true},{stale:false,quality:'sensor_error'},{quality:'uncalibrated',value:0},
+                        {value:.01,boot_id:'old-boot'},{boot_id:'chart-boot',age_ms:3100}]) {
+    Object.assign(current,update)
+    stream.sendFrame(frame)
+    await expect(route('supply').locator('.flow')).toHaveCount(0)
+    await expect(route('battery')).toHaveAttribute('data-state','on')
+  }
+  Object.assign(frame.status.device_state,{keys_mask:0,power:'off',charge:false})
+  stream.sendFrame(frame)
+  await expect(panel.locator('[data-contact="open"]')).toHaveCount(5)
+  await expect(route('supply')).toHaveAttribute('data-state','off')
+  frame.status.device.boot_id='new-boot'
+  stream.sendFrame(frame)
+  await expect(panel.locator('[data-contact="unknown"]')).toHaveCount(5)
+  Object.assign(frame.status.device_state,{boot_id:'new-boot'})
+  frame.status.connected=false
+  stream.sendFrame(frame)
+  await expect(route('charge')).toHaveAttribute('data-state','unknown')
+  await expect(panel.getByText('状态未更新')).toBeVisible()
+  expect(writes).toEqual([])
+})
+
 test('观察者清空已结束操作后，待确认与在途任务仍能追踪，新操作正常出现', async ({page}) => {
   const stream = await openChart(page)
   const frame = fixture('chart-boot',false,0)

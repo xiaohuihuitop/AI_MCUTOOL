@@ -2,11 +2,13 @@
 import { computed, onMounted, onBeforeUnmount, ref, shallowRef, watch } from 'vue'
 import { Activity, Cable, Check, ChevronDown, CircleHelp, Download, Gauge, KeyRound, Link, LockKeyhole, Pause, Play, Power, Radio, RefreshCw, Settings2, Square, Terminal, Unplug, Wifi, X } from 'lucide-vue-next'
 import Trend from './Trend.vue'
+import BoardModel from './BoardModel.vue'
 import { version as appVersion } from '../package.json'
 import { api, download, exportDiagnostics, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
 import { desktopCommand, desktopSession, isDesktop } from './desktop'
 
 const state = ref<Snapshot | null>(null), clientId = ref(''), socketLive = ref(false), starting = ref(false)
+const receivedAt = ref(0)
 const tab = ref('供电与测量'), connectionOpen = ref(true), connectionKind = ref<'usb'|'http'>('usb')
 type UsbPort = { port: string; description: string; vid: number | null; pid: number | null; serial_number: string | null; esp_candidate: boolean }
 const ports = ref<UsbPort[]>([]), port = ref(''), address = ref(''), deviceToken = ref('')
@@ -79,6 +81,7 @@ async function start() {
     socket.onopen = () => socket?.send(JSON.stringify({token,session_id:getSession()}))
     socket.onmessage = message => {
       const frame = JSON.parse(message.data); state.value = frame.status; socketLive.value = true
+      receivedAt.value = performance.now()
       // AI:不同后台、设备或启动不能拼成同一曲线；页面重连的历史回放按游标去重。
       const context = `${frame.status.instance_id}/${frame.status.device.device_id}/${frame.status.device.boot_id}`
       if (measurementContext !== context) { samples.value = []; measurementCursor = 0; interruptedChannels.clear(); measurementContext = context }
@@ -272,6 +275,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
         <section class="panel"><div class="panel-title"><h2>供电切换参数</h2><span class="badge amber">实物待验证</span></div><label>先断后通间隔 / ms<input v-model.number="deadtime" type="number" min="10" max="1000"/></label><button class="button" :disabled="!canWrite || !!activeJobs.length" @click="command('timing.set',{power_deadtime_ms:deadtime})">应用本次间隔</button><p class="hint">仅作用于本次启动，重启恢复 100ms 工程初值。应结合 MOS 关断波形核定，不能当作已验证指标。</p><div class="definition-list"><span>固件版本</span><b>{{state?.device.firmware_version||'未读取'}}</b><span>设备身份</span><b class="mono wrap">{{state?.device.device_id||'未读取'}}</b></div><button class="button full" :disabled="!connected || !!activeJobs.length || (!!state?.control.owner && !ownsControl)" @click="run('disconnect',async()=>{state=await api('/api/disconnect','POST');connectionOpen=true})"><Unplug :size="16"/>断开设备通信</button></section>
       </div>
 
+      <BoardModel v-if="tab==='操作记录'" :snapshot="state" :live="socketLive" :received-at="receivedAt"/>
       <section v-show="tab==='操作记录'" class="panel activity-panel"><div class="panel-title"><h2>操作记录</h2><div class="button-row"><span class="hint">{{activeJobs.length}} 项正在执行</span><button class="button compact-button" :disabled="!finishedJobs.length" @click="clearActivity">清空显示</button></div></div><div class="activity-table" role="table"><div class="activity-head" role="row"><span>时间</span><span>操作 / 来源</span><span>状态</span><span>说明</span></div><div v-for="job in visibleJobs" :key="job.request_id" class="activity-row" role="row"><span class="mono">{{new Date(job.created_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{methodNames[job.method]??job.method}}<small>{{job.actor}}</small></span><span class="badge" :class="{teal:job.state==='succeeded',amber:['running','unknown','failed'].includes(job.state)}">{{jobNames[job.state]??job.state}}</span><span>{{job.error?.message || (job.state==='succeeded'?'控制执行完成，设备响应需另行观测':'可通过任务编号追踪')}}<small class="mono">{{job.request_id.slice(0,12)}}</small></span></div><p v-if="!visibleJobs.length" class="empty-log">当前没有可显示的操作记录。</p></div><details class="event-details"><summary>连接与采集事件（{{events.length}}）</summary><div v-for="event in [...events].reverse().slice(0,30)" :key="event.cursor" class="event-row"><span class="mono">{{new Date(event.received_at*1000).toLocaleTimeString('zh-CN')}}</span><span>{{event.detail}}</span></div></details></section>
 
       <details v-show="tab==='设备设置'" class="panel runtime-management"><summary>后台与客户端</summary><div class="client-list"><div v-for="client in state?.clients??[]" :key="client.id"><strong>{{client.name}}</strong><span>{{client.kind==='desktop'?'桌面':client.kind==='web'?'网页':client.kind==='mcp'?'AI':'命令行'}}</span><span class="badge" :class="{teal:client.active}">{{client.active?'在线':'已离线'}}</span></div></div><div class="button-row runtime-actions"><p class="hint grow">{{isDesktop?'关闭窗口后保留在托盘。仅退出桌面端会保留后台采集和记录；停止后台前请结束记录、等待动作完成，并让其他客户端退出。':'关闭网页后，后台仍可采集和记录。退出程序前请停止记录，并让其他客户端退出会话；关闭页面的客户端最多60秒后标为离线。'}}</p><button class="button" :disabled="!socketLive || !!pending" @click="run('diagnostics',async()=>{notice=await exportDiagnostics()?'诊断日志已导出':'已取消保存'})"><Download :size="16"/>导出诊断日志</button><button v-if="isDesktop" class="button" :disabled="!!pending" @click="run('desktop-exit',()=>desktopCommand('desktop_exit'))">仅退出桌面端</button><button class="button" :disabled="!socketLive || recording || !!activeJobs.length || !!pending" @click="run('shutdown',stopRuntime)">{{isDesktop?'停止后台并退出':'退出后台'}}</button></div></details>
