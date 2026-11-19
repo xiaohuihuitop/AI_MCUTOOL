@@ -8,7 +8,10 @@ import { desktopCommand, desktopSession, isDesktop } from './desktop'
 
 const state = ref<Snapshot | null>(null), clientId = ref(''), socketLive = ref(false), starting = ref(false)
 const tab = ref('供电与测量'), connectionOpen = ref(true), connectionKind = ref<'usb'|'http'>('usb')
-const ports = ref<any[]>([]), port = ref(''), address = ref(''), deviceToken = ref('')
+type UsbPort = { port: string; description: string; vid: number | null; pid: number | null; serial_number: string | null; esp_candidate: boolean }
+const ports = ref<UsbPort[]>([]), port = ref(''), address = ref(''), deviceToken = ref('')
+let manualPort: UsbPort | undefined
+const lastUsbKey = 'mcutool.lastVerifiedUsb'
 const error = ref(''), notice = ref(''), pending = ref(''), lastRequest = ref('')
 const selectedKeys = ref([1]), pressMs = ref(100), gapMs = ref(100), repeat = ref(1)
 const samples = shallowRef<Sample[]>([])
@@ -90,8 +93,22 @@ async function start() {
   } catch(e) { error.value = e instanceof Error ? e.message : '后台连接失败' }
   finally { starting.value = false }
 }
-/** AI:枚举端口，不自动选择第一台设备。@returns 完成。 */
-async function refreshPorts() { ports.value = (await api('/api/ports')).ports }
+/** AI:生成跨 COM 号稳定的 USB 标识。@param p 枚举出的端口。@returns 稳定标识，信息不足时为空。 */
+function usbIdentity(p: UsbPort): string {
+  return p.vid !== null && p.pid !== null && p.serial_number ? JSON.stringify([p.vid,p.pid,p.serial_number]) : ''
+}
+/** AI:只枚举端口，优先保留手选设备，其次匹配已验证身份或唯一候选。@returns 完成选择。 */
+async function refreshPorts() {
+  const list: UsbPort[] = (await api('/api/ports')).ports
+  ports.value = list
+  const chosen = manualPort
+  if (chosen && list.some(p => p.port === chosen.port && p.vid === chosen.vid && p.pid === chosen.pid && p.serial_number === chosen.serial_number)) return
+  manualPort = undefined
+  const remembered = localStorage.getItem(lastUsbKey)
+  const matches = remembered ? list.filter(p => usbIdentity(p) === remembered) : []
+  const candidates = list.filter(p => p.esp_candidate)
+  port.value = matches.length === 1 ? matches[0].port : candidates.length === 1 ? candidates[0].port : ''
+}
 /** AI:连接用户指定工具。@returns 完成。 */
 async function connect() { await run('connect', async () => {
   const spec = connectionKind.value === 'usb' ? {kind:'usb',port:port.value} : {kind:'http',address:address.value,token:deviceToken.value}
@@ -104,7 +121,13 @@ async function claim(takeover = false) { await run('claim', async () => {
 }) }
 /** AI:提交一次有编号的操作。@param method 公共方法。@param params 参数。@returns 完成提交，不代表动作完成。 */
 async function command(method: string, params: Record<string,unknown>) { await run(method, async () => {
+  const selected = spec.kind === 'usb' ? ports.value.find(p => p.port === spec.port) : undefined
   const requestId = crypto.randomUUID(); lastRequest.value = requestId
+  if (selected && state.value?.connected && state.value.device.device_id) {
+    const identity = usbIdentity(selected)
+    if (identity) localStorage.setItem(lastUsbKey, identity)
+    else localStorage.removeItem(lastUsbKey)
+  }
   const job: Job = await api('/api/commands','POST',{request_id:requestId,method,params})
   notice.value = `${methodNames[method] ?? method}：${jobNames[job.state] ?? job.state}`
 }) }
@@ -171,9 +194,12 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
       <section v-if="connectionOpen" class="panel connect-panel">
         <div class="panel-title"><div><h2>连接工具</h2><p>选择这次使用的连接方式和设备。</p></div><button class="icon-button" aria-label="收起连接设置" @click="connectionOpen=false"><X :size="18"/></button></div>
         <div class="connection-form"><div class="segmented"><button :class="{selected:connectionKind==='usb'}" @click="connectionKind='usb'"><Cable :size="16"/>USB</button><button :class="{selected:connectionKind==='http'}" @click="connectionKind='http'"><Wifi :size="16"/>Wi-Fi</button></div>
-          <template v-if="connectionKind==='usb'"><label class="grow">设备端口<select v-model="port" aria-label="设备端口"><option value="">请选择明确的工具端口</option><option v-for="p in ports" :key="p.port" :value="p.port">{{ p.port }} · {{ p.description }}{{ p.esp_candidate?' · ESP32 USB':'' }}</option></select></label><button class="button" @click="run('ports',refreshPorts)"><RefreshCw :size="16"/>刷新端口</button></template>
+          <template v-if="connectionKind==='usb'"><label class="grow">设备端口<select v-model="port" aria-label="设备端口" :disabled="!!pending" @change="manualPort=ports.find(p=>p.port===port)">
+            <option value="">请选择工具端口</option>
+            <option v-for="p in ports" :key="p.port" :value="p.port">{{ p.port }} · {{ p.description }}{{ p.esp_candidate?' · ESP32 USB 候选':'' }}</option>
+          </select></label><button class="button" :disabled="!!pending || starting" @click="run('ports',refreshPorts)"><RefreshCw :size="16"/>刷新端口</button></template>
           <template v-else><label class="grow">设备地址<input v-model.trim="address" placeholder="http://192.168.1.80" inputmode="url"/></label><label class="grow">访问令牌<input v-model="deviceToken" type="password" autocomplete="off" placeholder="从USB或配网页面取得"/></label></template>
-          <button class="button primary" :disabled="!!pending || !!state?.connected || !socketLive" @click="connect">{{ pending==='connect'?'连接中…':'连接工具' }}</button>
+          <button class="button primary" :disabled="!!pending || !!state?.connected || !socketLive || (connectionKind==='usb' && !port)" @click="connect">{{ pending==='connect'?'连接中…':'连接工具' }}</button>
         </div><p class="hint"><CircleHelp :size="14"/>USB 接电脑时不同时接 DC。Wi-Fi 访问令牌可通过 USB 的设备设置查看。</p>
       </section>
 
