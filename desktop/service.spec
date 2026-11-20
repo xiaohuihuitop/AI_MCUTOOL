@@ -8,7 +8,9 @@ hidden = collect_submodules('uvicorn') + collect_submodules('fastmcp') + collect
 metadata = copy_metadata('fastmcp', recursive=True) + copy_metadata('ai-mcutool')
 resources = collect_data_files('docket') + collect_data_files('fastmcp') + collect_data_files('mcp') + collect_data_files('burner_redis')
 analysis = Analysis([str(project / 'desktop/service_entry.py')], pathex=[str(project / 'host')],
-                    binaries=[], datas=[(str(project / 'web/dist'), 'web/dist'), *metadata, *resources],
+                    binaries=[], datas=[(str(project / 'web/dist'), 'web/dist'),
+                                        (str(project / 'host/mcutool/firmware-signing.pub'), 'mcutool'),
+                                        *collect_data_files('esptool'), *metadata, *resources],
                     hiddenimports=hidden, hookspath=[], hooksconfig={}, runtime_hooks=[],
                     excludes=['pytest', 'IPython', 'notebook'], noarchive=False, optimize=0)
 python_archive = PYZ(analysis.pure)

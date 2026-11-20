@@ -75,6 +75,13 @@ class ReadInput(Input):
     params: dict = Field(default_factory=dict)
 
 
+class FirmwareInstallInput(Input):
+    """AI:用户在升级提示中确认的设备、启动和目标版本。"""
+    device_id: str
+    boot_id: str
+    version: str
+
+
 def create_app(data_dir: Path, *, token: str | None = None, transport_factory=None, test_mode=False) -> FastAPI:
     """AI:创建本地应用。@param data_dir 数据目录；token 后台凭据；transport_factory 测试注入；test_mode 测试模式。@return 应用。"""
     runtime_token = token or uuid.uuid4().hex + uuid.uuid4().hex
@@ -167,6 +174,16 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
     async def disconnect(request: Request):
         """AI:显式断开通信。@param request 请求。@return 状态。"""
         return await runtime.disconnect(session_id(request))
+
+    @app.post("/api/firmware/prepare")
+    async def prepare_firmware(request: Request, retry: bool = False):
+        """AI:预下载所连板的正式固件。@param request 当前会话。@param retry 是否手动复查。@return 检查阶段。"""
+        return runtime.prepare_firmware(session_id(request), retry)
+
+    @app.post("/api/firmware/install")
+    async def install_firmware(request: Request, body: FirmwareInstallInput):
+        """AI:明确确认后升级所选板。@param request 当前会话。@param body 界面选中的目标。@return 受理状态。"""
+        return await runtime.install_firmware(session_id(request), **body.model_dump())
 
     @app.post("/api/control/claim")
     async def claim(request: Request, body: ClaimInput):

@@ -1,6 +1,8 @@
 export type Sample = {channel: string; value: number | null; nominal: number | null; unit: string; quality: string; t_us: number; boot_id: string; device_id: string; cursor: number; stale?: boolean; age_ms?: number; break_before?: boolean}
 export type Job = {request_id: string; method: string; state: string; action_id: number | null; actor: string; error: {message: string} | null; created_at: number; result: Record<string, unknown> | null}
 export type Snapshot = {
+  firmware_update?: {phase:string; target?:{device_id:string;boot_id:string;firmware_version:string};
+    version?:string; new_boot_id?:string; received?:number; total?:number; message?:string};
   instance_id: string; connected: boolean; test_mode: boolean;
   connection?: {kind?:'usb'|'http';port?:string;address?:string};
   device: Record<string, any>; device_state: Record<string, any>; device_state_stale: boolean;
