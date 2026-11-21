@@ -580,15 +580,22 @@ class Runtime:
                 self._event("orphan_recording_stop", "客户端明确停止无人持有的本机记录，未接管硬件操作权", actor=self.sessions[token]["name"])
             return await self.recorder.stop()
 
-    async def prepare_shutdown(self, token: str):
+    async def prepare_shutdown(self, token: str, *, update=False, confirmation=""):
         """AI:检查全局退出条件并释放本后台写权。@param token 明确发起退出的客户端。@return 退出确认，不改变输出。"""
         async with self.operation_lock:
-            self.session(token)
-            self.check_firmware_idle()
-            if self.active_jobs or self.recorder.state in ("recording", "stopping"):
-                raise ToolError("BUSY", "先等待动作结束并明确停止记录，再退出后台")
-            if any(key != token and session["deadline"] > time.monotonic() for key, session in self.sessions.items()):
-                raise ToolError("CLIENTS_ACTIVE", "还有其他客户端在使用后台，请先让它们退出会话")
+            session = self.session(token)
+            if update:
+                if session["kind"] != "desktop":
+                    raise ToolError("NOT_OWNER", "请从桌面工作台安装更新")
+                pending = await self._finish_for_update(confirmation)
+                if pending:
+                    return pending
+            else:
+                self.check_firmware_idle()
+                if self.active_jobs or self.recorder.state in ("recording", "stopping"):
+                    raise ToolError("BUSY", "先等待动作结束并明确停止记录，再退出后台")
+                if any(key != token and session["deadline"] > time.monotonic() for key, session in self.sessions.items()):
+                    raise ToolError("CLIENTS_ACTIVE", "还有其他客户端在使用后台，请先让它们退出会话")
             # AI:等待设备释放期间就关闭客户端准入；失败只恢复入口，不停止采集任务。
             self.closing = True
             try:
@@ -603,6 +610,61 @@ class Runtime:
             self.control_revision += 1
             self._event("shutdown", "用户明确请求退出后台，输出保持")
             return {"shutdown_requested": True, "outputs_changed": False}
+
+    async def _finish_for_update(self, confirmation: str):
+        """AI:在操作锁内核对安装时的工作。@param confirmation 用户确认的活动指纹。@return 等待或确认信息，全部收尾后为空。"""
+        fw = self.firmware.status
+        writing = fw["phase"] in ("installing", "reconnecting")
+        firmware_id = hashlib.sha256(repr((fw.get("target"), fw.get("version"))).encode()).hexdigest()
+        if confirmation.startswith("fw-") and not writing:
+            # AI:确认框打开期间也可能结束烧录，只有原目标已成功回读才放行。
+            if fw["phase"] != "succeeded" or not confirmation.startswith("fw-" + firmware_id + "-"):
+                raise ToolError("FIRMWARE_READBACK_FAILED", "原工具板的固件回读未确认，请先核对结果")
+        recording = self.recorder.state in ("recording", "stopping")
+        board = await self._rpc("device.status") if self.connected and not writing else {}
+        jobs = sorted(self.active_jobs)
+        if not (writing or recording or jobs or board.get("busy")):
+            return None
+        # AI:确认绑定实际任务、记录及板子。复用旧对话框不能停止后来启动的新工作。
+        identity = (self.instance_id, jobs, str(self.recorder.path) if recording else None,
+                    fw.get("target") if writing else None, fw.get("version") if writing else None,
+                    self.info.get("boot_id"), board.get("charge_cycle_id"), board.get("output_sequence_id"))
+        key = hashlib.sha256(repr(identity).encode()).hexdigest()
+        if writing:
+            key = "fw-" + firmware_id + "-" + key
+        if confirmation != key:
+            details = []
+            if recording:
+                details.append("当前波形记录将停止，已采集的数据会保存。")
+            if jobs or board.get("busy"):
+                details.append("正在执行板上动作。可取消动作将按原计划收尾，其余动作等待完成。")
+            if writing:
+                details.append("工具板正在升级，桌面会等固件写完、重连并读回版本后再安装。")
+            return {"confirmation": key, "message": "".join(details)}
+        if writing:
+            return {"waiting_firmware": True}
+        if recording:
+            result = await self.recorder.stop()
+            if result["state"] != "completed":
+                raise ToolError("RECORDING_FAILED", "记录保存失败：" + str(result.get("error")))
+        # AI:只向当前启动的已知动作编号发送对应取消命令。跟踪任务负责记录实际终态。
+        cancel = {"keys.run": "action.cancel", "charge.run": "charge.cancel", "outputs.run": "outputs.cancel"}
+        deadline = time.monotonic() + 4
+        sent = set()
+        while self.active_jobs and time.monotonic() < deadline:
+            for request in list(self.active_jobs):
+                job = self.jobs.get(request)
+                if (job and job["method"] in cancel and job.get("action_id") and request not in sent
+                        and self.device_claimed and self.info.get("boot_id") == job["boot_id"]):
+                    action = await self._rpc("action.get", {"action_id": job["action_id"]})
+                    if action.get("state") == "running":
+                        await self._rpc(cancel[job["method"]], {"action_id": job["action_id"]}, mutation=True)
+                    sent.add(request)
+            if self.active_jobs:
+                await asyncio.sleep(0.05)
+        if self.active_jobs or (self.connected and (await self._rpc("device.status")).get("busy")):
+            return {"waiting_actions": True}
+        return None
 
     async def close(self):
         """AI:结束后台等待，保留未知结果，不向硬件发送复位或关闭输出。@return 无。"""

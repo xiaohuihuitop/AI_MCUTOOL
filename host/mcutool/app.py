@@ -235,13 +235,14 @@ def create_app(data_dir: Path, *, token: str | None = None, transport_factory=No
         return await runtime.recording_stop(session_id(request), **(body.model_dump() if body else {}))
 
     @app.post("/api/runtime/shutdown")
-    async def shutdown(request: Request):
+    async def shutdown(request: Request, update: bool = False, confirmation: str = ""):
         """AI:明确请求退出后台，检查其他使用者和在途工作。@param request 请求。@return 退出请求结果。"""
         callback = getattr(app.state, "shutdown_callback", None)
         if callback is None:
             raise ToolError("SHUTDOWN_UNAVAILABLE", "当前运行方式不提供后台退出入口")
-        result = await runtime.prepare_shutdown(session_id(request))
-        callback()
+        result = await runtime.prepare_shutdown(session_id(request), update=update, confirmation=confirmation)
+        if result.get("shutdown_requested"):
+            callback()
         return result
 
     @app.get("/api/diagnostics")

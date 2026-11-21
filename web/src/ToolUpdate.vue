@@ -4,7 +4,7 @@ import { desktopCommand } from './desktop'
 import { version as current } from '../package.json'
 
 type Status = {phase:'idle'|'checking'|'current'} | {phase:'downloading';version:string;received:number;total:number} |
-  {phase:'ready'|'installing';version:string} | {phase:'failed';message:string;cached_version:string|null}
+  {phase:'ready'|'installing';version:string} | {phase:'finishing';message:string} | {phase:'failed';message:string;cached_version:string|null}
 const status = ref<Status>({phase:'idle'})
 const deferred = ref('')
 const error = ref('')
@@ -42,7 +42,7 @@ onMounted(refresh)
 onBeforeUnmount(()=>{ live = false; clearTimeout(timer) })
 </script>
 <template>
-  <section v-if="status.phase==='downloading' || status.phase==='ready' || status.phase==='installing' || status.phase==='failed' || error || readError" class="tool-update" aria-label="工具更新">
+  <section v-if="status.phase==='downloading' || status.phase==='ready' || status.phase==='installing' || status.phase==='finishing' || status.phase==='failed' || error || readError" class="tool-update" aria-label="工具更新">
     <template v-if="status.phase==='downloading'">正在下载工具 {{status.version}} <progress :value="status.received" :max="status.total"/>{{ Math.floor(status.received*100/status.total) }}%</template>
     <template v-else-if="status.phase==='ready'">
       <span>工具 {{current}} → {{status.version}}</span>
@@ -50,6 +50,7 @@ onBeforeUnmount(()=>{ live = false; clearTimeout(timer) })
       <template v-else><button class="button primary" :disabled="submitting" @click="install(status.version)">立即安装</button><button class="text-button" :disabled="submitting" @click="deferred=status.version">稍后</button></template>
     </template>
     <template v-else-if="status.phase==='installing'">正在安装工具 {{status.version}}</template>
+    <template v-else-if="status.phase==='finishing'">{{status.message}}</template>
     <template v-else-if="status.phase==='failed'">
       <span>{{status.message}}</span><button class="text-button" :disabled="submitting" @click="retry">重新检查</button>
       <button v-if="status.cached_version" class="button" :disabled="submitting" @click="install(status.cached_version)">安装已下载的 {{status.cached_version}}</button>

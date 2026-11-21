@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::{io::Read, os::windows::process::CommandExt, process::Command, sync::atomic::Ordering, thread, time::{Duration, Instant}};
 use tauri::{AppHandle, Manager};
-use tauri_plugin_dialog::DialogExt;
+use tauri_plugin_dialog::{DialogExt, MessageDialogButtons};
 use tauri_plugin_updater::{Update, UpdaterExt};
 
 const LATEST: &str = "https://api.github.com/repos/xiaohuihuitop/AI_MCUTOOL/releases/latest";
@@ -57,6 +57,7 @@ pub enum Status {
     Downloading { version: String, received: u64, total: u64 },
     Ready { version: String },
     Installing { version: String },
+    Finishing { message: String },
     Failed { message: String, cached_version: Option<String> },
 }
 
@@ -198,29 +199,63 @@ pub async fn desktop_install_update(app: AppHandle, version: String) -> Result<(
 /// AI:安装已验签的同一份工具字节。@param app 桌面；update 发布信息；bytes 已验证的包。@return 安装交接结果。
 fn install(app: &AppHandle, update: Update, bytes: Vec<u8>) -> Result<(), String> {
     let backend = current_backend(app)?;
-    let service = app.path().resource_dir().map_err(|_| "无法确定安装位置")?.join("runtime/MCUTOOL-service/MCUTOOL-service.exe");
+    let root = app.path().resource_dir().map_err(|_| "无法确定安装位置")?;
+    let service = root.join("runtime/MCUTOOL-service/MCUTOOL-service.exe");
     let state = app.state::<DesktopState>();
     if state.exit_pending.swap(true, Ordering::SeqCst) { return Err("正在退出，请稍后再更新".into()); }
     let mut stopped = false;
     let mut result = (|| {
-        let preflight = Command::new(&service).args(["can-update", "--runtime-pid", &backend.info.pid.to_string()])
-            .creation_flags(0x08000000).output().map_err(|e| format!("更新前检查安装占用失败：{e}"))?;
-        if !preflight.status.success() {
-            let error = crate::backend::service_error(&preflight.stderr);
-            return Err(error.as_ref().and_then(|v| v.pointer("/error/message")).and_then(|v| v.as_str())
-                .unwrap_or("更新前无法确认安装目录是否空闲，请稍后重试").to_owned());
+        let powershell = std::path::PathBuf::from(std::env::var_os("SystemRoot").ok_or("无法定位 Windows")?)
+            .join("System32/WindowsPowerShell/v1.0/powershell.exe");
+        let processes = |mode: &str| -> Result<bool, String> {
+            Command::new(&powershell).args(["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File"])
+                .arg(root.join("update-processes.ps1")).arg("-Service").arg(&service)
+                .args(["-Mode", mode, "-RuntimePid", &backend.info.pid.to_string()])
+                .creation_flags(0x08000000).output().map(|r| r.status.success()).map_err(|e| e.to_string())
+        };
+        if !processes("Check")? {
+            return Err("另一个工具后台仍在使用此安装目录，请结束该后台的工作后再安装。".into());
         }
-        backend.json("POST", "/api/runtime/shutdown").map_err(|e| format!("请稍后更新。{e}"))?;
+        let mut confirmation = String::new();
+        loop {
+            let reply = backend.json("POST", &format!("/api/runtime/shutdown?update=true&confirmation={confirmation}"))?;
+            if reply["shutdown_requested"] == true { break; }
+            if let Some(key) = reply["confirmation"].as_str() {
+                let message = reply["message"].as_str().ok_or("无法读取正在运行的任务")?;
+                let accepted = app.dialog().message(message).title("安装更新前有任务正在运行")
+                    .buttons(MessageDialogButtons::OkCancelCustom("停止并安装".into(), "继续运行".into())).blocking_show();
+                if !accepted {
+                    report(app, Status::Ready { version:update.version.clone() });
+                    return Ok(());
+                }
+                confirmation = key.to_owned();
+            } else if reply["waiting_firmware"] == true {
+                report(app, Status::Finishing { message:"等待工具板写入、重连并回读版本…".into() });
+                loop {
+                    thread::sleep(Duration::from_millis(500));
+                    let status = backend.json("GET", "/api/runtime/status")?;
+                    match status["firmware_update"]["phase"].as_str() {
+                        Some("succeeded") => break,
+                        Some("installing" | "reconnecting") => continue,
+                        _ => return Err("工具板固件回读未确认，请核对结果后再安装桌面更新。".into()),
+                    }
+                }
+            } else if reply["waiting_actions"] == true {
+                report(app, Status::Finishing { message:"等待板上动作收尾…".into() });
+                thread::sleep(Duration::from_millis(400));
+            } else {
+                return Err("后台未确认升级收尾状态。".into());
+            }
+        }
         stopped = true;
         // AI:退出确认先于进程释放；同一安装目录的其他后台或 MCP 仍在运行时不能覆盖文件。
         let until = Instant::now() + Duration::from_secs(20);
         loop {
-            let status = Command::new(&service).arg("can-uninstall").creation_flags(0x08000000)
-                .output().map_err(|_| "无法核对共享运行程序状态")?;
-            if status.status.success() { break; }
+            if processes("CloseBridges")? { break; }
             if Instant::now() >= until { return Err("仍有程序使用此安装目录，请结束相关会话后重新打开工作台更新".into()); }
             thread::sleep(Duration::from_millis(250));
         }
+        report(app, Status::Installing { version:update.version.clone() });
         update.install(bytes).map_err(|e| format!("启动更新安装器失败：{e}"))
     })();
     if let (true, Err(cause)) = (stopped, &result) {

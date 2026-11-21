@@ -77,6 +77,51 @@ def test_request_id_deduplicates_and_conflicting_content_is_rejected(connected):
     assert submit(http, a, "once", "keys.run", changed).json()["error"]["code"] == "REQUEST_CONFLICT"
 
 
+def test_confirm_install_finishes_only_the_observed_work(connected):
+    """AI:从桌面更新入口确认当前工作，检查原记录和板端结果。@param connected 共享后台及模拟设备。@return 无。"""
+    http, owner, observer, device, root = connected
+    stopped = []
+    http.app.state.shutdown_callback = lambda: stopped.append(True)
+    session = http.post("/api/sessions", headers=owner, json={"kind":"desktop","name":"工作台"}).json()
+    desktop = {**owner, "X-Session-ID":session["session_id"]}
+    endpoint = "/api/runtime/shutdown?update=true"
+    assert http.post(endpoint, headers=observer).json()["error"]["code"] == "NOT_OWNER"
+    assert http.post("/api/recording/start", headers=owner, json={}).is_success
+    first = http.post(endpoint, headers=desktop).json()
+    assert "波形" in first["message"] and not stopped
+    assert submit(http, owner, "hold", "keys.run", {"steps":[{"mask":1,"duration_ms":5000}],"repeat":1}).is_success
+    second = http.post(endpoint+"&confirmation="+first["confirmation"], headers=desktop).json()
+    assert second["confirmation"] != first["confirmation"] and not stopped
+    assert http.get("/api/status", headers=observer).json()["recording"]["state"] == "recording"
+    result = http.post(endpoint+"&confirmation="+second["confirmation"], headers=desktop).json()
+    assert result["shutdown_requested"] and stopped == [True]
+    assert device.state["keys_mask"] == 0 and http.app.state.runtime.jobs.get("hold")["state"] == "cancelled"
+    metadata = next((root/"recordings").glob("*/会话.json"))
+    assert json.loads(metadata.read_bytes())["state"] == "completed"
+
+
+def test_update_waits_for_board_readback(connected):
+    """AI:固件写入期间确认，只返回等待，读回版本后才受理退出。@param connected 测试后台。@return 无。"""
+    http, owner, _, _, _ = connected
+    stopped = []
+    http.app.state.shutdown_callback = lambda: stopped.append(True)
+    session = http.post("/api/sessions", headers=owner, json={"kind":"desktop","name":"工作台"}).json()
+    desktop = {**owner, "X-Session-ID":session["session_id"]}
+    endpoint = "/api/runtime/shutdown?update=true"
+    firmware = http.app.state.runtime.firmware
+    firmware.status = {"phase":"installing","version":"0.1.4","target":{"device_id":"fixture"}}
+    confirmation = http.post(endpoint, headers=desktop).json()["confirmation"]
+    assert http.post(endpoint+"&confirmation="+confirmation, headers=desktop).json()["waiting_firmware"]
+    firmware.status["phase"] = "reconnecting"
+    assert http.post(endpoint+"&confirmation="+confirmation, headers=desktop).json()["waiting_firmware"]
+    assert not stopped
+    firmware.status["phase"] = "failed"
+    assert http.post(endpoint+"&confirmation="+confirmation, headers=desktop).json()["error"]["code"] == "FIRMWARE_READBACK_FAILED"
+    assert not stopped
+    firmware.status["phase"] = "succeeded"
+    assert http.post(endpoint+"&confirmation="+confirmation, headers=desktop).json()["shutdown_requested"] and stopped
+
+
 def test_charging_interlock_keeps_previous_control_state(connected):
     """AI:被拒绝操作不能先关闭充电或改变供电。@param connected 夹具。@return 无。"""
     http, a, _, _, _ = connected
