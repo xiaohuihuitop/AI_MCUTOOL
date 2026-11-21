@@ -32,7 +32,7 @@ try {
         Start-Sleep -Milliseconds 100
     } while ([datetime]::UtcNow -lt $end)
     if ($first.Modules.FileName -notcontains $dll) { throw '未重现运行库被 MCP 加载的前提' }
-    $setup = Start-Process $Installer -ArgumentList '/S' -WindowStyle Hidden -PassThru
+    $setup = Start-Process $Installer -ArgumentList '/S','/UPDATE' -WindowStyle Hidden -PassThru
     $end = [datetime]::UtcNow.AddMinutes(4)
     $sawClosedEntry = $false
     while (!$setup.HasExited -and [datetime]::UtcNow -lt $end) {
@@ -50,7 +50,10 @@ try {
         Start-Sleep -Milliseconds 50
     }
     if (!$setup.WaitForExit(240000) -or $setup.ExitCode -ne 0) { throw '安装器未成功完成' }
-    if (!$first.HasExited -or !$second.HasExited -or !$sawClosedEntry) { throw '桥接进程交接未通过' }
+    if (!$first.HasExited -or !$second.HasExited -or !$sawClosedEntry) {
+        $installed = (Get-Item (Join-Path $root 'mcutool-desktop.exe')).VersionInfo.ProductVersion
+        throw "桥接进程交接未通过。进程退出 $($first.HasExited)/$($second.HasExited)，入口关闭 $sawClosedEntry，桌面版本 $installed，安装器退出码 $($setup.ExitCode)。"
+    }
     if ((Get-Item (Join-Path $root 'mcutool-desktop.exe')).VersionInfo.ProductVersion -ne $Version) { throw '桌面版本不符' }
     $null = & $service start --data-dir $data --port 29759 --no-browser
     if ($LASTEXITCODE) { throw '新版服务启动失败' }
