@@ -27,5 +27,9 @@ try {
         $buildArgs += @('--','--locked')
         & npm.cmd @buildArgs
         if ($LASTEXITCODE -ne 0) { throw '桌面程序或安装器构建失败' }
+        # AI:免安装构建没有安装器的最后一次改名，保留开发桌面的同一服务入口。
+        $targetRoot = if ($env:CARGO_TARGET_DIR) { $env:CARGO_TARGET_DIR } else { Join-Path $projectRoot 'desktop/src-tauri/target' }
+        $devEntry = Join-Path $targetRoot 'x86_64-pc-windows-msvc/release/runtime/MCUTOOL-service/MCUTOOL-service.exe'
+        Copy-Item -LiteralPath (Join-Path $projectRoot 'desktop/runtime/MCUTOOL-service/MCUTOOL-service.exe') -Destination $devEntry -Force
     } finally { Pop-Location }
 } finally { Pop-Location }

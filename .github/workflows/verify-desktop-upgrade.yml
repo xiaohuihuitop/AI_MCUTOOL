@@ -6,6 +6,10 @@ on:
         description: 已发布的旧桌面版本号
         required: true
         type: string
+      draft:
+        description: 使用当前提交的草稿安装器验证 MCP 占用和复制期间重连
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -33,6 +37,7 @@ jobs:
           $installer = Start-Process -FilePath $file -ArgumentList '/S' -WindowStyle Hidden -Wait -PassThru
           if ($installer.ExitCode -ne 0) { throw "旧版安装失败 $($installer.ExitCode)" }
       - name: 从旧工作台安装公开更新并回读版本
+        if: ${{ !inputs.draft }}
         shell: pwsh
         env:
           PREVIOUS: ${{ inputs.previous }}
@@ -40,3 +45,15 @@ jobs:
           npm.cmd ci --prefix web --ignore-scripts --no-audit --no-fund
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           node tests/desktop/published-upgrade.mjs
+      - name: 实测草稿安装器释放桥接进程和恢复服务入口
+        if: ${{ inputs.draft }}
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $desc = Get-Content -Raw integrations/desktop-release.json | ConvertFrom-Json
+          gh release download $desc.tag --pattern $desc.installer --dir $env:RUNNER_TEMP
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $file = Join-Path $env:RUNNER_TEMP $desc.installer
+          if ((Get-FileHash $file).Hash -ne $desc.sha256) { throw '安装器摘要不符' }
+          & ./tests/desktop/installer-handoff.ps1 -Installer $file -Version $desc.version
