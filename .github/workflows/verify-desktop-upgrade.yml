@@ -13,7 +13,36 @@ on:
 permissions:
   contents: read
 jobs:
+  draft_installer:
+    if: ${{ inputs.draft && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      # AI:GitHub 要求推送权限才能列出草稿。此作业只下载并核对包，不检出或执行仓库代码。
+      - name: 读取主线发布描述和同一草稿的安装器
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          repo="repos/$GITHUB_REPOSITORY"
+          gh api "$repo/contents/integrations/desktop-release.json?ref=$GITHUB_SHA" --jq .content | base64 -d > descriptor.json
+          tag=$(jq -er '.tag | select(test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))' descriptor.json)
+          name="MCUTOOL-${tag#v}-windows-x64-setup.exe"
+          id=$(gh api --paginate --slurp "$repo/releases?per_page=100" |
+            jq -er --arg tag "$tag" --arg name "$name" '[.[][] | select(.draft and .tag_name == $tag) | .assets[] | select(.state == "uploaded" and .name == $name)] | select(length == 1) | first.id')
+          gh api "$repo/releases/assets/$id" -H 'Accept: application/octet-stream' > candidate.exe
+          printf '%s  candidate.exe\n' "$(jq -er .sha256 descriptor.json)" | sha256sum -c -
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-installer
+          path: candidate.exe
+          retention-days: 1
+          compression-level: 0
   upgrade:
+    needs: draft_installer
+    if: ${{ !cancelled() && (!inputs.draft || needs.draft_installer.result == 'success') }}
     runs-on: windows-2022
     timeout-minutes: 20
     steps:
@@ -45,15 +74,16 @@ jobs:
           npm.cmd ci --prefix web --ignore-scripts --no-audit --no-fund
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           node tests/desktop/published-upgrade.mjs
+      - uses: actions/download-artifact@v4
+        if: ${{ inputs.draft }}
+        with:
+          name: desktop-installer
+          path: ${{ runner.temp }}/candidate
       - name: 实测草稿安装器释放桥接进程和恢复服务入口
         if: ${{ inputs.draft }}
         shell: pwsh
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           $desc = Get-Content -Raw integrations/desktop-release.json | ConvertFrom-Json
-          gh release download $desc.tag --pattern $desc.installer --dir $env:RUNNER_TEMP
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          $file = Join-Path $env:RUNNER_TEMP $desc.installer
+          $file = Join-Path $env:RUNNER_TEMP 'candidate/candidate.exe'
           if ((Get-FileHash $file).Hash -ne $desc.sha256) { throw '安装器摘要不符' }
           & ./tests/desktop/installer-handoff.ps1 -Installer $file -Version $desc.version
