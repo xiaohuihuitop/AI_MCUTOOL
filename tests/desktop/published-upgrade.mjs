@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { execFileSync, spawn } from 'node:child_process'
-import { readFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { setTimeout as delay } from 'node:timers/promises'
 import { chromium } from '../../web/node_modules/playwright/index.mjs'
@@ -10,7 +10,14 @@ assert.equal(process.env.RUNNER_ENVIRONMENT, 'github-hosted')
 const previous = process.env.PREVIOUS
 const expected = JSON.parse(readFileSync(new URL('../../desktop/package.json', import.meta.url))).version
 const exe = join(process.env.LOCALAPPDATA, 'MCU TOOL', 'mcutool-desktop.exe')
-const runtimeFile = join(process.env.LOCALAPPDATA, 'MCU_TOOL', 'data', 'runtime.json')
+const dataDir = join(process.env.RUNNER_TEMP, 'MCU TOOL 用户记录')
+const configDir = join(process.env.LOCALAPPDATA, 'MCU_TOOL')
+const configFile = join(configDir, 'desktop.json')
+const historyDir = join(dataDir, 'recordings', 'existing')
+const historyFile = join(historyDir, 'history.jsonl')
+const settings = JSON.stringify({data_dir:dataDir,port:29755})
+const history = '{"sample":1}\n'
+const runtimeFile = join(dataDir, 'runtime.json')
 const debug = 'http://127.0.0.1:29756'
 
 /** AI:读取实际安装的桌面文件版本。@returns Windows 产品版本。 */
@@ -38,6 +45,10 @@ function runtime() {
 }
 
 assert.equal(installed(), previous)
+mkdirSync(configDir, {recursive:true})
+mkdirSync(historyDir, {recursive:true})
+writeFileSync(configFile, settings)
+writeFileSync(historyFile, history)
 const oldDesktop = spawn(exe, [], {windowsHide:true, stdio:'ignore', env:{...process.env,
   WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS:'--remote-debugging-address=127.0.0.1 --remote-debugging-port=29756'}})
 let browser
@@ -66,6 +77,16 @@ try {
     return state.version === expected && state.clients.some(c => c.kind === 'desktop' && c.active) && state
   })
   assert.equal(installed(), expected)
+  assert.equal(readFileSync(configFile,'utf8'), settings)
+  assert.equal(readFileSync(historyFile,'utf8'), history)
+  // AI:单实例提示与主窗口均以 MCU TOOL 开头，窗口检查要求只有一个可见工作台。
+  const pid = execFileSync('powershell.exe',['-NoProfile','-Command',
+    '(Get-Process -Name mcutool-desktop | Where-Object Path -eq $env:MCUTOOL_QA_EXE).Id'],
+    {env:{...process.env,MCUTOOL_QA_EXE:exe},encoding:'utf8',windowsHide:true}).trim()
+  assert.match(pid, /^\d+$/)
+  const visible = execFileSync('pwsh',['-NoProfile','-File','tests/desktop/window.ps1',
+    '-TargetProcessId',pid,'-ExpectedExe',exe,'-Action','visible'],{encoding:'utf8',windowsHide:true}).trim()
+  assert.equal(visible,'true')
   assert.equal(next.connected, false)
   assert.equal(next.firmware_update.phase, 'idle')
   const current = runtime()
