@@ -4,6 +4,7 @@ import { Activity, Cable, Check, ChevronDown, CircleHelp, Download, Gauge, KeyRo
 import Trend from './Trend.vue'
 import BoardModel from './BoardModel.vue'
 import ToolUpdate from './ToolUpdate.vue'
+import FirmwareUpdate from './FirmwareUpdate.vue'
 import { version as appVersion } from '../package.json'
 import { api, download, exportDiagnostics, getSession, setSession, token, type Job, type Sample, type Snapshot } from './api'
 import { desktopCommand, desktopSession, isDesktop } from './desktop'
@@ -214,6 +215,7 @@ onBeforeUnmount(()=>{if(heartbeat)clearInterval(heartbeat);socket?.close()})
       <button class="button light" @click="connectionOpen=!connectionOpen"><Cable :size="16"/>连接设置<ChevronDown :size="14"/></button>
     </header>
     <ToolUpdate v-if="isDesktop"/>
+    <FirmwareUpdate :state="state" :live="socketLive" :can-write="!!canWrite"/>
     <div v-if="state?.test_mode" class="test-banner">测试环境 · 当前数据来自显式测试设备，不代表实物测量。</div>
     <main>
       <section v-if="connectionOpen" class="panel connect-panel">

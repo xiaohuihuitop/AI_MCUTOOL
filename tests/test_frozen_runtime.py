@@ -48,7 +48,7 @@ def test_frozen_runtime_and_mcp_share_one_process_without_development_path(tmp_p
                 assert occupied.returncode != 0 and 'RUNTIME_IN_USE' in occupied.stderr and 'PID' in occupied.stderr
                 state = (await client.call_tool('connect',{'client_name':'冻结MCP验证'})).data
                 try:
-                    assert ping['version']=='1.0.0' and {'run_charge_cycle','cancel_charge_cycle','run_output_sequence','cancel_output_sequence','action_status'} <= set(ping['tools'])
+                    assert ping['version']=='1.1.0' and {'run_charge_cycle','cancel_charge_cycle','run_output_sequence','cancel_output_sequence','action_status'} <= set(ping['tools'])
                     assert state['instance_id']==identity and not state['connected']
                 finally:
                     # AI:即使断言失败也明确分离本测试会话，避免阻塞测试后台退出。

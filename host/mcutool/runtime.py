@@ -10,6 +10,7 @@ import uuid
 from . import __version__
 from .data import History, JobStore, Recorder
 from .errors import ToolError
+from .firmware_update import FirmwareUpdate, flash_application, usb_port
 from .locking import ProcessLock
 from .protocol import response_result, validate_telemetry
 from .transports import HttpTransport, UsbTransport, normalize_http_address
@@ -48,6 +49,7 @@ class Runtime:
         self.worker = None
         self.stopping = False
         self.closing = False
+        self.firmware = FirmwareUpdate(self.data_dir)
 
     async def start(self):
         """AI:启动独立采集调度。@return 无，不连接设备。"""
@@ -115,63 +117,70 @@ class Runtime:
         self.session(token)
         async with self.operation_lock, self.connection_lock:
             self.session(token)
+            self.check_firmware_idle()
             if self.connected:
                 raise ToolError("ALREADY_CONNECTED", "已有工具连接，请使用共享状态；更换设备前明确断开")
             if self.active_jobs:
                 raise ToolError("BUSY", "任务仍在收尾，不能更换连接")
-            transport = None
-            acquired = None
-            try:
-                if spec["kind"] == "http":
-                    spec = {**spec, "address": normalize_http_address(spec["address"])}
-                if self.transport_factory:
-                    transport = self.transport_factory(spec)
-                elif spec["kind"] == "usb":
-                    transport = await asyncio.to_thread(UsbTransport, spec["port"])
-                elif spec["kind"] == "http":
-                    transport = HttpTransport(spec["address"], spec["token"])
-                else:
-                    raise ToolError("INVALID_PARAMS", "选择USB或Wi-Fi连接")
-                request_id = uuid.uuid4().hex
-                response = await transport.request({"v": 1, "id": request_id, "method": "device.info", "params": {}})
-                info, boot = response_result(response, request_id)
-                if info.get("protocol_version") != 1 or not isinstance(info.get("device_id"), str) or not info["device_id"] or info.get("boot_id") != boot or not isinstance(info.get("capabilities"), list):
-                    raise ToolError("PROTOCOL_MISMATCH", "所选端口没有返回受支持的工具身份")
-                if info.get("test_device") and not self.test_mode:
-                    raise ToolError("TEST_DEVICE_REFUSED", "生产后台拒绝测试设备，请使用明确的测试环境")
-                expected = spec.get("expected_device_id")
-                if expected and expected != info["device_id"]:
-                    raise ToolError("DEVICE_MISMATCH", "连接的设备身份与指定工具不一致")
-                if not self.test_mode:
-                    key = hashlib.sha256(info["device_id"].encode()).hexdigest()
-                    acquired = ProcessLock(Path(os.environ["LOCALAPPDATA"]) / "MCU_TOOL" / "device-locks" / (key + ".lock"))
-                previous_info = self.info
-                same_boot = previous_info.get("device_id") == info["device_id"] and previous_info.get("boot_id") == boot
-                self.transport, self.device_lock, self.info = transport, acquired, info
-                self.connected, self.device_claimed = True, False
-                self.connection = {k: v for k, v in spec.items() if k in ("kind", "port", "address")}
-                if not same_boot:
-                    self.cursors = {"measurement_after": 0, "uart_after": 0, "event_after": 0}
-                    self.hardware_overflows = 0
-                    if previous_info:
-                        self._event("device_segment_changed", "设备或启动已变化，旧启动尚未传出的缓存无法确认恢复", previous_device=previous_info.get("device_id"), previous_boot=previous_info.get("boot_id"), device_id=info["device_id"], boot_id=boot)
-                self.last_error = None
-                self.device_state = await self._rpc("device.status")
-                self.last_state_at = time.monotonic()
-                self.latest.clear()
-                self.owner = None
-                self.control_revision += 1
-                self._event("connected", "工具已连接，尚未取得操作权", device_id=info["device_id"], boot_id=boot)
-                return self.snapshot()
-            except BaseException:
-                self.connected = False
-                self.transport = None
-                if transport:
-                    await transport.close()
-                if acquired:
-                    acquired.close()
-                self.device_lock = None
-                raise
+            return await self._connect_locked(spec)
+
+    async def _connect_locked(self, spec: dict, reserved_lock=None) -> dict:
+        """AI:在连接锁内握手并建立新数据段。@param spec 明确选择的连接。@param reserved_lock 升级中的设备锁。@return 已核对的设备状态。"""
+        transport = None
+        acquired = None
+        try:
+            if spec["kind"] == "http":
+                spec = {**spec, "address": normalize_http_address(spec["address"])}
+            if self.transport_factory:
+                transport = self.transport_factory(spec)
+            elif spec["kind"] == "usb":
+                transport = await asyncio.to_thread(UsbTransport, spec["port"])
+            elif spec["kind"] == "http":
+                transport = HttpTransport(spec["address"], spec["token"])
+            else:
+                raise ToolError("INVALID_PARAMS", "选择USB或Wi-Fi连接")
+            request_id = uuid.uuid4().hex
+            response = await transport.request({"v": 1, "id": request_id, "method": "device.info", "params": {}})
+            info, boot = response_result(response, request_id)
+            if info.get("protocol_version") != 1 or not isinstance(info.get("device_id"), str) or not info["device_id"] or info.get("boot_id") != boot or not isinstance(info.get("capabilities"), list):
+                raise ToolError("PROTOCOL_MISMATCH", "所选端口没有返回受支持的工具身份")
+            if info.get("test_device") and not self.test_mode:
+                raise ToolError("TEST_DEVICE_REFUSED", "生产后台拒绝测试设备，请使用明确的测试环境")
+            expected = spec.get("expected_device_id")
+            if expected and expected != info["device_id"]:
+                raise ToolError("DEVICE_MISMATCH", "连接的设备身份与指定工具不一致")
+            if reserved_lock is not None:
+                acquired = reserved_lock
+            elif not self.test_mode:
+                key = hashlib.sha256(info["device_id"].encode()).hexdigest()
+                acquired = ProcessLock(Path(os.environ["LOCALAPPDATA"]) / "MCU_TOOL" / "device-locks" / (key + ".lock"))
+            previous_info = self.info
+            same_boot = previous_info.get("device_id") == info["device_id"] and previous_info.get("boot_id") == boot
+            self.transport, self.device_lock, self.info = transport, acquired, info
+            self.connected, self.device_claimed = True, False
+            self.connection = {k: v for k, v in spec.items() if k in ("kind", "port", "address")}
+            if not same_boot:
+                self.cursors = {"measurement_after": 0, "uart_after": 0, "event_after": 0}
+                self.hardware_overflows = 0
+                if previous_info:
+                    self._event("device_segment_changed", "设备或启动已变化，旧启动尚未传出的缓存无法确认恢复", previous_device=previous_info.get("device_id"), previous_boot=previous_info.get("boot_id"), device_id=info["device_id"], boot_id=boot)
+            self.last_error = None
+            self.device_state = await self._rpc("device.status")
+            self.last_state_at = time.monotonic()
+            self.latest.clear()
+            self.owner = None
+            self.control_revision += 1
+            self._event("connected", "工具已连接，尚未取得操作权", device_id=info["device_id"], boot_id=boot)
+            return self.snapshot()
+        except BaseException:
+            self.connected = False
+            self.transport = None
+            if transport:
+                await transport.close()
+            if acquired and acquired is not reserved_lock:
+                acquired.close()
+            self.device_lock = None
+            raise
 
     async def _lost(self, error: ToolError, transport=None):
         """AI:关闭出现故障的通信。@param error 原错误；transport 轮询失败时对应的连接。@return 无。"""
@@ -240,6 +249,7 @@ class Runtime:
         """AI:明确断开设备通信。@param token 请求会话。@return 状态，不关闭被测设备供电。"""
         async with self.operation_lock:
             self.session(token)
+            self.check_firmware_idle()
             if self.owner:
                 self.require_owner(token)
             if self.active_jobs:
@@ -260,6 +270,95 @@ class Runtime:
             self.control_revision += 1
             self._event("disconnected", "设备通信已断开，板上输出未改变")
             return self.snapshot()
+
+    def check_firmware_idle(self):
+        """AI:保护已受理的写入和重连。@return 无，升级占用时拒绝更换设备或退出。"""
+        if self.firmware.status["phase"] in ("installing", "reconnecting"):
+            raise ToolError("BUSY", "工具板正在升级或重连，请等待结果")
+
+    async def prepare_firmware(self, token: str, retry: bool):
+        """AI:为工作台当前设备准备正式包。@param token 会话。@param retry 明确复查。@return 当前阶段。"""
+        async with self.operation_lock:
+            self.session(token)
+            self.check_firmware_idle()
+            if not self.connected or self.test_mode or self.info.get("test_device"):
+                raise ToolError("NOT_CONNECTED", "请先连接实际工具板")
+            self.firmware.prepare(self.info, retry=retry)
+            return self.firmware.status
+
+    async def install_firmware(self, token: str, device_id: str, boot_id: str, version: str):
+        """AI:验证用户选择并交给独占写入任务。@param token 操作者。@param device_id 板号。@param boot_id 启动编号。@param version 目标版本。@return 已受理的升级状态。"""
+        async with self.operation_lock, self.connection_lock:
+            self.require_owner(token)
+            update = self.firmware
+            if self.test_mode or not self.connected or not self.device_claimed or self.connection.get("kind") != "usb":
+                raise ToolError("INVALID_CONNECTION", "请通过 USB 连接工具板并取得操作权")
+            target = update.status.get("target", {})
+            prepared = update.status.get("version") if update.status["phase"] == "ready" else None
+            if update.status["phase"] == "failed":
+                prepared = update.status.get("cached_version")
+            if (not prepared or prepared != version
+                    or (self.info["device_id"], self.info["boot_id"]) != (device_id, boot_id)
+                    or any(self.info.get(key) != value for key, value in target.items())):
+                raise ToolError("STALE_STATE", "设备或固件包已变化，请重新检查")
+            if self.active_jobs or self.recorder.state in ("recording", "stopping"):
+                raise ToolError("BUSY", "请先结束动作和记录")
+            try:
+                images = update.images(self.info, version)
+            except Exception as exc:
+                update.status = {"phase": "failed", "target": target, "message": f"缓存校验失败：{exc}"}
+                raise ToolError("INVALID_PACKAGE", update.status["message"]) from exc
+            # AI:续约由板端核对当前启动和控制者，返回同次请求的实际输出状态。
+            board = await self._renew_control()
+            if (board["busy"] or board["power"] != "off" or board["charge"] or board["keys_mask"]
+                    or board["uart"]["tx_enabled"] or board["uart"]["tx_draining"]):
+                raise ToolError("BUSY", "请先关闭供电、充电、按键和串口发送，再升级")
+            self.require_owner(token)
+            port = self.connection["port"]
+            reserved = self.device_lock
+            async with self.rpc_lock:
+                await self.transport.close()
+                self.transport = self.device_lock = self.owner = None
+                self.connected = self.device_claimed = False
+            self.control_revision += 1
+            update.status = {"phase": "installing", "target": target, "version": version}
+            update.task = asyncio.create_task(self._flash_and_reconnect(port, target, version, images, reserved))
+            return update.status
+
+    async def _flash_and_reconnect(self, port, target, version, images, reserved):
+        """AI:写入一次并等原板重启，独立于页面生命周期。@param port 原 USB 口。@param target 旧身份。@param version 目标版本。@param images 已验证镜像。@param reserved 设备锁。@return 无，终态进入共享快照。"""
+        status = self.firmware.status
+        try:
+            await asyncio.to_thread(flash_application, port, target["device_id"], *images)
+            status.update(phase="reconnecting")
+            deadline = time.monotonic() + 25
+            while True:
+                await asyncio.sleep(0.5)
+                try:
+                    current_port = await asyncio.to_thread(usb_port, target["device_id"])
+                    if current_port is None:
+                        raise ToolError("PORT_BUSY", "等待原工具板的 USB 端口重新出现")
+                    spec = {"kind": "usb", "port": current_port, "expected_device_id": target["device_id"]}
+                    async with self.operation_lock, self.connection_lock:
+                        await self._connect_locked(spec, reserved)
+                    reserved = None
+                    break
+                except ToolError as exc:
+                    if exc.code not in ("PORT_BUSY", "CONNECTION_ERROR") or time.monotonic() >= deadline:
+                        raise
+            status["new_boot_id"] = self.info["boot_id"]
+            if (self.info["boot_id"] == target["boot_id"] or self.info["firmware_version"] != version
+                    or self.info["hardware_revision"] != target["hardware_revision"]):
+                raise ValueError("回读的启动编号、硬件修订或固件版本不符")
+            status.update(phase="succeeded")
+            self._event("firmware_updated", "工具板升级完成并已重连", device_id=target["device_id"], version=version)
+        except Exception as exc:
+            stage = "固件已写入并校验，重连回读失败" if status["phase"] == "reconnecting" else "升级未完成"
+            status.update(phase="failed", message=f"{stage}：{exc}")
+            self._event("firmware_update_failed", status["message"], device_id=target["device_id"])
+        finally:
+            if reserved:
+                reserved.close()
 
     async def read_device(self, token: str, method: str, params: dict):
         """AI:执行声明过的只读查询。@param token 客户端；method 方法；params 参数。@return 结果。"""
@@ -391,6 +490,17 @@ class Runtime:
         self.cursors["uart_after"] = uart["next"]
         self.last_data_at = received
 
+    async def _renew_control(self):
+        """AI:由板端核对持有者并续约。@return 当次板端状态，失去操作权时更新本地标记并抛出原错误。"""
+        try:
+            return await self._rpc("control.renew", mutation=True)
+        except ToolError as exc:
+            if exc.code in ("NOT_OWNER", "OWNER_EXPIRED"):
+                self.device_claimed = False
+                self.control_revision += 1
+                self._event("device_control_lost", "设备操作权已失效，请核对状态后显式取得操作权")
+            raise
+
     async def _poll(self):
         """AI:持续采集不依赖网页或单次MCP调用。@return 无。"""
         last_status = last_renew = 0.0
@@ -404,13 +514,10 @@ class Runtime:
                     now = time.monotonic()
                     if self.device_claimed and now - last_renew >= 15:
                         try:
-                            await self._rpc("control.renew", mutation=True)
+                            await self._renew_control()
                         except ToolError as exc:
                             if exc.code not in ("NOT_OWNER", "OWNER_EXPIRED"):
                                 raise
-                            self.device_claimed = False
-                            self.control_revision += 1
-                            self._event("device_control_lost", "设备操作权已失效，请核对状态后显式取得操作权")
                         last_renew = now
                     if now - last_status >= 0.5:
                         self.device_state = await self._rpc("device.status")
@@ -443,7 +550,7 @@ class Runtime:
                 "device_state": self.device_state, "device_state_stale": not self.connected or now - self.last_state_at > 3000 / 1000,
                 "control": {"owner": {k: v for k, v in owner.items() if k != "deadline"} if owner else None,
                             "owner_active": bool(owner and owner["deadline"] > now), "revision": self.control_revision, "device_claimed": self.device_claimed},
-                "clients": clients, "latest": latest, "last_error": self.last_error,
+                "clients": clients, "latest": latest, "last_error": self.last_error, "firmware_update": dict(self.firmware.status),
                 "recording": self.recorder.status(), "jobs": self.jobs.recent(30), "last_data_at": self.last_data_at}
 
     def data(self, token: str, kind: str, after: int, limit: int):
@@ -477,6 +584,7 @@ class Runtime:
         """AI:检查全局退出条件并释放本后台写权。@param token 明确发起退出的客户端。@return 退出确认，不改变输出。"""
         async with self.operation_lock:
             self.session(token)
+            self.check_firmware_idle()
             if self.active_jobs or self.recorder.state in ("recording", "stopping"):
                 raise ToolError("BUSY", "先等待动作结束并明确停止记录，再退出后台")
             if any(key != token and session["deadline"] > time.monotonic() for key, session in self.sessions.items()):
@@ -498,6 +606,10 @@ class Runtime:
 
     async def close(self):
         """AI:结束后台等待，保留未知结果，不向硬件发送复位或关闭输出。@return 无。"""
+        if self.firmware.task:
+            if self.firmware.status["phase"] not in ("installing", "reconnecting"):
+                self.firmware.task.cancel()
+            await asyncio.gather(self.firmware.task, return_exceptions=True)
         self.stopping = True
         if self.worker:
             self.worker.cancel()
