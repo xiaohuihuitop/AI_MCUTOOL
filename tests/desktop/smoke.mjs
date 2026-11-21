@@ -11,6 +11,11 @@ const desktopExe = process.env.MCUTOOL_TEST_DESKTOP
 const serviceExe = process.env.MCUTOOL_TEST_SERVICE
 const pwsh = process.env.MCUTOOL_TEST_PWSH
 assert(desktopExe && serviceExe && pwsh, '显式指定桌面程序、后台程序和PowerShell 7')
+// AI:单实例按登录会话共享，换安装路径和数据目录仍会把请求送到使用者的工作台。
+const running = execFileSync(pwsh, ['-NoProfile','-Command',
+  'Get-Process -Name mcutool-desktop -ErrorAction SilentlyContinue | Where-Object SessionId -eq (Get-Process -Id $PID).SessionId | Select-Object -ExpandProperty Id; exit 0'],
+  {encoding:'utf8',windowsHide:true}).trim()
+assert.ok(!running, '当前登录会话已有 MCU TOOL 工作台，请在独立 Windows 环境执行桌面测试。')
 const runRoot = resolve(root, 'docs/temp', `desktop-ui-${Date.now()}`)
 const dataDir = resolve(runRoot, 'runtime')
 mkdirSync(runRoot, {recursive:true})
