@@ -68,6 +68,23 @@ try {
   assert.equal(installed(), expected)
   assert.equal(next.connected, false)
   assert.equal(next.firmware_update.phase, 'idle')
+  const current = runtime()
+  const headers = {Authorization:'Bearer '+current.token, 'Content-Type':'application/json'}
+  const attached = await fetch(current.url+'/api/sessions', {method:'POST', headers,
+    body:JSON.stringify({name:'发布验收', kind:'web'})})
+  assert.ok(attached.ok)
+  headers['X-Session-Id'] = (await attached.json()).session_id
+  try {
+    const prepare = await fetch(current.url+'/api/firmware/prepare', {method:'POST', headers})
+    assert.equal((await prepare.json()).error.code, 'NOT_CONNECTED')
+    const html = await (await fetch(current.url)).text()
+    const asset = html.match(/<script[^>]+type="module"[^>]+src="(\/assets\/[^"]+\.js)"/)
+    assert.ok(asset, '安装器中的工作台资源缺失')
+    const script = await (await fetch(current.url+asset[1])).text()
+    assert.ok(script.includes('/api/firmware/install') && script.includes('确认升级'))
+  } finally {
+    await fetch(current.url+'/api/sessions/current', {method:'DELETE', headers})
+  }
   console.log(`已验证正式桌面 ${previous} → ${expected}，桌面重启、同一数据目录回读成功，固件更新入口已加载。`)
 } finally {
   if (browser) await browser.close()
