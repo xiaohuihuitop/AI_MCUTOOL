@@ -10,7 +10,8 @@ const confirmation = ref<{device_id:string; boot_id:string; version:string} | nu
 const deviceKey = computed(() => props.live && props.state?.connected && !props.state.test_mode
   ? JSON.stringify([board.value?.device_id, board.value?.boot_id]) : '')
 const relevant = computed(() => !!update.value?.target && board.value?.device_id === update.value.target.device_id &&
-  (board.value?.boot_id === update.value.target.boot_id || board.value?.boot_id === update.value.new_boot_id))
+  (board.value?.boot_id === update.value.target.boot_id || board.value?.boot_id === update.value.new_boot_id ||
+   update.value.phase === 'reconnecting' || (!props.state?.connected && update.value.phase === 'failed')))
 const usb = computed(() => props.state?.connection?.kind === 'usb')
 const version = computed(() => update.value?.phase === 'ready' ? update.value.version :
   update.value?.phase === 'failed' ? update.value.cached_version : undefined)
@@ -31,7 +32,8 @@ async function prepare(retry = false) {
 watch(deviceKey, key => {
   deferred.value = false
   error.value = ''
-  if (key && update.value && !(relevant.value && update.value.new_boot_id === board.value?.boot_id)) void prepare()
+  if (key && update.value && !['installing','reconnecting'].includes(update.value.phase) &&
+      !(relevant.value && update.value.new_boot_id === board.value?.boot_id)) void prepare()
 }, {immediate:true})
 
 /** AI:用当前提示里的身份和目标版本提交一次升级。@returns 安装请求受理或错误。 */

@@ -5,6 +5,7 @@ test('固件预下载、稍后、目标确认和重连后的版本提示', async
   const target = {...device}
   const update = {phase:'ready', target, version:'0.1.4', new_boot_id:''}
   let checks = 0
+  let connected = true
   let clientId = ''
   const writes: unknown[] = []
   await page.route('**/api/sessions', async route => {
@@ -25,7 +26,7 @@ test('固件预下载、稍后、目标确认和重连后的版本提示', async
     // AI:使用页面自身的操作会话标识驱动界面条件，测试过程均停留在模拟的推送和安装路由。
     const status = {...snapshot, test_mode:false, connected:true, device, device_state_stale:false, firmware_update:update,
       connection:{kind:'usb',port:'COM-TEST'}, control:{owner:{id:clientId},owner_active:true,device_claimed:true}}
-    send = () => ws.send(JSON.stringify({status, data:{measurements:{items:[],lost:0},events:{items:[]},uart:{items:[]}}}))
+    send = () => ws.send(JSON.stringify({status:{...status,connected}, data:{measurements:{items:[],lost:0},events:{items:[]},uart:{items:[]}}}))
     send()
   }))
   await page.goto('/')
@@ -47,6 +48,11 @@ test('固件预下载、稍后、目标确认和重连后的版本提示', async
   await expect.poll(()=>writes).toEqual([{device_id:'MCUTOOL-TEST',boot_id:'old',version:'0.1.4'}])
   device.boot_id = 'new'
   device.firmware_version = '0.1.4'
+  connected = false
+  Object.assign(update,{phase:'failed',cached_version:undefined,message:'固件已写入并校验，重连回读失败'})
+  send()
+  await expect(panel).toContainText('重连回读失败')
+  connected = true
   Object.assign(update,{phase:'succeeded',new_boot_id:'new'})
   send()
   await expect(panel).toContainText('已重连 MCUTOOL-TEST，板上固件 0.1.4')
