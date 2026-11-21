@@ -1,0 +1,42 @@
+name: Verify published desktop upgrade
+on:
+  workflow_dispatch:
+    inputs:
+      previous:
+        description: 已发布的旧桌面版本号
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  upgrade:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: 安装并核对上一正式版
+        shell: pwsh
+        env:
+          PREVIOUS: ${{ inputs.previous }}
+        run: |
+          if ($env:PREVIOUS -cnotmatch '^[0-9]+\.[0-9]+\.[0-9]+$') { throw '旧版本号无效' }
+          $repo = 'xiaohuihuitop/AI_MCUTOOL'
+          $tag = 'v' + $env:PREVIOUS
+          $name = "MCUTOOL-$env:PREVIOUS-windows-x64-setup.exe"
+          $desc = Invoke-RestMethod "https://raw.githubusercontent.com/$repo/$tag/integrations/desktop-release.json"
+          if ($desc.tag -cne $tag -or $desc.installer -cne $name -or $desc.repository -cne $repo) { throw '旧版描述不符' }
+          $file = Join-Path $env:RUNNER_TEMP $name
+          curl.exe -fLsS --retry 2 "https://github.com/$repo/releases/download/$tag/$name" -o $file
+          if ($LASTEXITCODE -ne 0 -or (Get-FileHash -LiteralPath $file).Hash -ne $desc.sha256) { throw '旧版安装器摘要不符' }
+          $installer = Start-Process -FilePath $file -ArgumentList '/S' -WindowStyle Hidden -Wait -PassThru
+          if ($installer.ExitCode -ne 0) { throw "旧版安装失败 $($installer.ExitCode)" }
+      - name: 从旧工作台安装公开更新并回读版本
+        shell: pwsh
+        env:
+          PREVIOUS: ${{ inputs.previous }}
+        run: |
+          npm.cmd ci --prefix web --ignore-scripts --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node tests/desktop/published-upgrade.mjs
