@@ -10,6 +10,10 @@ on:
         description: 使用当前提交的草稿安装器验证 MCP 占用和复制期间重连
         type: boolean
         default: false
+      recovery:
+        description: 在公开版本升级中先验证安装器无法启动后的恢复和重试
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -70,6 +74,7 @@ jobs:
         shell: pwsh
         env:
           PREVIOUS: ${{ inputs.previous }}
+          TEST_RECOVERY: ${{ inputs.recovery }}
         run: |
           npm.cmd ci --prefix web --ignore-scripts --no-audit --no-fund
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

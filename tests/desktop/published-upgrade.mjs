@@ -19,6 +19,8 @@ const settings = JSON.stringify({data_dir:dataDir,port:29755})
 const history = '{"sample":1}\n'
 const runtimeFile = join(dataDir, 'runtime.json')
 const debug = 'http://127.0.0.1:29756'
+const recovery = process.env.TEST_RECOVERY === 'true'
+const desktopTemp = join(process.env.RUNNER_TEMP, 'desktop-update-temp')
 
 /** AI:读取实际安装的桌面文件版本。@returns Windows 产品版本。 */
 function installed() {
@@ -44,12 +46,57 @@ function runtime() {
   catch (error) { if (error.code === 'ENOENT') return null; throw error }
 }
 
+/** AI:在独立工作台模拟临时目录不可写，确认失败后的会话持续续约并可重试。
+ * @param page 已完成下载的真实旧版工作台页面。@param old 更新前的后台信息。
+ * @returns 恢复后的工作台重试按钮。
+ */
+async function checkRecovery(page, old) {
+  const account = execFileSync('powershell.exe', ['-NoProfile', '-Command',
+    '[Security.Principal.WindowsIdentity]::GetCurrent().User.Value'], {encoding:'utf8', windowsHide:true}).trim()
+  assert.match(account, /^S-1-[\d-]+$/)
+  const region = page.getByRole('region', {name:'工具更新'})
+  const retry = region.getByRole('button', {name:'安装已下载的 ' + expected, exact:true})
+  // AI:只禁止在本轮桌面专用的临时目录下新建子目录，使已经验签的安装器无法暂存。
+  execFileSync('icacls.exe', [desktopTemp, '/deny', '*' + account + ':(AD)'], {windowsHide:true})
+  try {
+    await region.getByRole('button', {name:'立即安装'}).click()
+    await retry.waitFor({timeout:90000})
+    const failure = await page.evaluate(() => window.__TAURI__.core.invoke('desktop_update_status'))
+    assert.equal(failure.phase, 'failed')
+    assert.match(failure.message, /启动更新安装器失败.*原版本后台和桌面会话已恢复/s)
+  } finally {
+    execFileSync('icacls.exe', [desktopTemp, '/remove:d', '*' + account], {windowsHide:true})
+  }
+  const restored = runtime()
+  assert.equal(restored?.state, 'ready')
+  assert.notEqual(restored.instance_id, old.instance_id)
+  const session = await page.evaluate(() => window.__TAURI__.core.invoke('desktop_context'))
+  assert.equal(session.instance_id, restored.instance_id)
+  // AI:持续观察超过一分钟的会话有效期，观察器只读状态，由桌面自己续约。
+  const start = performance.now()
+  do {
+    const response = await fetch(restored.url+'/api/runtime/status', {
+      headers:{Authorization:'Bearer '+restored.token}, signal:AbortSignal.timeout(5000)})
+    assert.ok(response.ok)
+    const status = await response.json()
+    assert.equal(status.instance_id, restored.instance_id)
+    assert.equal(status.version, previous)
+    assert.equal(status.connected, false)
+    assert.ok(status.clients.some(c => c.id === session.client_id && c.kind === 'desktop' && c.active))
+    await delay(1000)
+  } while (performance.now() - start < 75000)
+  console.log('安装器启动失败后，旧工作台恢复并持续观察 75 秒，准备重试缓存的正式包。')
+  return retry
+}
+
 assert.equal(installed(), previous)
 mkdirSync(configDir, {recursive:true})
 mkdirSync(historyDir, {recursive:true})
 writeFileSync(configFile, settings)
 writeFileSync(historyFile, history)
+if (recovery) mkdirSync(desktopTemp)
 const oldDesktop = spawn(exe, [], {windowsHide:true, stdio:'ignore', env:{...process.env,
+  ...(recovery ? {TEMP:desktopTemp, TMP:desktopTemp} : {}),
   WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS:'--remote-debugging-address=127.0.0.1 --remote-debugging-port=29756'}})
 let browser
 try {
@@ -65,7 +112,9 @@ try {
     assert.equal(state.version, expected)
     return true
   })
-  await page.getByRole('region',{name:'工具更新'}).getByRole('button',{name:'立即安装'}).click()
+  const install = recovery ? await checkRecovery(page, old)
+    : page.getByRole('region',{name:'工具更新'}).getByRole('button',{name:'立即安装'})
+  await install.click()
   await until('旧桌面退出', () => oldDesktop.exitCode !== null)
   await browser.close()
   browser = null
